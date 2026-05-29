@@ -4,8 +4,11 @@ useHead({
   meta: [{ name: 'description', content: 'CUAHSI supports water scientists through shared data platforms, hands-on training, and a network of 130+ universities.' }]
 })
 
-const { data: upcomingEvents } = await useAsyncData('upcoming-events', () =>
-  queryContent('events').where({ published: true }).sort({ start: 1 }).limit(3).find()
+const { data: allEvents } = await useAsyncData('upcoming-events', () =>
+  queryContent('events').where({ published: true }).sort({ start: 1 }).find()
+)
+const upcomingEvents = computed(() =>
+  (allEvents.value ?? []).filter(e => new Date(e.start) >= new Date()).slice(0, 3)
 )
 
 // Scope to content/news only — exclude newsletter and other types

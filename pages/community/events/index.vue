@@ -4,21 +4,22 @@ useHead({
   meta: [{ name: 'description', content: 'Upcoming and past events from CUAHSI — workshops, conferences, webinars, deadlines, and training programs across the water science community.' }]
 })
 
-const now = new Date().toISOString()
-
-const { data: upcoming } = await useAsyncData('upcoming-events-page', () =>
+// Fetch all events once, split client-side so the date threshold is always current
+const { data: allEvents } = await useAsyncData('all-events-page', () =>
   queryContent('events')
-    .where({ published: true, start: { $gte: now } })
+    .where({ published: true })
     .sort({ start: 1 })
     .find()
 )
 
-const { data: past } = await useAsyncData('past-events-page', () =>
-  queryContent('events')
-    .where({ published: true, start: { $lt: now } })
-    .sort({ start: -1 })
-    .limit(12)
-    .find()
+const upcoming = computed(() =>
+  (allEvents.value ?? []).filter(e => new Date(e.start) >= new Date())
+)
+const past = computed(() =>
+  (allEvents.value ?? [])
+    .filter(e => new Date(e.start) < new Date())
+    .reverse()
+    .slice(0, 12)
 )
 
 const typeFilters = ['all', 'conference', 'workshop', 'webinar', 'deadline']
