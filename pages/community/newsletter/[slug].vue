@@ -28,6 +28,14 @@ const { data: people } = await useAsyncData(`nl-people-${route.params.slug}`, as
   return results.filter(Boolean)
 })
 
+// Events mentioned in this issue (via newsletter_source back-reference)
+const { data: relatedEvents } = await useAsyncData(`nl-events-${route.params.slug}`, () =>
+  queryContent('events')
+    .where({ published: true, newsletter_source: { $contains: route.params.slug as string } })
+    .sort({ start: 1 })
+    .find()
+)
+
 // Adjacent issues for prev/next
 const { data: allIssues } = await useAsyncData('nl-all', () =>
   queryContent('newsletter').where({ published: true }).sort({ date: -1 }).find()
@@ -118,6 +126,25 @@ function fmtDate(d: string) {
                 style="font-size:12px;color:#6b7280;">
                 {{ t.replace(/-/g,' ') }}
               </span>
+            </div>
+          </div>
+
+          <!-- Events mentioned -->
+          <div v-if="relatedEvents?.length" style="margin-bottom:24px;">
+            <p style="font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#9ca3af;margin-bottom:10px;">Events in this issue</p>
+            <div v-for="event in relatedEvents" :key="event.slug"
+              style="padding:8px 0;border-bottom:0.5px solid #f3f4f6;">
+              <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:6px;">
+                <p style="font-size:12px;font-weight:500;line-height:1.35;flex:1;">{{ event.title }}</p>
+                <span :style="`font-size:10px;padding:1px 6px;border-radius:99px;flex-shrink:0;background:${event.type==='deadline'?'#FEF9C3':event.type==='webinar'?'#E1F5EE':event.type==='workshop'?'#EDE9FE':'#EFF6FF'};color:${event.type==='deadline'?'#854D0E':event.type==='webinar'?'#0F6E56':event.type==='workshop'?'#5B21B6':'#1E40AF'};`">
+                  {{ event.type }}
+                </span>
+              </div>
+              <p style="font-size:11px;color:#9ca3af;margin-top:2px;">
+                {{ new Date(event.start).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) }}
+                <span v-if="event.location?.city"> · {{ event.location.city }}</span>
+                <span v-else-if="event.location?.mode === 'virtual'"> · Virtual</span>
+              </p>
             </div>
           </div>
 
