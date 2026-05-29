@@ -12,14 +12,20 @@ useHead({
   meta: [{ name: 'description', content: issue.value.summary }]
 })
 
-// Resolve people_mentioned to actual team records
+// Resolve people_mentioned across team, board, and community content types
 const { data: people } = await useAsyncData(`nl-people-${route.params.slug}`, async () => {
   if (!issue.value?.people_mentioned?.length) return []
-  return Promise.all(
-    issue.value.people_mentioned.map((slug: string) =>
-      queryContent('team').where({ slug, published: true }).findOne().catch(() => null)
-    )
-  ).then(results => results.filter(Boolean))
+  const slugs: string[] = issue.value.people_mentioned
+  const results = await Promise.all(
+    slugs.map(async (slug) => {
+      const found =
+        await queryContent('team').where({ slug, published: true }).findOne().catch(() => null) ??
+        await queryContent('board').where({ slug, published: true }).findOne().catch(() => null) ??
+        await queryContent('community').where({ slug, published: true }).findOne().catch(() => null)
+      return found ? { ...found, _contentType: found._path?.split('/')[1] ?? 'team' } : null
+    })
+  )
+  return results.filter(Boolean)
 })
 
 // Adjacent issues for prev/next
@@ -93,12 +99,13 @@ function fmtDate(d: string) {
             <p style="font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#9ca3af;margin-bottom:10px;">People in this issue</p>
             <div v-for="person in people" :key="person.slug"
               style="display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:0.5px solid #f3f4f6;">
-              <div style="width:32px;height:32px;border-radius:50%;background:#f0fdf4;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:500;color:#166534;flex-shrink:0;">
+              <div :style="`width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:500;flex-shrink:0;background:${person._contentType==='board'?'#EEF2FF':person._contentType==='community'?'#FFF7ED':'#F0FDF4'};color:${person._contentType==='board'?'#4338CA':person._contentType==='community'?'#C2410C':'#166534'};`">
                 {{ person.name.split(' ').map((n:string) => n[0]).join('').slice(0,2) }}
               </div>
               <div>
                 <p style="font-size:12px;font-weight:500;margin-bottom:1px;">{{ person.name }}</p>
                 <p style="font-size:11px;color:#9ca3af;">{{ person.role }}</p>
+                <p v-if="person.institution" style="font-size:11px;color:#d1d5db;">{{ person.institution }}</p>
               </div>
             </div>
           </div>
