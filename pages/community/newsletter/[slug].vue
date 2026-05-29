@@ -1,28 +1,166 @@
 <script setup lang="ts">
 const route = useRoute()
+
 const { data: issue } = await useAsyncData(`newsletter-${route.params.slug}`, () =>
   queryContent('newsletter').where({ slug: route.params.slug, published: true }).findOne()
 )
+
 if (!issue.value) throw createError({ statusCode: 404, message: 'Issue not found' })
-useHead({ title: `${issue.value.title} · CUAHSI` })
+
+useHead({
+  title: `${issue.value.title} · CUAHSI`,
+  meta: [{ name: 'description', content: issue.value.summary }]
+})
+
+// Resolve people_mentioned to actual team records
+const { data: people } = await useAsyncData(`nl-people-${route.params.slug}`, async () => {
+  if (!issue.value?.people_mentioned?.length) return []
+  return Promise.all(
+    issue.value.people_mentioned.map((slug: string) =>
+      queryContent('team').where({ slug, published: true }).findOne().catch(() => null)
+    )
+  ).then(results => results.filter(Boolean))
+})
+
+// Adjacent issues for prev/next
+const { data: allIssues } = await useAsyncData('nl-all', () =>
+  queryContent('newsletter').where({ published: true }).sort({ date: -1 }).find()
+)
+const idx = computed(() => allIssues.value?.findIndex(i => i.slug === route.params.slug) ?? -1)
+const prevIssue = computed(() => allIssues.value?.[idx.value + 1] ?? null)
+const nextIssue = computed(() => allIssues.value?.[idx.value - 1] ?? null)
+
+function fmtDate(d: string) {
+  return new Date(d).toLocaleDateString('en-US', { month: 'long', year: 'numeric' })
+}
 </script>
+
 <template>
-  <div class="max-w-3xl mx-auto px-6 py-12">
-    <NuxtLink to="/community/newsletter" class="text-xs text-gray-400 mb-6 block">← Newsletter archive</NuxtLink>
-    <p class="text-xs text-gray-400 mb-2">
-      {{ new Date(issue.date).toLocaleDateString('en-US', { month: 'long', year: 'numeric' }) }}
-    </p>
-    <h1 class="text-3xl font-medium mb-3">{{ issue.title }}</h1>
-    <p class="text-sm text-gray-500 mb-4">{{ issue.summary }}</p>
-    <div class="flex flex-wrap gap-1 mb-8">
-      <span v-for="t in issue.topics" :key="t"
-        class="text-xs px-2 py-0.5 rounded-full bg-teal-50 text-teal-700 border border-teal-100">{{ t }}</span>
+  <div>
+    <!-- Nav -->
+    <nav style="border-bottom:0.5px solid #e5e7eb;">
+      <div style="max-width:1024px;margin:0 auto;padding:0 24px;display:flex;align-items:center;height:48px;">
+        <NuxtLink to="/" style="font-size:14px;font-weight:500;margin-right:28px;text-decoration:none;color:inherit;">CUAHSI <span style="color:#9ca3af;font-weight:400;">water science</span></NuxtLink>
+        <NuxtLink to="/about" style="font-size:12px;color:#6b7280;padding:0 12px;text-decoration:none;">About</NuxtLink>
+        <NuxtLink to="/data-platforms" style="font-size:12px;color:#6b7280;padding:0 12px;text-decoration:none;">Tools &amp; platforms</NuxtLink>
+        <NuxtLink to="/learn-train" style="font-size:12px;color:#6b7280;padding:0 12px;text-decoration:none;">Learn &amp; train</NuxtLink>
+        <NuxtLink to="/community" style="font-size:12px;color:#6b7280;padding:0 12px;text-decoration:none;">Get involved</NuxtLink>
+      </div>
+    </nav>
+
+    <div style="max-width:1024px;margin:0 auto;padding:0 24px;">
+      <div style="display:grid;grid-template-columns:minmax(0,1fr) 220px;gap:48px;padding:36px 0 48px;">
+
+        <!-- Main content -->
+        <article>
+          <NuxtLink to="/community/newsletter" style="font-size:12px;color:#9ca3af;text-decoration:none;display:block;margin-bottom:16px;">← Newsletter archive</NuxtLink>
+
+          <p style="font-size:11px;color:#9ca3af;margin-bottom:6px;">{{ fmtDate(issue.date) }}</p>
+          <h1 style="font-size:26px;font-weight:500;margin-bottom:10px;line-height:1.25;">{{ issue.title }}</h1>
+          <p style="font-size:14px;color:#6b7280;line-height:1.6;margin-bottom:14px;">{{ issue.summary }}</p>
+
+          <div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:28px;padding-bottom:24px;border-bottom:0.5px solid #f3f4f6;">
+            <span v-for="t in issue.topics" :key="t"
+              style="font-size:11px;padding:2px 8px;border-radius:99px;background:#f0fdf4;color:#166534;border:0.5px solid #bbf7d0;">
+              {{ t.replace(/-/g,' ') }}
+            </span>
+          </div>
+
+          <!-- Rendered markdown body -->
+          <div style="font-size:14px;line-height:1.75;color:#374151;">
+            <ContentRenderer :value="issue" class="newsletter-prose" />
+          </div>
+
+          <!-- Prev/next -->
+          <div style="display:flex;justify-content:space-between;margin-top:48px;padding-top:24px;border-top:0.5px solid #f3f4f6;">
+            <NuxtLink v-if="prevIssue" :to="`/community/newsletter/${prevIssue.slug}`"
+              style="font-size:13px;color:#6b7280;text-decoration:none;">
+              ← {{ prevIssue.title }}
+            </NuxtLink>
+            <span v-else></span>
+            <NuxtLink v-if="nextIssue" :to="`/community/newsletter/${nextIssue.slug}`"
+              style="font-size:13px;color:#6b7280;text-decoration:none;">
+              {{ nextIssue.title }} →
+            </NuxtLink>
+          </div>
+        </article>
+
+        <!-- Sidebar -->
+        <aside style="padding-top:68px;">
+
+          <!-- People mentioned -->
+          <div v-if="people?.length" style="margin-bottom:24px;">
+            <p style="font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#9ca3af;margin-bottom:10px;">People in this issue</p>
+            <div v-for="person in people" :key="person.slug"
+              style="display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:0.5px solid #f3f4f6;">
+              <div style="width:32px;height:32px;border-radius:50%;background:#f0fdf4;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:500;color:#166534;flex-shrink:0;">
+                {{ person.name.split(' ').map((n:string) => n[0]).join('').slice(0,2) }}
+              </div>
+              <div>
+                <p style="font-size:12px;font-weight:500;margin-bottom:1px;">{{ person.name }}</p>
+                <p style="font-size:11px;color:#9ca3af;">{{ person.role }}</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Topics -->
+          <div style="margin-bottom:24px;">
+            <p style="font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#9ca3af;margin-bottom:10px;">Topics</p>
+            <div style="display:flex;flex-direction:column;gap:4px;">
+              <span v-for="t in issue.topics" :key="t"
+                style="font-size:12px;color:#6b7280;">
+                {{ t.replace(/-/g,' ') }}
+              </span>
+            </div>
+          </div>
+
+          <!-- Other issues -->
+          <div style="margin-bottom:24px;">
+            <p style="font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#9ca3af;margin-bottom:10px;">Other issues</p>
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <NuxtLink v-if="prevIssue" :to="`/community/newsletter/${prevIssue.slug}`"
+                style="font-size:12px;color:#6b7280;text-decoration:none;">
+                ← {{ fmtDate(prevIssue.date) }}
+              </NuxtLink>
+              <NuxtLink v-if="nextIssue" :to="`/community/newsletter/${nextIssue.slug}`"
+                style="font-size:12px;color:#6b7280;text-decoration:none;">
+                {{ fmtDate(nextIssue.date) }} →
+              </NuxtLink>
+            </div>
+          </div>
+
+          <!-- Original Mailchimp link -->
+          <div v-if="issue.mailchimp_url" style="padding-top:16px;border-top:0.5px solid #f3f4f6;">
+            <p style="font-size:11px;color:#9ca3af;margin-bottom:4px;">Original version</p>
+            <a :href="issue.mailchimp_url" target="_blank" rel="noopener"
+              style="font-size:11px;color:#9ca3af;word-break:break-all;">
+              Mailchimp archive ↗
+            </a>
+          </div>
+        </aside>
+
+      </div>
     </div>
-    <div class="prose prose-sm max-w-none">
-      <ContentRenderer :value="issue" />
-    </div>
-    <div v-if="issue.mailchimp_url" class="mt-10 pt-6 border-t border-gray-100">
-      <p class="text-xs text-gray-400">Original version: <a :href="issue.mailchimp_url" class="underline" target="_blank">Mailchimp archive ↗</a></p>
-    </div>
+
+    <footer style="border-top:0.5px solid #f3f4f6;">
+      <div style="max-width:1024px;margin:0 auto;padding:14px 24px;display:flex;justify-content:space-between;">
+        <div style="display:flex;gap:20px;">
+          <NuxtLink to="/about" style="font-size:12px;color:#9ca3af;text-decoration:none;">Contact</NuxtLink>
+          <NuxtLink to="/about" style="font-size:12px;color:#9ca3af;text-decoration:none;">Membership</NuxtLink>
+        </div>
+        <p style="font-size:12px;color:#9ca3af;">© 2026 CUAHSI</p>
+      </div>
+    </footer>
   </div>
 </template>
+
+<style>
+.newsletter-prose h2 { font-size: 16px; font-weight: 500; margin: 28px 0 10px; }
+.newsletter-prose h3 { font-size: 14px; font-weight: 500; margin: 20px 0 8px; }
+.newsletter-prose p { margin-bottom: 14px; }
+.newsletter-prose ul { padding-left: 20px; margin-bottom: 14px; }
+.newsletter-prose li { margin-bottom: 5px; }
+.newsletter-prose strong { font-weight: 500; }
+.newsletter-prose em { font-style: italic; }
+.newsletter-prose a { color: #166534; }
+</style>
