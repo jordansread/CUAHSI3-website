@@ -55,6 +55,31 @@ function selectVideo(id: string) {
   }
 }
 
+function paraDisplayTime(ts: any): string {
+  // Handle raw seconds (number), "m:ss" string, or NaN gracefully
+  if (typeof ts === 'number' && !isNaN(ts)) {
+    const m = Math.floor(ts / 60)
+    const s = Math.floor(ts % 60)
+    return `${m}:${s.toString().padStart(2, '0')}`
+  }
+  if (typeof ts === 'string' && ts.includes(':') && !ts.includes('NaN')) {
+    return ts
+  }
+  return ''
+}
+
+function paraYoutubeUrl(videoId: string, ts: any): string {
+  let seconds = 0
+  if (typeof ts === 'number' && !isNaN(ts)) {
+    seconds = Math.floor(ts)
+  } else if (typeof ts === 'string' && ts.includes(':') && !ts.includes('NaN')) {
+    const parts = ts.split(':')
+    seconds = parseInt(parts[0]) * 60 + parseInt(parts[1])
+  }
+  if (seconds === 0) return `https://www.youtube.com/watch?v=${videoId}`
+  return `https://www.youtube.com/watch?v=${videoId}&t=${seconds}s`
+}
+
 async function toggleTranscript(seminar: any) {
   const id = seminar.youtube_id
   if (activeTranscript.value === id) {
@@ -232,10 +257,10 @@ async function toggleTranscript(seminar: any) {
                   <div style="overflow-y:auto;padding:16px;flex:1;">
                     <div v-for="para in transcripts[seminar.youtube_id].paragraphs" :key="para.timestamp"
                       style="margin-bottom:16px;">
-                      <a :href="`https://www.youtube.com/watch?v=${seminar.youtube_id}&t=${para.timestamp.replace(':','m')}s`"
+                      <a :href="paraYoutubeUrl(seminar.youtube_id, para.timestamp)"
                         target="_blank" rel="noopener"
                         style="font-size:10px;font-weight:500;color:#1D9E75;text-decoration:none;font-family:monospace;display:block;margin-bottom:4px;">
-                        {{ para.timestamp }}
+                        {{ paraDisplayTime(para.timestamp) }}
                       </a>
                       <p style="font-size:12px;color:#374151;line-height:1.65;margin:0;">{{ para.text }}</p>
                     </div>
