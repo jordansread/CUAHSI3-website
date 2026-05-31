@@ -1,37 +1,52 @@
 <script setup lang="ts">
 useHead({
-  title: 'Research highlights · CUAHSI',
-  meta: [{ name: 'description', content: 'CUAHSI advances cyberinfrastructure and data innovation through collaborative research projects. Highlights from our research team and community partnerships.' }]
+  title: 'Highlights · CUAHSI',
+  meta: [{ name: 'description', content: 'Selected highlights from CUAHSI programs — research outcomes, infrastructure advances, training impacts, and community work.' }]
 })
 
-const { data: highlights } = await useAsyncData('research-highlights', () =>
-  queryContent('research')
-    .where({ published: true })
-    .sort({ date: -1 })
-    .find()
+const { data: highlights } = await useAsyncData('research', () =>
+  queryContent('research').where({ published: true }).sort({ date: -1 }).find()
 )
 
-const allTags = computed(() =>
-  [...new Set(highlights.value?.flatMap(h => h.tags ?? []))].sort()
+const categoryLabels: Record<string, string> = {
+  'research':           'Research',
+  'cyberinfrastructure':'Cyberinfrastructure',
+  'data-infrastructure':'Data infrastructure',
+  'training':           'Training & programs',
+  'community':          'Community',
+}
+
+const categoryColors: Record<string, { bg: string, text: string }> = {
+  'research':            { bg: '#DCFCE7', text: '#15803D' },
+  'cyberinfrastructure': { bg: '#EDE9FE', text: '#5B21B6' },
+  'data-infrastructure': { bg: '#EFF6FF', text: '#1E40AF' },
+  'training':            { bg: '#FFF7ED', text: '#C2410C' },
+  'community':           { bg: '#FDF2F8', text: '#9D174D' },
+}
+
+const categories = computed(() =>
+  [...new Set(highlights.value?.map(h => h.category).filter(Boolean))].sort()
 )
-
-const activeFilter = ref('all')
-const activeYear = ref('all')
-
 const years = computed(() =>
-  [...new Set(highlights.value?.map(h => String(h.year)))].sort((a, b) => Number(b) - Number(a))
+  [...new Set(highlights.value?.map(h => String(h.year)))].sort((a,b) => Number(b)-Number(a))
 )
+
+const activeCategory = ref('all')
+const activeYear = ref('all')
 
 const filtered = computed(() => {
   let items = highlights.value ?? []
+  if (activeCategory.value !== 'all') items = items.filter(h => h.category === activeCategory.value)
   if (activeYear.value !== 'all') items = items.filter(h => String(h.year) === activeYear.value)
-  if (activeFilter.value !== 'all') items = items.filter(h => h.tags?.includes(activeFilter.value))
   return items
 })
 
 function fmtDate(d: string) {
   return new Date(d).toLocaleDateString('en-US', { month: 'long', year: 'numeric' })
 }
+function catLabel(c: string) { return categoryLabels[c] ?? c }
+function catBg(c: string) { return categoryColors[c]?.bg ?? '#F3F4F6' }
+function catText(c: string) { return categoryColors[c]?.text ?? '#374151' }
 </script>
 
 <template>
@@ -47,27 +62,35 @@ function fmtDate(d: string) {
     </nav>
 
     <div style="max-width:1024px;margin:0 auto;padding:0 24px;">
-
-      <div style="padding:36px 0 28px;border-bottom:0.5px solid #f3f4f6;margin-bottom:32px;">
-        <p style="font-size:11px;color:#9ca3af;margin-bottom:8px;">
-          <NuxtLink to="/about" style="text-decoration:none;color:#9ca3af;">About</NuxtLink> / Research highlights
-        </p>
-        <h1 style="font-size:28px;font-weight:500;margin-bottom:10px;">Research highlights</h1>
+      <div style="padding:36px 0 28px;border-bottom:0.5px solid #f3f4f6;margin-bottom:28px;">
+        <h1 style="font-size:28px;font-weight:500;margin-bottom:10px;">Highlights</h1>
         <p style="font-size:14px;color:#6b7280;line-height:1.65;max-width:560px;">
-          CUAHSI advances cyberinfrastructure and data innovation through collaborative research projects
-          — building tools and knowledge that benefit the entire water science community. Highlights span
-          HydroShare development, community synthesis efforts, open science practices, and applied water prediction.
+          Selected outcomes from CUAHSI programs — spanning research advances, infrastructure development,
+          training impact, and community engagement.
         </p>
       </div>
 
       <!-- Filters -->
-      <div style="display:flex;gap:16px;align-items:flex-start;margin-bottom:32px;flex-wrap:wrap;">
+      <div style="display:flex;gap:20px;flex-wrap:wrap;margin-bottom:28px;align-items:flex-start;">
+        <div>
+          <p style="font-size:11px;color:#9ca3af;margin-bottom:6px;font-weight:500;letter-spacing:.05em;text-transform:uppercase;">Category</p>
+          <div style="display:flex;gap:5px;flex-wrap:wrap;">
+            <button @click="activeCategory='all'"
+              :style="`font-size:12px;padding:4px 10px;border-radius:99px;cursor:pointer;border:0.5px solid ${activeCategory==='all'?'#111827':'#d1d5db'};background:${activeCategory==='all'?'#111827':'transparent'};color:${activeCategory==='all'?'white':'#6b7280'};`">
+              All
+            </button>
+            <button v-for="cat in categories" :key="cat" @click="activeCategory=cat"
+              :style="`font-size:12px;padding:4px 10px;border-radius:99px;cursor:pointer;border:0.5px solid ${activeCategory===cat?'#111827':'#d1d5db'};background:${activeCategory===cat?'#111827':'transparent'};color:${activeCategory===cat?'white':'#6b7280'};`">
+              {{ catLabel(cat) }}
+            </button>
+          </div>
+        </div>
         <div>
           <p style="font-size:11px;color:#9ca3af;margin-bottom:6px;font-weight:500;letter-spacing:.05em;text-transform:uppercase;">Year</p>
           <div style="display:flex;gap:5px;">
             <button @click="activeYear='all'"
               :style="`font-size:12px;padding:4px 10px;border-radius:99px;cursor:pointer;border:0.5px solid ${activeYear==='all'?'#111827':'#d1d5db'};background:${activeYear==='all'?'#111827':'transparent'};color:${activeYear==='all'?'white':'#6b7280'};`">
-              All
+              All years
             </button>
             <button v-for="y in years" :key="y" @click="activeYear=y"
               :style="`font-size:12px;padding:4px 10px;border-radius:99px;cursor:pointer;border:0.5px solid ${activeYear===y?'#111827':'#d1d5db'};background:${activeYear===y?'#111827':'transparent'};color:${activeYear===y?'white':'#6b7280'};`">
@@ -75,74 +98,57 @@ function fmtDate(d: string) {
             </button>
           </div>
         </div>
-        <div style="flex:1;">
-          <p style="font-size:11px;color:#9ca3af;margin-bottom:6px;font-weight:500;letter-spacing:.05em;text-transform:uppercase;">Topic</p>
-          <div style="display:flex;gap:5px;flex-wrap:wrap;">
-            <button @click="activeFilter='all'"
-              :style="`font-size:12px;padding:4px 10px;border-radius:99px;cursor:pointer;border:0.5px solid ${activeFilter==='all'?'#111827':'#d1d5db'};background:${activeFilter==='all'?'#111827':'transparent'};color:${activeFilter==='all'?'white':'#6b7280'};`">
-              All topics
-            </button>
-            <button v-for="t in allTags" :key="t" @click="activeFilter=t"
-              :style="`font-size:12px;padding:4px 10px;border-radius:99px;cursor:pointer;border:0.5px solid ${activeFilter===t?'#111827':'#d1d5db'};background:${activeFilter===t?'#111827':'transparent'};color:${activeFilter===t?'white':'#6b7280'};`">
-              {{ t.replace(/-/g,' ') }}
-            </button>
-          </div>
-        </div>
       </div>
 
-      <!-- Results -->
-      <div style="display:flex;flex-direction:column;gap:0;margin-bottom:48px;">
+      <!-- Highlights list -->
+      <div style="margin-bottom:48px;">
         <NuxtLink v-for="item in filtered" :key="item._path"
           :to="`/research/${item.slug}`"
-          style="display:grid;grid-template-columns:120px minmax(0,1fr);gap:20px;padding:20px 0;border-bottom:0.5px solid #f3f4f6;text-decoration:none;color:inherit;align-items:start;">
-          <div>
-            <p style="font-size:11px;color:#9ca3af;margin-bottom:4px;">{{ fmtDate(item.date) }}</p>
-            <span style="font-size:10px;padding:2px 7px;border-radius:99px;background:#EFF6FF;color:#1E40AF;border:0.5px solid #BFDBFE;">{{ item.year }}</span>
+          style="display:grid;grid-template-columns:auto minmax(0,1fr) 120px;gap:16px;padding:18px 0;border-bottom:0.5px solid #f3f4f6;text-decoration:none;color:inherit;align-items:start;">
+          <div style="width:3px;border-radius:2px;align-self:stretch;margin-top:2px;"
+            :style="`background:${catBg(item.category)};border:0.5px solid ${catText(item.category)}22;`">
           </div>
           <div>
-            <p style="font-size:14px;font-weight:500;line-height:1.35;margin-bottom:6px;">{{ item.title }}</p>
-            <p style="font-size:13px;color:#6b7280;line-height:1.6;margin-bottom:10px;">{{ item.excerpt }}</p>
-            <div style="display:flex;flex-wrap:wrap;gap:5px;">
-              <span v-for="t in item.tags?.slice(0,4)" :key="t"
-                style="font-size:11px;padding:2px 8px;border-radius:99px;background:#f3f4f6;color:#6b7280;">
-                {{ t.replace(/-/g,' ') }}
+            <div style="display:flex;gap:6px;align-items:center;margin-bottom:5px;flex-wrap:wrap;">
+              <span :style="`font-size:11px;padding:1px 8px;border-radius:99px;font-weight:500;background:${catBg(item.category)};color:${catText(item.category)};`">
+                {{ catLabel(item.category) }}
               </span>
-              <span v-if="item.partners?.length"
-                style="font-size:11px;padding:2px 8px;border-radius:99px;background:#f0fdf4;color:#166534;border:0.5px solid #bbf7d0;">
-                {{ item.partners[0] }}{{ item.partners.length > 1 ? ` +${item.partners.length - 1}` : '' }}
+              <span style="font-size:11px;color:#9ca3af;">{{ item.year }}</span>
+            </div>
+            <p style="font-size:14px;font-weight:500;line-height:1.35;margin-bottom:5px;">{{ item.title }}</p>
+            <p style="font-size:13px;color:#6b7280;line-height:1.55;">{{ item.excerpt }}</p>
+            <div v-if="item.people_mentioned?.length" style="display:flex;gap:5px;flex-wrap:wrap;margin-top:7px;">
+              <span v-for="p in item.people_mentioned" :key="p"
+                style="font-size:11px;color:#9ca3af;padding:1px 7px;border-radius:99px;background:#f9fafb;">
+                {{ p.replace(/-/g,' ') }}
               </span>
             </div>
+          </div>
+          <div style="text-align:right;padding-top:2px;">
+            <p style="font-size:11px;color:#9ca3af;">{{ fmtDate(item.date) }}</p>
           </div>
         </NuxtLink>
         <p v-if="!filtered?.length" style="font-size:13px;color:#9ca3af;padding:20px 0;">No highlights match this filter.</p>
       </div>
 
-      <!-- Annual reports CTA -->
-      <div style="background:#f9fafb;border-radius:12px;padding:22px 24px;margin-bottom:48px;display:flex;align-items:center;justify-content:space-between;gap:20px;">
-        <div>
-          <p style="font-size:14px;font-weight:500;margin-bottom:4px;">Annual reports</p>
-          <p style="font-size:13px;color:#6b7280;">Full year-in-review across HydroShare, training programs, and research. Available as PDF.</p>
-        </div>
-        <div style="display:flex;gap:8px;flex-shrink:0;">
+      <!-- Annual reports -->
+      <div style="background:#f9fafb;border-radius:12px;padding:20px 24px;margin-bottom:48px;">
+        <p style="font-size:12px;font-weight:500;color:#374151;margin-bottom:4px;">Annual reports</p>
+        <p style="font-size:13px;color:#6b7280;line-height:1.6;margin-bottom:12px;">Full year-in-review across HydroShare, training programs, and research.</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;">
           <a href="https://www.cuahsi.org/uploads/pages/img/2025-Annual-Report_Final_reduced.pdf" target="_blank" rel="noopener"
-            style="font-size:12px;padding:7px 14px;border:0.5px solid #d1d5db;border-radius:8px;text-decoration:none;color:inherit;">
-            2025 Report ↗
-          </a>
+            style="font-size:12px;padding:6px 14px;border:0.5px solid #d1d5db;border-radius:8px;text-decoration:none;color:inherit;">2025 Annual Report ↗</a>
           <a href="https://www.cuahsi.org/uploads/pages/img/Annual-Report-2024.pdf" target="_blank" rel="noopener"
-            style="font-size:12px;padding:7px 14px;border:0.5px solid #d1d5db;border-radius:8px;text-decoration:none;color:inherit;">
-            2024 Report ↗
-          </a>
+            style="font-size:12px;padding:6px 14px;border:0.5px solid #d1d5db;border-radius:8px;text-decoration:none;color:inherit;">2024 Annual Report ↗</a>
         </div>
       </div>
-
     </div>
 
     <footer style="border-top:0.5px solid #f3f4f6;">
-      <div style="max-width:1024px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;">
+      <div style="max-width:1024px;margin:0 auto;padding:14px 24px;display:flex;justify-content:space-between;">
         <div style="display:flex;gap:20px;">
-          <NuxtLink to="/about" style="font-size:12px;color:#9ca3af;text-decoration:none;">About CUAHSI</NuxtLink>
-          <NuxtLink to="/data-platforms" style="font-size:12px;color:#9ca3af;text-decoration:none;">Tools &amp; platforms</NuxtLink>
-          <a href="mailto:connect@cuahsi.org" style="font-size:12px;color:#9ca3af;text-decoration:none;">Work with us</a>
+          <NuxtLink to="/community/news" style="font-size:12px;color:#9ca3af;text-decoration:none;">News</NuxtLink>
+          <NuxtLink to="/community/newsletter" style="font-size:12px;color:#9ca3af;text-decoration:none;">Newsletter</NuxtLink>
         </div>
         <p style="font-size:12px;color:#9ca3af;">© 2026 CUAHSI</p>
       </div>

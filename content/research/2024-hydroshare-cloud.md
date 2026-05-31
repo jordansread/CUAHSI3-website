@@ -3,7 +3,7 @@ title: "HydroShare Migrates to Commercial Cloud Infrastructure"
 slug: hydroshare-cloud-migration
 date: 2024-09-01
 year: 2024
-category: research-highlight
+category: data-infrastructure
 tags: [hydroshare, cloud-computing, cyberinfrastructure, open-science]
 people_mentioned: [tony-castronova, jordan-read, martin-seul]
 funding: "NSF EAR-1849458, NOAA NA22NWS4320003"

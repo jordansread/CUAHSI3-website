@@ -3,7 +3,7 @@ title: "FAIR for Research Software: Improving Discoverability of Hydrologic Mode
 slug: fair4rs-hydrologic-software
 date: 2025-09-01
 year: 2025
-category: research-highlight
+category: research
 tags: [FAIR-data, research-software, hydroshare, open-science, metadata]
 people_mentioned: [tony-castronova, irene-garousi-nejad]
 partners: [Arizona State University, Community Surface Dynamics Modeling System]

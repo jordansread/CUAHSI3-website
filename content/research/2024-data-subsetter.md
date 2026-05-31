@@ -3,7 +3,7 @@ title: "CUAHSI Data Subsetter: Enabling Large-Scale Hydrologic Modeling"
 slug: data-subsetter-national-water-model
 date: 2024-06-01
 year: 2024
-category: research-highlight
+category: cyberinfrastructure
 tags: [national-water-model, parflow, cloud-computing, hydrologic-modeling, cyberinfrastructure]
 people_mentioned: [tony-castronova]
 funding: "NSF award 1835818"

@@ -3,7 +3,7 @@ title: "Perceptual Models: Mapping Dominant Hydrologic Processes Across North Am
 slug: perceptual-models-north-america
 date: 2025-11-01
 year: 2025
-category: research-highlight
+category: research
 tags: [hydrologic-modeling, synthesis, community-science, water-prediction, landscape]
 partners: [University of Saskatchewan, NOAA, CIROH]
 funding: "NOAA NA22NWS4320003 via CIROH"

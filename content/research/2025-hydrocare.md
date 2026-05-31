@@ -3,7 +3,7 @@ title: "HydroCARE Travel Fellowship: Centering Indigenous Data Governance"
 slug: hydrocare-travel-fellowship
 date: 2025-04-01
 year: 2025
-category: research-highlight
+category: training
 tags: [CARE-principles, indigenous-data, data-governance, hydroshare, community-engagement]
 published: true
 excerpt: CUAHSI piloted the HydroCARE Travel Fellowship, providing travel support and honoraria for two fellows to deepen engagement around CARE principles with Tribal communities, informing future HydroShare system improvements and data governance priorities.

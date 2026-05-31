@@ -3,7 +3,7 @@ title: "FloodSavvy: Translating National Water Model Forecasts for Community Res
 slug: floodsavvy-community-resilience
 date: 2025-06-01
 year: 2025
-category: research-highlight
+category: research
 tags: [flood-forecasting, national-water-model, community-resilience, cyberinfrastructure]
 people_mentioned: [tony-castronova]
 partners: [Northeastern University, NOAA, CIROH]

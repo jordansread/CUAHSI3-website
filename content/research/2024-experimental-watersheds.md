@@ -3,7 +3,7 @@ title: "Community Database of Hydrologic Process Knowledge from Experimental Wat
 slug: experimental-watersheds-database
 date: 2024-03-01
 year: 2024
-category: research-highlight
+category: research
 tags: [synthesis, experimental-watersheds, open-science, community-data]
 partners: [San Diego State University]
 funding: "NSF award 2322510"
