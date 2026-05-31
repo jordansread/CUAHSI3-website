@@ -60,37 +60,33 @@ useHead({
         <a href="#contact" style="font-size:12px;color:#6b7280;padding:14px 16px;text-decoration:none;white-space:nowrap;">Contact</a>
       </div>
 
-      <!-- Mission + Vision -->
+      <!-- Mission + Vision + Values (condensed) -->
       <section id="mission" style="margin-bottom:52px;">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:32px;">
-          <div style="background:#f9fafb;border-radius:12px;padding:24px;">
-            <p style="font-size:11px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:#9ca3af;margin-bottom:10px;">Mission</p>
-            <p style="font-size:16px;font-weight:500;line-height:1.55;color:#111827;">
-              To empower the water community and advance science through collaboration, infrastructure, and education.
-            </p>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;border:0.5px solid #e5e7eb;border-radius:12px;overflow:hidden;margin-bottom:20px;">
+          <div style="padding:20px 22px;border-right:0.5px solid #e5e7eb;">
+            <p style="font-size:10px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:#9ca3af;margin-bottom:8px;">Mission</p>
+            <p style="font-size:13px;color:#374151;line-height:1.6;">To empower the water community and advance science through collaboration, infrastructure, and education.</p>
           </div>
-          <div style="background:#f9fafb;border-radius:12px;padding:24px;">
-            <p style="font-size:11px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:#9ca3af;margin-bottom:10px;">Vision</p>
-            <p style="font-size:16px;font-weight:500;line-height:1.55;color:#111827;">
-              A thriving water community — enabled by shared resources — developing an integrated understanding of water,
-              earth, ecosystems, and society to meet human and environmental needs.
-            </p>
+          <div style="padding:20px 22px;border-right:0.5px solid #e5e7eb;">
+            <p style="font-size:10px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:#9ca3af;margin-bottom:8px;">Vision</p>
+            <p style="font-size:13px;color:#374151;line-height:1.6;">A thriving water community — enabled by shared resources — developing an integrated understanding of water, earth, ecosystems, and society.</p>
           </div>
-        </div>
-
-        <p style="font-size:11px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:#9ca3af;margin-bottom:14px;">Values</p>
-        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;">
-          <div style="border:0.5px solid #e5e7eb;border-radius:12px;padding:20px;">
-            <p style="font-size:14px;font-weight:500;margin-bottom:8px;">Strategic collaborators</p>
-            <p style="font-size:13px;color:#6b7280;line-height:1.6;">We value the diverse perspectives of our colleagues and create connections among individuals and institutions to advance water science. We respond to our community needs and build bridges across institutions.</p>
-          </div>
-          <div style="border:0.5px solid #e5e7eb;border-radius:12px;padding:20px;">
-            <p style="font-size:14px;font-weight:500;margin-bottom:8px;">Innovative catalysts</p>
-            <p style="font-size:13px;color:#6b7280;line-height:1.6;">We bring new ideas, technologies, and science into practice. We pursue creative use of technology, bringing innovation to the community and making high-value tools accessible to all.</p>
-          </div>
-          <div style="border:0.5px solid #e5e7eb;border-radius:12px;padding:20px;">
-            <p style="font-size:14px;font-weight:500;margin-bottom:8px;">Impactful leaders</p>
-            <p style="font-size:13px;color:#6b7280;line-height:1.6;">We work for the greater good. Operating with high academic and professional standards, we deliver high-value services and tools and actively engage with the community to drive lasting change.</p>
+          <div style="padding:20px 22px;">
+            <p style="font-size:10px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:#9ca3af;margin-bottom:8px;">Values</p>
+            <div style="display:flex;flex-direction:column;gap:5px;">
+              <div>
+                <span style="font-size:12px;font-weight:500;color:#374151;">Strategic collaborators</span>
+                <span style="font-size:12px;color:#6b7280;"> — connecting people and institutions across water science</span>
+              </div>
+              <div>
+                <span style="font-size:12px;font-weight:500;color:#374151;">Innovative catalysts</span>
+                <span style="font-size:12px;color:#6b7280;"> — making high-value tools and ideas accessible to all</span>
+              </div>
+              <div>
+                <span style="font-size:12px;font-weight:500;color:#374151;">Impactful leaders</span>
+                <span style="font-size:12px;color:#6b7280;"> — delivering lasting change for the greater good</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -120,7 +116,6 @@ useHead({
             <div style="width:36px;height:36px;background:#EFF6FF;border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:12px;font-size:18px;">🔬</div>
             <p style="font-size:14px;font-weight:500;margin-bottom:8px;">Cyberinfrastructure &amp; data innovation</p>
             <p style="font-size:13px;color:#6b7280;line-height:1.6;margin-bottom:10px;">Our research team develops new software, standards, and frameworks that advance the way water data is collected, modeled, and shared — including cloud computing tools, model evaluation frameworks, and grants that seed new research and launch new ideas.</p>
-			<NuxtLink to="/research" style="font-size:12px;color:#1D9E75;text-decoration:none;">Browse research highlights →</NuxtLink>
           </div>
         </div>
         <div style="margin-top:24px;padding-top:20px;border-top:0.5px solid #e5e7eb;">
