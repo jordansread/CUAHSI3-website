@@ -116,6 +116,7 @@ useHead({
             <div style="width:36px;height:36px;background:#EFF6FF;border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:12px;font-size:18px;">🔬</div>
             <p style="font-size:14px;font-weight:500;margin-bottom:8px;">Cyberinfrastructure &amp; data innovation</p>
             <p style="font-size:13px;color:#6b7280;line-height:1.6;margin-bottom:10px;">Our research team develops new software, standards, and frameworks that advance the way water data is collected, modeled, and shared — including cloud computing tools, model evaluation frameworks, and grants that seed new research and launch new ideas.</p>
+            <NuxtLink to="/research" style="font-size:12px;color:#1D9E75;text-decoration:none;">Browse research highlights →</NuxtLink>
           </div>
         </div>
         <div style="margin-top:24px;padding-top:20px;border-top:0.5px solid #e5e7eb;">
