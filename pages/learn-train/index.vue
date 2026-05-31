@@ -157,6 +157,36 @@ const programs = [
         </div>
       </section>
 
+      <!-- Featured recent recording -->
+      <section style="padding:40px 0;border-bottom:0.5px solid #f3f4f6;">
+        <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:16px;">
+          <p style="font-size:13px;font-weight:500;">Recent recording</p>
+          <NuxtLink to="/learn-train/cyberseminars" style="font-size:12px;color:#9ca3af;text-decoration:none;">Browse archive →</NuxtLink>
+        </div>
+        <div style="display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:24px;align-items:start;">
+          <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:10px;background:#000;">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/unrdDmNL4mQ?rel=0"
+              style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div style="padding-top:4px;">
+            <span style="font-size:11px;padding:2px 8px;border-radius:99px;background:#DCFCE7;color:#15803D;font-weight:500;">Cyberseminar</span>
+            <p style="font-size:15px;font-weight:500;line-height:1.35;margin-top:8px;margin-bottom:6px;">Post-Field Season Data Practices for Research Success</p>
+            <p style="font-size:12px;color:#9ca3af;margin-bottom:8px;">November 12, 2025 · Lindsay Platt &amp; Abner Bogan, CUAHSI</p>
+            <p style="font-size:13px;color:#6b7280;line-height:1.6;margin-bottom:14px;">Even the most carefully planned field season can throw you curveballs. This webinar covers organizing and cleaning field data, exploratory data analysis, and preparing datasets for HydroShare publication.</p>
+            <div style="display:flex;gap:5px;flex-wrap:wrap;margin-bottom:14px;">
+              <span style="font-size:11px;padding:2px 8px;border-radius:99px;background:#f3f4f6;color:#6b7280;">data management</span>
+              <span style="font-size:11px;padding:2px 8px;border-radius:99px;background:#f3f4f6;color:#6b7280;">field data</span>
+              <span style="font-size:11px;padding:2px 8px;border-radius:99px;background:#f3f4f6;color:#6b7280;">reproducibility</span>
+            </div>
+            <NuxtLink to="/learn-train/cyberseminars" style="font-size:13px;color:#1D9E75;text-decoration:none;">More recordings →</NuxtLink>
+          </div>
+        </div>
+      </section>
+
       <!-- Upcoming training events -->
       <section style="padding:40px 0;border-bottom:0.5px solid #f3f4f6;">
         <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:16px;">

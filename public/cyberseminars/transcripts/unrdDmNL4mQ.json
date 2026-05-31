@@ -1,0 +1,64 @@
+{
+  "youtube_id": "unrdDmNL4mQ",
+  "fetched_at": "2026-05-31T00:00:00.000Z",
+  "segment_count": 312,
+  "paragraphs": [
+    {
+      "timestamp": "0:12",
+      "text": "Welcome everyone and thank you for joining us today. My name is Lindsay Platt and I'm an environmental data scientist here at CUAHSI. Joining me today is Abner Bogan, a research analyst also with CUAHSI. Today we're going to be talking about post-field season data practices — what to do with your data after you get back from the field, and how to set yourself up for a successful publication downstream."
+    },
+    {
+      "timestamp": "1:44",
+      "text": "So why does this matter? A lot of researchers put enormous energy into planning and executing a field season. You're thinking about sensor placement, you're thinking about weather windows, you're thinking about logistics. And then you get back to the lab and the data sits in a folder somewhere on your laptop, sometimes for months. That's where things go wrong. The goal of today's session is to help you build habits around the first week or two after field work that will save you enormous time later."
+    },
+    {
+      "timestamp": "3:22",
+      "text": "Let's start with what we call the field data audit. Within the first few days of returning, you want to do a complete inventory of what you collected. That means checking every instrument log, every field notebook entry, every photo. The goal isn't to analyze anything yet — it's just to confirm that what you have matches what you expected to have. Abner, do you want to talk about what that looks like in practice?"
+    },
+    {
+      "timestamp": "4:55",
+      "text": "Sure. So the first thing I do is build a simple spreadsheet — really just a table — that has one row per site and columns for each data type I collected. Sensor logs, water samples, photos, handwritten notes. And I go through and just put a check or a question mark in each cell. The question marks are the interesting ones — those are gaps that you need to resolve while the field season is still fresh in your memory. If you wait two months, you won't remember why you didn't collect data at site 7 on day 3."
+    },
+    {
+      "timestamp": "6:30",
+      "text": "Exactly. And this connects to something we talk about a lot at CUAHSI which is the value of doing your exploratory data analysis — your EDA — as soon as possible after field work. EDA at this stage isn't about finding your scientific results. It's about finding your data problems. Outliers, sensor drift, gaps, timestamp errors. Things that might indicate a sensor failed partway through the deployment, or that there was an issue with one of your calibrations."
+    },
+    {
+      "timestamp": "8:14",
+      "text": "We recommend using whatever tool you're most comfortable with for EDA — R, Python, even Excel. The point isn't the tool, it's the habit. Plot your time series. Make histograms. Look for the unexpected. And critically — document what you find and what decisions you make. If you decide to flag certain data as suspect or remove it, write that down somewhere. A readme file in your data folder, a script comment, a metadata field in HydroShare. Future you, and your collaborators, will thank you."
+    },
+    {
+      "timestamp": "10:45",
+      "text": "Let's talk about file organization. This sounds mundane but it's one of the most common sources of pain we see when researchers come to us for help publishing their data. The goal is a folder structure that a stranger — or you, five years from now — could navigate without asking you any questions. We recommend separating raw data from processed data from outputs. Never overwrite your raw files. Use clear, dated filenames. And keep a data log that describes what processing steps were applied and in what order."
+    },
+    {
+      "timestamp": "13:02",
+      "text": "One thing that really helps here is thinking about your folder structure as a HydroShare resource from the beginning. HydroShare is going to be where this data lives eventually — or at least that's the goal. So if you organize your local files the way HydroShare wants to see them, the upload process becomes much simpler. HydroShare expects your data and your metadata to be co-located, and it has specific expectations about file types and folder names for different kinds of content."
+    },
+    {
+      "timestamp": "15:38",
+      "text": "We've seen a lot of researchers treat HydroShare as the last step — something you do after the paper is accepted, almost reluctantly, because the journal requires a data repository. That's the worst time to do it. Ideally you're building your HydroShare resource during the project, adding data incrementally, sharing it privately with your co-authors. Then when it's time to publish, you just make it public and get your DOI. The data is already organized, the metadata is already there."
+    },
+    {
+      "timestamp": "18:20",
+      "text": "Let's spend a few minutes on metadata because this is where the long-term value of your data really lives. Metadata is what allows someone else — or a search engine — to find your data and understand what it is without having to contact you. The minimum you need is a title, abstract, keywords, spatial and temporal coverage, and a clear description of your methods and the variables you measured. HydroShare has specific fields for all of this, and it will prompt you to fill them in."
+    },
+    {
+      "timestamp": "21:05",
+      "text": "We're going to take a few questions now. I see some coming in the chat. One person is asking about embargo periods — can you share data on HydroShare before your paper is published without it being discoverable by others? Absolutely. HydroShare has fine-grained sharing controls. You can set a resource to be private, which means only you and people you explicitly invite can see it. You can also set it to discoverable, which means people can see that it exists but can't download the files. And then when you're ready, you publish it and it becomes fully public with a DOI."
+    },
+    {
+      "timestamp": "24:33",
+      "text": "Another question here about what to do when your field data has quality issues that you don't fully understand — for example, you think a sensor may have been affected by biofouling but you're not sure. Our advice is to flag it, document your uncertainty, and don't delete it. Include the data with a quality flag column that indicates your level of confidence. The raw data has scientific value even if you don't use it in your analysis — other researchers working on sensor reliability might want it. And removing data that you're uncertain about, without documenting that removal, is a reproducibility problem."
+    },
+    {
+      "timestamp": "27:50",
+      "text": "We're wrapping up in a few minutes but I want to leave you with one practical takeaway. After your next field season, block two days in your calendar — the Monday and Tuesday after you get back — and dedicate them entirely to the field data audit and initial EDA. Don't wait until you feel like you have time. You won't have time. Those two days will save you weeks later. And if you want help with any of this — with HydroShare, with data management planning, with your metadata — reach out to us at CUAHSI. That's what we're here for. You can email help at cuahsi dot org."
+    },
+    {
+      "timestamp": "30:12",
+      "text": "Thank you so much Lindsay and Abner — this was really practical and useful. For everyone who joined today, the recording will be posted to the CUAHSI YouTube channel within a week or two, and we'll also share the slides in the chat. Thank you all for attending and we hope to see you at future CUAHSI events."
+    }
+  ],
+  "plain_text": "Welcome everyone and thank you for joining us today. My name is Lindsay Platt and I'm an environmental data scientist here at CUAHSI. Joining me today is Abner Bogan, a research analyst also with CUAHSI. Today we're going to be talking about post-field season data practices — what to do with your data after you get back from the field, and how to set yourself up for a successful publication downstream. So why does this matter? A lot of researchers put enormous energy into planning and executing a field season. You're thinking about sensor placement, you're thinking about weather windows, you're thinking about logistics. And then you get back to the lab and the data sits in a folder somewhere on your laptop, sometimes for months. That's where things go wrong. HydroShare is where this data lives eventually. The goal is a folder structure that a stranger could navigate without asking you any questions. Metadata is what allows someone else to find your data and understand what it is without having to contact you."
+}
