@@ -4,7 +4,7 @@ slug: usgs-water-data-apis-2025
 series: Standalone webinar
 series_slug: standalone-2025
 date: 2025-08-13
-youtube_id: ""
+youtube_id: "bdXhQ4JRI88"
 speakers: [Elise Hinman, Michael Mahoney, Lindsay Platt]
 speaker_orgs: [USGS, USGS, CUAHSI]
 tags: [USGS, water-data, APIs, research-workflows, data-access]
