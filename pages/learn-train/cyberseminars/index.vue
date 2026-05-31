@@ -45,12 +45,12 @@ function fmtDate(d: string) {
   return new Date(d).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
 }
 
-function selectVideo(id: string) {
-  if (activeVideo.value === id) {
+function selectVideo(slug: string) {
+  if (activeVideo.value === slug) {
     activeVideo.value = null
     activeTranscript.value = null
   } else {
-    activeVideo.value = id
+    activeVideo.value = slug
     activeTranscript.value = null
   }
 }
@@ -174,7 +174,7 @@ async function toggleTranscript(seminar: any) {
           <div v-for="seminar in items" :key="seminar.slug" style="border-bottom:0.5px solid #f3f4f6;">
 
             <!-- Collapsed row -->
-            <div @click="selectVideo(seminar.youtube_id)"
+            <div @click="selectVideo(seminar.slug)"
               style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;padding:16px 0;cursor:pointer;align-items:start;">
               <div>
                 <p style="font-size:14px;font-weight:500;line-height:1.35;margin-bottom:5px;">{{ seminar.title }}</p>
@@ -199,7 +199,7 @@ async function toggleTranscript(seminar: any) {
               </div>
               <!-- Thumbnail -->
               <div style="flex-shrink:0;">
-                <div v-if="activeVideo !== seminar.youtube_id"
+                <div v-if="activeVideo !== seminar.slug"
                   style="width:120px;height:68px;border-radius:6px;overflow:hidden;position:relative;">
                   <img :src="`https://img.youtube.com/vi/${seminar.youtube_id}/mqdefault.jpg`"
                     style="width:100%;height:100%;object-fit:cover;" />
@@ -216,7 +216,7 @@ async function toggleTranscript(seminar: any) {
             </div>
 
             <!-- Expanded: video + optional transcript -->
-            <div v-if="activeVideo === seminar.youtube_id" style="padding-bottom:24px;">
+            <div v-if="activeVideo === seminar.slug" style="padding-bottom:24px;">
 
               <div style="display:grid;gap:20px;"
                 :style="activeTranscript === seminar.youtube_id ? 'grid-template-columns:minmax(0,1fr) 380px;' : 'grid-template-columns:1fr;'">
