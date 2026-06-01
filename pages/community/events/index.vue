@@ -71,7 +71,7 @@ function fmtDate(start: string, end?: string) {
         <NuxtLink to="/learn-train" style="font-size:12px;color:#6b7280;padding:0 12px;text-decoration:none;">Learn &amp; train</NuxtLink>
         <NuxtLink to="/community" style="font-size:12px;color:#6b7280;padding:0 12px;text-decoration:none;">Get involved</NuxtLink>
         <div style="margin-left:auto;">
-          <ClientOnly><SiteSearch /></ClientOnly>
+          <SiteSearch />
         </div>
       </div>
     </nav>

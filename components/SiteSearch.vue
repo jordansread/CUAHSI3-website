@@ -2,15 +2,23 @@
 const query = ref('')
 const results = ref<any[]>([])
 const isOpen = ref(false)
-const loading = ref(false)
 const searchEl = ref<HTMLInputElement | null>(null)
 let pagefind: any = null
 
 async function loadPagefind() {
   if (pagefind) return
   try {
-    pagefind = await import('/pagefind/pagefind.js')
-    await pagefind.init()
+    // Use fetch to check if pagefind exists, then eval-load it
+    // This avoids Vite's static import analysis entirely
+    const res = await fetch('/pagefind/pagefind.js')
+    if (!res.ok) return
+    const text = await res.text()
+    const blob = new Blob([text], { type: 'application/javascript' })
+    const url = URL.createObjectURL(blob)
+    const mod = await import(/* @vite-ignore */ url)
+    pagefind = mod
+    if (pagefind?.init) await pagefind.init()
+    URL.revokeObjectURL(url)
   } catch {
     pagefind = null
   }
@@ -20,13 +28,12 @@ async function search() {
   if (!query.value.trim()) { results.value = []; return }
   await loadPagefind()
   if (!pagefind) return
-  loading.value = true
   try {
     const res = await pagefind.search(query.value)
     const data = await Promise.all(res.results.slice(0, 8).map((r: any) => r.data()))
     results.value = data
-  } finally {
-    loading.value = false
+  } catch {
+    results.value = []
   }
 }
 
@@ -42,8 +49,8 @@ function close() {
 }
 
 onMounted(() => {
-  window.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') close()
+  window.addEventListener('keydown', (e: KeyboardEvent) => {
+    if (e.key === 'Escape' && isOpen.value) close()
     if ((e.metaKey || e.ctrlKey) && e.key === 'k') { e.preventDefault(); open() }
   })
 })
@@ -56,7 +63,7 @@ function navigate(url: string) {
 </script>
 
 <template>
-  <div style="position:relative;">
+  <div>
     <button @click="open"
       style="display:flex;align-items:center;gap:6px;padding:4px 10px;border:0.5px solid #e5e7eb;border-radius:6px;background:white;cursor:pointer;color:#9ca3af;font-size:12px;">
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -68,10 +75,9 @@ function navigate(url: string) {
 
     <Teleport to="body">
       <div v-if="isOpen"
-        style="position:fixed;inset:0;z-index:1000;display:flex;align-items:flex-start;justify-content:center;padding-top:80px;"
-        @click.self="close">
-        <div style="position:fixed;inset:0;background:rgba(0,0,0,0.3);" @click="close" />
-        <div style="position:relative;width:100%;max-width:560px;background:white;border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,0.15);overflow:hidden;margin:0 16px;">
+        @click.self="close"
+        style="position:fixed;inset:0;z-index:9999;display:flex;align-items:flex-start;justify-content:center;padding-top:80px;background:rgba(0,0,0,0.3);">
+        <div style="width:100%;max-width:560px;background:white;border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,0.15);overflow:hidden;margin:0 16px;">
           <div style="display:flex;align-items:center;gap:10px;padding:14px 16px;border-bottom:0.5px solid #f3f4f6;">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="2" style="flex-shrink:0;">
               <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
@@ -97,11 +103,11 @@ function navigate(url: string) {
             </button>
           </div>
 
-          <div v-else-if="query.length > 1 && !loading" style="padding:24px 16px;text-align:center;">
+          <div v-else-if="query.length > 1" style="padding:24px 16px;text-align:center;">
             <p style="font-size:13px;color:#9ca3af;">No results for <strong style="color:#374151;">{{ query }}</strong></p>
           </div>
 
-          <div v-else-if="!query" style="padding:16px;display:flex;flex-wrap:wrap;gap:6px;">
+          <div v-else style="padding:16px;display:flex;flex-wrap:wrap;gap:6px;">
             <NuxtLink v-for="link in [
               {label:'Highlights', to:'/highlights'},
               {label:'News', to:'/community/news'},

@@ -1,9 +1,4 @@
 export default defineNuxtConfig({
-  vite: {
-    optimizeDeps: {
-      exclude: ['pagefind'],
-    },
-  },
   modules: [
     '@nuxt/content',
     '@nuxtjs/tailwindcss',
@@ -37,6 +32,7 @@ export default defineNuxtConfig({
     prerender: {
       crawlLinks: true,
       routes: ['/sitemap.xml'],
+      failOnError: false,
     },
   },
 
