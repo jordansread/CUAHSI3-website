@@ -14,6 +14,11 @@ const person = computed<any>(() => {
 
 if (!person.value) throw createError({ statusCode: 404, message: 'Team member not found' })
 
+// Load extended .md profile if one exists for this staff member
+const { data: extendedProfile } = await useAsyncData(`team-md-${slug}`, () =>
+  queryContent('team').where({ slug, _extension: 'md' }).findOne().catch(() => null)
+)
+
 useHead({
   title: `${person.value?.name} · CUAHSI Team`,
   meta: [{ name: 'description', content: person.value?.bio?.slice(0, 160) }]
@@ -157,6 +162,11 @@ const deptText: Record<string, string> = {
             </p>
           </div>
 
+          <!-- Extended profile content from .md file (publications, recent work, etc.) -->
+          <div v-if="extendedProfile?.body" style="padding-bottom:24px;margin-bottom:24px;border-bottom:0.5px solid #f3f4f6;">
+            <ContentRenderer :value="extendedProfile" class="profile-prose" />
+          </div>
+
           <!-- Research highlights -->
           <div v-if="research?.length" style="margin-bottom:28px;">
             <p style="font-size:12px;font-weight:500;letter-spacing:.05em;text-transform:uppercase;color:#9ca3af;margin-bottom:12px;">Research highlights</p>
@@ -223,3 +233,53 @@ const deptText: Record<string, string> = {
     </footer>
   </div>
 </template>
+
+<style>
+.profile-prose h2 {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #9ca3af;
+  margin-top: 28px;
+  margin-bottom: 12px;
+}
+.profile-prose h3 {
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+  margin-top: 18px;
+  margin-bottom: 8px;
+}
+.profile-prose ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.profile-prose li {
+  font-size: 13px;
+  color: #374151;
+  line-height: 1.65;
+  padding-left: 12px;
+  border-left: 2px solid #e5e7eb;
+}
+.profile-prose li strong {
+  font-weight: 500;
+  color: #111827;
+}
+.profile-prose a {
+  color: #1D9E75;
+  text-decoration: none;
+}
+.profile-prose a:hover {
+  text-decoration: underline;
+}
+.profile-prose em {
+  font-style: italic;
+  color: #6b7280;
+}
+</style>
+

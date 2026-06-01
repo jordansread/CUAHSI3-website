@@ -12,20 +12,18 @@ useHead({
   meta: [{ name: 'description', content: issue.value.summary }]
 })
 
-// Resolve people_mentioned across team, board, and community content types
-const { data: people } = await useAsyncData(`nl-people-${route.params.slug}`, async () => {
-  if (!issue.value?.people_mentioned?.length) return []
-  const slugs: string[] = issue.value.people_mentioned
-  const results = await Promise.all(
-    slugs.map(async (slug) => {
-      const found =
-        await queryContent('team').where({ slug, published: true }).findOne().catch(() => null) ??
-        await queryContent('board').where({ slug, published: true }).findOne().catch(() => null) ??
-        await queryContent('community').where({ slug, published: true }).findOne().catch(() => null)
-      return found ? { ...found, _contentType: found._path?.split('/')[1] ?? 'team' } : null
-    })
-  )
-  return results.filter(Boolean)
+// Resolve people_mentioned from full-team.json — the single source of truth for all staff.
+// Individual .md files in content/team/ only exist for some staff; full-team.json has everyone.
+const { data: fullTeamData } = await useAsyncData('full-team-nl', () =>
+  queryContent('team').where({ _extension: 'json' }).findOne()
+)
+const people = computed(() => {
+  const slugs: string[] = issue.value?.people_mentioned ?? []
+  if (!slugs.length) return []
+  const allStaff: any[] = Array.isArray(fullTeamData.value?.body) ? fullTeamData.value.body : []
+  return slugs
+    .map(slug => allStaff.find((p: any) => p.slug === slug))
+    .filter(Boolean)
 })
 
 // Events mentioned in this issue (via newsletter_source back-reference)
@@ -105,7 +103,20 @@ function fmtDate(d: string) {
           <!-- People mentioned -->
           <div v-if="people?.length" style="margin-bottom:24px;">
             <p style="font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#9ca3af;margin-bottom:10px;">People in this issue</p>
-            <div v-for="person in people" :key="person.slug"
+            <template v-for="person in people" :key="person.slug">
+            <NuxtLink v-if="person.has_profile"
+              :key="`person-link-${person.slug}`"
+              :to="`/about/team/${person.slug}`"
+              style="display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:0.5px solid #f3f4f6;text-decoration:none;color:inherit;">
+              <div :style="`width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:500;flex-shrink:0;background:${person._contentType==='board'?'#EEF2FF':person._contentType==='community'?'#FFF7ED':'#F0FDF4'};color:${person._contentType==='board'?'#4338CA':person._contentType==='community'?'#C2410C':'#166534'};`">
+                {{ person.name.split(' ').map((n:string) => n[0]).join('').slice(0,2) }}
+              </div>
+              <div style="flex:1;">
+                <p style="font-size:12px;font-weight:500;margin-bottom:1px;">{{ person.name }} <span style="font-size:10px;color:#1D9E75;">→</span></p>
+                <p style="font-size:11px;color:#9ca3af;">{{ person.role }}</p>
+              </div>
+            </NuxtLink>
+            <div v-else :key="`person-div-${person.slug}`"
               style="display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:0.5px solid #f3f4f6;">
               <div :style="`width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:500;flex-shrink:0;background:${person._contentType==='board'?'#EEF2FF':person._contentType==='community'?'#FFF7ED':'#F0FDF4'};color:${person._contentType==='board'?'#4338CA':person._contentType==='community'?'#C2410C':'#166534'};`">
                 {{ person.name.split(' ').map((n:string) => n[0]).join('').slice(0,2) }}
@@ -116,6 +127,7 @@ function fmtDate(d: string) {
                 <p v-if="person.institution" style="font-size:11px;color:#d1d5db;">{{ person.institution }}</p>
               </div>
             </div>
+            </template>
           </div>
 
           <!-- Topics -->
@@ -132,8 +144,9 @@ function fmtDate(d: string) {
           <!-- Events mentioned -->
           <div v-if="relatedEvents?.length" style="margin-bottom:24px;">
             <p style="font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#9ca3af;margin-bottom:10px;">Events in this issue</p>
-            <div v-for="event in relatedEvents" :key="event.slug"
-              style="padding:8px 0;border-bottom:0.5px solid #f3f4f6;">
+            <NuxtLink v-for="event in relatedEvents" :key="event.slug"
+              :to="`/community/events/${event.slug}`"
+              style="display:block;padding:8px 0;border-bottom:0.5px solid #f3f4f6;text-decoration:none;color:inherit;">
               <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:6px;">
                 <p style="font-size:12px;font-weight:500;line-height:1.35;flex:1;">{{ event.title }}</p>
                 <span :style="`font-size:10px;padding:1px 6px;border-radius:99px;flex-shrink:0;background:${event.type==='deadline'?'#FEF9C3':event.type==='webinar'?'#E1F5EE':event.type==='workshop'?'#EDE9FE':'#EFF6FF'};color:${event.type==='deadline'?'#854D0E':event.type==='webinar'?'#0F6E56':event.type==='workshop'?'#5B21B6':'#1E40AF'};`">
@@ -144,8 +157,9 @@ function fmtDate(d: string) {
                 {{ new Date(event.start).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) }}
                 <span v-if="event.location?.city"> · {{ event.location.city }}</span>
                 <span v-else-if="event.location?.mode === 'virtual'"> · Virtual</span>
+                <span style="color:#1D9E75;margin-left:4px;">→</span>
               </p>
-            </div>
+            </NuxtLink>
           </div>
 
           <!-- Other issues -->
