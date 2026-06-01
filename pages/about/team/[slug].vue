@@ -55,7 +55,7 @@ const { data: seminars } = await useAsyncData(`profile-seminars-${slug}`, () =>
 const relatedSeminars = computed(() =>
   (seminars.value ?? []).filter(s =>
     s.speakers?.some((sp: string) =>
-      sp.includes(lastName.value) || sp.includes(firstName.value)
+      sp.includes(firstName.value) && sp.includes(lastName.value)
     )
   )
 )
@@ -163,7 +163,7 @@ const deptText: Record<string, string> = {
           </div>
 
           <!-- Extended profile content from .md file (publications, recent work, etc.) -->
-          <div v-if="extendedProfile?.body" style="padding-bottom:24px;margin-bottom:24px;border-bottom:0.5px solid #f3f4f6;">
+          <div v-if="extendedProfile?.body?.children?.length" style="padding-bottom:24px;margin-bottom:24px;border-bottom:0.5px solid #f3f4f6;">
             <ContentRenderer :value="extendedProfile" class="profile-prose" />
           </div>
 
