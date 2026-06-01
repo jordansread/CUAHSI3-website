@@ -80,23 +80,21 @@ function initials(name: string) {
               style="border:0.5px solid #e5e7eb;border-radius:12px;overflow:hidden;text-decoration:none;color:inherit;display:flex;flex-direction:column;cursor:pointer;">
 
               <!-- Photo -->
-              <div style="height:180px;background:#f3f4f6;overflow:hidden;position:relative;flex-shrink:0;">
+              <div style="height:220px;overflow:hidden;position:relative;flex-shrink:0;"
+                :style="`background:${deptColors[dept]};`">
                 <img v-if="person.photo"
                   :src="person.photo"
                   :alt="`${person.name} headshot`"
                   style="width:100%;height:100%;object-fit:cover;object-position:center top;"
                   @error="($event.target as HTMLImageElement).style.display='none'" />
-                <div v-if="!person.photo"
-                  :style="`width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:500;background:${deptColors[dept]};color:${deptText[dept]};`">
+                <div v-else
+                  :style="`width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:36px;font-weight:500;color:${deptText[dept]};`">
                   {{ initials(person.name) }}
                 </div>
-                <!-- Profile badge -->
-                <div v-if="person.has_profile"
-                  style="position:absolute;top:8px;right:8px;background:rgba(255,255,255,0.9);border-radius:99px;padding:2px 8px;font-size:10px;color:#374151;font-weight:500;">
+                <div style="position:absolute;top:8px;right:8px;background:rgba(255,255,255,0.92);border-radius:99px;padding:2px 10px;font-size:10px;color:#374151;font-weight:500;">
                   profile →
                 </div>
               </div>
-
               <!-- Info -->
               <div style="padding:14px;flex:1;display:flex;flex-direction:column;gap:4px;">
                 <div style="display:flex;align-items:baseline;gap:6px;flex-wrap:wrap;">
@@ -104,45 +102,34 @@ function initials(name: string) {
                   <span v-if="person.pronouns" style="font-size:11px;color:#9ca3af;">{{ person.pronouns }}</span>
                 </div>
                 <p style="font-size:12px;color:#6b7280;line-height:1.4;">{{ person.role }}</p>
-
-                <!-- Links row -->
-                <div v-if="person.links && Object.keys(person.links).length" style="display:flex;gap:8px;margin-top:6px;flex-wrap:wrap;">
+                <div v-if="person.links && Object.keys(person.links).filter(k => person.links[k]).length" style="display:flex;gap:8px;margin-top:6px;flex-wrap:wrap;">
                   <a v-if="person.links.orcid" :href="person.links.orcid" target="_blank" rel="noopener"
-                    @click.stop
-                    style="font-size:10px;color:#A6CE39;font-weight:600;text-decoration:none;padding:1px 6px;border:0.5px solid #A6CE39;border-radius:3px;">
-                    iD
-                  </a>
+                    @click.stop style="font-size:10px;color:#A6CE39;font-weight:600;text-decoration:none;padding:1px 6px;border:0.5px solid #A6CE39;border-radius:3px;">iD</a>
                   <a v-if="person.links.google_scholar" :href="person.links.google_scholar" target="_blank" rel="noopener"
-                    @click.stop
-                    style="font-size:10px;color:#4285F4;font-weight:500;text-decoration:none;">
-                    Scholar
-                  </a>
+                    @click.stop style="font-size:10px;color:#4285F4;font-weight:500;text-decoration:none;">Scholar</a>
                   <a v-if="person.links.github" :href="person.links.github" target="_blank" rel="noopener"
-                    @click.stop
-                    style="font-size:10px;color:#6b7280;text-decoration:none;">
-                    GitHub
-                  </a>
+                    @click.stop style="font-size:10px;color:#6b7280;text-decoration:none;">GitHub</a>
                   <a v-if="person.links.linkedin" :href="person.links.linkedin" target="_blank" rel="noopener"
-                    @click.stop
-                    style="font-size:10px;color:#0A66C2;text-decoration:none;">
-                    LinkedIn
-                  </a>
+                    @click.stop style="font-size:10px;color:#0A66C2;text-decoration:none;">LinkedIn</a>
                 </div>
               </div>
             </NuxtLink>
             <div v-else :key="`div-${person.slug}`" style="border:0.5px solid #e5e7eb;border-radius:12px;overflow:hidden;text-decoration:none;color:inherit;display:flex;flex-direction:column;">
-
-              <!-- Photo (same content, no link) -->
-              <div style="height:180px;background:#f3f4f6;overflow:hidden;position:relative;flex-shrink:0;">
+              <!-- Photo -->
+              <div style="height:220px;overflow:hidden;flex-shrink:0;"
+                :style="`background:${deptColors[dept]};`">
                 <img v-if="person.photo"
+                  :key="`img-${person.slug}`"
                   :src="person.photo"
                   :alt="`${person.name} headshot`"
-                  style="width:100%;height:100%;object-fit:cover;object-position:center top;" />
+                  style="width:100%;height:100%;object-fit:cover;object-position:center top;"
+                  @error="($event.target as HTMLImageElement).style.display='none'" />
                 <div v-else
-                  :style="`width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:500;background:${deptColors[dept]};color:${deptText[dept]};`">
+                  :style="`width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:36px;font-weight:500;color:${deptText[dept]};`">
                   {{ initials(person.name) }}
                 </div>
               </div>
+              <!-- Info -->
               <div style="padding:14px;flex:1;display:flex;flex-direction:column;gap:4px;">
                 <div style="display:flex;align-items:baseline;gap:6px;flex-wrap:wrap;">
                   <p style="font-size:14px;font-weight:500;line-height:1.3;">{{ person.name }}</p>
@@ -172,7 +159,7 @@ function initials(name: string) {
         <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;">
           <div v-for="person in contractors" :key="person.slug"
             style="border:0.5px solid #e5e7eb;border-radius:12px;overflow:hidden;">
-            <div style="height:140px;background:#f3f4f6;overflow:hidden;">
+            <div style="height:160px;background:#f3f4f6;overflow:hidden;">
               <img v-if="person.photo" :src="person.photo" :alt="`${person.name} headshot`"
                 style="width:100%;height:100%;object-fit:cover;object-position:center top;"
                 @error="($event.target as HTMLImageElement).style.display='none'" />
