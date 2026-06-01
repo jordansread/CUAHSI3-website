@@ -64,6 +64,20 @@ pages/
 
 All content lives in `content/` and is managed as Markdown (`.md`) or JSON files. Nuxt Content queries these at build time and at runtime. Each directory maps to a content type with a defined frontmatter schema.
 
+### File naming convention
+
+All dated content files use **YYMMDD-slug.md** prefix format for consistent chronological sorting:
+
+```
+260531-hydrolearn-fellows.md     # May 31, 2026
+260211-board-marco-maneta.md     # February 11, 2026
+251022-virtual-open-house.md     # October 22, 2025
+```
+
+For events or items where only the month is known, use `01` as the day: `260501-awra-conference.md`.
+
+The `slug` field in frontmatter is what drives the URL — the filename prefix is for sorting only.
+
 ```
 content/
 ├── team/
