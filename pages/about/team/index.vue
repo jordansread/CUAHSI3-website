@@ -75,6 +75,7 @@ function initials(name: string) {
           <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;">
             <template v-for="person in byDept[dept]" :key="person.slug">
             <NuxtLink v-if="person.has_profile"
+              :key="`link-${person.slug}`"
               :to="`/about/team/${person.slug}`"
               style="border:0.5px solid #e5e7eb;border-radius:12px;overflow:hidden;text-decoration:none;color:inherit;display:flex;flex-direction:column;cursor:pointer;">
 
@@ -129,7 +130,7 @@ function initials(name: string) {
                 </div>
               </div>
             </NuxtLink>
-            <div v-else style="border:0.5px solid #e5e7eb;border-radius:12px;overflow:hidden;text-decoration:none;color:inherit;display:flex;flex-direction:column;">
+            <div v-else :key="`div-${person.slug}`" style="border:0.5px solid #e5e7eb;border-radius:12px;overflow:hidden;text-decoration:none;color:inherit;display:flex;flex-direction:column;">
 
               <!-- Photo (same content, no link) -->
               <div style="height:180px;background:#f3f4f6;overflow:hidden;position:relative;flex-shrink:0;">
