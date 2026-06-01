@@ -96,7 +96,7 @@ const waysin = [
     title: 'Serve on an advisory committee',
     desc: 'Advisory committees on informatics, education and outreach, and instrumentation are open to any interested individual regardless of membership status.',
     cta: 'Learn about governance',
-    href: '/about/governance',
+    href: '/about/governance#advisory-committees',
     internal: true,
   },
   {
