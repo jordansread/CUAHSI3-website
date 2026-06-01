@@ -85,7 +85,7 @@ const waysin = [
   },
   {
     icon: '🤝',
-    title: 'Join a member institution',
+    title: 'Become a member institution',
     desc: 'If your university or organization is not yet a CUAHSI member, institutional membership connects your community to shared infrastructure, training, and governance.',
     cta: 'Learn about membership',
     href: '/about/membership',
