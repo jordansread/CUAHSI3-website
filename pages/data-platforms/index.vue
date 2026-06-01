@@ -61,6 +61,9 @@ const partners = [
         <NuxtLink to="/data-platforms" style="font-size:12px;color:#111827;padding:0 12px;text-decoration:none;border-bottom:2px solid #111827;line-height:48px;">Tools &amp; platforms</NuxtLink>
         <NuxtLink to="/learn-train" style="font-size:12px;color:#6b7280;padding:0 12px;text-decoration:none;">Learn &amp; train</NuxtLink>
         <NuxtLink to="/community" style="font-size:12px;color:#6b7280;padding:0 12px;text-decoration:none;">Get involved</NuxtLink>
+        <div style="margin-left:auto;">
+          <ClientOnly><SiteSearch /></ClientOnly>
+        </div>
       </div>
     </nav>
 

@@ -85,7 +85,7 @@ const waysin = [
   },
   {
     icon: '🤝',
-    title: 'Become a member institution',
+    title: 'Join a member institution',
     desc: 'If your university or organization is not yet a CUAHSI member, institutional membership connects your community to shared infrastructure, training, and governance.',
     cta: 'Learn about membership',
     href: '/about/membership',
@@ -119,6 +119,9 @@ const waysin = [
         <NuxtLink to="/data-platforms" style="font-size:12px;color:#6b7280;padding:0 12px;text-decoration:none;">Tools &amp; platforms</NuxtLink>
         <NuxtLink to="/learn-train" style="font-size:12px;color:#6b7280;padding:0 12px;text-decoration:none;">Learn &amp; train</NuxtLink>
         <NuxtLink to="/community" style="font-size:12px;color:#111827;padding:0 12px;text-decoration:none;border-bottom:2px solid #111827;line-height:48px;">Get involved</NuxtLink>
+        <div style="margin-left:auto;">
+          <ClientOnly><SiteSearch /></ClientOnly>
+        </div>
       </div>
     </nav>
 
@@ -342,7 +345,7 @@ const waysin = [
     <footer style="border-top:0.5px solid #f3f4f6;">
       <div style="max-width:1024px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;">
         <div style="display:flex;gap:20px;">
-          <a href="mailto:connect@cuahsi.org" style="font-size:12px;color:#9ca3af;text-decoration:none;">Contact</a>
+          <a href="mailto:info@cuahsi.org" style="font-size:12px;color:#9ca3af;text-decoration:none;">Contact</a>
           <NuxtLink to="/about/membership" style="font-size:12px;color:#9ca3af;text-decoration:none;">Membership</NuxtLink>
           <a href="https://www.cuahsi.org/acknowledging-cuahsi" style="font-size:12px;color:#9ca3af;text-decoration:none;">Acknowledging CUAHSI</a>
           <a href="https://www.cuahsi.org/about/policies-and-conduct" style="font-size:12px;color:#9ca3af;text-decoration:none;">Policies</a>
