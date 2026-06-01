@@ -46,8 +46,9 @@ const tagColors: Record<string, { bg: string, text: string }> = {
       </div>
 
       <div style="margin-bottom:48px;">
-        <div v-for="item in items" :key="item._path"
-          style="padding:20px 0;border-bottom:0.5px solid #f3f4f6;">
+        <NuxtLink v-for="item in items" :key="item._path"
+          :to="`/community/news/${item.slug}`"
+          style="display:block;padding:20px 0;border-bottom:0.5px solid #f3f4f6;text-decoration:none;color:inherit;">
           <div style="display:flex;gap:8px;align-items:center;margin-bottom:6px;flex-wrap:wrap;">
             <span v-for="tag in item.tags" :key="tag"
               :style="`font-size:11px;padding:1px 8px;border-radius:99px;font-weight:500;background:${tagColors[tag]?.bg ?? '#F3F4F6'};color:${tagColors[tag]?.text ?? '#374151'};`">
@@ -55,9 +56,9 @@ const tagColors: Record<string, { bg: string, text: string }> = {
             </span>
             <span style="font-size:11px;color:#9ca3af;">{{ fmtDate(item.date) }}</span>
           </div>
-          <p style="font-size:15px;font-weight:500;margin-bottom:5px;line-height:1.3;">{{ item.title }}</p>
+          <p style="font-size:15px;font-weight:500;margin-bottom:5px;line-height:1.3;">{{ item.title }} <span style="font-size:12px;color:#1D9E75;">→</span></p>
           <p style="font-size:13px;color:#6b7280;line-height:1.6;">{{ item.excerpt }}</p>
-        </div>
+        </NuxtLink>
 
         <div v-if="!items?.length" style="padding:32px 0;">
           <p style="font-size:13px;color:#9ca3af;">No news items yet.</p>
