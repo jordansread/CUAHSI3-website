@@ -87,19 +87,19 @@ const { data: recentNewsletters } = await useAsyncData('recent-newsletters', () 
             <p style="font-size:13px; font-weight:500; margin-bottom:6px; line-height:1.35;">I'm a student or early-career researcher</p>
             <p style="font-size:12px; color:#6b7280; margin-bottom:12px; line-height:1.5;">Find funding, join workshops, access data tools, and connect with the community.</p>
             <div style="border-top:0.5px solid #f3f4f6; padding-top:10px; display:flex; flex-direction:column; gap:5px;">
-              <NuxtLink to="/learn-train" style="font-size:12px; color:#6b7280; text-decoration:none; display:flex; justify-content:space-between;">Fellowships &amp; grants <span>→</span></NuxtLink>
-              <NuxtLink to="/learn-train" style="font-size:12px; color:#6b7280; text-decoration:none; display:flex; justify-content:space-between;">Upcoming workshops <span>→</span></NuxtLink>
-              <NuxtLink to="/data-platforms" style="font-size:12px; color:#6b7280; text-decoration:none; display:flex; justify-content:space-between;">HydroShare <span>→</span></NuxtLink>
+              <NuxtLink to="/community/events" style="font-size:12px; color:#6b7280; text-decoration:none; display:flex; justify-content:space-between;">Upcoming workshops &amp; events <span>→</span></NuxtLink>
+              <NuxtLink to="/learn-train/cyberseminars" style="font-size:12px; color:#6b7280; text-decoration:none; display:flex; justify-content:space-between;">Free cyberseminar recordings <span>→</span></NuxtLink>
+              <NuxtLink to="/community/jobs" style="font-size:12px; color:#6b7280; text-decoration:none; display:flex; justify-content:space-between;">Fellowship &amp; job opportunities <span>→</span></NuxtLink>
             </div>
           </div>
           <div style="background:white; border:0.5px solid #e5e7eb; border-radius:12px; padding:18px;">
             <div style="width:36px; height:36px; background:#f9fafb; border-radius:8px; display:flex; align-items:center; justify-content:center; margin-bottom:12px; font-size:18px;">🔬</div>
             <p style="font-size:13px; font-weight:500; margin-bottom:6px; line-height:1.35;">I'm a faculty member or PI</p>
-            <p style="font-size:12px; color:#6b7280; margin-bottom:12px; line-height:1.5;">Publish research data, access instrumentation, and bring CUAHSI into your courses.</p>
+            <p style="font-size:12px; color:#6b7280; margin-bottom:12px; line-height:1.5;">Publish research data, integrate CUAHSI resources into your courses, or bring us to your campus.</p>
             <div style="border-top:0.5px solid #f3f4f6; padding-top:10px; display:flex; flex-direction:column; gap:5px;">
-              <NuxtLink to="/data-platforms" style="font-size:12px; color:#6b7280; text-decoration:none; display:flex; justify-content:space-between;">HydroShare — publish &amp; collaborate <span>→</span></NuxtLink>
-              <NuxtLink to="/data-platforms" style="font-size:12px; color:#6b7280; text-decoration:none; display:flex; justify-content:space-between;">Instrumentation facilities <span>→</span></NuxtLink>
-              <NuxtLink to="/learn-train" style="font-size:12px; color:#6b7280; text-decoration:none; display:flex; justify-content:space-between;">Teaching resources <span>→</span></NuxtLink>
+              <a href="https://www.hydroshare.org" target="_blank" rel="noopener" style="font-size:12px; color:#6b7280; text-decoration:none; display:flex; justify-content:space-between;">Publish data in HydroShare <span>→</span></a>
+              <NuxtLink to="/community/campus-visits" style="font-size:12px; color:#6b7280; text-decoration:none; display:flex; justify-content:space-between;">Bring CUAHSI to your campus <span>→</span></NuxtLink>
+              <a href="https://www.hydrolearn.org" target="_blank" rel="noopener" style="font-size:12px; color:#6b7280; text-decoration:none; display:flex; justify-content:space-between;">Use HydroLearn in your course <span>→</span></a>
             </div>
           </div>
           <div style="background:white; border:0.5px solid #e5e7eb; border-radius:12px; padding:18px;">
@@ -107,9 +107,9 @@ const { data: recentNewsletters } = await useAsyncData('recent-newsletters', () 
             <p style="font-size:13px; font-weight:500; margin-bottom:6px; line-height:1.35;">I'm with an agency or organization</p>
             <p style="font-size:12px; color:#6b7280; margin-bottom:12px; line-height:1.5;">Access water data infrastructure, explore membership, or partner with CUAHSI.</p>
             <div style="border-top:0.5px solid #f3f4f6; padding-top:10px; display:flex; flex-direction:column; gap:5px;">
-              <NuxtLink to="/about" style="font-size:12px; color:#6b7280; text-decoration:none; display:flex; justify-content:space-between;">Membership information <span>→</span></NuxtLink>
-              <NuxtLink to="/data-platforms" style="font-size:12px; color:#6b7280; text-decoration:none; display:flex; justify-content:space-between;">Water data portals <span>→</span></NuxtLink>
-              <NuxtLink to="/about" style="font-size:12px; color:#6b7280; text-decoration:none; display:flex; justify-content:space-between;">Contact us <span>→</span></NuxtLink>
+              <NuxtLink to="/about/membership" style="font-size:12px; color:#6b7280; text-decoration:none; display:flex; justify-content:space-between;">Membership &amp; joining <span>→</span></NuxtLink>
+              <a href="https://www.hydroshare.org/search/" target="_blank" rel="noopener" style="font-size:12px; color:#6b7280; text-decoration:none; display:flex; justify-content:space-between;">Search water data in HydroShare <span>→</span></a>
+              <a href="mailto:connect@cuahsi.org" style="font-size:12px; color:#6b7280; text-decoration:none; display:flex; justify-content:space-between;">Contact us <span>→</span></a>
             </div>
           </div>
         </div>
