@@ -103,7 +103,7 @@ function catText(c: string) { return categoryColors[c]?.text ?? '#374151' }
       <!-- Highlights list -->
       <div style="margin-bottom:48px;">
         <NuxtLink v-for="item in filtered" :key="item._path"
-          :to="`/research/${item.slug}`"
+          :to="`/highlights/${item.slug}`"
           style="display:grid;grid-template-columns:auto minmax(0,1fr) 120px;gap:16px;padding:18px 0;border-bottom:0.5px solid #f3f4f6;text-decoration:none;color:inherit;align-items:start;">
           <div style="width:3px;border-radius:2px;align-self:stretch;margin-top:2px;"
             :style="`background:${catBg(item.category)};border:0.5px solid ${catText(item.category)}22;`">

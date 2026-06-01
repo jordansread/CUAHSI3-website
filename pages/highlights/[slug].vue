@@ -34,7 +34,7 @@ function fmtDate(d: string) {
       <div style="display:grid;grid-template-columns:minmax(0,1fr) 220px;gap:48px;padding:36px 0 48px;">
 
         <article>
-          <NuxtLink to="/research" style="font-size:12px;color:#9ca3af;text-decoration:none;display:block;margin-bottom:16px;">← Research highlights</NuxtLink>
+          <NuxtLink to="/highlights" style="font-size:12px;color:#9ca3af;text-decoration:none;display:block;margin-bottom:16px;">← Highlights</NuxtLink>
           <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
             <span style="font-size:11px;padding:2px 8px;border-radius:99px;background:#EFF6FF;color:#1E40AF;border:0.5px solid #BFDBFE;">{{ item.year }}</span>
             <span style="font-size:11px;color:#9ca3af;">{{ fmtDate(item.date) }}</span>
@@ -49,12 +49,12 @@ function fmtDate(d: string) {
 
           <!-- Prev/next -->
           <div style="display:flex;justify-content:space-between;margin-top:40px;padding-top:20px;border-top:0.5px solid #f3f4f6;">
-            <NuxtLink v-if="prev" :to="`/research/${prev.slug}`"
+            <NuxtLink v-if="prev" :to="`/highlights/${prev.slug}`"
               style="font-size:12px;color:#6b7280;text-decoration:none;max-width:220px;">
               ← {{ prev.title }}
             </NuxtLink>
             <span v-else></span>
-            <NuxtLink v-if="next" :to="`/research/${next.slug}`"
+            <NuxtLink v-if="next" :to="`/highlights/${next.slug}`"
               style="font-size:12px;color:#6b7280;text-decoration:none;max-width:220px;text-align:right;">
               {{ next.title }} →
             </NuxtLink>
@@ -92,7 +92,7 @@ function fmtDate(d: string) {
             <p style="font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#9ca3af;margin-bottom:8px;">Other highlights</p>
             <div style="display:flex;flex-direction:column;gap:8px;">
               <NuxtLink v-for="o in others?.filter(h => h.slug !== item.slug).slice(0,3)" :key="o.slug"
-                :to="`/research/${o.slug}`" style="text-decoration:none;">
+                :to="`/highlights/${o.slug}`" style="text-decoration:none;">
                 <p style="font-size:12px;color:#6b7280;line-height:1.4;">{{ o.title }}</p>
                 <p style="font-size:11px;color:#9ca3af;">{{ fmtDate(o.date) }}</p>
               </NuxtLink>
@@ -105,7 +105,7 @@ function fmtDate(d: string) {
 
     <footer style="border-top:0.5px solid #f3f4f6;">
       <div style="max-width:1024px;margin:0 auto;padding:14px 24px;display:flex;justify-content:space-between;">
-        <NuxtLink to="/research" style="font-size:12px;color:#9ca3af;text-decoration:none;">← All research highlights</NuxtLink>
+        <NuxtLink to="/highlights" style="font-size:12px;color:#9ca3af;text-decoration:none;">← All research highlights</NuxtLink>
         <p style="font-size:12px;color:#9ca3af;">© 2026 CUAHSI</p>
       </div>
     </footer>

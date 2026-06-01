@@ -162,7 +162,7 @@ const deptText: Record<string, string> = {
             <p style="font-size:12px;font-weight:500;letter-spacing:.05em;text-transform:uppercase;color:#9ca3af;margin-bottom:12px;">Research highlights</p>
             <div style="display:flex;flex-direction:column;gap:10px;">
               <NuxtLink v-for="item in research" :key="item._path"
-                :to="`/research/${item.slug}`"
+                :to="`/highlights/${item.slug}`"
                 style="display:flex;gap:12px;align-items:flex-start;text-decoration:none;color:inherit;padding:12px;border:0.5px solid #e5e7eb;border-radius:8px;">
                 <span style="font-size:11px;color:#9ca3af;white-space:nowrap;margin-top:2px;">{{ item.year }}</span>
                 <div>

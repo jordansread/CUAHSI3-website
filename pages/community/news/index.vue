@@ -41,7 +41,7 @@ const tagColors: Record<string, { bg: string, text: string }> = {
         <p style="font-size:14px;color:#6b7280;line-height:1.65;max-width:520px;">
           Platform updates, announcements, and time-sensitive news from CUAHSI.
           For deeper program coverage, see the <NuxtLink to="/community/newsletter" style="color:#1D9E75;text-decoration:none;">monthly newsletter</NuxtLink>
-          and <NuxtLink to="/research" style="color:#1D9E75;text-decoration:none;">program highlights</NuxtLink>.
+          and <NuxtLink to="/highlights" style="color:#1D9E75;text-decoration:none;">program highlights</NuxtLink>.
         </p>
       </div>
 
@@ -72,7 +72,7 @@ const tagColors: Record<string, { bg: string, text: string }> = {
           <p style="font-size:12px;color:#6b7280;margin-bottom:6px;">In-depth coverage of programs, community, and events.</p>
           <p style="font-size:12px;color:#1D9E75;">Browse issues →</p>
         </NuxtLink>
-        <NuxtLink to="/research"
+        <NuxtLink to="/highlights"
           style="border:0.5px solid #e5e7eb;border-radius:10px;padding:16px;text-decoration:none;color:inherit;">
           <p style="font-size:13px;font-weight:500;margin-bottom:3px;">Program highlights</p>
           <p style="font-size:12px;color:#6b7280;margin-bottom:6px;">Research outcomes, infrastructure work, and training impact.</p>
