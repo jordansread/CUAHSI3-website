@@ -6,9 +6,8 @@ department: Leadership
 published: true
 ---
 
-Anthony leads hydrology research at CUAHSI, managing a team that designs and develops software solutions bridging CUAHSI data initiatives and scientific applications. His work emphasizes hydrologic modeling, cloud computing, and reproducible science. Prior to CUAHSI, he was a Research Assistant Professor at Utah State University. He holds a B.S. in Civil Engineering from Clarkson University and M.S./Ph.D. in Civil and Environmental Engineering from the University of South Carolina.
-
-## Selected publications
+## Selected publications 
+> ***these are examples and are neither real nor functional!***
 
 ### HydroShare and water data infrastructure
 

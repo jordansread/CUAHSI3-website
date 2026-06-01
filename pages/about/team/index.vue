@@ -93,7 +93,7 @@ function initials(name: string) {
                   :style="`width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:36px;font-weight:500;color:${deptText[dept]};`">
                   {{ initials(person.name) }}
                 </div>
-                <div style="position:absolute;top:8px;right:8px;background:rgba(255,255,255,0.92);border-radius:99px;padding:2px 10px;font-size:10px;color:#374151;font-weight:500;">
+                <div v-if="person.has_profile" style="position:absolute;top:8px;right:8px;background:rgba(255,255,255,0.92);border-radius:99px;padding:2px 10px;font-size:10px;color:#374151;font-weight:500;">
                   profile →
                 </div>
               </div>
