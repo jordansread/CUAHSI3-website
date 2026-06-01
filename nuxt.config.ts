@@ -1,4 +1,11 @@
 export default defineNuxtConfig({
+  vite: {
+    server: {
+      hmr: {
+        overlay: false,
+      },
+    },
+  },
   modules: [
     '@nuxt/content',
     '@nuxtjs/tailwindcss',
