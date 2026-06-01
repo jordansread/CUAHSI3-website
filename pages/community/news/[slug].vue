@@ -6,12 +6,14 @@ const { data: item } = await useAsyncData(`news-${route.params.slug}`, () =>
     .findOne()
     .catch(() => null)
 )
-if (!item.value || !item.value._path?.startsWith('/news/')) {
-  throw createError({ statusCode: 404, statusMessage: 'News item not found' })
-}
+
+const notFound = computed(() =>
+  !item.value || !item.value._path?.startsWith('/news/')
+)
+
 useHead({
-  title: `${item.value?.title} · News · CUAHSI`,
-  meta: [{ name: 'description', content: item.value?.excerpt }]
+  title: computed(() => notFound.value ? 'Not found · CUAHSI' : `${item.value?.title} · News · CUAHSI`),
+  meta: [{ name: 'description', content: computed(() => item.value?.excerpt ?? '') }]
 })
 function fmtDate(d: string) {
   return new Date(d).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
@@ -19,7 +21,16 @@ function fmtDate(d: string) {
 </script>
 
 <template>
-  <div v-if="item">
+  <div>
+    <!-- Not found state -->
+    <div v-if="notFound" style="max-width:720px;margin:80px auto;padding:0 24px;text-align:center;">
+      <p style="font-size:14px;color:#9ca3af;margin-bottom:12px;">404</p>
+      <h1 style="font-size:22px;font-weight:500;margin-bottom:12px;">Page not found</h1>
+      <p style="font-size:14px;color:#6b7280;margin-bottom:24px;">That news item doesn't exist.</p>
+      <NuxtLink to="/community/news" style="font-size:13px;color:#1D9E75;text-decoration:none;">← Back to news</NuxtLink>
+    </div>
+
+    <div v-else-if="item">
     <nav style="border-bottom:0.5px solid #e5e7eb;">
       <div style="max-width:1024px;margin:0 auto;padding:0 24px;display:flex;align-items:center;height:48px;">
         <NuxtLink to="/" style="font-size:14px;font-weight:500;margin-right:28px;text-decoration:none;color:inherit;">CUAHSI <span style="color:#9ca3af;font-weight:400;">water science</span></NuxtLink>
@@ -81,6 +92,7 @@ function fmtDate(d: string) {
         <p style="font-size:12px;color:#9ca3af;">© 2026 CUAHSI</p>
       </div>
     </footer>
+    </div>
   </div>
 </template>
 
