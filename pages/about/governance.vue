@@ -105,7 +105,7 @@ function initials(name: string) {
           and support initiatives set by the Board. Participation is open to any interested individual regardless
           of CUAHSI membership status.
         </p>
-        <p style="font-size:12px;color:#6b7280;margin-bottom:28px;">Advisory committees help to generate and evaluate ideas for new CUAHSI activities, review and suggest improvements in current activities, prioritize near- and long-term activities, and support CUAHSI grant programs through promotion and proposal review. Contact <a href="mailto:info@cuahsi.org" style="color:#1D9E75;text-decoration:none;">info@cuahsi.org</a> to express interest in participating.</p>
+        <p style="font-size:12px;color:#6b7280;margin-bottom:28px;">Advisory committees help to generate and evaluate ideas for new CUAHSI activities, review and suggest improvements in current activities, prioritize near- and long-term activities, and support CUAHSI grant programs through promotion and proposal review. Contact <a href="mailto:connect@cuahsi.org" style="color:#1D9E75;text-decoration:none;">connect@cuahsi.org</a> to express interest in participating.</p>
 
         <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;">
 
