@@ -1,9 +1,11 @@
 <script setup lang="ts">
 const route = useRoute()
 const { data: item } = await useAsyncData(`news-${route.params.slug}`, () =>
-  queryContent('news').where({ slug: route.params.slug, published: true }).findOne()
+  queryContent('news')
+    .where({ slug: route.params.slug, published: true, _dir: 'news' })
+    .findOne()
 )
-if (!item.value) throw createError({ statusCode: 404, message: 'Not found' })
+if (!item.value) throw createError({ statusCode: 404, statusMessage: 'News item not found' })
 useHead({
   title: `${item.value?.title} · News · CUAHSI`,
   meta: [{ name: 'description', content: item.value?.excerpt }]
