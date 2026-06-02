@@ -37,6 +37,7 @@ const { data: recentNewsletters } = await useAsyncData('recent-newsletters', () 
         <NuxtLink to="/about" style="font-size:12px; color:#6b7280; padding:0 12px; text-decoration:none;">About</NuxtLink>
         <NuxtLink to="/data-platforms" style="font-size:12px; color:#6b7280; padding:0 12px; text-decoration:none;">Tools &amp; platforms</NuxtLink>
         <NuxtLink to="/learn-train" style="font-size:12px; color:#6b7280; padding:0 12px; text-decoration:none;">Learn &amp; train</NuxtLink>
+        <NuxtLink to="/programs" style="font-size:12px; color:#6b7280; padding:0 12px; text-decoration:none;">Programs</NuxtLink>
         <NuxtLink to="/community" style="font-size:12px; color:#6b7280; padding:0 12px; text-decoration:none;">Get involved</NuxtLink>
         <div style="margin-left:auto;">
           <SiteSearch />
@@ -97,7 +98,7 @@ const { data: recentNewsletters } = await useAsyncData('recent-newsletters', () 
             <p style="font-size:12px; font-weight:500; color:#374151; margin-bottom:10px;">🔬 Faculty &amp; PIs</p>
             <div style="display:flex; flex-direction:column; gap:6px;">
               <a href="https://www.hydroshare.org" target="_blank" rel="noopener" style="font-size:12px; color:#1D9E75; text-decoration:none;">Publish data in HydroShare →</a>
-              <NuxtLink to="/community/campus-visits" style="font-size:12px; color:#1D9E75; text-decoration:none;">Bring CUAHSI to your campus →</NuxtLink>
+              <NuxtLink to="/programs" style="font-size:12px; color:#1D9E75; text-decoration:none;">Browse all programs →</NuxtLink>
               <a href="https://www.hydrolearn.org" target="_blank" rel="noopener" style="font-size:12px; color:#1D9E75; text-decoration:none;">Use HydroLearn in your course →</a>
             </div>
           </div>
