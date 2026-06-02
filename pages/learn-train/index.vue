@@ -43,8 +43,8 @@ const programs = [
     title: 'CUAHSI Virtual University',
     desc: 'Interuniversity graduate program where students take 4-week online modules taught by faculty at leading institutions — and earn credit at their home university. 430+ students from 25 institutions since 2017. Nine modules offered in 2025.',
     cta: 'Learn about the CVU',
-    href: 'https://www.cuahsi.org/virtual-university',
-    external: true,
+    href: '/programs/virtual-university',
+    external: false,
   },
   {
     label: 'Seminar archive',
@@ -73,8 +73,8 @@ const programs = [
     title: 'Fellowships & grants',
     desc: 'The HydroInformatics Innovation Fellowship supports projects producing broadly shareable hydroinformatics products. Pathfinder Fellowships fund graduate student field research. Instrumentation Discovery Travel Grants support hands-on instrument training.',
     cta: 'See funding opportunities',
-    href: 'https://www.cuahsi.org/opportunities',
-    external: true,
+    href: '/community/jobs',
+    external: false,
   },
   {
     label: 'Summer institute',
@@ -83,7 +83,7 @@ const programs = [
     title: 'Water Prediction Innovators Summer Institute',
     desc: 'Seven-week experiential program (CUAHSI + University of Alabama + NOAA) for graduate students in water prediction and flood forecasting. 250+ fellows from 100 universities since 2015. Celebrating its 10th anniversary in 2025.',
     cta: 'Learn about the Summer Institute',
-    href: '/community/events/water-prediction-innovators-2026',
+    href: '/programs/summer-institute',
     external: false,
   },
 ]
