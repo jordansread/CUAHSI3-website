@@ -53,8 +53,8 @@ const programs = [
     title: 'Cyberseminars',
     desc: 'Virtual presentations, panels, and events on timely water science topics. Archive of 200+ lectures available free on YouTube. Past series include Post-Field Season Data Management, Navigating Academic Waters, and USGS Water Data APIs.',
     cta: 'Browse the archive',
-    href: 'https://www.youtube.com/CUAHSI',
-    external: true,
+    href: '/learn-train/cyberseminars',
+    external: false,
   },
   {
     label: 'Platform',
