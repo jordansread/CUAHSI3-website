@@ -1,161 +1,113 @@
 <script setup lang="ts">
 useHead({
   title: 'Highlights · CUAHSI',
-  meta: [{ name: 'description', content: 'Selected highlights from CUAHSI programs — research outcomes, infrastructure advances, training impacts, and community work.' }]
+  meta: [{ name: 'description', content: 'What the CUAHSI community is building, measuring, and discovering.' }]
 })
 
-const { data: highlights } = await useAsyncData('research', () =>
+const { useCategoryColor } = await import('~/composables/useCategoryColor')
+
+const { data: allHighlights } = await useAsyncData('highlights', () =>
   queryContent('research').where({ published: true }).sort({ date: -1 }).find()
 )
 
-const categoryLabels: Record<string, string> = {
-  'research':           'Research',
-  'cyberinfrastructure':'Cyberinfrastructure',
-  'data-infrastructure':'Data infrastructure',
-  'training':           'Training & programs',
-  'community':          'Community',
-}
+const catDefs = [
+  { key: 'all',                label: 'All',                color: '#15212B' },
+  { key: 'research',           label: 'Research',           color: 'oklch(0.55 0.13 245)' },
+  { key: 'cyberinfrastructure',label: 'Cyberinfrastructure',color: 'oklch(0.56 0.12 200)' },
+  { key: 'data-infrastructure',label: 'Data infrastructure',color: 'oklch(0.52 0.13 290)' },
+  { key: 'training',           label: 'Training & programs', color: 'oklch(0.55 0.12 150)' },
+  { key: 'community',          label: 'Community',           color: 'oklch(0.61 0.13 55)' },
+]
 
-const categoryColors: Record<string, { bg: string, text: string }> = {
-  'research':            { bg: '#DCFCE7', text: '#15803D' },
-  'cyberinfrastructure': { bg: '#EDE9FE', text: '#5B21B6' },
-  'data-infrastructure': { bg: '#EFF6FF', text: '#1E40AF' },
-  'training':            { bg: '#FFF7ED', text: '#C2410C' },
-  'community':           { bg: '#FDF2F8', text: '#9D174D' },
-}
+const selectedCat  = ref('all')
+const selectedYear = ref('all')
 
-const categories = computed(() =>
-  [...new Set(highlights.value?.map(h => h.category).filter(Boolean))].sort()
-)
-const years = computed(() =>
-  [...new Set(highlights.value?.map(h => String(h.year)))].sort((a,b) => Number(b)-Number(a))
-)
-
-const activeCategory = ref('all')
-const activeYear = ref('all')
+const years = computed(() => {
+  const ys = [...new Set((allHighlights.value ?? []).map(h => String(h.year)))]
+  return ys.sort((a, b) => Number(b) - Number(a))
+})
 
 const filtered = computed(() => {
-  let items = highlights.value ?? []
-  if (activeCategory.value !== 'all') items = items.filter(h => h.category === activeCategory.value)
-  if (activeYear.value !== 'all') items = items.filter(h => String(h.year) === activeYear.value)
+  let items = allHighlights.value ?? []
+  if (selectedCat.value !== 'all')  items = items.filter(h => h.category === selectedCat.value)
+  if (selectedYear.value !== 'all') items = items.filter(h => String(h.year) === selectedYear.value)
   return items
 })
 
-function fmtDate(d: string) {
-  return new Date(d).toLocaleDateString('en-US', { month: 'long', year: 'numeric' })
+function colorOf(key: string) { return (catDefs.find(c => c.key === key) || catDefs[0]).color }
+function fmtDate(d: string) { return new Date(d).toLocaleDateString('en-US', { month: 'long', year: 'numeric' }) }
+
+function chipStyle(active: boolean, color: string) {
+  return `border:1px solid ${active ? color : 'rgba(15,33,43,.18)'};background:${active ? color : 'transparent'};color:${active ? '#fff' : '#3a4d57'};cursor:pointer;font:600 13px 'Hanken Grotesk';padding:8px 15px;border-radius:22px;`
 }
-function catLabel(c: string) { return categoryLabels[c] ?? c }
-function catBg(c: string) { return categoryColors[c]?.bg ?? '#F3F4F6' }
-function catText(c: string) { return categoryColors[c]?.text ?? '#374151' }
+function yearChipStyle(active: boolean) {
+  return `border:1px solid ${active ? '#0F2E44' : 'rgba(15,33,43,.18)'};background:${active ? '#0F2E44' : 'transparent'};color:${active ? '#fff' : '#3a4d57'};cursor:pointer;font:600 12px 'Space Mono',monospace;padding:7px 12px;border-radius:6px;`
+}
 </script>
 
 <template>
   <div>
-    <nav style="border-bottom:0.5px solid #e5e7eb;">
-      <div style="max-width:1024px;margin:0 auto;padding:0 24px;display:flex;align-items:center;height:48px;">
-        <NuxtLink to="/" style="font-size:14px;font-weight:500;margin-right:28px;text-decoration:none;color:inherit;">CUAHSI <span style="color:#9ca3af;font-weight:400;">water science</span></NuxtLink>
-        <NuxtLink to="/about" style="font-size:12px;color:#6b7280;padding:0 12px;text-decoration:none;">About</NuxtLink>
-        <NuxtLink to="/data-platforms" style="font-size:12px;color:#6b7280;padding:0 12px;text-decoration:none;">Tools &amp; platforms</NuxtLink>
-        <NuxtLink to="/learn-train" style="font-size:12px;color:#6b7280;padding:0 12px;text-decoration:none;">Learn &amp; train</NuxtLink>
-        <NuxtLink to="/programs" style="font-size:12px;color:#6b7280;padding:0 12px;text-decoration:none;">Programs</NuxtLink>
-        <NuxtLink to="/community" style="font-size:12px;color:#6b7280;padding:0 12px;text-decoration:none;">Get involved</NuxtLink>
-        <div style="margin-left:auto;">
-          <SiteSearch />
+    <!-- Hero -->
+    <section style="background:linear-gradient(180deg,#FBFAF7,#F3EEE4);border-bottom:1px solid rgba(15,33,43,.08);">
+      <div class="mx-auto" style="max-width:1240px;padding:64px 40px 52px;">
+        <span class="font-mono font-bold tracking-[.14em] uppercase text-clay" style="font-size:12px;">Highlights</span>
+        <h1 style="font:700 clamp(36px,4.4vw,54px)/1.04 'Schibsted Grotesk';letter-spacing:-.022em;color:#0F2E44;margin:16px 0 16px;max-width:720px;">What the community is building, measuring, and discovering.</h1>
+        <p style="font:400 17px/1.6 'Hanken Grotesk';color:#3a4d57;max-width:560px;">Selected outcomes from CUAHSI programs — spanning research advances, infrastructure development, training impact, and community engagement.</p>
+      </div>
+    </section>
+
+    <!-- Stats band -->
+    <StatsBand />
+
+    <!-- Filter bar -->
+    <div class="mx-auto" style="max-width:1240px;padding:36px 40px 0;">
+      <div class="flex gap-6 flex-wrap items-start justify-between">
+        <div class="flex gap-[6px] flex-wrap">
+          <button v-for="c in catDefs" :key="c.key"
+            :style="chipStyle(selectedCat === c.key, c.color)"
+            @click="selectedCat = c.key">
+            {{ c.label }}
+          </button>
+        </div>
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="font-mono text-[11px] tracking-[.08em] uppercase text-muted">Year</span>
+          <button :style="yearChipStyle(selectedYear === 'all')" @click="selectedYear = 'all'">All</button>
+          <button v-for="y in years" :key="y" :style="yearChipStyle(selectedYear === y)" @click="selectedYear = y">{{ y }}</button>
         </div>
       </div>
-    </nav>
-
-    <div style="max-width:1024px;margin:0 auto;padding:0 24px;">
-      <div style="padding:36px 0 28px;border-bottom:0.5px solid #f3f4f6;margin-bottom:28px;">
-        <h1 style="font-size:28px;font-weight:500;margin-bottom:10px;">Highlights</h1>
-        <p style="font-size:14px;color:#6b7280;line-height:1.65;max-width:560px;">
-          Selected outcomes from CUAHSI programs — spanning research advances, infrastructure development,
-          training impact, and community engagement.
-        </p>
-      </div>
-
-      <!-- Filters -->
-      <div style="display:flex;gap:20px;flex-wrap:wrap;margin-bottom:28px;align-items:flex-start;">
-        <div>
-          <p style="font-size:11px;color:#9ca3af;margin-bottom:6px;font-weight:500;letter-spacing:.05em;text-transform:uppercase;">Category</p>
-          <div style="display:flex;gap:5px;flex-wrap:wrap;">
-            <button @click="activeCategory='all'"
-              :style="`font-size:12px;padding:4px 10px;border-radius:99px;cursor:pointer;border:0.5px solid ${activeCategory==='all'?'#111827':'#d1d5db'};background:${activeCategory==='all'?'#111827':'transparent'};color:${activeCategory==='all'?'white':'#6b7280'};`">
-              All
-            </button>
-            <button v-for="cat in categories" :key="cat" @click="activeCategory=cat"
-              :style="`font-size:12px;padding:4px 10px;border-radius:99px;cursor:pointer;border:0.5px solid ${activeCategory===cat?'#111827':'#d1d5db'};background:${activeCategory===cat?'#111827':'transparent'};color:${activeCategory===cat?'white':'#6b7280'};`">
-              {{ catLabel(cat) }}
-            </button>
-          </div>
-        </div>
-        <div>
-          <p style="font-size:11px;color:#9ca3af;margin-bottom:6px;font-weight:500;letter-spacing:.05em;text-transform:uppercase;">Year</p>
-          <div style="display:flex;gap:5px;">
-            <button @click="activeYear='all'"
-              :style="`font-size:12px;padding:4px 10px;border-radius:99px;cursor:pointer;border:0.5px solid ${activeYear==='all'?'#111827':'#d1d5db'};background:${activeYear==='all'?'#111827':'transparent'};color:${activeYear==='all'?'white':'#6b7280'};`">
-              All years
-            </button>
-            <button v-for="y in years" :key="y" @click="activeYear=y"
-              :style="`font-size:12px;padding:4px 10px;border-radius:99px;cursor:pointer;border:0.5px solid ${activeYear===y?'#111827':'#d1d5db'};background:${activeYear===y?'#111827':'transparent'};color:${activeYear===y?'white':'#6b7280'};`">
-              {{ y }}
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Highlights list -->
-      <div style="margin-bottom:48px;">
-        <NuxtLink v-for="item in filtered" :key="item._path"
-          :to="`/highlights/${item.slug}`"
-          style="display:grid;grid-template-columns:auto minmax(0,1fr) 120px;gap:16px;padding:18px 0;border-bottom:0.5px solid #f3f4f6;text-decoration:none;color:inherit;align-items:start;">
-          <div style="width:3px;border-radius:2px;align-self:stretch;margin-top:2px;"
-            :style="`background:${catBg(item.category)};border:0.5px solid ${catText(item.category)}22;`">
-          </div>
-          <div>
-            <div style="display:flex;gap:6px;align-items:center;margin-bottom:5px;flex-wrap:wrap;">
-              <span :style="`font-size:11px;padding:1px 8px;border-radius:99px;font-weight:500;background:${catBg(item.category)};color:${catText(item.category)};`">
-                {{ catLabel(item.category) }}
-              </span>
-              <span style="font-size:11px;color:#9ca3af;">{{ item.year }}</span>
-            </div>
-            <p style="font-size:14px;font-weight:500;line-height:1.35;margin-bottom:5px;">{{ item.title }}</p>
-            <p style="font-size:13px;color:#6b7280;line-height:1.55;">{{ item.excerpt }}</p>
-            <div v-if="item.people_mentioned?.length" style="display:flex;gap:5px;flex-wrap:wrap;margin-top:7px;">
-              <span v-for="p in item.people_mentioned" :key="p"
-                style="font-size:11px;color:#9ca3af;padding:1px 7px;border-radius:99px;background:#f9fafb;">
-                {{ p.replace(/-/g,' ') }}
-              </span>
-            </div>
-          </div>
-          <div style="text-align:right;padding-top:2px;">
-            <p style="font-size:11px;color:#9ca3af;">{{ fmtDate(item.date) }}</p>
-          </div>
-        </NuxtLink>
-        <p v-if="!filtered?.length" style="font-size:13px;color:#9ca3af;padding:20px 0;">No highlights match this filter.</p>
-      </div>
-
-      <!-- Annual reports -->
-      <div style="background:#f9fafb;border-radius:12px;padding:20px 24px;margin-bottom:48px;">
-        <p style="font-size:12px;font-weight:500;color:#374151;margin-bottom:4px;">Annual reports</p>
-        <p style="font-size:13px;color:#6b7280;line-height:1.6;margin-bottom:12px;">Full year-in-review across HydroShare, training programs, and research.</p>
-        <div style="display:flex;gap:10px;flex-wrap:wrap;">
-          <a href="https://www.cuahsi.org/uploads/pages/img/2025-Annual-Report_Final_reduced.pdf" target="_blank" rel="noopener"
-            style="font-size:12px;padding:6px 14px;border:0.5px solid #d1d5db;border-radius:8px;text-decoration:none;color:inherit;">2025 Annual Report ↗</a>
-          <a href="https://www.cuahsi.org/uploads/pages/img/Annual-Report-2024.pdf" target="_blank" rel="noopener"
-            style="font-size:12px;padding:6px 14px;border:0.5px solid #d1d5db;border-radius:8px;text-decoration:none;color:inherit;">2024 Annual Report ↗</a>
-        </div>
+      <div class="font-mono text-[11px] tracking-[.06em] text-muted mt-4 mb-6">
+        SHOWING {{ filtered.length }} OF {{ allHighlights?.length ?? 0 }} HIGHLIGHTS
       </div>
     </div>
 
-    <footer style="border-top:0.5px solid #f3f4f6;">
-      <div style="max-width:1024px;margin:0 auto;padding:14px 24px;display:flex;justify-content:space-between;">
-        <div style="display:flex;gap:20px;">
-          <NuxtLink to="/community/news" style="font-size:12px;color:#9ca3af;text-decoration:none;">News</NuxtLink>
-          <NuxtLink to="/community/newsletter" style="font-size:12px;color:#9ca3af;text-decoration:none;">Newsletter</NuxtLink>
+    <!-- Card grid -->
+    <div class="mx-auto" style="max-width:1240px;padding:0 40px 80px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
+      <NuxtLink v-for="h in filtered" :key="h.slug" :to="`/highlights/${h.slug}`"
+        class="card-lift bg-white rounded-card overflow-hidden flex flex-col"
+        :style="`border:1px solid rgba(15,33,43,.1);border-top:3px solid ${colorOf(h.category)};text-decoration:none;`">
+        <!-- Photo placeholder -->
+        <div class="relative" style="height:180px;background:repeating-linear-gradient(135deg,#e7eef3 0 14px,#dfe8ee 14px 28px);">
+          <span class="absolute font-mono font-bold tracking-[.08em] text-white rounded-[6px]" :style="`left:14px;top:14px;font-size:10px;background:${colorOf(h.category)};padding:5px 10px;`">
+            {{ useCategoryColor(h.category).label.toUpperCase() }}
+          </span>
         </div>
-        <p style="font-size:12px;color:#9ca3af;">© 2026 CUAHSI</p>
-      </div>
-    </footer>
+        <div class="flex flex-col flex-1" style="padding:20px;">
+          <div class="font-mono text-[11px] tracking-[.05em] text-muted mb-2">{{ fmtDate(h.date) }}</div>
+          <h3 style="font:700 18px/1.3 'Schibsted Grotesk';color:#0F2E44;margin:0 0 10px;flex:1;letter-spacing:-.008em;">{{ h.title }}</h3>
+          <p style="font:400 13.5px/1.55 'Hanken Grotesk';color:#5C6E78;margin:0 0 16px;" class="line-clamp-3">{{ h.excerpt }}</p>
+          <span class="arrow-row inline-flex items-center gap-2" style="font:600 13.5px 'Hanken Grotesk';color:#1F6FB2;">Read highlight <span class="arr">→</span></span>
+        </div>
+      </NuxtLink>
+      <p v-if="!filtered.length" class="text-muted col-span-3 py-8 text-center" style="font:400 14px 'Hanken Grotesk';">No highlights match this filter.</p>
+    </div>
   </div>
 </template>
+
+<style>
+.card-lift { transition: transform .18s ease, box-shadow .18s ease; }
+.card-lift:hover { transform: translateY(-4px); box-shadow: 0 18px 40px -22px rgba(15,46,68,.35); }
+.arrow-row:hover .arr { transform: translateX(5px); }
+.arr { transition: transform .18s ease; display: inline-block; }
+.line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.line-clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+</style>
