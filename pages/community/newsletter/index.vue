@@ -15,19 +15,6 @@ function fmtDate(d: string) {
 
 <template>
   <div>
-    <nav style="border-bottom:0.5px solid #e5e7eb;">
-      <div style="max-width:1024px;margin:0 auto;padding:0 24px;display:flex;align-items:center;height:48px;">
-        <NuxtLink to="/" style="font-size:14px;font-weight:500;margin-right:28px;text-decoration:none;color:inherit;">CUAHSI <span style="color:#9ca3af;font-weight:400;">water science</span></NuxtLink>
-        <NuxtLink to="/about" style="font-size:12px;color:#6b7280;padding:0 12px;text-decoration:none;">About</NuxtLink>
-        <NuxtLink to="/data-platforms" style="font-size:12px;color:#6b7280;padding:0 12px;text-decoration:none;">Tools &amp; platforms</NuxtLink>
-        <NuxtLink to="/learn-train" style="font-size:12px;color:#6b7280;padding:0 12px;text-decoration:none;">Learn &amp; train</NuxtLink>
-        <NuxtLink to="/programs" style="font-size:12px;color:#6b7280;padding:0 12px;text-decoration:none;">Programs</NuxtLink>
-        <NuxtLink to="/community" style="font-size:12px;color:#6b7280;padding:0 12px;text-decoration:none;">Get involved</NuxtLink>
-        <div style="margin-left:auto;">
-          <SiteSearch />
-        </div>
-      </div>
-    </nav>
 
     <div style="max-width:1024px;margin:0 auto;padding:0 24px;">
       <div style="padding:36px 0 28px;border-bottom:0.5px solid #f3f4f6;">
@@ -54,15 +41,5 @@ function fmtDate(d: string) {
         </NuxtLink>
       </div>
     </div>
-
-    <footer style="border-top:0.5px solid #f3f4f6;">
-      <div style="max-width:1024px;margin:0 auto;padding:14px 24px;display:flex;justify-content:space-between;">
-        <div style="display:flex;gap:20px;">
-          <NuxtLink to="/community/news" style="font-size:12px;color:#9ca3af;text-decoration:none;">News</NuxtLink>
-          <NuxtLink to="/community/events" style="font-size:12px;color:#9ca3af;text-decoration:none;">Events</NuxtLink>
-        </div>
-        <p style="font-size:12px;color:#9ca3af;">© 2026 CUAHSI</p>
-      </div>
-    </footer>
   </div>
 </template>
