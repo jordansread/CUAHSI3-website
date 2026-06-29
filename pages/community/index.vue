@@ -1,333 +1,112 @@
 <script setup lang="ts">
-useHead({
-  title: 'Get involved · CUAHSI',
-  meta: [{ name: 'description', content: 'Connect with the CUAHSI water science community. Find jobs, attend events, share your work, bring CUAHSI to your campus, contribute to advisory committees, or become a member institution.' }]
-})
+useHead({ title: 'Community · CUAHSI' })
 
-const { data: allCommunityEvents } = await useAsyncData('community-events', () =>
+const { data: allEvents } = await useAsyncData('comm-events', () =>
   queryContent('events').where({ published: true }).sort({ start: 1 }).find()
 )
 const upcomingEvents = computed(() =>
-  (allCommunityEvents.value ?? []).filter(e => new Date(e.start) >= new Date()).slice(0, 4)
+  (allEvents.value ?? []).filter(e => new Date(e.start) >= new Date()).slice(0, 4)
+)
+const { data: latestNews } = await useAsyncData('comm-news', () =>
+  queryContent('news').where({ published: true }).sort({ date: -1 }).limit(4).find()
 )
 
-const { data: latestNews } = await useAsyncData('community-news', () =>
-  queryContent('news')
-    .where({ published: true })
-    .sort({ date: -1 })
-    .limit(3)
-    .find()
-)
+function fmtDay(d: string) { return new Date(d).toLocaleDateString('en-US', { day: '2-digit' }) }
+function fmtMon(d: string) { return new Date(d).toLocaleDateString('en-US', { month: 'short' }).toUpperCase() }
+function fmtDate(d: string) { return new Date(d).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) }
 
-const { data: latestNewsletter } = await useAsyncData('community-newsletter', () =>
-  queryContent('newsletter')
-    .where({ published: true })
-    .sort({ date: -1 })
-    .limit(1)
-    .findOne()
-)
-
-const typeColors: Record<string, {bg: string; text: string}> = {
-  conference: { bg: '#EFF6FF', text: '#1E40AF' },
-  workshop:   { bg: '#EDE9FE', text: '#5B21B6' },
-  webinar:    { bg: '#DCFCE7', text: '#15803D' },
-  deadline:   { bg: '#FEF9C3', text: '#854D0E' },
-  default:    { bg: '#F3F4F6', text: '#6B7280' },
-}
-function typeStyle(type: string) {
-  const c = typeColors[type] ?? typeColors.default
-  return `font-size:10px;padding:2px 8px;border-radius:99px;background:${c.bg};color:${c.text};white-space:nowrap;`
-}
-function fmtDate(d: string) {
-  return new Date(d).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
-}
-
-const waysin = [
-  {
-    icon: '📅',
-    title: 'Attend an event',
-    desc: 'Join workshops, webinars, conferences, and the annual Virtual Open House. Most CUAHSI events are free and open to the community regardless of membership.',
-    cta: 'See upcoming events',
-    href: '/community/events',
-    internal: true,
-  },
-  {
-    icon: '🎓',
-    title: 'Apply for training or funding',
-    desc: 'Workshops, fellowships, the Virtual University, and travel grants are open to students and early-career researchers at any institution.',
-    cta: 'Browse programs',
-    href: '/learn-train',
-    internal: true,
-  },
-  {
-    icon: '📬',
-    title: 'Subscribe to the newsletter',
-    desc: 'Monthly updates on programs, events, funding deadlines, HydroShare highlights, and community spotlights. The archive is fully indexed on cuahsi.org.',
-    cta: 'Subscribe',
-    href: 'https://cuahsi.us3.list-manage.com/subscribe?u=aad7e9257f329c1a46ebbd412&id=e9b95979ca',
-    internal: false,
-  },
-  {
-    icon: '🏛️',
-    title: 'Bring CUAHSI to your campus',
-    desc: 'CUAHSI staff are available for free seminars, hands-on workshops, and consultations at universities and colleges — tailored to your audience, in person or virtual.',
-    cta: 'See what we offer',
-    href: '/community/campus-visits',
-    internal: true,
-  },
-  {
-    icon: '💼',
-    title: 'Post or find a job',
-    desc: 'The CUAHSI job board lists opportunities across water science, hydrology, engineering, and data science. Postings remain active for 60 days.',
-    cta: 'View job board',
-    href: '/community/jobs',
-    internal: false,
-  },
-  {
-    icon: '🤝',
-    title: 'Join a member institution',
-    desc: 'If your university or organization is not yet a CUAHSI member, institutional membership connects your community to shared infrastructure, training, and governance.',
-    cta: 'Learn about membership',
-    href: '/about/membership',
-    internal: true,
-  },
-  {
-    icon: '🔬',
-    title: 'Serve on an advisory committee',
-    desc: 'Advisory committees on informatics, education and outreach, and instrumentation are open to any interested individual regardless of membership status.',
-    cta: 'Learn about governance',
-    href: '/about/governance#advisory-committees',
-    internal: true,
-  },
-  {
-    icon: '💡',
-    title: 'Share your CUAHSI story',
-    desc: 'As CUAHSI marks its 25th anniversary, we are collecting reflections from the community. What is a CUAHSI moment that stands out for you?',
-    cta: 'Send a reflection',
-    href: 'mailto:commgr@cuahsi.org',
-    internal: false,
-  },
+const cards = [
+  { tag: 'WORKSHOPS & COLLOQUIA', title: 'Events', desc: 'Workshops, field schools, colloquia, and virtual events across the water science calendar.', cta: 'Browse events', to: '/community/events' },
+  { tag: 'POSITIONS & FELLOWSHIPS', title: 'Job board', desc: 'Faculty positions, postdocs, grad assistantships, and fellowships from member institutions.', cta: 'View openings', to: '/community/jobs' },
+  { tag: 'MONTHLY UPDATES', title: 'Newsletter', desc: 'Funding deadlines, new datasets, cyberseminars, and community news — every month.', cta: 'Browse archive', to: '/community/newsletter' },
+  { tag: 'ANNOUNCEMENTS', title: 'News', desc: 'Operational updates, platform changes, and time-sensitive community items.', cta: 'Read news', to: '/community/news' },
+  { tag: 'BRING CUAHSI TO YOU', title: 'Campus visits', desc: 'CUAHSI staff visit member universities for workshops and student engagement at no cost.', cta: 'Learn more', to: '/community/campus-visits' },
+  { tag: 'CONSORTIUM MEMBERSHIP', title: 'Join CUAHSI', desc: 'Connect your institution to shared infrastructure, training, and governance.', cta: 'Learn about membership', to: '/about/membership' },
 ]
 </script>
 
 <template>
   <div>
+    <CommunityHero
+      title="Get involved."
+      lead="Events, jobs, the newsletter, and ways to bring CUAHSI to your campus — the connective tissue of the consortium." />
 
-    <div style="max-width:1024px;margin:0 auto;padding:0 24px;">
-
-      <!-- Hero -->
-      <section style="padding:48px 0 40px;border-bottom:0.5px solid #f3f4f6;">
-        <p style="font-size:11px;color:#9ca3af;font-weight:500;letter-spacing:.07em;text-transform:uppercase;margin-bottom:12px;">Get involved</p>
-        <h1 style="font-size:32px;font-weight:500;line-height:1.2;margin-bottom:16px;max-width:560px;">
-          Connect with the water science community
-        </h1>
-        <p style="font-size:15px;color:#6b7280;line-height:1.7;max-width:560px;">
-          CUAHSI community consists of students, educators, researchers, volunteer scientists, outreach coordinators,
-          environmental and watershed organizations, and federal and state agencies. Everyone involved in water
-          science, water-resources management, or water-resources protection has a place here.
-        </p>
-      </section>
-
-      <!-- Quote -->
-      <section style="padding:36px 0;border-bottom:0.5px solid #f3f4f6;">
-        <blockquote style="border-left:3px solid #e5e7eb;padding-left:22px;max-width:680px;">
-          <p style="font-size:15px;color:#374151;line-height:1.75;font-style:italic;margin-bottom:10px;">
-            "CUAHSI plays a one-of-a-kind and vital role connecting and engaging the academic community in the
-            hydrological sciences. CUAHSI has succeeded in providing academic researchers, faculty, and graduate
-            students with a consistent and well-resourced hub for academic exchange, data and modeling tools,
-            conferences, training, and cross-disciplinary, trans-institutional programming."
-          </p>
-          <p style="font-size:12px;color:#9ca3af;">Scott H. Ensign, Ph.D., Assistant Director and Research Scientist, Stroud Water Research Center</p>
-        </blockquote>
-      </section>
+    <div class="mx-auto" style="max-width:1240px;padding:52px 40px 0;">
 
       <!-- Ways to get involved -->
-      <section style="padding:40px 0;border-bottom:0.5px solid #f3f4f6;">
-        <p style="font-size:11px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:#9ca3af;margin-bottom:20px;">Ways to get involved</p>
-        <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;">
-          <div v-for="way in waysin" :key="way.title"
-            style="border:0.5px solid #e5e7eb;border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:8px;">
-            <div style="font-size:22px;margin-bottom:2px;">{{ way.icon }}</div>
-            <p style="font-size:13px;font-weight:500;line-height:1.35;">{{ way.title }}</p>
-            <p style="font-size:12px;color:#6b7280;line-height:1.55;flex:1;">{{ way.desc }}</p>
-            <NuxtLink v-if="way.internal" :to="way.href"
-              style="font-size:12px;color:#1D9E75;text-decoration:none;margin-top:4px;">
-              {{ way.cta }} →
-            </NuxtLink>
-            <a v-else :href="way.href" style="font-size:12px;color:#1D9E75;text-decoration:none;margin-top:4px;">
-              {{ way.cta }} →
-            </a>
-          </div>
-        </div>
-      </section>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:56px;">
+        <NuxtLink v-for="c in cards" :key="c.to" :to="c.to"
+          class="card-lift arrow-row bg-white rounded-card flex flex-col"
+          style="border:1px solid rgba(15,33,43,.1);padding:22px;text-decoration:none;">
+          <span class="font-mono font-bold tracking-[.06em] uppercase text-clay mb-3" style="font-size:11px;">{{ c.tag }}</span>
+          <span style="font:700 20px 'Schibsted Grotesk';color:#0F2E44;display:block;margin-bottom:8px;">{{ c.title }}</span>
+          <span style="font:400 14px/1.55 'Hanken Grotesk';color:#5C6E78;flex:1;display:block;margin-bottom:16px;">{{ c.desc }}</span>
+          <span class="inline-flex items-center gap-2" style="font:600 13.5px 'Hanken Grotesk';color:#1F6FB2;">{{ c.cta }} <span class="arr">→</span></span>
+        </NuxtLink>
+      </div>
 
-      <!-- News + Events + Newsletter -->
-      <section style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;padding:40px 0;border-bottom:0.5px solid #f3f4f6;">
-
+      <!-- Events + News split -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-bottom:56px;">
+        <!-- Upcoming events -->
         <div>
-          <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:16px;">
-            <p style="font-size:13px;font-weight:500;">Latest news</p>
-            <NuxtLink to="/community/news" style="font-size:12px;color:#9ca3af;text-decoration:none;">All news →</NuxtLink>
+          <div class="flex items-baseline justify-between mb-4">
+            <span class="font-mono font-bold tracking-[.1em] uppercase text-muted" style="font-size:11px;">Upcoming events</span>
+            <NuxtLink to="/community/events" class="arrow-row inline-flex items-center gap-1" style="font:600 13px 'Hanken Grotesk';color:#1F6FB2;">All events <span class="arr">→</span></NuxtLink>
           </div>
-          <div v-if="latestNews?.length">
-            <div v-for="post in latestNews" :key="post._path"
-              style="padding:11px 0;border-bottom:0.5px solid #f3f4f6;">
-              <p style="font-size:11px;color:#9ca3af;margin-bottom:3px;">{{ fmtDate(post.date) }}</p>
-              <p style="font-size:13px;font-weight:500;line-height:1.4;margin-bottom:3px;">{{ post.title }}</p>
-              <p v-if="post.excerpt" style="font-size:12px;color:#6b7280;line-height:1.5;">{{ post.excerpt }}</p>
-            </div>
-          </div>
-          <p v-else style="font-size:13px;color:#9ca3af;">No news yet.</p>
-        </div>
-
-        <div>
-          <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:16px;">
-            <p style="font-size:13px;font-weight:500;">Upcoming events</p>
-            <NuxtLink to="/community/events" style="font-size:12px;color:#9ca3af;text-decoration:none;">All events →</NuxtLink>
-          </div>
-          <div v-if="upcomingEvents?.length">
-            <NuxtLink v-for="event in upcomingEvents" :key="event._path"
-              :to="`/community/events/${event.slug}`"
-              style="display:flex;gap:10px;padding:10px 0;border-bottom:0.5px solid #f3f4f6;text-decoration:none;color:inherit;">
-              <div style="flex-shrink:0;width:36px;background:#f9fafb;border-radius:6px;text-align:center;padding:5px 2px;">
-                <p style="font-size:9px;color:#9ca3af;text-transform:uppercase;letter-spacing:.05em;margin-bottom:1px;">
-                  {{ new Date(event.start).toLocaleDateString('en-US',{month:'short'}) }}
-                </p>
-                <p style="font-size:16px;font-weight:500;line-height:1;">{{ new Date(event.start).getDate() }}</p>
+          <div class="flex flex-col gap-[1px]" style="background:rgba(15,33,43,.08);border-radius:10px;overflow:hidden;">
+            <div v-for="e in upcomingEvents" :key="e.slug" class="bg-paper flex gap-4 items-start" style="padding:14px 16px;">
+              <div class="text-center flex-none rounded-[6px] bg-navy text-white" style="width:42px;padding:6px 4px;">
+                <div class="font-mono font-bold" style="font-size:9.5px;color:#7fc0ee;letter-spacing:.06em;">{{ fmtMon(e.start) }}</div>
+                <div style="font:700 20px 'Schibsted Grotesk';line-height:1;">{{ fmtDay(e.start) }}</div>
               </div>
-              <div style="flex:1;min-width:0;">
-                <p style="font-size:13px;font-weight:500;line-height:1.35;margin-bottom:3px;">{{ event.title }}</p>
-                <div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap;">
-                  <span :style="typeStyle(event.type)">{{ event.type }}</span>
-                  <span v-if="event.location?.city" style="font-size:11px;color:#9ca3af;">{{ event.location.city }}</span>
-                  <span v-else-if="event.location?.mode==='virtual'" style="font-size:11px;color:#9ca3af;">Virtual</span>
+              <div class="flex-1 min-w-0">
+                <NuxtLink :to="`/community/events/${e.slug}`" style="font:600 14px 'Hanken Grotesk';color:#0F2E44;text-decoration:none;" class="hover:text-water transition-colors line-clamp-2">{{ e.title }}</NuxtLink>
+                <div class="flex items-center gap-2 mt-1">
+                  <span class="font-mono text-[10px] text-muted">{{ e.location?.city || (e.location?.mode === 'virtual' ? 'Virtual' : '') }}</span>
+                  <span class="font-mono text-[10px] rounded-[4px]" style="background:rgba(31,111,178,.09);color:#1F6FB2;padding:2px 6px;">{{ e.location?.mode }}</span>
                 </div>
               </div>
-            </NuxtLink>
+            </div>
+            <div v-if="!upcomingEvents.length" class="bg-paper text-center" style="padding:24px;font:400 14px 'Hanken Grotesk';color:#5C6E78;">No upcoming events.</div>
           </div>
-          <p v-else style="font-size:13px;color:#9ca3af;">No upcoming events.</p>
         </div>
 
+        <!-- Latest news -->
         <div>
-          <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:16px;">
-            <p style="font-size:13px;font-weight:500;">Newsletter</p>
-            <NuxtLink to="/community/newsletter" style="font-size:12px;color:#9ca3af;text-decoration:none;">Archive →</NuxtLink>
+          <div class="flex items-baseline justify-between mb-4">
+            <span class="font-mono font-bold tracking-[.1em] uppercase text-muted" style="font-size:11px;">Latest news</span>
+            <NuxtLink to="/community/news" class="arrow-row inline-flex items-center gap-1" style="font:600 13px 'Hanken Grotesk';color:#1F6FB2;">All news <span class="arr">→</span></NuxtLink>
           </div>
-          <div v-if="latestNewsletter" style="border:0.5px solid #e5e7eb;border-radius:12px;padding:16px;margin-bottom:12px;">
-            <div style="display:flex;align-items:center;gap:6px;margin-bottom:8px;">
-              <span style="width:6px;height:6px;border-radius:50%;background:#1D9E75;flex-shrink:0;"></span>
-              <span style="font-size:11px;color:#9ca3af;text-transform:uppercase;letter-spacing:.05em;font-weight:500;">Latest issue</span>
-            </div>
-            <NuxtLink :to="`/community/newsletter/${latestNewsletter.slug}`"
-              style="font-size:13px;font-weight:500;line-height:1.4;display:block;margin-bottom:6px;text-decoration:none;color:inherit;">
-              {{ latestNewsletter.title }}
+          <div class="flex flex-col">
+            <NuxtLink v-for="n in latestNews" :key="n.slug" :to="`/community/news/${n.slug}`"
+              class="flex flex-col gap-1 arrow-row"
+              style="padding:14px 0;border-bottom:1px solid rgba(15,33,43,.08);text-decoration:none;">
+              <div class="flex items-center gap-2">
+                <span class="font-mono text-[11px] text-muted">{{ fmtDate(n.date) }}</span>
+                <span v-for="tag in n.tags?.slice(0,1)" :key="tag" class="font-mono text-[10px] text-clay">· {{ tag }}</span>
+              </div>
+              <span style="font:600 14px/1.35 'Hanken Grotesk';color:#0F2E44;" class="hover:text-water transition-colors">{{ n.title }}</span>
+              <span style="font:400 13px/1.5 'Hanken Grotesk';color:#5C6E78;" class="line-clamp-2">{{ n.excerpt }}</span>
             </NuxtLink>
-            <p style="font-size:12px;color:#6b7280;line-height:1.5;margin-bottom:10px;">{{ latestNewsletter.summary }}</p>
-            <div style="display:flex;flex-wrap:wrap;gap:4px;">
-              <span v-for="t in latestNewsletter.topics?.slice(0,3)" :key="t"
-                style="font-size:11px;padding:2px 8px;border-radius:99px;background:#f0fdf4;color:#166534;border:0.5px solid #bbf7d0;">
-                {{ t.replace(/-/g, ' ') }}
-              </span>
-            </div>
-          </div>
-          <div style="background:#f9fafb;border-radius:10px;padding:14px;">
-            <p style="font-size:13px;font-weight:500;margin-bottom:4px;">Stay connected</p>
-            <p style="font-size:12px;color:#6b7280;margin-bottom:10px;line-height:1.5;">Monthly news, events, and funding opportunities. No spam.</p>
-            <a href="https://cuahsi.us3.list-manage.com/subscribe?u=aad7e9257f329c1a46ebbd412&id=e9b95979ca"
-              target="_blank"
-              style="display:inline-block;font-size:12px;font-weight:500;padding:7px 14px;background:#111827;color:white;border-radius:7px;text-decoration:none;">
-              Subscribe →
-            </a>
           </div>
         </div>
+      </div>
 
-      </section>
-
-      <!-- CZNet + Resources -->
-      <section style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;padding:40px 0;border-bottom:0.5px solid #f3f4f6;">
-
-        <div style="border:0.5px solid #e5e7eb;border-radius:12px;padding:22px;">
-          <p style="font-size:11px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:#9ca3af;margin-bottom:10px;">Research initiative</p>
-          <p style="font-size:15px;font-weight:500;margin-bottom:8px;">Critical Zone Collaborative Network</p>
-          <p style="font-size:13px;color:#6b7280;line-height:1.65;margin-bottom:14px;">
-            CUAHSI is the Coordinating Hub for the Critical Zone Collaborative Network (CZNet), the next
-            phase of NSF Critical Zone research. The CZNet comprises nine Thematic Clusters studying
-            how rock, soil, water, air, and life interact across diverse geological and climatic settings.
-            CUAHSI hub activities enhance water data services and broaden the community.
-          </p>
-          <a href="https://criticalzone.org" target="_blank" rel="noopener"
-            style="font-size:13px;color:#1D9E75;text-decoration:none;">Visit criticalzone.org ↗</a>
+      <!-- Newsletter CTA -->
+      <div class="rounded-[14px] bg-navy mb-16" style="padding:40px 48px;display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center;">
+        <div>
+          <span class="font-mono font-bold tracking-[.14em] uppercase" style="font-size:12px;color:#e0a384;">Stay connected</span>
+          <h2 style="font:700 24px 'Schibsted Grotesk';color:#fff;margin:10px 0 6px;">Monthly water science updates.</h2>
+          <p style="font:400 14px/1.55 'Hanken Grotesk';color:#7fa4bf;margin:0 0 14px;">Programs, funding, datasets, and community news — no spam.</p>
+          <NuxtLink to="/community/newsletter" class="arrow-row inline-flex items-center gap-2" style="font:600 13px 'Hanken Grotesk';color:#7fc0ee;">Browse the archive <span class="arr">→</span></NuxtLink>
         </div>
-
-        <div style="display:flex;flex-direction:column;gap:10px;">
-          <p style="font-size:11px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:#9ca3af;margin-bottom:2px;">Community resources</p>
-
-          <a href="https://www.cuahsi.org/hydrologic-instrumentation-facilities" target="_blank" rel="noopener"
-            style="border:0.5px solid #e5e7eb;border-radius:10px;padding:14px 16px;text-decoration:none;color:inherit;display:flex;justify-content:space-between;align-items:center;">
-            <div>
-              <p style="font-size:13px;font-weight:500;margin-bottom:2px;">Hydrologic instrumentation facilities</p>
-              <p style="font-size:12px;color:#6b7280;">Community facilities and infrastructure available for research</p>
-            </div>
-            <span style="font-size:14px;color:#d1d5db;margin-left:10px;flex-shrink:0;">↗</span>
-          </a>
-
-          <a href="https://www.cuahsi.org/community/water-data-portals" target="_blank" rel="noopener"
-            style="border:0.5px solid #e5e7eb;border-radius:10px;padding:14px 16px;text-decoration:none;color:inherit;display:flex;justify-content:space-between;align-items:center;">
-            <div>
-              <p style="font-size:13px;font-weight:500;margin-bottom:2px;">Water data portals</p>
-              <p style="font-size:12px;color:#6b7280;">Web portals and websites with water resources data</p>
-            </div>
-            <span style="font-size:14px;color:#d1d5db;margin-left:10px;flex-shrink:0;">↗</span>
-          </a>
-
-          <a href="https://www.youtube.com/CUAHSI" target="_blank" rel="noopener"
-            style="border:0.5px solid #e5e7eb;border-radius:10px;padding:14px 16px;text-decoration:none;color:inherit;display:flex;justify-content:space-between;align-items:center;">
-            <div>
-              <p style="font-size:13px;font-weight:500;margin-bottom:2px;">Cyberseminar archive</p>
-              <p style="font-size:12px;color:#6b7280;">150+ recorded presentations from water scientists on YouTube</p>
-            </div>
-            <span style="font-size:14px;color:#d1d5db;margin-left:10px;flex-shrink:0;">↗</span>
-          </a>
-
-          <a href="https://www.cuahsi.org/ongoing-research-projects" target="_blank" rel="noopener"
-            style="border:0.5px solid #e5e7eb;border-radius:10px;padding:14px 16px;text-decoration:none;color:inherit;display:flex;justify-content:space-between;align-items:center;">
-            <div>
-              <p style="font-size:13px;font-weight:500;margin-bottom:2px;">Ongoing research projects</p>
-              <p style="font-size:12px;color:#6b7280;">Collaborative projects CUAHSI is actively supporting</p>
-            </div>
-            <span style="font-size:14px;color:#d1d5db;margin-left:10px;flex-shrink:0;">↗</span>
-          </a>
-
-          <NuxtLink to="/community/jobs"
-            style="border:0.5px solid #e5e7eb;border-radius:10px;padding:14px 16px;text-decoration:none;color:inherit;display:flex;justify-content:space-between;align-items:center;">
-            <div>
-              <p style="font-size:13px;font-weight:500;margin-bottom:2px;">Job board</p>
-              <p style="font-size:12px;color:#6b7280;">Open positions across water science and related fields</p>
-            </div>
-            <span style="font-size:14px;color:#d1d5db;margin-left:10px;flex-shrink:0;">→</span>
-          </NuxtLink>
+        <div class="flex gap-3 flex-none">
+          <input type="email" placeholder="your@university.edu"
+            class="rounded-btn text-ink bg-white"
+            style="font:400 14px 'Hanken Grotesk';padding:12px 14px;border:none;outline:none;width:200px;" />
+          <button class="rounded-btn font-semibold text-white flex-none" style="font:600 14px 'Hanken Grotesk';background:#C0603C;padding:12px 20px;border:none;cursor:pointer;">Subscribe</button>
         </div>
-
-      </section>
-
-      <!-- Donate -->
-      <section style="padding:32px 0 48px;">
-        <div style="background:#f9fafb;border-radius:16px;padding:28px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px;">
-          <div style="max-width:520px;">
-            <p style="font-size:15px;font-weight:500;margin-bottom:6px;">Support CUAHSI</p>
-            <p style="font-size:13px;color:#6b7280;line-height:1.65;">
-              CUAHSI is a nonprofit organization. Donations support programs, fellowships, and infrastructure
-              that benefit the entire water science community, including researchers and students at institutions
-              that are not yet CUAHSI members.
-            </p>
-          </div>
-          <a href="https://www.cuahsi.org/donate" target="_blank" rel="noopener"
-            style="flex-shrink:0;font-size:13px;font-weight:500;padding:10px 22px;background:#111827;color:white;border-radius:8px;text-decoration:none;white-space:nowrap;">
-            Donate →
-          </a>
-        </div>
-      </section>
-
+      </div>
     </div>
   </div>
 </template>

@@ -1,214 +1,48 @@
 <script setup lang="ts">
-useHead({
-  title: 'Bring CUAHSI to your campus · CUAHSI',
-  meta: [{ name: 'description', content: 'CUAHSI staff are available for free seminars, hands-on workshops, and consultations at universities, colleges, and research institutions — in person or virtual.' }]
-})
+useHead({ title: 'Campus Visits · CUAHSI' })
 
 const offerings = [
-  {
-    icon: '🎤',
-    duration: '1 hour',
-    format: 'Seminar or webinar',
-    title: 'Introduction to CUAHSI',
-    desc: 'An overview of CUAHSI programs, data tools, and services — what HydroShare is, what training programs exist, how to get involved, and what membership means. Tailored to your department and audience.',
-    goodFor: ['Department seminars', 'New grad student orientation', 'Faculty meetings', 'Virtual delivery'],
-  },
-  {
-    icon: '💻',
-    duration: '1–2 hours',
-    format: 'Hands-on workshop',
-    title: 'Water data tools workshop',
-    desc: 'A practical session introducing HydroShare and cloud computing tools. Participants explore finding data, uploading and sharing datasets, and running analyses in JupyterHub. Ideal for courses or research groups starting a project.',
-    goodFor: ['Graduate courses', 'Research lab groups', 'Data science courses', 'In-person or virtual'],
-  },
-  {
-    icon: '🔬',
-    duration: '2–3 hours',
-    format: 'Workshop',
-    title: 'FAIR data practices and reproducible workflows',
-    desc: 'In-depth workshop on data management planning, FAIR and CARE principles, and reproducible workflow design using HydroShare and Jupyter. Designed for researchers preparing to publish data or comply with NSF public access requirements.',
-    goodFor: ['Advanced grad students', 'Postdocs', 'Research groups', 'In-person or virtual'],
-  },
-  {
-    icon: '🤝',
-    duration: 'Flexible',
-    format: 'Consultation',
-    title: 'One-on-one or small group consultation',
-    desc: 'Direct support from a CUAHSI data scientist. Useful for lab groups at the start of a project, preparing a data management plan, navigating a specific data challenge, or getting HydroShare set up for a course or field campaign.',
-    goodFor: ['PIs and research groups', 'Grant preparation support', 'Data publishing help', 'Remote'],
-  },
-  {
-    icon: '🏫',
-    duration: '1–2 hours',
-    format: 'Faculty or leadership meeting',
-    title: 'Integrating CUAHSI learning resources into your curriculum',
-    desc: 'A conversation for faculty, department chairs, and deans about how CUAHSI learning resources can strengthen existing course offerings — with no new infrastructure required. Topics include: how the CUAHSI Virtual University works and how students earn credit at their home institution; using HydroLearn modules in existing hydrology and water resources courses; hosting or drawing on instructional materials through the Water Content Portal; and setting up JupyterHub for classroom use so students can run data and code examples without local environment or package installation headaches.',
-    goodFor: ['Faculty', 'Department chairs', 'Deans and curriculum committees', 'Program coordinators'],
-  },
-]
-
-const recentVisits = [
-  { inst: 'Hamilton College', type: 'HydroShare workshop', context: 'Dr. Heather Kropp course' },
-  { inst: 'University of Florida', type: 'Water data services session', context: 'Water Institute Student Showcase' },
-  { inst: 'University of Iowa', type: 'CUAHSI vision seminar', context: 'Iowa Flood Center' },
-  { inst: 'Iowa State University', type: 'CUAHSI vision seminar', context: 'Water Resilience Collaborative' },
-  { inst: 'University of Nebraska', type: 'Department presentation', context: 'Campus visit series' },
-]
-
-const targets = [
-  { label: 'Prospective member institutions', desc: 'Universities not yet in CUAHSI membership who work in water science — like departments we know through existing collaborations.' },
-  { label: 'New member institutions', desc: 'Recently joined members whose faculty and students may not yet know what CUAHSI offers.' },
-  { label: 'Primarily undergraduate institutions', desc: 'PUIs where CUAHSI tools and training can have outsized impact on student research readiness at lower resource cost.' },
-  { label: 'Professional society partners', desc: 'Discipline-adjacent communities at AGU, AWRA, ASCE, ESIP, and ecological science conferences where CUAHSI can build new connections.' },
+  { tag: 'DATA SKILLS', title: 'HydroShare workshop', desc: 'Hands-on training in data management, DOI minting, and collaborative HydroShare workflows — tailored to your department\'s research.' },
+  { tag: 'COMPUTING', title: 'JupyterHub & cloud computing', desc: 'Introduction to CUAHSI\'s cloud computing environment for hydrologic analysis in Python and R, with no local setup required.' },
+  { tag: 'CURRICULUM', title: 'Integrating CUAHSI resources into your course', desc: 'Work with CUAHSI staff to embed HydroLearn modules, the CVU, or Water Content Portal resources into existing or new courses.' },
+  { tag: 'STUDENT ENGAGEMENT', title: 'Research data management seminar', desc: 'A focused seminar for graduate students on FAIR data practices, reproducible workflows, and preparing data for publication.' },
+  { tag: 'RESEARCH SUPPORT', title: 'NSF data management planning', desc: 'Guidance on satisfying NSF data management plan requirements using CUAHSI infrastructure and FAIR principles.' },
+  { tag: 'COMMUNITY', title: 'Open Q&A with CUAHSI staff', desc: 'An informal session for students and faculty to ask questions about CUAHSI programs, tools, and how to get involved.' },
 ]
 </script>
 
 <template>
   <div>
+    <CommunityHero title="Campus visits." lead="CUAHSI staff come to member universities for workshops and student engagement — at no cost." />
 
-    <div style="max-width:1024px;margin:0 auto;padding:0 24px;">
+    <div class="mx-auto" style="max-width:1240px;padding:52px 40px 80px;">
 
-      <!-- Hero -->
-      <section style="display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:40px;padding:48px 0 40px;border-bottom:0.5px solid #f3f4f6;align-items:start;">
+      <!-- Intro + CTAs -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-bottom:64px;">
         <div>
-          <p style="font-size:11px;color:#9ca3af;margin-bottom:8px;">
-            <NuxtLink to="/community" style="text-decoration:none;color:#9ca3af;">Get involved</NuxtLink> / Bring CUAHSI to your campus
-          </p>
-          <h1 style="font-size:28px;font-weight:500;line-height:1.25;margin-bottom:14px;">
-            Bring CUAHSI to your campus
-          </h1>
-          <p style="font-size:15px;color:#6b7280;line-height:1.7;margin-bottom:12px;">
-            CUAHSI staff are available for free seminars, hands-on workshops, and consultations at
-            universities, colleges, and research institutions — in person or virtual.
-          </p>
-          <p style="font-size:14px;color:#6b7280;line-height:1.7;margin-bottom:24px;">
-            These visits introduce water scientists and students to CUAHSI programs and tools, support
-            data-ready research practices, and help us connect with new communities. We welcome requests
-            from member institutions, prospective members, and the broader water science community.
-          </p>
-          <div style="display:flex;gap:10px;flex-wrap:wrap;">
-            <a href="mailto:connect@cuahsi.org?subject=Campus visit request"
-              style="font-size:13px;font-weight:500;padding:10px 20px;background:#111827;color:white;border-radius:8px;text-decoration:none;">
-              Request a visit
-            </a>
-            <a href="/cuahsi-campus-visit-flyer.pdf" target="_blank" rel="noopener"
-              style="font-size:13px;padding:10px 18px;border:0.5px solid #d1d5db;border-radius:8px;text-decoration:none;color:inherit;">
-              Download one-pager ↗
-            </a>
+          <p style="font:400 16px/1.7 'Hanken Grotesk';color:#3a4d57;margin-bottom:16px;">CUAHSI staff visit member universities to support faculty in integrating CUAHSI tools and programs into their teaching and research. Campus visits are available to all member institutions at no cost — travel and accommodations are covered by CUAHSI.</p>
+          <p style="font:400 16px/1.7 'Hanken Grotesk';color:#3a4d57;margin-bottom:28px;">Each visit is tailored to your department's needs — from a single guest lecture to a full-day workshop series.</p>
+          <div class="flex gap-3 flex-wrap">
+            <a href="mailto:connect@cuahsi.org" class="arrow-row inline-flex items-center gap-2 bg-navy text-white rounded-btn font-semibold" style="font:600 15px 'Hanken Grotesk';padding:13px 22px;">Request a visit <span class="arr">→</span></a>
+            <a href="/cuahsi-campus-visit-flyer.pdf" target="_blank" class="arrow-row inline-flex items-center gap-2 rounded-btn font-semibold" style="font:600 15px 'Hanken Grotesk';color:#0F2E44;padding:13px 22px;border:1.5px solid rgba(15,46,68,.22);">Download flyer ↓</a>
           </div>
         </div>
+        <div class="relative rounded-[14px] overflow-hidden" style="height:320px;background:linear-gradient(155deg,#10324c,#236193 70%);">
+          <span class="absolute font-mono font-bold tracking-[.1em]" style="left:18px;top:16px;font-size:11px;color:rgba(255,255,255,.8);background:rgba(0,0,0,.22);padding:7px 11px;border-radius:6px;">PHOTO — CAMPUS WORKSHOP</span>
+        </div>
+      </div>
 
-        <!-- Recent visits sidebar -->
-        <div style="background:#f9fafb;border-radius:12px;padding:18px;">
-          <p style="font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#9ca3af;margin-bottom:14px;">Recent visits</p>
-          <div v-for="(v, i) in recentVisits" :key="v.inst"
-            :style="`padding-bottom:10px;margin-bottom:10px;${i < recentVisits.length-1 ? 'border-bottom:0.5px solid #e5e7eb;' : ''}`">
-            <p style="font-size:13px;font-weight:500;margin-bottom:2px;">{{ v.inst }}</p>
-            <p style="font-size:12px;color:#6b7280;margin-bottom:1px;">{{ v.type }}</p>
-            <p style="font-size:11px;color:#9ca3af;">{{ v.context }}</p>
+      <!-- What we offer -->
+      <div>
+        <span class="font-mono font-bold tracking-[.1em] uppercase text-muted mb-6 block" style="font-size:11px;">What we offer</span>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px;">
+          <div v-for="o in offerings" :key="o.title" class="rounded-card" style="border:1px solid rgba(15,33,43,.1);padding:22px;">
+            <span class="font-mono font-bold tracking-[.06em] uppercase text-clay mb-3 block" style="font-size:11px;">{{ o.tag }}</span>
+            <h3 style="font:700 17px 'Schibsted Grotesk';color:#0F2E44;margin:0 0 10px;">{{ o.title }}</h3>
+            <p style="font:400 14px/1.6 'Hanken Grotesk';color:#5C6E78;margin:0;">{{ o.desc }}</p>
           </div>
         </div>
-      </section>
-
-      <!-- Menu of options -->
-      <section style="padding:40px 0;border-bottom:0.5px solid #f3f4f6;">
-        <p style="font-size:11px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:#9ca3af;margin-bottom:6px;">Menu of options</p>
-        <p style="font-size:14px;color:#6b7280;line-height:1.65;max-width:560px;margin-bottom:24px;">
-          Most visits combine elements — a seminar followed by a hands-on session, or a lab consultation
-          after a department talk. We tailor content to your audience and needs.
-        </p>
-        <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;">
-          <div v-for="o in offerings" :key="o.title"
-            style="border:0.5px solid #e5e7eb;border-radius:12px;padding:20px;display:flex;flex-direction:column;gap:0;">
-            <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:10px;">
-              <span style="font-size:22px;flex-shrink:0;margin-top:2px;">{{ o.icon }}</span>
-              <div>
-                <p style="font-size:14px;font-weight:500;line-height:1.3;margin-bottom:4px;">{{ o.title }}</p>
-                <div style="display:flex;gap:5px;flex-wrap:wrap;">
-                  <span style="font-size:11px;padding:1px 8px;border-radius:99px;background:#f3f4f6;color:#6b7280;">{{ o.duration }}</span>
-                  <span style="font-size:11px;padding:1px 8px;border-radius:99px;background:#E1F5EE;color:#0F6E56;">{{ o.format }}</span>
-                </div>
-              </div>
-            </div>
-            <p style="font-size:13px;color:#6b7280;line-height:1.6;margin-bottom:12px;flex:1;">{{ o.desc }}</p>
-            <div style="border-top:0.5px solid #f3f4f6;padding-top:10px;">
-              <p style="font-size:11px;color:#9ca3af;margin-bottom:5px;">Works well for</p>
-              <div style="display:flex;flex-wrap:wrap;gap:4px;">
-                <span v-for="g in o.goodFor" :key="g"
-                  style="font-size:11px;padding:2px 8px;border-radius:99px;border:0.5px solid #e5e7eb;color:#6b7280;">
-                  {{ g }}
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Who we want to reach -->
-      <section style="padding:40px 0;border-bottom:0.5px solid #f3f4f6;">
-        <p style="font-size:11px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:#9ca3af;margin-bottom:8px;">Who we especially want to reach</p>
-        <p style="font-size:14px;color:#6b7280;line-height:1.7;max-width:600px;margin-bottom:20px;">
-          We are actively working to connect with institutions and communities that have not yet engaged
-          deeply with CUAHSI programs. We prioritize building new relationships in year one.
-        </p>
-        <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;">
-          <div v-for="t in targets" :key="t.label"
-            style="display:flex;gap:12px;align-items:flex-start;padding:14px;border:0.5px solid #e5e7eb;border-radius:10px;">
-            <span style="width:6px;height:6px;border-radius:50%;background:#1D9E75;flex-shrink:0;margin-top:5px;"></span>
-            <div>
-              <p style="font-size:13px;font-weight:500;margin-bottom:3px;">{{ t.label }}</p>
-              <p style="font-size:12px;color:#6b7280;line-height:1.55;">{{ t.desc }}</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Request + Download CTA -->
-      <section style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;padding:40px 0 48px;">
-        <div style="background:#f9fafb;border-radius:12px;padding:24px;">
-          <p style="font-size:14px;font-weight:500;margin-bottom:8px;">Request a visit</p>
-          <p style="font-size:13px;color:#6b7280;line-height:1.65;margin-bottom:14px;">
-            Email us with your institution, audience, preferred format, and available dates.
-            We respond within one week and can typically schedule within 3–4 weeks.
-          </p>
-          <p style="font-size:12px;color:#374151;font-weight:500;margin-bottom:6px;">Include in your request:</p>
-          <div style="display:flex;flex-direction:column;gap:4px;margin-bottom:18px;">
-            <div v-for="item in [
-              'Your institution and department',
-              'Expected audience (students, faculty, mixed)',
-              'Preferred format from the menu above',
-              'Preferred dates or semester window',
-              'In-person or virtual preference'
-            ]" :key="item" style="display:flex;gap:8px;font-size:12px;color:#6b7280;">
-              <span style="color:#1D9E75;flex-shrink:0;">✓</span> {{ item }}
-            </div>
-          </div>
-          <a href="mailto:connect@cuahsi.org?subject=Campus visit request"
-            style="display:inline-block;font-size:13px;font-weight:500;padding:9px 18px;background:#111827;color:white;border-radius:8px;text-decoration:none;">
-            Email connect@cuahsi.org
-          </a>
-        </div>
-
-        <div style="border:0.5px solid #e5e7eb;border-radius:12px;padding:24px;display:flex;flex-direction:column;gap:10px;">
-          <p style="font-size:14px;font-weight:500;">Share this with a colleague</p>
-          <p style="font-size:13px;color:#6b7280;line-height:1.65;">
-            A one-page PDF summarizing what CUAHSI offers — designed for attaching to outreach emails,
-            sharing at conferences, and distributing to faculty who host our visits.
-          </p>
-          <div style="background:#f9fafb;border-radius:8px;padding:14px;display:flex;align-items:center;gap:12px;flex:1;">
-            <span style="font-size:28px;">📄</span>
-            <div>
-              <p style="font-size:12px;font-weight:500;margin-bottom:1px;">CUAHSI Campus Engagement</p>
-              <p style="font-size:11px;color:#9ca3af;">One-page overview · PDF</p>
-            </div>
-          </div>
-          <a href="/cuahsi-campus-visit-flyer.pdf" target="_blank" rel="noopener"
-            style="display:inline-block;font-size:13px;font-weight:500;padding:9px 18px;border:0.5px solid #d1d5db;border-radius:8px;text-decoration:none;color:inherit;width:fit-content;">
-            Download PDF ↗
-          </a>
-        </div>
-      </section>
-
+      </div>
     </div>
   </div>
 </template>
