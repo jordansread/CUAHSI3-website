@@ -1,6 +1,6 @@
 <script setup lang="ts">
 useHead({
-  title: 'Data & Platforms · CUAHSI',
+  title: 'Data & Tools · CUAHSI',
   meta: [{ name: 'description', content: 'HydroShare, JupyterHub, and the water data tools built for the hydrologic science community.' }]
 })
 
@@ -58,7 +58,7 @@ const tools = [
     <!-- Hero -->
     <section style="background:linear-gradient(180deg,#FBFAF7,#F3EEE4);border-bottom:1px solid rgba(15,33,43,.08);">
       <div class="mx-auto" style="max-width:1240px;padding:64px 40px 52px;">
-        <span class="font-mono font-bold tracking-[.14em] uppercase text-clay" style="font-size:12px;">Data &amp; Platforms</span>
+        <span class="font-mono font-bold tracking-[.14em] uppercase text-clay" style="font-size:12px;">Data &amp; Tools</span>
         <h1 style="font:700 clamp(36px,4.4vw,54px)/1.04 'Schibsted Grotesk';letter-spacing:-.022em;color:#0F2E44;margin:16px 0 16px;">Tools built for water science.</h1>
         <p style="font:400 17px/1.6 'Hanken Grotesk';color:#3a4d57;max-width:560px;">CUAHSI operates open infrastructure for the water science community — from data publication and cloud computing to national data discovery.</p>
       </div>

@@ -2,9 +2,8 @@
 const route = useRoute()
 const navItems = [
   { label: 'About', to: '/about' },
-  { label: 'Data & Platforms', to: '/data-platforms' },
-  { label: 'Learn & Train', to: '/learn-train' },
-  { label: 'Programs', to: '/programs' },
+  { label: 'Data & Tools', to: '/data-platforms' },
+  { label: 'Learn', to: '/learn-train' },
   { label: 'Community', to: '/community' },
   { label: 'Highlights', to: '/highlights' },
 ]

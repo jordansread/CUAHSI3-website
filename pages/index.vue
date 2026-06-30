@@ -30,7 +30,7 @@ function fmtEventMon(d: string) { return new Date(d).toLocaleDateString('en-US',
 function fmtDate(d: string) { return new Date(d).toLocaleDateString('en-US', { month: 'long', year: 'numeric' }) }
 
 const pathways = [
-  { tag: 'I want to work with data', title: 'Data & Platforms', desc: 'HydroShare, cloud compute, and national water-data discovery.', to: '/data-platforms' },
+  { tag: 'I want to work with data', title: 'Data & Tools', desc: 'HydroShare, cloud compute, and national water-data discovery.', to: '/data-platforms' },
   { tag: 'I want to learn or teach', title: 'Learn & Train', desc: 'Cyberseminars, summer institutes, and classroom-ready material.', to: '/learn-train' },
   { tag: 'I represent an institution', title: 'Membership', desc: 'Governance, benefits, and how to join the consortium.', to: '/about/membership' },
   { tag: 'I want to see impact', title: 'Highlights', desc: 'What the community is building, measuring, and discovering.', to: '/highlights' },
@@ -136,10 +136,10 @@ const sideHighlights = computed(() => highlights.value?.slice(1, 4) ?? [])
     <section class="mx-auto" style="max-width:1240px;padding:72px 40px;">
       <div class="flex justify-between items-end gap-6 mb-[34px] flex-wrap">
         <div>
-          <span class="font-mono font-bold tracking-[.14em] uppercase text-clay" style="font-size:12px;">Data &amp; platforms</span>
+          <span class="font-mono font-bold tracking-[.14em] uppercase text-clay" style="font-size:12px;">Data &amp; tools</span>
           <h2 style="font:700 clamp(28px,3.2vw,40px)/1.08 'Schibsted Grotesk';color:#0F2E44;letter-spacing:-.018em;margin:14px 0 0;">Tools built for water science.</h2>
         </div>
-        <NuxtLink to="/data-platforms" class="arrow-row inline-flex items-center gap-2" style="font:600 15px 'Hanken Grotesk';color:#1F6FB2;">See all platforms <span class="arr">→</span></NuxtLink>
+        <NuxtLink to="/data-platforms" class="arrow-row inline-flex items-center gap-2" style="font:600 15px 'Hanken Grotesk';color:#1F6FB2;">See all tools <span class="arr">→</span></NuxtLink>
       </div>
       <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px;">
         <div v-for="t in homeTools" :key="t.name" class="card-lift bg-white flex flex-col rounded-card overflow-hidden" style="border:1px solid rgba(15,33,43,.1);">

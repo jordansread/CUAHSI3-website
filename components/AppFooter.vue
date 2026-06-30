@@ -27,7 +27,7 @@
         <div>
           <p class="font-mono text-[11px] tracking-[.1em] uppercase mb-5" style="color:#5f829c;">Explore</p>
           <div class="flex flex-col gap-3">
-            <NuxtLink v-for="l in [{t:'About CUAHSI',h:'/about'},{t:'Programs',h:'/programs'},{t:'Highlights',h:'/highlights'},{t:'Governance',h:'/about/governance'},{t:'Membership',h:'/about/membership'}]"
+            <NuxtLink v-for="l in [{t:'About CUAHSI',h:'/about'},{t:'Learn & Programs',h:'/learn-train'},{t:'Highlights',h:'/highlights'},{t:'Governance',h:'/about/governance'},{t:'Membership',h:'/about/membership'}]"
               :key="l.h" :to="l.h" style="font:400 13.5px 'Hanken Grotesk';color:#7fa4bf;text-decoration:none;" class="hover:text-white transition-colors">
               {{ l.t }}
             </NuxtLink>
@@ -36,7 +36,7 @@
 
         <!-- Platforms -->
         <div>
-          <p class="font-mono text-[11px] tracking-[.1em] uppercase mb-5" style="color:#5f829c;">Platforms</p>
+          <p class="font-mono text-[11px] tracking-[.1em] uppercase mb-5" style="color:#5f829c;">Tools</p>
           <div class="flex flex-col gap-3">
             <a v-for="l in [{t:'HydroShare',h:'https://www.hydroshare.org'},{t:'JupyterHub',h:'https://jupyter.cuahsi.org'},{t:'HIS',h:'https://his.cuahsi.org'},{t:'Water Data Services',h:'https://www.cuahsi.org/data-services'},{t:'MATLAB Online',h:'https://www.cuahsi.org/matlab'}]"
               :key="l.h" :href="l.h" target="_blank" style="font:400 13.5px 'Hanken Grotesk';color:#7fa4bf;text-decoration:none;" class="hover:text-white transition-colors">

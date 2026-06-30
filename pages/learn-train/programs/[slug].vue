@@ -10,12 +10,12 @@ useHead({ title: computed(() => program.value ? `${program.value.title} · CUAHS
 <template>
   <div>
     <div v-if="notFound" class="mx-auto text-center" style="max-width:720px;padding:80px 40px;">
-      <NuxtLink to="/programs" style="font:600 14px 'Hanken Grotesk';color:#1F6FB2;">← All programs</NuxtLink>
+      <NuxtLink to="/learn-train/programs" style="font:600 14px 'Hanken Grotesk';color:#1F6FB2;">← All programs</NuxtLink>
     </div>
     <div v-else-if="program">
       <section style="background:linear-gradient(180deg,#FBFAF7,#F3EEE4);border-bottom:1px solid rgba(15,33,43,.08);">
         <div class="mx-auto" style="max-width:1240px;padding:52px 40px 48px;">
-          <p class="font-mono text-[11px] text-muted mb-3"><NuxtLink to="/programs" style="color:#5C6E78;">← Programs</NuxtLink></p>
+          <p class="font-mono text-[11px] text-muted mb-3"><NuxtLink to="/learn-train/programs" style="color:#5C6E78;">← Programs</NuxtLink></p>
           <div class="flex items-baseline gap-3 mb-3 flex-wrap">
             <h1 style="font:700 clamp(28px,3.5vw,44px)/1.1 'Schibsted Grotesk';letter-spacing:-.018em;color:#0F2E44;">{{ program.title }}</h1>
             <span v-if="program.abbreviation" class="font-mono text-[15px] text-muted">{{ program.abbreviation }}</span>

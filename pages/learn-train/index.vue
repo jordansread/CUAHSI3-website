@@ -1,10 +1,11 @@
 <script setup lang="ts">
-useHead({ title: 'Learn & Train · CUAHSI' })
+useHead({ title: 'Learn · CUAHSI' })
 
-const programs = [
-  { tag: 'GRADUATE EDUCATION', name: 'Virtual University', desc: 'Inter-institutional 4-week online modules on specialized hydrology topics. Earn credit at your home institution.', cta: 'Learn about the CVU', to: '/programs/virtual-university', external: false },
-  { tag: 'FIELD TRAINING', name: 'Snow Measurement Field School', desc: 'Week-long intensive field training in snow measurement methods at Snow Mountain Ranch, CO. January each year.', cta: 'Learn about Snow School', to: '/programs/snow-field-school', external: false },
-  { tag: 'SUMMER PROGRAM', name: 'Water Prediction Innovators Summer Institute', desc: '7-week residential program at University of Alabama advancing flood forecasting with CIROH/NOAA support.', cta: 'Learn about the Summer Institute', to: '/programs/summer-institute', external: false },
+const { data: programs } = await useAsyncData('lt-programs', () =>
+  queryContent('programs').where({ published: true }).sort({ title: 1 }).find()
+)
+
+const extras = [
   { tag: 'ONLINE MODULES', name: 'HydroLearn', desc: '60+ peer-reviewed learning modules on hydrology and water resources, free and open-access.', cta: 'Explore HydroLearn', to: 'https://www.hydrolearn.org', external: true },
   { tag: 'FELLOWSHIPS', name: 'HydroInformatics Innovation Fellowship', desc: 'Seed funding for graduate students and postdocs developing innovative water informatics tools and datasets.', cta: 'See funding opportunities', to: '/community/jobs', external: false },
   { tag: 'WORKSHOPS', name: 'Campus Visits & Workshops', desc: 'Bring CUAHSI tools, training, and expertise to your institution through a structured engagement program.', cta: 'Learn about campus visits', to: '/community/campus-visits', external: false },
@@ -16,7 +17,7 @@ const programs = [
     <!-- Hero -->
     <section style="background:linear-gradient(180deg,#FBFAF7,#F3EEE4);border-bottom:1px solid rgba(15,33,43,.08);">
       <div class="mx-auto" style="max-width:1240px;padding:64px 40px 52px;">
-        <span class="font-mono font-bold tracking-[.14em] uppercase text-clay" style="font-size:12px;">Learn &amp; Train</span>
+        <span class="font-mono font-bold tracking-[.14em] uppercase text-clay" style="font-size:12px;">Learn</span>
         <h1 style="font:700 clamp(36px,4.4vw,54px)/1.04 'Schibsted Grotesk';letter-spacing:-.022em;color:#0F2E44;margin:16px 0 16px;">Training for every stage of a water science career.</h1>
         <p style="font:400 17px/1.6 'Hanken Grotesk';color:#3a4d57;max-width:560px;">From first-year graduate students to senior faculty, CUAHSI offers field schools, online courses, summer institutes, fellowships, and free recordings — open to all.</p>
       </div>
@@ -44,25 +45,44 @@ const programs = [
       </div>
     </section>
 
-    <!-- Programs grid -->
-    <section class="mx-auto" style="max-width:1240px;padding:72px 40px 80px;">
-      <div class="flex justify-between items-end gap-6 mb-9 flex-wrap">
-        <div>
-          <span class="font-mono font-bold tracking-[.14em] uppercase text-clay" style="font-size:12px;">Programs</span>
-          <h2 style="font:700 clamp(28px,3.2vw,40px)/1.08 'Schibsted Grotesk';color:#0F2E44;letter-spacing:-.018em;margin:14px 0 0;">Structured learning opportunities.</h2>
-        </div>
-        <NuxtLink to="/programs" class="arrow-row inline-flex items-center gap-2" style="font:600 15px 'Hanken Grotesk';color:#1F6FB2;">All programs <span class="arr">→</span></NuxtLink>
+    <!-- Programs (structured, recurring) -->
+    <section class="mx-auto" style="max-width:1240px;padding:72px 40px 0;">
+      <div class="mb-9">
+        <span class="font-mono font-bold tracking-[.14em] uppercase text-clay" style="font-size:12px;">Programs</span>
+        <h2 style="font:700 clamp(28px,3.2vw,40px)/1.08 'Schibsted Grotesk';color:#0F2E44;letter-spacing:-.018em;margin:14px 0 0;">Structured, recurring opportunities.</h2>
+        <p style="font:400 14.5px/1.6 'Hanken Grotesk';color:#5C6E78;max-width:560px;margin-top:10px;">Annual cohort-based programs with their own application cycle, eligibility, and track record.</p>
       </div>
       <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px;">
-        <component :is="p.external ? 'a' : 'NuxtLink'"
-          v-for="p in programs" :key="p.name"
-          v-bind="p.external ? { href: p.to, target: '_blank', rel: 'noopener' } : { to: p.to }"
+        <NuxtLink v-for="p in programs" :key="p.slug" :to="`/learn-train/programs/${p.slug}`"
           class="card-lift arrow-row bg-white flex flex-col rounded-card"
           style="border:1px solid rgba(15,33,43,.1);padding:24px 22px 22px;text-decoration:none;">
-          <span class="font-mono font-bold tracking-[.06em] uppercase text-clay" style="font-size:11px;">{{ p.tag }}</span>
-          <span style="font:700 20px 'Schibsted Grotesk';color:#0F2E44;margin:12px 0 8px;display:block;">{{ p.name }}</span>
-          <span style="font:400 14px/1.55 'Hanken Grotesk';color:#5C6E78;flex:1;display:block;margin-bottom:16px;">{{ p.desc }}</span>
-          <span class="arrow-row inline-flex items-center gap-2" style="font:600 13.5px 'Hanken Grotesk';color:#1F6FB2;">{{ p.cta }} <span class="arr">→</span></span>
+          <span class="font-mono font-bold tracking-[.06em] uppercase text-clay" style="font-size:11px;">{{ p.abbreviation }}</span>
+          <span style="font:700 20px 'Schibsted Grotesk';color:#0F2E44;margin:12px 0 8px;display:block;">{{ p.title }}</span>
+          <span style="font:400 14px/1.55 'Hanken Grotesk';color:#5C6E78;flex:1;display:block;margin-bottom:16px;">{{ p.excerpt }}</span>
+          <div class="flex items-center justify-between">
+            <span class="font-mono text-[11px] text-muted">{{ p.season }}</span>
+            <span class="arrow-row inline-flex items-center gap-1" style="font:600 13.5px 'Hanken Grotesk';color:#1F6FB2;">Learn more <span class="arr">→</span></span>
+          </div>
+        </NuxtLink>
+      </div>
+    </section>
+
+    <!-- Other ways to learn -->
+    <section class="mx-auto" style="max-width:1240px;padding:64px 40px 80px;">
+      <div class="mb-9">
+        <span class="font-mono font-bold tracking-[.14em] uppercase text-clay" style="font-size:12px;">Also from CUAHSI</span>
+        <h2 style="font:700 clamp(26px,3vw,34px)/1.08 'Schibsted Grotesk';color:#0F2E44;letter-spacing:-.016em;margin:14px 0 0;">Open-access learning and support.</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px;">
+        <component :is="e.external ? 'a' : 'NuxtLink'"
+          v-for="e in extras" :key="e.name"
+          v-bind="e.external ? { href: e.to, target: '_blank', rel: 'noopener' } : { to: e.to }"
+          class="card-lift arrow-row bg-white flex flex-col rounded-card"
+          style="border:1px solid rgba(15,33,43,.1);padding:24px 22px 22px;text-decoration:none;">
+          <span class="font-mono font-bold tracking-[.06em] uppercase text-clay" style="font-size:11px;">{{ e.tag }}</span>
+          <span style="font:700 18px 'Schibsted Grotesk';color:#0F2E44;margin:12px 0 8px;display:block;">{{ e.name }}</span>
+          <span style="font:400 13.5px/1.55 'Hanken Grotesk';color:#5C6E78;flex:1;display:block;margin-bottom:16px;">{{ e.desc }}</span>
+          <span class="arrow-row inline-flex items-center gap-2" style="font:600 13px 'Hanken Grotesk';color:#1F6FB2;">{{ e.cta }} <span class="arr">→</span></span>
         </component>
       </div>
     </section>
