@@ -3,7 +3,7 @@ const route = useRoute()
 const navItems = [
   { label: 'About', to: '/about' },
   { label: 'Data & Tools', to: '/data-platforms' },
-  { label: 'Learn', to: '/learn-train' },
+  { label: 'Learn & Train', to: '/learn-train' },
   { label: 'Community', to: '/community' },
   { label: 'Highlights', to: '/highlights' },
 ]
