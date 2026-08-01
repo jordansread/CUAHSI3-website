@@ -27,14 +27,14 @@
         <div>
           <p class="font-mono text-[11px] tracking-[.1em] uppercase mb-5" style="color:#5f829c;">Explore</p>
           <div class="flex flex-col gap-3">
-            <NuxtLink v-for="l in [{t:'About CUAHSI',h:'/about'},{t:'Learn & Programs',h:'/learn-train'},{t:'Highlights',h:'/highlights'},{t:'Governance',h:'/about/governance'},{t:'Membership',h:'/about/membership'}]"
+            <NuxtLink v-for="l in [{t:'About CUAHSI',h:'/about'},{t:'Learn & Programs',h:'/learn-train'},{t:'Services',h:'/services'},{t:'Highlights',h:'/highlights'},{t:'Governance',h:'/about/governance'},{t:'Membership',h:'/about/membership'}]"
               :key="l.h" :to="l.h" style="font:400 13.5px 'Hanken Grotesk';color:#7fa4bf;text-decoration:none;" class="hover:text-white transition-colors">
               {{ l.t }}
             </NuxtLink>
           </div>
         </div>
 
-        <!-- Platforms -->
+        <!-- Tools -->
         <div>
           <p class="font-mono text-[11px] tracking-[.1em] uppercase mb-5" style="color:#5f829c;">Tools</p>
           <div class="flex flex-col gap-3">

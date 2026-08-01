@@ -5,6 +5,7 @@ const navItems = [
   { label: 'Data & Tools', to: '/data-platforms' },
   { label: 'Learn & Train', to: '/learn-train' },
   { label: 'Community', to: '/community' },
+  { label: 'Services', to: '/services' },
   { label: 'Highlights', to: '/highlights' },
 ]
 function isActive(to: string) {
@@ -46,7 +47,7 @@ function isActive(to: string) {
       <nav class="flex gap-[2px]">
         <NuxtLink v-for="item in navItems" :key="item.to" :to="item.to"
           class="transition-colors"
-          :style="`border:none;font:600 14.5px 'Hanken Grotesk';padding:9px 14px;border-radius:8px;background:${isActive(item.to) ? 'rgba(31,111,178,.12)' : 'transparent'};color:${isActive(item.to) ? '#0F2E44' : '#3a4d57'};text-decoration:none;`">
+          :style="`border:none;font:600 14px 'Hanken Grotesk';padding:9px 13px;border-radius:8px;background:${isActive(item.to) ? 'rgba(31,111,178,.12)' : 'transparent'};color:${isActive(item.to) ? '#0F2E44' : '#3a4d57'};text-decoration:none;`">
           {{ item.label }}
         </NuxtLink>
       </nav>
