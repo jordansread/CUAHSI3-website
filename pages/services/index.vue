@@ -1,6 +1,6 @@
 <script setup lang="ts">
 useHead({
-  title: 'Services · CUAHSI',
+  title: 'Hire CUAHSI · CUAHSI',
   meta: [{ name: 'description', content: 'Consulting, training, custom development, and data curation from CUAHSI science and engineering staff — for grantees, agencies, and partners.' }]
 })
 
@@ -73,9 +73,9 @@ function toggleTrackStyle() {
     <!-- Hero -->
     <section style="background:linear-gradient(180deg,#FBFAF7,#F3EEE4);border-bottom:1px solid rgba(15,33,43,.08);">
       <div class="mx-auto site-container hero-section" style="max-width:1240px;padding-top:64px;padding-bottom:40px;">
-        <span class="font-mono font-bold tracking-[.14em] uppercase" style="font-size:12px;color:#C0603C;">Services</span>
+        <span class="font-mono font-bold tracking-[.14em] uppercase" style="font-size:12px;color:#C0603C;">Hire CUAHSI</span>
         <h1 style="font:700 clamp(36px,4.4vw,54px)/1.04 'Schibsted Grotesk';letter-spacing:-.022em;color:#0F2E44;margin:16px 0 16px;max-width:760px;">
-          Fee-for-service work with CUAHSI.
+          Put our staff on your project.
         </h1>
         <p style="font:400 19px/1.55 'Hanken Grotesk';color:#3a4d57;max-width:620px;">
           Consulting, training, and development from our science and engineering staff — for grantees, agencies, and partners. Revenue sustains the free tools and data CUAHSI provides the whole community.

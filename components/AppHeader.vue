@@ -2,10 +2,10 @@
 const route = useRoute()
 const navItems = [
   { label: 'About', to: '/about' },
-  { label: 'Data & Tools', to: '/data-platforms' },
+  { label: 'Data & Computing', to: '/data-platforms' },
   { label: 'Learn & Train', to: '/learn-train' },
   { label: 'Community', to: '/community' },
-  { label: 'Services', to: '/services' },
+  { label: 'Hire CUAHSI', to: '/services' },
   { label: 'Highlights', to: '/highlights' },
 ]
 function isActive(to: string) {
