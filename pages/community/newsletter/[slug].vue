@@ -52,7 +52,7 @@ function fmtDate(d: string) {
     <!-- Nav -->
 
     <div style="max-width:1024px;margin:0 auto;padding:0 24px;">
-      <div style="display:grid;grid-template-columns:minmax(0,1fr) 220px;gap:48px;padding:36px 0 48px;">
+      <div class="rgrid rgrid-split" style="display:grid;gap:48px;padding:36px 0 48px;--cols:minmax(0,1fr) 220px;">
 
         <!-- Main content -->
         <article>

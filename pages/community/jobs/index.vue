@@ -71,7 +71,7 @@ function daysUntil(d: string) {
     <div style="max-width:1024px;margin:0 auto;padding:0 24px;">
 
       <!-- Header -->
-      <div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:end;padding:36px 0 28px;border-bottom:0.5px solid #f3f4f6;margin-bottom:28px;">
+      <div class="rgrid rgrid-split" style="display:grid;gap:24px;align-items:end;padding:36px 0 28px;border-bottom:0.5px solid #f3f4f6;margin-bottom:28px;--cols:minmax(0,1fr) auto;">
         <div>
           <p style="font-size:11px;color:#9ca3af;margin-bottom:8px;">
             <NuxtLink to="/community" style="text-decoration:none;color:#9ca3af;">Get involved</NuxtLink> / Job board
@@ -143,7 +143,7 @@ function daysUntil(d: string) {
       </div>
 
       <!-- Post a job CTA -->
-      <div style="background:#f9fafb;border-radius:12px;padding:22px 24px;margin-bottom:48px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px;align-items:center;">
+      <div class="rgrid rgrid-split" style="background:#f9fafb;border-radius:12px;padding:22px 24px;margin-bottom:48px;display:grid;gap:20px;align-items:center;--cols:minmax(0,1fr) auto;">
         <div>
           <p style="font-size:14px;font-weight:500;margin-bottom:4px;">Have a position to share?</p>
           <p style="font-size:13px;color:#6b7280;line-height:1.6;">

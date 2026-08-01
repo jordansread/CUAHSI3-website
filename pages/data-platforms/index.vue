@@ -83,8 +83,8 @@ const tools = [
 
     <!-- Tool rows -->
     <div class="mx-auto" style="max-width:1240px;padding:0 40px;">
-      <div v-for="(t, i) in tools" :key="t.name"
-        :style="`display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;padding:72px 0;${i < tools.length - 1 ? 'border-bottom:1px solid rgba(15,33,43,.08);' : ''}`">
+      <div v-for="(t, i) in tools" :key="t.name" class="rgrid rgrid-split"
+        :style="`--cols:1fr 1fr;gap:64px;align-items:center;padding:72px 0;${i < tools.length - 1 ? 'border-bottom:1px solid rgba(15,33,43,.08);' : ''}`">
         <!-- Left: content -->
         <div :style="i % 2 === 1 ? 'order:2;' : ''">
           <div class="font-mono font-bold tracking-[.12em] uppercase text-water" style="font-size:11px;margin-bottom:14px;">{{ t.kicker }}</div>

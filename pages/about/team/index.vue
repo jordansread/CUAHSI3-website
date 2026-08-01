@@ -32,7 +32,7 @@ function initials(name: string) { return name.split(' ').map((n:string)=>n[0]).j
             <span style="font:700 13px/1 'Schibsted Grotesk';color:#0F2E44;">{{ dept }}</span>
             <span class="font-mono text-[11px] text-muted">{{ byDept[dept].length }} people</span>
           </div>
-          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;">
+          <div class="rgrid rgrid-multi" style="display:grid;gap:16px;--cols:repeat(4,1fr);">
             <div v-for="person in byDept[dept]" :key="person.slug"
               class="card-lift bg-white rounded-card overflow-hidden"
               style="border:1px solid rgba(15,33,43,.1);"

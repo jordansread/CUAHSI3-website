@@ -62,7 +62,7 @@ function fmtShort(d: string) {
   <div>
 
     <div style="max-width:1024px;margin:0 auto;padding:0 24px;">
-      <div style="display:grid;grid-template-columns:minmax(0,1fr) 220px;gap:48px;padding:36px 0 48px;">
+      <div class="rgrid rgrid-split" style="display:grid;gap:48px;padding:36px 0 48px;--cols:minmax(0,1fr) 220px;">
 
         <!-- Main -->
         <article>
@@ -81,7 +81,7 @@ function fmtShort(d: string) {
           <h1 style="font-size:26px;font-weight:500;margin-bottom:16px;line-height:1.25;">{{ event.title }}</h1>
 
           <!-- Key details strip -->
-          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-bottom:28px;padding:16px;background:#f9fafb;border-radius:12px;">
+          <div class="rgrid rgrid-split" style="display:grid;gap:12px;margin-bottom:28px;padding:16px;background:#f9fafb;border-radius:12px;--cols:repeat(auto-fit,minmax(140px,1fr));">
             <div>
               <p style="font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:#9ca3af;margin-bottom:3px;">Date</p>
               <p style="font-size:13px;font-weight:500;">{{ fmtDate(event.start, event.end) }}</p>

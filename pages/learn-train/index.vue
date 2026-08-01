@@ -31,7 +31,7 @@ const programs = [
 
     <!-- Featured cyberseminar -->
     <section class="mx-auto" style="max-width:1240px;padding:64px 40px 0;">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;">
+      <div class="rgrid rgrid-split" style="display:grid;gap:56px;align-items:center;--cols:1fr 1fr;">
         <div>
           <span class="font-mono font-bold tracking-[.14em] uppercase text-clay" style="font-size:12px;">Cyberseminar archive</span>
           <h2 style="font:700 clamp(26px,3vw,36px)/1.1 'Schibsted Grotesk';color:#0F2E44;letter-spacing:-.016em;margin:14px 0 14px;">350+ free recordings on water science.</h2>
@@ -58,7 +58,7 @@ const programs = [
         </div>
         <NuxtLink to="/programs" class="arrow-row inline-flex items-center gap-2" style="font:600 15px 'Hanken Grotesk';color:#1F6FB2;">All programs <span class="arr">→</span></NuxtLink>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px;">
+      <div class="rgrid rgrid-multi" style="display:grid;gap:18px;--cols:repeat(3,1fr);">
         <component :is="p.external ? 'a' : 'NuxtLink'"
           v-for="p in programs" :key="p.name"
           v-bind="p.external ? { href: p.to, target: '_blank', rel: 'noopener' } : { to: p.to }"

@@ -18,7 +18,7 @@ useHead({ title: 'Governance · CUAHSI' })
       </section>
       <section style="margin-bottom:52px;">
         <p class="font-mono font-bold tracking-[.1em] uppercase text-muted mb-4" style="font-size:11px;">Documents</p>
-        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;">
+        <div class="rgrid rgrid-multi" style="display:grid;gap:12px;--cols:repeat(3,1fr);">
           <a v-for="d in [{t:'Bylaws',d:'CUAHSI governing bylaws, last updated July 2024.',h:'https://www.cuahsi.org/uploads/library/doc/2024-07-24-Bylaws_Final.docx.pdf'},{t:'Strategic Plan 2023–2028',d:'CUAHSI strategic direction for building a sustainable organization.',h:'https://www.cuahsi.org/uploads/pages/img/Strategic-Plan-2023-Final.1.pdf'},{t:'2025 Annual Report',d:'Progress across HydroShare, training programs, and research in 2025.',h:'https://www.cuahsi.org/uploads/pages/img/2025-Annual-Report_Final_reduced.pdf'}]"
             :key="d.t" :href="d.h" target="_blank" class="card-lift rounded-card" style="border:1px solid rgba(15,33,43,.1);padding:20px;text-decoration:none;">
             <p style="font:700 15px 'Schibsted Grotesk';color:#0F2E44;margin-bottom:6px;">{{ d.t }}</p>

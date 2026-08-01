@@ -69,7 +69,7 @@ const targets = [
     <div style="max-width:1024px;margin:0 auto;padding:0 24px;">
 
       <!-- Hero -->
-      <section style="display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:40px;padding:48px 0 40px;border-bottom:0.5px solid #f3f4f6;align-items:start;">
+      <section class="rgrid rgrid-split" style="display:grid;gap:40px;padding:48px 0 40px;border-bottom:0.5px solid #f3f4f6;align-items:start;--cols:minmax(0,1fr) 260px;">
         <div>
           <p style="font-size:11px;color:#9ca3af;margin-bottom:8px;">
             <NuxtLink to="/community" style="text-decoration:none;color:#9ca3af;">Get involved</NuxtLink> / Bring CUAHSI to your campus
@@ -117,7 +117,7 @@ const targets = [
           Most visits combine elements — a seminar followed by a hands-on session, or a lab consultation
           after a department talk. We tailor content to your audience and needs.
         </p>
-        <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;">
+        <div class="rgrid rgrid-split" style="display:grid;gap:14px;--cols:repeat(2,minmax(0,1fr));">
           <div v-for="o in offerings" :key="o.title"
             style="border:0.5px solid #e5e7eb;border-radius:12px;padding:20px;display:flex;flex-direction:column;gap:0;">
             <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:10px;">
@@ -151,7 +151,7 @@ const targets = [
           Campus visits above are free for member institutions. Larger, ongoing, or highly customized engagements
           are fee-for-service work through Hire CUAHSI.
         </p>
-        <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;">
+        <div class="rgrid rgrid-split" style="display:grid;gap:14px;--cols:repeat(2,minmax(0,1fr));">
           <div style="border:0.5px solid #e5e7eb;border-radius:12px;padding:20px;">
             <p style="font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#1D9E75;margin-bottom:12px;">Included with membership</p>
             <div v-for="item in [
@@ -187,7 +187,7 @@ const targets = [
           We are actively working to connect with institutions and communities that have not yet engaged
           deeply with CUAHSI programs. We prioritize building new relationships in year one.
         </p>
-        <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;">
+        <div class="rgrid rgrid-split" style="display:grid;gap:10px;--cols:repeat(2,minmax(0,1fr));">
           <div v-for="t in targets" :key="t.label"
             style="display:flex;gap:12px;align-items:flex-start;padding:14px;border:0.5px solid #e5e7eb;border-radius:10px;">
             <span style="width:6px;height:6px;border-radius:50%;background:#1D9E75;flex-shrink:0;margin-top:5px;"></span>
@@ -200,7 +200,7 @@ const targets = [
       </section>
 
       <!-- Request + Download CTA -->
-      <section style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;padding:40px 0 48px;">
+      <section class="rgrid rgrid-split" style="display:grid;gap:16px;padding:40px 0 48px;--cols:minmax(0,1fr) minmax(0,1fr);">
         <div style="background:#f9fafb;border-radius:12px;padding:24px;">
           <p style="font-size:14px;font-weight:500;margin-bottom:8px;">Request a visit</p>
           <p style="font-size:13px;color:#6b7280;line-height:1.65;margin-bottom:14px;">

@@ -39,7 +39,7 @@ function fmtDate(d: string) { return new Date(d).toLocaleDateString('en-US', { m
     </div>
     <div v-else-if="person">
       <section style="background:linear-gradient(180deg,#FBFAF7,#F3EEE4);border-bottom:1px solid rgba(15,33,43,.08);">
-        <div class="mx-auto" style="max-width:1240px;padding:52px 40px 48px;display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:start;">
+        <div class="mx-auto rgrid rgrid-split" style="max-width:1240px;padding:52px 40px 48px;display:grid;gap:40px;align-items:start;--cols:auto 1fr;">
           <div class="rounded-full overflow-hidden flex-none" style="width:120px;height:120px;background:#F3EEE4;">
             <img v-if="person.photo" :src="person.photo" :alt="person.name" style="width:100%;height:100%;object-fit:cover;object-position:center top;" />
             <div v-else class="w-full h-full flex items-center justify-center" style="font:700 36px 'Schibsted Grotesk';color:#5C6E78;">{{ person.name.split(' ').map((n:string)=>n[0]).join('').slice(0,2) }}</div>
@@ -60,7 +60,7 @@ function fmtDate(d: string) { return new Date(d).toLocaleDateString('en-US', { m
           </div>
         </div>
       </section>
-      <div class="mx-auto" style="max-width:1024px;padding:48px 40px 80px;display:grid;grid-template-columns:minmax(0,1fr) 220px;gap:48px;">
+      <div class="mx-auto rgrid rgrid-split" style="max-width:1024px;padding:48px 40px 80px;display:grid;gap:48px;--cols:minmax(0,1fr) 220px;">
         <div>
           <p style="font:400 15px/1.75 'Hanken Grotesk';color:#3a4d57;margin-bottom:24px;">{{ person.bio }}</p>
           <p v-if="person.fun_fact" style="font:400 14px/1.65 'Hanken Grotesk';color:#5C6E78;margin-bottom:24px;padding:16px;background:#F3EEE4;border-radius:8px;"><strong style="color:#15212B;">Fun fact:</strong> {{ person.fun_fact }}</p>

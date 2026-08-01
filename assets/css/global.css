@@ -56,3 +56,16 @@ a { color: inherit; text-decoration: none; }
 @media (max-width: 640px) {
   .hero-section { padding-top: 44px !important; padding-bottom: 32px !important; }
 }
+
+/* ===== Universal responsive grid (replaces ad-hoc .rg-* classes) =====
+   Any inline grid-template-columns is moved into --cols and read here,
+   so a real CSS media query — not inline style — controls the breakpoint.
+   .rgrid-split: 2-track asymmetric layouts (hero, sidebars, intro bands) — stay stacked until 900px.
+   .rgrid-multi: 3+ track symmetric layouts (card grids, footer, stats) — 2-up at 640px, full at 900px. */
+.rgrid { display: grid; grid-template-columns: 1fr; gap: var(--rgap, 18px); }
+@media (min-width: 640px) {
+  .rgrid.rgrid-multi { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 900px) {
+  .rgrid { grid-template-columns: var(--cols); }
+}

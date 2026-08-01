@@ -1,7 +1,7 @@
 <template>
   <footer style="background:#0A2032;color:#bcd4e6;">
     <div class="mx-auto site-container" style="max-width:1240px;padding-top:60px;">
-      <div class="footer-grid" style="display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;padding-bottom:48px;">
+      <div class="footer-grid rgrid rgrid-multi" style="display:grid;gap:40px;padding-bottom:48px;--cols:1.4fr 1fr 1fr 1fr;">
 
         <!-- Brand -->
         <div>

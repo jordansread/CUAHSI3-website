@@ -50,7 +50,7 @@ const sideHighlights = computed(() => highlights.value?.slice(1, 4) ?? [])
   <div>
     <!-- ── Hero ── -->
     <section style="background:linear-gradient(180deg,#FBFAF7,#F3EEE4);border-bottom:1px solid rgba(15,33,43,.08);">
-      <div class="mx-auto" style="max-width:1240px;padding:76px 40px 72px;display:grid;grid-template-columns:1.04fr .96fr;gap:60px;align-items:center;">
+      <div class="mx-auto rgrid rgrid-split" style="max-width:1240px;padding:76px 40px 72px;display:grid;gap:60px;align-items:center;--cols:1.04fr .96fr;">
         <div>
           <span class="font-mono font-bold tracking-[.14em] uppercase text-clay" style="font-size:12px;">Consortium of Universities · Hydrologic Science</span>
           <h1 style="font:700 clamp(40px,5vw,62px)/1.03 'Schibsted Grotesk';letter-spacing:-.022em;color:#0F2E44;margin:18px 0 0;text-wrap:balance;">
@@ -92,7 +92,7 @@ const sideHighlights = computed(() => highlights.value?.slice(1, 4) ?? [])
             <span class="absolute left-5 top-5 font-mono font-bold tracking-[.1em] uppercase" style="font-size:11px;color:rgba(255,255,255,.8);background:rgba(0,0,0,.22);padding:7px 11px;border-radius:6px;">PHOTO — FIELD TEAM GAUGING A RIVER</span>
           </div>
           <!-- Live gauge card -->
-          <div class="absolute bg-white rounded-[12px]" style="left:-22px;bottom:-24px;padding:16px 18px;box-shadow:0 20px 40px -18px rgba(15,46,68,.4);border:1px solid rgba(15,33,43,.08);width:236px;">
+          <div class="absolute bg-white rounded-[12px] gauge-card" style="left:-22px;bottom:-24px;padding:16px 18px;box-shadow:0 20px 40px -18px rgba(15,46,68,.4);border:1px solid rgba(15,33,43,.08);width:236px;">
             <div class="flex items-center gap-[7px] mb-[10px]">
               <span class="animate-livePulse" style="width:8px;height:8px;border-radius:50%;background:#1f9d55;display:inline-block;"></span>
               <span class="font-mono font-bold tracking-[.1em] text-muted" style="font-size:10.5px;">LIVE · USGS 06752260</span>
@@ -120,7 +120,7 @@ const sideHighlights = computed(() => highlights.value?.slice(1, 4) ?? [])
           </h2>
         </div>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:18px;">
+      <div class="rgrid rgrid-multi" style="display:grid;gap:18px;--cols:repeat(4,1fr);">
         <NuxtLink v-for="p in pathways" :key="p.to" :to="p.to"
           class="card-lift arrow-row bg-white flex flex-col rounded-card text-left"
           style="border:1px solid rgba(15,33,43,.1);padding:24px 22px 22px;min-height:218px;text-decoration:none;">
@@ -141,7 +141,7 @@ const sideHighlights = computed(() => highlights.value?.slice(1, 4) ?? [])
         </div>
         <NuxtLink to="/data-platforms" class="arrow-row inline-flex items-center gap-2" style="font:600 15px 'Hanken Grotesk';color:#1F6FB2;">See all platforms <span class="arr">→</span></NuxtLink>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px;">
+      <div class="rgrid rgrid-multi" style="display:grid;gap:18px;--cols:repeat(3,1fr);">
         <div v-for="t in homeTools" :key="t.name" class="card-lift bg-white flex flex-col rounded-card overflow-hidden" style="border:1px solid rgba(15,33,43,.1);">
           <div class="relative" style="height:158px;background:repeating-linear-gradient(135deg,#e7eef3 0 14px,#dfe8ee 14px 28px);border-bottom:1px solid rgba(15,33,43,.08);">
             <span class="absolute font-mono tracking-[.06em]" style="left:14px;bottom:12px;font-size:10px;color:#43657c;background:rgba(255,255,255,.85);padding:5px 9px;border-radius:5px;">SCREENSHOT — {{ t.name.toUpperCase() }}</span>
@@ -168,7 +168,7 @@ const sideHighlights = computed(() => highlights.value?.slice(1, 4) ?? [])
           </div>
           <NuxtLink to="/about/impact" class="arrow-row inline-flex items-center gap-2" style="font:600 15px 'Hanken Grotesk';color:#1F6FB2;">All highlights <span class="arr">→</span></NuxtLink>
         </div>
-        <div v-if="highlights?.length" style="display:grid;grid-template-columns:1.5fr 1fr;gap:22px;">
+        <div class="rgrid rgrid-split" v-if="highlights?.length" style="display:grid;gap:22px;--cols:1.5fr 1fr;">
           <!-- Featured -->
           <NuxtLink v-if="featured" :to="`/about/impact/${featured.slug}`"
             class="card-lift bg-white rounded-[16px] overflow-hidden flex flex-col text-left"
@@ -208,7 +208,7 @@ const sideHighlights = computed(() => highlights.value?.slice(1, 4) ?? [])
 
     <!-- ── Get involved: Events + Cyberseminar ── -->
     <section class="mx-auto" style="max-width:1240px;padding:78px 40px;">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;">
+      <div class="rgrid rgrid-split" style="display:grid;gap:48px;--cols:1fr 1fr;">
 
         <!-- Events -->
         <div>
@@ -257,7 +257,7 @@ const sideHighlights = computed(() => highlights.value?.slice(1, 4) ?? [])
 
     <!-- ── Newsletter CTA ── -->
     <section class="bg-navy">
-      <div class="mx-auto" style="max-width:1240px;padding:64px 40px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;">
+      <div class="mx-auto rgrid rgrid-split" style="max-width:1240px;padding:64px 40px;display:grid;gap:48px;align-items:center;--cols:1fr 1fr;">
         <div>
           <span class="font-mono font-bold tracking-[.14em] uppercase" style="font-size:12px;color:#e0a384;">Stay connected</span>
           <h2 style="font:700 clamp(26px,2.8vw,38px)/1.1 'Schibsted Grotesk';color:#fff;letter-spacing:-.016em;margin:14px 0 10px;">Water science news, monthly.</h2>
@@ -276,6 +276,9 @@ const sideHighlights = computed(() => highlights.value?.slice(1, 4) ?? [])
 </template>
 
 <style>
+@media (max-width: 640px) {
+  .gauge-card { left: 12px !important; right: 12px; bottom: -20px !important; width: auto !important; }
+}
 .card-lift { transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease; }
 .card-lift:hover { transform: translateY(-4px); box-shadow: 0 18px 40px -22px rgba(15,46,68,.35); }
 .arrow-row:hover .arr { transform: translateX(5px); }

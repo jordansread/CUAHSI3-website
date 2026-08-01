@@ -42,7 +42,7 @@ const timeline = [
 
       <!-- Mission / Vision / Values -->
       <section id="mission" style="padding:60px 0;border-bottom:1px solid rgba(15,33,43,.08);">
-        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;border:1px solid rgba(15,33,43,.1);border-radius:12px;overflow:hidden;">
+        <div class="rgrid rgrid-multi" style="display:grid;border:1px solid rgba(15,33,43,.1);border-radius:12px;overflow:hidden;--cols:1fr 1fr 1fr;">
           <div style="padding:24px;border-right:1px solid rgba(15,33,43,.08);">
             <p class="font-mono font-bold tracking-[.1em] uppercase text-muted" style="font-size:10px;margin-bottom:10px;">Mission</p>
             <p style="font:400 14px/1.65 'Hanken Grotesk';color:#3a4d57;">To empower the water community and advance science through collaboration, infrastructure, and education.</p>
@@ -68,7 +68,7 @@ const timeline = [
         <span class="font-mono font-bold tracking-[.14em] uppercase text-clay" style="font-size:12px;">What we do</span>
         <h2 style="font:700 clamp(26px,3vw,36px)/1.1 'Schibsted Grotesk';color:#0F2E44;letter-spacing:-.016em;margin:14px 0 14px;">Three core capabilities.</h2>
         <p style="font:400 15px/1.65 'Hanken Grotesk';color:#3a4d57;max-width:620px;margin-bottom:32px;">CUAHSI fosters a diverse and dynamic water science community enabled by shared scientific infrastructure. Our programs are available to everyone — students, educators, agencies, and community scientists.</p>
-        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+        <div class="rgrid rgrid-multi" style="display:grid;gap:24px;--cols:repeat(3,1fr);">
           <div v-for="w in [
             {icon:'🗄️',bg:'#E1F5EE',title:'Data infrastructure',desc:'We operate HydroShare, the water science community platform for publishing, sharing, and collaborating on data, models, and code. We build software that makes it easier to find, manage, and publish data following FAIR principles.',cta:'Explore tools & platforms',to:'/data-platforms'},
             {icon:'🎓',bg:'#EDE9FE',title:'Training & community',desc:'We deliver field workshops, virtual university courses, cyberseminars, fellowships, and summer institutes that build skills and connect water scientists at every career stage.',cta:'Browse training',to:'/learn-train'},
@@ -87,7 +87,7 @@ const timeline = [
       <!-- History -->
       <section id="history" style="padding:60px 0;border-bottom:1px solid rgba(15,33,43,.08);">
         <span class="font-mono font-bold tracking-[.14em] uppercase text-clay" style="font-size:12px;">History</span>
-        <div style="display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:48px;margin-top:24px;">
+        <div class="rgrid rgrid-split" style="display:grid;gap:48px;margin-top:24px;--cols:minmax(0,1fr) 260px;">
           <div>
             <p style="font:400 15px/1.75 'Hanken Grotesk';color:#3a4d57;margin-bottom:14px;">CUAHSI was incorporated in June 2001 following recognition of the need for the water science community to organize and extend the national and international research portfolio — particularly to develop shared infrastructure for investigating the behavior and effect of water in large and complex environmental systems.</p>
             <p style="font:400 15px/1.75 'Hanken Grotesk';color:#3a4d57;margin-bottom:14px;">The path to CUAHSI began two decades earlier. Following a reorganization at NSF in 1984 that discontinued the Hydrology and Hydraulics Program, the community spent years building the case for renewed investment. In 1991, the National Academies published <em>Opportunities in Hydrologic Sciences</em> — widely known as the "blue book" — establishing the case for a coordinated national infrastructure investment in hydrologic science.</p>
@@ -111,7 +111,7 @@ const timeline = [
       <!-- More about -->
       <section style="padding:48px 0 60px;">
         <p class="font-mono font-bold tracking-[.1em] uppercase text-muted mb-4" style="font-size:11px;">More about CUAHSI</p>
-        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;">
+        <div class="rgrid rgrid-multi" style="display:grid;gap:14px;--cols:repeat(3,1fr);">
           <NuxtLink v-for="l in [{t:'Our team',d:'20+ staff and contractors across research, engineering, programs, operations, and communications.',cta:'Meet the team',to:'/about/team'},{t:'Governance',d:'Board of Directors elected by membership, advisory committees, and organizational bylaws.',cta:'View governance',to:'/about/governance'},{t:'Membership',d:'Join a network of 130+ universities and organizations advancing water science together.',cta:'Learn about membership',to:'/about/membership'}]"
             :key="l.to" :to="l.to" class="card-lift rounded-card flex flex-col gap-2" style="border:1px solid rgba(15,33,43,.1);padding:22px;text-decoration:none;">
             <p style="font:700 16px 'Schibsted Grotesk';color:#0F2E44;">{{ l.t }}</p>
@@ -124,7 +124,7 @@ const timeline = [
       <!-- Contact -->
       <section id="contact" style="padding-bottom:80px;">
         <p class="font-mono font-bold tracking-[.1em] uppercase text-muted mb-4" style="font-size:11px;">Contact us</p>
-        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;">
+        <div class="rgrid rgrid-multi" style="display:grid;gap:12px;--cols:repeat(3,1fr);">
           <div v-for="c in [{t:'General inquiries',e:'info@cuahsi.org'},{t:'Membership',e:'membership@cuahsi.org'},{t:'Community & training',e:'connect@cuahsi.org'},{t:'Communications',e:'commgr@cuahsi.org'}]" :key="c.e"
             class="rounded-card" style="border:1px solid rgba(15,33,43,.1);padding:18px;">
             <p style="font:600 13px 'Hanken Grotesk';color:#15212B;margin-bottom:5px;">{{ c.t }}</p>

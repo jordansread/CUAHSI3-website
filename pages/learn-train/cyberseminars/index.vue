@@ -44,7 +44,7 @@ function toggle(slug: string) { expanded.value = expanded.value === slug ? null 
     </div>
 
     <!-- Grid -->
-    <div class="mx-auto" style="max-width:1240px;padding:24px 40px 80px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px;">
+    <div class="mx-auto rgrid rgrid-multi" style="max-width:1240px;padding:24px 40px 80px;display:grid;gap:18px;--cols:repeat(3,1fr);">
       <div v-for="s in filtered" :key="s.slug" class="card-lift bg-white rounded-card overflow-hidden flex flex-col" style="border:1px solid rgba(15,33,43,.1);">
         <!-- Thumbnail or placeholder -->
         <div class="relative cursor-pointer" style="height:160px;" @click="toggle(s.slug)">

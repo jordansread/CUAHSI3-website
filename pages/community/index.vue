@@ -144,7 +144,7 @@ const waysin = [
       <!-- Ways to get involved -->
       <section style="padding:40px 0;border-bottom:0.5px solid #f3f4f6;">
         <p style="font-size:11px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:#9ca3af;margin-bottom:20px;">Ways to get involved</p>
-        <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;">
+        <div class="rgrid rgrid-multi" style="display:grid;gap:12px;--cols:repeat(4,minmax(0,1fr));">
           <div v-for="way in waysin" :key="way.title"
             style="border:0.5px solid #e5e7eb;border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:8px;">
             <div style="font-size:22px;margin-bottom:2px;">{{ way.icon }}</div>
@@ -162,7 +162,7 @@ const waysin = [
       </section>
 
       <!-- News + Events + Newsletter -->
-      <section style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;padding:40px 0;border-bottom:0.5px solid #f3f4f6;">
+      <section class="rgrid rgrid-multi" style="display:grid;gap:32px;padding:40px 0;border-bottom:0.5px solid #f3f4f6;--cols:repeat(3,minmax(0,1fr));">
 
         <div>
           <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:16px;">
@@ -244,7 +244,7 @@ const waysin = [
       </section>
 
       <!-- CZNet + Resources -->
-      <section style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;padding:40px 0;border-bottom:0.5px solid #f3f4f6;">
+      <section class="rgrid rgrid-split" style="display:grid;gap:20px;padding:40px 0;border-bottom:0.5px solid #f3f4f6;--cols:minmax(0,1fr) minmax(0,1fr);">
 
         <div style="border:0.5px solid #e5e7eb;border-radius:12px;padding:22px;">
           <p style="font-size:11px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:#9ca3af;margin-bottom:10px;">Research initiative</p>
