@@ -1,9 +1,8 @@
 <template>
   <footer style="background:#0A2032;color:#bcd4e6;">
-    <div class="mx-auto" style="max-width:1240px;padding:60px 40px 0;">
-      <div style="display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:48px;padding-bottom:48px;">
+    <div class="mx-auto site-container" style="max-width:1240px;padding-top:60px;">
+      <div class="footer-grid" style="display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;padding-bottom:48px;">
 
-        <!-- Brand -->
         <div>
           <div class="flex items-center gap-3 mb-5">
             <span class="relative flex-none" style="width:32px;height:32px;border-radius:50%;overflow:hidden;">
@@ -13,7 +12,7 @@
             </span>
             <span style="font:800 18px 'Schibsted Grotesk';color:#fff;">CUAHSI</span>
           </div>
-          <p style="font:400 13.5px/1.6 'Hanken Grotesk';color:#7fa4bf;max-width:240px;margin-bottom:20px;">
+          <p style="font:400 13.5px/1.6 'Hanken Grotesk';color:#7fa4bf;max-width:280px;margin-bottom:20px;">
             A consortium of 130+ universities advancing water science through shared infrastructure and community.
           </p>
           <div class="flex gap-4">
@@ -23,7 +22,6 @@
           </div>
         </div>
 
-        <!-- Explore -->
         <div>
           <p class="font-mono text-[11px] tracking-[.1em] uppercase mb-5" style="color:#5f829c;">Explore</p>
           <div class="flex flex-col gap-3">
@@ -34,7 +32,6 @@
           </div>
         </div>
 
-        <!-- Tools -->
         <div>
           <p class="font-mono text-[11px] tracking-[.1em] uppercase mb-5" style="color:#5f829c;">Tools</p>
           <div class="flex flex-col gap-3">
@@ -45,7 +42,6 @@
           </div>
         </div>
 
-        <!-- Connect -->
         <div>
           <p class="font-mono text-[11px] tracking-[.1em] uppercase mb-5" style="color:#5f829c;">Connect</p>
           <div class="flex flex-col gap-3">
@@ -58,12 +54,20 @@
       </div>
     </div>
 
-    <!-- Bottom bar -->
     <div style="border-top:1px solid rgba(255,255,255,.08);">
-      <div class="mx-auto flex items-center justify-between" style="max-width:1240px;padding:16px 40px;">
-        <span class="font-mono text-[11px] tracking-[.04em]" style="color:#5f829c;">© 2026 CUAHSI · A 501(c)(3) nonprofit</span>
-        <span class="font-mono text-[11px] tracking-[.04em]" style="color:#5f829c;">Supported by the National Science Foundation</span>
+      <div class="mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 site-container" style="max-width:1240px;padding-top:16px;padding-bottom:16px;">
+        <span class="font-mono text-[11px] tracking-[.04em] text-center" style="color:#5f829c;">© 2026 CUAHSI · A 501(c)(3) nonprofit</span>
+        <span class="font-mono text-[11px] tracking-[.04em] text-center" style="color:#5f829c;">Supported by the National Science Foundation</span>
       </div>
     </div>
   </footer>
 </template>
+
+<style scoped>
+@media (max-width: 768px) {
+  .footer-grid { grid-template-columns: 1fr 1fr !important; }
+}
+@media (max-width: 480px) {
+  .footer-grid { grid-template-columns: 1fr !important; }
+}
+</style>

@@ -72,7 +72,7 @@ function toggleTrackStyle() {
   <div>
     <!-- Hero -->
     <section style="background:linear-gradient(180deg,#FBFAF7,#F3EEE4);border-bottom:1px solid rgba(15,33,43,.08);">
-      <div class="mx-auto" style="max-width:1240px;padding:64px 40px 40px;">
+      <div class="mx-auto site-container hero-section" style="max-width:1240px;padding-top:64px;padding-bottom:40px;">
         <span class="font-mono font-bold tracking-[.14em] uppercase" style="font-size:12px;color:#C0603C;">Services</span>
         <h1 style="font:700 clamp(36px,4.4vw,54px)/1.04 'Schibsted Grotesk';letter-spacing:-.022em;color:#0F2E44;margin:16px 0 16px;max-width:760px;">
           Fee-for-service work with CUAHSI.
@@ -84,8 +84,8 @@ function toggleTrackStyle() {
     </section>
 
     <!-- Intro + member toggle -->
-    <div class="mx-auto" style="max-width:1240px;padding:56px 40px 24px;">
-      <div style="display:grid;grid-template-columns:1.3fr .7fr;gap:32px;background:#F3EEE4;border-radius:16px;padding:32px 36px;margin-bottom:48px;align-items:center;">
+    <div class="mx-auto site-container" style="max-width:1240px;padding-top:56px;padding-bottom:24px;">
+      <div class="rg-intro" style="background:#F3EEE4;border-radius:16px;padding:28px;margin-bottom:40px;">
         <p style="font:400 16px/1.6 'Hanken Grotesk';color:#3a4d57;margin:0;">
           Engagements are scoped individually and typically support grant-funded research, but we're open to work with agencies and partner organizations too.
         </p>
@@ -101,7 +101,7 @@ function toggleTrackStyle() {
       </div>
 
       <!-- Service category cards -->
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:0;">
+      <div class="rg-2">
         <div v-for="s in serviceDefs" :key="s.label"
           class="card-lift bg-white flex flex-col cursor-pointer"
           :style="`border:1px solid rgba(15,33,43,.1);border-top:3px solid ${s.accent};border-radius:14px;padding:26px 24px;`"
@@ -124,14 +124,14 @@ function toggleTrackStyle() {
     </div>
 
     <!-- Quote form -->
-    <div class="mx-auto" style="max-width:1240px;padding:24px 40px 80px;">
-      <div style="background:#0F2E44;border-radius:16px;padding:44px 48px;">
+    <div class="mx-auto site-container" style="max-width:1240px;padding-top:24px;padding-bottom:80px;">
+      <div class="quote-panel" style="background:#0F2E44;border-radius:16px;">
         <span class="font-mono font-bold tracking-[.14em] uppercase" style="font-size:12px;color:#e0a384;">Get a quote</span>
         <h2 style="font:700 28px/1.1 'Schibsted Grotesk';color:#fff;letter-spacing:-.018em;margin:14px 0 28px;">
           Tell us what you need — {{ selectedService }} and other work welcome.
         </h2>
         <form @submit.prevent>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;">
+          <div class="rg-2" style="margin-bottom:16px;">
             <input type="text" placeholder="Name" style="border:none;border-radius:8px;padding:13px 15px;font:400 14.5px 'Hanken Grotesk';outline:none;" />
             <input type="text" placeholder="Organization / institution" style="border:none;border-radius:8px;padding:13px 15px;font:400 14.5px 'Hanken Grotesk';outline:none;" />
             <input type="email" placeholder="Email" style="border:none;border-radius:8px;padding:13px 15px;font:400 14.5px 'Hanken Grotesk';outline:none;" />
@@ -150,3 +150,10 @@ function toggleTrackStyle() {
     </div>
   </div>
 </template>
+
+<style scoped>
+.quote-panel { padding: 44px 48px; }
+@media (max-width: 640px) {
+  .quote-panel { padding: 28px 22px; }
+}
+</style>
