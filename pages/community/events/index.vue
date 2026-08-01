@@ -78,8 +78,8 @@ function fmtDate(start: string, end?: string) {
           <NuxtLink to="/learn-train" style="color:#1F6FB2;">Learn &amp; Train</NuxtLink> — same session, one canonical page.
         </p>
         <div style="display:flex;gap:6px;flex-wrap:wrap;">
-          <button class="rgrid rgrid-multi" v-for="f in typeFilters" :key="f" @click="activeFilter=f"
-            :style="`font-size:12px;padding:5px 12px;border-radius:99px;cursor:pointer;border:0.5px solid ${activeFilter===f?'#111827':'#d1d5db'};background:${activeFilter===f?'#111827':'transparent'};color:${activeFilter===f?'white':'#6b7280'};`--cols:56px 1fr auto;">
+          <button v-for="f in typeFilters" :key="f" @click="activeFilter=f"
+            :style="`font-size:12px;padding:5px 12px;border-radius:99px;cursor:pointer;border:0.5px solid ${activeFilter===f?'#111827':'#d1d5db'};background:${activeFilter===f?'#111827':'transparent'};color:${activeFilter===f?'white':'#6b7280'};`">
             {{ f === 'all' ? 'All types' : f }}
           </button>
         </div>
@@ -128,7 +128,7 @@ function fmtDate(start: string, end?: string) {
       <section style="margin-bottom:48px;">
         <h2 style="font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#9ca3af;margin-bottom:0;padding-bottom:10px;border-bottom:0.5px solid #f3f4f6;">Past</h2>
         <div v-if="filteredPast?.length">
-          <NuxtLink class="rgrid rgrid-multi" v-for="event in filteredPast" :key="event._path"
+          <NuxtLink class="rgrid rgrid-split" v-for="event in filteredPast" :key="event._path"
             :to="`/community/events/${event.slug}`"
             style="display:grid;gap:16px;align-items:start;padding:14px 0;border-bottom:0.5px solid #f3f4f6;text-decoration:none;color:inherit;opacity:0.65;--cols:56px 1fr auto;">
             <div style="text-align:center;background:#f9fafb;border-radius:8px;padding:8px 4px;">
