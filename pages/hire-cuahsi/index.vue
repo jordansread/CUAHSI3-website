@@ -184,6 +184,28 @@ const budgetOptions = ['Under $2,000', '$2,000 – $10,000', '$10,000 – $40,00
           </div>
         </div>
       </div>
+
+      <!-- Other ways to work with us -->
+      <div class="rounded-[14px]" style="background:#F3EEE4;padding:28px 32px;margin-top:32px;">
+        <p style="font:700 16px 'Schibsted Grotesk';color:#0F2E44;margin:0 0 10px;">Already have funding for this work?</p>
+        <p style="font:400 14px/1.65 'Hanken Grotesk';color:#3a4d57;margin:0 0 14px;max-width:720px;">
+          If your project already covers what you need through a grant, there may be a lighter-weight path than a fee-for-service engagement:
+        </p>
+        <div class="rg-2">
+          <div>
+            <p style="font:600 13.5px 'Hanken Grotesk';color:#0F2E44;margin:0 0 4px;">Letters of Collaboration</p>
+            <p style="font:400 13px/1.55 'Hanken Grotesk';color:#5C6E78;margin:0;">If what you're asking for is something CUAHSI already has funding to support, we can provide a letter of collaboration for your proposal at no cost.</p>
+          </div>
+          <div>
+            <p style="font:600 13.5px 'Hanken Grotesk';color:#0F2E44;margin:0 0 4px;">Named collaborator on your grant</p>
+            <p style="font:400 13px/1.55 'Hanken Grotesk';color:#5C6E78;margin:0;">For sustained involvement over the life of a project, CUAHSI staff can sometimes be named collaborators on your proposal rather than billed hourly.</p>
+          </div>
+        </div>
+        <p style="font:400 12.5px/1.6 'Hanken Grotesk';color:#5C6E78;margin:14px 0 0;">
+          Most requests for significant CUAHSI staff time turn out to be a contractual need rather than a grant-collaboration one — if that's where you land, the fee-for-service options above are the more direct path.
+          Not sure which fits? <NuxtLink to="/contact" style="color:#1F6FB2;">Ask us</NuxtLink>.
+        </p>
+      </div>
     </div>
 
     <!-- Quote form -->

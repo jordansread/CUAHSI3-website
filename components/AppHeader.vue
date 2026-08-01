@@ -5,7 +5,7 @@ const navItems = [
   { label: 'Data & Computing', to: '/data-platforms' },
   { label: 'Learn & Train', to: '/learn-train' },
   { label: 'Community', to: '/community' },
-  { label: 'Hire CUAHSI', to: '/services' },
+  { label: 'Hire CUAHSI', to: '/hire-cuahsi' },
 ]
 function isActive(to: string) {
   return route.path === to || (to !== '/' && route.path.startsWith(to))

@@ -14,7 +14,7 @@
             <span style="font:800 18px 'Schibsted Grotesk';color:#fff;">CUAHSI</span>
           </div>
           <p style="font:400 13.5px/1.6 'Hanken Grotesk';color:#7fa4bf;max-width:280px;margin-bottom:20px;">
-            A consortium of 130+ universities advancing water science through shared infrastructure and community.
+            A consortium of 100+ universities advancing water science through shared infrastructure and community.
           </p>
           <div class="flex gap-4">
             <a href="https://bsky.app/profile/cuahsi.bsky.social" target="_blank" class="font-mono text-[11px] tracking-[.06em] hover:text-white transition-colors" style="color:#5f829c;">BLUESKY</a>
@@ -27,7 +27,7 @@
         <div>
           <p class="font-mono text-[11px] tracking-[.1em] uppercase mb-5" style="color:#5f829c;">Explore</p>
           <div class="flex flex-col gap-3">
-            <NuxtLink v-for="l in [{t:'Data & Computing',h:'/data-platforms'},{t:'Learn & Train',h:'/learn-train'},{t:'Community',h:'/community'},{t:'Hire CUAHSI',h:'/services'},{t:'About',h:'/about'},{t:'Impact',h:'/about/impact'}]"
+            <NuxtLink v-for="l in [{t:'Data & Computing',h:'/data-platforms'},{t:'Learn & Train',h:'/learn-train'},{t:'Community',h:'/community'},{t:'Hire CUAHSI',h:'/hire-cuahsi'},{t:'About',h:'/about'},{t:'Impact',h:'/about/impact'}]"
               :key="l.h" :to="l.h" style="font:400 13.5px 'Hanken Grotesk';color:#7fa4bf;text-decoration:none;" class="hover:text-white transition-colors">
               {{ l.t }}
             </NuxtLink>

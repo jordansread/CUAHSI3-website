@@ -34,7 +34,7 @@ const routes = [
     desc: 'Looking to hire CUAHSI staff for consulting, custom training, software development, or data curation work.',
     who: 'Routed directly to the Hire CUAHSI team',
     time: 'Typical response: 2–3 business days',
-    cta: { text: 'Go to the quote form →', to: '/services' },
+    cta: { text: 'Go to the quote form →', to: '/hire-cuahsi' },
   },
   {
     tag: 'PRESS & GENERAL',
@@ -44,7 +44,7 @@ const routes = [
     desc: 'Press inquiries, partnership proposals, speaking requests, or anything that doesn\'t fit the categories above.',
     who: 'Answered by CUAHSI communications staff',
     time: 'Typical response: 3–5 business days',
-    email: 'info@cuahsi.org',
+    email: 'connect@cuahsi.org',
   },
 ]
 </script>

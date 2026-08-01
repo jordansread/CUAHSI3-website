@@ -14,7 +14,7 @@ useHead({ title: 'Governance · CUAHSI' })
       <section id="advisory-committees" style="margin-bottom:52px;">
         <p class="font-mono font-bold tracking-[.1em] uppercase text-muted mb-4" style="font-size:11px;">Advisory committees</p>
         <p style="font:400 15px/1.65 'Hanken Grotesk';color:#3a4d57;max-width:580px;margin-bottom:24px;">Advisory committees on informatics, education and outreach, and instrumentation are open to any interested individual regardless of membership status. Committees meet virtually throughout the year and inform CUAHSI's strategic direction.</p>
-        <a href="mailto:info@cuahsi.org" style="font:600 14px 'Hanken Grotesk';color:#1F6FB2;">Contact us to get involved →</a>
+        <a href="mailto:connect@cuahsi.org" style="font:600 14px 'Hanken Grotesk';color:#1F6FB2;">Contact us to get involved →</a>
       </section>
       <section style="margin-bottom:52px;">
         <p class="font-mono font-bold tracking-[.1em] uppercase text-muted mb-4" style="font-size:11px;">Documents</p>

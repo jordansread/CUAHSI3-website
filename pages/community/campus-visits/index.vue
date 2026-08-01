@@ -173,7 +173,7 @@ const targets = [
             ]" :key="item" style="display:flex;gap:8px;font-size:13px;color:#374151;padding:6px 0;">
               <span style="color:#C0603C;flex-shrink:0;">$</span> {{ item }}
             </div>
-            <NuxtLink to="/services" style="display:inline-block;font-size:13px;font-weight:500;color:#1F6FB2;margin-top:10px;text-decoration:none;">
+            <NuxtLink to="/hire-cuahsi" style="display:inline-block;font-size:13px;font-weight:500;color:#1F6FB2;margin-top:10px;text-decoration:none;">
               Need something beyond the standard visit? See Hire CUAHSI →
             </NuxtLink>
           </div>
