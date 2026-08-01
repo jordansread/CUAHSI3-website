@@ -47,26 +47,26 @@ watch(() => route.path, () => { mobileOpen.value = false })
       </NuxtLink>
 
       <!-- Desktop nav -->
-      <nav class="hidden lg:flex gap-[2px]">
+      <nav class="hidden md:flex gap-0 flex-1 min-w-0 justify-center">
         <NuxtLink v-for="item in navItems" :key="item.to" :to="item.to"
           class="transition-colors"
-          :style="`border:none;font:600 13.5px 'Hanken Grotesk';padding:8px 11px;border-radius:8px;background:${isActive(item.to) ? 'rgba(31,111,178,.12)' : 'transparent'};color:${isActive(item.to) ? '#0F2E44' : '#3a4d57'};text-decoration:none;white-space:nowrap;`">
+          :style="`border:none;font:600 13px 'Hanken Grotesk';padding:7px 9px;border-radius:7px;background:${isActive(item.to) ? 'rgba(31,111,178,.12)' : 'transparent'};color:${isActive(item.to) ? '#0F2E44' : '#3a4d57'};text-decoration:none;white-space:nowrap;`">
           {{ item.label }}
         </NuxtLink>
       </nav>
 
       <!-- Desktop actions -->
-      <div class="hidden lg:flex gap-[10px] items-center flex-none">
+      <div class="hidden md:flex gap-2 items-center flex-none">
         <ClientOnly><SiteSearch /></ClientOnly>
         <a href="https://www.cuahsi.org/member-portal" target="_blank"
           class="bg-navy text-white text-sm font-semibold rounded-btn flex-none"
-          style="padding:10px 16px;font-family:'Hanken Grotesk';font-size:13.5px;white-space:nowrap;">
+          style="padding:9px 14px;font-family:'Hanken Grotesk';font-size:13px;white-space:nowrap;">
           Member Portal
         </a>
       </div>
 
       <!-- Mobile hamburger -->
-      <button class="lg:hidden flex-none flex items-center justify-center" @click="mobileOpen = !mobileOpen"
+      <button class="md:hidden flex-none flex items-center justify-center" @click="mobileOpen = !mobileOpen"
         style="width:38px;height:38px;border-radius:8px;border:1px solid rgba(15,33,43,.15);background:white;">
         <svg v-if="!mobileOpen" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0F2E44" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
         <svg v-else width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0F2E44" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
@@ -74,7 +74,7 @@ watch(() => route.path, () => { mobileOpen.value = false })
     </div>
 
     <!-- Mobile menu panel -->
-    <div v-if="mobileOpen" class="lg:hidden" style="border-top:1px solid rgba(15,33,43,.08);background:#FBFAF7;">
+    <div v-if="mobileOpen" class="md:hidden" style="border-top:1px solid rgba(15,33,43,.08);background:#FBFAF7;">
       <nav class="flex flex-col site-container" style="padding-top:12px;padding-bottom:16px;">
         <NuxtLink v-for="item in navItems" :key="item.to" :to="item.to"
           :style="`display:block;font:600 15px 'Hanken Grotesk';padding:12px 6px;border-radius:8px;color:${isActive(item.to) ? '#0F2E44' : '#3a4d57'};background:${isActive(item.to) ? 'rgba(31,111,178,.10)' : 'transparent'};text-decoration:none;`">
