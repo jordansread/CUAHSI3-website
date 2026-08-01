@@ -1,12 +1,22 @@
 <script setup lang="ts">
 useHead({
-  title: 'Data & Tools · CUAHSI',
+  title: 'Data & Computing · CUAHSI',
   meta: [{ name: 'description', content: 'HydroShare, JupyterHub, and the water data tools built for the hydrologic science community.' }]
 })
+
+// Query all impact entries once, filter per-tool by matching tag below
+const { data: allImpact } = await useAsyncData('data-related-impact', () =>
+  queryContent('research').where({ published: true }).sort({ date: -1 }).find()
+)
+function relatedImpact(impactTag: string) {
+  return (allImpact.value ?? []).filter(h => h.tags?.includes(impactTag)).slice(0, 2)
+}
+function fmtDate(d: string) { return new Date(d).toLocaleDateString('en-US', { month: 'long', year: 'numeric' }) }
 
 const tools = [
   {
     name: 'HydroShare',
+    impactTag: 'hydroshare',
     kicker: 'DATA REPOSITORY',
     tagline: 'Publish, share, and collaborate on hydrologic data and models with a citable DOI.',
     points: ['Mint DOIs for datasets and models', 'Group spaces for labs and courses', 'Versioning and granular access control'],
@@ -16,6 +26,7 @@ const tools = [
   },
   {
     name: 'CUAHSI JupyterHub',
+    impactTag: 'jupyterhub',
     kicker: 'CLOUD COMPUTE',
     tagline: 'Cloud notebooks for hydrologic analysis — no local setup, ready in seconds.',
     points: ['Pre-built hydrology environments', 'Large-memory options for big runs', 'Share notebooks as HydroShare resources'],
@@ -25,6 +36,7 @@ const tools = [
   },
   {
     name: 'Hydrologic Information System',
+    impactTag: 'his',
     kicker: 'TIME-SERIES DATA',
     tagline: 'Discover and access national time-series water data through standardized services.',
     points: ['WaterOneFlow web services', 'Standardized WaterML output', 'Connects to national observation networks'],
@@ -34,6 +46,7 @@ const tools = [
   },
   {
     name: 'Water Data Services',
+    impactTag: 'water-data-services',
     kicker: 'DISCOVERY MAP',
     tagline: 'Search nationwide observational water data in one interactive map interface.',
     points: ['Map-based discovery by location', 'Filter by variable and date range', 'Export to common formats'],
@@ -43,6 +56,7 @@ const tools = [
   },
   {
     name: 'MATLAB Online',
+    impactTag: 'matlab',
     kicker: 'MEMBER BENEFIT',
     tagline: 'Free browser-based access to MATLAB for member institutions — no install, toolboxes included.',
     points: ['Browser-based, nothing to install', 'Common toolboxes included', 'Free for member institutions'],
@@ -58,7 +72,7 @@ const tools = [
     <!-- Hero -->
     <section style="background:linear-gradient(180deg,#FBFAF7,#F3EEE4);border-bottom:1px solid rgba(15,33,43,.08);">
       <div class="mx-auto" style="max-width:1240px;padding:64px 40px 52px;">
-        <span class="font-mono font-bold tracking-[.14em] uppercase text-clay" style="font-size:12px;">Data &amp; Tools</span>
+        <span class="font-mono font-bold tracking-[.14em] uppercase text-clay" style="font-size:12px;">Data &amp; Computing</span>
         <h1 style="font:700 clamp(36px,4.4vw,54px)/1.04 'Schibsted Grotesk';letter-spacing:-.022em;color:#0F2E44;margin:16px 0 16px;">Tools built for water science.</h1>
         <p style="font:400 17px/1.6 'Hanken Grotesk';color:#3a4d57;max-width:560px;">CUAHSI operates open infrastructure for the water science community — from data publication and cloud computing to national data discovery.</p>
       </div>
@@ -90,10 +104,19 @@ const tools = [
           </a>
         </div>
         <!-- Right: screenshot placeholder -->
-        <div :style="i % 2 === 1 ? 'order:1;' : ''"
-          class="relative rounded-[12px] overflow-hidden"
-          style="height:330px;background:repeating-linear-gradient(135deg,#e7eef3 0 14px,#dfe8ee 14px 28px);box-shadow:0 20px 48px -24px rgba(15,46,68,.22);border:1px solid rgba(15,33,43,.08);">
-          <span class="absolute font-mono tracking-[.06em]" style="left:14px;bottom:14px;font-size:10px;color:#43657c;background:rgba(255,255,255,.9);padding:6px 10px;border-radius:5px;">SCREENSHOT — {{ t.name.toUpperCase() }}</span>
+        <div :style="i % 2 === 1 ? 'order:1;' : ''">
+          <div class="relative rounded-[12px] overflow-hidden"
+            style="height:330px;background:repeating-linear-gradient(135deg,#e7eef3 0 14px,#dfe8ee 14px 28px);box-shadow:0 20px 48px -24px rgba(15,46,68,.22);border:1px solid rgba(15,33,43,.08);">
+            <span class="absolute font-mono tracking-[.06em]" style="left:14px;bottom:14px;font-size:10px;color:#43657c;background:rgba(255,255,255,.9);padding:6px 10px;border-radius:5px;">SCREENSHOT — {{ t.name.toUpperCase() }}</span>
+          </div>
+          <!-- Related impact -->
+          <div v-if="relatedImpact(t.impactTag).length" class="rg-2" style="margin-top:16px;">
+            <NuxtLink v-for="h in relatedImpact(t.impactTag)" :key="h.slug" :to="`/about/impact/${h.slug}`"
+              class="arrow-row" style="border:1px solid rgba(15,33,43,.1);border-radius:10px;padding:14px 16px;text-decoration:none;display:block;">
+              <p class="font-mono text-[10px] text-muted mb-1">{{ fmtDate(h.date) }}</p>
+              <p style="font:500 13px/1.35 'Hanken Grotesk';color:#0F2E44;">{{ h.title }} <span class="arr" style="color:#1F6FB2;">→</span></p>
+            </NuxtLink>
+          </div>
         </div>
       </div>
     </div>
@@ -105,8 +128,8 @@ const tools = [
           <h2 style="font:700 26px 'Schibsted Grotesk';color:#0F2E44;margin:0 0 10px;">Not sure which tool fits your workflow?</h2>
           <p style="font:400 15px/1.55 'Hanken Grotesk';color:#5C6E78;max-width:480px;margin:0;">We can help you find the right platform for your data, compute needs, or research workflow.</p>
         </div>
-        <NuxtLink to="/about#contact" class="arrow-row inline-flex items-center gap-[9px] bg-navy text-white rounded-btn font-semibold flex-none" style="font:600 15px 'Hanken Grotesk';padding:14px 24px;">
-          Talk to us <span class="arr">→</span>
+        <NuxtLink to="/contact#technical" class="arrow-row inline-flex items-center gap-[9px] bg-navy text-white rounded-btn font-semibold flex-none" style="font:600 15px 'Hanken Grotesk';padding:14px 24px;">
+          Technical help <span class="arr">→</span>
         </NuxtLink>
       </div>
     </div>

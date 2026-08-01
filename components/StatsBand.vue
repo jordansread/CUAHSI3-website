@@ -9,8 +9,9 @@ const stats = [
 
 <template>
   <section class="bg-navy text-white">
-    <div class="mx-auto" style="max-width:1240px;padding:46px 40px;display:grid;grid-template-columns:repeat(4,1fr);gap:0;">
+    <div class="mx-auto stats-grid site-container" style="max-width:1240px;padding-top:36px;padding-bottom:36px;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;">
       <div v-for="(s, i) in stats" :key="s.l"
+        class="stats-item"
         :style="`padding:6px 28px;border-left:1px solid rgba(255,255,255,${i === 0 ? '0' : '.14'});`">
         <div style="font:700 clamp(34px,3.6vw,46px)/1 'Schibsted Grotesk';color:#7fc0ee;">{{ s.n }}</div>
         <div class="font-mono text-[13px] tracking-[.04em] mt-2" style="color:#bcd4e6;">{{ s.l }}</div>
@@ -18,3 +19,13 @@ const stats = [
     </div>
   </section>
 </template>
+
+<style scoped>
+@media (max-width: 900px) {
+  .stats-grid { grid-template-columns: 1fr 1fr !important; }
+}
+@media (max-width: 480px) {
+  .stats-grid { grid-template-columns: 1fr !important; }
+  .stats-item { border-left: none !important; padding-left: 0 !important; }
+}
+</style>

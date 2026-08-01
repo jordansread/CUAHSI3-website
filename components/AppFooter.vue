@@ -3,6 +3,7 @@
     <div class="mx-auto site-container" style="max-width:1240px;padding-top:60px;">
       <div class="footer-grid" style="display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;padding-bottom:48px;">
 
+        <!-- Brand -->
         <div>
           <div class="flex items-center gap-3 mb-5">
             <span class="relative flex-none" style="width:32px;height:32px;border-radius:50%;overflow:hidden;">
@@ -22,16 +23,18 @@
           </div>
         </div>
 
+        <!-- Explore -->
         <div>
           <p class="font-mono text-[11px] tracking-[.1em] uppercase mb-5" style="color:#5f829c;">Explore</p>
           <div class="flex flex-col gap-3">
-            <NuxtLink v-for="l in [{t:'Data & Computing',h:'/data-platforms'},{t:'Learn & Train',h:'/learn-train'},{t:'Community',h:'/community'},{t:'Hire CUAHSI',h:'/services'},{t:'Highlights',h:'/highlights'},{t:'About',h:'/about'}]"
+            <NuxtLink v-for="l in [{t:'Data & Computing',h:'/data-platforms'},{t:'Learn & Train',h:'/learn-train'},{t:'Community',h:'/community'},{t:'Hire CUAHSI',h:'/services'},{t:'About',h:'/about'},{t:'Impact',h:'/about/impact'}]"
               :key="l.h" :to="l.h" style="font:400 13.5px 'Hanken Grotesk';color:#7fa4bf;text-decoration:none;" class="hover:text-white transition-colors">
               {{ l.t }}
             </NuxtLink>
           </div>
         </div>
 
+        <!-- Tools -->
         <div>
           <p class="font-mono text-[11px] tracking-[.1em] uppercase mb-5" style="color:#5f829c;">Tools</p>
           <div class="flex flex-col gap-3">
@@ -42,6 +45,7 @@
           </div>
         </div>
 
+        <!-- Connect -->
         <div>
           <p class="font-mono text-[11px] tracking-[.1em] uppercase mb-5" style="color:#5f829c;">Connect</p>
           <div class="flex flex-col gap-3">

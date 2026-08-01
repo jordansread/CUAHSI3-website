@@ -1,44 +1,226 @@
 <script setup lang="ts">
 const route = useRoute()
-const slug = route.params.slug as string
-const { data: event } = await useAsyncData(`event-${slug}`, () =>
-  queryContent('events').where({ slug, published: true }).findOne().catch(() => null)
+
+const { data: event } = await useAsyncData(`event-${route.params.slug}`, () =>
+  queryContent('events').where({ slug: route.params.slug, published: true }).findOne()
 )
-const notFound = computed(() => !event.value)
-useHead({ title: computed(() => event.value?.title ?? 'Not found') })
-function fmtDate(d: string) { return new Date(d).toLocaleDateString('en-US', { weekday:'long', month:'long', day:'numeric', year:'numeric' }) }
+
+if (!event.value) throw createError({ statusCode: 404, message: 'Event not found' })
+
+useHead({
+  title: `${event.value.title} · CUAHSI Events`,
+  meta: [{ name: 'description', content: event.value.description }]
+})
+
+// Adjacent events (upcoming sorted chronologically)
+const { data: allEvents } = await useAsyncData('all-events-nav', () =>
+  queryContent('events').where({ published: true }).sort({ start: 1 }).find()
+)
+const idx = computed(() => allEvents.value?.findIndex(e => e.slug === route.params.slug) ?? -1)
+const prevEvent = computed(() => allEvents.value?.[idx.value - 1] ?? null)
+const nextEvent = computed(() => allEvents.value?.[idx.value + 1] ?? null)
+
+// Newsletters that mentioned this event
+const { data: relatedNewsletters } = await useAsyncData(`event-newsletters-${route.params.slug}`, () =>
+  queryContent('newsletter')
+    .where({ published: true, programs_mentioned: { $contains: route.params.slug as string } })
+    .sort({ date: -1 })
+    .find()
+)
+
+const isPast = computed(() => event.value ? new Date(event.value.start) < new Date() : false)
+
+const typeColors: Record<string, { bg: string; text: string }> = {
+  conference: { bg: '#EFF6FF', text: '#1E40AF' },
+  workshop:   { bg: '#EDE9FE', text: '#5B21B6' },
+  webinar:    { bg: '#DCFCE7', text: '#15803D' },
+  deadline:   { bg: '#FEF9C3', text: '#854D0E' },
+  default:    { bg: '#F3F4F6', text: '#6B7280' },
+}
+function typeStyle(type: string) {
+  const c = typeColors[type] ?? typeColors.default
+  return `font-size:11px;padding:3px 10px;border-radius:99px;background:${c.bg};color:${c.text};font-weight:500;`
+}
+
+function fmtDate(start: string, end?: string) {
+  const s = new Date(start)
+  const opts: Intl.DateTimeFormatOptions = { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' }
+  if (!end) return s.toLocaleDateString('en-US', opts)
+  const e = new Date(end)
+  if (s.toDateString() === e.toDateString()) return s.toLocaleDateString('en-US', opts)
+  if (s.getFullYear() === e.getFullYear() && s.getMonth() === e.getMonth())
+    return `${s.toLocaleDateString('en-US', { month: 'long', day: 'numeric' })}–${e.getDate()}, ${e.getFullYear()}`
+  return `${s.toLocaleDateString('en-US', { month: 'long', day: 'numeric' })} – ${e.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}`
+}
+
+function fmtShort(d: string) {
+  return new Date(d).toLocaleDateString('en-US', { month: 'short', year: 'numeric' })
+}
 </script>
+
 <template>
   <div>
-    <div v-if="notFound" class="mx-auto text-center" style="max-width:720px;padding:80px 40px;">
-      <NuxtLink to="/community/events" style="font:600 14px 'Hanken Grotesk';color:#1F6FB2;">← Events</NuxtLink>
-    </div>
-    <div v-else-if="event">
-      <section style="background:linear-gradient(180deg,#FBFAF7,#F3EEE4);border-bottom:1px solid rgba(15,33,43,.08);">
-        <div class="mx-auto" style="max-width:1240px;padding:52px 40px 48px;">
-          <p class="font-mono text-[11px] text-muted mb-3"><NuxtLink to="/community/events" style="color:#5C6E78;">← Events</NuxtLink></p>
-          <div class="flex items-center gap-3 mb-4 flex-wrap">
-            <span v-if="event.type" class="font-mono font-bold text-white rounded-[4px]" style="font-size:10px;background:#0F2E44;padding:5px 10px;">{{ event.type.toUpperCase() }}</span>
-            <span class="font-mono text-[12px] text-clay font-bold">{{ fmtDate(event.start) }}</span>
+
+    <div style="max-width:1024px;margin:0 auto;padding:0 24px;">
+      <div style="display:grid;grid-template-columns:minmax(0,1fr) 220px;gap:48px;padding:36px 0 48px;">
+
+        <!-- Main -->
+        <article>
+          <NuxtLink to="/community/events" style="font-size:12px;color:#9ca3af;text-decoration:none;display:block;margin-bottom:16px;">← All events</NuxtLink>
+
+          <!-- Past banner -->
+          <div v-if="isPast" style="background:#f9fafb;border:0.5px solid #e5e7eb;border-radius:8px;padding:10px 14px;margin-bottom:20px;font-size:12px;color:#6b7280;">
+            This event has already taken place.
           </div>
-          <h1 style="font:700 clamp(28px,3.5vw,44px)/1.1 'Schibsted Grotesk';letter-spacing:-.018em;color:#0F2E44;max-width:720px;margin:0 0 16px;">{{ event.title }}</h1>
-          <div class="flex gap-4 flex-wrap">
-            <span v-if="event.location?.city" class="font-mono text-[12px] text-muted">📍 {{ event.location.city }}</span>
-            <span v-else-if="event.location?.mode === 'virtual'" class="font-mono text-[12px] text-muted">📍 Virtual</span>
-            <span v-if="event.location?.mode" class="font-mono text-[11px] rounded-[4px]" style="background:rgba(31,111,178,.09);color:#1F6FB2;padding:3px 9px;">{{ event.location.mode }}</span>
+
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap;">
+            <span :style="typeStyle(event.type)">{{ event.type }}</span>
+            <span v-if="event.featured" style="font-size:11px;padding:3px 10px;border-radius:99px;background:#FFF7ED;color:#C2410C;border:0.5px solid #FED7AA;font-weight:500;">Featured</span>
           </div>
-        </div>
-      </section>
-      <div class="mx-auto" style="max-width:760px;padding:48px 40px 80px;">
-        <div v-if="event.registration?.url" class="rounded-[12px] bg-navy mb-8" style="padding:24px 28px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;">
-          <div>
-            <p style="font:700 16px 'Schibsted Grotesk';color:#fff;margin-bottom:4px;">{{ event.registration.required ? 'Registration required' : 'Registration open' }}</p>
-            <p v-if="event.registration.cost" style="font:400 13px 'Hanken Grotesk';color:#7fa4bf;">{{ event.registration.cost }}</p>
+
+          <h1 style="font-size:26px;font-weight:500;margin-bottom:16px;line-height:1.25;">{{ event.title }}</h1>
+
+          <!-- Key details strip -->
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-bottom:28px;padding:16px;background:#f9fafb;border-radius:12px;">
+            <div>
+              <p style="font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:#9ca3af;margin-bottom:3px;">Date</p>
+              <p style="font-size:13px;font-weight:500;">{{ fmtDate(event.start, event.end) }}</p>
+            </div>
+            <div v-if="event.location?.city || event.location?.mode">
+              <p style="font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:#9ca3af;margin-bottom:3px;">Location</p>
+              <p style="font-size:13px;font-weight:500;">
+                {{ event.location.city ?? (event.location.mode === 'virtual' ? 'Virtual' : event.location.mode) }}
+              </p>
+            </div>
+            <div v-if="event.registration">
+              <p style="font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:#9ca3af;margin-bottom:3px;">Cost</p>
+              <p style="font-size:13px;font-weight:500;text-transform:capitalize;">{{ event.registration.cost ?? 'See details' }}</p>
+            </div>
+            <div v-if="event.timezone">
+              <p style="font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:#9ca3af;margin-bottom:3px;">Timezone</p>
+              <p style="font-size:13px;font-weight:500;">{{ event.timezone.replace('America/', '').replace('_', ' ') }}</p>
+            </div>
           </div>
-          <a :href="event.registration.url" target="_blank" class="arrow-row inline-flex items-center gap-2 rounded-btn text-white font-semibold flex-none" style="font:600 15px 'Hanken Grotesk';background:#C0603C;padding:12px 22px;">Register <span class="arr">→</span></a>
-        </div>
-        <div v-if="event.description" style="font:400 15px/1.75 'Hanken Grotesk';color:#3a4d57;margin-bottom:32px;">{{ event.description }}</div>
-        <NuxtLink to="/community/events" class="arrow-row inline-flex items-center gap-2" style="font:600 14px 'Hanken Grotesk';color:#1F6FB2;"><span style="transform:scaleX(-1);display:inline-block;">→</span> All events</NuxtLink>
+
+          <!-- Description -->
+          <div style="font-size:14px;color:#374151;line-height:1.75;margin-bottom:28px;">
+            <p>{{ event.description }}</p>
+          </div>
+
+          <!-- Audience -->
+          <div v-if="event.audience?.length" style="margin-bottom:24px;">
+            <p style="font-size:12px;font-weight:500;margin-bottom:8px;">Who should attend</p>
+            <div style="display:flex;gap:6px;flex-wrap:wrap;">
+              <span v-for="a in event.audience" :key="a"
+                style="font-size:12px;padding:3px 10px;border-radius:99px;border:0.5px solid #e5e7eb;color:#6b7280;">
+                {{ a }}
+              </span>
+            </div>
+          </div>
+
+          <!-- Tags -->
+          <div v-if="event.tags?.length" style="margin-bottom:28px;">
+            <p style="font-size:12px;font-weight:500;margin-bottom:8px;">Tags</p>
+            <div style="display:flex;gap:6px;flex-wrap:wrap;">
+              <span v-for="t in event.tags" :key="t"
+                style="font-size:11px;padding:2px 8px;border-radius:99px;background:#f3f4f6;color:#6b7280;">
+                {{ t }}
+              </span>
+            </div>
+          </div>
+
+          <!-- Register CTA -->
+          <div v-if="event.registration?.url && !isPast"
+            style="padding:20px;background:#f0fdf4;border-radius:12px;border:0.5px solid #bbf7d0;margin-bottom:32px;">
+            <p style="font-size:14px;font-weight:500;margin-bottom:4px;">Registration is open</p>
+            <p style="font-size:13px;color:#6b7280;margin-bottom:12px;">
+              {{ event.registration.cost === 'free' ? 'This event is free to attend.' : 'See the registration page for pricing details.' }}
+            </p>
+            <a :href="event.registration.url" target="_blank" rel="noopener"
+              style="display:inline-block;font-size:13px;font-weight:500;padding:9px 20px;background:#111827;color:white;border-radius:8px;text-decoration:none;">
+              Register →
+            </a>
+          </div>
+
+          <!-- Prev/next -->
+          <div style="display:flex;justify-content:space-between;padding-top:24px;border-top:0.5px solid #f3f4f6;">
+            <NuxtLink v-if="prevEvent" :to="`/community/events/${prevEvent.slug}`"
+              style="font-size:12px;color:#6b7280;text-decoration:none;max-width:200px;">
+              ← {{ prevEvent.title }}
+            </NuxtLink>
+            <span v-else></span>
+            <NuxtLink v-if="nextEvent" :to="`/community/events/${nextEvent.slug}`"
+              style="font-size:12px;color:#6b7280;text-decoration:none;max-width:200px;text-align:right;">
+              {{ nextEvent.title }} →
+            </NuxtLink>
+          </div>
+        </article>
+
+        <!-- Sidebar -->
+        <aside style="padding-top:68px;">
+
+          <!-- Quick facts -->
+          <div style="background:#f9fafb;border-radius:12px;padding:16px;margin-bottom:20px;">
+            <p style="font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#9ca3af;margin-bottom:12px;">Quick facts</p>
+            <div style="display:flex;flex-direction:column;gap:10px;">
+              <div>
+                <p style="font-size:11px;color:#9ca3af;margin-bottom:1px;">Type</p>
+                <p style="font-size:12px;font-weight:500;text-transform:capitalize;">{{ event.type }}</p>
+              </div>
+              <div>
+                <p style="font-size:11px;color:#9ca3af;margin-bottom:1px;">Date</p>
+                <p style="font-size:12px;font-weight:500;">{{ fmtDate(event.start, event.end) }}</p>
+              </div>
+              <div v-if="event.location">
+                <p style="font-size:11px;color:#9ca3af;margin-bottom:1px;">Format</p>
+                <p style="font-size:12px;font-weight:500;text-transform:capitalize;">{{ event.location.mode }}</p>
+              </div>
+              <div v-if="event.location?.city">
+                <p style="font-size:11px;color:#9ca3af;margin-bottom:1px;">City</p>
+                <p style="font-size:12px;font-weight:500;">{{ event.location.city }}</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mentioned in newsletters -->
+          <div v-if="event.newsletter_source?.length" style="margin-bottom:20px;">
+            <p style="font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#9ca3af;margin-bottom:10px;">In the newsletter</p>
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <NuxtLink v-for="slug in event.newsletter_source" :key="slug"
+                :to="`/community/newsletter/${slug}`"
+                style="font-size:12px;color:#6b7280;text-decoration:none;display:flex;align-items:center;gap:4px;">
+                <span style="width:5px;height:5px;border-radius:50%;background:#1D9E75;flex-shrink:0;"></span>
+                {{ slug.replace('-', ' ').replace(/(\d{4})\s(\w+)/, '$2 $1') }}
+              </NuxtLink>
+            </div>
+          </div>
+
+          <!-- Audience -->
+          <div v-if="event.audience?.length" style="margin-bottom:20px;">
+            <p style="font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#9ca3af;margin-bottom:10px;">Audience</p>
+            <div style="display:flex;flex-direction:column;gap:4px;">
+              <span v-for="a in event.audience" :key="a" style="font-size:12px;color:#6b7280;text-transform:capitalize;">{{ a }}</span>
+            </div>
+          </div>
+
+          <!-- Nearby events -->
+          <div v-if="prevEvent || nextEvent" style="margin-bottom:20px;">
+            <p style="font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#9ca3af;margin-bottom:10px;">Other events</p>
+            <div style="display:flex;flex-direction:column;gap:8px;">
+              <NuxtLink v-if="prevEvent" :to="`/community/events/${prevEvent.slug}`"
+                style="text-decoration:none;">
+                <p style="font-size:12px;color:#6b7280;line-height:1.35;">← {{ prevEvent.title }}</p>
+                <p style="font-size:11px;color:#9ca3af;">{{ fmtShort(prevEvent.start) }}</p>
+              </NuxtLink>
+              <NuxtLink v-if="nextEvent" :to="`/community/events/${nextEvent.slug}`"
+                style="text-decoration:none;">
+                <p style="font-size:12px;color:#6b7280;line-height:1.35;">{{ nextEvent.title }} →</p>
+                <p style="font-size:11px;color:#9ca3af;">{{ fmtShort(nextEvent.start) }}</p>
+              </NuxtLink>
+            </div>
+          </div>
+
+        </aside>
       </div>
     </div>
   </div>

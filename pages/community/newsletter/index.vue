@@ -1,72 +1,46 @@
 <script setup lang="ts">
-useHead({ title: 'Newsletter Archive · CUAHSI' })
-const { data: issues } = await useAsyncData('newsletter', () =>
+useHead({
+  title: 'Newsletter archive · CUAHSI',
+  meta: [{ name: 'description', content: 'Monthly CUAHSI e-newsletters covering water science research, program updates, community spotlights, and events.' }]
+})
+
+const { data: issues } = await useAsyncData('newsletter-archive', () =>
   queryContent('newsletter').where({ published: true }).sort({ date: -1 }).find()
 )
 
-const allTopics = computed(() => {
-  const ts = new Set<string>()
-  for (const i of issues.value ?? []) for (const t of i.topics ?? []) ts.add(t)
-  return [...ts]
-})
-const selectedTopic = ref('all')
-const filtered = computed(() => {
-  if (selectedTopic.value === 'all') return issues.value ?? []
-  return (issues.value ?? []).filter(i => i.topics?.includes(selectedTopic.value))
-})
-
-function fmtDate(d: string) { return new Date(d).toLocaleDateString('en-US', { month: 'long', year: 'numeric' }) }
-function chipStyle(active: boolean) {
-  return `font:600 13px 'Hanken Grotesk';padding:7px 15px;border-radius:22px;border:1px solid ${active ? '#0F2E44' : 'rgba(15,33,43,.18)'};background:${active ? '#0F2E44' : 'transparent'};color:${active ? '#fff' : '#3a4d57'};cursor:pointer;`
+function fmtDate(d: string) {
+  return new Date(d).toLocaleDateString('en-US', { month: 'long', year: 'numeric' })
 }
 </script>
 
 <template>
   <div>
-    <CommunityHero title="Newsletter archive." lead="Every issue — funding deadlines, datasets, cyberseminars, and community news." />
 
-    <div class="mx-auto" style="max-width:1240px;padding:36px 40px 80px;">
-
-      <!-- Topic filters -->
-      <div class="flex items-center justify-between gap-4 flex-wrap mb-6">
-        <div class="flex gap-[6px] flex-wrap">
-          <button :style="chipStyle(selectedTopic === 'all')" @click="selectedTopic = 'all'">All topics</button>
-          <button v-for="t in allTopics" :key="t" :style="chipStyle(selectedTopic === t)" @click="selectedTopic = t">
-            {{ t.replace(/-/g,' ') }}
-          </button>
-        </div>
-        <span class="font-mono text-[11px] text-muted">{{ filtered.length }} ISSUES</span>
+    <div style="max-width:1024px;margin:0 auto;padding:0 24px;">
+      <div style="padding:36px 0 28px;border-bottom:0.5px solid #f3f4f6;">
+        <p style="font-size:11px;color:#9ca3af;margin-bottom:8px;">
+          <NuxtLink to="/community" style="text-decoration:none;color:#9ca3af;">Get involved</NuxtLink> / Newsletter
+        </p>
+        <h1 style="font-size:28px;font-weight:500;margin-bottom:10px;">e-Newsletter archive</h1>
+        <p style="font-size:14px;color:#6b7280;line-height:1.6;max-width:520px;margin-bottom:6px;">
+          The monthly digest — assembled from <NuxtLink to="/community/news" style="color:#1D9E75;text-decoration:none;">News</NuxtLink>
+          and <NuxtLink to="/about/impact" style="color:#1D9E75;text-decoration:none;">Impact</NuxtLink> entries plus a short editor's note.
+          Nothing is written for the newsletter alone.
+          <a href="https://visitor.r20.constantcontact.com/manage/optin?v=001XoGmI4OI3FKlGtL0BKRQ2DLNR2Q0bEzBhUSqYIzWgk0n8Oi3KvkbXGVL2E5kLnQHq-F3OY7xAs%3D" target="_blank" rel="noopener" style="color:#1D9E75;text-decoration:none;">Subscribe ↗</a>
+        </p>
       </div>
 
-      <!-- Issue list -->
-      <div class="flex flex-col">
-        <NuxtLink v-for="issue in filtered" :key="issue.slug" :to="`/community/newsletter/${issue.slug}`"
-          class="arrow-row flex gap-8 items-start"
-          style="padding:18px 0;border-top:1px solid rgba(15,33,43,.08);text-decoration:none;">
-          <span class="font-mono text-[12px] text-muted flex-none" style="min-width:130px;padding-top:2px;">{{ fmtDate(issue.date) }}</span>
-          <div class="flex-1 min-w-0">
-            <h3 style="font:700 16px/1.3 'Schibsted Grotesk';color:#0F2E44;margin:0 0 5px;" class="hover:text-water transition-colors">{{ issue.title }}</h3>
-            <p style="font:400 13.5px/1.5 'Hanken Grotesk';color:#5C6E78;margin:0 0 8px;" class="line-clamp-2">{{ issue.summary }}</p>
-            <div class="flex gap-[5px] flex-wrap">
-              <span v-for="t in issue.topics?.slice(0,4)" :key="t" class="font-mono text-[10px] rounded-[4px]" style="background:rgba(31,111,178,.09);color:#1F6FB2;padding:2px 7px;">{{ t }}</span>
-            </div>
+      <div style="margin-bottom:48px;">
+        <NuxtLink v-for="issue in issues" :key="issue._path"
+          :to="`/community/newsletter/${issue.slug}`"
+          style="display:flex;gap:24px;align-items:baseline;padding:18px 0;border-bottom:0.5px solid #f3f4f6;text-decoration:none;color:inherit;">
+          <span style="font-size:12px;color:#9ca3af;min-width:96px;flex-shrink:0;">{{ fmtDate(issue.date) }}</span>
+          <div style="flex:1;">
+            <p style="font-size:14px;font-weight:500;margin-bottom:4px;line-height:1.35;">{{ issue.title }}</p>
+            <p style="font-size:13px;color:#6b7280;line-height:1.55;">{{ issue.summary }}</p>
           </div>
-          <span class="arr text-water flex-none mt-1" style="font-size:16px;">→</span>
+          <span style="font-size:12px;color:#9ca3af;flex-shrink:0;">Read →</span>
         </NuxtLink>
-      </div>
-
-      <div v-if="issue?.mailchimp_url" v-for="issue in []" :key="'x'"></div>
-
-      <!-- Subscribe -->
-      <div class="rounded-[12px] bg-navy mt-12" style="padding:32px 40px;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;">
-        <div>
-          <p style="font:700 18px 'Schibsted Grotesk';color:#fff;margin-bottom:4px;">Get the next issue in your inbox.</p>
-          <p style="font:400 14px 'Hanken Grotesk';color:#7fa4bf;">Monthly — no spam, unsubscribe anytime.</p>
-        </div>
-        <div class="flex gap-3">
-          <input type="email" placeholder="your@university.edu" class="rounded-btn bg-white text-ink" style="font:400 14px 'Hanken Grotesk';padding:11px 14px;border:none;outline:none;width:200px;" />
-          <button class="rounded-btn text-white flex-none" style="font:600 14px 'Hanken Grotesk';background:#C0603C;padding:11px 20px;border:none;cursor:pointer;">Subscribe</button>
-        </div>
       </div>
     </div>
   </div>

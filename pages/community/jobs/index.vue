@@ -1,81 +1,162 @@
 <script setup lang="ts">
-useHead({ title: 'Job Board · CUAHSI' })
-const { data: allJobs } = await useAsyncData('jobs', () =>
+useHead({
+  title: 'Job board · CUAHSI',
+  meta: [{ name: 'description', content: 'Find and share water science job opportunities — postdocs, permanent positions, fellowships, and internships — through the CUAHSI community job board.' }]
+})
+
+const { data: jobs } = await useAsyncData('jobs', () =>
   queryContent('jobs').where({ published: true }).sort({ posted: -1 }).find()
 )
-const showExpired = ref(false)
-const selectedType = ref('all')
 
-const typeColors: Record<string,string> = {
-  faculty:                  'oklch(0.55 0.13 245)',
-  'post-doc':               'oklch(0.56 0.12 200)',
-  'graduate-assistantship': 'oklch(0.52 0.13 290)',
-  fellowship:               'oklch(0.55 0.12 150)',
-  permanent:                'oklch(0.61 0.13 55)',
-  internship:               'oklch(0.58 0.11 20)',
+const typeFilters = ['all', 'permanent', 'post-doc', 'fellowship', 'internship', 'graduate-assistantship']
+const activeFilter = ref('all')
+const showPast = ref(false)
+
+const today = new Date()
+
+function isExpired(deadline: string | null) {
+  if (!deadline) return false
+  return new Date(deadline) < today
 }
-function tColor(t: string) { return typeColors[t] ?? '#5C6E78' }
-
-const types = computed(() => ['all', ...new Set((allJobs.value ?? []).map(j => j.type).filter(Boolean))])
 
 const filtered = computed(() => {
-  const now = new Date()
-  let items = allJobs.value ?? []
-  if (!showExpired.value) items = items.filter(j => !j.deadline || new Date(j.deadline) >= now)
-  if (selectedType.value !== 'all') items = items.filter(j => j.type === selectedType.value)
+  let items = jobs.value ?? []
+  if (activeFilter.value !== 'all') items = items.filter(j => j.type === activeFilter.value)
+  if (!showPast.value) items = items.filter(j => !isExpired(j.deadline))
   return items
 })
 
-function fmtDate(d: string) { return new Date(d).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) }
-function chipStyle(active: boolean, color: string) {
-  return `font:600 13px 'Hanken Grotesk';padding:7px 15px;border-radius:22px;border:1px solid ${active ? color : 'rgba(15,33,43,.18)'};background:${active ? color : 'transparent'};color:${active ? '#fff' : '#3a4d57'};cursor:pointer;`
+const expiredCount = computed(() =>
+  (jobs.value ?? []).filter(j => isExpired(j.deadline)).length
+)
+
+const typeLabels: Record<string, string> = {
+  permanent: 'Permanent position',
+  'post-doc': 'Postdoc',
+  fellowship: 'Fellowship',
+  internship: 'Internship',
+  'graduate-assistantship': 'Graduate assistantship',
+}
+
+const typeColors: Record<string, {bg: string; text: string}> = {
+  permanent:               { bg: '#EFF6FF', text: '#1E40AF' },
+  'post-doc':              { bg: '#EDE9FE', text: '#5B21B6' },
+  fellowship:              { bg: '#DCFCE7', text: '#15803D' },
+  internship:              { bg: '#FFF7ED', text: '#C2410C' },
+  'graduate-assistantship':{ bg: '#FEF9C3', text: '#854D0E' },
+}
+
+function typeStyle(type: string) {
+  const c = typeColors[type] ?? { bg: '#F3F4F6', text: '#6B7280' }
+  return `font-size:11px;padding:2px 9px;border-radius:99px;font-weight:500;white-space:nowrap;background:${c.bg};color:${c.text};`
+}
+
+function fmtDate(d: string) {
+  return new Date(d).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
+}
+
+function daysUntil(d: string) {
+  const diff = Math.ceil((new Date(d).getTime() - today.getTime()) / (1000 * 60 * 60 * 24))
+  if (diff < 0) return null
+  if (diff === 0) return 'Closes today'
+  if (diff === 1) return 'Closes tomorrow'
+  if (diff <= 7) return `Closes in ${diff} days`
+  return null
 }
 </script>
 
 <template>
   <div>
-    <CommunityHero title="Job board." lead="Positions in hydrologic science from CUAHSI member institutions and partners." />
 
-    <div class="mx-auto" style="max-width:1240px;padding:36px 40px 80px;">
+    <div style="max-width:1024px;margin:0 auto;padding:0 24px;">
 
-      <!-- Filter row -->
-      <div class="flex items-center justify-between gap-4 flex-wrap mb-6">
-        <div class="flex gap-[6px] flex-wrap">
-          <button v-for="t in types" :key="t"
-            :style="chipStyle(selectedType === t, t === 'all' ? '#15212B' : tColor(t))"
-            @click="selectedType = t">
-            {{ t === 'all' ? 'All types' : t.replace(/-/g,' ') }}
-          </button>
+      <!-- Header -->
+      <div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:end;padding:36px 0 28px;border-bottom:0.5px solid #f3f4f6;margin-bottom:28px;">
+        <div>
+          <p style="font-size:11px;color:#9ca3af;margin-bottom:8px;">
+            <NuxtLink to="/community" style="text-decoration:none;color:#9ca3af;">Get involved</NuxtLink> / Job board
+          </p>
+          <h1 style="font-size:28px;font-weight:500;margin-bottom:10px;">Job board</h1>
+          <p style="font-size:14px;color:#6b7280;line-height:1.65;max-width:520px;">
+            Find and share water science opportunities — postdocs, permanent positions, fellowships,
+            and internships. Postings remain active for 60 days. Open to the full water science community.
+          </p>
         </div>
-        <div class="flex items-center gap-4">
-          <span class="font-mono text-[11px] text-muted">{{ filtered.length }} OPEN ROLES</span>
-          <label class="flex items-center gap-2 cursor-pointer" style="font:400 13px 'Hanken Grotesk';color:#5C6E78;">
-            <input type="checkbox" v-model="showExpired" class="cursor-pointer" />
-            Show past deadline
-          </label>
-        </div>
-      </div>
-
-      <!-- Job list -->
-      <div class="flex flex-col">
-        <a v-for="j in filtered" :key="j.slug" :href="j.url" target="_blank" rel="noopener"
-          class="arrow-row flex items-start gap-4"
-          style="padding:16px 0;border-bottom:1px solid rgba(15,33,43,.08);text-decoration:none;">
-          <span class="font-mono font-bold text-white rounded-[4px] flex-none mt-[2px]" :style="`font-size:10px;background:${tColor(j.type)};padding:4px 9px;`">{{ j.type?.replace(/-/g,' ').toUpperCase() }}</span>
-          <div class="flex-1 min-w-0">
-            <div class="font-mono text-[11px] text-muted mb-1">{{ j.organization }}</div>
-            <h3 style="font:700 16px/1.3 'Schibsted Grotesk';color:#0F2E44;margin:0 0 4px;">{{ j.title }}</h3>
-            <div class="flex gap-3 flex-wrap">
-              <span v-if="j.location" class="font-mono text-[11px] text-muted">{{ j.location }}</span>
-              <span v-if="j.deadline" class="font-mono text-[11px] text-muted">Apply by {{ fmtDate(j.deadline) }}</span>
-            </div>
-          </div>
-          <span class="arrow-row inline-flex items-center gap-1 flex-none mt-1" style="font:600 13px 'Hanken Grotesk';color:#1F6FB2;">View posting <span class="arr">→</span></span>
+        <a href="https://cuahsi.jotform.com/222235514170142" target="_blank" rel="noopener"
+          style="flex-shrink:0;font-size:13px;font-weight:500;padding:10px 18px;background:#111827;color:white;border-radius:8px;text-decoration:none;white-space:nowrap;">
+          Post a job →
         </a>
       </div>
-      <p v-if="!filtered.length" style="font:400 14px 'Hanken Grotesk';color:#5C6E78;padding:24px 0;">No open positions matching this filter.</p>
 
-      <p class="font-mono text-[11px] text-muted mt-8">Aggregated from CUAHSI and <a href="https://joshswaterjobs.com" target="_blank" style="color:#1F6FB2;">Josh's Water Jobs</a>. Listings are updated regularly; verify deadlines directly with the posting organization.</p>
+      <!-- Filters -->
+      <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:24px;">
+        <span style="font-size:12px;color:#9ca3af;margin-right:4px;">Type</span>
+        <button v-for="f in typeFilters" :key="f" @click="activeFilter=f"
+          :style="`font-size:12px;padding:5px 12px;border-radius:99px;cursor:pointer;border:0.5px solid ${activeFilter===f?'#111827':'#d1d5db'};background:${activeFilter===f?'#111827':'transparent'};color:${activeFilter===f?'white':'#6b7280'};`">
+          {{ f === 'all' ? 'All types' : typeLabels[f] ?? f }}
+        </button>
+      </div>
+
+      <!-- Listings -->
+      <div style="margin-bottom:32px;">
+        <div v-if="filtered?.length">
+          <a v-for="job in filtered" :key="job._path"
+            :href="job.url" target="_blank" rel="noopener"
+            style="display:block;padding:20px 0;border-bottom:0.5px solid #f3f4f6;text-decoration:none;color:inherit;">
+            <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;">
+              <div style="flex:1;min-width:0;">
+                <div style="display:flex;align-items:center;gap:8px;margin-bottom:5px;flex-wrap:wrap;">
+                  <p style="font-size:15px;font-weight:500;line-height:1.3;">{{ job.title }}</p>
+                  <span :style="typeStyle(job.type)">{{ typeLabels[job.type] ?? job.type }}</span>
+                  <span v-if="job.deadline && daysUntil(job.deadline)"
+                    style="font-size:11px;padding:2px 8px;border-radius:99px;background:#FEF2F2;color:#DC2626;border:0.5px solid #FECACA;">
+                    {{ daysUntil(job.deadline) }}
+                  </span>
+                </div>
+                <p style="font-size:13px;color:#374151;font-weight:500;margin-bottom:4px;">{{ job.organization }}</p>
+                <div style="display:flex;gap:12px;font-size:12px;color:#9ca3af;margin-bottom:8px;flex-wrap:wrap;">
+                  <span v-if="job.location">📍 {{ job.location }}</span>
+                  <span>Posted {{ fmtDate(job.posted) }}</span>
+                  <span v-if="job.deadline">Deadline {{ fmtDate(job.deadline) }}</span>
+                </div>
+                <p style="font-size:13px;color:#6b7280;line-height:1.55;">{{ job.body?.children?.[0]?.children?.[0]?.value ?? '' }}</p>
+                <div style="display:flex;gap:5px;flex-wrap:wrap;margin-top:8px;">
+                  <span v-for="t in job.tags" :key="t"
+                    style="font-size:11px;padding:2px 7px;border-radius:99px;background:#f3f4f6;color:#6b7280;">
+                    {{ t.replace(/-/g,' ') }}
+                  </span>
+                </div>
+              </div>
+              <span style="font-size:13px;color:#d1d5db;flex-shrink:0;padding-top:2px;">↗</span>
+            </div>
+          </a>
+        </div>
+        <p v-else style="font-size:14px;color:#9ca3af;padding:24px 0;">No current listings match this filter.</p>
+      </div>
+
+      <!-- Show/hide expired toggle -->
+      <div v-if="expiredCount > 0" style="margin-bottom:48px;">
+        <button @click="showPast=!showPast"
+          style="font-size:12px;color:#9ca3af;background:none;border:none;cursor:pointer;padding:0;text-decoration:underline;">
+          {{ showPast ? 'Hide' : 'Show' }} {{ expiredCount }} expired listing{{ expiredCount === 1 ? '' : 's' }}
+        </button>
+      </div>
+
+      <!-- Post a job CTA -->
+      <div style="background:#f9fafb;border-radius:12px;padding:22px 24px;margin-bottom:48px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px;align-items:center;">
+        <div>
+          <p style="font-size:14px;font-weight:500;margin-bottom:4px;">Have a position to share?</p>
+          <p style="font-size:13px;color:#6b7280;line-height:1.6;">
+            CUAHSI welcomes job postings relevant to the water science community — faculty positions,
+            postdocs, fellowships, internships, and industry roles. Postings are free and remain active for 60 days.
+          </p>
+        </div>
+        <a href="https://cuahsi.jotform.com/222235514170142" target="_blank" rel="noopener"
+          style="flex-shrink:0;font-size:13px;font-weight:500;padding:9px 18px;border:0.5px solid #d1d5db;border-radius:8px;text-decoration:none;color:inherit;white-space:nowrap;">
+          Submit a listing →
+        </a>
+      </div>
+
     </div>
   </div>
 </template>

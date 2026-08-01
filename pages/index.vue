@@ -30,10 +30,10 @@ function fmtEventMon(d: string) { return new Date(d).toLocaleDateString('en-US',
 function fmtDate(d: string) { return new Date(d).toLocaleDateString('en-US', { month: 'long', year: 'numeric' }) }
 
 const pathways = [
-  { tag: 'I want to work with data', title: 'Data & Tools', desc: 'HydroShare, cloud compute, and national water-data discovery.', to: '/data-platforms' },
+  { tag: 'I want to work with data', title: 'Data & Computing', desc: 'HydroShare, cloud compute, and national water-data discovery.', to: '/data-platforms' },
   { tag: 'I want to learn or teach', title: 'Learn & Train', desc: 'Cyberseminars, summer institutes, and classroom-ready material.', to: '/learn-train' },
   { tag: 'I represent an institution', title: 'Membership', desc: 'Governance, benefits, and how to join the consortium.', to: '/about/membership' },
-  { tag: 'I want to see impact', title: 'Highlights', desc: 'What the community is building, measuring, and discovering.', to: '/highlights' },
+  { tag: 'I want to see impact', title: 'Impact', desc: 'What the community is building, measuring, and discovering.', to: '/about/impact' },
 ]
 
 const homeTools = [
@@ -136,10 +136,10 @@ const sideHighlights = computed(() => highlights.value?.slice(1, 4) ?? [])
     <section class="mx-auto" style="max-width:1240px;padding:72px 40px;">
       <div class="flex justify-between items-end gap-6 mb-[34px] flex-wrap">
         <div>
-          <span class="font-mono font-bold tracking-[.14em] uppercase text-clay" style="font-size:12px;">Data &amp; tools</span>
+          <span class="font-mono font-bold tracking-[.14em] uppercase text-clay" style="font-size:12px;">Data &amp; computing</span>
           <h2 style="font:700 clamp(28px,3.2vw,40px)/1.08 'Schibsted Grotesk';color:#0F2E44;letter-spacing:-.018em;margin:14px 0 0;">Tools built for water science.</h2>
         </div>
-        <NuxtLink to="/data-platforms" class="arrow-row inline-flex items-center gap-2" style="font:600 15px 'Hanken Grotesk';color:#1F6FB2;">See all tools <span class="arr">→</span></NuxtLink>
+        <NuxtLink to="/data-platforms" class="arrow-row inline-flex items-center gap-2" style="font:600 15px 'Hanken Grotesk';color:#1F6FB2;">See all platforms <span class="arr">→</span></NuxtLink>
       </div>
       <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px;">
         <div v-for="t in homeTools" :key="t.name" class="card-lift bg-white flex flex-col rounded-card overflow-hidden" style="border:1px solid rgba(15,33,43,.1);">
@@ -166,11 +166,11 @@ const sideHighlights = computed(() => highlights.value?.slice(1, 4) ?? [])
             <span class="font-mono font-bold tracking-[.14em] uppercase text-clay" style="font-size:12px;">From the community</span>
             <h2 style="font:700 clamp(28px,3.2vw,40px)/1.08 'Schibsted Grotesk';color:#0F2E44;letter-spacing:-.018em;margin:14px 0 0;">Highlights &amp; impact.</h2>
           </div>
-          <NuxtLink to="/highlights" class="arrow-row inline-flex items-center gap-2" style="font:600 15px 'Hanken Grotesk';color:#1F6FB2;">All highlights <span class="arr">→</span></NuxtLink>
+          <NuxtLink to="/about/impact" class="arrow-row inline-flex items-center gap-2" style="font:600 15px 'Hanken Grotesk';color:#1F6FB2;">All highlights <span class="arr">→</span></NuxtLink>
         </div>
         <div v-if="highlights?.length" style="display:grid;grid-template-columns:1.5fr 1fr;gap:22px;">
           <!-- Featured -->
-          <NuxtLink v-if="featured" :to="`/highlights/${featured.slug}`"
+          <NuxtLink v-if="featured" :to="`/about/impact/${featured.slug}`"
             class="card-lift bg-white rounded-[16px] overflow-hidden flex flex-col text-left"
             style="border:1px solid rgba(15,33,43,.1);text-decoration:none;">
             <div class="relative" style="height:300px;background:linear-gradient(150deg,#10324c,#2A86C9);">
@@ -189,7 +189,7 @@ const sideHighlights = computed(() => highlights.value?.slice(1, 4) ?? [])
 
           <!-- Side stack -->
           <div class="flex flex-col gap-[14px]">
-            <NuxtLink v-for="h in sideHighlights" :key="h.slug" :to="`/highlights/${h.slug}`"
+            <NuxtLink v-for="h in sideHighlights" :key="h.slug" :to="`/about/impact/${h.slug}`"
               class="card-lift bg-white rounded-card flex-1 flex flex-col"
               style="border:1px solid rgba(15,33,43,.1);padding:18px 20px;text-decoration:none;min-height:0;">
               <div class="flex items-center gap-2 mb-2">

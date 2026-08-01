@@ -6,7 +6,6 @@ const navItems = [
   { label: 'Learn & Train', to: '/learn-train' },
   { label: 'Community', to: '/community' },
   { label: 'Hire CUAHSI', to: '/services' },
-  { label: 'Highlights', to: '/highlights' },
 ]
 function isActive(to: string) {
   return route.path === to || (to !== '/' && route.path.startsWith(to))
@@ -23,9 +22,8 @@ watch(() => route.path, () => { mobileOpen.value = false })
       <div class="mx-auto flex items-center justify-between site-container" style="max-width:1240px;height:36px;">
         <span class="font-mono text-[11px] tracking-[.04em] truncate">An NSF-supported consortium · advancing water science since 2001</span>
         <div class="flex gap-[22px] flex-none" style="font:500 12.5px 'Hanken Grotesk';">
-          <a href="https://www.cuahsi.org/member-portal" target="_blank" class="hover:text-white transition-colors">Member Portal</a>
           <a href="https://www.cuahsi.org/donate" target="_blank" class="hover:text-white transition-colors">Support CUAHSI</a>
-          <NuxtLink to="/about#contact" class="hover:text-white transition-colors">Contact</NuxtLink>
+          <NuxtLink to="/contact" class="hover:text-white transition-colors">Contact</NuxtLink>
         </div>
       </div>
     </div>
@@ -83,7 +81,7 @@ watch(() => route.path, () => { mobileOpen.value = false })
         <div class="flex flex-col gap-2 mt-3 pt-3" style="border-top:1px solid rgba(15,33,43,.08);">
           <a href="https://www.cuahsi.org/member-portal" target="_blank" class="text-center bg-navy text-white rounded-btn" style="font:600 14px 'Hanken Grotesk';padding:12px;">Member Portal</a>
           <a href="https://www.cuahsi.org/donate" target="_blank" style="font:500 13.5px 'Hanken Grotesk';color:#5C6E78;padding:8px 6px;">Support CUAHSI</a>
-          <NuxtLink to="/about#contact" style="font:500 13.5px 'Hanken Grotesk';color:#5C6E78;padding:8px 6px;">Contact</NuxtLink>
+          <NuxtLink to="/contact" style="font:500 13.5px 'Hanken Grotesk';color:#5C6E78;padding:8px 6px;">Contact</NuxtLink>
         </div>
       </nav>
     </div>

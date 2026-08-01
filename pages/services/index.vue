@@ -4,7 +4,42 @@ useHead({
   meta: [{ name: 'description', content: 'Consulting, training, custom development, and data curation from CUAHSI science and engineering staff — for grantees, agencies, and partners.' }]
 })
 
-const isMember = ref(false)
+// Issue 9: institution lookup replaces the plain toggle.
+// Placeholder member list — swap for the real member roster from About > Membership.
+const memberInstitutions = [
+  { name: 'University of Vermont', since: 2004 },
+  { name: 'Utah State University', since: 2001 },
+  { name: 'University of Virginia', since: 2005 },
+  { name: 'Colorado State University', since: 2001 },
+  { name: 'University of Alabama', since: 2008 },
+  { name: 'Syracuse University', since: 2007 },
+  { name: 'Princeton University', since: 2010 },
+]
+
+const institutionQuery = ref('')
+const matchedInstitution = ref<{ name: string; since: number } | null>(null)
+const showLookupResults = ref(false)
+const useLegacyToggle = ref(false) // no-JS fallback path
+const isMember = ref(false) // drives the legacy toggle only
+
+const lookupMatches = computed(() => {
+  if (!institutionQuery.value.trim()) return []
+  const q = institutionQuery.value.toLowerCase()
+  return memberInstitutions.filter(i => i.name.toLowerCase().includes(q)).slice(0, 6)
+})
+
+const isMemberConfirmed = computed(() => !!matchedInstitution.value || (useLegacyToggle.value && isMember.value))
+
+function selectInstitution(inst: { name: string; since: number }) {
+  matchedInstitution.value = inst
+  institutionQuery.value = inst.name
+  showLookupResults.value = false
+}
+function clearInstitution() {
+  matchedInstitution.value = null
+  institutionQuery.value = ''
+}
+
 const selectedService = ref('Consulting')
 
 const serviceDefs = [
@@ -22,6 +57,7 @@ const serviceDefs = [
     tag: 'TRAINING',
     accent: 'oklch(0.55 0.12 150)',
     title: 'Custom workshops & training',
+    qualifier: 'Beyond the standard campus-visit workshop.',
     desc: 'Tailored instruction on HydroShare, JupyterHub, and reproducible workflows for your lab, agency, or course.',
     bullets: ['Half- or full-day, virtual or on-site', 'Curriculum built around your data', 'Recordings & materials included'],
     rate: 150,
@@ -51,7 +87,7 @@ const serviceDefs = [
 ]
 
 function displayRate(rate: number) {
-  return isMember.value ? Math.round(rate * 0.958) : rate
+  return isMemberConfirmed.value ? Math.round(rate * 0.958) : rate
 }
 
 function selectService(label: string) {
@@ -60,12 +96,6 @@ function selectService(label: string) {
 
 const budgetOptions = ['Under $2,000', '$2,000 – $10,000', '$10,000 – $40,000', 'Over $40,000']
 
-function toggleKnobStyle() {
-  return `position:absolute;top:3px;left:${isMember.value ? '21px' : '3px'};width:18px;height:18px;border-radius:50%;background:white;transition:left .15s ease;`
-}
-function toggleTrackStyle() {
-  return `position:relative;width:42px;height:24px;border-radius:20px;background:${isMember.value ? '#1f9d55' : 'rgba(15,33,43,.2)'};cursor:pointer;transition:background .15s ease;flex-shrink:0;`
-}
 </script>
 
 <template>
@@ -83,21 +113,53 @@ function toggleTrackStyle() {
       </div>
     </section>
 
-    <!-- Intro + member toggle -->
+    <!-- Intro + institution lookup -->
     <div class="mx-auto site-container" style="max-width:1240px;padding-top:56px;padding-bottom:24px;">
-      <div class="rg-intro" style="background:#F3EEE4;border-radius:16px;padding:28px;margin-bottom:40px;">
+      <div class="rg-intro" style="background:#F3EEE4;border-radius:16px;padding:28px;margin-bottom:24px;">
         <p style="font:400 16px/1.6 'Hanken Grotesk';color:#3a4d57;margin:0;">
           Engagements are scoped individually and typically support grant-funded research, but we're open to work with agencies and partner organizations too.
         </p>
-        <div class="bg-white flex items-center gap-3" style="border:1px solid rgba(15,33,43,.12);border-radius:10px;padding:14px 16px;">
-          <div :style="toggleTrackStyle()" @click="isMember = !isMember">
-            <div :style="toggleKnobStyle()"></div>
+        <div class="bg-white" style="border:1px solid rgba(15,33,43,.12);border-radius:10px;padding:14px 16px;position:relative;">
+          <p style="font:700 13.5px 'Hanken Grotesk';color:#0F2E44;margin:0 0 4px;">Member institution rates</p>
+
+          <!-- Confirmed state -->
+          <div v-if="matchedInstitution" class="flex items-center justify-between gap-2">
+            <p style="font:400 12.5px 'Hanken Grotesk';color:#1f9d55;margin:0;">✓ {{ matchedInstitution.name }} — member since {{ matchedInstitution.since }}</p>
+            <button @click="clearInstitution" style="font:500 11.5px 'Hanken Grotesk';color:#9ca3af;background:none;border:none;cursor:pointer;text-decoration:underline;">Change</button>
           </div>
-          <div>
-            <p style="font:700 13.5px 'Hanken Grotesk';color:#0F2E44;margin:0;">Member institution rates</p>
-            <p style="font:400 12px 'Hanken Grotesk';color:#5C6E78;margin:0;">Member universities save 4.2% on hourly rates</p>
+
+          <!-- Lookup input -->
+          <div v-else>
+            <input v-model="institutionQuery" @focus="showLookupResults = true" @input="showLookupResults = true"
+              @blur="setTimeout(() => showLookupResults = false, 150)"
+              type="text" placeholder="Find your institution…"
+              style="width:100%;border:1px solid rgba(15,33,43,.15);border-radius:6px;padding:8px 10px;font:400 13px 'Hanken Grotesk';outline:none;" />
+            <div v-if="showLookupResults && lookupMatches.length" class="bg-white" style="position:absolute;left:16px;right:16px;top:100%;margin-top:4px;border:1px solid rgba(15,33,43,.15);border-radius:8px;box-shadow:0 8px 20px rgba(15,33,43,.12);z-index:10;overflow:hidden;">
+              <button v-for="m in lookupMatches" :key="m.name" @click="selectInstitution(m)"
+                class="block w-full text-left" style="padding:9px 12px;font:400 13px 'Hanken Grotesk';color:#15212B;background:white;border:none;border-bottom:1px solid rgba(15,33,43,.06);cursor:pointer;">
+                {{ m.name }}
+              </button>
+            </div>
+            <p v-if="institutionQuery && !lookupMatches.length" style="font:400 12px 'Hanken Grotesk';color:#5C6E78;margin:6px 0 0;">
+              Not a member? <NuxtLink to="/about/membership" style="color:#1F6FB2;">Your institution can join →</NuxtLink>
+            </p>
           </div>
+
+          <!-- No-JS / plain toggle fallback -->
+          <noscript>
+            <div class="flex items-center gap-3 mt-2">
+              <span style="font:400 12px 'Hanken Grotesk';color:#5C6E78;">Member university? Rates are automatically discounted 4.2% once confirmed by our team.</span>
+            </div>
+          </noscript>
         </div>
+      </div>
+
+      <!-- Issue 4: eligibility banner — free campus visits vs. paid work -->
+      <div style="background:#F3EEE4;border-radius:12px;padding:16px 22px;margin-bottom:32px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+        <span style="font:400 13.5px 'Hanken Grotesk';color:#3a4d57;">
+          <strong style="color:#0F2E44;">Member university?</strong> Many training and consultation needs are covered free by a campus visit — check that first.
+        </span>
+        <NuxtLink to="/community/campus-visits" style="font:600 13.5px 'Hanken Grotesk';color:#1F6FB2;text-decoration:none;">Campus visits →</NuxtLink>
       </div>
 
       <!-- Service category cards -->
@@ -107,7 +169,8 @@ function toggleTrackStyle() {
           :style="`border:1px solid rgba(15,33,43,.1);border-top:3px solid ${s.accent};border-radius:14px;padding:26px 24px;`"
           @click="selectService(s.label)">
           <span class="font-mono font-bold tracking-[.06em] uppercase" :style="`font-size:11px;color:${s.accent};`">{{ s.tag }}</span>
-          <h3 style="font:700 21px 'Schibsted Grotesk';color:#0F2E44;margin:12px 0 10px;">{{ s.title }}</h3>
+          <h3 style="font:700 21px 'Schibsted Grotesk';color:#0F2E44;margin:12px 0 4px;">{{ s.title }}</h3>
+          <p v-if="s.qualifier" style="font:500 12px 'Hanken Grotesk';color:#9ca3af;margin:0 0 10px;">{{ s.qualifier }}</p>
           <p style="font:400 14.5px/1.5 'Hanken Grotesk';color:#5C6E78;margin:0 0 16px;">{{ s.desc }}</p>
           <ul class="flex flex-col gap-2 mb-5" style="list-style:none;padding:0;margin:0;">
             <li v-for="b in s.bullets" :key="b" class="flex items-start gap-[10px]">
@@ -133,7 +196,7 @@ function toggleTrackStyle() {
         <form @submit.prevent>
           <div class="rg-2" style="margin-bottom:16px;">
             <input type="text" placeholder="Name" style="border:none;border-radius:8px;padding:13px 15px;font:400 14.5px 'Hanken Grotesk';outline:none;" />
-            <input type="text" placeholder="Organization / institution" style="border:none;border-radius:8px;padding:13px 15px;font:400 14.5px 'Hanken Grotesk';outline:none;" />
+            <input type="text" :value="matchedInstitution?.name" placeholder="Organization / institution" style="border:none;border-radius:8px;padding:13px 15px;font:400 14.5px 'Hanken Grotesk';outline:none;" />
             <input type="email" placeholder="Email" style="border:none;border-radius:8px;padding:13px 15px;font:400 14.5px 'Hanken Grotesk';outline:none;" />
             <select style="border:none;border-radius:8px;padding:13px 15px;font:400 14.5px 'Hanken Grotesk';outline:none;color:#5C6E78;">
               <option value="" disabled selected>Budget range</option>

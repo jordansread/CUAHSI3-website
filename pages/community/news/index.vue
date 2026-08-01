@@ -1,26 +1,74 @@
 <script setup lang="ts">
-useHead({ title: 'News · CUAHSI' })
+useHead({
+  title: 'News · CUAHSI',
+  meta: [{ name: 'description', content: 'Announcements, platform updates, and time-sensitive news from CUAHSI.' }]
+})
+
 const { data: items } = await useAsyncData('news', () =>
   queryContent('news').where({ published: true }).sort({ date: -1 }).find()
 )
-function fmtDate(d: string) { return new Date(d).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) }
+
+function fmtDate(d: string) {
+  return new Date(d).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
+}
+
+const tagColors: Record<string, { bg: string, text: string }> = {
+  'announcements':  { bg: '#EFF6FF', text: '#1E40AF' },
+  'platforms':      { bg: '#EDE9FE', text: '#5B21B6' },
+  'hydroshare':     { bg: '#DCFCE7', text: '#15803D' },
+  'incident':       { bg: '#FEF2F2', text: '#991B1B' },
+}
 </script>
 
 <template>
   <div>
-    <CommunityHero title="News & announcements." lead="Operational updates, service notices, and time-sensitive community items." />
 
-    <div class="mx-auto" style="max-width:920px;padding:44px 40px 80px;">
-      <div class="flex flex-col">
-        <NuxtLink v-for="item in items" :key="item.slug" :to="`/community/news/${item.slug}`"
-          class="arrow-row flex flex-col gap-2"
-          style="padding:20px 0;border-top:1px solid rgba(15,33,43,.08);text-decoration:none;">
-          <div class="flex items-center gap-3 flex-wrap">
-            <span class="font-mono text-[11px] text-muted">{{ fmtDate(item.date) }}</span>
-            <span v-for="tag in item.tags?.slice(0,2)" :key="tag" class="font-mono text-[10px] text-clay">· {{ tag }}</span>
+    <div style="max-width:1024px;margin:0 auto;padding:0 24px;">
+      <div style="padding:36px 0 28px;border-bottom:0.5px solid #f3f4f6;margin-bottom:28px;">
+        <p style="font-size:11px;color:#9ca3af;margin-bottom:8px;">
+          <NuxtLink to="/community" style="text-decoration:none;color:#9ca3af;">Get involved</NuxtLink> / News
+        </p>
+        <h1 style="font-size:28px;font-weight:500;margin-bottom:10px;">News</h1>
+        <p style="font-size:14px;color:#6b7280;line-height:1.65;max-width:520px;">
+          Operational notices — maintenance, deadlines, service changes — that stay relevant for a few months, then retire.
+          For durable outcome stories, see <NuxtLink to="/about/impact" style="color:#1D9E75;text-decoration:none;">Impact</NuxtLink>;
+          for the monthly digest of both, see the <NuxtLink to="/community/newsletter" style="color:#1D9E75;text-decoration:none;">newsletter</NuxtLink>.
+        </p>
+      </div>
+
+      <div style="margin-bottom:48px;">
+        <NuxtLink v-for="item in items" :key="item._path"
+          :to="`/community/news/${item.slug}`"
+          style="display:block;padding:20px 0;border-bottom:0.5px solid #f3f4f6;text-decoration:none;color:inherit;">
+          <div style="display:flex;gap:8px;align-items:center;margin-bottom:6px;flex-wrap:wrap;">
+            <span v-for="tag in item.tags" :key="tag"
+              :style="`font-size:11px;padding:1px 8px;border-radius:99px;font-weight:500;background:${tagColors[tag]?.bg ?? '#F3F4F6'};color:${tagColors[tag]?.text ?? '#374151'};`">
+              {{ tag }}
+            </span>
+            <span style="font-size:11px;color:#9ca3af;">{{ fmtDate(item.date) }}</span>
           </div>
-          <h3 style="font:700 18px/1.3 'Schibsted Grotesk';color:#0F2E44;margin:0;" class="hover:text-water transition-colors">{{ item.title }} <span class="arr text-water" style="font-size:14px;">→</span></h3>
-          <p style="font:400 14.5px/1.55 'Hanken Grotesk';color:#5C6E78;margin:0;" class="line-clamp-2">{{ item.excerpt }}</p>
+          <p style="font-size:15px;font-weight:500;margin-bottom:5px;line-height:1.3;">{{ item.title }} <span style="font-size:12px;color:#1D9E75;">→</span></p>
+          <p style="font-size:13px;color:#6b7280;line-height:1.6;">{{ item.excerpt }}</p>
+        </NuxtLink>
+
+        <div v-if="!items?.length" style="padding:32px 0;">
+          <p style="font-size:13px;color:#9ca3af;">No news items yet.</p>
+        </div>
+      </div>
+
+      <!-- Cross-links -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:48px;">
+        <NuxtLink to="/community/newsletter"
+          style="border:0.5px solid #e5e7eb;border-radius:10px;padding:16px;text-decoration:none;color:inherit;">
+          <p style="font-size:13px;font-weight:500;margin-bottom:3px;">Monthly newsletter</p>
+          <p style="font-size:12px;color:#6b7280;margin-bottom:6px;">In-depth coverage of programs, community, and events.</p>
+          <p style="font-size:12px;color:#1D9E75;">Browse issues →</p>
+        </NuxtLink>
+        <NuxtLink to="/about/impact"
+          style="border:0.5px solid #e5e7eb;border-radius:10px;padding:16px;text-decoration:none;color:inherit;">
+          <p style="font-size:13px;font-weight:500;margin-bottom:3px;">Program highlights</p>
+          <p style="font-size:12px;color:#6b7280;margin-bottom:6px;">Research outcomes, infrastructure work, and training impact.</p>
+          <p style="font-size:12px;color:#1D9E75;">Browse highlights →</p>
         </NuxtLink>
       </div>
     </div>
