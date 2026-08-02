@@ -52,19 +52,24 @@ useHead({
         </div>
       </div>
 
-      <!-- Donate CTA -->
-      <div class="rounded-[16px]" style="background:#F3EEE4;padding:40px;text-align:center;margin-bottom:56px;">
-        <p style="font:700 24px 'Schibsted Grotesk';color:#0F2E44;margin:0 0 10px;">Ready to give?</p>
-        <p style="font:400 15px/1.6 'Hanken Grotesk';color:#3a4d57;max-width:480px;margin:0 auto 24px;">
-          Donations are processed securely through Zeffy, at no cost to CUAHSI — 100% of your gift goes directly to our programs.
-        </p>
-        <a href="https://www.cuahsi.org/uploads/pages/img/Zeffy-Donor-Information.pdf" target="_blank" rel="noopener"
-          class="arrow-row inline-flex items-center gap-[9px] bg-navy text-white rounded-btn font-semibold" style="font:600 16px 'Hanken Grotesk';padding:15px 30px;">
-          Donate to CUAHSI <span class="arr">→</span>
-        </a>
-        <p class="font-mono text-[11px]" style="color:#9ca3af;margin-top:14px;">
-          Please review <a href="https://www.cuahsi.org/uploads/pages/img/Zeffy-Donor-Information.pdf" target="_blank" style="color:#1F6FB2;">donor information</a> before completing your transaction.
-        </p>
+      <!-- Donate form -->
+      <div class="rounded-[16px]" style="background:#F3EEE4;padding:40px;margin-bottom:56px;">
+        <div style="text-align:center;margin-bottom:28px;">
+          <p style="font:700 24px 'Schibsted Grotesk';color:#0F2E44;margin:0 0 10px;">Donate to CUAHSI</p>
+          <p style="font:400 15px/1.6 'Hanken Grotesk';color:#3a4d57;max-width:520px;margin:0 auto;">
+            Donations are processed securely through Zeffy, at no cost to CUAHSI — 100% of your gift goes directly to our programs.
+            Please review <a href="https://www.cuahsi.org/uploads/pages/img/Zeffy-Donor-Information.pdf" target="_blank" style="color:#1F6FB2;">donor information</a> before completing your transaction.
+          </p>
+        </div>
+        <div class="rounded-[12px] overflow-hidden" style="background:#fff;border:1px solid rgba(15,33,43,.1);max-width:640px;margin:0 auto;">
+          <iframe
+            title="Donation form powered by Zeffy"
+            src="https://www.zeffy.com/en-US/embed/donation-form/1d9a8cef-4275-4db4-8461-5de35d048ebb"
+            style="width:100%;height:1200px;border:none;display:block;"
+            allowpaymentrequest="true"
+            allowtransparency="true">
+          </iframe>
+        </div>
       </div>
 
       <!-- Contact -->
