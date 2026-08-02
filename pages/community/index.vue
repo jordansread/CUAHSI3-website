@@ -321,10 +321,10 @@ const waysin = [
               that are not yet CUAHSI members.
             </p>
           </div>
-          <a href="https://www.cuahsi.org/donate" target="_blank" rel="noopener"
+          <NuxtLink to="/support"
             style="flex-shrink:0;font-size:13px;font-weight:500;padding:10px 22px;background:#111827;color:white;border-radius:8px;text-decoration:none;white-space:nowrap;">
             Donate →
-          </a>
+          </NuxtLink>
         </div>
       </section>
 
