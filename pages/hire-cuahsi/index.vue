@@ -187,22 +187,22 @@ const budgetOptions = ['Under $2,000', '$2,000 – $10,000', '$10,000 – $40,00
 
       <!-- Other ways to work with us -->
       <div class="rounded-[14px]" style="background:#F3EEE4;padding:28px 32px;margin-top:32px;">
-        <p style="font:700 16px 'Schibsted Grotesk';color:#0F2E44;margin:0 0 10px;">Already have funding for this work?</p>
+        <p style="font:700 16px 'Schibsted Grotesk';color:#0F2E44;margin:0 0 10px;">Writing a grant proposal that involves CUAHSI?</p>
         <p style="font:400 14px/1.65 'Hanken Grotesk';color:#3a4d57;margin:0 0 14px;max-width:720px;">
-          If your project already covers what you need through a grant, there may be a lighter-weight path than a fee-for-service engagement:
+          Most CUAHSI involvement in outside proposals falls into one of two categories — and they're not interchangeable:
         </p>
         <div class="rg-2">
           <div>
             <p style="font:600 13.5px 'Hanken Grotesk';color:#0F2E44;margin:0 0 4px;">Letters of Collaboration</p>
-            <p style="font:400 13px/1.55 'Hanken Grotesk';color:#5C6E78;margin:0;">If what you're asking for is something CUAHSI already has funding to support, we can provide a letter of collaboration for your proposal at no cost.</p>
+            <p style="font:400 13px/1.55 'Hanken Grotesk';color:#5C6E78;margin:0;">If your proposal asks CUAHSI to commit to something we already have dedicated funding to support, we can provide a letter of collaboration at no cost — there's no fee-for-service need here, since the work is already funded on our end.</p>
           </div>
           <div>
             <p style="font:600 13.5px 'Hanken Grotesk';color:#0F2E44;margin:0 0 4px;">Named collaborator on your grant</p>
-            <p style="font:400 13px/1.55 'Hanken Grotesk';color:#5C6E78;margin:0;">For sustained involvement over the life of a project, CUAHSI staff can sometimes be named collaborators on your proposal rather than billed hourly.</p>
+            <p style="font:400 13px/1.55 'Hanken Grotesk';color:#5C6E78;margin:0;">This is <em>not</em> a lighter-weight option — naming a CUAHSI staff member as a collaborator requires staffing a PI, with more proposal prep and ongoing project oversight than a scoped engagement. We reserve this for projects where CUAHSI's intellectual leadership on genuinely new work is actually needed.</p>
           </div>
         </div>
         <p style="font:400 12.5px/1.6 'Hanken Grotesk';color:#5C6E78;margin:14px 0 0;">
-          Most requests for significant CUAHSI staff time turn out to be a contractual need rather than a grant-collaboration one — if that's where you land, the fee-for-service options above are the more direct path.
+          If what you need is specific, definable help from our staff — most requests are — a fee-for-service engagement above is simpler for everyone than either of these paths.
           Not sure which fits? <NuxtLink to="/contact" style="color:#1F6FB2;">Ask us</NuxtLink>.
         </p>
       </div>
