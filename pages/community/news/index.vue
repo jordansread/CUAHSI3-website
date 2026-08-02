@@ -4,8 +4,15 @@ useHead({
   meta: [{ name: 'description', content: 'Announcements, platform updates, and time-sensitive news from CUAHSI.' }]
 })
 
-const { data: items } = await useAsyncData('news', () =>
+const { data: allItems } = await useAsyncData('news', () =>
   queryContent('news').where({ published: true }).sort({ date: -1 }).find()
+)
+
+// queryContent('news') matches by path PREFIX, and '/newsletter/...' also starts
+// with the string '/news' — so without this filter, every newsletter issue leaks
+// into the news list too. The trailing slash disambiguates '/news/' from '/newsletter/'.
+const items = computed(() =>
+  (allItems.value ?? []).filter(item => item._path?.startsWith('/news/'))
 )
 
 function fmtDate(d: string) {
@@ -30,9 +37,9 @@ const tagColors: Record<string, { bg: string, text: string }> = {
         </p>
         <h1 style="font-size:28px;font-weight:500;margin-bottom:10px;">News</h1>
         <p style="font-size:14px;color:#6b7280;line-height:1.65;max-width:520px;">
-          Operational notices — maintenance, deadlines, service changes — that stay relevant for a few months, then retire.
-          For durable outcome stories, see <NuxtLink to="/about/impact" style="color:#1D9E75;text-decoration:none;">Impact</NuxtLink>;
-          for the monthly digest of both, see the <NuxtLink to="/community/newsletter" style="color:#1D9E75;text-decoration:none;">newsletter</NuxtLink>.
+          Platform updates, announcements, and time-sensitive news from CUAHSI.
+          For deeper program coverage, see the <NuxtLink to="/community/newsletter" style="color:#1D9E75;text-decoration:none;">monthly newsletter</NuxtLink>
+          and <NuxtLink to="/highlights" style="color:#1D9E75;text-decoration:none;">program highlights</NuxtLink>.
         </p>
       </div>
 
@@ -57,14 +64,14 @@ const tagColors: Record<string, { bg: string, text: string }> = {
       </div>
 
       <!-- Cross-links -->
-      <div class="rgrid rgrid-split" style="display:grid;gap:12px;margin-bottom:48px;--cols:1fr 1fr;">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:48px;">
         <NuxtLink to="/community/newsletter"
           style="border:0.5px solid #e5e7eb;border-radius:10px;padding:16px;text-decoration:none;color:inherit;">
           <p style="font-size:13px;font-weight:500;margin-bottom:3px;">Monthly newsletter</p>
           <p style="font-size:12px;color:#6b7280;margin-bottom:6px;">In-depth coverage of programs, community, and events.</p>
           <p style="font-size:12px;color:#1D9E75;">Browse issues →</p>
         </NuxtLink>
-        <NuxtLink to="/about/impact"
+        <NuxtLink to="/highlights"
           style="border:0.5px solid #e5e7eb;border-radius:10px;padding:16px;text-decoration:none;color:inherit;">
           <p style="font-size:13px;font-weight:500;margin-bottom:3px;">Program highlights</p>
           <p style="font-size:12px;color:#6b7280;margin-bottom:6px;">Research outcomes, infrastructure work, and training impact.</p>
