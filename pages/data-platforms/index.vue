@@ -35,24 +35,15 @@ const tools = [
     href: 'https://jupyter.cuahsi.org',
   },
   {
-    name: 'Hydrologic Information System',
-    impactTag: 'his',
-    kicker: 'TIME-SERIES DATA',
-    tagline: 'Discover and access national time-series water data through standardized services.',
-    points: ['WaterOneFlow web services', 'Standardized WaterML output', 'Connects to national observation networks'],
-    tags: ['WaterML', 'Time series', 'WaterOneFlow'],
-    cta: 'Explore HIS',
-    href: 'https://his.cuahsi.org',
-  },
-  {
-    name: 'Water Data Services',
+    name: 'Water Services',
     impactTag: 'water-data-services',
-    kicker: 'DISCOVERY MAP',
-    tagline: 'Search nationwide observational water data in one interactive map interface.',
-    points: ['Map-based discovery by location', 'Filter by variable and date range', 'Export to common formats'],
-    tags: ['Map', 'Discovery', 'Export'],
-    cta: 'Open the map',
-    href: 'https://www.cuahsi.org/data-services',
+    kicker: 'TIME-SERIES DATA',
+    tagline: 'Discover and access national time-series water data — map-based search, standardized WaterOneFlow/WaterML services, and export to common formats.',
+    points: ['Map-based discovery by location, variable, and date range', 'WaterOneFlow web services with standardized WaterML output', 'Connects to national observation networks'],
+    tags: ['WaterML', 'Time series', 'WaterOneFlow', 'Map', 'Discovery'],
+    cta: 'Explore Water Services',
+    href: 'https://data.cuahsi.org/',
+    deprecation: 'This service is being deprecated and replaced by a community-hosted, open-source sensor data management platform — free for member institutions running small sensor deployments. More details coming as the transition takes shape.',
   },
   {
     name: 'MATLAB Online',
@@ -98,6 +89,10 @@ const tools = [
           </ul>
           <div class="flex gap-[8px] flex-wrap mb-6">
             <span v-for="tag in t.tags" :key="tag" class="font-mono text-[11px]" style="color:#1F6FB2;background:rgba(31,111,178,.09);padding:5px 10px;border-radius:5px;">{{ tag }}</span>
+          </div>
+          <div v-if="t.deprecation" class="rounded-[10px] mb-6" style="background:#FFF7ED;border:1px solid #FDBA74;padding:14px 16px;">
+            <p class="font-mono font-bold tracking-[.06em] uppercase" style="font-size:10px;color:#C2410C;margin-bottom:6px;">Service transition planned</p>
+            <p style="font:400 13px/1.55 'Hanken Grotesk';color:#7C2D12;margin:0;">{{ t.deprecation }}</p>
           </div>
           <a :href="t.href" target="_blank" class="arrow-row inline-flex items-center gap-[9px] bg-navy text-white rounded-btn font-semibold" style="font:600 15px 'Hanken Grotesk';padding:13px 22px;">
             {{ t.cta }} <span class="arr">→</span>

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 useHead({
   title: 'Hire CUAHSI · CUAHSI',
-  meta: [{ name: 'description', content: 'Consulting, training, custom development, and data curation from CUAHSI science and engineering staff — for grantees, agencies, and partners.' }]
+  meta: [{ name: 'description', content: 'Computing environment setup, data wrangling, workshop logistics, and custom software integrations from CUAHSI staff — for grantees, agencies, and partners.' }]
 })
 
 // Issue 9: institution lookup replaces the plain toggle.
@@ -40,49 +40,48 @@ function clearInstitution() {
   institutionQuery.value = ''
 }
 
-const selectedService = ref('Consulting')
+const selectedService = ref('DevOps & infrastructure')
 
 const serviceDefs = [
   {
-    tag: 'CONSULTING',
+    tag: 'DEVOPS & INFRASTRUCTURE',
     accent: 'oklch(0.55 0.13 245)',
-    title: 'Technical & scientific consulting',
-    desc: 'Guidance on hydrologic modeling, data-management plans, and cyberinfrastructure strategy for funded projects.',
-    bullets: ['Data-management plan review', 'Model selection & validation', 'Cyberinfrastructure architecture advice'],
-    rate: 185,
-    range: '$2,500 – $15,000 per engagement',
-    label: 'Consulting',
+    title: 'DevOps & computing environment setup',
+    desc: 'Get running on the specific model versions, environments, and datasets your research needs — including large-domain modeling frameworks and multi-terabyte datasets with real compute and storage demands.',
+    bullets: ['NOAA NextGen Water Model setup & configuration', 'Large dataset access: NOAA AORC, USGS CONUS404', 'Cloud compute environment provisioning'],
+    rate: 175,
+    range: '$4,000 – $25,000 per engagement',
+    label: 'DevOps & infrastructure',
   },
   {
-    tag: 'TRAINING',
-    accent: 'oklch(0.55 0.12 150)',
-    title: 'Custom workshops & training',
-    qualifier: 'Beyond the standard campus-visit workshop.',
-    desc: 'Tailored instruction on HydroShare, JupyterHub, and reproducible workflows for your lab, agency, or course.',
-    bullets: ['Half- or full-day, virtual or on-site', 'Curriculum built around your data', 'Recordings & materials included'],
-    rate: 150,
-    range: '$1,200 – $6,000 per workshop',
-    label: 'Training',
-  },
-  {
-    tag: 'CUSTOM DEVELOPMENT',
-    accent: 'oklch(0.52 0.13 290)',
-    title: 'Custom software & integrations',
-    desc: 'Extend CUAHSI platforms or connect your systems to our data services.',
-    bullets: ['WaterOneFlow / WaterML integrations', 'HydroShare or JupyterHub extensions', 'Fixed-bid or hourly delivery'],
-    rate: 165,
-    range: '$5,000 – $40,000 per project',
-    label: 'Custom development',
-  },
-  {
-    tag: 'DATA CURATION',
+    tag: 'DATA WRANGLING',
     accent: 'oklch(0.56 0.12 200)',
-    title: 'Dataset curation & publishing',
-    desc: 'Hands-on help preparing, documenting, and publishing data to meet funder sharing requirements.',
-    bullets: ['Metadata & FAIR-compliance review', 'DOI minting & version management', 'QC on large observational records'],
-    rate: 140,
+    title: 'Data wrangling, munging & publication formatting',
+    desc: 'Hands-on help cleaning, restructuring, and formatting datasets so they meet funder sharing requirements and are genuinely ready to publish.',
+    bullets: ['Format conversion & schema alignment', 'Metadata & FAIR-compliance review', 'QC on large observational records'],
+    rate: 128,
     range: '$800 – $8,000 per dataset',
-    label: 'Data curation',
+    label: 'Data wrangling',
+  },
+  {
+    tag: 'EVENTS & LOGISTICS',
+    accent: 'oklch(0.55 0.12 150)',
+    title: 'Training workshop setup & logistics',
+    desc: 'End-to-end support running a workshop or training event — recruiting participants, handling registration, and managing day-of logistics.',
+    bullets: ['Participant recruiting & outreach', 'Registration & communications', 'On-site or virtual event logistics'],
+    rate: 77,
+    range: '$1,200 – $6,000 per workshop',
+    label: 'Events & logistics',
+  },
+  {
+    tag: 'SOFTWARE ENGINEERING',
+    accent: 'oklch(0.52 0.13 290)',
+    title: 'Custom software integrations',
+    desc: 'Extend CUAHSI platforms or connect your systems to our data services, drawing on our software engineering team and cloud DevOps engineer.',
+    bullets: ['WaterOneFlow / WaterML integrations', 'HydroShare or JupyterHub extensions', 'Rate depends on staff assigned to the project'],
+    rate: 189,
+    range: '$5,000 – $40,000 per project',
+    label: 'Software engineering',
   },
 ]
 
@@ -108,7 +107,7 @@ const budgetOptions = ['Under $2,000', '$2,000 – $10,000', '$10,000 – $40,00
           Put our staff on your project.
         </h1>
         <p style="font:400 19px/1.55 'Hanken Grotesk';color:#3a4d57;max-width:620px;">
-          Consulting, training, and development from our science and engineering staff — for grantees, agencies, and partners. Revenue sustains the free tools and data CUAHSI provides the whole community.
+          DevOps, data wrangling, workshop logistics, and software integration work from our science and engineering staff — for grantees, agencies, and partners. Revenue sustains the free tools and data CUAHSI provides the whole community.
         </p>
       </div>
     </section>
@@ -185,11 +184,14 @@ const budgetOptions = ['Under $2,000', '$2,000 – $10,000', '$10,000 – $40,00
         </div>
       </div>
 
-      <!-- Other ways to work with us -->
+      <!-- Writing a proposal -->
       <div class="rounded-[14px]" style="background:#F3EEE4;padding:28px 32px;margin-top:32px;">
         <p style="font:700 16px 'Schibsted Grotesk';color:#0F2E44;margin:0 0 10px;">Writing a grant proposal that involves CUAHSI?</p>
         <p style="font:400 14px/1.65 'Hanken Grotesk';color:#3a4d57;margin:0 0 14px;max-width:720px;">
-          Most CUAHSI involvement in outside proposals falls into one of two categories — and they're not interchangeable:
+          The services above are exactly what most proposals should budget for CUAHSI as a consultant or contractor line item — whether you already have funds in hand or are writing them into a proposal now. That's the most common and straightforward way to bring us onto a project, in either case.
+        </p>
+        <p style="font:400 14px/1.65 'Hanken Grotesk';color:#3a4d57;margin:0 0 14px;max-width:720px;">
+          Two narrower situations call for something different:
         </p>
         <div class="rg-2">
           <div>
@@ -202,8 +204,7 @@ const budgetOptions = ['Under $2,000', '$2,000 – $10,000', '$10,000 – $40,00
           </div>
         </div>
         <p style="font:400 12.5px/1.6 'Hanken Grotesk';color:#5C6E78;margin:14px 0 0;">
-          If what you need is specific, definable help from our staff — most requests are — a fee-for-service engagement above is simpler for everyone than either of these paths.
-          Not sure which fits? <NuxtLink to="/contact" style="color:#1F6FB2;">Ask us</NuxtLink>.
+          Not sure which fits your proposal? <NuxtLink to="/contact" style="color:#1F6FB2;">Ask us</NuxtLink> — most of the time, the answer is simply to line-item us above.
         </p>
       </div>
     </div>
