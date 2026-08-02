@@ -233,28 +233,16 @@
     "has_profile": false
   },
   {
-    "name": "Laura Davis",
-    "slug": "laura-davis",
-    "role": "Accountant",
-    "department": "Operations",
-    "pronouns": null,
-    "photo": "/team/headshots/laura-davis.jpg",
-    "bio": "Laura manages CUAHSI's day-to-day financial activities. She holds a BS in Accounting from UMass Boston and an MBA from Suffolk University.",
-    "fun_fact": "Laura is an amateur runner and hopes to complete her first marathon.",
-    "links": {},
-    "has_profile": false
-  },
-  {
-    "name": "Maureen Ako",
-    "slug": "maureen-ako",
-    "role": "Audit Prep Specialist (part-time)",
-    "department": "Operations",
-    "pronouns": null,
-    "photo": "/team/headshots/maureen-ako.jpeg",
-    "bio": "Maureen focuses on regulatory compliance and overseeing annual audits, bringing experience from key leadership roles in nonprofit accounting departments.",
-    "fun_fact": "Maureen enjoys watching the Premier League and her favorite team is Chelsea.",
-    "links": {},
-    "has_profile": false
+  "name": "Henok Tedla",
+  "slug": "henok-tedla",
+  "role": "Controller",
+  "department": "Operations",
+  "pronouns": null,
+  "photo": null,
+  "bio": "Henok is a finance and accounting professional with extensive experience leading financial management, budgeting, grant accounting, compliance, and financial reporting functions for nonprofit and mission-driven organizations. He has expertise in multi-entity accounting, federal grant management, financial audits, and strategic budgeting. He holds an MBA in Accounting from Maharishi University of Management and a BA in Management from Addis Ababa University, and is a licensed CPA in Virginia.",
+  "fun_fact": "Henok enjoys watching soccer, reading books, listening to music, and exercising.",
+  "links": {},
+  "has_profile": false
   },
   {
     "name": "Barbara Walker",
