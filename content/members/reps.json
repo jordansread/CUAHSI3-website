@@ -1,0 +1,1376 @@
+[
+  {
+    "first_name": "Salam",
+    "last_name": "Murtada",
+    "institution": "American Institute of Hydrology",
+    "email": "Salam.Murtada@state.mn.us"
+  },
+  {
+    "first_name": "Margaret",
+    "last_name": "Garcia",
+    "institution": "Arizona State University",
+    "email": "m.garcia@asu.edu"
+  },
+  {
+    "first_name": "Giuseppe",
+    "last_name": "Mascaro",
+    "institution": "Arizona State University",
+    "email": "gmascaro@asu.edu"
+  },
+  {
+    "first_name": "Ruijie",
+    "last_name": "Zeng",
+    "institution": "Arizona State University",
+    "email": "ruijie.zeng.1@asu.edu"
+  },
+  {
+    "first_name": "Benjamin W.",
+    "last_name": "Abbott",
+    "institution": "Brigham Young University",
+    "email": "benabbott@byu.edu"
+  },
+  {
+    "first_name": "Norm",
+    "last_name": "Jones",
+    "institution": "Brigham Young University",
+    "email": "njones@byu.edu"
+  },
+  {
+    "first_name": "Sarah",
+    "last_name": "Fakhreddine",
+    "institution": "Carnegie Mellon University",
+    "email": "sfakhred@andrew.cmu.edu"
+  },
+  {
+    "first_name": "David",
+    "last_name": "Rounce",
+    "institution": "Carnegie Mellon University",
+    "email": "drounce@cmu.edu"
+  },
+  {
+    "first_name": "Christophe",
+    "last_name": "Darnault",
+    "institution": "Clemson University",
+    "email": "sculbre@clemson.edu"
+  },
+  {
+    "first_name": "Christopher",
+    "last_name": "Post",
+    "institution": "Clemson University",
+    "email": "cpost@clemson.edu"
+  },
+  {
+    "first_name": "David",
+    "last_name": "Benson",
+    "institution": "Colorado School of Mines",
+    "email": "dbenson@mines.edu"
+  },
+  {
+    "first_name": "Brandon",
+    "last_name": "Dugan",
+    "institution": "Colorado School of Mines",
+    "email": "dugan@mines.edu"
+  },
+  {
+    "first_name": "Kamini",
+    "last_name": "Singha",
+    "institution": "Colorado School of Mines",
+    "email": "ksingha@mines.edu"
+  },
+  {
+    "first_name": "Frances",
+    "last_name": "Davenport",
+    "institution": "Colorado State University",
+    "email": "f.davenport@colostate.edu"
+  },
+  {
+    "first_name": "Stephanie K.",
+    "last_name": "Kampf",
+    "institution": "Colorado State University",
+    "email": "stephanie.kampf@colostate.edu"
+  },
+  {
+    "first_name": "Karen",
+    "last_name": "Schlatter",
+    "institution": "Colorado State University",
+    "email": "Karen.Schlatter@colostate.edu"
+  },
+  {
+    "first_name": "John",
+    "last_name": "Albertson",
+    "institution": "Cornell University",
+    "email": "albertson@cornell.edu"
+  },
+  {
+    "first_name": "Todd",
+    "last_name": "Walter",
+    "institution": "Cornell University",
+    "email": "mtw5@cornell.edu"
+  },
+  {
+    "first_name": "Amanda",
+    "last_name": "Carneiro Marques",
+    "institution": "Drexel University",
+    "email": "ac4547@drexel.edu"
+  },
+  {
+    "first_name": "Franco",
+    "last_name": "Montalto",
+    "institution": "Drexel University",
+    "email": "fam26@drexel.edu"
+  },
+  {
+    "first_name": "Mira",
+    "last_name": "Stone Olson",
+    "institution": "Drexel University",
+    "email": "mira.s.olson@drexel.edu"
+  },
+  {
+    "first_name": "Nathaniel",
+    "last_name": "Chaney",
+    "institution": "Duke University",
+    "email": "nathaniel.chaney@duke.edu"
+  },
+  {
+    "first_name": "Ryan",
+    "last_name": "Emanuel",
+    "institution": "Duke University",
+    "email": "ryan.emanuel@duke.edu"
+  },
+  {
+    "first_name": "Rebecca",
+    "last_name": "Bendick",
+    "institution": "EarthScope",
+    "email": "Rebecca.bendick@earthscope.org"
+  },
+  {
+    "first_name": "James",
+    "last_name": "Riley",
+    "institution": "Eastern Illinois University",
+    "email": "jdriley@eiu.edu"
+  },
+  {
+    "first_name": "Jason",
+    "last_name": "Liu",
+    "institution": "Florida International University",
+    "email": "liux@fiu.edu"
+  },
+  {
+    "first_name": "Jayantha",
+    "last_name": "Obeysekera",
+    "institution": "Florida International University",
+    "email": "jobeysek@fiu.edu"
+  },
+  {
+    "first_name": "Michael",
+    "last_name": "Sukop",
+    "institution": "Florida International University",
+    "email": "sukopm@fiu.edu"
+  },
+  {
+    "first_name": "Jian",
+    "last_name": "Luo",
+    "institution": "Georgia Institute of Technology",
+    "email": "Jian.luo@ce.gatech.edu"
+  },
+  {
+    "first_name": "Jingfeng",
+    "last_name": "Wang",
+    "institution": "Georgia Institute of Technology",
+    "email": "jingfeng.wang@ce.gatech.edu"
+  },
+  {
+    "first_name": "Sarah",
+    "last_name": "Ledford",
+    "institution": "Georgia State University",
+    "email": "sledford@gsu.edu"
+  },
+  {
+    "first_name": "Brian",
+    "last_name": "Meyer",
+    "institution": "Georgia State University",
+    "email": "bmeyer2@gsu.edu"
+  },
+  {
+    "first_name": "Rachel",
+    "last_name": "Scarlett",
+    "institution": "Georgia State University",
+    "email": "rscarlett@gsu.edu"
+  },
+  {
+    "first_name": "Benjamin",
+    "last_name": "Crosby",
+    "institution": "Idaho State University",
+    "email": "crosby@isu.edu"
+  },
+  {
+    "first_name": "Sarah",
+    "last_name": "Godsey",
+    "institution": "Idaho State University",
+    "email": "godsey@isu.edu"
+  },
+  {
+    "first_name": "Darren",
+    "last_name": "Ficklin",
+    "institution": "Indiana University",
+    "email": "dficklin@iu.edu"
+  },
+  {
+    "first_name": "Zhiying",
+    "last_name": "Li",
+    "institution": "Indiana University",
+    "email": "zl68@iu.edu"
+  },
+  {
+    "first_name": "Taehee",
+    "last_name": "Hwang",
+    "institution": "Indiana University",
+    "email": "taehee@iu.edu"
+  },
+  {
+    "first_name": "Beth",
+    "last_name": "Callaway",
+    "institution": "Interstate Council on Water Policy",
+    "email": "Beth@ICWP.org"
+  },
+  {
+    "first_name": "Antonio",
+    "last_name": "Arenas",
+    "institution": "Iowa State University",
+    "email": "aarenas@iastate.edu"
+  },
+  {
+    "first_name": "Benjamin",
+    "last_name": "Zaitchik",
+    "institution": "Johns Hopkins University",
+    "email": "Zaitchik@jhu.edu"
+  },
+  {
+    "first_name": "Jeeban",
+    "last_name": "Panthi",
+    "institution": "Kansas State University",
+    "email": "jeebanp@ksu.edu"
+  },
+  {
+    "first_name": "Kuldeep",
+    "last_name": "Chaudhary",
+    "institution": "Kent State University",
+    "email": "ckuldeep@kent.edu"
+  },
+  {
+    "first_name": "David",
+    "last_name": "Costello",
+    "institution": "Kent State University",
+    "email": "dcostel3@kent.edu"
+  },
+  {
+    "first_name": "Walter",
+    "last_name": "McDonald",
+    "institution": "Marquette University",
+    "email": "Walter.McDonald@marquette.edu"
+  },
+  {
+    "first_name": "Anthony",
+    "last_name": "Parolari",
+    "institution": "Marquette University",
+    "email": "anthony.parolari@marquette.edu"
+  },
+  {
+    "first_name": "Anthony",
+    "last_name": "Kendall",
+    "institution": "Michigan State University",
+    "email": "kendal30@msu.edu"
+  },
+  {
+    "first_name": "Yadu",
+    "last_name": "Pokhrel",
+    "institution": "Michigan State University",
+    "email": "ypokhrel@msu.edu\u00c2"
+  },
+  {
+    "first_name": "Jay",
+    "last_name": "Zarnetske",
+    "institution": "Michigan State University",
+    "email": "jpz@msu.edu"
+  },
+  {
+    "first_name": "David",
+    "last_name": "Watkins",
+    "institution": "Michigan Technological University",
+    "email": "dwatkins@mtu.edu"
+  },
+  {
+    "first_name": "Fengjing",
+    "last_name": "Liu",
+    "institution": "Michigan Technological University",
+    "email": "fliu7@mtu.edu"
+  },
+  {
+    "first_name": "Ben",
+    "last_name": "Kopec",
+    "institution": "Michigan Technological University",
+    "email": "bkopec@mtu.edu"
+  },
+  {
+    "first_name": "Stephanie",
+    "last_name": "Ewing",
+    "institution": "Montana State University",
+    "email": "stephanie.ewing@montana.edu"
+  },
+  {
+    "first_name": "Robert",
+    "last_name": "Payn",
+    "institution": "Montana State University",
+    "email": "rpayn@montana.edu"
+  },
+  {
+    "first_name": "Sam",
+    "last_name": "Fernald",
+    "institution": "New Mexico State University",
+    "email": "afernald@nmsu.edu"
+  },
+  {
+    "first_name": "Hatim",
+    "last_name": "Geli",
+    "institution": "New Mexico State University",
+    "email": "hgeli@nmsu.edu"
+  },
+  {
+    "first_name": "Edward",
+    "last_name": "Beighley",
+    "institution": "Northeastern University",
+    "email": "r.beighley@northeastern.edu"
+  },
+  {
+    "first_name": "James",
+    "last_name": "Dennedy-Frank",
+    "institution": "Northeastern University",
+    "email": "pjdf@northeastern.edu"
+  },
+  {
+    "first_name": "Auroop R.",
+    "last_name": "Ganguly",
+    "institution": "Northeastern University",
+    "email": "a.ganguly@northeastern.edu"
+  },
+  {
+    "first_name": "Denielle",
+    "last_name": "Perry",
+    "institution": "Northern Arizona University",
+    "email": "denielle.perry@nau.edu"
+  },
+  {
+    "first_name": "Ben",
+    "last_name": "Ruddell",
+    "institution": "Northern Arizona University",
+    "email": "benjamin.ruddell@nau.edu"
+  },
+  {
+    "first_name": "Abe",
+    "last_name": "Springer",
+    "institution": "Northern Arizona University",
+    "email": "Abe.Springer@nau.edu"
+  },
+  {
+    "first_name": "Jordan",
+    "last_name": "Price",
+    "institution": "Northwestern University",
+    "email": "water@northwestern.edu"
+  },
+  {
+    "first_name": "John",
+    "last_name": "Selker",
+    "institution": "Oregon State University",
+    "email": "John.Selker@Oregonstate.edu"
+  },
+  {
+    "first_name": "Jonathan",
+    "last_name": "Duncan",
+    "institution": "Pennsylvania State University",
+    "email": "jxd523@psu.edu"
+  },
+  {
+    "first_name": "Antonia",
+    "last_name": "Hadjimichael",
+    "institution": "Pennsylvania State University",
+    "email": "hadjimichael@psu.edu"
+  },
+  {
+    "first_name": "Lauren",
+    "last_name": "McPhillips",
+    "institution": "Pennsylvania State University",
+    "email": "lxm500@psu.edu"
+  },
+  {
+    "first_name": "Peyman",
+    "last_name": "Abbaszadeh",
+    "institution": "Portland State University",
+    "email": "pabbaszadeh@pdx.edu"
+  },
+  {
+    "first_name": "Heejun",
+    "last_name": "Chang",
+    "institution": "Portland State University",
+    "email": "changh@pdx.edu"
+  },
+  {
+    "first_name": "Benjamin",
+    "last_name": "Perkins",
+    "institution": "Portland State University",
+    "email": "rperkins@pdx.edu"
+  },
+  {
+    "first_name": "Ali",
+    "last_name": "Fares",
+    "institution": "Prairie View A&M University",
+    "email": "alfares@pvamu.edu"
+  },
+  {
+    "first_name": "Reed",
+    "last_name": "Maxwell",
+    "institution": "Princeton University",
+    "email": "reedmaxwell@princeton.edu"
+  },
+  {
+    "first_name": "Laura",
+    "last_name": "Bowling",
+    "institution": "Purdue University",
+    "email": "bowling@purdue.edu"
+  },
+  {
+    "first_name": "Venkatesh",
+    "last_name": "Merwade",
+    "institution": "Purdue University",
+    "email": "vmerwade@purdue.edu"
+  },
+  {
+    "first_name": "Lisa",
+    "last_name": "Welp",
+    "institution": "Purdue University",
+    "email": "lwelp@purdue.edu"
+  },
+  {
+    "first_name": "Kevin",
+    "last_name": "Rose",
+    "institution": "Rensselaer Polytechnic Institute",
+    "email": "rosek4@rpi.edu"
+  },
+  {
+    "first_name": "Chip",
+    "last_name": "Kilduff",
+    "institution": "Rensselaer Polytechnic Institute",
+    "email": "kilduff@rpi.edu"
+  },
+  {
+    "first_name": "Sandra",
+    "last_name": "Nierzwicki-Bauer",
+    "institution": "Rensselaer Polytechnic Institute",
+    "email": "nierzs@rpi.edu"
+  },
+  {
+    "first_name": "Katie",
+    "last_name": "van Werkhoven",
+    "institution": "RTI International",
+    "email": "kvanwerkhoven@rti.org"
+  },
+  {
+    "first_name": "Efthymios",
+    "last_name": "Nikolopoulos",
+    "institution": "Rutgers University",
+    "email": "efthymios.nikolopoulos@rutgers.edu"
+  },
+  {
+    "first_name": "Ed",
+    "last_name": "Maurer",
+    "institution": "Santa Clara University",
+    "email": "emaurer@scu.edu"
+  },
+  {
+    "first_name": "Andrew",
+    "last_name": "Guswa",
+    "institution": "Smith College",
+    "email": "aguswa@smith.edu"
+  },
+  {
+    "first_name": "Ajay",
+    "last_name": "Kalra",
+    "institution": "Southern Illinois University",
+    "email": "kalraa@siu.edu"
+  },
+  {
+    "first_name": "Jonathan",
+    "last_name": "Remo",
+    "institution": "Southern Illinois University",
+    "email": "diamict@siu.edu"
+  },
+  {
+    "first_name": "Justin",
+    "last_name": "Schoof",
+    "institution": "Southern Illinois University",
+    "email": "jschoof@siu.edu"
+  },
+  {
+    "first_name": "Barbara",
+    "last_name": "Minsker",
+    "institution": "Southern Methodist University",
+    "email": "minsker@smu.edu"
+  },
+  {
+    "first_name": "Xiao",
+    "last_name": "Yang",
+    "institution": "Southern Methodist University",
+    "email": "xnayang@smu.edu"
+  },
+  {
+    "first_name": "David",
+    "last_name": "Freyberg",
+    "institution": "Stanford University",
+    "email": "freyberg@stanford.edu"
+  },
+  {
+    "first_name": "Peter",
+    "last_name": "Kitanidis",
+    "institution": "Stanford University",
+    "email": "peterk@stanford.edu"
+  },
+  {
+    "first_name": "Christoper",
+    "last_name": "Lowry",
+    "institution": "State University of New York, Buffalo",
+    "email": "cslowry@buffalo.edu"
+  },
+  {
+    "first_name": "Scott",
+    "last_name": "Mackay",
+    "institution": "State University of New York, Buffalo",
+    "email": "dsmackay@buffalo.edu"
+  },
+  {
+    "first_name": "Alan",
+    "last_name": "Rabideau",
+    "institution": "State University of New York, Buffalo",
+    "email": "rabideau@buffalo.edu"
+  },
+  {
+    "first_name": "Steve",
+    "last_name": "Shaw",
+    "institution": "State University of New York, ESF",
+    "email": "sbshaw@esf.edu"
+  },
+  {
+    "first_name": "Marouane",
+    "last_name": "Temimi",
+    "institution": "Stevens Institute of Technology",
+    "email": "mtemimi@stevens.edu"
+  },
+  {
+    "first_name": "Jennifer",
+    "last_name": "Merrill",
+    "institution": "Stroud Water Research Center",
+    "email": "jmerrill@stroudcenter.org"
+  },
+  {
+    "first_name": "Dave",
+    "last_name": "Arscott",
+    "institution": "Stroud Water Research Center",
+    "email": "darscott@stroudcenter.org"
+  },
+  {
+    "first_name": "Abdou",
+    "last_name": "Adouelmagd",
+    "institution": "Suez Canal University",
+    "email": "abdou_abouelmagd@science.suez.edu.eg"
+  },
+  {
+    "first_name": "Elizabeth",
+    "last_name": "Carter",
+    "institution": "Syracuse University",
+    "email": "ekcarter@syr.edu"
+  },
+  {
+    "first_name": "Samuel",
+    "last_name": "Tuttle",
+    "institution": "Syracuse University",
+    "email": "setuttle@syr.edu"
+  },
+  {
+    "first_name": "Tao",
+    "last_name": "Wen",
+    "institution": "Syracuse University",
+    "email": "twen08@syr.edu"
+  },
+  {
+    "first_name": "Jonathan",
+    "last_name": "Nyquist",
+    "institution": "Temple University",
+    "email": "nyq@temple.edu"
+  },
+  {
+    "first_name": "Sujith",
+    "last_name": "Ravi",
+    "institution": "Temple University",
+    "email": "sravi@temple.edu"
+  },
+  {
+    "first_name": "Laura",
+    "last_name": "Toran",
+    "institution": "Temple University",
+    "email": "ltoran@temple.edu"
+  },
+  {
+    "first_name": "Peter",
+    "last_name": "Knappett",
+    "institution": "Texas A&M University",
+    "email": "knappett@tamu.edu"
+  },
+  {
+    "first_name": "Binayak",
+    "last_name": "Mohanty",
+    "institution": "Texas A&M University",
+    "email": "bmohanty@tamu.edu"
+  },
+  {
+    "first_name": "Huilin",
+    "last_name": "Gao",
+    "institution": "Texas A&M University",
+    "email": "hgao@civil.tamu.edu"
+  },
+  {
+    "first_name": "Steven",
+    "last_name": "Burian",
+    "institution": "University of Alabama",
+    "email": "sburian@ua.edu"
+  },
+  {
+    "first_name": "Hamid",
+    "last_name": "Moradkhani",
+    "institution": "University of Alabama",
+    "email": "hmoradkhani@ua.edu"
+  },
+  {
+    "first_name": "Arial",
+    "last_name": "Shogren",
+    "institution": "University of Alabama",
+    "email": "ashogren@ua.edu"
+  },
+  {
+    "first_name": "Greg",
+    "last_name": "Barron-Gafford",
+    "institution": "University of Arizona",
+    "email": "gregbg@email.arizona.edu"
+  },
+  {
+    "first_name": "Jon",
+    "last_name": "Chorover",
+    "institution": "University of Arizona",
+    "email": "chorover@email.arizona.edu"
+  },
+  {
+    "first_name": "Matthew",
+    "last_name": "Covington",
+    "institution": "University of Arkansas",
+    "email": "mcoving@uark.edu"
+  },
+  {
+    "first_name": "Brian",
+    "last_name": "Haggard",
+    "institution": "University of Arkansas",
+    "email": "haggard@uark.edu"
+  },
+  {
+    "first_name": "Thomas",
+    "last_name": "Harter",
+    "institution": "University of California, Davis",
+    "email": "thharter@ucdavis.edu"
+  },
+  {
+    "first_name": "Helen",
+    "last_name": "Dahlke",
+    "institution": "University of California, Davis",
+    "email": "hdahlke@ucdavis.edu"
+  },
+  {
+    "first_name": "Brett",
+    "last_name": "Poulin",
+    "institution": "University of California, Davis",
+    "email": "bapoulin@ucdavis.edu"
+  },
+  {
+    "first_name": "Amir",
+    "last_name": "AghaKouchak",
+    "institution": "University of California, Irvine",
+    "email": "amir.a@uci.edu"
+  },
+  {
+    "first_name": "Tirtha",
+    "last_name": "Banerjee",
+    "institution": "University of California, Irvine",
+    "email": "tirthab@uci.edu"
+  },
+  {
+    "first_name": "Efi",
+    "last_name": "Foufoula-Georgiou",
+    "institution": "University of California, Irvine",
+    "email": "efi@uci.edu"
+  },
+  {
+    "first_name": "Teamrat",
+    "last_name": "Ghezzehei",
+    "institution": "University of California, Merced",
+    "email": "taghezzehei@ucmerced.edu"
+  },
+  {
+    "first_name": "Mohammad",
+    "last_name": "Safeeq",
+    "institution": "University of California, Merced",
+    "email": "msafeeq@ucmerced.edu"
+  },
+  {
+    "first_name": "Jirka",
+    "last_name": "Aimunek",
+    "institution": "University of California, Riverside",
+    "email": "Jiri.simunek@ucr.edu"
+  },
+  {
+    "first_name": "Hoori",
+    "last_name": "Ajami",
+    "institution": "University of California, Riverside",
+    "email": "hoori.ajami@ucr.edu"
+  },
+  {
+    "first_name": "Andrew",
+    "last_name": "Gray",
+    "institution": "University of California, Riverside",
+    "email": "Andrew.gray@ucr.edu"
+  },
+  {
+    "first_name": "Ni-Bin",
+    "last_name": "Chang",
+    "institution": "University of Central Florida",
+    "email": "nchang@ucf.edu"
+  },
+  {
+    "first_name": "Eve-Lyn",
+    "last_name": "Hinckley",
+    "institution": "University of Colorado, Boulder",
+    "email": "Eve.Hinckley@Colorado.edu"
+  },
+  {
+    "first_name": "Joseph",
+    "last_name": "Kasprzyk",
+    "institution": "University of Colorado, Boulder",
+    "email": "joseph.kasprzyk@colorado.edu"
+  },
+  {
+    "first_name": "Katherine",
+    "last_name": "Lininger",
+    "institution": "University of Colorado, Boulder",
+    "email": "Katherine.Lininger@Colorado.EDU"
+  },
+  {
+    "first_name": "Christian",
+    "last_name": "Dewey",
+    "institution": "University of Delaware",
+    "email": "cdewey@udel.edu"
+  },
+  {
+    "first_name": "Carolyn",
+    "last_name": "Voter",
+    "institution": "University of Delaware",
+    "email": "cvoter@udel.edu"
+  },
+  {
+    "first_name": "Matthew",
+    "last_name": "Cohen",
+    "institution": "University of Florida",
+    "email": "mjc@ufl.edu"
+  },
+  {
+    "first_name": "Wendy",
+    "last_name": "Graham",
+    "institution": "University of Florida",
+    "email": "wgraham@ufl.edu"
+  },
+  {
+    "first_name": "Jasmeet",
+    "last_name": "Judge",
+    "institution": "University of Florida",
+    "email": "jasmeet@ufl.edu"
+  },
+  {
+    "first_name": "Charlotte",
+    "last_name": "Garing",
+    "institution": "University of Georgia",
+    "email": "charlotte.garing@uga.edu"
+  },
+  {
+    "first_name": "Nandita",
+    "last_name": "Gaur",
+    "institution": "University of Georgia",
+    "email": "nandita.gaur@uga.edu"
+  },
+  {
+    "first_name": "Adam",
+    "last_name": "Milewski",
+    "institution": "University of Georgia",
+    "email": "milewski@uga.edu"
+  },
+  {
+    "first_name": "Yin-Phan",
+    "last_name": "Tsang",
+    "institution": "University of Hawaii",
+    "email": "tsangy@hawaii.edu"
+  },
+  {
+    "first_name": "Aurora",
+    "last_name": "Kagawa-Viviani",
+    "institution": "University of Hawaii",
+    "email": "kagawa@hawaii.edu"
+  },
+  {
+    "first_name": "Ryan",
+    "last_name": "Longman",
+    "institution": "University of Hawaii",
+    "email": "rlongman@hawaii.edu"
+  },
+  {
+    "first_name": "Hyongki",
+    "last_name": "Lee",
+    "institution": "University of Houston",
+    "email": "hlee45@central.uh.edu"
+  },
+  {
+    "first_name": "Hanadi",
+    "last_name": "Rifai",
+    "institution": "University of Houston",
+    "email": "rifai@uh.edu"
+  },
+  {
+    "first_name": "Timothy",
+    "last_name": "Link",
+    "institution": "University of Idaho",
+    "email": "tlink@uidaho.edu"
+  },
+  {
+    "first_name": "Meg",
+    "last_name": "Wolf",
+    "institution": "University of Idaho",
+    "email": "mawolf@uidaho.edu"
+  },
+  {
+    "first_name": "Rafael",
+    "last_name": "Tinoco",
+    "institution": "University of Illinois",
+    "email": "tinoco@illinois.edu"
+  },
+  {
+    "first_name": "Yu-Feng",
+    "last_name": "Lin",
+    "institution": "University of Illinois",
+    "email": "yflin@illinois.edu"
+  },
+  {
+    "first_name": "Zhenxing (Jason)",
+    "last_name": "Zhang",
+    "institution": "University of Illinois",
+    "email": "zhang538@illinois.edu"
+  },
+  {
+    "first_name": "Jessica",
+    "last_name": "Meyer",
+    "institution": "University of Iowa",
+    "email": "jessica-meyer@uiowa.edu"
+  },
+  {
+    "first_name": "Sam",
+    "last_name": "Zipper",
+    "institution": "University of Kansas",
+    "email": "samzipper@ku.edu"
+  },
+  {
+    "first_name": "Mitja",
+    "last_name": "Brilly",
+    "institution": "University of Ljubljana",
+    "email": "mbrilly@fgg.uni-lj.si"
+  },
+  {
+    "first_name": "Emad",
+    "last_name": "Habib",
+    "institution": "University of Louisiana, Lafayette",
+    "email": "habib@louisiana.edu"
+  },
+  {
+    "first_name": "Dorian",
+    "last_name": "Burnette",
+    "institution": "University of Memphis",
+    "email": "djbrntte@memphis.edu"
+  },
+  {
+    "first_name": "Daniel",
+    "last_name": "Larsen",
+    "institution": "University of Memphis",
+    "email": "dlarsen@memphis.edu"
+  },
+  {
+    "first_name": "Brian",
+    "last_name": "Waldron",
+    "institution": "University of Memphis",
+    "email": "bwaldron@memphis.edu"
+  },
+  {
+    "first_name": "Andrew",
+    "last_name": "Gronewold",
+    "institution": "University of Michigan",
+    "email": "drewgron@umich.edu"
+  },
+  {
+    "first_name": "Branko",
+    "last_name": "Kerkez",
+    "institution": "University of Michigan",
+    "email": "bkerkez@umich.edu"
+  },
+  {
+    "first_name": "Diana",
+    "last_name": "Karwan",
+    "institution": "University of Minnesota",
+    "email": "dlkarwan@umn.edu"
+  },
+  {
+    "first_name": "Crystal",
+    "last_name": "Ng",
+    "institution": "University of Minnesota",
+    "email": "gcng@umn.edu"
+  },
+  {
+    "first_name": "Noel",
+    "last_name": "Aloysius",
+    "institution": "University of Missouri",
+    "email": "aloysiusn@missouri.edu"
+  },
+  {
+    "first_name": "Alba",
+    "last_name": "Argerich",
+    "institution": "University of Missouri",
+    "email": "argericha@missouri.edu"
+  },
+  {
+    "first_name": "Robin",
+    "last_name": "Rotman",
+    "institution": "University of Missouri",
+    "email": "rotmanr@missouri.edu"
+  },
+  {
+    "first_name": "Dr. Paul",
+    "last_name": "Ayayee",
+    "institution": "University of Nebraska, Lincoln",
+    "email": "payayee@unomaha.edu"
+  },
+  {
+    "first_name": "Mary",
+    "last_name": "Harner",
+    "institution": "University of Nebraska, Lincoln",
+    "email": "harnermj@unk.edu"
+  },
+  {
+    "first_name": "Troy",
+    "last_name": "Gilmore",
+    "institution": "University of Nebraska, Lincoln",
+    "email": "gilmore@unl.edu"
+  },
+  {
+    "first_name": "Anne",
+    "last_name": "Nolin",
+    "institution": "University of Nevada, Reno",
+    "email": "anolin@unr.edu"
+  },
+  {
+    "first_name": "Andy",
+    "last_name": "Rost",
+    "institution": "University of Nevada, Reno",
+    "email": "arost@unr.edu"
+  },
+  {
+    "first_name": "Scott",
+    "last_name": "Allen",
+    "institution": "University of Nevada, Reno",
+    "email": "scottallen@unr.edu"
+  },
+  {
+    "first_name": "Matthew",
+    "last_name": "Davis",
+    "institution": "University of New Hampshire",
+    "email": "matt.davis@unh.edu"
+  },
+  {
+    "first_name": "Jennifer",
+    "last_name": "Jacobs",
+    "institution": "University of New Hampshire",
+    "email": "jennifer.jacobs@unh.edu"
+  },
+  {
+    "first_name": "Wilfred",
+    "last_name": "Wollheim",
+    "institution": "University of New Hampshire",
+    "email": "wil.wollheim@unh.edu"
+  },
+  {
+    "first_name": "Gerhard",
+    "last_name": "Schoener",
+    "institution": "University of New Mexico",
+    "email": "gschoener@unm.edu"
+  },
+  {
+    "first_name": "Diego",
+    "last_name": "Riveros-Iregui",
+    "institution": "University of North Carolina",
+    "email": "diegori@unc.edu"
+  },
+  {
+    "first_name": "Natalie",
+    "last_name": "Nelson",
+    "institution": "University of North Carolina",
+    "email": "nnelson4@ncsu.edu"
+  },
+  {
+    "first_name": "Amber",
+    "last_name": "Ignatius",
+    "institution": "University of North Georgia",
+    "email": "amber.ignatius@ung.edu"
+  },
+  {
+    "first_name": "Daniel",
+    "last_name": "Bain",
+    "institution": "University of Pittsburgh",
+    "email": "dbain@pitt.edu"
+  },
+  {
+    "first_name": "Dawn",
+    "last_name": "Cardace",
+    "institution": "University of Rhode Island",
+    "email": "cardace@uri.edu"
+  },
+  {
+    "first_name": "Soni",
+    "last_name": "Pradhanang",
+    "institution": "University of Rhode Island",
+    "email": "spradhanang@uri.edu"
+  },
+  {
+    "first_name": "Chris",
+    "last_name": "Russoniello",
+    "institution": "University of Rhode Island",
+    "email": "chris.russoniello@uri.edu"
+  },
+  {
+    "first_name": "Lahcen",
+    "last_name": "Benaabidate",
+    "institution": "University of Sidi Mohamed ben Abdellah",
+    "email": "lahcen.benaabidate@usmba.ac.ma"
+  },
+  {
+    "first_name": "Mauricio",
+    "last_name": "Arias",
+    "institution": "University of South Florida",
+    "email": "mearias@usf.edu"
+  },
+  {
+    "first_name": "Jason",
+    "last_name": "Gulley",
+    "institution": "University of South Florida",
+    "email": "jdgulley@usf.edu"
+  },
+  {
+    "first_name": "Mark",
+    "last_name": "Rains",
+    "institution": "University of South Florida",
+    "email": "mrains@usf.edu"
+  },
+  {
+    "first_name": "Jon",
+    "last_name": "Hathaway",
+    "institution": "University of Tennessee",
+    "email": "jhathaw2@utk.edu"
+  },
+  {
+    "first_name": "Andrea",
+    "last_name": "Ludwig",
+    "institution": "University of Tennessee",
+    "email": "aludwig@utk.edu"
+  },
+  {
+    "first_name": "John",
+    "last_name": "Schwartz",
+    "institution": "University of Tennessee",
+    "email": "jschwart@utk.edu"
+  },
+  {
+    "first_name": "Nick",
+    "last_name": "Fang",
+    "institution": "University of Texas, Arlington",
+    "email": "nickfang@uta.edu"
+  },
+  {
+    "first_name": "Ricardo",
+    "last_name": "Sanchez-Murillo",
+    "institution": "University of Texas, Arlington",
+    "email": "ricardo.sanchezmurrillo@uta.edu"
+  },
+  {
+    "first_name": "Ashley",
+    "last_name": "Matheny",
+    "institution": "University of Texas, Austin",
+    "email": "ashley.matheny@jsg.utexas.edu"
+  },
+  {
+    "first_name": "Paola",
+    "last_name": "Passalacqua",
+    "institution": "University of Texas, Austin",
+    "email": "paola@austin.utexas.edu"
+  },
+  {
+    "first_name": "Bridget",
+    "last_name": "Scanlon",
+    "institution": "University of Texas, Austin",
+    "email": "bridget.scanlon@beg.utexas.edu"
+  },
+  {
+    "first_name": "Paul",
+    "last_name": "Brooks",
+    "institution": "University of Utah",
+    "email": "paul.brooks@utah.edu"
+  },
+  {
+    "first_name": "McKenzie",
+    "last_name": "Skiles",
+    "institution": "University of Utah",
+    "email": "m.skiles@geog.utah.edu"
+  },
+  {
+    "first_name": "Anne",
+    "last_name": "Jefferson",
+    "institution": "University of Vermont",
+    "email": "anne.jefferson@uvm.edu"
+  },
+  {
+    "first_name": "Beverly",
+    "last_name": "Wemple",
+    "institution": "University of Vermont",
+    "email": "bwemple@uvm.edu"
+  },
+  {
+    "first_name": "Arne",
+    "last_name": "Bomblies",
+    "institution": "University of Vermont",
+    "email": "abomblies@uvm.edu"
+  },
+  {
+    "first_name": "Larry",
+    "last_name": "Band",
+    "institution": "University of Virginia",
+    "email": "lband@virginia.edu"
+  },
+  {
+    "first_name": "Johnathan",
+    "last_name": "Goodall",
+    "institution": "University of Virginia",
+    "email": "goodall@virginia.edu"
+  },
+  {
+    "first_name": "Todd",
+    "last_name": "Scanlon",
+    "institution": "University of Virginia",
+    "email": "tms2v@virginia.edu"
+  },
+  {
+    "first_name": "Michael",
+    "last_name": "Cardiff",
+    "institution": "University of Wisconsin, Madison",
+    "email": "cardiff@wisc.edu"
+  },
+  {
+    "first_name": "Steven",
+    "last_name": "Loheide",
+    "institution": "University of Wisconsin, Madison",
+    "email": "loheide@wisc.edu"
+  },
+  {
+    "first_name": "Anita",
+    "last_name": "Thompson",
+    "institution": "University of Wisconsin, Madison",
+    "email": "amthompson2@wisc.edu"
+  },
+  {
+    "first_name": "Jan",
+    "last_name": "Seibert",
+    "institution": "University of Zurich",
+    "email": "jan.seibert@geo.uzh.ch"
+  },
+  {
+    "first_name": "Michelle",
+    "last_name": "Baker",
+    "institution": "Utah State University",
+    "email": "michelle.baker@usu.edu"
+  },
+  {
+    "first_name": "Sarah",
+    "last_name": "Null",
+    "institution": "Utah State University",
+    "email": "Sarah.null@usu.edu"
+  },
+  {
+    "first_name": "David",
+    "last_name": "Tarboton",
+    "institution": "Utah State University",
+    "email": "david.tarboton@usu.edu"
+  },
+  {
+    "first_name": "Rachel",
+    "last_name": "Atkins",
+    "institution": "Utah Valley University",
+    "email": "Rachel.Atkins@uvu.edu"
+  },
+  {
+    "first_name": "Virginia",
+    "last_name": "Smith",
+    "institution": "Villanova University",
+    "email": "Virginia.smith@villanova.edu"
+  },
+  {
+    "first_name": "Robert",
+    "last_name": "Traver",
+    "institution": "Villanova University",
+    "email": "Robert.Traver@villanova.edu"
+  },
+  {
+    "first_name": "Bridget",
+    "last_name": "Wadzuk",
+    "institution": "Villanova University",
+    "email": "Bridget.Wadzuk@villanova.edu"
+  },
+  {
+    "first_name": "JP",
+    "last_name": "Gannon",
+    "institution": "Virginia Tech",
+    "email": "jpgannon@vt.edu"
+  },
+  {
+    "first_name": "Kevin",
+    "last_name": "McGuire",
+    "institution": "Virginia Tech",
+    "email": "kevin.mcguire@vt.edu"
+  },
+  {
+    "first_name": "Siddarth",
+    "last_name": "Saksena",
+    "institution": "Virginia Tech",
+    "email": "ssaksena@vt.edu"
+  },
+  {
+    "first_name": "Jennifer",
+    "last_name": "Adam",
+    "institution": "Washington State University",
+    "email": "jcadam@wsu.edu"
+  },
+  {
+    "first_name": "Julie",
+    "last_name": "Padowski",
+    "institution": "Washington State University",
+    "email": "julie.padowski@wsu.edu"
+  },
+  {
+    "first_name": "Jonathan",
+    "last_name": "Yoder",
+    "institution": "Washington State University",
+    "email": "yoder@wsu.edu"
+  },
+  {
+    "first_name": "Peter",
+    "last_name": "Raymond",
+    "institution": "Yale University",
+    "email": "peter.raymond@yale.edu"
+  },
+  {
+    "first_name": "James",
+    "last_name": "Saiers",
+    "institution": "Yale University",
+    "email": "james.saiers@yale.edu"
+  },
+  {
+    "first_name": "Vidya",
+    "last_name": "Samadi",
+    "institution": "Clemson University",
+    "email": "samadi@clemson.edu"
+  },
+  {
+    "first_name": "Joshua",
+    "last_name": "Roundy",
+    "institution": "University of Kansas",
+    "email": "jkroundy@ku.edu"
+  },
+  {
+    "first_name": "Humberto",
+    "last_name": "Vergara Arrieta",
+    "institution": "University of Iowa",
+    "email": "humberto-vergaraarrieta@uiowa.edu"
+  },
+  {
+    "first_name": "Jamie",
+    "last_name": "Shinn",
+    "institution": "State University of New York, ESF",
+    "email": "jeshinn@esf.edu"
+  },
+  {
+    "first_name": "Christine",
+    "last_name": "Georgakakos",
+    "institution": "State University of New York, ESF",
+    "email": "cbgeorga@esf.edu"
+  },
+  {
+    "first_name": "Amy",
+    "last_name": "Burgin",
+    "institution": "Iowa State University",
+    "email": "burginam@iastate.edu"
+  },
+  {
+    "first_name": "Sara",
+    "last_name": "McMillan",
+    "institution": "Iowa State University",
+    "email": "swmcmill@iastate.edu"
+  },
+  {
+    "first_name": "Ciaran",
+    "last_name": "Harman",
+    "institution": "Johns Hopkins University",
+    "email": "charman1@jhu.edu"
+  },
+  {
+    "first_name": "Catalina",
+    "last_name": "Segura",
+    "institution": "Oregon State University",
+    "email": "Catalina.Segura@oregonstate.edu"
+  },
+  {
+    "first_name": "Mark",
+    "last_name": "Raleigh",
+    "institution": "Oregon State University",
+    "email": "raleigma@oregonstate.edu"
+  },
+  {
+    "first_name": "Anna",
+    "last_name": "Bergstrom",
+    "institution": "Boise State University",
+    "email": "annabergstrom@boisestate.edu"
+  },
+  {
+    "first_name": "Qifei",
+    "last_name": "Niu",
+    "institution": "Boise State University",
+    "email": "qifeiniu@boisestate.edu"
+  },
+  {
+    "first_name": "Mojtaba (Moji)",
+    "last_name": "Sadegh",
+    "institution": "Boise State University",
+    "email": "mojtabasadegh@boisestate.edu"
+  }
+]
