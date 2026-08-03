@@ -82,16 +82,24 @@ const extras = [
         <h2 style="font:700 clamp(26px,3vw,34px)/1.08 'Schibsted Grotesk';color:#0F2E44;letter-spacing:-.016em;margin:14px 0 0;">Open-access learning and support.</h2>
       </div>
       <div class="rgrid rgrid-multi" style="display:grid;gap:18px;--cols:repeat(3,1fr);">
-        <component :is="e.external ? 'a' : 'NuxtLink'"
-          v-for="e in extras" :key="e.name"
-          v-bind="e.external ? { href: e.to, target: '_blank', rel: 'noopener' } : { to: e.to }"
-          class="card-lift arrow-row bg-white flex flex-col rounded-card"
-          style="border:1px solid rgba(15,33,43,.1);padding:24px 22px 22px;text-decoration:none;">
-          <span class="font-mono font-bold tracking-[.06em] uppercase text-clay" style="font-size:11px;">{{ e.tag }}</span>
-          <span style="font:700 18px 'Schibsted Grotesk';color:#0F2E44;margin:12px 0 8px;display:block;">{{ e.name }}</span>
-          <span style="font:400 13.5px/1.55 'Hanken Grotesk';color:#5C6E78;flex:1;display:block;margin-bottom:16px;">{{ e.desc }}</span>
-          <span class="arrow-row inline-flex items-center gap-2" style="font:600 13px 'Hanken Grotesk';color:#1F6FB2;">{{ e.cta }} <span class="arr">→</span></span>
-        </component>
+        <template v-for="e in extras" :key="e.name">
+          <a v-if="e.external" :href="e.to" target="_blank" rel="noopener"
+            class="card-lift arrow-row bg-white flex flex-col rounded-card"
+            style="border:1px solid rgba(15,33,43,.1);padding:24px 22px 22px;text-decoration:none;">
+            <span class="font-mono font-bold tracking-[.06em] uppercase text-clay" style="font-size:11px;">{{ e.tag }}</span>
+            <span style="font:700 18px 'Schibsted Grotesk';color:#0F2E44;margin:12px 0 8px;display:block;">{{ e.name }}</span>
+            <span style="font:400 13.5px/1.55 'Hanken Grotesk';color:#5C6E78;flex:1;display:block;margin-bottom:16px;">{{ e.desc }}</span>
+            <span class="arrow-row inline-flex items-center gap-2" style="font:600 13px 'Hanken Grotesk';color:#1F6FB2;">{{ e.cta }} <span class="arr">→</span></span>
+          </a>
+          <NuxtLink v-else :to="e.to"
+            class="card-lift arrow-row bg-white flex flex-col rounded-card"
+            style="border:1px solid rgba(15,33,43,.1);padding:24px 22px 22px;text-decoration:none;">
+            <span class="font-mono font-bold tracking-[.06em] uppercase text-clay" style="font-size:11px;">{{ e.tag }}</span>
+            <span style="font:700 18px 'Schibsted Grotesk';color:#0F2E44;margin:12px 0 8px;display:block;">{{ e.name }}</span>
+            <span style="font:400 13.5px/1.55 'Hanken Grotesk';color:#5C6E78;flex:1;display:block;margin-bottom:16px;">{{ e.desc }}</span>
+            <span class="arrow-row inline-flex items-center gap-2" style="font:600 13px 'Hanken Grotesk';color:#1F6FB2;">{{ e.cta }} <span class="arr">→</span></span>
+          </NuxtLink>
+        </template>
       </div>
     </section>
   </div>
