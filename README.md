@@ -1,23 +1,58 @@
 # CUAHSI Website — cuahsi.org v3
 
-Nuxt 3 + @nuxt/content + Tailwind CSS. Deployed via Cloudflare Pages / Netlify.
+Nuxt 3 + @nuxt/content + Tailwind CSS. Deployed via Cloudflare Pages.
 
 **Local dev:** `npm install && npm run dev` → http://localhost:3000
 
 ---
 
+## Quick start for new contributors
+
+```bash
+git clone <repo-url>
+cd CUAHSI3-website
+npm install
+npm run dev
+```
+
+Open http://localhost:3000. Hot-reload is on — edit any `.vue` or content file and see it update immediately.
+
+If you hit `Failed to resolve import "#app-manifest"` in the terminal on startup: this is a known, harmless Nuxt/Vite version-mismatch warning. It doesn't break anything and can be ignored. If it's producing a blocking overlay *in the browser* rather than just terminal noise, confirm `nuxt.config.ts` has:
+```ts
+vite: { server: { hmr: { overlay: false } } }
+```
+
+If pages look broken or a component's changes aren't showing up after a lot of file changes, clear the cache:
+```bash
+rm -rf .nuxt .output node_modules/.vite
+npm run dev
+```
+
+---
+
 ## Site structure
 
-The site has five top-level sections in the nav, each with a clearly defined scope:
+Five top-level nav sections:
 
 ```
 /                    Homepage — wayfinding, featured content, latest news
-/about               Organization — team, governance, membership
-/data-platforms      Tools — HydroShare, JupyterHub, HIS, MATLAB
-/learn-train         Training — programs, cyberseminars, workshops
+/about               Organization — team, governance, membership, impact
+/data-platforms      Tools — HydroShare, JupyterHub, Water Services, MATLAB Online
+/learn-train         Training — cyberseminars, structured programs, workshop archive
 /community           Engagement — events, jobs, newsletter, news, campus visits
-/research            Highlights — program outcomes across all categories
+/hire-cuahsi         Fee-for-service work — consulting, DevOps, data wrangling, integrations
 ```
+
+Plus unlisted (not in nav, reachable by direct URL):
+```
+/contact             Triaged contact routing — technical / membership / paid work / press
+/support             Donation page (Zeffy embed)
+/member-portal       Member rep directory — NOT access-controlled yet, see note below
+```
+
+**`/highlights/`** still resolves — it's a permanent redirect to `/about/impact/`. Highlights was folded into About in an IA pass; the old URL is kept alive for existing links and NSF reporting references.
+
+⚠️ **`/member-portal` has no real access control.** It renders a directory of 229 real people's names and email addresses. It's deliberately not linked from the nav, but it is publicly reachable at that URL right now. Before this goes to production, this route needs to be gated at the edge — e.g. Cloudflare Access — since a client-side password check cannot actually protect statically-generated pages (the data ships in the build regardless of any JS gate). Don't add more sensitive content to this route until that's in place.
 
 ---
 
@@ -25,133 +60,196 @@ The site has five top-level sections in the nav, each with a clearly defined sco
 
 ```
 pages/
-├── index.vue                          Homepage
+├── index.vue                              Homepage
 ├── about/
-│   ├── index.vue                      About hub
-│   ├── governance.vue                 Board and committees
-│   ├── membership.vue                 Member institutions
+│   ├── index.vue                          About hub (mission, history, what we do)
+│   ├── governance.vue                     Board and advisory committees
+│   ├── membership.vue                     Member roster (101 institutions, searchable/filterable)
+│   ├── impact/
+│   │   ├── index.vue                      Highlights index (category + year filters)
+│   │   └── [slug].vue                     Individual highlight detail
 │   └── team/
-│       ├── index.vue                  Team photo grid (all staff)
-│       └── [slug].vue                 Individual profile (for has_profile: true)
+│       ├── index.vue                      Team photo grid (grouped by department)
+│       └── [slug].vue                     Individual profile (has_profile: true only)
 ├── data-platforms/
-│   └── index.vue                      Tools and platforms hub
+│   └── index.vue                          Tools hub — HydroShare, JupyterHub, Water Services, MATLAB
 ├── learn-train/
-│   ├── index.vue                      Training hub + featured video
-│   └── cyberseminars/
-│       └── index.vue                  Archive with inline embeds + transcripts
+│   ├── index.vue                          Training hub — cyberseminar feature + Programs + extras
+│   ├── cyberseminars/
+│   │   └── index.vue                      Archive with inline embeds + transcripts
+│   ├── programs/
+│   │   └── [slug].vue                     Individual program detail (CVU, Snow School, Summer Institute)
+│   └── archive/
+│       └── index.vue                      Full workshop/training archive, past + upcoming, by year
 ├── community/
-│   ├── index.vue                      Get involved hub
+│   ├── index.vue                          Get involved hub
 │   ├── campus-visits/
-│   │   └── index.vue                  Campus engagement page
+│   │   └── index.vue                      Campus engagement + membership vs. fee-for-service comparison
 │   ├── events/
-│   │   ├── index.vue                  Upcoming and past events
-│   │   └── [slug].vue                 Individual event detail
+│   │   ├── index.vue                      Upcoming and past events
+│   │   └── [slug].vue                     Individual event detail
 │   ├── jobs/
-│   │   └── index.vue                  Job board with type filters
+│   │   └── index.vue                      Job board with type filters
 │   ├── news/
-│   │   └── index.vue                  Operational announcements
+│   │   └── index.vue                      Operational announcements
 │   └── newsletter/
-│       ├── index.vue                  Newsletter archive with topic filters
-│       └── [slug].vue                 Individual newsletter issue
-└── research/
-    ├── index.vue                      Highlights index with category + year filters
-    └── [slug].vue                     Individual highlight detail
+│       ├── index.vue                      Newsletter archive with topic filters
+│       └── [slug].vue                     Individual newsletter issue
+├── hire-cuahsi/
+│   └── index.vue                          Fee-for-service menu, rate calculator, quote form
+├── contact/
+│   └── index.vue                          Triaged contact routing (4 cards by intent)
+├── support/
+│   └── index.vue                          Donation page, Zeffy form embedded
+├── member-portal/
+│   └── index.vue                          Member rep directory — see access-control warning above
+└── highlights/
+    ├── index.vue                          301 redirect stub → /about/impact
+    └── [slug].vue                         301 redirect stub → /about/impact/[slug]
 ```
+
+## Components
+
+```
+components/
+├── AppHeader.vue      Sticky nav — utility bar, logo, desktop nav, mobile hamburger menu
+├── AppFooter.vue       4-column footer (2-col at tablet, 1-col at mobile)
+└── StatsBand.vue       Reusable navy stats strip, used on several page heroes
+```
+
+`AppHeader.vue` and `AppFooter.vue` are used on every page — layout/nav changes go here, not per-page.
 
 ---
 
 ## Content
 
-All content lives in `content/` and is managed as Markdown (`.md`) or JSON files. Nuxt Content queries these at build time and at runtime. Each directory maps to a content type with a defined frontmatter schema.
+All content lives in `content/` as Markdown (`.md`) or JSON files, queried via `@nuxt/content`.
 
 ### File naming convention
 
-All dated content files use **YYMMDD-slug.md** prefix format for consistent chronological sorting:
-
+Dated content files use **YYMMDD-slug.md**:
 ```
 260531-hydrolearn-fellows.md     # May 31, 2026
 260211-board-marco-maneta.md     # February 11, 2026
-251022-virtual-open-house.md     # October 22, 2025
 ```
-
-For events or items where only the month is known, use `01` as the day: `260501-awra-conference.md`.
-
-The `slug` field in frontmatter is what drives the URL — the filename prefix is for sorting only.
+Unknown day → use `01`. The `slug` field in frontmatter drives the URL; the filename prefix is sort-order only.
 
 ```
 content/
-├── team/
-│   └── full-team.json                 Single source of truth for all staff
-├── newsletter/          YYYY-MM.md    One file per issue
-├── events/              YYYY-MM-slug  One file per event
-├── cyberseminars/       YYYY-slug     One file per recording
-│   └── transcripts/     VIDEO_ID.json Auto-generated by fetch-transcripts.mjs
-├── research/            YYYY-slug     One file per program highlight
-├── jobs/                slug.md       One file per job listing
-├── news/                YYYY-slug     One file per news/announcement item
-├── community/                         External community member profiles
-├── board/                             Board member profiles
-└── programs/                          Program-level pages (e.g. WaterSoftHack)
+├── team/full-team.json          Single source of truth for all staff (array of objects)
+├── members/reps.json            229 member institution reps — name, institution, email
+├── newsletter/    YYYY-MM.md    One file per issue
+├── events/        YYMMDD-slug   One file per event
+├── cyberseminars/ YYYY-slug     One file per recording (+ transcripts/ subfolder)
+├── research/      YYMMDD-slug   One file per highlight (URL is /about/impact/, not /research/)
+├── jobs/          YYMMDD-slug   One file per job listing
+├── news/          YYMMDD-slug   Operational announcements only — see schema note below
+├── programs/      slug.md       CVU, Snow Field School, Summer Institute (3 files)
+├── board/                       Stub — no rendering page yet
+└── community/                   Stub — no rendering page yet
 ```
 
 ### Content type schemas
 
-**newsletter** (`content/newsletter/YYYY-MM.md`)
+**newsletter**
 ```yaml
 title, date, slug, summary, topics[], people_mentioned[], programs_mentioned[],
 mailchimp_id, mailchimp_url, published
 ```
-`people_mentioned` values are team slugs (e.g. `jordan-read`). These power cross-links on team profile pages.
 
-**events** (`content/events/YYYY-MM-slug.md`)
+**events**
 ```yaml
 title, slug, type, audience[], start (ISO8601), end, timezone,
-location: { mode, city, url },
-registration: { required, url, cost },
+location: { mode, city, url }, registration: { required, url, cost },
 tags[], newsletter_source[], featured, published
 ```
-Events with `start` in the past are shown under "Past events" on the listing page (computed client-side to avoid stale server builds).
+`type` values used across the site: `workshop`, `field`, `webinar`, `conference`, `deadline`. The Learn & Train archive page filters to `workshop`/`field` only — Community's Events page shows everything.
 
-**cyberseminars** (`content/cyberseminars/YYYY-slug.md`)
+**cyberseminars**
 ```yaml
 title, slug, series, series_slug, date, youtube_id, speakers[],
 speaker_orgs[], tags[], has_transcript, published, description
 ```
-Leave `youtube_id: ""` if the video isn't on YouTube yet — the card will appear without a thumbnail or embed. Set `has_transcript: true` after running the transcript fetcher (see Scripts). `series_slug` is used for the series filter on the archive page.
 
-**research** (`content/research/YYYY-slug.md`)
+**research** (rendered at `/about/impact/`, directory stays `content/research/`)
 ```yaml
 title, slug, date, year, category, tags[], people_mentioned[],
 partners[], funding, published, excerpt
 ```
-`category` controls the filter chip and accent color. Valid values: `research`, `cyberinfrastructure`, `data-infrastructure`, `training`, `community`. `people_mentioned` values are team slugs — these power cross-links on profile pages.
+`category`: `research`, `cyberinfrastructure`, `data-infrastructure`, `training`, `community`.
 
-**jobs** (`content/jobs/slug.md`)
+**jobs**
 ```yaml
 title, slug, organization, location, type, posted, deadline,
 url, source, tags[], published
 ```
-`type` drives the filter: `permanent`, `post-doc`, `fellowship`, `internship`, `graduate-assistantship`, `faculty`. Jobs past their `deadline` are hidden by default with a toggle. `source` is either `cuahsi.org` or `joshswaterjobs`.
 
-**news** (`content/news/YYYY-slug.md`)
+**news**
 ```yaml
 title, slug, date, excerpt, tags[], published
 ```
-For time-sensitive operational items only — platform incidents, service announcements. Longer narrative outcomes go in `research/` instead.
+Short-lived operational items only (platform incidents, service changes). Durable outcome stories go in `research/`; the newsletter should originate nothing new — it's assembled from `news/` + `research/` entries plus an editor's note.
 
-**team** (`content/team/full-team.json`)
-Array of staff objects:
-```json
-{
-  "name", "slug", "role", "department", "pronouns",
-  "photo",         // local path like /team/headshots/slug.jpg, or null
-  "bio",
-  "fun_fact",
-  "links": { "orcid", "google_scholar", "github", "linkedin", "cv" },
-  "has_profile"    // true = clickable card + profile page at /about/team/[slug]
-}
+**programs**
+```yaml
+title, slug, abbreviation, status, frequency, season, audience[],
+contact, partners[], funding, tags[], excerpt, published
 ```
-`department` controls grouping on the team page. Valid values: `Leadership`, `Research`, `Engineering`, `Programs`, `Communications`, `Operations`. Set `has_profile: true` to create a profile page for any staff member — no other code changes needed.
+The three flagship recurring programs (CVU, Snow Field School, Summer Institute) — annual, cohort-based, application-driven. Distinct from one-off workshops, which live in `content/events/` and surface on the `/learn-train/archive` page instead.
+
+**team** (`full-team.json`)
+```json
+{ "name", "slug", "role", "department", "pronouns", "photo", "bio",
+  "fun_fact", "links": {...}, "has_profile" }
+```
+`department`: `Leadership`, `Research`, `Engineering`, `Programs`, `Communications`, `Operations`.
+
+**members** (`reps.json`)
+```json
+{ "first_name", "last_name", "institution", "email" }
+```
+Flat array, 229 records. Powers `/member-portal`.
+
+> **Note:** `full-team.json` and `reps.json` are bare JSON arrays. Nuxt Content will print a `JSON array is not supported... moving into body key` warning on startup — this is expected and harmless. Both pages already unwrap it correctly: `Array.isArray(data.body) ? data.body : []`.
+
+---
+
+## Two hard-won gotchas — read before touching navigation or the news/newsletter pages
+
+**1. Never use `<component :is="condition ? 'a' : 'NuxtLink'">`.**
+Resolving a component by string name like this renders visually fine but does **not** reliably wire up click navigation in this Nuxt version. We hit this twice — once on the team page, once on Learn & Train's "Also from CUAHSI" cards — and both times the fix was the same: replace it with an explicit `<template v-for>` containing a real `<a v-if>` and a real `<NuxtLink v-else>`. If you need to conditionally render a link vs. an external anchor, always use `v-if`/`v-else`, never dynamic `:is`.
+
+**2. `queryContent('news')` also matches `/newsletter/...` — filter explicitly.**
+Nuxt Content's `queryContent(path)` matches by path *prefix*. Since `/newsletter/2026-06` starts with the literal string `/news`, a bare `queryContent('news')` silently returns newsletter issues too — and if your template builds links from `item.slug`, you get broken URLs like `/community/news/2026-june`. Always add an explicit filter:
+```js
+const items = computed(() =>
+  (allItems.value ?? []).filter(item => item._path?.startsWith('/news/'))
+)
+```
+Note the trailing slash — that's what disambiguates `/news/` from `/newsletter/`.
+
+---
+
+## Responsive layout system
+
+Grids are **not** set with inline `style="display:grid;grid-template-columns:..."` — that pattern can't be overridden by a media query (inline styles beat CSS specificity), which caused a real mobile-breakage bug earlier in this project. Instead, use the `.rgrid` classes defined in `assets/css/global.css`:
+
+```html
+<div class="rgrid rgrid-multi" style="display:grid;gap:18px;--cols:repeat(3,1fr);">
+  <!-- 3-up card grid: 1 col on phones, 2 col on tablets, 3 col on desktop -->
+</div>
+
+<div class="rgrid rgrid-split" style="display:grid;gap:48px;--cols:1fr 1fr;">
+  <!-- asymmetric 2-col split (hero, sidebar): stacked until 900px, then splits -->
+</div>
+```
+
+- `.rgrid-multi` — for symmetric N-up grids (card grids, footer columns, stats bands). Collapses to 2-up at 640px, full column count at 900px.
+- `.rgrid-split` — for asymmetric 2-track layouts (heroes, sidebars, intro bands). Stays fully stacked below 900px, then splits into the `--cols` template.
+- The actual column definition goes in `--cols` inside the `style` attribute — never write `grid-template-columns` directly in a `style` attribute again.
+- `.site-container` — use for outer page containers needing responsive side padding (40px → 20px on mobile).
+
+If a page you're editing still has raw `grid-template-columns` in a `style` attribute, that's a bug — convert it to this system.
 
 ---
 
@@ -159,127 +257,69 @@ Array of staff objects:
 
 ```
 scripts/
-├── download-team-photos.mjs     Downloads headshots for staff still missing local photos
-└── fetch-transcripts.mjs        Fetches YouTube auto-captions for cyberseminar recordings
+├── download-team-photos.mjs     Downloads headshots for staff with photo: null
+└── fetch-transcripts.mjs        Fetches YouTube auto-captions for cyberseminars
 ```
 
 **Team photos:**
 ```bash
 node scripts/download-team-photos.mjs
 ```
-Downloads photos for anyone in `full-team.json` whose `photo` field is `null`. Saves to `public/team/headshots/slug.ext` and updates the JSON. Commit the downloaded images.
 
 **Cyberseminar transcripts:**
 ```bash
 npm install youtube-transcript gray-matter   # first time only
-node scripts/fetch-transcripts.mjs                      # all videos
-node scripts/fetch-transcripts.mjs --id=VIDEO_ID        # single video
+node scripts/fetch-transcripts.mjs --id=VIDEO_ID
 ```
-Writes `public/cyberseminars/transcripts/VIDEO_ID.json` (served statically) and stamps `has_transcript: true` in the frontmatter. Commit the transcript files — they don't change unless YouTube revises its auto-captions.
 
 ---
 
 ## Cross-linking system
 
-Several content types reference each other through shared identifiers. This powers automatic cross-links on profile pages and newsletter detail pages without any manual wiring.
-
 | Link | Mechanism |
 |---|---|
 | Team profile → newsletters they appear in | `newsletter.people_mentioned[]` contains team slug |
-| Team profile → research highlights they contributed to | `research.people_mentioned[]` contains team slug |
-| Team profile → cyberseminars they spoke in | `cyberseminar.speakers[]` name-matches team first/last name |
+| Team profile → highlights they contributed to | `research.people_mentioned[]` contains team slug |
+| Team profile → cyberseminars they spoke in | `cyberseminar.speakers[]` name-matches team first **and** last name (AND, not OR — an earlier version matched on first name alone and cross-linked the wrong person) |
 | Newsletter issue → events mentioned | `event.newsletter_source[]` contains newsletter slug |
-| Newsletter issue → research highlights extracted from it | planned: `research.newsletter_source` field |
-
-When adding a new highlight extracted from a newsletter, add the team slugs of any CUAHSI staff involved to `people_mentioned[]` so those highlights appear on their profile pages.
+| Data & Computing tool → related highlights | `research.tags[]` contains the tool's `impactTag` (e.g. `hydroshare`, `jupyterhub`) |
 
 ---
 
 ## Adding content — quick reference
 
-**New newsletter issue:**
-1. Create `content/newsletter/YYYY-MM.md` following the schema above
-2. Extract highlights → create files in `content/research/`
-3. Extract events → create files in `content/events/`
-4. Done — the newsletter archive, highlight index, and events calendar all update automatically
+**New newsletter issue:** create `content/newsletter/YYYY-MM.md` → extract highlights into `content/research/` → extract events into `content/events/`. Everything else updates automatically.
 
-**New team member:**
-1. Add object to `content/team/full-team.json`
-2. Run `node scripts/download-team-photos.mjs` if they have a photo on cuahsi.org
-3. Set `has_profile: true` when they have enough cross-linked content to warrant a profile page
+**New team member:** add to `full-team.json` → run `download-team-photos.mjs` if needed → set `has_profile: true` once there's enough cross-linked content to warrant a page.
 
-**New cyberseminar:**
-1. Create `content/cyberseminars/YYYY-slug.md`
-2. Find the YouTube video ID from the URL (the part after `v=`)
-3. Add it to the `youtube_id:` field in the frontmatter
-4. Run `node scripts/fetch-transcripts.mjs --id=VIDEO_ID`
-5. Done — the recording appears in the archive with thumbnail, embed, and transcript
+**New cyberseminar:** create the `.md` file → find the YouTube video ID → run `fetch-transcripts.mjs --id=VIDEO_ID`.
 
-**New highlight:**
-1. Create `content/research/YYYY-slug.md`
-2. Set `category` to one of: `research`, `cyberinfrastructure`, `data-infrastructure`, `training`, `community`
-3. Add CUAHSI staff involved to `people_mentioned[]` using their team slugs
+**New highlight:** create `content/research/YYMMDD-slug.md`, set `category`, add `people_mentioned[]`. Renders at `/about/impact/[slug]`.
+
+**New workshop/event:** create `content/events/YYMMDD-slug.md`. Set `type: workshop` if it should appear on `/learn-train/archive`.
 
 ---
 
-## Public assets
+## Search (Pagefind)
 
-```
-public/
-├── team/headshots/          Staff photos (downloaded by script, committed to repo)
-├── cyberseminars/transcripts/  Transcript JSONs (generated by script, committed to repo)
-└── cuahsi-campus-visit-flyer.pdf   One-pager for campus engagement outreach
-```
+Search does **not** work in `npm run dev` — Pagefind indexes static HTML that only exists after a production build.
 
-The campus visit PDF is generated by `scripts/` using ReportLab if it needs to be regenerated. In practice, edit the content in `pages/community/campus-visits/index.vue` and re-run the script.
+```bash
+npm run build:search        # nuxt generate + pagefind indexing
+npx serve .output/public -l 4000
+```
+Visit http://localhost:4000 to test search. Keep `npm run dev` running on :3000 for editing; use :4000 only to verify search.
+
+**Cloudflare Pages build settings:**
+- Build command: `nuxt generate && pagefind --site .output/public`
+- Build output directory: `.output/public`
 
 ---
 
 ## Known gaps / future work
 
-- **`content/programs/`** has only one file (`watersofthack.md`) and no page renders it yet. Program-level pages (CVU, Summer Institute, Snow School, HydroLearn) would live here when built.
-- **`content/board/`** and **`content/community/`** have files with no rendering pages yet. Board member profiles and community spotlights are future content types.
-- **`/data-platforms/`** is a single page with no sub-pages. HydroShare, JupyterHub, and the Water Content Portal each have enough content to warrant their own pages eventually.
-- **Search** is not implemented. The transcript `plain_text` fields in the cyberseminar JSON files are ready to be indexed if a solution like Pagefind is added.
-- The content directory is `content/research/` but the URL is `/highlights/` — the content dir name is an implementation detail; externally the section is called Highlights.
-
----
-
-## Local development and search
-
-### Day-to-day editing
-
-```bash
-npm run dev
-```
-
-Visit http://localhost:3000. Hot-reload is active — changes to content files and Vue pages appear immediately. The search button is visible in the nav but returns no results in dev mode; this is expected.
-
-### Testing search locally (production preview)
-
-Search requires a production build because Pagefind indexes the generated HTML files, which don't exist in dev mode. Run this in a **separate terminal** while dev is still running (or after stopping it):
-
-```bash
-npm run build:search
-npx serve .output/public -l 4000
-```
-
-- `npm run build:search` runs `nuxt generate` (pre-renders all pages to static HTML) then `pagefind --site .output/public` (indexes those HTML files for search)
-- `npx serve .output/public -l 4000` serves the built site on port 4000
-
-Visit **http://localhost:4000** — this is the production-equivalent site with working search. Keep dev running on port 3000 for editing; use port 4000 to verify search results.
-
-> The build takes a few minutes. You'll see prerender warnings in the output — these are non-fatal (404s for dynamic routes with no matching content) and can be ignored. The build completes successfully despite them.
-
-### Deploying to Cloudflare Pages
-
-In Cloudflare Pages → Settings → Build configuration, set:
-
-- **Build command:** `nuxt generate && pagefind --site .output/public`
-- **Build output directory:** `.output/public`
-
-This runs Pagefind automatically on every deploy so search stays up to date with new content.
-
-### Adding new content and keeping search current
-
-Search is indexed from the built HTML — it automatically picks up any page that gets pre-rendered. No special configuration is needed when adding new highlights, news items, newsletter issues, or team members. Just run `npm run build:search` to rebuild the index locally, or push to GitHub and Cloudflare will rebuild it in production.
+- **`/member-portal` needs real access control** before production — see warning above.
+- **`content/board/`** and **`content/community/`** have stub files with no rendering pages.
+- **`/data-platforms/`** is a single page — HydroShare, JupyterHub, and Water Services could each warrant their own page eventually.
+- **`content/events/` → `content/programs/` link is manual.** The README describes programs as "authored once" with events as scheduled instances, but this isn't yet enforced at the content-model level — a training session can currently be duplicated between the two collections if someone isn't careful. Treat `content/programs/` as the canonical description and `content/events/` as dated instances only.
+- **Institution data lives in two places.** `pages/about/membership.vue` and `pages/hire-cuahsi/index.vue`'s institution lookup both have their own hardcoded/JSON-sourced member lists. These should be consolidated to one shared source so they can't drift out of sync.
