@@ -56,11 +56,11 @@ watch(() => route.path, () => { mobileOpen.value = false })
       <!-- Desktop actions -->
       <div class="hidden md:flex gap-2 items-center flex-none">
         <ClientOnly><SiteSearch /></ClientOnly>
-        <a href="https://www.cuahsi.org/member-portal" target="_blank"
+        <NuxtLink to="/member-portal"
           class="bg-navy text-white text-sm font-semibold rounded-btn flex-none"
           style="padding:9px 14px;font-family:'Hanken Grotesk';font-size:13px;white-space:nowrap;">
           Member Portal
-        </a>
+        </NuxtLink>
       </div>
 
       <!-- Mobile hamburger -->
@@ -79,7 +79,7 @@ watch(() => route.path, () => { mobileOpen.value = false })
           {{ item.label }}
         </NuxtLink>
         <div class="flex flex-col gap-2 mt-3 pt-3" style="border-top:1px solid rgba(15,33,43,.08);">
-          <a href="https://www.cuahsi.org/member-portal" target="_blank" class="text-center bg-navy text-white rounded-btn" style="font:600 14px 'Hanken Grotesk';padding:12px;">Member Portal</a>
+          <NuxtLink to="/member-portal" class="text-center bg-navy text-white rounded-btn" style="font:600 14px 'Hanken Grotesk';padding:12px;">Member Portal</NuxtLink>
           <NuxtLink to="/support" style="font:500 13.5px 'Hanken Grotesk';color:#5C6E78;padding:8px 6px;">Support CUAHSI</NuxtLink>
           <NuxtLink to="/contact" style="font:500 13.5px 'Hanken Grotesk';color:#5C6E78;padding:8px 6px;">Contact</NuxtLink>
         </div>

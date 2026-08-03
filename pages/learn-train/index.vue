@@ -50,13 +50,13 @@ const programs = [
     </section>
 
     <!-- Programs grid -->
-    <section class="mx-auto" style="max-width:1240px;padding:72px 40px 80px;">
+    <section id="programs" class="mx-auto" style="max-width:1240px;padding:72px 40px 80px;">
       <div class="flex justify-between items-end gap-6 mb-9 flex-wrap">
         <div>
           <span class="font-mono font-bold tracking-[.14em] uppercase text-clay" style="font-size:12px;">Programs</span>
           <h2 style="font:700 clamp(28px,3.2vw,40px)/1.08 'Schibsted Grotesk';color:#0F2E44;letter-spacing:-.018em;margin:14px 0 0;">Structured learning opportunities.</h2>
         </div>
-        <NuxtLink to="/programs" class="arrow-row inline-flex items-center gap-2" style="font:600 15px 'Hanken Grotesk';color:#1F6FB2;">All programs <span class="arr">→</span></NuxtLink>
+        <NuxtLink to="/learn-train/archive" class="arrow-row inline-flex items-center gap-2" style="font:600 15px 'Hanken Grotesk';color:#1F6FB2;">Full workshop archive <span class="arr">→</span></NuxtLink>
       </div>
       <div class="rgrid rgrid-multi" style="display:grid;gap:18px;--cols:repeat(3,1fr);">
         <component :is="p.external ? 'a' : 'NuxtLink'"
