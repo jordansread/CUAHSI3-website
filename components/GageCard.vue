@@ -13,6 +13,7 @@ const byActivity = ref(false)
 const reading = ref<Reading | null>(null)
 const status = ref<'loading' | 'ok' | 'unavailable'>('loading')
 const preferred = ref(false) // the visitor's own gage is showing
+const iconic = ref(false) // a famous gage, for a visitor outside the US
 const saved = ref(false) // one is saved in this browser (known from the start; the card may still be loading it)
 const editing = ref(false)
 const code = ref('')
@@ -32,7 +33,8 @@ async function load() {
   const pick = await pickCard()
   if (me !== loadId) return
   gage.value = pick.gage; how.value = pick.how; km.value = pick.km; flood.value = pick.flood; byActivity.value = pick.byActivity
-  preferred.value = !!pick.preferred
+  preferred.value = !!pick.preferred; iconic.value = !!pick.iconic
+  saved.value = !!getPreferred() // false again if the saved gage was dropped as decommissioned
   reading.value = pick.reading
   status.value = pick.reading ? 'ok' : 'unavailable'
 }
@@ -61,7 +63,7 @@ async function save() {
   loadId++ // a page load still waiting must not replace it
   saved.value = true
   gage.value = found.gage; reading.value = found.reading; status.value = 'ok'
-  how.value = 'default'; km.value = null; flood.value = null; byActivity.value = false; preferred.value = true
+  how.value = 'default'; km.value = null; flood.value = null; byActivity.value = false; preferred.value = true; iconic.value = false
   editing.value = false
   nextTick(() => pencil.value?.focus())
 }
@@ -70,7 +72,7 @@ function clear() {
   saveId++; busy.value = false
   saved.value = false; preferred.value = false; editing.value = false
   // back to the default gage with "Loading" until the automatic pick is ready (not the cleared gage's name and link)
-  gage.value = DEFAULT_GAGE; reading.value = null; flood.value = null; how.value = 'default'; km.value = null; byActivity.value = false
+  gage.value = DEFAULT_GAGE; iconic.value = false; reading.value = null; flood.value = null; how.value = 'default'; km.value = null; byActivity.value = false
   status.value = 'loading'
   load()
   nextTick(() => pencil.value?.focus())
@@ -85,6 +87,7 @@ const FLOOD_STYLE = { minor: 'bg-[#FFF1C2] text-[#6B4E00]', moderate: 'bg-[#FFD9
 const floodWhen = computed(() => (flood.value ? stamp(new Date(flood.value.time)) : ''))
 const context = computed(() => {
   if (preferred.value) return ' · your gage'
+  if (iconic.value) return ' · a classic USGS gage'
   if (flood.value?.where === 'national' && gage.value.state) return ` · flood in ${gage.value.state}`
   if (near.value) return ' · near you'
   return byActivity.value ? ' · most active nearby' : ''
