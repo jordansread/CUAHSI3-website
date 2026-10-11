@@ -6,6 +6,7 @@
 // Which gage: A. a gage in flood now (NWS category minor or worse, from /flooding-gages.json, written by scripts/flooding-gages.mjs):
 // the most severe one within 500 km of the visitor, else the most severe one in the country; its reading must agree with the NWS
 // stage (within 1 ft) or the next candidate is tried; B. otherwise a gage from the hand-picked list near the visitor; C. the default gage.
+// A visitor can set their own gage (a USGS number, kept in this browser's localStorage); it replaces everything above until cleared.
 // If the USGS call itself fails, the card says the reading is unavailable and still links to the gage's USGS page.
 
 export type Gage = { id: string; name: string; state: string; lat: number; lon: number }
@@ -127,9 +128,57 @@ export type Pick = {
   reading: Reading | null
   byActivity: boolean // chosen because it moved more than a nearer gage
   flood: { category: FloodGage['category']; time: string; where: 'near' | 'national' } | null
+  preferred?: boolean // the visitor's own gage
+}
+
+// The visitor's own gage. Stored in localStorage (this browser only, no expiry) as { id, name, state }.
+export type Preferred = { id: string; name: string; state: string }
+const PREFERRED_KEY = 'preferred-gage'
+export function getPreferred(): Preferred | null {
+  try {
+    const p = JSON.parse(localStorage.getItem(PREFERRED_KEY) ?? 'null')
+    if (p && /^\d{8,15}$/.test(String(p.id)) && typeof p.name === 'string' && typeof p.state === 'string') return { id: String(p.id), name: p.name, state: p.state }
+  } catch { /* storage may be blocked */ }
+  return null
+}
+// false when the browser would not keep it (private mode, blocked or full storage)
+export function setPreferred(p: Preferred): boolean {
+  try { localStorage.setItem(PREFERRED_KEY, JSON.stringify(p)); return getPreferred()?.id === p.id } catch { return false }
+}
+export function clearPreferred() { try { localStorage.removeItem(PREFERRED_KEY) } catch { /* ignore */ } }
+
+// the reading for a chosen gage: discharge, else gage height (some gages report only one)
+const readingFor = async (id: string) => (await fetchReading(id, '00060')) ?? (await fetchReading(id, '00065'))
+
+// USGS names are in capitals ("WISCONSIN RIVER AT MUSCODA, WI"); the state is the last two letters after a comma
+const SMALL = new Set(['at', 'near', 'below', 'above', 'of', 'the', 'and', 'in', 'on', 'to', 'from', 'nr', 'bl', 'ab'])
+function tidyName(raw: string): { name: string; state: string } {
+  const m = raw.match(/,\s*([A-Z]{2})$/)
+  const base = (m ? raw.slice(0, m.index) : raw).toLowerCase().split(' ').map((w, i) => (i > 0 && SMALL.has(w) ? w : w.charAt(0).toUpperCase() + w.slice(1))).join(' ').replace(/, ([A-Z][a-z])\b/g, (_, st) => `, ${st.toUpperCase()}`)
+  return { name: base, state: m ? m[1] : '' }
+}
+
+// Checks a number the visitor typed: the gage must exist at USGS and have a recent reading. Resolves to the gage and its
+// reading, or a sentence for the visitor.
+export async function lookUpGage(id: string): Promise<{ gage: Preferred; reading: Reading } | string> {
+  let raw: string | null = null
+  try {
+    const ctl = new AbortController()
+    const timer = setTimeout(() => ctl.abort(), 7000)
+    const res = await fetch(`https://api.waterdata.usgs.gov/ogcapi/v0/collections/monitoring-locations/items/USGS-${id}?f=json&properties=monitoring_location_name`, { signal: ctl.signal })
+    clearTimeout(timer)
+    if (res.ok) raw = (await res.json())?.properties?.monitoring_location_name ?? null
+    else if (res.status !== 404) return 'USGS did not answer. Try again in a moment.'
+  } catch { return 'USGS did not answer. Try again in a moment.' }
+  if (!raw) return `USGS has no gage with the number ${id}.`
+  const reading = await readingFor(id)
+  if (!reading) return 'No recent flow or stage reading came back for that gage. If the number is right, try again in a moment.'
+  return { gage: { id, ...tidyName(raw) }, reading }
 }
 
 export async function pickCard(): Promise<Pick> {
+  const mine = getPreferred()
+  if (mine) return { gage: mine, how: 'default', km: null, reading: await readingFor(mine.id), byActivity: false, flood: null, preferred: true }
   const [place, flooding] = await Promise.all([locate(), fetchFlooding()])
   // A. a gage in flood. Near the visitor (within 500 km) any category counts; a gage far away only if it is a moderate or major flood,
   // so a small flood on the other side of the country does not push the near-you gage off the card.
