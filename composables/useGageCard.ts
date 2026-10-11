@@ -1,6 +1,7 @@
 // The home page gage card: which USGS gage to show, and its recent readings from the USGS Water Data API
-// (https://api.waterdata.usgs.gov/ogcapi/v0, the newer service; the older waterservices.usgs.gov is being retired).
-// Everything here runs in the visitor's browser, after the page loads; each step fails quietly and the next one takes over.
+// (https://api.waterdata.usgs.gov/ogcapi/v1, the current version; v0 still answers but is not the one USGS documents; the older waterservices.usgs.gov is being retired).
+// Everything here runs in the visitor's browser, after the page loads; each step fails quietly and the next one takes over. USGS is asked
+// through /api/gage (netlify/edge-functions/gage.ts), which holds the site's API key and caches; see usgsGet.
 // Where the visitor is: 1. /api/geo (a Netlify edge function) gives a rough position; if it names a country outside the US the
 // visitor gets a famous gage (one of ICONIC_GAGES, at random) instead of a far-off "nearby" one; if there is no answer, or no country,
 // 2. the browser's time zone gives a rough position; if that does not map to a US region, 3. there is no position.
@@ -155,6 +156,36 @@ export function setPreferred(p: Preferred): boolean {
 }
 export function clearPreferred() { try { localStorage.removeItem(PREFERRED_KEY) } catch { /* ignore */ } }
 
+// Every USGS request goes through usgsGet: our own /api/gage first (netlify/edge-functions/gage.ts: it adds the site's API key on the
+// server and the CDN caches the answer), then USGS itself, with no key, when that function is not there (local development), cannot
+// be reached or fails with a 5xx. A 400 or 404 from the function is a real answer (an unknown gage) and is returned as it is. The
+// function fixes the 48-hour window; the direct address below must ask for the same one (WINDOW_HOURS).
+const USGS = 'https://api.waterdata.usgs.gov/ogcapi/v1'
+type Ask = { kind: 'readings'; id: string; param: '00060' | '00065' } | { kind: 'name'; id: string } | { kind: 'recent'; id: string; param: '00060' | '00065'; days: number }
+function directUrl(a: Ask): string {
+  const loc = `monitoring_location_id=USGS-${a.id}`
+  if (a.kind === 'name') return `${USGS}/collections/monitoring-locations/items/USGS-${a.id}?f=json&properties=monitoring_location_name`
+  const base = `${USGS}/collections/continuous/items?f=json&parameter_code=${a.param}&sortby=-time&skipGeometry=true`
+  if (a.kind === 'recent') return `${base}&time=P${a.days}D&limit=1&properties=time&${loc}`
+  return `${base}&time=PT${WINDOW_HOURS}H&limit=1000&properties=time,value,qualifier,unit_of_measure,approval_status&${loc}`
+}
+async function usgsGet(a: Ask, ms = 7000): Promise<Response> {
+  const q = new URLSearchParams({ kind: a.kind, id: a.id })
+  if ('param' in a) q.set('param', a.param)
+  if ('days' in a) q.set('days', String(a.days))
+  try {
+    const res = await fetch(`/api/gage?${q}`, { signal: timeoutSignal(Math.min(ms, 6000)) })
+    if (res.headers.get('x-gage-proxy') && res.status < 500) return res
+  } catch { /* no function here, or too slow: ask USGS directly */ }
+  return fetch(directUrl(a), { signal: timeoutSignal(ms) })
+}
+// (AbortSignal.timeout is newer than some browsers still in use)
+function timeoutSignal(ms: number): AbortSignal {
+  const ctl = new AbortController()
+  setTimeout(() => ctl.abort(), ms)
+  return ctl.signal
+}
+
 // the reading for a chosen gage: discharge, else gage height (some gages report only one)
 const readingFor = async (id: string) => (await fetchReading(id, '00060')) ?? (await fetchReading(id, '00065'))
 
@@ -163,10 +194,7 @@ const DECOMMISSIONED_AFTER_DAYS = 5
 async function hasDataWithin(id: string, days: number): Promise<boolean | null> {
   try {
     const asks = await Promise.all((['00060', '00065'] as const).map(async param => {
-      const ctl = new AbortController()
-      const timer = setTimeout(() => ctl.abort(), 7000)
-      const res = await fetch(`https://api.waterdata.usgs.gov/ogcapi/v0/collections/continuous/items?f=json&parameter_code=${param}&time=P${days}D&limit=1&sortby=-time&skipGeometry=true&properties=time&monitoring_location_id=USGS-${id}`, { signal: ctl.signal })
-      clearTimeout(timer)
+      const res = await usgsGet({ kind: 'recent', id, param, days })
       if (!res.ok) throw new Error('no answer')
       return ((await res.json()).features ?? []).length > 0
     }))
@@ -187,10 +215,7 @@ function tidyName(raw: string): { name: string; state: string } {
 export async function lookUpGage(id: string): Promise<{ gage: Preferred; reading: Reading } | string> {
   let raw: string | null = null
   try {
-    const ctl = new AbortController()
-    const timer = setTimeout(() => ctl.abort(), 7000)
-    const res = await fetch(`https://api.waterdata.usgs.gov/ogcapi/v0/collections/monitoring-locations/items/USGS-${id}?f=json&properties=monitoring_location_name`, { signal: ctl.signal })
-    clearTimeout(timer)
+    const res = await usgsGet({ kind: 'name', id })
     if (res.ok) raw = (await res.json())?.properties?.monitoring_location_name ?? null
     else if (res.status !== 404) return 'USGS did not answer. Try again in a moment.'
   } catch { return 'USGS did not answer. Try again in a moment.' }
@@ -277,12 +302,7 @@ export async function fetchReading(id: string, param: '00060' | '00065' = '00060
     if (c && Date.now() - c.t < 10 * 60 * 1000) return { ...c.r, time: new Date(c.r.time) }
   } catch { /* ignore */ }
   try {
-    const ctl = new AbortController()
-    const timer = setTimeout(() => ctl.abort(), 7000)
-    const url = `https://api.waterdata.usgs.gov/ogcapi/v0/collections/continuous/items?f=json&parameter_code=${param}&time=PT${WINDOW_HOURS}H&limit=1000&sortby=-time&skipGeometry=true`
-      + `&properties=time,value,qualifier,unit_of_measure,approval_status&monitoring_location_id=USGS-${id}`
-    const res = await fetch(url, { signal: ctl.signal })
-    clearTimeout(timer)
+    const res = await usgsGet({ kind: 'readings', id, param })
     if (!res.ok) return null
     const body = await res.json()
     const pts = (body.features ?? [])
