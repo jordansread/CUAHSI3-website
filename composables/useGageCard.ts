@@ -1,11 +1,14 @@
 // The home page gage card: which USGS gage to show, and its recent readings from the USGS Water Data API
 // (https://api.waterdata.usgs.gov/ogcapi/v0, the newer service; the older waterservices.usgs.gov is being retired).
 // Everything here runs in the visitor's browser, after the page loads; each step fails quietly and the next one takes over.
-// Where the visitor is: 1. /api/geo (a Netlify edge function) gives a rough position; if there is no answer, or it is not the US,
+// Where the visitor is: 1. /api/geo (a Netlify edge function) gives a rough position; if it names a country outside the US the
+// visitor gets a famous gage (one of ICONIC_GAGES, at random) instead of a far-off "nearby" one; if there is no answer, or no country,
 // 2. the browser's time zone gives a rough position; if that does not map to a US region, 3. there is no position.
 // Which gage: A. a gage in flood now (NWS category minor or worse, from /flooding-gages.json, written by scripts/flooding-gages.mjs):
 // the most severe one within 500 km of the visitor, else the most severe one in the country; its reading must agree with the NWS
 // stage (within 1 ft) or the next candidate is tried; B. otherwise a gage from the hand-picked list near the visitor; C. the default gage.
+// A visitor can set their own gage (a USGS number, kept in this browser's localStorage); it replaces everything above until cleared, or until USGS has had no
+// reading for it for 5 days (it is probably decommissioned), when the card goes back to the automatic pick.
 // If the USGS call itself fails, the card says the reading is unavailable and still links to the gage's USGS page.
 
 export type Gage = { id: string; name: string; state: string; lat: number; lon: number }
@@ -66,33 +69,38 @@ const MAX_KM = 1500
 // The answer is kept in sessionStorage for 3 hours, then asked for again: a tab left open on another network (home, then a hotel)
 // would otherwise keep showing the first position for as long as the tab lives. An entry without a time (an older format) is stale.
 const GEO_TTL_MS = 3 * 3600 * 1000
+// `abroad` is true when the edge function named a country that is not the US (a gage "near" that visitor would be thousands of km away)
 type Place = { lat: number; lon: number } | null
-function saveGeo(place: Place) {
-  try { sessionStorage.setItem('gage-geo', JSON.stringify({ t: Date.now(), place })) } catch { /* ignore */ }
+type Where = { place: Place; abroad: boolean }
+function saveGeo(w: Where) {
+  try { sessionStorage.setItem('gage-geo', JSON.stringify({ t: Date.now(), place: w.place, abroad: w.abroad })) } catch { /* ignore */ }
 }
-async function lookUpPlace(): Promise<Place> {
+async function lookUpPlace(): Promise<Where> {
   try {
     const c = JSON.parse(sessionStorage.getItem('gage-geo') ?? 'null')
     const age = c && typeof c.t === 'number' ? Date.now() - c.t : -1
-    if (age >= 0 && age < GEO_TTL_MS && (c.place === null || (Number.isFinite(c.place?.lat) && Number.isFinite(c.place?.lon)))) return c.place
+    if (age >= 0 && age < GEO_TTL_MS && (c.place === null || (Number.isFinite(c.place?.lat) && Number.isFinite(c.place?.lon)))) return { place: c.place, abroad: c.abroad === true }
   } catch { /* storage may be blocked */ }
   try {
     const ctl = new AbortController()
     const timer = setTimeout(() => ctl.abort(), 2500)
     const res = await fetch('/api/geo', { signal: ctl.signal, headers: { accept: 'application/json' } })
     clearTimeout(timer)
-    if (!res.ok || !(res.headers.get('content-type') ?? '').includes('json')) { saveGeo(null); return null }
+    if (!res.ok || !(res.headers.get('content-type') ?? '').includes('json')) { saveGeo({ place: null, abroad: false }); return { place: null, abroad: false } }
     const g = await res.json()
-    const place = g?.country === 'US' && typeof g.latitude === 'number' && typeof g.longitude === 'number' ? { lat: g.latitude, lon: g.longitude } : null
-    saveGeo(place)
-    return place
-  } catch { return null }
+    const country = typeof g?.country === 'string' ? g.country.toUpperCase() : ''
+    const place = country === 'US' && typeof g.latitude === 'number' && typeof g.longitude === 'number' ? { lat: g.latitude, lon: g.longitude } : null
+    const abroad = country !== '' && country !== 'US'
+    saveGeo({ place, abroad })
+    return { place, abroad }
+  } catch { return { place: null, abroad: false } }
 }
 
 // where the visitor is, roughly: the edge function, else the time zone, else nobody knows
-async function locate(): Promise<{ lat: number; lon: number; how: 'location' | 'timezone' } | null> {
-  const place = await lookUpPlace()
+async function locate(): Promise<{ lat: number; lon: number; how: 'location' | 'timezone' } | { abroad: true } | null> {
+  const { place, abroad } = await lookUpPlace()
   if (place) return { ...place, how: 'location' }
+  if (abroad) return { abroad: true } // outside the US: no time-zone guess either
   try {
     const tz = Intl.DateTimeFormat().resolvedOptions().timeZone
     const c = TZ_CENTRES[tz]
@@ -127,10 +135,90 @@ export type Pick = {
   reading: Reading | null
   byActivity: boolean // chosen because it moved more than a nearer gage
   flood: { category: FloodGage['category']; time: string; where: 'near' | 'national' } | null
+  preferred?: boolean // the visitor's own gage
+  iconic?: boolean // a famous gage, shown to a visitor outside the US
 }
 
+// The visitor's own gage. Stored in localStorage (this browser only, no expiry) as { id, name, state }.
+export type Preferred = { id: string; name: string; state: string }
+const PREFERRED_KEY = 'preferred-gage'
+export function getPreferred(): Preferred | null {
+  try {
+    const p = JSON.parse(localStorage.getItem(PREFERRED_KEY) ?? 'null')
+    if (p && /^\d{8,15}$/.test(String(p.id)) && typeof p.name === 'string' && typeof p.state === 'string') return { id: String(p.id), name: p.name, state: p.state }
+  } catch { /* storage may be blocked */ }
+  return null
+}
+// false when the browser would not keep it (private mode, blocked or full storage)
+export function setPreferred(p: Preferred): boolean {
+  try { localStorage.setItem(PREFERRED_KEY, JSON.stringify(p)); return getPreferred()?.id === p.id } catch { return false }
+}
+export function clearPreferred() { try { localStorage.removeItem(PREFERRED_KEY) } catch { /* ignore */ } }
+
+// the reading for a chosen gage: discharge, else gage height (some gages report only one)
+const readingFor = async (id: string) => (await fetchReading(id, '00060')) ?? (await fetchReading(id, '00065'))
+
+// Has USGS had any flow or stage reading for this gage in the last `days` days? null when USGS could not be asked (then nothing is decided).
+const DECOMMISSIONED_AFTER_DAYS = 5
+async function hasDataWithin(id: string, days: number): Promise<boolean | null> {
+  try {
+    const asks = await Promise.all((['00060', '00065'] as const).map(async param => {
+      const ctl = new AbortController()
+      const timer = setTimeout(() => ctl.abort(), 7000)
+      const res = await fetch(`https://api.waterdata.usgs.gov/ogcapi/v0/collections/continuous/items?f=json&parameter_code=${param}&time=P${days}D&limit=1&sortby=-time&skipGeometry=true&properties=time&monitoring_location_id=USGS-${id}`, { signal: ctl.signal })
+      clearTimeout(timer)
+      if (!res.ok) throw new Error('no answer')
+      return ((await res.json()).features ?? []).length > 0
+    }))
+    return asks.some(Boolean)
+  } catch { return null }
+}
+
+// USGS names are in capitals ("WISCONSIN RIVER AT MUSCODA, WI"); the state is the last two letters after a comma
+const SMALL = new Set(['at', 'near', 'below', 'above', 'of', 'the', 'and', 'in', 'on', 'to', 'from', 'nr', 'bl', 'ab'])
+function tidyName(raw: string): { name: string; state: string } {
+  const m = raw.match(/,\s*([A-Z]{2})$/)
+  const base = (m ? raw.slice(0, m.index) : raw).toLowerCase().split(' ').map((w, i) => (i > 0 && SMALL.has(w) ? w : w.charAt(0).toUpperCase() + w.slice(1))).join(' ').replace(/, ([A-Z][a-z])\b/g, (_, st) => `, ${st.toUpperCase()}`)
+  return { name: base, state: m ? m[1] : '' }
+}
+
+// Checks a number the visitor typed: the gage must exist at USGS and have a recent reading. Resolves to the gage and its
+// reading, or a sentence for the visitor.
+export async function lookUpGage(id: string): Promise<{ gage: Preferred; reading: Reading } | string> {
+  let raw: string | null = null
+  try {
+    const ctl = new AbortController()
+    const timer = setTimeout(() => ctl.abort(), 7000)
+    const res = await fetch(`https://api.waterdata.usgs.gov/ogcapi/v0/collections/monitoring-locations/items/USGS-${id}?f=json&properties=monitoring_location_name`, { signal: ctl.signal })
+    clearTimeout(timer)
+    if (res.ok) raw = (await res.json())?.properties?.monitoring_location_name ?? null
+    else if (res.status !== 404) return 'USGS did not answer. Try again in a moment.'
+  } catch { return 'USGS did not answer. Try again in a moment.' }
+  if (!raw) return `USGS has no gage with the number ${id}.`
+  const reading = await readingFor(id)
+  if (!reading) return 'No recent flow or stage reading came back for that gage. If the number is right, try again in a moment.'
+  return { gage: { id, ...tidyName(raw) }, reading }
+}
+
+// Shown to a visitor outside the US: a gage near them would be a long way off, so the card shows a famous river instead, one picked
+// at random on each page load. All are on the list above (each had a current discharge reading on 11 Oct 2026).
+const ICONIC_IDS = ['07010000', '09380000', '14105700', '01646500', '01358000', '08330000', '13037500', '06191500', '11447650']
+// Mississippi at St. Louis, Colorado at Lees Ferry, Columbia at The Dalles, Potomac at Little Falls, Hudson at Green Island,
+// Rio Grande at Albuquerque, Snake near Heise, Yellowstone at Corwin Springs, Sacramento at Freeport
+export const ICONIC_GAGES = GAGES.filter(g => ICONIC_IDS.includes(g.id))
+
 export async function pickCard(): Promise<Pick> {
-  const [place, flooding] = await Promise.all([locate(), fetchFlooding()])
+  const mine = getPreferred()
+  if (mine) {
+    const reading = await readingFor(mine.id)
+    // no reading: the card says "Reading unavailable" and keeps the gage, unless USGS has had nothing for it in 5 days
+    // (probably decommissioned): then it is forgotten and the automatic pick below is used
+    if (reading || (await hasDataWithin(mine.id, DECOMMISSIONED_AFTER_DAYS)) !== false) return { gage: mine, how: 'default', km: null, reading, byActivity: false, flood: null, preferred: true }
+    if (getPreferred()?.id === mine.id) clearPreferred() // not a gage the visitor saved meanwhile
+  }
+  const [located, flooding] = await Promise.all([locate(), fetchFlooding()])
+  const abroad = !!located && 'abroad' in located
+  const place = located && !('abroad' in located) ? located : null
   // A. a gage in flood. Near the visitor (within 500 km) any category counts; a gage far away only if it is a moderate or major flood,
   // so a small flood on the other side of the country does not push the near-you gage off the card.
   if (flooding.length) {
@@ -150,8 +238,12 @@ export async function pickCard(): Promise<Pick> {
       }
     }
   }
-  // B and C. a normal gage. With a position: the three nearest gages on the list are read at once and the one that moved most over the
+  // B and C. a normal gage (a visitor outside the US gets the famous one). With a position: the three nearest gages on the list are read at once and the one that moved most over the
   // last 48 hours is shown (a steady river makes a flat, dull plot); on a tie, the nearest. Without one: the default gage.
+  if (abroad) {
+    const gage = ICONIC_GAGES[Math.floor(Math.random() * ICONIC_GAGES.length)]
+    return { gage, how: 'default', km: null, reading: await fetchReading(gage.id, '00060'), byActivity: false, flood: null, iconic: true }
+  }
   const cands = place ? nearestGages(place.lat, place.lon, 3).filter(c => c.km <= ACTIVE_RADIUS_KM) : []
   if (!cands.length) return { gage: DEFAULT_GAGE, how: 'default', km: null, reading: await fetchReading(DEFAULT_GAGE.id, '00060'), byActivity: false, flood: null }
   const reads = await Promise.all(cands.map(c => fetchReading(c.gage.id, '00060')))
