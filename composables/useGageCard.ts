@@ -2,7 +2,7 @@
 // (https://api.waterdata.usgs.gov/ogcapi/v0, the newer service; the older waterservices.usgs.gov is being retired).
 // Everything here runs in the visitor's browser, after the page loads; each step fails quietly and the next one takes over.
 // Where the visitor is: 1. /api/geo (a Netlify edge function) gives a rough position; if it names a country outside the US the
-// visitor gets a famous gage (ICONIC_GAGE) instead of a far-off "nearby" one; if there is no answer, or no country,
+// visitor gets a famous gage (one of ICONIC_GAGES, at random) instead of a far-off "nearby" one; if there is no answer, or no country,
 // 2. the browser's time zone gives a rough position; if that does not map to a US region, 3. there is no position.
 // Which gage: A. a gage in flood now (NWS category minor or worse, from /flooding-gages.json, written by scripts/flooding-gages.mjs):
 // the most severe one within 500 km of the visitor, else the most severe one in the country; its reading must agree with the NWS
@@ -200,8 +200,12 @@ export async function lookUpGage(id: string): Promise<{ gage: Preferred; reading
   return { gage: { id, ...tidyName(raw) }, reading }
 }
 
-// Shown to a visitor outside the US: a gage near them would be a long way off, so the card shows a famous one instead.
-export const ICONIC_GAGE = GAGES.find(g => g.id === '07010000')! // Mississippi River at St. Louis
+// Shown to a visitor outside the US: a gage near them would be a long way off, so the card shows a famous river instead, one picked
+// at random on each page load. All are on the list above (each had a current discharge reading on 11 Oct 2026).
+const ICONIC_IDS = ['07010000', '09380000', '14105700', '01646500', '01358000', '08330000', '13037500', '06191500', '11447650']
+// Mississippi at St. Louis, Colorado at Lees Ferry, Columbia at The Dalles, Potomac at Little Falls, Hudson at Green Island,
+// Rio Grande at Albuquerque, Snake near Heise, Yellowstone at Corwin Springs, Sacramento at Freeport
+export const ICONIC_GAGES = GAGES.filter(g => ICONIC_IDS.includes(g.id))
 
 export async function pickCard(): Promise<Pick> {
   const mine = getPreferred()
@@ -236,7 +240,10 @@ export async function pickCard(): Promise<Pick> {
   }
   // B and C. a normal gage (a visitor outside the US gets the famous one). With a position: the three nearest gages on the list are read at once and the one that moved most over the
   // last 48 hours is shown (a steady river makes a flat, dull plot); on a tie, the nearest. Without one: the default gage.
-  if (abroad) return { gage: ICONIC_GAGE, how: 'default', km: null, reading: await fetchReading(ICONIC_GAGE.id, '00060'), byActivity: false, flood: null, iconic: true }
+  if (abroad) {
+    const gage = ICONIC_GAGES[Math.floor(Math.random() * ICONIC_GAGES.length)]
+    return { gage, how: 'default', km: null, reading: await fetchReading(gage.id, '00060'), byActivity: false, flood: null, iconic: true }
+  }
   const cands = place ? nearestGages(place.lat, place.lon, 3).filter(c => c.km <= ACTIVE_RADIUS_KM) : []
   if (!cands.length) return { gage: DEFAULT_GAGE, how: 'default', km: null, reading: await fetchReading(DEFAULT_GAGE.id, '00060'), byActivity: false, flood: null }
   const reads = await Promise.all(cands.map(c => fetchReading(c.gage.id, '00060')))
