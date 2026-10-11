@@ -26,10 +26,9 @@ const activeFilter = ref('all')
 const showPast = ref(false)
 const federalOnly = ref(false)
 
-// US federal: a USAJOBS posting is federal by definition; for the other sources there is no field, so the employer's name decides
-// (an agency named in full or by its short name; state bodies such as "Kansas Geological Survey" or "Illinois Environmental Protection Agency" must not match).
-const FEDERAL_EMPLOYER = /\b(U\.?S\.? (Geological Survey|Army Corps|Environmental Protection|Forest Service|Fish and Wildlife|Bureau|Department of)|Geological Survey, [A-Z][\w -]* Water Science Center|USGS|USACE|NRCS|NOAA|National Oceanic|National Weather Service|National Park Service|National Water Center|Bureau of (Reclamation|Land Management)|Fish and Wildlife Service|Natural Resources Conservation Service|Agricultural Research Service|Tennessee Valley Authority|USDA|NASA|FEMA|Army Corps of Engineers|Department of the (Interior|Navy|Army|Air Force))|(^|[,\/] ?)Environmental Protection Agency/i
-const isFederal = (j: any) => j.source === 'usajobs' || FEDERAL_EMPLOYER.test(String(j.organization ?? ''))
+// US federal: only a posting from USAJOBS (`source: usajobs`). A job from anywhere else is not a federal job, whoever the employer
+// is (a contractor to a federal agency is not advertised on USAJOBS).
+const isFederal = (j: any) => j.source === 'usajobs'
 
 // The time the page works from: the build's time on the server and for the first browser render (so the two match), then the real
 // time once the page is open, because the order, the "closing soon" cut-off and the expired listings depend on it.
