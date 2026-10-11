@@ -24,6 +24,12 @@ const typeFilters = computed(() => [
 ])
 const activeFilter = ref('all')
 const showPast = ref(false)
+const federalOnly = ref(false)
+
+// US federal: a USAJOBS posting is federal by definition; for the other sources there is no field, so the employer's name decides
+// (an agency named in full or by its short name; state bodies such as "Kansas Geological Survey" or "Illinois Environmental Protection Agency" must not match).
+const FEDERAL_EMPLOYER = /\b(U\.?S\.? (Geological Survey|Army Corps|Environmental Protection|Forest Service|Fish and Wildlife|Bureau|Department of)|Geological Survey, [A-Z][\w -]* Water Science Center|USGS|USACE|NRCS|NOAA|National Oceanic|National Weather Service|National Park Service|National Water Center|Bureau of (Reclamation|Land Management)|Fish and Wildlife Service|Natural Resources Conservation Service|Agricultural Research Service|Tennessee Valley Authority|USDA|NASA|FEMA|Army Corps of Engineers|Department of the (Interior|Navy|Army|Air Force))|(^|[,\/] ?)Environmental Protection Agency/i
+const isFederal = (j: any) => j.source === 'usajobs' || FEDERAL_EMPLOYER.test(String(j.organization ?? ''))
 
 // The time the page works from: the build's time on the server and for the first browser render (so the two match), then the real
 // time once the page is open, because the order, the "closing soon" cut-off and the expired listings depend on it.
@@ -95,9 +101,13 @@ function compareJobs(a: any, b: any) {
 const filtered = computed(() => {
   let items = jobs.value ?? []
   if (activeFilter.value !== 'all') items = items.filter(j => j.type === activeFilter.value)
+  if (federalOnly.value) items = items.filter(isFederal)
   if (!showPast.value) items = items.filter(j => !isExpired(j.deadline))
   return [...items].sort(compareJobs)
 })
+
+// the chip is offered only while a federal listing is visible (expired ones count only when shown), like the optional type chips
+const hasFederal = computed(() => (jobs.value ?? []).some(j => isFederal(j) && (showPast.value || !isExpired(j.deadline))))
 
 const expiredCount = computed(() =>
   (jobs.value ?? []).filter(j => isExpired(j.deadline)).length
@@ -194,6 +204,10 @@ watch(typeFilters, list => { if (!list.includes(activeFilter.value)) activeFilte
         <FilterChip v-for="f in typeFilters" :key="f" variant="gray" :active="activeFilter===f" @click="activeFilter=f">
           {{ f === 'all' ? 'All types' : typeLabels[f] ?? f }}
         </FilterChip>
+        <template v-if="hasFederal || federalOnly">
+          <span class="text-[12px] text-muted ml-[12px] mr-[4px]">Employer</span>
+          <FilterChip variant="gray" :active="federalOnly" @click="federalOnly=!federalOnly">US federal</FilterChip>
+        </template>
       </div>
 
       <!-- Listings -->
