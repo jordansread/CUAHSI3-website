@@ -63,20 +63,28 @@ export function nearestGages(lat: number, lon: number, count: number): { gage: G
 const MAX_KM = 1500
 
 // 1. the edge function. Resolves to null on any failure (no function in local dev, offline, slow, not the US).
-async function lookUpPlace(): Promise<{ lat: number; lon: number } | null> {
+// The answer is kept in sessionStorage for 3 hours, then asked for again: a tab left open on another network (home, then a hotel)
+// would otherwise keep showing the first position for as long as the tab lives. An entry without a time (an older format) is stale.
+const GEO_TTL_MS = 3 * 3600 * 1000
+type Place = { lat: number; lon: number } | null
+function saveGeo(place: Place) {
+  try { sessionStorage.setItem('gage-geo', JSON.stringify({ t: Date.now(), place })) } catch { /* ignore */ }
+}
+async function lookUpPlace(): Promise<Place> {
   try {
-    const cached = sessionStorage.getItem('gage-geo')
-    if (cached) return JSON.parse(cached)
+    const c = JSON.parse(sessionStorage.getItem('gage-geo') ?? 'null')
+    const age = c && typeof c.t === 'number' ? Date.now() - c.t : -1
+    if (age >= 0 && age < GEO_TTL_MS && (c.place === null || (Number.isFinite(c.place?.lat) && Number.isFinite(c.place?.lon)))) return c.place
   } catch { /* storage may be blocked */ }
   try {
     const ctl = new AbortController()
     const timer = setTimeout(() => ctl.abort(), 2500)
     const res = await fetch('/api/geo', { signal: ctl.signal, headers: { accept: 'application/json' } })
     clearTimeout(timer)
-    if (!res.ok || !(res.headers.get('content-type') ?? '').includes('json')) { try { sessionStorage.setItem('gage-geo', 'null') } catch { /* ignore */ } return null }
+    if (!res.ok || !(res.headers.get('content-type') ?? '').includes('json')) { saveGeo(null); return null }
     const g = await res.json()
     const place = g?.country === 'US' && typeof g.latitude === 'number' && typeof g.longitude === 'number' ? { lat: g.latitude, lon: g.longitude } : null
-    try { sessionStorage.setItem('gage-geo', JSON.stringify(place)) } catch { /* ignore */ }
+    saveGeo(place)
     return place
   } catch { return null }
 }
