@@ -172,7 +172,7 @@ C5. **A published slug never changes, and a published file is never deleted or r
     unpublish the other. Ask Jordan whether a redirect is needed. `verify.sh` fails a branch
     that deletes or renames any file under `content/` (published or not), changes the slug of
     a published `.md` item, or removes or changes a slug in a content JSON array (a rename
-    Jordan asked for needs `VERIFY_ALLOW_CONTENT_RENAME=1`, and the PR says so). It cannot
+    Jordan asked for needs `VERIFY_ALLOW_CONTENT_RENAME=1`, and the PR says so; the same switch turns a changed slug of a published `.md` item from a failure into a warning, and that PR must also say that the old address needs a redirect, which nothing checks). It cannot
     read the slug of a file whose front matter does not parse (the 9 cyberseminar files
     with no closing `---`), so for those the check passes silently; look yourself.
 C6. **`people_mentioned` takes slugs of people who have a profile in the repo:** team slugs
