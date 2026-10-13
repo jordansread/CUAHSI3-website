@@ -107,6 +107,13 @@ partners: [CIROH, HydroLearn]
 funding: "NOAA Cooperative Institute Program (NA22NWS4320003)"
 published: true
 excerpt: "1–2 sentence card summary"
+image:                           # optional: a picture for the card and the top of the story page
+  src: /story-images/hydrolearn-ciroh-hackathon-2026.jpg   # a file in public/story-images/ (the validator checks it exists and is at most 500 KB)
+  alt: "what the picture shows, for a screen reader"
+  caption: "optional, printed under the picture on the story page"
+  credit: "optional, printed after the caption"
+  fit: cover                     # optional: cover (default) or contain (a diagram shown whole)
+  position: center               # optional: CSS object-position for the crop, e.g. "50% 30%"
 ```
 > **Directory is `content/research/` but the URL is `/about/impact/`.** This is a known,
 > deliberate mismatch left from an IA change. Do not "fix" it without updating every

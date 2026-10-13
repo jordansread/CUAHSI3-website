@@ -170,11 +170,12 @@ const sideHighlights = computed(() => highlights.value?.slice(1, 4) ?? [])
           <!-- Featured -->
           <NuxtLink v-if="featured" :to="`/about/impact/${featured.slug}`"
             class="card-lift bg-white rounded-[16px] overflow-hidden flex flex-col text-left border border-[rgba(15,33,43,.1)] no-underline">
-            <div class="relative h-[300px] bg-[linear-gradient(150deg,#10324c,#2A86C9)]">
+            <div class="relative h-[300px] bg-[linear-gradient(150deg,#10324c,#2A86C9)]" :class="featured.image ? 'overflow-hidden' : ''">
+              <StoryImage v-if="featured.image" :image="featured.image" eager decorative />
               <span class="absolute font-mono font-bold tracking-[.08em] text-white rounded-[6px]" :style="`left:18px;top:16px;font-size:10.5px;background:${useCategoryColor(featured.category).color};padding:6px 11px;`">
                 {{ useCategoryColor(featured.category).label.toUpperCase() }}
               </span>
-              <span class="absolute font-mono text-[10px] rounded-[5px] left-[18px] bottom-[14px] text-[rgba(255,255,255,.85)] bg-[rgba(0,0,0,.25)] p-[5px_9px]">PHOTO — {{ featured.title.toUpperCase() }}</span>
+              <span v-if="!featured.image" class="absolute font-mono text-[10px] rounded-[5px] left-[18px] bottom-[14px] text-[rgba(255,255,255,.85)] bg-[rgba(0,0,0,.25)] p-[5px_9px]">PHOTO — {{ featured.title.toUpperCase() }}</span>
             </div>
             <div class="p-[24px]">
               <div class="font-mono text-[11px] tracking-[.06em] text-muted mb-2">{{ fmtDate(featured.date) }}</div>

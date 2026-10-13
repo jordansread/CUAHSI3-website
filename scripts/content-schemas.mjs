@@ -136,6 +136,18 @@ const cyberseminars = z.strictObject({
 // content/research/ : 31 files (renders at /about/impact/).
 // The files carry no author-controlled enum beyond category. people_mentioned is typed as slugs here
 // and checked against team slugs in the cross-reference section (the model says "team slugs").
+// A story's picture: shown on its card and at the top of its page. src is a file in public/story-images/ (the validator checks that it exists and
+// is not too big); alt is what a screen reader says; caption and credit print under the picture on the story page; fit "contain" shows a
+// diagram whole (cover crops); position is a CSS object-position for the crop.
+const storyImage = z.strictObject({
+  src: z.string().regex(/^\/story-images\/[a-z0-9][a-z0-9-]*\.(jpg|webp|png|svg)$/, 'must be /story-images/<name>.jpg (or .webp, .png, .svg), lower case with hyphens'),
+  alt: nonEmpty,
+  caption: nonEmpty.optional(),
+  credit: nonEmpty.optional(),
+  fit: z.enum(['cover', 'contain']).optional(),
+  position: z.string().regex(/^(?:center|top|bottom|\d{1,3}% \d{1,3}%)$/, 'center, top, bottom or "x% y%"').optional(),
+})
+
 const research = z.strictObject({
   title: nonEmpty,
   slug,
@@ -148,6 +160,7 @@ const research = z.strictObject({
   funding: z.string().nullable().optional(),
   partners: strings.optional(),
   people_mentioned: slugs.optional(),
+  image: storyImage.optional(),
   awards: slugs.optional(),   // ids from content/awards/awards.json; the page shows each award's acknowledgment under the story. [] means checked, no award of CUAHSI's to acknowledge; absent means not yet decided
 })
 
