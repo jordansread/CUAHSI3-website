@@ -145,6 +145,7 @@ const refs = {            // collected for the cross-reference section
   awardUses: [],          // { file, value }: an id in a research story's `awards`
   awardsUndecided: [],    // published research files with no `awards` key at all
   awardIds: [],           // ids in content/awards/awards.json
+  imageUses: [],          // { file, src }: a research story's image.src
   memberNames: [],        // institution names in content/members/reps.json (names only; nothing else is kept)
   jobMembers: [],         // { file, value }: a jobs member_institution value
 }
@@ -171,6 +172,7 @@ for (const c of selected) {
       if (c.name === 'research') {
         if (Array.isArray(data.awards)) for (const v of data.awards) refs.awardUses.push({ file, value: v })
         else if (data.published === true) refs.awardsUndecided.push(file)
+        if (typeof data.image?.src === 'string') refs.imageUses.push({ file, src: data.image.src })
       }
       if (c.name === 'jobs' && typeof data.member_institution === 'string') refs.jobMembers.push({ file, value: data.member_institution })
       if (c.name === 'events') {
@@ -337,6 +339,21 @@ if (selected.some(c => c.name === 'research')) {
   const used = new Set(refs.awardUses.map(u => u.value))
   info.push({ title: 'awards: published research stories with no awards key (not yet decided; [] means checked, none): informational', checked: `${refs.awardsUndecided.length} files`, items: refs.awardsUndecided.length ? [`${refs.awardsUndecided.length} files, for example ${refs.awardsUndecided.slice(0, 3).map(f => path.basename(f)).join(', ')}`] : [] })
   if (registryRead) info.push({ title: 'awards: registry entries no story uses: informational', checked: `${known.size} entries`, items: [...known].filter(id => !used.has(id)) })
+}
+
+// images: the file a story's image.src names must exist under public/ and be small enough for a page (a picture is a promise of weight).
+if (selected.some(c => c.name === 'research')) {
+  const MAX_KB = 500
+  const problems = []
+  for (const u of refs.imageUses) {
+    const f = `public${u.src}`
+    if (!fs.existsSync(f)) problems.push(`${u.file}: ${u.src} does not exist in public/`)
+    else if (fs.statSync(f).size > MAX_KB * 1024) problems.push(`${u.file}: ${u.src} is ${Math.round(fs.statSync(f).size / 1024)} KB (limit ${MAX_KB} KB)`)
+  }
+  xref.push({ title: `Every research image.src exists in public/ and is at most ${MAX_KB} KB`, checked: `${refs.imageUses.length} stories with an image`, problems })
+  const used = new Set(refs.imageUses.map(u => u.src))
+  const orphans = fs.existsSync('public/story-images') ? fs.readdirSync('public/story-images').filter(n => /\.(jpe?g|png|webp|svg)$/i.test(n) && !used.has(`/story-images/${n}`)) : []
+  info.push({ title: 'images: files in public/story-images/ that no story uses: informational', checked: `${orphans.length} files`, items: orphans })
 }
 
 // ---- print --------------------------------------------------------------------------
