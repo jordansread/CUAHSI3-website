@@ -1,8 +1,8 @@
 ---
 title: "CUAHSI at AGU 2025: 164-person community gathering and 18 presentations"
-slug: agu-community-gathering-2026
+slug: agu-community-gathering-2025
 date: 2025-12-17
-year: 2026
+year: 2025
 category: community
 tags: [AGU, community-building, conferences, hydroshare, water-prediction]
 people_mentioned: []
