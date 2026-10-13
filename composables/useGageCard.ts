@@ -1,7 +1,7 @@
 // The home page gage card: which USGS gage to show, and its recent readings from the USGS Water Data API
 // (https://api.waterdata.usgs.gov/ogcapi/v1, the current version; v0 still answers but is not the one USGS documents; the older waterservices.usgs.gov is being retired).
 // Everything here runs in the visitor's browser, after the page loads; each step fails quietly and the next one takes over. USGS is asked
-// through /api/gage (netlify/edge-functions/gage.ts), which holds the site's API key and caches; see usgsGet.
+// through /api/gage (netlify/edge-functions/gage.ts), which holds the site's API key (and asks the CDN to cache, which helps only a little); see usgsGet.
 // Where the visitor is: 1. /api/geo (a Netlify edge function) gives a rough position; if it names a country outside the US the
 // visitor gets a famous gage (one of ICONIC_GAGES, at random) instead of a far-off "nearby" one; if there is no answer, or no country,
 // 2. the browser's time zone gives a rough position; if that does not map to a US region, 3. there is no position.
@@ -157,7 +157,7 @@ export function setPreferred(p: Preferred): boolean {
 export function clearPreferred() { try { localStorage.removeItem(PREFERRED_KEY) } catch { /* ignore */ } }
 
 // Every USGS request goes through usgsGet: our own /api/gage first (netlify/edge-functions/gage.ts: it adds the site's API key on the
-// server and the CDN caches the answer), then USGS itself, with no key, when that function is not there (local development), cannot
+// server and asks the CDN to cache the answer, which helps only a little), then USGS itself, with no key, when that function is not there (local development), cannot
 // be reached or fails with a 5xx. A 400 or 404 from the function is a real answer (an unknown gage) and is returned as it is. The
 // function fixes the 48-hour window; the direct address below must ask for the same one (WINDOW_HOURS).
 const USGS = 'https://api.waterdata.usgs.gov/ogcapi/v1'
@@ -170,11 +170,10 @@ function directUrl(a: Ask): string {
   return `${base}&time=PT${WINDOW_HOURS}H&limit=1000&properties=time,value,qualifier,unit_of_measure,approval_status&${loc}`
 }
 async function usgsGet(a: Ask, ms = 7000): Promise<Response> {
-  const q = new URLSearchParams({ kind: a.kind, id: a.id })
-  if ('param' in a) q.set('param', a.param)
-  if ('days' in a) q.set('days', String(a.days))
+  // the gage and the question are in the path (see gage.ts: the CDN ignores a query string)
+  const path = [a.kind, a.id, ...('param' in a ? [a.param] : []), ...('days' in a ? [String(a.days)] : [])].join('/')
   try {
-    const res = await fetch(`/api/gage?${q}`, { signal: timeoutSignal(Math.min(ms, 6000)) })
+    const res = await fetch(`/api/gage/${path}`, { signal: timeoutSignal(Math.min(ms, 6000)) })
     if (res.headers.get('x-gage-proxy') && res.status < 500) return res
   } catch { /* no function here, or too slow: ask USGS directly */ }
   return fetch(directUrl(a), { signal: timeoutSignal(ms) })
