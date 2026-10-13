@@ -8,6 +8,10 @@ tags: [hydrologic-modeling, synthesis, community-science, water-prediction, land
 partners: [University of Saskatchewan, NOAA, CIROH]
 funding: "NOAA NA22NWS4320003 via CIROH"
 awards: [ciroh-a23-0274-s002]
+image:
+  src: /story-images/2025-perceptual-models.jpg
+  alt: "A three-dimensional block diagram titled \"Central Domain\", showing the land between the Rockies and the Appalachians, the Great Lakes and the Mississippi River, with labelled processes such as irrigated agriculture, large reservoirs, groundwater flooding and regional flow."
+  fit: contain
 published: true
 excerpt: CUAHSI co-led five regional workshops to synthesize hydrologic process knowledge across North America, producing a continental map of hydrologic landscapes, three synthesis manuscripts, and 35 perceptual models describing dominant processes within each landscape.
 ---
