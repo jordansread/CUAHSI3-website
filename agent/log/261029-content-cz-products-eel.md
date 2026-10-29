@@ -1,0 +1,3 @@
+261029 | content/cz-products-eel | start | T11 batch 1: Jordan approved the 103-item Eel table and chose to keep products.json as a single file (no split). Branch cut from task/cz-products-proposal so the approved proposal travels with it.
+261029 | content/cz-products-eel | intervention | Jordan approved the Eel table (103 items) and reversed the earlier idea: keep the products list as one file, no split by observatory.
+261029 | content/cz-products-eel | note | Wrote content/critical-zone/products.json with the 103 approved records, dropping the proposal's provenance field because the schema has no such key and a schema change cannot go on a content branch (C1). source and source_url remain; the full provenance stays in the proposal file. Validator: 103 of 103 pass.
