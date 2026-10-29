@@ -2,3 +2,4 @@
 261028 | task/cz-role-claims | note | Jordan said to continue to the next task without waiting for approval, so T4 was started after T2. The ticket asks for Jordan to confirm or strike each claim; that step is still his.
 261028 | task/cz-role-claims | defect | report said Jordan Read is a "Hub investigator" and that staff "wrote about" CZ data (not in the sources), cut a title, dropped RENCI from the Hub team list, and labelled a claim resting only on Jordan's word as Direct; caught: reviewer
 261029 | task/cz-role-claims | pr | #141 opened against main: https://github.com/jordansread/CUAHSI3-website/pull/141
+261029 | task/cz-role-claims | intervention | Jordan commented on PR 141: the Hub team did include Penn State and RENCI, so drop RENCI; Utah State and Lamont are confirmed but on their own prime awards. Applied to claims 2 and 3 and the Limits note. I read it as: drop RENCI, keep Penn State, add Lamont; the report says that is my reading.
