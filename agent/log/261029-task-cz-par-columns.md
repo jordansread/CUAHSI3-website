@@ -4,3 +4,4 @@
 261029 | task/cz-par-columns | note | Jordan asked whether OpenAlex can find the datasets behind a paper. Tested on 100 random papers: OpenAlex no; DataCite and Scholexplorer found dataset links for 17 (7 supportive, 4 dataset-cites-paper, 6 relation unknown). Ticket created: CUAHSI/CUAHSI3-website#87 (T6c).
 261029 | task/cz-par-columns | intervention | Jordan decided the T6c questions: supporting relations only for programmatic links; a dataset linked to a CZ paper counts as a CZ product in any repository; unknown relation types later; a person's confirmed list of paper-to-dataset links must stay possible. Ticket CUAHSI/CUAHSI3-website#87 updated.
 261029 | task/cz-par-columns | defect | Reviewer: a code comment still said PAR's export had never been seen, and the report did not say which PAR type mappings were untested. Fixed; caught: reviewer.
+261029 | task/cz-par-columns | pr | #149 opened against main: https://github.com/jordansread/CUAHSI3-website/pull/149
