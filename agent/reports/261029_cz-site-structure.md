@@ -71,7 +71,7 @@ The `critical-zone` collection from T5 already fits this: a page file per narrat
 
 1. **Approve option C** (15 pages as listed)? Or A, B or D?
 2. **CZNet clusters on one page** (recommended) or one page each (D)?
-3. **Papers:** add a route that parses the archive publication pages before T11 (recommended, a new ticket), or keep papers to the award-search sample?
+3. **Papers: answered by Jordan on 29 Oct 2026 — include the archive's publications.** His reasoning: the archive work was done purposefully, so its listed publications are assumed CZ-affiliated even when no award names them. That needs a fourth route in the harvest (a new ticket, before T11) that parses the archive's 3,286 publication pages (and the CZNet cluster publication pages fetched in T1 but not parsed). Jordan also said the 231 award-search papers and 10 software items belong in the products list. A possible fifth source for CZNet-era papers is NSF's Public Access Repository (PAR); see the PAR note below.
 4. **Datasets page grouping:** era, then award, then site (recommended), or site first? The epic text (decision 3) says "grouped by award where metadata allows, by observatory otherwise"; the era level is a departure I am proposing, not something already settled.
 
 ## Not checked
@@ -82,3 +82,13 @@ The `critical-zone` collection from T5 already fits this: a page file per narrat
 - The site tags on records come from the sources (archive sub-site, Discover cluster); I did not check them against the awards.
 - News, events and people counts are unique URLs found on listing pages, mostly not fetched, and not unique items.
 - Whether every one of the 703 site-tagged records is a dataset (it follows from 843 minus 140 and from no paper or software item having a site).
+
+## NSF PAR as a source of products per award (Jordan's question, 29 Oct 2026)
+
+What I found by reading PAR (`par.nsf.gov`), with a handful of requests:
+
+- Its `robots.txt` has rules only for named bots (Googlebot is told not to crawl `/search`; several SEO bots are blocked). There is no rule for other agents.
+- **Searching by award works as a plain address:** `https://par.nsf.gov/search/award_ids:2012340` returned a results page (HTTP 200) for the Urban cluster award: 5 resources, all journal articles, each with title, DOI, authors, date and journal. The page has a resource-type filter that includes dataset, software, model and dissertation, so PAR can hold more than papers.
+- **Export exists but did not work for me.** The page offers CSV and XML (limit 5,000) and Excel (limit 2,000); its script builds `https://par.nsf.gov/export/format:csv/award_ids:2012340`. Fetched with a script, that address returned a bot-check page instead of a CSV. I have not tried it in a browser session. I found no documented API.
+- **How complete is it?** Award 2012340 has 5 PAR resources; Discover has 39 records naming it. PAR lists what awardees reported to NSF (mostly journal articles and conference papers, and datasets only when reported), so it is a paper source rather than a data source. It is unlikely to cover the CZO-era awards well, as Jordan suspected; I have not tested any.
+- **Not tested:** other award numbers, whether one query can take several award ids, how many results a page holds, and whether PAR's terms of use allow bulk collection. A scrape of 69 award searches would be about 70 requests at 3 s apart, but the search address is the one Google is told to leave alone, so a person exporting the CSVs in a browser is the safer first step.
