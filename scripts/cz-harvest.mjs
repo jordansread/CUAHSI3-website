@@ -361,8 +361,10 @@ async function routePubs() {
 }
 
 // ---- route 5: PAR exports (T6b) -----------------------------------------------------------------------------------------
-// Reads every .csv and .xml file in --par-dir. PAR's real export layout has NOT been seen (the export returned a bot-check page to
-// a script), so columns are found by name from the lists below, and a file with no title column is reported, not guessed at.
+// Reads every .csv and .xml file in --par-dir. The CSV layout was checked against one real export (award 2012893, 29 Oct 2026): columns TITLE,
+// DOI, PUBLICATION_DATE, JOURNAL_NAME, AWARD_IDS, PRODUCT TYPE ('_' is read as a space). XML has not been seen. Columns are found by name from the
+// lists below, and a file with no title column is reported, not guessed at. Types seen in a real file: Journal Article, Posted Content; the
+// others in PAR_KIND come from the type filter on a saved PAR search page and have not been seen in data.
 const PAR_COLS = {
   title: ['title', 'document title', 'article title', 'name'],
   doi: ['doi', 'doi number', 'digital object identifier', 'identifier doi'],
