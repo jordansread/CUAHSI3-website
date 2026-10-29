@@ -3,3 +3,4 @@
 261029 | task/cz-publications | note | PAR reader written and tested only on a synthetic file; no real export exists (the export returned a bot-check page). A real export is needed to confirm the column names.
 261029 | task/cz-publications | note | Added 'par' to the product source list in scripts/content-schemas.mjs so PAR records validate; CZNet cluster publication pages not parsed.
 261029 | task/cz-publications | defect | Reviewer found PAR reader guesses: default resource type recorded as if PAR said it, unbounded award regex (a date in a file name became an award), PAR page as product address, DOI decode crash on a stray %, DOI taken with a publisher URL suffix, XML namespaces and CDATA. All fixed; caught: reviewer.
+261029 | task/cz-publications | pr | #148 opened against main: https://github.com/jordansread/CUAHSI3-website/pull/148
