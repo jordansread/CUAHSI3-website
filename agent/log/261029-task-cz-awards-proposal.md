@@ -3,3 +3,4 @@
 261029 | task/cz-awards-proposal | note | The branch was first named content/cz-awards; verify.sh failed it because a diff of only agent/ files is a code branch (rule 3). Renamed to task/; the registry change will be its own content/ branch after Jordan approves a list.
 261029 | task/cz-awards-proposal | note | My selection gives 25 observatory-era and 44 CZNet awards; the footprint analysis says 44 CZO and 57 CZNet. The analysis's list was not available, so the difference is unexplained and is the main open question.
 261029 | task/cz-awards-proposal | defect | report called Proposal B 'every' network award (it is what 18 keyword queries returned), gave approximate request counts, left two judgment-call rows and the nsf.gov page checks unlabelled; caught: reviewer (fixed in the report)
+261029 | task/cz-awards-proposal | pr | #143 opened against main: https://github.com/jordansread/CUAHSI3-website/pull/143
