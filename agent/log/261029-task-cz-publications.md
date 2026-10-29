@@ -1,0 +1,6 @@
+261029 | task/cz-publications | start | T6b (CUAHSI/CUAHSI3-website#86): archive publications route and PAR export reader in scripts/cz-harvest.mjs; Jordan's answers on #147 (all types count, archive link allowed if no 404).
+261029 | task/cz-publications | note | Archive route parsed 3,283 of 3,286 pages (3 were 404): 2,837 distinct publications, 1,116 with a DOI; DOI-bearing page count (1,334) matches T2. 5 of 7 DOI-less publisher links were malformed and not repaired (C3).
+261029 | task/cz-publications | note | PAR reader written and tested only on a synthetic file; no real export exists (the export returned a bot-check page). A real export is needed to confirm the column names.
+261029 | task/cz-publications | note | Added 'par' to the product source list in scripts/content-schemas.mjs so PAR records validate; CZNet cluster publication pages not parsed.
+261029 | task/cz-publications | defect | Reviewer found PAR reader guesses: default resource type recorded as if PAR said it, unbounded award regex (a date in a file name became an award), PAR page as product address, DOI decode crash on a stray %, DOI taken with a publisher URL suffix, XML namespaces and CDATA. All fixed; caught: reviewer.
+261029 | task/cz-publications | pr | #148 opened against main: https://github.com/jordansread/CUAHSI3-website/pull/148

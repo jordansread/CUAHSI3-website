@@ -7,12 +7,17 @@
 //   2. Discover      https://contribute.criticalzone.org/api/discovery/search (the public JSON API behind discover.criticalzone.org)
 //   3. Award search  DataCite and Crossref records whose funding names an NSF award that is in content/awards/awards.json
 //                    and is a Critical Zone award (title or sentence mentions the Critical Zone, a CZO or a Network Cluster/Hub)
+//   4. Archive publications (epic ticket T6b, CUAHSI/CUAHSI3-website#86; --only pubs)  the archive's publication detail pages,
+//                    /<site>/publications/pub/<slug>/, read from the saved T1 crawl (no request to the archive). Jordan decided on
+//                    29 October 2026 that every product type counts and that an archive link may stand in for a missing DOI.
+//   5. PAR exports   (--par-dir <folder>) CSV or XML files a person exported from par.nsf.gov in a browser. The script never
+//                    fetches PAR: its export returned a bot-check page to a script.
 // Records are merged on the HydroShare resource id, or on the DOI when there is none; each record keeps one entry per
 // source that named it (url, title, date retrieved).
 //
 // Usage:
 //   node scripts/cz-harvest.mjs [--out agent/reports/<YYMMDD>_cz-harvest-proposal.json] [--cache .agent/harvest/cache]
-//        [--archive-dir .agent/crawl,.agent/crawl2,.agent/crawl3] [--only archive,discover,datacite,crossref]
+//        [--archive-dir .agent/crawl,.agent/crawl2,.agent/crawl3] [--only archive,discover,datacite,crossref,pubs,par] [--par-dir <folder>]
 //        [--delay 3000] [--date YYYY-MM-DD] [--refresh]
 // Every network response is cached under --cache (named by a hash of the URL), so a second run makes no requests unless
 // --refresh is given. --archive-dir lists folders laid out like scripts/legacy-crawl.mjs output (html/<sha1 of url, 12 chars>.html);
@@ -37,7 +42,8 @@ const today = opt('date', new Date().toISOString().slice(0, 10))
 const OUT = opt('out', `agent/reports/${today.slice(2).replaceAll('-', '')}_cz-harvest-proposal.json`)
 const CACHE = opt('cache', '.agent/harvest/cache')
 const ARCHIVE_DIRS = opt('archive-dir', '.agent/crawl,.agent/crawl2,.agent/crawl3').split(',').filter(Boolean)
-const ONLY = new Set(opt('only', 'archive,discover,datacite,crossref').split(','))
+const PAR_DIR = opt('par-dir', '')
+const ONLY = new Set(opt('only', `archive,discover,datacite,crossref,pubs${PAR_DIR ? ',par' : ''}`).split(','))
 const DELAY = Number(opt('delay', '3000'))
 const UA = 'CUAHSI-website-harvest (help@cuahsi.org)'
 const INVENTORY = 'agent/reports/261028_cz-legacy-inventory.csv'
@@ -253,16 +259,189 @@ async function routeCrossref() {
   return out
 }
 
+
+// ---- route 4: archive publication pages (T6b) ---------------------------------------------------------------------------
+// Detail pages: /<site>/publications/pub/<slug>/. Layout (read from saved pages): a link to the section (paper-book, talk-poster,
+// dissertation-thesis, undergrad-thesis, report-proposal), <h4> title, <h5> "authors (year)", <h5 italic> venue, a sidebar "See Full
+// Text" link (a DOI address or the publisher's page) and an <h6> list of every observatory that lists the publication.
+const PUB_TYPES = { 'paper-book': 'paper/book', 'talk-poster': 'talk/poster', 'dissertation-thesis': 'dissertation/thesis', 'undergrad-thesis': 'undergraduate thesis', 'report-proposal': 'report/proposal' }
+const normTitle = t => t.toLowerCase().normalize('NFKD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, ' ').trim()
+const doiIn = s => {
+  const m = String(s || '').replace(/[?#].*$/, '').replace(/\/(abstract|full|pdf|epdf|summary)\/?$/i, '').match(/10\.\d{4,9}\/[^\s"'<>]*[^\s"'<>.,;)\]]/)
+  if (!m) return undefined
+  try { return decodeURIComponent(m[0]).replace(/&amp;/g, '&') } catch { return m[0].replace(/&amp;/g, '&') }
+}
+
+function parsePub(html, url) {
+  const a = html.indexOf('<!-- TITLE, AUTHORS'), b = html.indexOf('<!-- REPRESENTATIVE IMAGE')
+  if (a < 0 || b < a) return null
+  const block = html.slice(a, b)
+  const typeSlug = (block.match(/href="\/[a-z-]+\/publications\/([a-z-]+)\/"/) || [])[1] || 'untyped'   // a few pages have no section link
+  const title = clean((block.match(/<h4[^>]*>([\s\S]*?)<\/h4>/) || [])[1] || '')
+  const h5 = [...block.matchAll(/<h5[^>]*>([\s\S]*?)<\/h5>/g)].map(m => clean(m[1]))
+  const authors = h5[0] || ''
+  const year = Number((authors.match(/\((\d{4})\)\s*$/) || [])[1]) || undefined
+  const venue = (h5[1] || '').replace(/\b(National|Cross-CZO|Boulder|Calhoun|Catalina-Jemez|Christina|Eel|IML|Luquillo|Reynolds|Shale-Hills|Sierra)\b\s*$/, '').trim()
+  let full = (block.match(/<a href="([^"]+)"[^>]*>\s*See Full Text/) || [])[1]
+  if (full && /^https?:\/\/(dx\.)?doi\.org\//i.test(full)) full = full.replace(/\s+|%20/g, '')   // a stray space inside a DOI address (seen on the archive)
+  const doi = doiIn(full) ?? doiIn(html.slice(html.indexOf('<!-- REPRESENTATIVE IMAGE')).match(/DOI:\s*<?[^>]*>?\s*10\.[^<\s]+/)?.[0])
+  const siteOf = (url.match(/czo-archive\.criticalzone\.org\/([^/]+)\//) || [])[1]
+  const sites = new Set(siteOf && CZO_SITES.has(siteOf) ? [siteOf] : [])
+  for (const m of block.matchAll(/<h6[\s\S]*?<\/h6>/g)) for (const l of m[0].matchAll(/href="\/([a-z-]+)\/publications\/"/g)) if (CZO_SITES.has(l[1])) sites.add(l[1])
+  return { typeSlug, title, authors, year, venue, fullText: full && /^https?:/i.test(full) ? full : undefined, doi, sites: [...sites] }
+}
+
+// HTTP status of an address (decision of 29 Oct 2026: an archive link may stand in for a missing DOI if it does not 404). Cached.
+async function linkStatus(url) {
+  const file = path.join(CACHE, 'status-' + sha(url).slice(0, 16))
+  if (!flag('refresh') && fs.existsSync(file)) { stats.cached++; return fs.readFileSync(file, 'utf8') }
+  await sleep(DELAY); stats.requests++
+  let st
+  try { st = String((await fetch(url, { headers: { 'User-Agent': UA }, signal: AbortSignal.timeout(20000) })).status) } catch (e) { return 'error' }   // not cached: try again next run
+  fs.writeFileSync(file, st)
+  return st
+}
+
+async function routePubs() {
+  const rows = fs.readFileSync(INVENTORY, 'utf8').split('\n').slice(1).filter(Boolean).map(l => {
+    const f = [...l.matchAll(/"([^"]*)"/g)].map(m => m[1]); return { url: f[0], status: f[6] }
+  }).filter(r => /\/publications\/pub\/[^/]+\/?$/.test(r.url))
+  const out = { pages: rows.length, parsed: 0, gone_404: 0, not_parseable: [], with_doi: 0, with_external_link_no_doi: 0, archive_link_only: 0,
+    by_type: {}, by_site_page_count: {}, external_links_checked: 0, external_links_not_ok: [], distinct_publications: 0, distinct_with_doi: 0, distinct_by_type: {}, distinct_by_site: {}, merged_across_sites: 0 }
+  const pages = []
+  for (const r of rows) {
+    if (r.status === '404') { out.gone_404++; continue }
+    const { html } = await archivePage(r.url)
+    if (html === null) { out.gone_404++; continue }
+    const p = parsePub(html, r.url)
+    if (!p || !p.title) { out.not_parseable.push(r.url); continue }
+    out.parsed++
+    p.pageUrl = r.url
+    if (p.doi) out.with_doi++; else if (p.fullText) out.with_external_link_no_doi++; else out.archive_link_only++
+    out.by_type[p.typeSlug] = (out.by_type[p.typeSlug] || 0) + 1
+    const site = (r.url.match(/criticalzone\.org\/([^/]+)\//) || [])[1]
+    out.by_site_page_count[site] = (out.by_site_page_count[site] || 0) + 1
+    pages.push(p)
+  }
+  // Group the same publication listed under several observatories: by DOI, else by normalised title + year + type.
+  // A page without a DOI joins a DOI group when title, year and type match.
+  const groups = new Map(), byTitle = new Map()
+  const tkey = p => `${normTitle(p.title)}|${p.year ?? ''}|${p.typeSlug}`   // a talk and a paper with one title are two works
+  for (const p of pages.filter(p => p.doi)) {
+    const k = `doi:${p.doi.toLowerCase()}`
+    if (!groups.has(k)) { groups.set(k, []); byTitle.set(tkey(p), k) }
+    groups.get(k).push(p)
+  }
+  for (const p of pages.filter(p => !p.doi)) {
+    const k = byTitle.get(tkey(p)) ?? `t:${tkey(p)}`
+    if (!groups.has(k)) { groups.set(k, []); byTitle.set(tkey(p), byTitle.get(tkey(p)) ?? k) }
+    groups.get(k).push(p)
+  }
+  for (const g of groups.values()) {
+    const sites = [...new Set(g.flatMap(p => p.sites))]
+    const doi = g.find(p => p.doi)?.doi
+    const fullText = g.find(p => p.fullText)?.fullText
+    const first = [...g].sort((a, b) => a.pageUrl.localeCompare(b.pageUrl))[0]
+    let url = doi ? `https://doi.org/${doi}` : fullText || first.pageUrl
+    if (!doi && fullText) {   // no DOI: the publisher's address must answer, or the archive page stands in
+      out.external_links_checked++
+      const st = await linkStatus(fullText)
+      if (['404', '410', '400', 'error'].includes(st)) {   // anything that is not a 404 passes, as Jordan decided; a 400 is a malformed address and 'error' is no answer
+         out.external_links_not_ok.push({ url: fullText, status: st }); url = first.pageUrl }
+    }
+    if (g.length > 1 && new Set(g.map(p => p.pageUrl)).size > 1) out.merged_across_sites++
+    out.distinct_publications++
+    if (doi) out.distinct_with_doi++
+    out.distinct_by_type[first.typeSlug] = (out.distinct_by_type[first.typeSlug] || 0) + 1
+    for (const s of sites) out.distinct_by_site[s] = (out.distinct_by_site[s] || 0) + 1
+    for (const p of g) add({ title: p.title, type: 'paper', doi, url, repository: p.venue || undefined, year: p.year, sites },
+      { source: 'czo-archive', source_url: p.pageUrl, title: p.title, resource_type: PUB_TYPES[p.typeSlug] || p.typeSlug, authors: p.authors, ...(p.fullText ? { full_text_url: p.fullText } : {}) })
+  }
+  return out
+}
+
+// ---- route 5: PAR exports (T6b) -----------------------------------------------------------------------------------------
+// Reads every .csv and .xml file in --par-dir. PAR's real export layout has NOT been seen (the export returned a bot-check page to
+// a script), so columns are found by name from the lists below, and a file with no title column is reported, not guessed at.
+const PAR_COLS = {
+  title: ['title', 'document title', 'article title', 'name'],
+  doi: ['doi', 'doi number', 'digital object identifier', 'identifier doi'],
+  url: ['par url', 'url', 'link', 'biblio url'],
+  year: ['publication date', 'date', 'year', 'publication year', 'pub date'],
+  kind: ['resource type', 'type', 'document type', 'product type', 'publication type'],
+  venue: ['journal', 'journal name', 'publisher', 'repository', 'source'],
+  awards: ['award number', 'award numbers', 'award id', 'award ids', 'nsf award', 'grant'],
+}
+const PAR_KIND = { 'journal article': 'paper', 'conference paper': 'paper', 'book chapter': 'paper', book: 'paper', dissertation: 'paper', thesis: 'paper', report: 'paper', article: 'paper',
+  dataset: 'dataset', 'data set': 'dataset', software: 'software', model: 'model' }
+function csvRows(text) {   // RFC 4180: quoted fields, doubled quotes, newlines inside quotes
+  const rows = []; let row = [], f = '', q = false
+  for (let i = 0; i < text.length; i++) {
+    const c = text[i]
+    if (q) { if (c === '"') { if (text[i + 1] === '"') { f += '"'; i++ } else q = false } else f += c }
+    else if (c === '"') q = true
+    else if (c === ',') { row.push(f); f = '' }
+    else if (c === '\n' || c === '\r') { if (c === '\r' && text[i + 1] === '\n') i++; row.push(f); f = ''; if (row.some(x => x !== '')) rows.push(row); row = [] }
+    else f += c
+  }
+  if (f !== '' || row.length) { row.push(f); if (row.some(x => x !== '')) rows.push(row) }
+  return rows
+}
+function xmlRows(text) {   // one record per <record>, <row>, <document>, <item> or <entry> element; children become columns
+  const rows = []
+  for (const m of text.matchAll(/<(record|row|document|item|entry)\b[^>]*>([\s\S]*?)<\/\1>/gi)) {
+    const o = {}
+    for (const c of m[2].matchAll(/<(?:[\w.-]+:)?([A-Za-z_][\w.-]*)\b[^>]*>([\s\S]*?)<\/(?:[\w.-]+:)?\1>/g)) { const k = c[1].toLowerCase().replace(/_/g, ' '); if (!(k in o)) o[k] = clean(c[2].replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, (_, t) => t.replace(/[<>&]/g, ' '))) }   // first of a repeated element wins
+    if (Object.keys(o).length) rows.push(o)
+  }
+  return rows
+}
+function routePar() {
+  if (!PAR_DIR) throw new Error('--only par needs --par-dir <folder>')
+  const out = { folder: PAR_DIR, files: 0, rows: 0, records: 0, skipped_no_title: 0, skipped_no_key: 0, unrecognised_kinds: {}, files_with_no_title_column: [] }
+  for (const name of fs.readdirSync(PAR_DIR).sort()) {
+    if (!/\.(csv|xml)$/i.test(name)) continue
+    out.files++
+    const text = fs.readFileSync(path.join(PAR_DIR, name), 'utf8')
+    let rows
+    if (/\.xml$/i.test(name)) rows = xmlRows(text)
+    else { const [head = [], ...body] = csvRows(text); const h = head.map(x => x.trim().toLowerCase())
+      rows = body.map(r => Object.fromEntries(h.map((k, i) => [k, r[i] ?? '']))) }
+    const col = (row, k) => { for (const n of PAR_COLS[k]) if (row[n] != null && String(row[n]).trim() !== '') return String(row[n]).trim() }
+    if (!rows.length || !rows.some(r => col(r, 'title'))) { out.files_with_no_title_column.push(name); continue }
+    const award = (name.match(/(?<!\d)(\d{7})(?!\d)/) || [])[1]   // assumption: one export per award, the file name carries its number; every row is attributed to it
+    for (const row of rows) {
+      out.rows++
+      const title = clean(col(row, 'title') || '')
+      if (!title) { out.skipped_no_title++; continue }
+      const kindRaw = (col(row, 'kind') || '').toLowerCase()   // '' when the file has no type column: recorded as a paper, resource_type left out
+      const type = !kindRaw ? 'paper' : PAR_KIND[kindRaw] || (out.unrecognised_kinds[kindRaw] = (out.unrecognised_kinds[kindRaw] || 0) + 1, 'paper')
+      const doi = doiIn(col(row, 'doi'))
+      const url = col(row, 'url')
+      const nums = new Set([...(col(row, 'awards') || '').matchAll(/(?<!\d)(\d{7})(?!\d)/g)].map(m => m[1])); if (award) nums.add(award)
+      const year = Number((col(row, 'year') || '').match(/(19|20)\d{2}/)?.[0]) || undefined
+      if (!doi && !(url && /^https?:/i.test(url))) { out.skipped_no_key++; continue }
+      out.records++
+      add({ title, type, doi, url: !doi && url && /^https?:/i.test(url) ? url : undefined,   // with a DOI the product address is the DOI; the PAR page stays in source_url
+         repository: col(row, 'venue'), year, awardNumbers: [...nums] },
+        { source: 'par', source_url: url && /^https?:/i.test(url) ? url : `https://doi.org/${doi}`, title, ...(kindRaw ? { resource_type: kindRaw } : {}), par_file: name })
+    }
+  }
+  return out
+}
+
 // ---- run -------------------------------------------------------------------------------------------------------------
 const routes = {}
 if (ONLY.has('archive')) routes.archive = await routeArchive()
 if (ONLY.has('discover')) routes.discover = await routeDiscover()
 if (ONLY.has('datacite')) routes.datacite = await routeDatacite()
 if (ONLY.has('crossref')) routes.crossref = await routeCrossref()
+if (ONLY.has('pubs')) routes.pubs = await routePubs()
+if (ONLY.has('par')) routes.par = routePar()
 
 // One record can sit under two keys (hs: and doi:); write each once.
 const unique = [...new Set(records.values())]
-const SOURCE_ORDER = ['czo-archive', 'discover', 'datacite', 'crossref']
+const SOURCE_ORDER = ['czo-archive', 'discover', 'datacite', 'crossref', 'par']
 const proposal = unique.map(r => {
   const sources = r.sources
   const primary = SOURCE_ORDER.find(s => sources.some(x => x.source === s))

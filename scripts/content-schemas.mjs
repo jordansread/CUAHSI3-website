@@ -362,7 +362,7 @@ const criticalZoneProduct = z.strictObject({
   year: z.number().int().min(1950).max(2100).optional(),
   access: z.enum(['open', 'restricted']).optional(),
   highlight: z.boolean().optional(),
-  source: z.enum(['czo-archive', 'discover', 'datacite', 'crossref', 'openalex', 'suggested', 'manual']),
+  source: z.enum(['czo-archive', 'discover', 'datacite', 'crossref', 'openalex', 'par', 'suggested', 'manual']),
   source_url: webUrl.optional(),
   date_added: isoDate,
   usage: z.strictObject({
