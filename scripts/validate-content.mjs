@@ -206,11 +206,17 @@ for (const c of selected) {
       arr.forEach((entry, i) => { const k = c.uniqueBy(entry); if (k == null) return; (seen.get(k) ?? seen.set(k, []).get(k)).push(i) })
       for (const [k, idx] of seen) if (idx.length > 1) r.schemaFail.push({ file: `${c.file}[${idx.join(', ')}]`, issues: [`(duplicate): ${idx.length} entries have the same ${c.uniqueLabel ?? 'key'}: ${k}`] })
     }
+    for (const u of c.uniqueKeys ?? []) {   // several keys that must not repeat (a product's DOI and its HydroShare id)
+      const seen = new Map()
+      arr.forEach((entry, i) => { const k = u.by(entry); if (k == null) return; (seen.get(k) ?? seen.set(k, []).get(k)).push(i) })
+      for (const [k, idx] of seen) if (idx.length > 1) r.schemaFail.push({ file: `${c.file}[${idx.join(', ')}]`, issues: [`(duplicate): ${idx.length} entries have the same ${u.label}: ${k}`] })
+    }
     arr.forEach((entry, i) => {
       r.total++
       const label = `${c.file}[${i}]${typeof entry?.slug === 'string' ? ` (${entry.slug})` : typeof entry?.last_name === 'string' ? ` (${entry.first_name} ${entry.last_name})` : ''}`
       const parsed = c.schema.safeParse(entry)
       if (c.name === 'awards' && typeof entry?.id === 'string') refs.awardIds.push(entry.id)
+      if (c.name === 'critical-zone/products.json' && Array.isArray(entry?.awards)) for (const v of entry.awards) refs.awardUses.push({ file: label, value: v })
       if (c.name === 'members/reps.json' && typeof entry?.institution === 'string') refs.memberNames.push(entry.institution.trim())
       if (typeof entry?.slug === 'string') (refs.slugs.get(c.name) ?? refs.slugs.set(c.name, []).get(c.name)).push({ id: label, slug: entry.slug })
       if (parsed.success) r.pass++
@@ -322,23 +328,23 @@ if (selected.some(c => c.name === 'jobs')) {
 
 // awards: every id a research story lists must be in the registry. Needs research; needs the registry too, which a run
 // limited to one collection may not have read (then this is skipped and said so, not failed).
-if (selected.some(c => c.name === 'research')) {
+if (selected.some(c => c.name === 'research' || c.name === 'critical-zone/products.json')) {
   const registryRead = selected.some(c => c.name === 'awards')
   const known = new Set(refs.awardIds)
   const bad = new Map()
   for (const u of refs.awardUses) if (!known.has(u.value)) bad.set(u.value, [...(bad.get(u.value) ?? []), u.file])
   if (!registryRead && only.length && refs.awardUses.length) {
-    skippedXref.push('research awards ids vs content/awards/awards.json: the registry was not read in this partial run')
+    skippedXref.push('research and product awards ids vs content/awards/awards.json: the registry was not read in this partial run')
   } else {
     xref.push({
-      title: 'Every research awards id is in content/awards/awards.json',
+      title: 'Every research and product awards id is in content/awards/awards.json',
       checked: `${refs.awardUses.length} references in ${new Set(refs.awardUses.map(u => u.file)).size} files, ${new Set(refs.awardUses.map(u => u.value)).size} distinct ids, against ${known.size} registry entries${registryRead ? '' : ' (content/awards/awards.json does not exist yet)'}`,
       problems: [...bad].map(([v, files]) => `"${v}" is not an id in content/awards/awards.json${registryRead ? '' : ' (the file does not exist yet)'}; used in ${files.join(', ')}`),
     })
   }
   const used = new Set(refs.awardUses.map(u => u.value))
-  info.push({ title: 'awards: published research stories with no awards key (not yet decided; [] means checked, none): informational', checked: `${refs.awardsUndecided.length} files`, items: refs.awardsUndecided.length ? [`${refs.awardsUndecided.length} files, for example ${refs.awardsUndecided.slice(0, 3).map(f => path.basename(f)).join(', ')}`] : [] })
-  if (registryRead) info.push({ title: 'awards: registry entries no story uses: informational', checked: `${known.size} entries`, items: [...known].filter(id => !used.has(id)) })
+  if (selected.some(c => c.name === 'research')) info.push({ title: 'awards: published research stories with no awards key (not yet decided; [] means checked, none): informational', checked: `${refs.awardsUndecided.length} files`, items: refs.awardsUndecided.length ? [`${refs.awardsUndecided.length} files, for example ${refs.awardsUndecided.slice(0, 3).map(f => path.basename(f)).join(', ')}`] : [] })
+  if (registryRead && selected.some(c => c.name === 'research')) info.push({ title: 'awards: registry entries no story uses: informational', checked: `${known.size} entries`, items: [...known].filter(id => !used.has(id)) })
 }
 
 // images: the file a story's image.src names must exist under public/ and be small enough for a page (a picture is a promise of weight).
