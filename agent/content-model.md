@@ -220,6 +220,21 @@ Files: `virtual-university.md`, `snow-field-school.md`, `summer-institute.md`.
 - **newsletter originates nothing.** It is assembled from `news/` + `research/` entries
   plus an editor's note. This rule is the foundation of automation goal #1 in §2.
 
+### critical-zone/ (added 28 October 2026, epic CUAHSI/CUAHSI3-website#62)
+
+Two file types in `content/critical-zone/`; both optional until the first content change creates them. The schemas are in
+`scripts/content-schemas.mjs` (`criticalZonePage`, `criticalZoneProduct`), not written from memory of the files, because no file exists yet.
+
+- `*.md` : narrative pages. Frontmatter: `title`, `slug`, `summary`, `published`; optional `order`, `updated`, `sources` (URLs the text was
+  written from), `reviewed_by`, `reviewed_on`.
+- `products.json` : an array, one entry per known product. Required: `title`, `type` (dataset, paper, software, model), `source` (czo-archive,
+  discover, datacite, crossref, openalex, suggested, manual), `date_added`, and a `doi` (bare, `10.xxxx/...`) or a `url`. Optional: `hydroshare_id`,
+  `repository`, `awards` (ids in `content/awards/awards.json`), `sites` (observatory or cluster slugs), `era` (czo, cznet), `year`, `access`,
+  `highlight`, `source_url`, `usage` (`views`, `downloads`, `citations`, `as_of`). The validator fails a repeated DOI (case-insensitive) or
+  HydroShare id, and an award id the registry does not have.
+- The validator stops (exit 2, "Not found") if `content/critical-zone/` exists without `products.json`, as for the other JSON collections. The first
+  content change must therefore create `products.json` (an empty `[]` is valid) along with the first page.
+
 ---
 
 ## 4. Cross-linking system
