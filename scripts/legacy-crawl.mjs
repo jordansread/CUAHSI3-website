@@ -5,11 +5,11 @@
 // news item) it fetches only a few per type as samples and records the rest as discovered-but-not-fetched,
 // so counts of detail pages are counts of links found on listing pages, not of pages visited.
 //
-//   node scripts/legacy-crawl.mjs [--out .agent/crawl] [--delay 3000] [--samples 4] [--max 2500] [--all-types archive-dataset,...]
+//   node scripts/legacy-crawl.mjs [--out .agent/crawl] [--delay 3000] [--samples 4] [--max 2500] [--all-types archive-dataset,...] [--seeds-file f] [--skip-fetched pages.csv]
 // --all-types names detail types to fetch in full instead of sampling (T1 found dataset pages were unclassified and ate the cap).
 //
 // Output (in --out): pages.csv (one row per URL), external.csv (outbound link hosts), html/ (fetched pages).
-import { mkdirSync, writeFileSync, readFileSync, existsSync, appendFileSync } from 'node:fs'
+import { mkdirSync, writeFileSync, readFileSync } from 'node:fs'
 import { createHash } from 'node:crypto'
 import { join } from 'node:path'
 
@@ -20,6 +20,11 @@ const SAMPLES = Number(arg('samples', 4))
 const MAX = Number(arg('max', 2500))
 const ALL = new Set((arg('all-types', '') || '').split(',').filter(Boolean))
 const SEEDS = ['https://czo-archive.criticalzone.org/', 'https://criticalzone.org/']
+// --seeds-file: one URL per line, replaces the default seeds. --skip-fetched: a pages.csv from an earlier run; URLs it
+// fetched are not fetched again (they are still not re-queued). Together they make a targeted second pass.
+const SEEDS_FILE = arg('seeds-file', '')
+const SKIP = new Set()
+if (arg('skip-fetched', '')) for (const l of readFileSync(arg('skip-fetched'), 'utf8').split('\n').slice(1)) { const m = l.match(/^"([^"]*)",(?:"[^"]*",){4}"true"/); if (m) SKIP.add(m[1]) }
 const HOSTS = new Set(SEEDS.map(s => new URL(s).host))
 const UA = 'CUAHSI-legacy-inventory/1.0 (site migration inventory; contact help@cuahsi.org)'
 const FILE_EXT = /\.(pdf|docx?|xlsx?|pptx?|zip|csv|png|jpe?g|gif|svg|ico|webp|mp4|mov|css|js|json|xml|txt|webmanifest)(\?|$)/i
@@ -61,7 +66,7 @@ function section(u) {
 
 const sleep = ms => new Promise(r => setTimeout(r, ms))
 const rows = new Map()  // url -> row
-const queue = [...SEEDS.map(norm)]
+const queue = [...new Set((SEEDS_FILE ? readFileSync(SEEDS_FILE, 'utf8').split('\n').map(x => x.trim()).filter(Boolean) : SEEDS).map(norm))]
 const sampled = {}
 const ext = new Map()
 let fetched = 0
@@ -72,7 +77,7 @@ for (const s of queue) rows.set(s, { url: s, from: '(seed)', ...classify(s), sta
 while (queue.length && fetched < MAX) {
   const u = queue.shift()
   const row = rows.get(u)
-  if (row.kind === 'file') continue
+  if (row.kind === 'file' || SKIP.has(u)) continue
   if (row.kind === 'detail') {
     sampled[row.type] = (sampled[row.type] || 0) + 1
     if (sampled[row.type] > SAMPLES && !ALL.has(row.type)) continue
@@ -96,7 +101,7 @@ while (queue.length && fetched < MAX) {
     if (!/^https?:$/.test(t.protocol)) continue
     if (!HOSTS.has(t.host)) { ext.set(t.host, (ext.get(t.host) || 0) + 1); continue }
     const n = norm(t.href)
-    if (!rows.has(n)) { rows.set(n, { url: n, from: u, ...classify(n), status: '', title: '', fetched: false, hasDoi: '', bytes: '' }); queue.push(n) }
+    if (!rows.has(n) && !SKIP.has(n)) { rows.set(n, { url: n, from: u, ...classify(n), status: '', title: '', fetched: false, hasDoi: '', bytes: '' }); queue.push(n) }
   }
   if (fetched % 25 === 0) console.error(`fetched ${fetched}, queued ${queue.length}, known ${rows.size}`)
 }
