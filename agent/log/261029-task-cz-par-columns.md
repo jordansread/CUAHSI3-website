@@ -1,3 +1,4 @@
 261029 | task/cz-par-columns | start | Follow-up to #148 (T6b, CUAHSI/CUAHSI3-website#86): fix PAR reader column names after Jordan's first real export (award 2012893).
 261029 | task/cz-par-columns | note | First real PAR run: header names with underscores were missed (fixed); 19 of 20 rows became records, 3 already in the proposal, 16 new. PAR types 'posted content', 'conference proceeding', 'data paper', 'workshop report' added as papers.
 261029 | task/cz-par-columns | defect | PAR reader's guessed column names did not match the real export (underscores in PUBLICATION_DATE, AWARD_IDS, JOURNAL_NAME); caught: human-review (first real file run).
+261029 | task/cz-par-columns | note | Jordan asked whether OpenAlex can find the datasets behind a paper. Tested on 100 random papers: OpenAlex no; DataCite and Scholexplorer found dataset links for 17 (7 supportive, 4 dataset-cites-paper, 6 relation unknown). Ticket created: CUAHSI/CUAHSI3-website#87 (T6c).
