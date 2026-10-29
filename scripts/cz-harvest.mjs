@@ -369,10 +369,10 @@ const PAR_COLS = {
   url: ['par url', 'url', 'link', 'biblio url'],
   year: ['publication date', 'date', 'year', 'publication year', 'pub date'],
   kind: ['resource type', 'type', 'document type', 'product type', 'publication type'],
-  venue: ['journal', 'journal name', 'publisher', 'repository', 'source'],
+  venue: ['journal name', 'journal', 'publisher', 'repository', 'source'],
   awards: ['award number', 'award numbers', 'award id', 'award ids', 'nsf award', 'grant'],
 }
-const PAR_KIND = { 'journal article': 'paper', 'conference paper': 'paper', 'book chapter': 'paper', book: 'paper', dissertation: 'paper', thesis: 'paper', report: 'paper', article: 'paper',
+const PAR_KIND = { 'journal article': 'paper', 'posted content': 'paper', 'conference proceeding': 'paper', 'data paper': 'paper', 'workshop report': 'paper', 'conference paper': 'paper', 'book chapter': 'paper', book: 'paper', dissertation: 'paper', thesis: 'paper', report: 'paper', article: 'paper',
   dataset: 'dataset', 'data set': 'dataset', software: 'software', model: 'model' }
 function csvRows(text) {   // RFC 4180: quoted fields, doubled quotes, newlines inside quotes
   const rows = []; let row = [], f = '', q = false
@@ -405,7 +405,7 @@ function routePar() {
     const text = fs.readFileSync(path.join(PAR_DIR, name), 'utf8')
     let rows
     if (/\.xml$/i.test(name)) rows = xmlRows(text)
-    else { const [head = [], ...body] = csvRows(text); const h = head.map(x => x.trim().toLowerCase())
+    else { const [head = [], ...body] = csvRows(text); const h = head.map(x => x.trim().toLowerCase().replace(/_/g, ' '))   // PAR writes PUBLICATION_DATE, AWARD_IDS
       rows = body.map(r => Object.fromEntries(h.map((k, i) => [k, r[i] ?? '']))) }
     const col = (row, k) => { for (const n of PAR_COLS[k]) if (row[n] != null && String(row[n]).trim() !== '') return String(row[n]).trim() }
     if (!rows.length || !rows.some(r => col(r, 'title'))) { out.files_with_no_title_column.push(name); continue }
