@@ -6,3 +6,4 @@
 261029 | task/cz-structure | note | Drafted the ticket for the archive-publications route and PAR export reader (agent/reports/261029_cz-ticket-publications-route.md), not created on GitHub. Corrected the structure note: PAR includes datasets and other products, though the one award tried returned only articles.
 261029 | task/cz-structure | pr | #147 opened against main: https://github.com/jordansread/CUAHSI3-website/pull/147
 261029 | task/cz-structure | note | Jordan asked for the publications-route ticket to be created: CUAHSI/CUAHSI3-website#86 (T6b), labels epic:critical-zone and task. Ticket numbers T1..T19 are #63..#85, so T6b is out of order.
+261029 | task/cz-structure | note | Jordan answered the PR #147 decisions: option C (15 pages), clusters on one page, datasets grouped era then award then site; all product types count and an archive link may stand in for a missing DOI if it does not 404. Recorded in the structure note.

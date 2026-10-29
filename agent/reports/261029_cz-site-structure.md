@@ -69,9 +69,11 @@ The `critical-zone` collection from T5 already fits this: a page file per narrat
 
 ## Decisions for Jordan
 
+**Answered on PR #147, 29 Oct 2026: 1 approved (option C, 15 pages), 2 approved (clusters on one page), 3 answered below, 4 approved (era, then award, then site).** The list that follows is kept as asked.
+
 1. **Approve option C** (15 pages as listed)? Or A, B or D?
 2. **CZNet clusters on one page** (recommended) or one page each (D)?
-3. **Papers: answered by Jordan on 29 Oct 2026 — include the archive's publications.** His reasoning: the archive work was done purposefully, so its listed publications are assumed CZ-affiliated even when no award names them. That needs a fourth route in the harvest (a new ticket, before T11) that parses the archive's 3,286 publication pages (and the CZNet cluster publication pages fetched in T1 but not parsed). Jordan also said the 231 award-search papers and 10 software items belong in the products list. A possible fifth source for CZNet-era papers is NSF's Public Access Repository (PAR); see the PAR note below.
+3. **Papers: answered by Jordan on 29 Oct 2026 — include the archive's publications.** His reasoning: the archive work was done purposefully, so its listed publications are assumed CZ-affiliated even when no award names them. That needs a fourth route in the harvest (a new ticket, before T11) that parses the archive's 3,286 publication pages (and the CZNet cluster publication pages fetched in T1 but not parsed). Jordan also said the 231 award-search papers and 10 software items belong in the products list. A possible fifth source for CZNet-era papers is NSF's Public Access Repository (PAR); see the PAR note below. **Jordan, on PR #147: every product type counts (papers, datasets, software and the rest), and an archive link may stand in where no true DOI exists, as long as it does not return 404.**
 4. **Datasets page grouping:** era, then award, then site (recommended), or site first? The epic text (decision 3) says "grouped by award where metadata allows, by observatory otherwise"; the era level is a departure I am proposing, not something already settled.
 
 ## Not checked
