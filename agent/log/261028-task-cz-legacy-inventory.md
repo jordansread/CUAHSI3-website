@@ -8,3 +8,4 @@
 261028 | task/cz-legacy-inventory | note | Second pass done: pass 2 fetched 4,986 pages and ended with an empty queue (cap not hit); pass 3 retried 12 network failures, all 200. Merged: 13,017 URLs found, 7,456 fetched; all 3,286 publication and 919 dataset pages saved. Report and CSV rewritten with merged counts.
 261028 | task/cz-legacy-inventory | correction | the previous note line said pass 2 fetched 4,986 pages; the CSV has 4,956 unique fetched URLs (the script's counter counted 30 duplicate requests). Report corrected. Also: the committed CSV had 798 dataset rows labelled as list pages; relabelled. Caught: reviewer
 261028 | task/cz-legacy-inventory | defect | merged CSV kept pass-1 type labels, so filtering by type gave 121 datasets instead of 919; and --seeds-file did not de-duplicate seeds; caught: reviewer
+261029 | task/cz-legacy-inventory | pr | #139 opened against main: https://github.com/jordansread/CUAHSI3-website/pull/139
