@@ -83,5 +83,481 @@
     "funder": "NOAA (via CIROH)",
     "number": "NA22NWS4320003",
     "text": "This research was supported by the Cooperative Institute for Research to Operations in Hydrology (CIROH) with funding under award {number} from the NOAA Cooperative Institute Program. CUAHSI subaward A25-0364-S008, \"Water Prediction Innovators Summer Institute\"."
+  },
+  {
+    "id": "nsf-0632516",
+    "funder": "NSF",
+    "number": "0632516",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=0632516",
+    "text": "The work is supported by NSF award {number}, \"Establishing a Critical Zone Exploration Network: A Proposal to Fund People and Sites\" (awarded to Pennsylvania State Univ University Park; July 2006 to June 2009)."
+  },
+  {
+    "id": "nsf-0724960",
+    "funder": "NSF",
+    "number": "0724960",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=0724960",
+    "text": "The work is supported by NSF award {number}, \"CZO: Boulder Creek Critical Zone Observatory--Weathered Profile Development in a Rocky Environment and Its Influence on Watershed Hydrology and Biogeochemistry\" (awarded to University of Colorado at Boulder; September 2007 to August 2013)."
+  },
+  {
+    "id": "nsf-0725019",
+    "funder": "NSF",
+    "number": "0725019",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=0725019",
+    "text": "The work is supported by NSF award {number}, \"CZO: Susquehanna/Shale Hills Critical Zone Observatory\" (awarded to Pennsylvania State Univ University Park; November 2007 to October 2013)."
+  },
+  {
+    "id": "nsf-0725097",
+    "funder": "NSF",
+    "number": "0725097",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=0725097",
+    "text": "The work is supported by NSF award {number}, \"CZO: Critical Zone Observatory--Snowline Processes in the Southern Sierra Nevada\" (awarded to University of California - Merced; September 2007 to August 2013)."
+  },
+  {
+    "id": "nsf-0722476",
+    "funder": "NSF",
+    "number": "0722476",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=0722476",
+    "text": "The work is supported by NSF award {number}, \"CZO: Luquillo Critical Zone Observatory\" (awarded to University of Pennsylvania; October 2009 to September 2013)."
+  },
+  {
+    "id": "nsf-0724958",
+    "funder": "NSF",
+    "number": "0724958",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=0724958",
+    "text": "The work is supported by NSF award {number}, \"CZO: Transformative Behavior of Water, Energy and Carbon in the Critical Zone: An Observatory to Quantify Linkages among Ecohydrology, Biogeochemistry, and Landscape Evolution\" (awarded to University of Arizona; September 2009 to September 2013)."
+  },
+  {
+    "id": "nsf-0724971",
+    "funder": "NSF",
+    "number": "0724971",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=0724971",
+    "text": "The work is supported by NSF award {number}, \"CZO: Spatial and temporal integration of carbon and mineral fluxes: a whole watershed approach to quantifying anthropogenic modification of critical zone carbon sequestration.\" (awarded to University of Delaware; October 2009 to September 2013)."
+  },
+  {
+    "id": "nsf-1152274",
+    "funder": "NSF",
+    "number": "1152274",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=1152274",
+    "text": "The work is supported by NSF award {number}, \"Designing a Network of International Critical Zone Observatories (CZO)\" (awarded to Pennsylvania State Univ University Park; November 2011 to October 2013)."
+  },
+  {
+    "id": "nsf-1153164",
+    "funder": "NSF",
+    "number": "1153164",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=1153164",
+    "text": "The work is supported by NSF award {number}, \"Integrated Data Management System for Critical Zone Observatories\" (awarded to University of Colorado at Boulder; April 2012 to April 2013)."
+  },
+  {
+    "id": "nsf-1239281",
+    "funder": "NSF",
+    "number": "1239281",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=1239281",
+    "text": "The work is supported by NSF award {number}, \"Boulder Creek CZO Renewal: Weathered Profile Development in a Rocky Environment and Its Influence on Watershed Hydrology and Biogeochemistry\" (awarded to University of Colorado at Boulder; September 2012 to August 2014)."
+  },
+  {
+    "id": "nsf-1239285",
+    "funder": "NSF",
+    "number": "1239285",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=1239285",
+    "text": "The work is supported by NSF award {number}, \"An Accomplishment-Based Request for Renewal of the Susquehanna-Shale Hills Critical Zone Observatory (SSHO)\" (awarded to Pennsylvania State Univ University Park; September 2012 to August 2014)."
+  },
+  {
+    "id": "nsf-1239521",
+    "funder": "NSF",
+    "number": "1239521",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=1239521",
+    "text": "The work is supported by NSF award {number}, \"CZO: Critical Zone Observatory--Snowline Processes in the Southern Sierra Nevada\" (awarded to University of California - Merced; September 2012 to August 2014)."
+  },
+  {
+    "id": "nsf-1332257",
+    "funder": "NSF",
+    "number": "1332257",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=1332257",
+    "text": "The work is supported by NSF award {number}, \"Integrated Data Management System for Critical Zone Observatories\" (awarded to Stroud Water Research Center; December 2012 to March 2016)."
+  },
+  {
+    "id": "nsf-1331408",
+    "funder": "NSF",
+    "number": "1331408",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=1331408",
+    "text": "The work is supported by NSF award {number}, \"Transformative Behavior of Energy, Water and Carbon in the Critical Zone II: Interactions between Long- and Short-term Processes that Control Delivery of Critical Zone Services\" (awarded to University of Arizona; October 2013 to March 2022)."
+  },
+  {
+    "id": "nsf-1331726",
+    "funder": "NSF",
+    "number": "1331726",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=1331726",
+    "text": "The work is supported by NSF award {number}, \"Using the Susquehanna - Shale Hills CZO to Project from the Geological Past to the Anthropocene Future\" (awarded to Pennsylvania State Univ University Park; October 2013 to November 2021)."
+  },
+  {
+    "id": "nsf-1331828",
+    "funder": "NSF",
+    "number": "1331828",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=1331828",
+    "text": "The work is supported by NSF award {number}, \"Boulder Creek CZO II: Evolution, Form, Function, and Future of the Critical Zone\" (awarded to University of Colorado at Boulder; October 2013 to November 2022)."
+  },
+  {
+    "id": "nsf-1331841",
+    "funder": "NSF",
+    "number": "1331841",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=1331841",
+    "text": "The work is supported by NSF award {number}, \"Luquillo CZO: The role of hot spots and hot moments in tropical landscape evolution and functioning of the critical zone\" (awarded to University of New Hampshire; December 2013 to November 2021)."
+  },
+  {
+    "id": "nsf-1331846",
+    "funder": "NSF",
+    "number": "1331846",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=1331846",
+    "text": "The work is supported by NSF award {number}, \"Human and Natural Forcings of Critical Zone Dynamics and Evolution at the Calhoun Critical Zone Observatory\" (awarded to Duke University; December 2013 to November 2021)."
+  },
+  {
+    "id": "nsf-1331872",
+    "funder": "NSF",
+    "number": "1331872",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=1331872",
+    "text": "The work is supported by NSF award {number}, \"Reynolds Creek Carbon Critical Zone Observatory\" (awarded to Idaho State University; December 2013 to May 2024)."
+  },
+  {
+    "id": "nsf-1331906",
+    "funder": "NSF",
+    "number": "1331906",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=1331906",
+    "text": "The work is supported by NSF award {number}, \"Critical Zone Observatory for Intensively Managed Landscapes (IML-CZO)\" (awarded to University of Illinois at Urbana-Champaign; December 2013 to November 2021)."
+  },
+  {
+    "id": "nsf-1331939",
+    "funder": "NSF",
+    "number": "1331939",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=1331939",
+    "text": "The work is supported by NSF award {number}, \"Southern Sierra Critical Zone Observatory\" (awarded to University of California - Merced; October 2013 to December 2022)."
+  },
+  {
+    "id": "nsf-1331940",
+    "funder": "NSF",
+    "number": "1331940",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=1331940",
+    "text": "The work is supported by NSF award {number}, \"The Eel River Critical Zone Observatory: exploring how the critical zone will mediate watershed currencies and ecosystem response in a changing environment\" (awarded to University of California-Berkeley; October 2013 to November 2022)."
+  },
+  {
+    "id": "nsf-1331856",
+    "funder": "NSF",
+    "number": "1331856",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=1331856",
+    "text": "The work is supported by NSF award {number}, \"Christina River Basin CZO: a whole watershed approach to integrating feedbacks between water, mineral and carbon fluxes in human landscapes\" (awarded to University of Delaware; January 2014 to December 2015)."
+  },
+  {
+    "id": "nsf-1360760",
+    "funder": "NSF",
+    "number": "1360760",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=1360760",
+    "text": "The work is supported by NSF award {number}, \"Development of a Critical Zone Observatory National Office\" (awarded to Cornell University; May 2014 to November 2021)."
+  },
+  {
+    "id": "nsf-1445246",
+    "funder": "NSF",
+    "number": "1445246",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=1445246",
+    "text": "The work is supported by NSF award {number}, \"SAVI: Crossing the Boundaries of Critical Zone Science with a Virtual Institute\" (awarded to Pennsylvania State Univ University Park; August 2014 to July 2021)."
+  },
+  {
+    "id": "nsf-2012073",
+    "funder": "NSF",
+    "number": "2012073",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2012073",
+    "text": "The work is supported by NSF award {number}, \"Collaborative Research: Network Cluster: Bedrock controls on the deep critical zone, landscapes, and ecosystems\" (awarded to University of California-Los Angeles; September 2020 to August 2026)."
+  },
+  {
+    "id": "nsf-2012227",
+    "funder": "NSF",
+    "number": "2012227",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2012227",
+    "text": "The work is supported by NSF award {number}, \"Collaborative Research: Network Cluster: Bedrock controls on the deep critical zone, landscapes, and ecosystems\" (awarded to Clemson University; September 2020 to August 2025)."
+  },
+  {
+    "id": "nsf-2012264",
+    "funder": "NSF",
+    "number": "2012264",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2012264",
+    "text": "The work is supported by NSF award {number}, \"Collaborative Research: Network Cluster: Bedrock controls on the deep critical zone, landscapes, and ecosystems\" (awarded to Johns Hopkins University; September 2020 to August 2026)."
+  },
+  {
+    "id": "nsf-2012316",
+    "funder": "NSF",
+    "number": "2012316",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2012316",
+    "text": "The work is supported by NSF award {number}, \"Collaborative Research: Network Cluster: Bedrock controls on the deep critical zone, landscapes, and ecosystems\" (awarded to Dickinson College; September 2020 to August 2027)."
+  },
+  {
+    "id": "nsf-2012353",
+    "funder": "NSF",
+    "number": "2012353",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2012353",
+    "text": "The work is supported by NSF award {number}, \"Collaborative Research: Network Cluster: Bedrock controls on the deep critical zone, landscapes, and ecosystems\" (awarded to Virginia Polytechnic Institute and State University; September 2020 to August 2027)."
+  },
+  {
+    "id": "nsf-2012357",
+    "funder": "NSF",
+    "number": "2012357",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2012357",
+    "text": "The work is supported by NSF award {number}, \"Collaborative Research: Network Cluster: Bedrock controls on the deep critical zone, landscapes, and ecosystems\" (awarded to University of Wyoming; September 2020 to August 2027)."
+  },
+  {
+    "id": "nsf-2012408",
+    "funder": "NSF",
+    "number": "2012408",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2012408",
+    "text": "The work is supported by NSF award {number}, \"Collaborative Research: Network Cluster: Bedrock controls on the deep critical zone, landscapes, and ecosystems\" (awarded to Colorado School of Mines; September 2020 to August 2026)."
+  },
+  {
+    "id": "nsf-2011910",
+    "funder": "NSF",
+    "number": "2011910",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2011910",
+    "text": "The work is supported by NSF award {number}, \"Collaborative Research: Network Cluster: Dust in the Critical Zone from the Great Basin to the Rocky Mountains\" (awarded to Utah State University; September 2020 to August 2026)."
+  },
+  {
+    "id": "nsf-2012067",
+    "funder": "NSF",
+    "number": "2012067",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2012067",
+    "text": "The work is supported by NSF award {number}, \"Collaborative Research: Network Cluster: Dust in the Critical Zone from the Great Basin to the Rocky Mountains\" (awarded to Salt Lake Community College; September 2020 to August 2026)."
+  },
+  {
+    "id": "nsf-2012082",
+    "funder": "NSF",
+    "number": "2012082",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2012082",
+    "text": "The work is supported by NSF award {number}, \"RUI: Collaborative Research: Network Cluster: Dust in the Critical Zone from the Great Basin to the Rocky Mountains\" (awarded to Middlebury College; September 2020 to August 2026)."
+  },
+  {
+    "id": "nsf-2012091",
+    "funder": "NSF",
+    "number": "2012091",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2012091",
+    "text": "The work is supported by NSF award {number}, \"RUI: Collaborative Research: Network Cluster: Dust in the Critical Zone from the Great Basin to the Rocky Mountains\" (awarded to University of Utah; September 2020 to August 2026)."
+  },
+  {
+    "id": "nsf-2012093",
+    "funder": "NSF",
+    "number": "2012093",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2012093",
+    "text": "The work is supported by NSF award {number}, \"RUI: Collaborative Research: Network Cluster: Dust in the Critical Zone from the Great Basin to the Rocky Mountains\" (awarded to Brigham Young University; September 2020 to August 2026)."
+  },
+  {
+    "id": "nsf-2012403",
+    "funder": "NSF",
+    "number": "2012403",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2012403",
+    "text": "The work is supported by NSF award {number}, \"Collaborative Research: Network Cluster: Geomicrobiology and Biogeochemistry in the Critical Zone\" (awarded to University of New Hampshire; September 2020 to March 2022)."
+  },
+  {
+    "id": "nsf-2012633",
+    "funder": "NSF",
+    "number": "2012633",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2012633",
+    "text": "The work is supported by NSF award {number}, \"Collaborative Research: Network Cluster: Geomicrobiology and Biogeochemistry in the Critical Zone\" (awarded to University of Kansas Center for Research Inc; September 2020 to August 2026)."
+  },
+  {
+    "id": "nsf-2012878",
+    "funder": "NSF",
+    "number": "2012878",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2012878",
+    "text": "The work is supported by NSF award {number}, \"Collaborative Research: Network Cluster: Geomicrobiology and Biogeochemistry in the Critical Zone\" (awarded to University of California-Riverside; September 2020 to August 2026)."
+  },
+  {
+    "id": "nsf-2217532",
+    "funder": "NSF",
+    "number": "2217532",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2217532",
+    "text": "The work is supported by NSF award {number}, \"Collaborative Research: Network Cluster: Geomicrobiology and Biogeochemistry in the Critical Zone\" (awarded to Florida International University; October 2021 to September 2026)."
+  },
+  {
+    "id": "nsf-2012475",
+    "funder": "NSF",
+    "number": "2012475",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2012475",
+    "text": "The work is supported by NSF award {number}, \"Network Cluster: Patterns and controls of ecohydrology, CO2 fluxes, and nutrient availability in pedogenic carbonate-dominated dryland critical zones\" (awarded to University of Texas at El Paso; September 2020 to August 2027)."
+  },
+  {
+    "id": "nsf-2012310",
+    "funder": "NSF",
+    "number": "2012310",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2012310",
+    "text": "The work is supported by NSF award {number}, \"Collaborative Research Network Cluster: Quantifying controls and feedbacks of dynamic storage on critical zone processes in western montane watersheds\" (awarded to Board of Regents, NSHE, obo University of Nevada, Reno; September 2020 to August 2026)."
+  },
+  {
+    "id": "nsf-2012669",
+    "funder": "NSF",
+    "number": "2012669",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2012669",
+    "text": "The work is supported by NSF award {number}, \"Collaborative Research: Network Cluster: Quantifying controls and feedbacks of dynamic storage on critical zone processes in western montane watersheds\" (awarded to University of Colorado at Boulder; September 2020 to August 2027)."
+  },
+  {
+    "id": "nsf-2012730",
+    "funder": "NSF",
+    "number": "2012730",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2012730",
+    "text": "The work is supported by NSF award {number}, \"Collaborative Research: Network Cluster: Quantifying controls and feedbacks of dynamic storage on critical zone processes in western montane watersheds\" (awarded to Colorado School of Mines; September 2020 to August 2026)."
+  },
+  {
+    "id": "nsf-2012796",
+    "funder": "NSF",
+    "number": "2012796",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2012796",
+    "text": "The work is supported by NSF award {number}, \"Collaborative Research: Network Cluster: Quantifying controls and feedbacks of dynamic storage on critical zone processes in western montane watersheds\" (awarded to Oregon State University; September 2020 to February 2027)."
+  },
+  {
+    "id": "nsf-2012821",
+    "funder": "NSF",
+    "number": "2012821",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2012821",
+    "text": "The work is supported by NSF award {number}, \"Collaborative Research: Network Cluster: Quantifying controls and feedbacks of dynamic storage on critical zone processes in western montane watersheds\" (awarded to University of California-Santa Barbara; September 2020 to August 2026)."
+  },
+  {
+    "id": "nsf-2011941",
+    "funder": "NSF",
+    "number": "2011941",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2011941",
+    "text": "The work is supported by NSF award {number}, \"Collaborative Research: Network Cluster: The Coastal Critical Zone: Processes that transform landscapes and fluxes between land and sea\" (awarded to University of Maryland, College Park; September 2020 to August 2026)."
+  },
+  {
+    "id": "nsf-2012319",
+    "funder": "NSF",
+    "number": "2012319",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2012319",
+    "text": "The work is supported by NSF award {number}, \"Collaborative Research: Network Cluster: The Coastal Critical Zone: Processes that transform landscapes and fluxes between land and sea\" (awarded to George Washington University; September 2020 to August 2026)."
+  },
+  {
+    "id": "nsf-2012322",
+    "funder": "NSF",
+    "number": "2012322",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2012322",
+    "text": "The work is supported by NSF award {number}, \"Collaborative Research: Network Cluster: The Coastal Critical Zone: Processes that transform landscapes and fluxes between land and sea\" (awarded to Trustees of Boston University; September 2020 to August 2025)."
+  },
+  {
+    "id": "nsf-2012484",
+    "funder": "NSF",
+    "number": "2012484",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2012484",
+    "text": "The work is supported by NSF award {number}, \"Collaborative Research: Network Cluster: The Coastal Critical Zone: Processes that transform landscapes and fluxes between land and sea\" (awarded to University of Delaware; September 2020 to August 2026)."
+  },
+  {
+    "id": "nsf-2012670",
+    "funder": "NSF",
+    "number": "2012670",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2012670",
+    "text": "The work is supported by NSF award {number}, \"Collaborative Research: Network Cluster: The Coastal Critical Zone: Processes that transform landscapes and fluxes between land and sea\" (awarded to College of William & Mary Virginia Institute of Marine Science; September 2020 to August 2026)."
+  },
+  {
+    "id": "nsf-2011617",
+    "funder": "NSF",
+    "number": "2011617",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2011617",
+    "text": "The work is supported by NSF award {number}, \"Collaborative Research: Network Cluster: Urban Critical Zone processes along the Piedmont-Coastal Plain transition\" (awarded to Temple University; September 2020 to August 2026)."
+  },
+  {
+    "id": "nsf-2012107",
+    "funder": "NSF",
+    "number": "2012107",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2012107",
+    "text": "The work is supported by NSF award {number}, \"Collaborative Research: Network Cluster: Urban Critical Zone processes along the Piedmont-Coastal Plain transition\" (awarded to Pennsylvania State Univ University Park; September 2020 to August 2027)."
+  },
+  {
+    "id": "nsf-2012313",
+    "funder": "NSF",
+    "number": "2012313",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2012313",
+    "text": "The work is supported by NSF award {number}, \"Collaborative Research: Network Cluster: Urban Critical Zone processes along the Piedmont-Coastal Plain transition\" (awarded to Towson University; September 2020 to August 2027)."
+  },
+  {
+    "id": "nsf-2012336",
+    "funder": "NSF",
+    "number": "2012336",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2012336",
+    "text": "The work is supported by NSF award {number}, \"Collaborative Research: Network Cluster: Urban Critical Zone processes along the Piedmont-Coastal Plain transition\" (awarded to Research Foundation CUNY - Advanced Science Research Center; September 2020 to August 2026)."
+  },
+  {
+    "id": "nsf-2012340",
+    "funder": "NSF",
+    "number": "2012340",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2012340",
+    "text": "The work is supported by NSF award {number}, \"Collaborative Research: Network Cluster: Urban Critical Zone processes along the Piedmont-Coastal Plain transition\" (awarded to University of Maryland Baltimore County; September 2020 to August 2027)."
+  },
+  {
+    "id": "nsf-2012344",
+    "funder": "NSF",
+    "number": "2012344",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2012344",
+    "text": "The work is supported by NSF award {number}, \"Collaborative Research: Network Cluster: Urban Critical Zone processes along the Piedmont-Coastal Plain transition\" (awarded to Cary Institute of Ecosystem Studies, Inc.; September 2020 to August 2027)."
+  },
+  {
+    "id": "nsf-2012409",
+    "funder": "NSF",
+    "number": "2012409",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2012409",
+    "text": "The work is supported by NSF award {number}, \"Collaborative Research: Network Cluster: Urban Critical Zone processes along the Piedmont-Coastal Plain transition\" (awarded to University of Pittsburgh; September 2020 to August 2026)."
+  },
+  {
+    "id": "nsf-2012616",
+    "funder": "NSF",
+    "number": "2012616",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2012616",
+    "text": "The work is supported by NSF award {number}, \"Collaborative Research: Network Cluster: Urban Critical Zone processes along the Piedmont-Coastal Plain transition\" (awarded to University of Maryland, College Park; September 2020 to May 2027)."
+  },
+  {
+    "id": "nsf-2011346",
+    "funder": "NSF",
+    "number": "2011346",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2011346",
+    "text": "The work is supported by NSF award {number}, \"Collaborative Research: Network Cluster: Using Big Data approaches to assess ecohydrological resilience across scales\" (awarded to Nevada System of Higher Education, Desert Research Institute; September 2020 to August 2025)."
+  },
+  {
+    "id": "nsf-2011439",
+    "funder": "NSF",
+    "number": "2011439",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2011439",
+    "text": "The work is supported by NSF award {number}, \"Collaborative Research: Network Cluster: Using Big Data approaches to assess ecohydrological resilience across scales\" (awarded to Brigham Young University; September 2020 to August 2025)."
+  },
+  {
+    "id": "nsf-2012080",
+    "funder": "NSF",
+    "number": "2012080",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2012080",
+    "text": "The work is supported by NSF award {number}, \"Collaborative Research: Network Cluster: Using Big Data approaches to assess ecohydrological resilience across scales\" (awarded to University of Kansas Center for Research Inc; September 2020 to August 2026)."
+  },
+  {
+    "id": "nsf-2012123",
+    "funder": "NSF",
+    "number": "2012123",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2012123",
+    "text": "The work is supported by NSF award {number}, \"Collaborative Research: Network Cluster: Using Big Data approaches to assess ecohydrological resilience across scales\" (awarded to University of Vermont & State Agricultural College; September 2020 to August 2026)."
+  },
+  {
+    "id": "nsf-2012188",
+    "funder": "NSF",
+    "number": "2012188",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2012188",
+    "text": "The work is supported by NSF award {number}, \"Collaborative Research: Network Cluster: Using Big Data approaches to assess ecohydrological resilience across scales\" (awarded to Board of Regents, NSHE, obo University of Nevada, Reno; September 2020 to August 2026)."
+  },
+  {
+    "id": "nsf-2012593",
+    "funder": "NSF",
+    "number": "2012593",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2012593",
+    "text": "The work is supported by NSF award {number}, \"Collaborative Research: Network Hub: Enabling, Supporting, and Communicating Critical Zone Research.\" (awarded to Columbia University; August 2020 to August 2026)."
+  },
+  {
+    "id": "nsf-2012748",
+    "funder": "NSF",
+    "number": "2012748",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2012748",
+    "text": "The work is supported by NSF award {number}, \"Collaborative Research: Network Hub: Enabling, Supporting, and Communicating Critical Zone Research.\" (awarded to Utah State University; September 2020 to August 2026)."
+  },
+  {
+    "id": "nsf-2012850",
+    "funder": "NSF",
+    "number": "2012850",
+    "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2012850",
+    "text": "The work is supported by NSF award {number}, \"Network Cluster CINet: Critical Interface Network in Intensively Managed Landscapes\" (awarded to University of Illinois at Urbana-Champaign; September 2020 to August 2026)."
   }
 ]
