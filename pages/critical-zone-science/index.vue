@@ -36,7 +36,7 @@ const places = [
   {
     kicker: 'CZO ARCHIVE',
     title: 'The Critical Zone Observatories',
-    text: 'The archive of the ten NSF observatories, 2007 to 2020: their data, publications, news and people. It is being retired by August 2027.',
+    text: 'The archive of the ten NSF observatories, 2007 to 2020: their data, publications, news and people. It is being retired (August 2027 at the latest).',
     href: 'https://czo-archive.criticalzone.org',
   },
   {
@@ -48,7 +48,7 @@ const places = [
   {
     kicker: 'DISCOVER',
     title: 'Critical Zone data catalog',
-    text: 'The search over Critical Zone data held in HydroShare and elsewhere. It retires with the other two sites.',
+    text: 'A search over Critical Zone datasets. It is being retired along with the other two sites.',
     href: 'https://discover.criticalzone.org',
   },
 ]
@@ -88,7 +88,7 @@ const places = [
     <div class="mx-auto site-container max-w-site py-[64px]">
       <h2 class="font-['Schibsted_Grotesk'] font-bold text-[28px] leading-[1.1] text-navy tracking-[-.016em] m-[0_0_8px]">Where the work lives today</h2>
       <p class="font-['Hanken_Grotesk'] font-normal text-[16px] leading-[1.6] text-[#3a4d57] max-w-[640px] m-[0_0_28px]">
-        Until the pages on this site are complete, the original sites remain the place to look. They are being retired, so links to papers and datasets will move to permanent addresses (DOIs) wherever they exist.
+        The original sites remain the place to look for now. All three are being retired, the last by August 2027 at the latest.
       </p>
       <div class="grid grid-cols-[1fr] gap-[18px] sm:grid-cols-[repeat(2,1fr)] min-[900px]:grid-cols-[repeat(3,1fr)]">
         <a v-for="p in places" :key="p.href" :href="p.href" target="_blank" rel="noopener"
