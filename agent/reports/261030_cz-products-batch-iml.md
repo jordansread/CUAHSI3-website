@@ -265,3 +265,9 @@ Every DOI was looked up at doi.org (handle lookup) and every HydroShare address 
 ## Sample check (rule 12)
 
 Read in the harvest file, each matched to its row above: papers with a DOI (floodplains and terraces, 10.1002/esp.4234; UAS and LSPIV rapids; tillage disturbance chemistry), archive-page-only papers (hillslope soils at Clear Creek; Smart Sensor Technology and Infrastructure Safety; the IML-CZO 2015 annual report), datasets (Upper Sangamon GIS, Iowa GIS 2017, Bondville flux tower). Not opened by hand: the three repaired DOIs' pages, beyond the Crossref lookup and the doi.org handle answer.
+
+## Corrections after approval (found building the batch and in review)
+
+- The three repaired ASCE records now also carry the repaired address (`url`), not the damaged one the harvest held.
+- "A Changing Climatology of Precipitation Persistence across the United States Using Information-Based Measures" (2019) was in the table with the DOI `10.1175/JHM-D-19-0013.s1`, which Crossref types as a supplementary component. The article is `10.1175/JHM-D-19-0013.1` (same title, 1 August 2019, journal article; answers at doi.org). Loaded with the article DOI.
+- Two papers held back by me (a PKU medical-genetics paper, a malaria-modelling paper): see the log and the PR.

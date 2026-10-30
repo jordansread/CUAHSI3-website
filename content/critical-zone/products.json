@@ -5835,8 +5835,8 @@
   {
     "title": "A Changing Climatology of Precipitation Persistence across the United States Using Information-Based Measures",
     "type": "paper",
-    "doi": "10.1175/JHM-D-19-0013.s1",
-    "url": "https://doi.org/10.1175/JHM-D-19-0013.s1",
+    "doi": "10.1175/JHM-D-19-0013.1",
+    "url": "https://doi.org/10.1175/JHM-D-19-0013.1",
     "repository": "Journal of Hydrometeorology",
     "sites": [
       "iml"
@@ -6743,7 +6743,7 @@
     "title": "High-frequency diel dissolved Oxygen stream data modeled for variable temperature and scale",
     "type": "paper",
     "doi": "10.1061/(ASCE)EE.1943-7870.0000102",
-    "url": "https://doi.org/10.1061/ASCEEE.1943-7870.0000102",
+    "url": "https://doi.org/10.1061/(ASCE)EE.1943-7870.0000102",
     "repository": "Journal of Environmental Engineering-ASCE 2009.135:1250-1256",
     "sites": [
       "iml"
@@ -8751,7 +8751,7 @@
     "title": "Uncertainty of weekly nitrate forecasts using artificial neural networks",
     "type": "paper",
     "doi": "10.1061/(ASCE)0733-9372(2003)129:3(267)",
-    "url": "https://doi.org/10.1061/(ASCE)0733-9372(2003)129:3(267",
+    "url": "https://doi.org/10.1061/(ASCE)0733-9372(2003)129:3(267)",
     "repository": "Journal of Environmental Engineering 129(3):267-274",
     "sites": [
       "iml"
@@ -8796,7 +8796,7 @@
     "title": "Upland erosion modeling in a semi-humid environment via the Water Erosion Prediction Project model",
     "type": "paper",
     "doi": "10.1061/(ASCE)0733-9437(2008)134:6(796)",
-    "url": "https://doi.org/10.1061/(ASCE)0733-9437(2008)134:6(796",
+    "url": "https://doi.org/10.1061/(ASCE)0733-9437(2008)134:6(796)",
     "repository": "Journal of Irrigation and Drainage Engineering",
     "sites": [
       "iml"
