@@ -1,8 +1,8 @@
 # Visual baseline
 
-Full-page screenshots of 27 routes at 390px and 1280px (54 images), taken from a build of `main` at
-`6fb834c` (30 October 2026; the Critical Zone Science page and the footer link, #156). The set before it was taken at
-`b5fefd7` (8 October 2026), and the one before that at `2ae92b5`, before the Tailwind migration
+Full-page screenshots of 28 routes at 390px and 1280px (56 images), taken from a build of `main` at
+`e4750bb` (30 October 2026; the Critical Zone Science datasets list and the list section on the Critical Zone Science page, #159). The set before it was taken
+at `6fb834c` (the Critical Zone Science page and the footer link, #156), the one before that at `b5fefd7` (8 October 2026), and the first at `2ae92b5`, before the Tailwind migration
 (roadmap task 4), which every later change had made out of date (52 of 52 failed, including `/contact`, whose own
 content had not changed: only the shared header and footer had). They are the reference that later pull requests are compared against.
 
@@ -14,7 +14,7 @@ content had not changed: only the shared header and footer had). They are the re
 
 ```bash
 npm run build:search       # build the branch first
-npm run visual:compare     # 54 comparisons; any changed pixel fails. Nothing else may be using port 4100.
+npm run visual:compare     # 56 comparisons; any changed pixel fails. Nothing else may be using port 4100.
 ```
 
 A failure writes `*-expected.png`, `*-actual.png` and `*-diff.png` under `.agent/visual/test-results/`
@@ -43,7 +43,7 @@ shows grey boxes there, so it does not check that the real thumbnails display).
   a different browser version or different font rendering can change pixels without any site change. If that
   happens, re-baseline from `main` on that machine in its own PR.
 - The fonts come from Google Fonts at test time, so the test needs network access.
-- It covers 27 pages, one per template, not every built page. A change that only affects another page of the
+- It covers 28 pages, one per template (the papers list shares its template with the datasets list and has no image of its own), not every built page. A change that only affects another page of the
   same template is covered; a change to a page with unusual content may not be.
 - The redirect stubs in `pages/highlights/` are not covered: they send the browser to `/about/impact`, so a
   screenshot of `/highlights/` is the Impact page again (the first version of the baseline had that duplicate).
