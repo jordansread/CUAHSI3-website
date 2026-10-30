@@ -27,7 +27,7 @@ export const CZ_SITE_NAMES: Record<string, string> = {
 export const CZ_ERA_NAMES: Record<string, string> = {
   czo: 'Critical Zone Observatories (2007 to 2020)',
   cznet: 'Critical Zone Collaborative Network (2020 on)',
-  none: 'Before the Critical Zone Observatories (era not recorded)',
+  none: 'Era not recorded',
 }
 
 // The first site that is not the cross-CZO "national" tag, or "national" when that is all there is.

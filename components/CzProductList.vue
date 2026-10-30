@@ -4,7 +4,7 @@
 //
 // Grouping: a product is listed once, under its first award (`awards[0]`). Products with no award recorded are grouped by
 // their primary site instead (see czPrimarySite), because most of the list names no award. Each group is its own <table>
-// with a caption, so a reader with a screen reader can move between groups and the page works with no client script.
+// labelled by its heading, so a reader with a screen reader can move between groups and the page works with no client script.
 //
 // The data comes from a bare JSON array, which Nuxt Content wraps in `body` (footgun 7). `transform` keeps only the fields
 // this component shows, so the page payload does not carry whole records.
@@ -17,7 +17,7 @@ type Row = {
   title: string; type: string; doi?: string; url?: string; repository?: string; awards?: string[]
   sites?: string[]; era?: string; year?: number; date_added?: string
 }
-type Award = { id: string; number: string; url?: string; text: string }
+type Award = { id: string; funder?: string; number: string; url?: string; text: string }
 
 const { data: file } = await useAsyncData(`cz-products-${props.type ?? 'all'}-${props.site ?? 'all'}`, () =>
   queryContent('critical-zone').where({ _extension: 'json' }).findOne().catch(() => null),
@@ -48,7 +48,10 @@ type Group = { id: string; label: string; sub?: string; href?: string; rows: Row
 type Era = { id: string; label: string; groups: Group[]; count: number }
 
 const siteName = (slug: string) => CZ_SITE_NAMES[slug] ?? slug
-const byTitle = (a: Row, b: Row) => (b.year ?? 0) - (a.year ?? 0) || a.title.localeCompare(b.title)
+// Plain comparisons, not localeCompare: the build (Node) and the visitor's browser may order accented titles differently, and a
+// different order on the first browser render puts the wrong content in each row (see footgun 13 for the same kind of fault).
+const cmp = (a: string, b: string) => (a < b ? -1 : a > b ? 1 : 0)
+const byTitle = (a: Row, b: Row) => (b.year ?? 0) - (a.year ?? 0) || cmp(a.title, b.title)
 
 const eras = computed<Era[]>(() => {
   const out: Era[] = []
@@ -62,7 +65,7 @@ const eras = computed<Era[]>(() => {
       let g: Group
       if (first) {
         const id = `${eraKey}-${first}`
-        g = groups.get(id) ?? { id, label: `NSF award ${award?.number ?? first}`, sub: awardTitle(award), href: award?.url, rows: [] }
+        g = groups.get(id) ?? { id, label: `${award?.funder ?? 'Award'} award ${award?.number ?? first}`, sub: awardTitle(award), href: award?.url, rows: [] }
         groups.set(id, g)
       } else {
         const site = czPrimarySite(r.sites)
@@ -73,7 +76,7 @@ const eras = computed<Era[]>(() => {
       g.rows.push(r)
     }
     // Groups with an award first, then the rest by site name.
-    const list = [...groups.values()].sort((a, b) => Number(!!b.href) - Number(!!a.href) || a.label.localeCompare(b.label))
+    const list = [...groups.values()].sort((a, b) => Number(!!b.href) - Number(!!a.href) || cmp(a.label, b.label))
     list.forEach(g => g.rows.sort(byTitle))
     out.push({ id: `era-${eraKey}`, label: CZ_ERA_NAMES[eraKey], groups: list, count: inEra.length })
   }
@@ -117,7 +120,7 @@ const siteList = (r: Row) => (r.sites ?? []).filter(s => s !== 'national' || (r.
       <h2 class="font-['Schibsted_Grotesk'] font-bold text-[28px] leading-[1.1] text-navy tracking-[-.016em] m-[0_0_24px]">{{ e.label }}</h2>
 
       <div v-for="g in e.groups" :id="g.id" :key="g.id" class="mb-[36px] scroll-mt-[96px]">
-        <h3 class="font-['Schibsted_Grotesk'] font-bold text-[20px] leading-[1.2] text-navy m-[0_0_6px]">
+        <h3 :id="`${g.id}-title`" class="font-['Schibsted_Grotesk'] font-bold text-[20px] leading-[1.2] text-navy m-[0_0_6px]">
           <a v-if="g.href" :href="g.href" target="_blank" rel="noopener" class="text-navy">{{ g.label }}</a>
           <template v-else>{{ g.label }}</template>
           <span class="font-mono font-normal text-[12px] text-muted"> · {{ nf(g.rows.length) }}</span>
@@ -125,8 +128,7 @@ const siteList = (r: Row) => (r.sites ?? []).filter(s => s !== 'national' || (r.
         <p v-if="g.sub" class="font-['Hanken_Grotesk'] text-[14px] leading-[1.5] text-muted max-w-[760px] m-[0_0_12px]">{{ g.sub }}</p>
 
         <div class="overflow-x-auto">
-          <table class="w-full border-collapse text-left font-['Hanken_Grotesk'] text-[14.5px] leading-[1.45] text-[#3a4d57]">
-            <caption class="sr-only">{{ g.label }}{{ g.sub ? ': ' + g.sub : '' }}</caption>
+          <table :aria-labelledby="`${g.id}-title`" class="w-full border-collapse text-left font-['Hanken_Grotesk'] text-[14.5px] leading-[1.45] text-[#3a4d57]">
             <thead>
               <tr class="font-mono text-[11.5px] tracking-[.05em] uppercase text-muted">
                 <th scope="col" class="font-normal p-[8px_10px] border-b border-b-[rgba(15,33,43,.15)]">Title</th>

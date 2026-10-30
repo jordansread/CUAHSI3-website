@@ -17,7 +17,7 @@ useHead({
       </template>
       <template #kicker>Critical Zone Science</template>
       <template #title>Every known Critical Zone paper</template>
-      <template #lead>Publications from the Critical Zone Observatories and the Critical Zone Collaborative Network (journal articles, books, reports and theses), grouped by era, then award, then observatory or cluster. Each title links to the publisher, by DOI, or to the archive page where there is none.</template>
+      <template #lead>Publications from the Critical Zone Observatories and the Critical Zone Collaborative Network (journal articles, books, reports and theses), grouped by era, then award, then observatory or cluster. Each title links to where it lives: its DOI, or the CZO archive page where it has none.</template>
       <p class="font-['Hanken_Grotesk'] font-normal text-[14px] leading-[normal] text-muted m-[22px_0_0]">Also here:
         <NuxtLink to="/critical-zone-science/datasets" class="text-water font-medium">Datasets</NuxtLink>
       </p>
