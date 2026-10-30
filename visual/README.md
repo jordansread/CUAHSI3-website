@@ -43,7 +43,7 @@ shows grey boxes there, so it does not check that the real thumbnails display).
   a different browser version or different font rendering can change pixels without any site change. If that
   happens, re-baseline from `main` on that machine in its own PR.
 - The fonts come from Google Fonts at test time, so the test needs network access.
-- It covers 27 of the 122 built pages (one per template). A change that only affects another page of the
+- It covers 27 pages, one per template, not every built page. A change that only affects another page of the
   same template is covered; a change to a page with unusual content may not be.
 - The redirect stubs in `pages/highlights/` are not covered: they send the browser to `/about/impact`, so a
   screenshot of `/highlights/` is the Impact page again (the first version of the baseline had that duplicate).
