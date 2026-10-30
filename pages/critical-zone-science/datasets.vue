@@ -1,7 +1,7 @@
 <script setup lang="ts">
 useHead({
   title: 'Datasets · Critical Zone Science',
-  meta: [{ name: 'description', content: 'The full list of known Critical Zone datasets, grouped by era, award and observatory, each linked to where it lives.' }]
+  meta: [{ name: 'description', content: 'The full list of known Critical Zone datasets, with software and models, grouped by era, award and observatory, each linked to where it lives.' }]
 })
 </script>
 
@@ -17,7 +17,7 @@ useHead({
       </template>
       <template #kicker>Critical Zone Science</template>
       <template #title>Every known Critical Zone dataset</template>
-      <template #lead>Datasets, with any software and models that go with them, from the Critical Zone Observatories and the Critical Zone Collaborative Network, grouped by era, then award, then observatory or cluster. Each title links to where the dataset lives today, with a DOI where it has one.</template>
+      <template #lead>Datasets, and any software and models in the list, from the Critical Zone Observatories and the Critical Zone Collaborative Network, grouped by era, then award, then observatory or cluster. Each title links to where the dataset lives today, with a DOI where it has one.</template>
       <p class="font-['Hanken_Grotesk'] font-normal text-[14px] leading-[normal] text-muted m-[22px_0_0]">Also here:
         <NuxtLink to="/critical-zone-science/papers" class="text-water font-medium">Papers</NuxtLink>
       </p>
