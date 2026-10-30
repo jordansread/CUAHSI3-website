@@ -2,3 +2,4 @@
 261030 | content/cz-products-christina | intervention | Jordan approved the Christina table (125 items), including the hyphen repair of one DOI that the source wrote with an en dash.
 261030 | content/cz-products-christina | note | Appended 125 records to content/critical-zone/products.json (now 228: 39 datasets, 189 papers); the 103 existing entries are untouched (diff is additions only). provenance dropped as in batch 1. One DOI written with an en dash was loaded with a hyphen after Crossref confirmed the same paper. Validator: 228 of 228 pass.
 261030 | content/cz-products-christina | defect | the proposal said no record names an award; 4 of 125 name one in the venue text (awards field unset on all); caught: reviewer (report corrected with a note, nothing assigned)
+261030 | content/cz-products-christina | pr | #152 opened against main: https://github.com/jordansread/CUAHSI3-website/pull/152
