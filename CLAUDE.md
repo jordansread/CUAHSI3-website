@@ -501,6 +501,27 @@ for each item, the collection, the slug, new or update, the judgment calls, and 
 unverified; then the items you would skip and why; then counts. Apply only what Jordan
 approves. Do not go beyond the approved list.
 
+**Add a Critical Zone product.** For a dataset, paper, software or model that someone suggests for
+`content/critical-zone/products.json` (the public route is an email to help@cuahsi.org with the title, a DOI or
+link, and the award or observatory; Jordan or a staff member passes it on). A `content/short-name` branch, with C1 to C16
+and these steps:
+1. Record who suggested it and when, in the PR (C2). Do not copy the sender's email address into the repo or the PR.
+2. Duplicate check (C4): look in `products.json` for the same DOI (case does not matter), `hydroshare_id`, `url` and a similar
+   title. The validator rejects a repeated DOI or a repeated HydroShare id, each compared only with its own kind; it does not
+   compare `url` or title, so those you check yourself. Show Jordan each plausible match.
+3. Open the link. For a DOI, `https://doi.org/api/handles/<doi>` must answer `responseCode` 1. A DOI that fails is not
+   repaired by guessing (C3): look the title up in Crossref or DataCite, and if the right DOI is not clear, leave the item
+   out and put it under "To verify".
+4. In scope: it carries a CZO or CZNet award, comes from a CZ observatory or cluster, or is a dataset linked to a CZ paper
+   (any repository counts, Jordan, 29 Oct 2026). Scope is Jordan's call: say why you think it is in, and let him decide.
+5. Fill only what is known (C3): `type`, `doi` (bare, not a URL), `url`, `hydroshare_id` (32 lowercase hex characters, for a HydroShare
+   resource; it is what the duplicate check relies on), `repository`, `awards`, `sites`, `era`, `year`. An `awards` id that is
+   not in `content/awards/awards.json` fails the validator: leave `awards` out and say so in the PR, or first add the award to
+   the registry on the same branch, checked at the funder's page (C15, C3).
+   `source` is `suggested`; `source_url` is the page the facts were read from, not the email; `date_added` is today.
+6. One item or a few by hand; more than five is "Propose, then apply". Validator, build, PR as for any content task.
+This procedure is not yet on the section's pages (ticket T14's second item waits for the pages from T9).
+
 **Unpublish.** Set `published: false`. Say in the PR which routes disappear and which pages
 linked to them (rule 8: removing a route needs Jordan's approval first).
 

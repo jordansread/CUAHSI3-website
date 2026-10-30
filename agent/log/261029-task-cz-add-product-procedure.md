@@ -1,0 +1,2 @@
+261029 | task/cz-add-product-procedure | start | Critical Zone epic (CUAHSI/CUAHSI3-website#80), ticket T14: maintainer procedure for adding a suggested product, in CLAUDE.md. The 'same instruction on the section's pages' item waits for the pages (T9); Jordan said to move on to the next task after PR 150.
+261029 | task/cz-add-product-procedure | defect | procedure left hydroshare_id out of the field list, implied the validator checks url and title for duplicates, and said an unknown award id should only be mentioned (it fails the validator); caught: reviewer (all fixed)
