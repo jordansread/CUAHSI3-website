@@ -394,3 +394,12 @@ archive-page papers: Usings δ2H AND δ18O To Determine The Flowpath (2011); Hyd
 datasets: SSHCZO -- Vegetation, Stable Isotopes -- Shal; SSHCZO -- Groundwater Depth, Groundwater Temp; SSHCZO -- Solar Radiation -- Shale Hills -- (
 
 Also read: the sixteen records I hold out (their venue text is the reason given in items 1 to 3), the two same-titled dataset pairs (different HydroShare ids), and the two 2006 papers (no `era`). Not opened by hand: any page, beyond the doi.org handle and HydroShare answers of the link check.
+
+## Corrections after approval (found in review, before the pull request)
+
+Four records were taken out of the approved table before loading, under rules you have already set; the list is 324 for this batch (114 datasets, 210 papers) and 2,050 in all.
+- "Biotic controls on solute distribution and transport in headwater catchments" (DOI `10.5194/hessd-12-213-2015`, venue "Hydrology and Earth System Sciences Discussion"): the discussion-stage version of "Landscape heterogeneity drives contrasting concentration-discharge relationships in shale headwater catchments" (`10.5194/hess-19-3333-2015`), which is in the batch. Crossref: the same six authors (Herndon, Dere, Sullivan, Norris, Reynolds, Brantley), and the discussion record names the final paper as its published version. A working-title duplicate; dropped.
+- "Observations Emerging from a Network of Critical Zone Observatories: Shale Weathering at the Susquehanna-Shale Hills Observatory" (venue "Geological Society of America with Programs, 40:6, p. 275"): a GSA meeting abstract typed as a paper, the class held out in item 3. Dropped.
+- "Hydropedologic investigations in the Shale Hills catchment" (venue "Geochimica et Cosmochimica Acta. 72 (12):A552"): the A-page form is the Goldschmidt conference abstract supplement (my reading; I did not open the source page). Dropped.
+- "Interdisciplinary Modeling for Sustainability: A Reflection on Hydrologic-Agricultural-Economic Modeling of Punjab, India" (Penn State B.S. thesis, 2018): not critical zone science. Held back, as with the IML and Sierra dissertations; say "include" to add it.
+Kept and flagged: "Isotopic data sonification: Shale Hills Critical Zone Observatory" (an M.F.A. thesis, 2015), "Modelling long-term water yield effects of forest management in a Norway spruce forest" (Penn State group, not about Shale Hills) and "Soil CO2 and O2 concentrations..." (venue "accepted"; it has a DOI, so it is published).
