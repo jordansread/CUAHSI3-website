@@ -12,7 +12,7 @@ const name = known ? CZ_SITE_NAMES[slug] : ''
 
 // Not found is a flag the template renders, not a thrown error (footgun 6).
 const { data: narrative } = known
-  ? await useAsyncData(`cz-narrative-${slug}`, () => queryContent('critical-zone').where({ _extension: 'md', slug }).findOne().catch(() => null))
+  ? await useAsyncData(`cz-narrative-${slug}`, () => queryContent('critical-zone').where({ _extension: 'md', slug, published: true }).findOne().catch(() => null))
   : { data: ref(null) }
 
 useHead({
@@ -42,7 +42,7 @@ useHead({
     </PageHero>
 
     <div v-if="known" class="mx-auto site-container max-w-site py-[48px]">
-      <article v-if="narrative" class="prose max-w-[720px] mb-[48px]">
+      <article v-if="narrative" class="program-prose max-w-[720px] mb-[48px]">
         <ContentRenderer :value="narrative" />
       </article>
       <CzProductList :site="slug" />
