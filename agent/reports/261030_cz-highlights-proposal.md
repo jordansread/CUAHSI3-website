@@ -6,10 +6,10 @@ Data: `agent/reports/261030_cz-usage-harvest.json`, harvested 30 October 2026 fo
 
 ## What the numbers can and cannot say
 
-1. **Papers: reliable enough to rank.** Citations per year since the paper's year (total citations divided by the years from publication year to 2026 inclusive). OpenAlex has the year-by-year history, so I also show citations in the last five years (2022 to 2026), to separate lasting use from an old spike. Only journal articles and reviews are ranked (1058 of the 1564 papers); theses, reports, chapters and the records without a DOI are not.
-2. **Datasets: views carry almost no information.** The HydroShare resources have between 3,576 and 15,267 views (one outlier, 15,267, is the Shale Hills precipitation dataset; the next highest is 6,148) and the middle 80 percent lie between 4,084 and 5,188; 410 of the 485 resources were created in November 2019 and have a median of 4,656 views. A spread that narrow looks like automated traffic or a count that includes page loads by crawlers, not people. **Downloads vary widely** (the middle 80 percent lie between 54 and 328, the largest is 1,826) and are the better signal, so I rank datasets by **downloads per year since the resource was created on HydroShare**. Caution: "created" is when the resource was made on HydroShare, which for the CZO data is mostly November 2019 (the archive migration), not when the data were collected; so the rate is "since it went on HydroShare". I have not checked whether HydroShare filters bot downloads.
+1. **Papers: reliable enough to rank.** Citations per year since the paper's year (total citations divided by the years from the publication year to 2026 inclusive; 2026 is a partial year, which lowers the rate of recent papers and is also counted in "Since 2022"). OpenAlex has the year-by-year history, so I also show citations in the last five years (2022 to 2026), to separate lasting use from an old spike. Only journal articles and reviews are ranked (1058 of the 1564 papers); theses, reports, chapters and the records without a DOI are not.
+2. **Datasets: views carry almost no information.** The HydroShare resources have between 3,576 and 15,267 views (one outlier, 15,267, is the Shale Hills precipitation dataset; the next highest is 6,148) and the middle 80 percent lie between 4,084 and 5,188; 410 of the 485 resources were created in November 2019 and have a median of 4,656 views. A spread that narrow looks like automated traffic or a count that includes page loads by crawlers, not people. **Downloads vary widely** (the middle 80 percent lie between 54 and 328, the largest is 1,826) and are the better signal, so I rank datasets by **downloads per year since the resource was created on HydroShare**. Caution: "created" is when the resource was made on HydroShare, not when the data were collected; 410 of the 485 were created in November 2019 (I assume that was the archive's move to HydroShare, but nothing in the data says so), so the rate is "since it went on HydroShare". **This ranking is unvalidated:** I have not checked whether HydroShare filters bot downloads, so downloads could be as automated as views; the top dataset (1,826 downloads, 228 a year) is well clear of the second (126 a year), which is a reason to look at it before relying on it.
 3. **Only the 485 HydroShare datasets can be ranked.** The datasets with other DOIs (Zenodo, EDI, IEDA and so on) have no usage figure here.
-4. **Papers are tagged to observatories by the archive, not by topic.** Several of the most cited are broad papers (Anthropocene, tree mortality) with a CZO principal investigator among the authors. Whether they belong among the highlights of a *Critical Zone* finding aid is your and the reviewers' judgment.
+4. **Papers are tagged to observatories by the archive, not by topic.** Several of the most cited are broad papers (Anthropocene, tree mortality) tagged to an observatory by the archive. My impression is that their tie is a CZO researcher among the authors, but the data does not show authors and I did not check. Whether they belong among the highlights of a *Critical Zone* finding aid is your and the reviewers' judgment.
 
 ## Proposed papers: top 15 by citations per year
 
@@ -53,9 +53,9 @@ Data: `agent/reports/261030_cz-usage-harvest.json`, harvested 30 October 2026 fo
 
 ## Alternative: the top two of each observatory
 
-If the aim is that every observatory has highlights, this ranks within each observatory (by its first listed observatory tag).
+If the aim is that every observatory has highlights, this ranks within each observatory (by its first listed observatory tag). It is a weak option for some: for example the top datasets of Reynolds Creek have 9 and 8 downloads in all, so they are in effect unused.
 
-| Observatory | Top papers (citations) |
+| Observatory | Top papers (ranked by citations per year; total citations shown) |
 |---|---|
 | Boulder Creek | The influence of soil properties on the structure of bact... (2008, 1837 citations) ; Hillslope hydrology in global change research and Earth s... (2019, 643 citations) |
 | Calhoun | The Anthropocene is functionally and stratigraphically di... (2016, 2375 citations) ; Natural, incidental, and engineered nanomaterials and the... (2019, 841 citations) |
@@ -68,7 +68,7 @@ If the aim is that every observatory has highlights, this ranks within each obse
 | Shale Hills | Crossing disciplines and scales to understand the Critica... (2007, 701 citations) ; Earth's Critical Zone and hydropedology: Concepts, charac... (2010, 356 citations) |
 | Southern Sierra | California forest die-off linked to multi-year deep soil ... (2019, 366 citations) ; SMAP soil moisture improves global evapotranspiration (2018, 240 citations) |
 
-| Observatory | Top datasets (downloads) |
+| Observatory | Top datasets (ranked by downloads per year; total downloads shown) |
 |---|---|
 | Boulder Creek | BCCZO -- Surface Water Chemistry -- (GG_IS_Array) -- Gord... (415 downloads, 8 y) ; BCCZO -- Diatoms -- Didymosphenia Geminata -- Boulder Cre... (394 downloads, 8 y) |
 | Calhoun | CCZO -- Precipitation -- Calhoun CZO -- (2014-2017) (289 downloads, 10 y) ; CCZO -- Streamflow / Discharge -- Research Area 3, weir 4... (256 downloads, 9 y) |
