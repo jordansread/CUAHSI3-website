@@ -3,3 +3,4 @@
 261030 | content/cz-products-iml | defect | the proposal listed a PKU patient paper and a malaria-dynamics paper among the 213 without flagging that they look unrelated to the critical zone; found when building the batch; caught: self-check (reading the titles after approval)
 261030 | content/cz-products-iml | defect | the three repaired ASCE records kept the damaged address in url, so their card links would still 404; caught: reviewer (fixed: url rebuilt from the repaired doi)
 261030 | content/cz-products-iml | defect | one proposed DOI ended .s1 (a supplementary component, not the article); the proposal's link check only asked whether it resolves; caught: reviewer (fixed: article DOI 10.1175/JHM-D-19-0013.1, confirmed in Crossref)
+261030 | content/cz-products-iml | pr | #154 opened against main: https://github.com/jordansread/CUAHSI3-website/pull/154
