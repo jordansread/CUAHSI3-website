@@ -32,6 +32,11 @@ const band = computed(() => [
   { n: '9', l: 'CZNet thematic clusters, plus the Hub' },
 ])
 
+const lists = computed(() => [
+  { to: '/critical-zone-science/datasets', kicker: 'DATASETS', title: 'All known datasets', text: stats.value ? `${nf(stats.value.datasets)} datasets, mostly in HydroShare.` : 'Datasets, mostly in HydroShare.' },
+  { to: '/critical-zone-science/papers', kicker: 'PAPERS', title: 'All known papers', text: stats.value ? `${nf(stats.value.papers)} journal articles, books, reports and theses.` : 'Journal articles, books, reports and theses.' },
+])
+
 const places = [
   {
     kicker: 'CZO ARCHIVE',
@@ -83,6 +88,22 @@ const places = [
         The list ({{ nf(stats!.datasets) }} datasets, {{ nf(stats!.papers) }} papers) is added to in batches; last addition {{ asOf }}.
       </p>
     </section>
+
+    <!-- The full lists -->
+    <div class="mx-auto site-container max-w-site pt-[64px]">
+      <h2 class="font-['Schibsted_Grotesk'] font-bold text-[28px] leading-[1.1] text-navy tracking-[-.016em] m-[0_0_8px]">The full list</h2>
+      <p class="font-['Hanken_Grotesk'] font-normal text-[16px] leading-[1.6] text-[#3a4d57] max-w-[640px] m-[0_0_28px]">
+        Every known dataset and paper, grouped by era, award and observatory, each linking to where it lives.
+      </p>
+      <div class="grid grid-cols-[1fr] gap-[18px] sm:grid-cols-[repeat(2,1fr)]">
+        <NuxtLink v-for="l in lists" :key="l.to" :to="l.to"
+          class="arrow-row border border-[rgba(15,33,43,.1)] rounded-[10px] p-[20px_22px] no-underline block bg-white">
+          <p class="font-mono font-bold tracking-[.12em] uppercase text-water text-[11px] m-[0_0_10px]">{{ l.kicker }}</p>
+          <p class="font-['Schibsted_Grotesk'] font-bold text-[18px] leading-[1.2] text-navy m-[0_0_8px]">{{ l.title }} <span class="arr text-water">→</span></p>
+          <p class="font-['Hanken_Grotesk'] font-normal text-[14px] leading-[1.55] text-muted m-0">{{ l.text }}</p>
+        </NuxtLink>
+      </div>
+    </div>
 
     <!-- Where the work lives now -->
     <div class="mx-auto site-container max-w-site py-[64px]">

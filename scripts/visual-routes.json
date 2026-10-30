@@ -25,5 +25,6 @@
   { "name": "contact", "path": "/contact/" },
   { "name": "support", "path": "/support/" },
   { "name": "member-portal", "path": "/member-portal/" },
-  { "name": "critical-zone-science", "path": "/critical-zone-science/" }
+  { "name": "critical-zone-science", "path": "/critical-zone-science/" },
+  { "name": "critical-zone-science-datasets", "path": "/critical-zone-science/datasets/" }
 ]
