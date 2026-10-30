@@ -26571,20 +26571,6 @@
     "date_added": "2026-10-29"
   },
   {
-    "title": "BioRT_HBV_SagehenFiles_20251030",
-    "type": "dataset",
-    "doi": "10.5281/zenodo.17485934",
-    "url": "https://zenodo.org/doi/10.5281/zenodo.17485934",
-    "repository": "Zenodo",
-    "awards": [
-      "nsf-2012669"
-    ],
-    "year": 2025,
-    "source": "datacite",
-    "source_url": "https://doi.org/10.5281/zenodo.17485934",
-    "date_added": "2026-10-29"
-  },
-  {
     "title": "BioRT_HBV_SagehenFiles_20260226",
     "type": "dataset",
     "doi": "10.5281/zenodo.17485933",
@@ -28922,21 +28908,6 @@
     "year": 2026,
     "source": "crossref",
     "source_url": "https://doi.org/10.5194/tc-20-209-2026",
-    "date_added": "2026-10-29"
-  },
-  {
-    "title": "EnviroDIY Mayfly Logger: v0.5",
-    "type": "software",
-    "doi": "10.5281/zenodo.2567249",
-    "url": "https://zenodo.org/record/2567249",
-    "repository": "Zenodo",
-    "awards": [
-      "nsf-0724971",
-      "nsf-1331856"
-    ],
-    "year": 2019,
-    "source": "datacite",
-    "source_url": "https://doi.org/10.5281/zenodo.2567249",
     "date_added": "2026-10-29"
   },
   {
@@ -31778,16 +31749,6 @@
     "year": 2015,
     "source": "czo-archive",
     "source_url": "https://czo-archive.criticalzone.org/national/publications/pub/aufdenkampe-et-al-czodata-progress-report-2015-progress-and-timeline-for-de/",
-    "date_added": "2026-10-29"
-  },
-  {
-    "title": "Project HOTSPOT: Kimberly Well Borehole Geophysics Database",
-    "type": "dataset",
-    "url": "https://gdr.openei.org/submissions/283",
-    "repository": "OpenEI Geothermal Data Repository",
-    "year": 2014,
-    "source": "discover",
-    "source_url": "https://gdr.openei.org/submissions/283",
     "date_added": "2026-10-29"
   },
   {

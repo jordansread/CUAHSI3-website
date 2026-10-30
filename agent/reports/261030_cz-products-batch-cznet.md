@@ -11,7 +11,7 @@ None of the 564 records here is a talk or poster. The 1,202 talks and posters of
 | | Count |
 |---|---|
 | Records outside the ten observatories | 564 |
-| Already in the list (same DOI, HydroShare id or address, or same title and type) | 6 |
+| Already in the list (same DOI, HydroShare id or address, or same title and type) | 5 (the table first said 6, which counted the proposal) |
 | Held out by me: a proposal and a test resource (item 1) | 2 |
 | Left out as duplicates: versions, copies and preprints of a work that is proposed (items 2 and 3) | 33 |
 | **Proposed for this batch** | **524** (312 datasets, 206 papers, 6 software) |
@@ -651,3 +651,11 @@ I compared every pair of same-type records by title similarity (word overlap of 
 
 - The harvest carried a note on 48 of the proposed records, `award_numbers_not_in_registry`: NSF award numbers the record cites that are not in the awards registry (68 citations of 36 different numbers). The product schema has no field for it, so the note is not in the file, as for the earlier batches; the numbers stay "cited but unlinked" only in this report: 1931283 (20), 2034312 (4), 1724171 (3), 2005432 (3), 0734825 (2), 1001004 (2), 1235828 (2), 1242122 (2), 2025166 (2), 2228047 (2), 0080381 (1), 0423476 (1), 0427325 (1), 0427422 (1), 0540832 (1), 0610009 (1), 0618210 (1), 0621014 (1), 0709659 (1), 1022594 (1), 1027188 (1), 1058027 (1), 1208909 (1), 1427150 (1), 1524476 (1), 1557162 (1), 1560184 (1), 1819134 (1), 1832194 (1), 1832221 (1), 1853680 (1), 2033995 (1), 2149105 (1), 8702333 (1), 9211772 (1), 9411974 (1). Adding any of them to the registry (C15, checked at the funder's page) would let `awards` link it; the largest is 1931283 (20 records).
 - 524 records are loaded, as in the table. None of the left-out records is in the file.
+
+## Corrections after approval (found in review, before the pull request)
+
+Three more records were taken out of the approved table before loading, which makes the batch **521** (310 datasets, 206 papers, 5 software; the list on this branch is 2,247):
+- "BioRT_HBV_SagehenFiles_20251030" (`10.5281/zenodo.17485934`): DataCite marks it `IsVersionOf` `10.5281/zenodo.17485933` ("BioRT_HBV_SagehenFiles_20260226"), which is proposed. A version of the same work; dropped, as for the other Zenodo versions. (The titles differ only by the upload date, which is why my title match missed it.)
+- "EnviroDIY Mayfly Logger: v0.5" (`10.5281/zenodo.2567249`): DataCite marks it `IsVersionOf` `10.5281/zenodo.2567248` ("v0.5b"), which is proposed; dropped. The two ModularSensors releases (v0.19.6 and v0.21.0) are versions of a concept record (`10.5281/zenodo.2579300`) that the harvest did not return; I keep the two releases as they are, each its own DOI.
+- "Project HOTSPOT: Kimberly Well Borehole Geophysics Database" (OpenEI Geothermal Data Repository, 2014; no site, no award): not critical zone science; held back, say "include" to add it.
+Also from review, left as proposed and flagged: three more records cite award EAR-1332257 in their title (the 2015 progress report and the year 1 and year 2 project reports of the data management project); `awards` is unset on them, as for the other title-cited awards; ten or eleven preprint DOIs remain (item 3); two IEDA versions of the Shaver's Creek stream chemistry (item 4b) are both kept. The table's item 10 count of "29 papers with no DOI" is the number of archive pages among the 36 archive-source records; the other seven have DOIs.
