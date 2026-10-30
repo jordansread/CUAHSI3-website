@@ -637,3 +637,11 @@ datasets: Data from: Do precipitation extremes drive gr (2019); Milford Neck - S
 software: EnviroDIY Mayfly Logger: v0.5 (2019); EnviroDIY Mayfly Logger: v0.5b (2019); BrynStewart/BioRT-HBV_W9_20162017: BioRTHBV_W (2024)
 
 Also read: the left-out versions against DataCite (`HasVersion` marks the concept record, `IsVersionOf` a version) for each Zenodo group, the Crossref pairs against their final versions, and the five bare-title Bedrock-cluster datasets and "Test" in the harvest file. Not opened by hand: any page, beyond the doi.org handle and HydroShare answers of the link check.
+
+## Near-duplicate scan of the whole list (2,050 records, as it will stand after #164)
+
+I compared every pair of same-type records by title similarity (word overlap of 0.8 or more and a text ratio of 0.88 or more, excluding titles that differ only in numbers) and read the 37 pairs it found. None is a duplicate to remove:
+- 24 are datasets whose titles differ in the measured variable or site (for example "Soil Moisture" against "Soil Temperature", "Lower Site" against "Upper Site"; different HydroShare resources).
+- 7 are the annual-report series (First to Fourth annual report for NSF EAR-0724958).
+- 6 are a thesis and the paper made from it, or two editions of one document: the Christina dissertation "Controls & dynamics of canopy-derived dissolved organic matter" (Ph.D.) and the monograph "Controls and dynamics ..." (Publications in Climatology 64); the 2012 and 2015 editions of the CZO infrastructure guide; "Drainage from the critical zone" (a 2016 Berkeley thesis) and its 2018 paper; the Polymictic pool thesis (2013) and article (2016); a "Record of coupled hillslope and channel response" thesis (2017) and paper (2018); a snow-cover-duration thesis (2011) and paper (2014).
+- The Addendum and its parent paper, and the reply and the comment's subject, are pairs already flagged.
