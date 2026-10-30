@@ -1,0 +1,1 @@
+261030 | task/cz-section-shell | start | Critical Zone epic (CUAHSI/CUAHSI3-website#62), ticket T7 (#69): route and page shell for /critical-zone-science. Boulder batch merged in #155; Jordan said start T7. T7c approved by Jordan earlier today (#71 closed). Plan stated to Jordan before any code.
