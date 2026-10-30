@@ -12,39 +12,40 @@ None of the 564 records here is a talk or poster. The 1,202 talks and posters of
 |---|---|
 | Records outside the ten observatories | 564 |
 | Already in the list (same DOI, HydroShare id or address, or same title and type) | 6 |
-| Held out by me: a proposal (item 1) | 1 |
-| Left out as duplicates: versions, copies and preprints of a work that is proposed (items 2 and 3) | 32 |
-| **Proposed for this batch** | **526** (314 datasets, 206 papers, 6 software) |
-| By source: Discover 272, Crossref (award search) 171, DataCite 47, CZO archive 36 | |
-| `era`: cznet 189, czo 36, not set 301 | |
-| Tagged with a CZNet cluster or the Hub | 189 (urban 43, dynamic-water 32, drylands 27, cinet 24, coastal 24, dust2 16, bigdata 9, bedrock 8, geomicrobiology 5, hub 1) |
+| Held out by me: a proposal and a test resource (item 1) | 2 |
+| Left out as duplicates: versions, copies and preprints of a work that is proposed (items 2 and 3) | 33 |
+| **Proposed for this batch** | **524** (312 datasets, 206 papers, 6 software) |
+| By source: Discover 270, Crossref (award search) 171, DataCite 47, CZO archive 36 | |
+| `era`: cznet 188, czo 36, not set 300 | |
+| Tagged with a CZNet cluster or the Hub | 188 (urban 43, dynamic-water 32, drylands 27, cinet 24, coastal 24, dust2 16, bedrock 8, bigdata 8, geomicrobiology 5, hub 1) |
 | Tagged `national` only | 36 |
-| With no site | 301 |
-| Records with an `awards` value from the harvest's funder data | 469 |
-| Datasets: DOI / HydroShare address with no DOI | 201 / 101 |
+| With no site | 300 |
+| Records with an `awards` value from the harvest's funder data | 468 |
+| Datasets: DOI / HydroShare address with no DOI | 201 / 100 |
 | Papers: with a DOI / archive page only | 177 / 29 |
-| Records with no year | 101 |
+| Records with no year | 100 |
 
 ## Link check (before proposing)
 
-Every DOI was looked up at doi.org (handle lookup) and every HydroShare address requested once. Of 384 DOIs and 101 HydroShare addresses, **no problem was found**. One request failed with a TLS handshake error (a Manitou Experimental Forest dataset DOI); I repeated it and it answers. The 29 archive-page addresses were not opened. A resolving DOI is not proof it is the right item.
+Every DOI was looked up at doi.org (handle lookup) and every HydroShare address requested once. Of 384 DOIs and 100 HydroShare addresses, **no problem was found**. One request failed with a TLS handshake error (a Manitou Experimental Forest dataset DOI); I repeated it and it answers. The 29 archive-page addresses were not opened. A resolving DOI is not proof it is the right item.
 
 ## Things I changed or left out (mine; your call on each)
 
-1. **A proposal, held out:** "Integrated Data Management System for Critical Zone Observatories (EAR-1332257)" (venue "Awarded Proposal to NSF", 2011). Its two project reports (years 1 and 2) and the 2015 "Progress and Timeline for Deliverables" interim report are proposed as reports.
-2. **Zenodo, Figshare and IEDA versions collapsed to one record per work (23 left out).** The harvest read each Zenodo dataset once as its concept DOI and again as each version DOI, and the Discover catalog's own Zenodo address as a further copy. For each work I propose the concept DOI (the record DataCite marks `HasVersion`) and leave out the version DOIs and the Discover copy. One Figshare dissertation appears as `10.25394/pgs.15062379` and `...v1`; I keep the first. For "Jemez River Basin Soil Solution Chemistry 2011" two IEDA DOIs appear, and DataCite marks `10.1594/IEDA/111156` as the new version of `10.1594/ieda/100639`; I keep the newer. Everything left out is in the last table.
+1. **A proposal and a test resource, held out:** a HydroShare resource titled just "Test" (no description, no award) is plainly not a product. The proposal is "Integrated Data Management System for Critical Zone Observatories (EAR-1332257)" (venue "Awarded Proposal to NSF", 2011). Its two project reports (years 1 and 2) and the 2015 "Progress and Timeline for Deliverables" interim report are proposed as reports.
+2. **Zenodo, Figshare and IEDA versions collapsed to one record per work (24 left out).** The harvest read each Zenodo dataset once as its concept DOI and again as each version DOI, and the Discover catalog's own Zenodo address as a further copy. For each work I propose the concept DOI (the record DataCite marks `HasVersion`) and leave out the version DOIs and the Discover copy. One Figshare dissertation appears as `10.25394/pgs.15062379` and `...v1`; I keep the first. For "Jemez River Basin Soil Solution Chemistry 2011" two IEDA DOIs appear, and DataCite marks `10.1594/IEDA/111156` as the new version of `10.1594/ieda/100639`; I keep the newer. Everything left out is in the last table.
 3. **Preprints with a published version in this batch (9 left out):** EGUsphere, ESurfD, AMTD and Zenodo preprint DOIs of papers whose final version is proposed (for example `10.5194/esurf-2022-9` and `esurf-11-51-2023`). **11 preprints remain** with no final version found in this set. They are the open question on #155, #158 and #163; kept and flagged. They show as "posted-content" or "Preprint" in the Type column's archive kind and are Copernicus discussion papers and Wiley ESSOAr preprints.
-4. **Same title, different records, both kept (4 pairs):** "Forest and Ground Cover classification, DEM, and Beryllium-10 data for the Luquillo Experimental Forest" and "Kansas River Flow Event Characteristics and Nitrate C-Q Responses" (two HydroShare resources each, different ids), "Report of the Steering Committee" (2010 and 2011) and "Susquehanna Shale Hills Critical Zone Observatory - Shaver's Creek Watershed Stream Chemistry 2016" (IEDA `10.1594/ieda/100677` and Discover `10.26022/IEDA/111537`, which look like two versions; I did not decide which is current).
+4. **Bare site names as titles, kept and flagged:** five Discover datasets in the Bedrock cluster are titled only "Boulder Creek", "Panola", "San Gabriel", "San Jacinto" and "Southern Sierra" (HydroShare resources under award 2012353 or 2012408), and "OSL ages_Loess" has no site or award. The titles do not describe the data; I kept them because they are HydroShare resources linked to CZNet awards and did not open them.
+4b. **Same title, different records, both kept (4 pairs):** "Forest and Ground Cover classification, DEM, and Beryllium-10 data for the Luquillo Experimental Forest" and "Kansas River Flow Event Characteristics and Nitrate C-Q Responses" (two HydroShare resources each, different ids), "Report of the Steering Committee" (2010 and 2011) and "Susquehanna Shale Hills Critical Zone Observatory - Shaver's Creek Watershed Stream Chemistry 2016" (IEDA `10.1594/ieda/100677` and Discover `10.26022/IEDA/111537`, which look like two versions; I did not decide which is current).
 5. **Software: 6 records, and no page shows them.** The lists from T9a show only datasets and papers, so software and models would appear on neither page. I suggest a small code change so the datasets page also lists software and models; say yes and I will make it, with its own PR.
 6. **Reports and documents typed `paper`:** 22 items from the archive and the CZO national office: the CZO National Office annual reports 2015 to 2019, steering committee reports (2010 to 2015), a strategy meeting report (2016), an EarthCube white paper, "Discoveries in the Critical Zone", "Sustaining Earth's Critical Zone", a 2006 workshop report, and technical items ("CZO Display File Specification", "Observations and Measurements - XML Implementation", "AGI LiDAR Handout"). None is a proposal to a funder.
 7. **One venue-text award:** the "CZO National Office Annual Report 2019" cites "NSF Award #1360760" (the registry has `nsf-1360760`); `awards` stays unset and it joins the list for you to revisit (53 in all).
-8. **`era` is unset on 301 records** (the Discover, Crossref and DataCite records with no site tag and no era). On the lists they appear under "Era not recorded", grouped by award where they have one. I did not guess an era (C3). Say if you want a rule (for example, anything on a 2020-or-later CZNet award is `cznet`).
+8. **`era` is unset on 300 records** (the Discover, Crossref and DataCite records with no site tag and no era). On the lists they appear under "Era not recorded", grouped by award where they have one. I did not guess an era (C3). Say if you want a rule (for example, anything on a 2020-or-later CZNet award is `cznet`).
 9. **Scope.** The Crossref records (171) were found by an NSF award number in their funder data, so they carry a CZO or CZNet award; the Discover and DataCite records are datasets linked to CZ awards or papers (your 29 October rule: any repository counts). I read the titles of all 206 papers and the dataset titles for items plainly unrelated and found none I would hold back, but this batch is the most varied, so say which to drop.
 10. The 29 papers with no DOI are the archive's national-program documents; they were not read against their pages. Datasets have no year when the source gave none (C3).
 
 ## Proposed items
 
-### Datasets (314)
+### Datasets (312)
 
 | Title | Type | Year | Address | Source | Sites |
 |---|---|---|---|---|---|
@@ -76,7 +77,6 @@ Every DOI was looked up at doi.org (handle lookup) and every HydroShare address 
 | BioRT_HBV_SagehenFiles_20260226 | dataset | 2026 | DOI | datacite | (none) |
 | Boulder Creek | dataset |  | HydroShare (no DOI) | discover | bedrock |
 | Brownsville - Tree Sap Flux - Jan 2021 - ongoing | dataset |  | HydroShare (no DOI) | discover | coastal |
-| BrynStewart/BioRT-HBV_W9_20162017: BioRTHBV_W9_Files | dataset | 2024 | archive page | discover | bigdata |
 | Camels-Chem (collection of stream water chemistry data 1980-2018) | dataset | 2025 | DOI | discover | bigdata |
 | Carbon exchange responses of rehydrated and incubated biological soil crust samples from Whi... | dataset | 2023 | archive page | discover | drylands |
 | Carbon fluxes, meteorological, soil variables from GC Flux Tower, IMLCZO/CINet | dataset | 2024 | DOI | discover | cinet |
@@ -327,7 +327,6 @@ Every DOI was looked up at doi.org (handle lookup) and every HydroShare address 
 | Tennessee Weather Station Data (2011) | dataset | 2014 | DOI | discover | (none) |
 | Tennessee Weather Station Data (2012) | dataset | 2014 | DOI | datacite | (none) |
 | Tennessee Weather Station Data (2013) | dataset | 2014 | DOI | discover | (none) |
-| Test | dataset |  | HydroShare (no DOI) | discover | (none) |
 | The Long-term Development of Wetland Plant Communities with Water Deliveries in a Created We... | dataset | 2026 | DOI | discover | drylands |
 | Third-order White Clay Creek and Boulton Run - Climate, Stable Isotopes, Stream Water Chemis... | dataset | 2018 | DOI | crossref | (none) |
 | Time series data for major dissolved ions and discharge of Sangamon River from the RiverLab | dataset | 2023 | DOI | discover | cinet |
@@ -622,17 +621,19 @@ Every DOI was looked up at doi.org (handle lookup) and every HydroShare address 
 | Root data for cross-biome root presence analyses and associated R scripts | 10.5281/zenodo.17582099 | zenodo version or copy of 10.5281/zenodo.16995489 |
 | Root data for cross-biome root presence analyses and associated R scripts | 10.5281/zenodo.17663627 | zenodo version or copy of 10.5281/zenodo.16995489 |
 | Wind and Topography Underlie Correlation Between Seasonal Snowpack, Moun... | 10.5194/egusphere-2024-3862 | preprint of 10.5194/tc-19-3193-2025 |
+| BrynStewart/BioRT-HBV_W9_20162017: BioRTHBV_W9_Files | https://zenodo.org/records/10583216 | zenodo copy of 10.5281/zenodo.10583215 |
+| Test | ww.hydroshare.org/resource/0dd02c98669d4b9ca99865e5fc502d72/ | test resource |
 
 ## Sample check (rule 12)
 
 Read in the harvest file, each matched to its row above:
 
-papers with a DOI: Drought Response in Three Conifer Species Det (2025); Microfluidic-electrochemical sensor utilizing (2025); Wind and topography underlie correlation betw (2025)
+papers with a DOI: Differential snow depth in warm edges versus (2025); Field trials to detect drainage pipe networks (2020); An Ecosystem Services-Centric Land Use and La (2022)
 
-archive-page papers: CZO National Office Annual Report 2019 (2019); Progress and Timeline for Deliverables Report (2015); CZO National Office Annual Report 2015 (2015)
+archive-page papers: Observations and Measurements - XML Implement (2011); Data Infrastructure for the Critical Zone Obs (2012); Critical Zone Science, Interdisciplinarity an (2016)
 
-datasets: Southern Sierra; EcoTram below-canopy shortwave radiation obse (2026); Soil Water Retention Curves - Ivey Pecan Orch (2026)
+datasets: Data from: Do precipitation extremes drive gr (2019); Milford Neck - Soil water content, Soil tempe (2025); Collection of Great Salt Lake Data
 
-software: EnviroDIY/ModularSensors: v0.21.0: Support fo (2019); EnviroDIY Mayfly Logger: v0.5 (2019); Exudate-Extractable Phosphorus Dataset and R (2026)
+software: EnviroDIY Mayfly Logger: v0.5 (2019); EnviroDIY Mayfly Logger: v0.5b (2019); BrynStewart/BioRT-HBV_W9_20162017: BioRTHBV_W (2024)
 
-Also read: the left-out versions against DataCite (`HasVersion` marks the concept record, `IsVersionOf` a version) for each Zenodo group, and the Crossref pairs against their final versions. Not opened by hand: any page, beyond the doi.org handle and HydroShare answers of the link check.
+Also read: the left-out versions against DataCite (`HasVersion` marks the concept record, `IsVersionOf` a version) for each Zenodo group, the Crossref pairs against their final versions, and the five bare-title Bedrock-cluster datasets and "Test" in the harvest file. Not opened by hand: any page, beyond the doi.org handle and HydroShare answers of the link check.
