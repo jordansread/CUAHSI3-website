@@ -16775,5 +16775,3391 @@
     "source": "czo-archive",
     "source_url": "https://czo-archive.criticalzone.org/luquillo/publications/pub/hall-et-al-2012-when-wet-gets-wetter-decoupling-of-moisture-redox-biogeoche/",
     "date_added": "2026-10-29"
+  },
+  {
+    "title": "'One Physical System': Tansley's ecosystem as Earth's critical zone",
+    "type": "paper",
+    "doi": "10.1111/nph.13338",
+    "url": "https://doi.org/10.1111/nph.13338",
+    "repository": "New Phytologist 206 (3): 900-912",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2015,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/richter-billings-2015-one-physical-system-tansleys-ecosystem-as-earths-crit/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "“The Changing Model of Soil” Revisited",
+    "type": "paper",
+    "doi": "10.2136/sssaj2011.0407",
+    "url": "https://doi.org/10.2136/sssaj2011.0407",
+    "repository": "Soil Science Society of America Journal 76 (3):766-778",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2012,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/richter-yaalon-2012-the-changing-model-of-soil-revisited/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "A class of exact solutions of the Boussinesq equation for horizontal and sloping aquifers",
+    "type": "paper",
+    "doi": "10.1002/2017WR022056",
+    "url": "https://doi.org/10.1002/2017WR022056",
+    "repository": "Water Resources Research 54 (2): 767-778",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2018,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/bartlett-porporato-2018-a-class-of-exact-solutions-of-the-boussinesq-equati/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "A correlative bimodal surface imaging method to assess hyphae-rock interactions",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/qafoku-et-al-2019-a-correlative-bimodal-surface-imaging-method-to-assess-hy/",
+    "repository": "Microscopy and Microanalysis, 25(S2), 2436-2437",
+    "sites": [
+      "calhoun",
+      "catalina-jemez"
+    ],
+    "era": "czo",
+    "year": 2019,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/qafoku-et-al-2019-a-correlative-bimodal-surface-imaging-method-to-assess-hy/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "A coupled force-restore model of surface temperature and soil moisture using the maximum entropy production model of heat fluxes",
+    "type": "paper",
+    "doi": "10.1002/2015JD024586",
+    "url": "https://doi.org/10.1002/2015JD024586",
+    "repository": "Journal of Geophysical Research Atmospheres 121(13): 7528-7547",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2016,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/huang-wang-2016-a-coupled-force-restore-model-of-surface-temperature-and-so/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "A coupled microscopy approach to assess the nano-landscape of weathering",
+    "type": "paper",
+    "doi": "10.1038/s41598-019-41357-0",
+    "url": "https://doi.org/10.1038/s41598-019-41357-0",
+    "repository": "Scientific Reports 9: Article number 5377",
+    "sites": [
+      "calhoun",
+      "catalina-jemez"
+    ],
+    "era": "czo",
+    "year": 2019,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/lybrand-et-al-2019-a-coupled-microscopy-approach-to-assess-the-nano-landsca/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "A dynamical system approach to soil salinity and sodicity",
+    "type": "paper",
+    "doi": "10.1016/j.advwatres.2015.05.010",
+    "url": "https://doi.org/10.1016/j.advwatres.2015.05.010",
+    "repository": "Advances in Water Resources 83:68-76",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2015,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/mau-porporato-2015-a-dynamical-system-approach-to-soil-salinity-and-sodicit/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "A dynamical systems framework for crop models: Toward optimal fertilization and irrigation strategies under climatic variability",
+    "type": "paper",
+    "doi": "10.1016/j.ecolmodel.2017.10.003",
+    "url": "https://doi.org/10.1016/j.ecolmodel.2017.10.003",
+    "repository": "Ecological Modelling 365: 80-92",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2017,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/pelak-et-al-2017-a-dynamical-systems-framework-for-crop-models-toward-optim/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "A HYDRUS 2D evaluation of altered depths to the argillic horizon due to erosion: What impacts on hillslope interflow?",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/ryland-et-al-2017-a-hydrus-2d-evaluation-of-altered-depths-to-the-argillic-/",
+    "repository": "Proceedings of the 2017 Georgia Water Resources Conference",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2017,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/ryland-et-al-2017-a-hydrus-2d-evaluation-of-altered-depths-to-the-argillic-/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "A Mean Field Approach to Watershed Hydrology",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/bartlett-2016-a-mean-field-approach-to-watershed-hydrology/",
+    "repository": "PhD Dissertation, Duke University, Durham, North Carolina",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2016,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/bartlett-2016-a-mean-field-approach-to-watershed-hydrology/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "A modeling study of land surface processes and surface energy budgets using the maximum entropy production theory",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/huang-2017-a-modeling-study-of-land-surface-processes-and-surface-energy-bu/",
+    "repository": "PhD Dissertation, Civil Engineering, Georgia Institute of Technology, Atlanta, Georgia",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2017,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/huang-2017-a-modeling-study-of-land-surface-processes-and-surface-energy-bu/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "A pedology and pedostratigraphy for the Anthropocene",
+    "type": "paper",
+    "doi": "10.1017/9781108621359.002",
+    "url": "https://doi.org/10.1017/9781108621359.002",
+    "repository": "In Stratigraphic Signatures of the Anthropocene (Chapter 2) of The Anthropocene as a Geological Time Unit, edited by Jan Zalasiewicz, Colin Waters, Mark Williams, Colin Summerhayes (eds.), Cambridge University Press",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2019,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/richter-et-al-2019-a-pedology-and-pedostratigraphy-for-the-anthropocene/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "A simple method for estimating the influence of eroding soil profiles on atmospheric CO2",
+    "type": "paper",
+    "doi": "10.1029/2009GB003560",
+    "url": "https://doi.org/10.1029/2009GB003560",
+    "repository": "Global Biogeochemical Cycles, Vol. 24, GB2001",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2010,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/billings-et-al-2010-a-simple-method-for-estimating-the-influence-of-eroding/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Accumulation and decay of woody detritus in a humid subtropical secondary pine forest",
+    "type": "paper",
+    "doi": "10.1139/cjfr-2012-0222",
+    "url": "https://doi.org/10.1139/cjfr-2012-0222",
+    "repository": "Canadian Journal of Forest Research 43: 109–118",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2013,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/mobley-et-al-2013-accumulation-and-decay-of-woody-detritus-in-a-humid-subtr/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Aging exo-enzymes can create temporally shifting, temperature-dependent resource landscapes for microbes",
+    "type": "paper",
+    "doi": "10.1007/s10533-016-0273-x",
+    "url": "https://doi.org/10.1007/s10533-016-0273-x",
+    "repository": "Biogeochemistry 131:163-172",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2016,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/billings-et-al-2016-aging-exo-enzymes-can-create-temporally-shifting-temper/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "An Ecosystem Approach to Dead Plant Carbon over 50 years of Old-Field Forest Development",
+    "type": "paper",
+    "url": "http://dx.doi.org/10161/4992",
+    "repository": "PhD Dissertation, Duke University, Durham, North Carolina",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2011,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/mobley-2011-an-ecosystem-approach-to-dead-plant-carbon-over-50-years-of-old/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "An Observational and Modeling Study of the Energy, Water, and Carbon Cycle at Calhoun Critical Zone",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/tang-2018-an-observational-and-modeling-study-of-the-energy-water-and-carbo/",
+    "repository": "PhD Dissertation, Civil Engineering, Georgia Institute of Technology, Atlanta, Georgia",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2018,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/tang-2018-an-observational-and-modeling-study-of-the-energy-water-and-carbo/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Analysis and Modeling of Landscape Topography: Statistical Description and Evolution Under Natural and Disturbed Conditions",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/bonetti-2018-analysis-and-modeling-of-landscape-topography-statistical-desc/",
+    "repository": "PhD Dissertation, Duke University, Durham, North Carolina",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2018,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/bonetti-2018-analysis-and-modeling-of-landscape-topography-statistical-desc/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Annual Report 2015: Human and Natural Forcings of Critical Zone Dynamics and Evolution at the Calhoun Critical Zone Observatory",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/richter-2015-annual-report-2015-human-and-natural-forcings-of-critical-zone/",
+    "repository": "NSF Award #1331846",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2015,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/richter-2015-annual-report-2015-human-and-natural-forcings-of-critical-zone/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Annual Report 2016: Human and Natural Forcings of Critical Zone Dynamics and Evolution at the Calhoun Critical Zone Observatory",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/richter-2016-annual-report-2016-human-and-natural-forcings-of-critical-zone/",
+    "repository": "NSF Award #1331846",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2016,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/richter-2016-annual-report-2016-human-and-natural-forcings-of-critical-zone/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Annual Report 2017: Human and Natural Forcings of Critical Zone Dynamics and Evolution at the Calhoun Critical Zone Observatory",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/richter-d-2017-annual-report-2017-human-and-natural-forcings-of-critical-zo/",
+    "repository": "NSF Award #1331846",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2017,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/richter-d-2017-annual-report-2017-human-and-natural-forcings-of-critical-zo/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Ansichten der Calzone: Views of the Calhoun Critical Zone Observatory",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/richter-billings-2020-ansichten-der-calzone-views-of-the-calhoun-critical-z/",
+    "repository": "In: Critical Zones: The Science and Politics of Landing on Earth, Editors: Bruno Latour & Peter Weibel, ZKM | Center for Art and Media, distributed by The MIT Press",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2020,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/richter-billings-2020-ansichten-der-calzone-views-of-the-calhoun-critical-z/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Application of the maximum entropy production model of evapotranspiration over partially vegetated water-limited land surfaces",
+    "type": "paper",
+    "doi": "10.1175/JHM-D-17-0133.1",
+    "url": "https://doi.org/10.1175/JHM-D-17-0133.1",
+    "repository": "Journal of Hydrometeorology 19: 989-1005",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2018,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/hajji-et-al-2018-application-of-the-maximum-entropy-production-model-of-eva/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Approximate analytical solution to diurnal atmospheric boundary-layer growth under well-watered conditions",
+    "type": "paper",
+    "doi": "10.1007/s10546-015-0018-8",
+    "url": "https://doi.org/10.1007/s10546-015-0018-8",
+    "repository": "Boundary-Layer Meteorology 156(1):73-89",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2015,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/rigby-et-al-2015-approximate-analytical-solution-to-diurnal-atmospheric-bou/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Assessment of Pedogenic Gibbsite as a Paleo-PCO2 Proxy Using a Modern Ultisol",
+    "type": "paper",
+    "doi": "10.1346/CCMN.2014.0620402",
+    "url": "https://doi.org/10.1346/CCMN.2014.0620402",
+    "repository": "Clays and Clay Minerals 62(4): 253-266",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2014,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/austin-schroeder-2014-assessment-of-pedogenic-gibbsite-as-a-paleo-pco2-prox/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Beyond the SCS-CN method: Theoretical framework for spatially-lumped rainfall-runoff response",
+    "type": "paper",
+    "doi": "10.1002/2015WR018439",
+    "url": "https://doi.org/10.1002/2015WR018439",
+    "repository": "Water Resources Research 52(6): 4608-4627",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2016,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/bartlett-et-al-2016-beyond-the-scs-cn-method-theoretical-framework-for-spat/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Bioavailability of slowly cycling soil phosphorus: major restructuring of soil P fractions over four decades in an aggrading forest",
+    "type": "paper",
+    "doi": "10.1007/s00442-006-0510-4",
+    "url": "https://doi.org/10.1007/s00442-006-0510-4",
+    "repository": "Oecologia 150 (2): 259-271",
+    "sites": [
+      "calhoun"
+    ],
+    "year": 2006,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/richter-et-al-2006-bioavailability-of-slowly-cycling-soil-phosphorus-major-/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Bistable plant-soil dynamics and biogenic controls on the soil production function",
+    "type": "paper",
+    "doi": "10.1002/esp.3878",
+    "url": "https://doi.org/10.1002/esp.3878",
+    "repository": "Earth Surface Processes and Landforms 41(8): 1011-1017",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2016,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/pelak-et-al-2016-bistable-plant-soil-dynamics-and-biogenic-controls-on-the-/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Boom and bust carbon-nitrogen dynamics during reforestation",
+    "type": "paper",
+    "doi": "10.1016/j.ecolmodel.2017.06.023",
+    "url": "https://doi.org/10.1016/j.ecolmodel.2017.06.023",
+    "repository": "Ecological Modelling 360: 108-119",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2017,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/parolari-et-al-2017-boom-and-bust-carbon-nitrogen-dynamics-during-reforesta/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Calhoun CZO Annual Report 2018",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/richter-et-al-2018-calhoun-czo-annual-report-2018/",
+    "repository": "NSF Award #1331846",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2018,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/richter-et-al-2018-calhoun-czo-annual-report-2018/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Calhoun CZO Annual Report 2019",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/richter-et-al-2019-calhoun-czo-annual-report-2019/",
+    "repository": "NSF Award #1331846",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2019,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/richter-et-al-2019-calhoun-czo-annual-report-2019/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Carbon and oxygen isotope composition in soil carbon dioxide within deep Ultisols at the Calhoun CZO, South Carolina, USA",
+    "type": "paper",
+    "doi": "10.1017/RDC.2018.99",
+    "url": "https://doi.org/10.1017/RDC.2018.99",
+    "repository": "Radiocarbon 60(5): 1357-1366",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2018,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/cherkinsky-et-al-2018-carbon-and-oxygen-isotope-composition-in-soil-carbon-/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Carbon availability modifies temperature responses of heterotrophic microbial respiration, carbon uptake affinity, and stable carbon isotope discrimination",
+    "type": "paper",
+    "doi": "10.3389/fmicb.2016.02083",
+    "url": "https://doi.org/10.3389/fmicb.2016.02083",
+    "repository": "Frontiers in Microbiology 7, Article 2083",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2016,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/min-et-al-2016-carbon-availability-modifies-temperature-responses-of-hetero/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CCZO -- Flux Tower -- Young Pine Forest -- Calhoun CZO Research Area 1 -- (2016-Ongoing)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/6438f33720e44a7690c094caf331aebe/",
+    "hydroshare_id": "6438f33720e44a7690c094caf331aebe",
+    "repository": "HydroShare",
+    "sites": [
+      "calhoun",
+      "national"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/5821/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CCZO -- Geomorphology -- Gully Boundaries -- Calhoun CZO -- (2015-2015)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/23a13088ac8849ef85dabbbc8d62e442/",
+    "hydroshare_id": "23a13088ac8849ef85dabbbc8d62e442",
+    "repository": "HydroShare",
+    "sites": [
+      "calhoun",
+      "national"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/4681/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CCZO -- GIS/Map Data -- Land Grants, 1749-1851 -- Enoree District, Sumter National Forest -- (2018-2018)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/5474b591c80e44b4866aa5c1eeb830e6/",
+    "hydroshare_id": "5474b591c80e44b4866aa5c1eeb830e6",
+    "repository": "HydroShare",
+    "sites": [
+      "calhoun",
+      "national"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/6585/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CCZO -- GIS/Map Data -- Research Areas -- Calhoun Critical Zone Observatory -- (2014-2018)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/b134a93a92ba482abc5176e029a6687a/",
+    "hydroshare_id": "b134a93a92ba482abc5176e029a6687a",
+    "repository": "HydroShare",
+    "sites": [
+      "calhoun",
+      "national"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/6568/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CCZO -- GIS/Map Data -- USFS survey and land use maps for purchase tracts -- Enoree District, Sumter National Forest -- (1932-1946)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/38973913ff0b40baa153f1acb094d99c/",
+    "hydroshare_id": "38973913ff0b40baa153f1acb094d99c",
+    "repository": "HydroShare",
+    "sites": [
+      "calhoun",
+      "national"
+    ],
+    "era": "czo",
+    "source": "discover",
+    "source_url": "https://www.hydroshare.org/resource/38973913ff0b40baa153f1acb094d99c",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CCZO -- GIS/Map Data, LiDAR -- Canopy Height -- Calhoun CZO -- (2014-2014)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/d437825c6f034510a48d569d8a449e63/",
+    "hydroshare_id": "d437825c6f034510a48d569d8a449e63",
+    "repository": "HydroShare",
+    "sites": [
+      "calhoun",
+      "national"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/6475/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CCZO -- GIS/Map Data, Photographic Imagery -- 1933 aerial imagery composite -- Calhoun Experimental Forest, SC -- (1933-1933)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/3edb9720a11845169dae4ba5b6212d27/",
+    "hydroshare_id": "3edb9720a11845169dae4ba5b6212d27",
+    "repository": "HydroShare",
+    "sites": [
+      "calhoun",
+      "national"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/4324/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CCZO -- Groundwater Depth -- 5 minute resolution -- Research area 3 -- (2014-2015)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/80fbaf9cef9745a0ab45a33443912f51/",
+    "hydroshare_id": "80fbaf9cef9745a0ab45a33443912f51",
+    "repository": "HydroShare",
+    "sites": [
+      "calhoun",
+      "national"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/4685/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CCZO -- Groundwater Depth -- 70-m deep well -- (2014-2017)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/df507a2555014e3eb46517c979925317/",
+    "hydroshare_id": "df507a2555014e3eb46517c979925317",
+    "repository": "HydroShare",
+    "sites": [
+      "calhoun",
+      "national"
+    ],
+    "era": "czo",
+    "source": "discover",
+    "source_url": "https://www.hydroshare.org/resource/df507a2555014e3eb46517c979925317",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CCZO -- Groundwater Depth, Electrical Conductivity -- Calhoun 70-m deep well -- (2014-2017)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/35301f29f15547c884c847ff00eb6220/",
+    "hydroshare_id": "35301f29f15547c884c847ff00eb6220",
+    "repository": "HydroShare",
+    "sites": [
+      "calhoun",
+      "national"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/4686/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CCZO -- Hydropedologic Properties -- KSat -- Research Areas 2 and 3 -- (2017-2017)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/256df0b6e3934d33a4c45983c4fc00c8/",
+    "hydroshare_id": "256df0b6e3934d33a4c45983c4fc00c8",
+    "repository": "HydroShare",
+    "sites": [
+      "calhoun",
+      "national"
+    ],
+    "era": "czo",
+    "source": "discover",
+    "source_url": "https://www.hydroshare.org/resource/256df0b6e3934d33a4c45983c4fc00c8",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CCZO -- Land Use History -- Agriculture Census -- Union County, SC -- (1850-1850)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/96f6ed602b9f4064b7f7da7d5b3b02af/",
+    "hydroshare_id": "96f6ed602b9f4064b7f7da7d5b3b02af",
+    "repository": "HydroShare",
+    "sites": [
+      "calhoun",
+      "national"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/4665/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CCZO -- Land Use History, Photographic Imagery -- Calhoun Experimental Forest, SC -- (1932-1987)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/ec8c0256b1b54127a3733bbabc116793/",
+    "hydroshare_id": "ec8c0256b1b54127a3733bbabc116793",
+    "repository": "HydroShare",
+    "sites": [
+      "calhoun",
+      "national"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/5454/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CCZO -- LiDAR -- Hyperspectral and LiDAR Survey -- Calhoun CZO -- (2014-2014)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/55e795093f0e443fa061b40b6928df92/",
+    "hydroshare_id": "55e795093f0e443fa061b40b6928df92",
+    "repository": "HydroShare",
+    "sites": [
+      "calhoun",
+      "national"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/4671/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CCZO -- LiDAR -- LiDAR features for the Calhoun CZO forest plots -- Calhoun CZO -- (2015-2015)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/0668ed25b2d14330b86aa1c2fd227640/",
+    "hydroshare_id": "0668ed25b2d14330b86aa1c2fd227640",
+    "repository": "HydroShare",
+    "sites": [
+      "calhoun",
+      "national"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/4606/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CCZO -- LiDAR -- LiDAR Leaf-Off Survey -- Calhoun CZO -- (2016-2016)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/cbdf5af338214abea9bd3e993aae4d01/",
+    "hydroshare_id": "cbdf5af338214abea9bd3e993aae4d01",
+    "repository": "HydroShare",
+    "sites": [
+      "calhoun",
+      "national"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/5446/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CCZO -- Meteorology -- Research Area 3 -- (2018-2020)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/57adb54134834fbebcc52819319b977e/",
+    "hydroshare_id": "57adb54134834fbebcc52819319b977e",
+    "repository": "HydroShare",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "source": "discover",
+    "source_url": "https://www.hydroshare.org/resource/57adb54134834fbebcc52819319b977e",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CCZO -- Photographic Imagery, Soil Survey -- Soil Pit Profiles -- Calhoun CZO -- (2016-2016)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/ae1b338cc7a641f68fd5c4f85dba97a1/",
+    "hydroshare_id": "ae1b338cc7a641f68fd5c4f85dba97a1",
+    "repository": "HydroShare",
+    "sites": [
+      "calhoun",
+      "national"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/5533/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CCZO -- Precipitation -- Calhoun CZO -- (2014-2017)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/9b2a6c9e66c84380b0bfe34e435a0e0f/",
+    "hydroshare_id": "9b2a6c9e66c84380b0bfe34e435a0e0f",
+    "repository": "HydroShare",
+    "sites": [
+      "calhoun",
+      "national"
+    ],
+    "era": "czo",
+    "source": "discover",
+    "source_url": "https://www.hydroshare.org/resource/9b2a6c9e66c84380b0bfe34e435a0e0f",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CCZO -- Soil Biogeochemistry -- Calhoun CZO -- (2015-2016)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/98f23778fae94283a179f1ab242fed96/",
+    "hydroshare_id": "98f23778fae94283a179f1ab242fed96",
+    "repository": "HydroShare",
+    "sites": [
+      "calhoun",
+      "national"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/5933/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CCZO -- Soil Biogeochemistry -- Carbon isotopes -- R1 -- (2016-2016)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/da7a0231f38b4936af6f8179c2a48aa0/",
+    "hydroshare_id": "da7a0231f38b4936af6f8179c2a48aa0",
+    "repository": "HydroShare",
+    "sites": [
+      "calhoun",
+      "national"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/7204/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CCZO -- Soil Electrical Resistivity -- Calhoun Experimental Watershed 4 -- (2015-2015)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/d04a040fefb14ab384a315de2698c6b3/",
+    "hydroshare_id": "d04a040fefb14ab384a315de2698c6b3",
+    "repository": "HydroShare",
+    "sites": [
+      "calhoun",
+      "national"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/4677/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CCZO -- Soil Gas -- Calhoun Long Term Soil Experiment -- (1992-1996)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/c24625c09a9a4bf08d326a873e385495/",
+    "hydroshare_id": "c24625c09a9a4bf08d326a873e385495",
+    "repository": "HydroShare",
+    "sites": [
+      "calhoun",
+      "national"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/4032/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CCZO -- Soil Gas -- Research areas 1, 4, 7 -- (2015-2017)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/272f43b9d49d44ee97a0d3d143e7a5cc/",
+    "hydroshare_id": "272f43b9d49d44ee97a0d3d143e7a5cc",
+    "repository": "HydroShare",
+    "sites": [
+      "calhoun",
+      "national"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/4659/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CCZO -- Soil Gas, Soil Moisture, Soil Temperature -- Research area 1 -- (2016-2019)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/57a0afc2bb0e42b180478668a565720d/",
+    "hydroshare_id": "57a0afc2bb0e42b180478668a565720d",
+    "repository": "HydroShare",
+    "sites": [
+      "calhoun",
+      "national"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/4658/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CCZO -- Soil Geochemistry -- 70-m deep borehole -- Calhoun Long-Term Soil Experiment -- (2010-2010)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/55606327aab649ed809f1cc1c804ff3c/",
+    "hydroshare_id": "55606327aab649ed809f1cc1c804ff3c",
+    "repository": "HydroShare",
+    "sites": [
+      "calhoun",
+      "national"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/4673/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CCZO -- Soil Geochemistry -- Calhoun 70m deep well -- (2010-2010)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/e0ff49ca7eef40f282c74a396bf5a903/",
+    "hydroshare_id": "e0ff49ca7eef40f282c74a396bf5a903",
+    "repository": "HydroShare",
+    "sites": [
+      "calhoun",
+      "national"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/4018/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CCZO -- Soil Geochemistry -- Calhoun CZO -- (2016-2016)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/75de7aa9cc69489a828dc4f4216cefeb/",
+    "hydroshare_id": "75de7aa9cc69489a828dc4f4216cefeb",
+    "repository": "HydroShare",
+    "sites": [
+      "calhoun",
+      "national"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/5986/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CCZO -- Soil Geochemistry -- Mössbauer spectroscopy -- Calhoun CZO -- (2015-2015)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/cd92a0c4f9d64c748f21cd8f077cd072/",
+    "hydroshare_id": "cd92a0c4f9d64c748f21cd8f077cd072",
+    "repository": "HydroShare",
+    "sites": [
+      "calhoun",
+      "national"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/4678/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CCZO -- Soil Geochemistry -- Soil organic matter transformations -- Calhoun CZO -- (2015-2015)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/c2f67c84dfe14b6d92cf3455ad767f19/",
+    "hydroshare_id": "c2f67c84dfe14b6d92cf3455ad767f19",
+    "repository": "HydroShare",
+    "sites": [
+      "calhoun",
+      "national"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/4637/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CCZO -- Soil Mineralogy -- Calhoun CZO -- (2014-2015)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/d50588e5fe164d4b9f0de26b1704ce04/",
+    "hydroshare_id": "d50588e5fe164d4b9f0de26b1704ce04",
+    "repository": "HydroShare",
+    "sites": [
+      "calhoun",
+      "national"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/4620/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CCZO -- Soil Mineralogy, Soil Geochemistry, Photographic Imagery -- Calhoun 70-m deep well -- (2019-2019)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/4845d6f238764f6e865af78e11a36279/",
+    "hydroshare_id": "4845d6f238764f6e865af78e11a36279",
+    "repository": "HydroShare",
+    "sites": [
+      "calhoun",
+      "national"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/7243/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CCZO -- Soil Moisture -- Calhoun Long-Term Soil Experiment -- (1991-1995)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/9106c673cdc64312a8d4cc74254ad1a2/",
+    "hydroshare_id": "9106c673cdc64312a8d4cc74254ad1a2",
+    "repository": "HydroShare",
+    "sites": [
+      "calhoun",
+      "national"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/4108/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CCZO -- Soil Moisture -- Hydroprobe -- Calhoun Critical Zone Observatory -- (2016-Ongoing)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/9b7328ab4c914676891fbb8ff65d98c2/",
+    "hydroshare_id": "9b7328ab4c914676891fbb8ff65d98c2",
+    "repository": "HydroShare",
+    "sites": [
+      "calhoun",
+      "national"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/6580/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CCZO -- Soil Moisture, Soil Redox Potential -- Calhoun Experimental Watersheds 2, 3, 4 -- (2014-2015)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/c414c5cdc67244a4ada77cc490f8c6fd/",
+    "hydroshare_id": "c414c5cdc67244a4ada77cc490f8c6fd",
+    "repository": "HydroShare",
+    "sites": [
+      "calhoun",
+      "national"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/4674/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CCZO -- Soil Porosity, Soil Invertebrates -- Calhoun CZO -- (2015-2017)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/59cda52523844d4abd39873b2be86b2a/",
+    "hydroshare_id": "59cda52523844d4abd39873b2be86b2a",
+    "repository": "HydroShare",
+    "sites": [
+      "calhoun",
+      "national"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/4660/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CCZO -- Soil Survey -- Hydraulic Conductivity -- Calhoun Long-Term Soil Experiment -- (2011-2011)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/aa9c2317eb2a456e9bcf29fc21b38dbe/",
+    "hydroshare_id": "aa9c2317eb2a456e9bcf29fc21b38dbe",
+    "repository": "HydroShare",
+    "sites": [
+      "calhoun",
+      "national"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/4106/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CCZO -- Soil Survey -- Soil Texture -- Calhoun CZO -- (2014-2015)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/b7e332f222c4446596c8663d83559841/",
+    "hydroshare_id": "b7e332f222c4446596c8663d83559841",
+    "repository": "HydroShare",
+    "sites": [
+      "calhoun",
+      "national"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/4683/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CCZO -- Soil Texture -- Argillic Horizon -- Calhoun CZO -- (2016-2017)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/116fa5ba5645479ea670cf5b5a7f2635/",
+    "hydroshare_id": "116fa5ba5645479ea670cf5b5a7f2635",
+    "repository": "HydroShare",
+    "sites": [
+      "calhoun",
+      "national"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/5982/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CCZO -- Soil Texture -- Calhoun CZO -- (2015-2016)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/1bd22f9415d3461b86f4cf3874e2e1c1/",
+    "hydroshare_id": "1bd22f9415d3461b86f4cf3874e2e1c1",
+    "repository": "HydroShare",
+    "sites": [
+      "calhoun",
+      "national"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/5564/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CCZO -- Soil Water Chemistry -- Calhoun Long-Term Soil Experiment -- (1991-1994)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/fb8172a09c524bd8be172f3057a776c0/",
+    "hydroshare_id": "fb8172a09c524bd8be172f3057a776c0",
+    "repository": "HydroShare",
+    "sites": [
+      "calhoun",
+      "national"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/4107/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CCZO -- Stream Water Chemistry -- Calhoun CZO -- (2014-2018)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/63cd313bd15b4b77b05b8f34ec9388ee/",
+    "hydroshare_id": "63cd313bd15b4b77b05b8f34ec9388ee",
+    "repository": "HydroShare",
+    "sites": [
+      "calhoun",
+      "national"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/4851/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CCZO -- Streamflow / Discharge -- Calhoun CZO -- (2014-2017)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/a22295e88b204d5997faeeaebb4dbe09/",
+    "hydroshare_id": "a22295e88b204d5997faeeaebb4dbe09",
+    "repository": "HydroShare",
+    "sites": [
+      "calhoun",
+      "national"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/6470/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CCZO -- Streamflow / Discharge -- Research Area 3, weir 4 -- (2014-2017)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/ad719c838a7b44e8bbacb33d2c4dd95f/",
+    "hydroshare_id": "ad719c838a7b44e8bbacb33d2c4dd95f",
+    "repository": "HydroShare",
+    "sites": [
+      "calhoun",
+      "national"
+    ],
+    "era": "czo",
+    "source": "discover",
+    "source_url": "https://www.hydroshare.org/resource/ad719c838a7b44e8bbacb33d2c4dd95f",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CCZO -- Streamflow / Discharge, Electrical Conductivity -- Calhoun Experimental Watershed 4 -- (2015-2015)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/0ed16cef91d2496c92718b7bb5330b77/",
+    "hydroshare_id": "0ed16cef91d2496c92718b7bb5330b77",
+    "repository": "HydroShare",
+    "sites": [
+      "calhoun",
+      "national"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/4684/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CCZO -- Streamflow / Discharge, Precipitation -- Calhoun Experimental Forest, SC -- (1949-1962)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/4a30c526f14141bfbd4b496d348fbd20/",
+    "hydroshare_id": "4a30c526f14141bfbd4b496d348fbd20",
+    "repository": "HydroShare",
+    "sites": [
+      "calhoun",
+      "national"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/4680/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CCZO -- Vegetation -- Leaf Area Index -- Calhoun CZO -- (2014-2014)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/faca41bfb3e44755ab11c4db4ae88340/",
+    "hydroshare_id": "faca41bfb3e44755ab11c4db4ae88340",
+    "repository": "HydroShare",
+    "sites": [
+      "calhoun",
+      "national"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/4679/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CCZO -- Vegetation -- Litterfall -- Calhoun CZO -- (2014-2019)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/7396e378524f4b88b8126b6f28d4dfe8/",
+    "hydroshare_id": "7396e378524f4b88b8126b6f28d4dfe8",
+    "repository": "HydroShare",
+    "sites": [
+      "calhoun",
+      "national"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/4687/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CCZO -- Vegetation -- Tree Survey -- Calhoun CZO -- (2014-2021)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/0df6306f5e374bb38f664099bca1b25d/",
+    "hydroshare_id": "0df6306f5e374bb38f664099bca1b25d",
+    "repository": "HydroShare",
+    "sites": [
+      "calhoun",
+      "national"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/4614/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Changes in stable isotope signatures of soil nitrogen and carbon during 40 years of forest development",
+    "type": "paper",
+    "doi": "10.1007/s00442-006-0366-7",
+    "url": "https://doi.org/10.1007/s00442-006-0366-7",
+    "repository": "Oecologia 148 (2): 325-333",
+    "sites": [
+      "calhoun"
+    ],
+    "year": 2006,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/billings-richter-2006-changes-in-stable-isotope-signatures-of-soil-nitrogen/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Channelization cascade in landscape evolution",
+    "type": "paper",
+    "doi": "10.1073/pnas.1911817117",
+    "url": "https://doi.org/10.1073/pnas.1911817117",
+    "repository": "PNAS 117(3): 1375-1382",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2020,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/bonetti-et-al-2020-channelization-cascade-in-landscape-evolution/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Chapter 19. Long-term forest soils research: lessons learned from the US experience.",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/knoepp-et-al-2019-chapter-19-long-term-forest-soils-research-lessons-learne/",
+    "repository": "In: Global Change and Forest Soils (Developments in Soil Science series, vol. 36), ed. by Matt Busse, Christian Giardina, Dave Morris, and Deborah Page-Dumroese",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2019,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/knoepp-et-al-2019-chapter-19-long-term-forest-soils-research-lessons-learne/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Chapter 4. History of forest soils knowledge and research",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/knoepp-et-al-2019-chapter-4-history-of-forest-soils-knowledge-and-research/",
+    "repository": "In: Global Change and Forest Soils (Developments in Soil Science series, vol. 36), ed. by Matt Busse, Christian Giardina, Dave Morris, and Deborah Page-Dumroese",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2019,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/knoepp-et-al-2019-chapter-4-history-of-forest-soils-knowledge-and-research/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Clays in the Critical Zone",
+    "type": "paper",
+    "doi": "10.1017/9781316480083",
+    "url": "https://doi.org/10.1017/9781316480083",
+    "repository": "Cambridge University Press, Cambridge, UK Cross-CZO",
+    "sites": [
+      "calhoun",
+      "national"
+    ],
+    "era": "czo",
+    "year": 2018,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/schroeder-2018-clays-in-the-critical-zone/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Clays in the Critical Zone: An Introduction",
+    "type": "paper",
+    "doi": "10.1346/CCMN.2016.064045",
+    "url": "https://doi.org/10.1346/CCMN.2016.064045",
+    "repository": "Clays and Clay Minerals 65 (5): 586-587",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2016,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/schroeder-2016-clays-in-the-critical-zone-an-introduction/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Colonization of the Americas, ‘Little Ice Age’ climate, and bomb-produced carbon: Their role in defining the Anthropocene",
+    "type": "paper",
+    "doi": "10.1177/2053019615587056",
+    "url": "https://doi.org/10.1177/2053019615587056",
+    "repository": "The Anthropocene Review 2 (2): 117-127",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2015,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/zalasiewicz-et-al-2015-colonization-of-the-americas-little-ice-age-climate-/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Comment on “Storage selection functions: A coherent framework for quantifying how catchments store and release water and solutes” by Rinaldo et al.",
+    "type": "paper",
+    "doi": "10.1002/2015WR017846",
+    "url": "https://doi.org/10.1002/2015WR017846",
+    "repository": "Water Resources Research 52(1): 613-615",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2016,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/porporato-calabrese-comment-on-storage-selection-functions-a-coherent-frame/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Coupling between biota and earth materials in the critical zone",
+    "type": "paper",
+    "doi": "10.2113/gselements.3.5.327",
+    "url": "https://doi.org/10.2113/gselements.3.5.327",
+    "repository": "Elements 3 (5): 327-333",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2007,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/amundson-et-al-2007-coupling-between-biota-and-earth-materials-in-the-criti/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Coupling meteoric 10 Be with pedogenic losses of 9 Be to improve soil residence time estimates on an ancient North American interfluve",
+    "type": "paper",
+    "doi": "10.1130/G33449.1",
+    "url": "https://doi.org/10.1130/G33449.1",
+    "repository": "Geology 40 (9): 847–850",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2012,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/bacon-et-al-2012-coupling-meteoric-10be-with-pedogenic-losses-of-9be-to-imp/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Creating deep soil core monoliths: Beyond the solum",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/fitzpatrick-et-al-2015-creating-deep-soil-core-monoliths-beyond-the-solum/",
+    "repository": "Southeastern Geology 51(2): 85-96",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2015,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/fitzpatrick-et-al-2015-creating-deep-soil-core-monoliths-beyond-the-solum/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Cultivating a sense of place in the southern Piedmont using Esri Story Maps",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/oneill-2017-cultivating-a-sense-of-place-in-the-southern-piedmont-using-esr/",
+    "repository": "In The Trenches, Volume 7, Oct 2017",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2017,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/oneill-2017-cultivating-a-sense-of-place-in-the-southern-piedmont-using-esr/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Depth to the Argillic Horizon on Historically Farmed Soil in the Southeastern USA Piedmont: Spatial Mapping and Hydrologic Influence",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/ryland-2017-depth-to-the-argillic-horizon-on-historically-farmed-soil-in-th/",
+    "repository": "Master's Thesis, University of Georgia",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2017,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/ryland-2017-depth-to-the-argillic-horizon-on-historically-farmed-soil-in-th/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Development and deployment of a field-portable soil O2 and CO2 gas analyzer and sampler",
+    "type": "paper",
+    "doi": "10.1371/journal.pone.0220176",
+    "url": "https://doi.org/10.1371/journal.pone.0220176",
+    "repository": "PLoS ONE 14(8): e0220176",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2019,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/brecheisen-et-al-2019-development-and-deployment-of-a-field-portable-soil-o/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Development of Martian regolith and bedrock simulants: Potential and limitations of Martian regolith as an in-situ resource",
+    "type": "paper",
+    "doi": "10.1016/j.icarus.2020.114055",
+    "url": "https://doi.org/10.1016/j.icarus.2020.114055",
+    "repository": "Icarus 354: 114055",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2020,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/fackrell-et-al-2020-development-of-martian-regolith-and-bedrock-simulants-p/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Diachronous beginnings of the Anthropocene: The lower bounding surface of anthropogenic deposits",
+    "type": "paper",
+    "doi": "10.1177/2053019614565394",
+    "url": "https://doi.org/10.1177/2053019614565394",
+    "repository": "The Anthropocene Review 2 (1): 33-58",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2015,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/edgeworth-et-al-2015-diachronous-beginnings-of-the-anthropocene-the-lower-b/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Disputed start dates for Anthropocene",
+    "type": "paper",
+    "doi": "10.1038/520436b",
+    "url": "https://doi.org/10.1038/520436b",
+    "repository": "Nature 520: 436",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2015,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/zalasiewicz-et-al-2015-disputed-start-dates-for-anthropocene/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Distinct contributions of eroding and depositional profiles to land-atmosphere CO2 exchange in two contrasting forests",
+    "type": "paper",
+    "doi": "10.3389/feart.2019.00036",
+    "url": "https://doi.org/10.3389/feart.2019.00036",
+    "repository": "Frontiers in Earth Science 7: article 36",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2019,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/billings-et-al-2019-distinct-contributions-of-eroding-and-depositional-prof/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Distribution and diversity of semiaquatic Sparganophilidae earthworms in the Southern Appalachian Piedmont, USA",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/carrera-martinez-2018-distribution-and-diversity-of-semiaquatic-sparganophi/",
+    "repository": "MS Thesis, University of Georgia",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2018,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/carrera-martinez-2018-distribution-and-diversity-of-semiaquatic-sparganophi/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Diurnal cloud cycle biases in climate models",
+    "type": "paper",
+    "doi": "10.1038/s41467-017-02369-4",
+    "url": "https://doi.org/10.1038/s41467-017-02369-4",
+    "repository": "Nature Communications 8: 2269",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2017,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/yin-porporato-2017-diurnal-cloud-cycle-biases-in-climate-models/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Drivers and Variability of Iron Reduction in Upland Soils",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/hodges-2017-drivers-and-variability-of-iron-reduction-in-upland-soils/",
+    "repository": "M.S. Thesis, Department of Crop & Soil Sciences, University of Georgia",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2017,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/hodges-2017-drivers-and-variability-of-iron-reduction-in-upland-soils/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Dynamic evolution of the soil pore size distribution and its connection to soil management and biogeochemical processes",
+    "type": "paper",
+    "doi": "10.1016/j.advwatres.2019.103384",
+    "url": "https://doi.org/10.1016/j.advwatres.2019.103384",
+    "repository": "Advances in Water Resources 131, 103384",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2019,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/pelak-porporato-2019-dynamic-evolution-of-the-soil-pore-size-distribution-a/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Ecohydrological flow networks in the subsurface",
+    "type": "paper",
+    "doi": "10.1002/eco.1525",
+    "url": "https://doi.org/10.1002/eco.1525",
+    "repository": "Ecohydrology 7(4):1073-1078",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2014,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/band-et-al-2014-ecohydrological-flow-networks-in-the-subsurface/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Ecohydrological model for the quantification of ecosystem services provided by urban street trees",
+    "type": "paper",
+    "doi": "10.1007/s11252-018-0741-2",
+    "url": "https://doi.org/10.1007/s11252-018-0741-2",
+    "repository": "Urban Ecosystems 21(3): 489-504",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2018,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/revelli-porporato-2018-ecohydrological-model-for-the-quantification-of-ecos/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Ecohydrological modeling in agroecosystems: Examples and challenges",
+    "type": "paper",
+    "doi": "10.1002/2015WR017289",
+    "url": "https://doi.org/10.1002/2015WR017289",
+    "repository": "Water Resources Research 51(7): 5081-5099",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2015,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/porporato-et-al-2015-ecohydrological-modeling-in-agroecosystems-examples-an/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Effects of Land-Use History on Soil Macro- and Trace Elements in the Southern Piedmont of North America",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/li-2009-effects-of-land-use-history-on-soil-macro-and-trace-elements-in-the/",
+    "repository": "PhD Dissertation, Duke University",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2009,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/li-2009-effects-of-land-use-history-on-soil-macro-and-trace-elements-in-the/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Effects of land-use history on soil spatial heterogeneity of macro- and trace elements in the Southern Piedmont USA",
+    "type": "paper",
+    "doi": "10.1016/j.geoderma.2010.01.008",
+    "url": "https://doi.org/10.1016/j.geoderma.2010.01.008",
+    "repository": "Geoderma Volume 156(1-2): 60-73",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2010,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/li-et-al-2010-effects-of-land-use-history-on-soil-spatial-heterogeneity-of-/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Effects of two-century land use changes on soil iron crystallinity and accumulation in Southeastern Piedmont region, USA",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/li-richter-2012-effects-of-two-century-land-use-changes-on-soil-iron-crysta/",
+    "repository": "Geoderma 173-174: 184-191",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2012,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/li-richter-2012-effects-of-two-century-land-use-changes-on-soil-iron-crysta/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Elemental translocation and loss from three highly weathered soil–bedrock profiles in the southeastern United States",
+    "type": "paper",
+    "doi": "10.1016/j.geoderma.2004.11.005",
+    "url": "https://doi.org/10.1016/j.geoderma.2004.11.005",
+    "repository": "Geoderma 126 (1-2): 5-25",
+    "sites": [
+      "calhoun"
+    ],
+    "year": 2005,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/oh-richter-2005-elemental-translocation-and-loss-from-three-highly-weathere/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Eroded Landscapes: Agricultural and Environmental Change in the United States Piedmont, 1790-1860",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/lonneman-2018-eroded-landscapes-agricultural-and-environmental-change-in-th/",
+    "repository": "MA Thesis, University of Georgia, Department of Anthropology",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2018,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/lonneman-2018-eroded-landscapes-agricultural-and-environmental-change-in-th/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Evaluating the effect of nutrient redistribution by animals on the phosphorus cycle of lowland Amazonia",
+    "type": "paper",
+    "doi": "10.5194/bg-15-279-2018",
+    "url": "https://doi.org/10.5194/bg-15-279-2018",
+    "repository": "Biogeosciences 15: 279-295",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2018,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/buendia-et-al-2018-evaluating-the-effect-of-nutrient-redistribution-by-anim/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Evolution of Soil, Ecosystem, and Critical Zone Research at the USDA FS Calhoun Experimental Forest",
+    "type": "paper",
+    "doi": "10.1007/978-1-4614-1818-4_18",
+    "url": "https://doi.org/10.1007/978-1-4614-1818-4_18",
+    "repository": "In: USDA Forest Service Experimental Forests and Ranges: Research for the Long Term, Chapter: 18, Publisher: Springer Verlag, Editors: D.C. Hayes, S.L. Stout, R.H. Crawford, A.P. Hoover, pp. 405-433",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2014,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/richter-et-al-2014-evolution-of-soil-ecosystem-and-critical-zone-research-a/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Exploring the role of domain partitioning on efficiency of parallel distributed hydrologic model simulations",
+    "type": "paper",
+    "doi": "10.4172/2325-9647.1000119",
+    "url": "https://doi.org/10.4172/2325-9647.1000119",
+    "repository": "Journal of Hydrogeology & Hydrologic Engineering 4: 1-12",
+    "sites": [
+      "calhoun",
+      "shale-hills"
+    ],
+    "era": "czo",
+    "year": 2015,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/kumar-duffy-2015-exploring-the-role-of-domain-partitioning-on-efficiency-of/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Ferrous iron oxidation under varying pO2 levels: The effect of Fe(III)/Al(III) oxide minerals and organic matter",
+    "type": "paper",
+    "doi": "10.1021/acs.est.7b05102",
+    "url": "https://doi.org/10.1021/acs.est.7b05102",
+    "repository": "Environmental Science & Technology 52 (2): 597–606",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2018,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/chen-thompson-2018-ferrous-iron-oxidation-under-varying-po2-levels-the-effe/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Forest soil carbon and nitrogen cycles under biomass harvest: Stability, transient response, and feedback",
+    "type": "paper",
+    "doi": "10.1016/j.ecolmodel.2016.03.003",
+    "url": "https://doi.org/10.1016/j.ecolmodel.2016.03.003",
+    "repository": "Ecological Modelling 326: 64-76",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2016,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/parolari-and-porporato-2016-forest-soil-carbon-and-nitrogen-cycles-under-bi/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Four-decade responses of soil trace elements to an aggrading old-field forest: B, Mn, Zn, Cu, and Fe",
+    "type": "paper",
+    "doi": "10.1890/07-1381.1",
+    "url": "https://doi.org/10.1890/07-1381.1",
+    "repository": "Ecology 89 (10): 2911-2923",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2008,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/li-et-al-2008-four-decade-responses-of-soil-trace-elements-to-an-aggrading-/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Framework for event-based semidistributed modeling that unifies the SCS-CN method, VIC, PDM, and TOPMODEL",
+    "type": "paper",
+    "doi": "10.1002/2016WR019084",
+    "url": "https://doi.org/10.1002/2016WR019084",
+    "repository": "Water Resources Research 52 (9): 7036-7052",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2016,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/bartlett-et-al-2016-framework-for-event-based-semidistributed-modeling-that/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "From turbulence to landscapes: Logarithmic mean profiles in bounded complex systems",
+    "type": "paper",
+    "doi": "10.1103/PhysRevE.102.033107",
+    "url": "https://doi.org/10.1103/PhysRevE.102.033107",
+    "repository": "Physical Review E 102, 033107",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2020,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/hooshyar-et-al-2020-from-turbulence-to-landscapes-logarithmic-mean-profiles/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Fundamentals of Soil Ecology, 3rd Edition",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/coleman-et-al-2017-fundamentals-of-soil-ecology-3rd-edition/",
+    "repository": "Academic Press, London, 369 pp.",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2017,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/coleman-et-al-2017-fundamentals-of-soil-ecology-3rd-edition/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Game changer in soil science. The Anthropocene in soil science and pedology",
+    "type": "paper",
+    "doi": "10.1002/jpln.201900320",
+    "url": "https://doi.org/10.1002/jpln.201900320",
+    "repository": "Journal of Plant Nutrition and Soil Science 183 (1): 5-11",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2020,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/richter-2020-game-changer-in-soil-science-the-anthropocene-in-soil-science-/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Geology of the Calhoun Critical Zone Observatory",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/jordan-2020-geology-of-the-calhoun-critical-zone-observatory/",
+    "repository": "Master's Thesis, University of Georgia",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2020,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/jordan-2020-geology-of-the-calhoun-critical-zone-observatory/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Geostatistical analysis of historical contingency and land use footprints in the prehistoric settlement dynamics of the South Carolina Piedmont, North America",
+    "type": "paper",
+    "doi": "10.1016/j.jas.2019.04.003",
+    "url": "https://doi.org/10.1016/j.jas.2019.04.003",
+    "repository": "Journal of Archaeological Science 107: 1-9",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2019,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/coughlan-nelson-2019-geostatistical-analysis-of-historical-contingency-and-/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Global nitrogen budgets in cereals: A 50-year assessment for maize, rice, and wheat production systems",
+    "type": "paper",
+    "doi": "10.1038/srep19355",
+    "url": "https://doi.org/10.1038/srep19355",
+    "repository": "Scientific Reports 6: 19355",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2016,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/ladha-et-al-2016-global-nitrogen-budgets-in-cereals-a-50-year-assessment-fo/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Gradient‐based inverse estimation for a rainfall‐runoff model",
+    "type": "paper",
+    "doi": "10.1029/2018WR024461",
+    "url": "https://doi.org/10.1029/2018WR024461",
+    "repository": "Water Resources Research 55: 6625-6639",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2019,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/krapu-et-al-2019-gradientbased-inverse-estimation-for-a-rainfallrunoff-mode/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Historical land use dynamics in the highly degraded landscape of the Calhoun Critical Zone Observatory",
+    "type": "paper",
+    "doi": "10.3390/land6020032",
+    "url": "https://doi.org/10.3390/land6020032",
+    "repository": "Land 6(2), 32",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2017,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/coughlan-et-al-2017-historical-land-use-dynamics-in-the-highly-degraded-lan/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "How to estimate statistically detectable trends in a time series: A study of soil carbon and nutrient concentrations at the Calhoun LTSE",
+    "type": "paper",
+    "doi": "10.2136/sssaj2018.09.0335",
+    "url": "https://doi.org/10.2136/sssaj2018.09.0335",
+    "repository": "Soil Science Society of America Journal 83(s1): S133-S140",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2019,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/mobley-et-al-2019-how-to-estimate-statistically-detectable-trends-in-a-time/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Human-soil relations are changing rapidly: Proposals from SSSA's cross-divisional soil change working group",
+    "type": "paper",
+    "doi": "10.2136/sssaj2011.0124",
+    "url": "https://doi.org/10.2136/sssaj2011.0124",
+    "repository": "Soil Science Society of America Journal 75(6): 2079-2084",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2011,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/richter-et-al-2011-human-soil-relations-are-changing-rapidly-proposals-from/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Humanity's transformation of Earth's soil: Pedology's new frontier",
+    "type": "paper",
+    "doi": "10.1097/ss.0b013e3181586bb7",
+    "url": "https://doi.org/10.1097/ss.0b013e3181586bb7",
+    "repository": "Soil Science 172 (12): 957-967",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2007,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/richter-2007-humanitys-transformation-of-earths-soil-pedologys-new-frontier/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Hydro-geomorphic perturbations on the soil-atmosphere CO2 exchange: How (un)certain are our balances?",
+    "type": "paper",
+    "doi": "10.1002/2016WR019411",
+    "url": "https://doi.org/10.1002/2016WR019411",
+    "repository": "Water Resources Research 53(2): 1664-1682",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2017,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/dialynas-et-al-2017-hydro-geomorphic-perturbations-on-the-soil-atmosphere-c/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Hydrologic Functioning of Low-Relief, Deep Soil Watersheds and Hydrologic Legacies of Intensive Agriculture in the Calhoun Critical Zone Observatory, South Carolina, USA",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/mallard-2020-hydrologic-functioning-of-low-relief-deep-soil-watersheds-and-/",
+    "repository": "PhD Dissertation, Nicholas School of the Environment, Duke University",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2020,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/mallard-2020-hydrologic-functioning-of-low-relief-deep-soil-watersheds-and-/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Hydrologic transport of dissolved inorganic carbon and its control on chemical weathering",
+    "type": "paper",
+    "doi": "10.1002/2017JF004346",
+    "url": "https://doi.org/10.1002/2017JF004346",
+    "repository": "Journal of Geophysical Research: Earth Surface 122 (10): 2016-2032",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2017,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/calabrese-et-al-2017-hydrologic-transport-of-dissolved-inorganic-carbon-and/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Hydrological spaces of long-term catchment water balance",
+    "type": "paper",
+    "doi": "10.1029/2019WR025952",
+    "url": "https://doi.org/10.1029/2019WR025952",
+    "repository": "Water Resources Research 55(12): 10747-10764",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2019,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/daly-et-al-2019-hydrological-spaces-of-long-term-catchment-water-balance/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Impact of gully incision on hillslope hydrology",
+    "type": "paper",
+    "doi": "10.1002/hyp.13845",
+    "url": "https://doi.org/10.1002/hyp.13845",
+    "repository": "Hydrological Processes 34(19): 3848-3866",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2020,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/chen-et-al-2020-impact-of-gully-incision-on-hillslope-hydrology/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Impacts of Climate Variation and Change on Hydrologic and Vegetation Dynamics",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/liu-2019-impacts-of-climate-variation-and-change-on-hydrologic-and-vegetati/",
+    "repository": "PhD Dissertation, Duke University",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2019,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/liu-2019-impacts-of-climate-variation-and-change-on-hydrologic-and-vegetati/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Increasing atmospheric humidity and CO 2 concentration alleviate forest mortality risk",
+    "type": "paper",
+    "doi": "10.1073/pnas.1704811114",
+    "url": "https://doi.org/10.1073/pnas.1704811114",
+    "repository": "PNAS 114 (37): 9918-9923",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2017,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/liu-et-al-2017-increasing-atmospheric-humidity-and-co2-concentration-allevi/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Influences of Native American land use on the Colonial Euro-American settlement of the South Carolina Piedmont",
+    "type": "paper",
+    "doi": "10.1371/journal.pone.0195036",
+    "url": "https://doi.org/10.1371/journal.pone.0195036",
+    "repository": "PLoS ONE 13(3): e0195036",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2018,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/coughlan-and-nelson-2018-influences-of-native-american-land-use-on-the-colo/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Integration of fuzzy logic and image analysis for the detection of gullies in the Calhoun Critical Zone Observatory using airborne LiDAR data",
+    "type": "paper",
+    "doi": "10.1016/j.isprsjprs.2017.02.013",
+    "url": "https://doi.org/10.1016/j.isprsjprs.2017.02.013",
+    "repository": "ISPRS Journal of Photogrammetry and Remote Sensing 126: 209-224",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2017,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/noto-et-al-2017-integration-of-fuzzy-logic-and-image-analysis-for-the-detec/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Intercomparing varied erosion, deposition and transport process representations for simulating sediment yield",
+    "type": "paper",
+    "doi": "10.1038/s41598-019-48405-9",
+    "url": "https://doi.org/10.1038/s41598-019-48405-9",
+    "repository": "Scientific Reports 9, Article number: 12029",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2019,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/zi-et-al-2019-intercomparing-varied-erosion-deposition-and-transport-proces/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Interdisciplinary Sciences in a Global Network of Critical Zone Observatories.",
+    "type": "paper",
+    "doi": "10.2136/vzj2011.0084",
+    "url": "https://doi.org/10.2136/vzj2011.0084",
+    "repository": "Vadose Zone Journal 10: 781-785",
+    "sites": [
+      "calhoun",
+      "shale-hills",
+      "sierra"
+    ],
+    "era": "czo",
+    "year": 2011,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/lin-et-al-2011-interdisciplinary-sciences-in-a-global-network-of-critical-z/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Investigating microbial transformations of soil organic matter: synthesizing knowledge from disparate fields to guide new experimentation",
+    "type": "paper",
+    "doi": "10.5194/soil-1-313-2015",
+    "url": "https://doi.org/10.5194/soil-1-313-2015",
+    "repository": "Soil 1: 313-330",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2015,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/billings-et-al-2015-investigating-microbial-transformations-of-soil-organic/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Jump processes with deterministic and stochastic controls",
+    "type": "paper",
+    "doi": "10.1103/PhysRevE.100.042133",
+    "url": "https://doi.org/10.1103/PhysRevE.100.042133",
+    "repository": "Physical Review E 100(4), 042133",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2019,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/bartlett-et-al-2019-jump-processes-with-deterministic-and-stochastic-contro/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Land and atmospheric controls on initiation and intensity of moist convection: CAPE dynamics and LCL crossings",
+    "type": "paper",
+    "doi": "10.1002/2015WR017286",
+    "url": "https://doi.org/10.1002/2015WR017286",
+    "repository": "Water Resources Research 51(10): 8476-8493",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2015,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/yin-et-al-2015-land-and-atmospheric-controls-on-initiation-and-intensity-of/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Land-use legacy dynamics in decades- and centuries-old soils",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/wade-2020-land-use-legacy-dynamics-in-decades-and-centuries-old-soils/",
+    "repository": "PhD Dissertation, Nicholas School of the Environment, Duke University",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2020,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/wade-2020-land-use-legacy-dynamics-in-decades-and-centuries-old-soils/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Learning from the \"deep changes in the land\": The Critical Zone perspective in environmental science education",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/oneill-richter-2016-learning-from-the-deep-changes-in-the-land-the-critical/",
+    "repository": "The Earth Scientist 32 (3): 25-27 Cross-CZO",
+    "sites": [
+      "calhoun",
+      "national"
+    ],
+    "era": "czo",
+    "year": 2016,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/publications/pub/oneill-richter-2016-learning-from-the-deep-changes-in-the-land-the-critical/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Legacies of agriculture and forest regrowth in the nitrogen of old-field soils",
+    "type": "paper",
+    "doi": "10.1016/S0378-1127(00)00399-6",
+    "url": "https://doi.org/10.1016/S0378-1127(00)00399-6",
+    "repository": "Forest Ecology and Management 138 (1-3): 233-248",
+    "sites": [
+      "calhoun"
+    ],
+    "year": 2000,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/richter-et-al-2000-legacies-of-agriculture-and-forest-regrowth-in-the-nitro/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Limited carbon contents of centuries old soils forming in legacy sediment",
+    "type": "paper",
+    "doi": "10.1016/j.geomorph.2019.107018",
+    "url": "https://doi.org/10.1016/j.geomorph.2019.107018",
+    "repository": "Geomorphology 354: 107018",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2020,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/wade-et-al-2020-limited-carbon-contents-of-centuries-old-soils-forming-in-l/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Linear layout of multiple flow-direction networks for landscape-evolution simulations",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/anand-2020-linear-layout-of-multiple-flow-direction-networks-for-landscape-/",
+    "repository": "Environmental Modelling & Software 133: 104804",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2020,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/anand-2020-linear-layout-of-multiple-flow-direction-networks-for-landscape-/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Linking parametric and water-balance models of the Budyko and Turc spaces",
+    "type": "paper",
+    "doi": "10.1016/j.advwatres.2019.103435",
+    "url": "https://doi.org/10.1016/j.advwatres.2019.103435",
+    "repository": "Advances in Water Resources 134: 103435",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2019,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/daly-et-al-2019-linking-parametric-and-water-balance-models-of-the-budyko-a/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Links between physical and chemical weathering inferred from a 65-m-deep borehole through Earth’s critical zone",
+    "type": "paper",
+    "doi": "10.1038/s41598-019-40819-9",
+    "url": "https://doi.org/10.1038/s41598-019-40819-9",
+    "repository": "Scientific Reports 9: Article number 4495",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2019,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/holbrook-et-al-2019-links-between-physical-and-chemical-weathering-inferred/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Long-term land-use effects on soil invertebrate communities in Southern Piedmont soils, USA",
+    "type": "paper",
+    "doi": "10.1016/j.ejsobi.2006.06.001",
+    "url": "https://doi.org/10.1016/j.ejsobi.2006.06.001",
+    "repository": "European Journal of Soil Biology 42 (Supplement 1): S150-S156",
+    "sites": [
+      "calhoun"
+    ],
+    "year": 2006,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/callaham-et-al-2006-long-term-land-use-effects-on-soil-invertebrate-communi/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Long-term soil experiments: Keys to managing Earth's rapidly changing ecosystems",
+    "type": "paper",
+    "doi": "10.2136/sssaj2006.0181",
+    "url": "https://doi.org/10.2136/sssaj2006.0181",
+    "repository": "Soil Science Society of America Journal 71 (2): 266-279",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2007,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/richter-et-al-2007-long-term-soil-experiments-keys-to-managing-earths-rapid/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Long-term soil potassium availability from a Kanhapludult to an aggrading loblolly pine ecosystem",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/markewitz-2000-long-term-soil-potassium-availability-from-a-kanhapludult-to/",
+    "repository": "Forest Ecology and Management 130 (1-3): 109-129",
+    "sites": [
+      "calhoun"
+    ],
+    "year": 2000,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/markewitz-2000-long-term-soil-potassium-availability-from-a-kanhapludult-to/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Looking up or looking down? Hydrologic and atmospheric perspectives on precipitation and evaporation variability",
+    "type": "paper",
+    "doi": "10.1029/2019GL085466",
+    "url": "https://doi.org/10.1029/2019GL085466",
+    "repository": "Geophysical Research Letters 46(21): 11968-11971",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2019,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/jin-porporato-2019-looking-up-or-looking-down-hydrologic-and-atmospheric-pe/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Loss of deep roots limits biogenic agents of soil development that are only partially restored by decades of forest regeneration",
+    "type": "paper",
+    "doi": "10.1525/elementa.287",
+    "url": "https://doi.org/10.1525/elementa.287",
+    "repository": "Elementa Science of the Anthropocene 6(1): 34",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2018,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/billings-et-al-2018-loss-of-deep-roots-limits-biogenic-agents-of-soil-devel/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Macro to Micro Legacies of Landuse at the Calhoun Critical Zone Observatory",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/brecheisen-2018-macro-to-micro-legacies-of-landuse-at-the-calhoun-critical-/",
+    "repository": "PhD Dissertation, Duke University, Durham, North Carolina",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2018,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/brecheisen-2018-macro-to-micro-legacies-of-landuse-at-the-calhoun-critical-/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Making the case for a formal Anthropocene Epoch: an analysis of ongoing critiques",
+    "type": "paper",
+    "doi": "10.1127/nos/2017/0385",
+    "url": "https://doi.org/10.1127/nos/2017/0385",
+    "repository": "Newsletters on Stratigraphy 50(2): 205-226",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2017,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/zalasiewicz-et-al-2017-making-the-case-for-a-formal-anthropocene-epoch-an-a/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Mapping depth to the argillic horizon on historically farmed soil currently under forests",
+    "type": "paper",
+    "doi": "10.1016/j.geoderma.2020.114291",
+    "url": "https://doi.org/10.1016/j.geoderma.2020.114291",
+    "repository": "Geoderma 369, Article 114291",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2020,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/ryland-et-al-2020-mapping-depth-to-the-argillic-horizon-on-historically-far/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Micro-topographic roughness analysis (MTRA) highlights minimally eroded terrain in a landscape severely impacted by historic agriculture",
+    "type": "paper",
+    "doi": "10.1016/j.rse.2018.12.025",
+    "url": "https://doi.org/10.1016/j.rse.2018.12.025",
+    "repository": "Remote Sensing of Environment 222: 78-89",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2019,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/brecheisen-et-al-2019-micro-topographic-roughness-analysis-mtra-highlights-/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Model-based analysis of the influence of catchment properties on hydrologic partitioning across five mountain headwater sub-catchments",
+    "type": "paper",
+    "doi": "10.1002/2014WR016147",
+    "url": "https://doi.org/10.1002/2014WR016147",
+    "repository": "Water Resources Research 51(6):4109-4136",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2015,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/kelleher-et-al-2015-model-based-analysis-of-the-influence-of-catchment-prop/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Modeling regional crop yield and irrigation demand using SMAP type of soil moisture data",
+    "type": "paper",
+    "doi": "10.1175/JHM-D-14-0034.1",
+    "url": "https://doi.org/10.1175/JHM-D-14-0034.1",
+    "repository": "Journal of Hydrometeorology 16 (2): 904-916",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2015,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/el-sharif-et-al-2015-modeling-regional-crop-yield-and-irrigation-demand-usi/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Modifications of 2:1 clay minerals in a kaolinite dominated Ultisol under changing land-use regimes",
+    "type": "paper",
+    "doi": "10.1346/CCMN.2017.064085",
+    "url": "https://doi.org/10.1346/CCMN.2017.064085",
+    "repository": "Clays and Clay Minerals 66(1): 61-73",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2018,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/austin-et-al-2018-modifications-of-21-clay-minerals-in-a-kaolinite-dominate/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Monitoring Earth's Critical Zone",
+    "type": "paper",
+    "doi": "10.1126/science.1179117",
+    "url": "https://doi.org/10.1126/science.1179117",
+    "repository": "Science 326(5956): 1067-1068",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2009,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/richter-mobley-2009-monitoring-earths-critical-zone/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Multiple outflows, spatial components, and nonlinearities in age theory",
+    "type": "paper",
+    "doi": "10.1002/2016WR019227",
+    "url": "https://doi.org/10.1002/2016WR019227",
+    "repository": "Water Resources Research, 53 (1): 110-126",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2017,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/calabrese-and-porporato-2017-multiple-outflows-spatial-components-and-nonli/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Natural, incidental, and engineered nanomaterials and their impacts on the Earth system",
+    "type": "paper",
+    "doi": "10.1126/science.aau8299",
+    "url": "https://doi.org/10.1126/science.aau8299",
+    "repository": "American Association for the Advancement of Science (AAAS)",
+    "awards": [
+      "nsf-1331846"
+    ],
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2019,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/hochella-et-al-2019-natural-incidental-and-engineered-nanomaterials-and-the/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Nonlinear dynamics of the CAM circadian rhythm in response to environmental forcing",
+    "type": "paper",
+    "doi": "10.1016/j.jtbi.2014.12.010",
+    "url": "https://doi.org/10.1016/j.jtbi.2014.12.010",
+    "repository": "Journal of Theoretical Biology 368:83-94",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2015,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/hartzell-et-al-2015-nonlinear-dynamics-of-the-cam-circadian-rhythm-in-respo/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "On the dynamic smoothing of mountains",
+    "type": "paper",
+    "doi": "10.1002/2017GL073095",
+    "url": "https://doi.org/10.1002/2017GL073095",
+    "repository": "Geophysical Research Letters 44(11): 5531-5539",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2017,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/bonetti-and-porporato-2017-on-the-dynamic-smoothing-of-mountains/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "On the probabilistic structure of water age",
+    "type": "paper",
+    "doi": "10.1002/2015WR017027",
+    "url": "https://doi.org/10.1002/2015WR017027",
+    "repository": "Water Resources Research 51(5):3588-3600",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2015,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/porporato-calabrese-2015-on-the-probabilistic-structure-of-water-age/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "On the role of spatial resolution on snow estimates using a process‐based snow model across a range of climatology and elevation",
+    "type": "paper",
+    "doi": "10.1002/hyp.13397",
+    "url": "https://doi.org/10.1002/hyp.13397",
+    "repository": "Hydrological Processes 33: 1260-1275",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2019,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/sohrabi-et-al-2019-on-the-role-of-spatial-resolution-on-snow-estimates-usin/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "On the theory of drainage area for regular and non-regular points",
+    "type": "paper",
+    "doi": "10.1098/rspa.2017.0693",
+    "url": "https://doi.org/10.1098/rspa.2017.0693",
+    "repository": "Proceedings of the Royal Society A 474: 20170693",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2018,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/bonetti-et-al-2018-on-the-theory-of-drainage-area-for-regular-and-non-regul/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Optimal control solutions to sodic soil reclamation",
+    "type": "paper",
+    "doi": "10.1016/j.advwatres.2016.02.014",
+    "url": "https://doi.org/10.1016/j.advwatres.2016.02.014",
+    "repository": "Advances in Water Resources 91: 37-45",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2016,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/mau-porporato-2016-optimal-control-solutions-to-sodic-soil-reclamation/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Ordering interfluves: A simple proposal for understanding critical zone evolution",
+    "type": "paper",
+    "doi": "10.1016/j.proeps.2014.08.015",
+    "url": "https://doi.org/10.1016/j.proeps.2014.08.015",
+    "repository": "Procedia Earth and Planetary Science 10: 77-81",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2014,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/brecheisen-richter-2014-ordering-interfluves-a-simple-proposal-for-understa/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Pedogenesis and Anthropedogenesis on the Southern Piedmont",
+    "type": "paper",
+    "url": "http://dx.doi.org/10161/8727",
+    "repository": "PhD Dissertation, Duke University, Durham, North Carolina",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2014,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/bacon-2014-pedogenesis-and-anthropedogenesis-on-the-southern-piedmont/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Persistent anthropogenic legacies structure depth dependence of regenerating rooting systems and their functions",
+    "type": "paper",
+    "doi": "10.1007/s10533-020-00641-2",
+    "url": "https://doi.org/10.1007/s10533-020-00641-2",
+    "repository": "Biogeochemistry 147: 259-275",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2020,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/hauser-et-al-2020-persistent-anthropogenic-legacies-structure-depth-depende/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Projected changes of rainfall seasonality and dry spells in a high greenhouse gas emissions scenario",
+    "type": "paper",
+    "doi": "10.1007/s00382-015-2648-4",
+    "url": "https://doi.org/10.1007/s00382-015-2648-4",
+    "repository": "Climate Dynamics 46(3): 1331-1350",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2016,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/pascale-et-al-2016-projected-changes-of-rainfall-seasonality-and-dry-spells/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Quantification of Mixed-Layer Clays in Multiple Saturation States Using NEWMOD2: Implications for the Potassium Uplift Hypothesis in the SE United States",
+    "type": "paper",
+    "doi": "10.1007/s42860-019-00060-x",
+    "url": "https://doi.org/10.1007/s42860-019-00060-x",
+    "repository": "Clays and Clay Minerals",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2020,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/austin-et-al-2020-quantification-of-mixed-layer-clays-in-multiple-saturatio/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Radiative effects of daily cloud cycle: general methodology and application to cloud fraction",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/yin-porporato-2018-radiative-effects-of-daily-cloud-cycle-general-methodolo/",
+    "repository": "arXiv:1803.01742",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2018,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/yin-porporato-2018-radiative-effects-of-daily-cloud-cycle-general-methodolo/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Radiocarbon Age of Soil Organic Matter Fractions Buried by Tephra in Alaska",
+    "type": "paper",
+    "doi": "10.1017/RDC.2016.47",
+    "url": "https://doi.org/10.1017/RDC.2016.47",
+    "repository": "Radiocarbon 59 (2): 465-472",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2017,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/cherkinsky-wallace-2017-radiocarbon-age-of-soil-organic-matter-fractions-bu/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Rainfall intensification increases the contribution of rewetting pulses to soil heterotrophic respiration",
+    "type": "paper",
+    "doi": "10.5194/bg-17-4007-2020",
+    "url": "https://doi.org/10.5194/bg-17-4007-2020",
+    "repository": "Biogeosciences 17(15): 4007-4023",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2020,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/manzoni-et-al-2020-rainfall-intensification-increases-the-contribution-of-r/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Rapid accumulation and turnover of soil carbon in a re-establishing forest",
+    "type": "paper",
+    "doi": "10.1038/21867",
+    "url": "https://doi.org/10.1038/21867",
+    "repository": "Nature 400: 56-58",
+    "sites": [
+      "calhoun"
+    ],
+    "year": 1999,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/richter-et-al-1999-rapid-accumulation-and-turnover-of-soil-carbon-in-a-re-e/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Rare earth",
+    "type": "paper",
+    "doi": "10.1126/science.346.6210.692",
+    "url": "https://doi.org/10.1126/science.346.6210.692",
+    "repository": "Science 346 (6210): 692-695",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2014,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/tennesen-2014-rare-earth/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Redoximorphic Bt horizons of the Calhoun CZO soils exhibit depth-dependent iron-oxide crystallinity",
+    "type": "paper",
+    "doi": "10.1007/s11368-018-2068-2",
+    "url": "https://doi.org/10.1007/s11368-018-2068-2",
+    "repository": "Journal of Soils and Sediments 19(2):785-797",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2019,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/chen-et-al-2019-redoximorphic-bt-horizons-of-the-calhoun-czo-soils-exhibit-/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Reduced resilience as an early warning signal of forest mortality",
+    "type": "paper",
+    "doi": "10.1038/s41558-019-0583-9",
+    "url": "https://doi.org/10.1038/s41558-019-0583-9",
+    "repository": "Nature Climate Change 9: 880-885",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2019,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/liu-et-al-2019-reduced-resilience-as-an-early-warning-signal-of-forest-mort/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Reinforcement of climate hiatus by decadal modulation of daily cloud cycle",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/yin-porporato-2018-reinforcement-of-climate-hiatus-by-decadal-modulation-of/",
+    "repository": "arXiv:1803.01752",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2018,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/yin-porporato-2018-reinforcement-of-climate-hiatus-by-decadal-modulation-of/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Revisiting the global surface energy budgets with maximum-entropy-production model of surface heat fluxes",
+    "type": "paper",
+    "doi": "10.1007/s00382-016-3395-x",
+    "url": "https://doi.org/10.1007/s00382-016-3395-x",
+    "repository": "Climate Dynamics 49 (5-6): 1531-1545",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2017,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/huang-deng-wang-2017-revisiting-the-global-surface-energy-budgets-with-maxi/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Rhizogenic Fe–C redox cycling: a hypothetical biogeochemical mechanism that drives crustal weathering in upland soils",
+    "type": "paper",
+    "doi": "10.1007/s10533-007-9172-5",
+    "url": "https://doi.org/10.1007/s10533-007-9172-5",
+    "repository": "Biogeochemistry 87(2): 127-141",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2008,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/fimmen-et-al-2008-rhizogenic-fec-redox-cycling-a-hypothetical-biogeochemica/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Role of meteorological controls on interannual variations in wet‐period characteristics of wetlands",
+    "type": "paper",
+    "doi": "10.1002/2015WR018493",
+    "url": "https://doi.org/10.1002/2015WR018493",
+    "repository": "Water Resources Research 52(7): 5056-5074",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2016,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/liu-and-kumar-2016-role-of-meteorological-controls-on-interannual-variation/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Seasonal and spatial variation in the potential for iron reduction in soils of the Southeastern Piedmont of the US",
+    "type": "paper",
+    "doi": "10.1016/j.catena.2019.03.026",
+    "url": "https://doi.org/10.1016/j.catena.2019.03.026",
+    "repository": "CATENA 180: 32-40",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2019,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/hodges-et-al-2019-seasonal-and-spatial-variation-in-the-potential-for-iron-/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Similarities in the evolution of plants and cars",
+    "type": "paper",
+    "doi": "10.1371/journal.pone.0198044",
+    "url": "https://doi.org/10.1371/journal.pone.0198044",
+    "repository": "Public Library of Science (PLoS)",
+    "awards": [
+      "nsf-1331846"
+    ],
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2018,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/hartzell-et-al-2018-similarities-in-the-evolution-of-plants-and-cars/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Simulating the spatio-temporal dynamics of soil erosion, deposition, and yield using a coupled sediment dynamics and 3D distributed hydrologic model",
+    "type": "paper",
+    "doi": "10.1016/j.envsoft.2016.06.004",
+    "url": "https://doi.org/10.1016/j.envsoft.2016.06.004",
+    "repository": "Environmental Modelling & Software 83: 310-325",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2016,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/zi-et-al-2016-simulating-the-spatio-temporal-dynamics-of-soil-erosion-depos/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Simultaneously quantifying ferrihydrite and goethite in natural sediments using the method of standard additions with X-ray absorption spectroscopy",
+    "type": "paper",
+    "doi": "10.1016/j.chemgeo.2017.11.021",
+    "url": "https://doi.org/10.1016/j.chemgeo.2017.11.021",
+    "repository": "Chemical Geology 476: 248-259",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2018,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/sun-et-al-2018-simultaneously-quantifying-ferrihydrite-and-goethite-in-natu/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Soil acidification induced by elevated atmospheric CO 2",
+    "type": "paper",
+    "doi": "10.1111/j.1365-2486.2004.00864.x",
+    "url": "https://doi.org/10.1111/j.1365-2486.2004.00864.x",
+    "repository": "Global Change Biology 10 (11): 1936-1946",
+    "sites": [
+      "calhoun"
+    ],
+    "year": 2004,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/oh-richter-2004-soil-acidification-induced-by-elevated-atmospheric-co2/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Soil acidification, soil potassium availability, and biogeochemistry of aluminum and silicon in a 34 year old loblolly pine (Pinus taeda L.) ecosystem in the Calhoun Experimental Forest, South Carolina",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/markewitz-1996-soil-acidification-soil-potassium-availability-and-biogeoche/",
+    "repository": "PhD Dissertation, Duke University",
+    "sites": [
+      "calhoun"
+    ],
+    "year": 1996,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/markewitz-1996-soil-acidification-soil-potassium-availability-and-biogeoche/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Soil carbon turnover in a recovering temperate forest",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/harrison-et-al-1995-soil-carbon-turnover-in-a-recovering-temperate-forest/",
+    "repository": "Global Biogeochemical Cycles 9 (4): 449-454",
+    "sites": [
+      "calhoun"
+    ],
+    "year": 1995,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/harrison-et-al-1995-soil-carbon-turnover-in-a-recovering-temperate-forest/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Soil chemical change during three decades in an old-field Loblolly Pine (Pinus taeda L.) ecosystem",
+    "type": "paper",
+    "doi": "10.2307/1937469",
+    "url": "https://doi.org/10.2307/1937469",
+    "repository": "Ecology 75 (5): 1463-1473",
+    "sites": [
+      "calhoun"
+    ],
+    "year": 1994,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/richter-et-al-1994-soil-chemical-change-during-three-decades-in-an-old-fiel/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Soil fauna and their potential responses to warmer soil",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/snyder-callaham-2019-soil-fauna-and-their-potential-responses-to-warmer-soi/",
+    "repository": "In: Mohan, J.E. (Ed.), Ecosystem Consequences of Soil Warming: Microbes, Vegetation, Fauna and Soil Biogeochemistry. Pp. 279-296. Academic Press, London.",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2019,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/snyder-callaham-2019-soil-fauna-and-their-potential-responses-to-warmer-soi/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Soil fauna responses to natural disturbances, invasive species, and global climate change: Current state of the science and a call to action",
+    "type": "paper",
+    "doi": "10.1016/j.soilbio.2017.03.008",
+    "url": "https://doi.org/10.1016/j.soilbio.2017.03.008",
+    "repository": "Soil Biology and Biochemistry 110:116-133",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2017,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/coyle-et-al-2017-soil-fauna-responses-to-natural-disturbances-invasive-spec/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Soil in the Anthropocene",
+    "type": "paper",
+    "doi": "10.1088/1755-1315/25/1/012010",
+    "url": "https://doi.org/10.1088/1755-1315/25/1/012010",
+    "repository": "IOP Conference Series: Earth and Environmental Science, 25: 012010",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2015,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/richter-et-al-2015-soil-in-the-anthropocene/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Soil production and the soil geomorphology legacy of Grove Karl Gilbert",
+    "type": "paper",
+    "doi": "10.1002/saj2.20030",
+    "url": "https://doi.org/10.1002/saj2.20030",
+    "repository": "Soil Science Society of America Journal 84(1): 1-20",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2020,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/richter-et-al-2020-soil-production-and-the-soil-geomorphology-legacy-of-gro/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "State dependent jump processes: Ito–Stratonovich interpretations, potential, and transient solutions",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/bartlett-porporato-2018-state-dependent-jump-processes-itostratonovich-inte/",
+    "repository": "arXiv:1807.01848",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2018,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/bartlett-porporato-2018-state-dependent-jump-processes-itostratonovich-inte/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Stochastic rainfall-runoff model with explicit soil moisture dynamics",
+    "type": "paper",
+    "doi": "10.1098/rspa.2015.0389",
+    "url": "https://doi.org/10.1098/rspa.2015.0389",
+    "repository": "Proceedings of the Royal Society A 471(2183): 20150389",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2015,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/bartlett-et-al-2015-stochastic-rainfall-runoff-model-with-explicit-soil-moi/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Stochastic soil water balance under seasonal climates",
+    "type": "paper",
+    "doi": "10.1098/rspa.2014.0623",
+    "url": "https://doi.org/10.1098/rspa.2014.0623",
+    "repository": "Proceedings of the Royal Society A 471:20140623",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2015,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/feng-et-al-2015-stochastic-soil-water-balance-under-seasonal-climates/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Stratigraphic and Earth system approaches to defining the Anthropocene",
+    "type": "paper",
+    "doi": "10.1002/2016EF000379",
+    "url": "https://doi.org/10.1002/2016EF000379",
+    "repository": "Earth's Future 4 (8): 324-345",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2016,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/steffen-et-al-2016-stratigraphic-and-earth-system-approaches-to-defining-th/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Substrate quality influences organic matter accumulation in the soil silt and clay fraction",
+    "type": "paper",
+    "doi": "10.1016/j.soilbio.2016.08.014",
+    "url": "https://doi.org/10.1016/j.soilbio.2016.08.014",
+    "repository": "Soil Biology and Biochemistry 103: 138-148",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2016,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/cyle-et-al-2016-substrate-quality-influences-organic-matter-accumulation-in/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Surficial gains and subsoil losses of soil carbon and nitrogen during secondary forest development",
+    "type": "paper",
+    "doi": "10.1111/gcb.12715",
+    "url": "https://doi.org/10.1111/gcb.12715",
+    "repository": "Global Change Biology 21(2): 986-996",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2015,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/mobley-et-al-2015-surficial-gains-and-subsoil-losses-of-soil-carbon-and-nit/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Temperature responses of microbial soil organic matter decomposition and associated respiration at various scales, ranging from exo-enzymes to populations and communities",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/min-2017-temperature-responses-of-microbial-soil-organic-matter-decompositi/",
+    "repository": "PhD Dissertation, University of Kansas",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2017,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/min-2017-temperature-responses-of-microbial-soil-organic-matter-decompositi/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Temperature-mediated changes in microbial carbon use efficiency and 13C discrimination",
+    "type": "paper",
+    "doi": "10.5194/bg-13-3319-2016",
+    "url": "https://doi.org/10.5194/bg-13-3319-2016",
+    "repository": "Biogeosciences 13: 3319-3329",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2016,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/lehmeier-et-al-2016-temperature-mediated-changes-in-microbial-carbon-use-ef/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "The Anthropocene is functionally and stratigraphically distinct from the Holocene",
+    "type": "paper",
+    "doi": "10.1126/science.aad2622",
+    "url": "https://doi.org/10.1126/science.aad2622",
+    "repository": "Science 351(6269): 137",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2016,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/waters-et-al-2016-the-anthropocene-is-functionally-and-stratigraphically-di/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "The Calhoun Experimental Forest",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/metz-1958-the-calhoun-experimental-forest/",
+    "repository": "US Forest Service Southeastern Forest Experiment Station, June 1958",
+    "sites": [
+      "calhoun"
+    ],
+    "year": 1958,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/metz-1958-the-calhoun-experimental-forest/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "The Doomsday Equation and 50 years beyond: new perspectives on the human‐water system",
+    "type": "paper",
+    "doi": "10.1002/wat2.1080",
+    "url": "https://doi.org/10.1002/wat2.1080",
+    "repository": "WIREs Water 2:407-414",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2015,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/parolari-et-al-2015-the-doomsday-equation-and-50-years-beyond-new-perspecti/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "The effect of accelerated soil erosion on hillslope morphology",
+    "type": "paper",
+    "doi": "10.1002/esp.4694",
+    "url": "https://doi.org/10.1002/esp.4694",
+    "repository": "Earth Surface Processes and Landforms 44(15): 3007-3019",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2019,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/bonetti-et-al-2019-the-effect-of-accelerated-soil-erosion-on-hillslope-morp/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "The energy side of Budyko: Surface‐energy partitioning from hydrological observations",
+    "type": "paper",
+    "doi": "10.1029/2019GL083373",
+    "url": "https://doi.org/10.1029/2019GL083373",
+    "repository": "Geophysical Research Letters 46: 7456-7463",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2019,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/yin-et-al-2019-the-energy-side-of-budyko-surfaceenergy-partitioning-from-hy/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "The formation of clay‐enriched horizons by lessivage",
+    "type": "paper",
+    "doi": "10.1029/2018GL078778",
+    "url": "https://doi.org/10.1029/2018GL078778",
+    "repository": "Geophysical Research Letters 45(15): 7588-7595",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2018,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/calabrese-et-al-2018-the-formation-of-clayenriched-horizons-by-lessivage/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "The Multiscale Signature of Ecohydrological Fluctuations on Soil Biogeochemical Cycles",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/calabrese-2019-the-multiscale-signature-of-ecohydrological-fluctuations-on-/",
+    "repository": "PhD dissertation, Princeton University",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2019,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/calabrese-2019-the-multiscale-signature-of-ecohydrological-fluctuations-on-/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "The role of vegetation on gully erosion stabilization at a severely degraded landscape: A case study from Calhoun Experimental Critical Zone Observatory",
+    "type": "paper",
+    "doi": "10.1016/j.geomorph.2017.12.032",
+    "url": "https://doi.org/10.1016/j.geomorph.2017.12.032",
+    "repository": "Geomorphology 308: 25-39",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2018,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/bastola-et-al-2018-the-role-of-vegetation-on-gully-erosion-stabilization-at/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Three decades of observed soil acidification at the Calhoun Experimental Forest: Has acid rain made a difference?",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/markewitz-et-al-1998-three-decades-of-observed-soil-acidification-at-the-ca/",
+    "repository": "Soil Science Society of America Journal 62 (5): 1428-1439",
+    "sites": [
+      "calhoun"
+    ],
+    "year": 1998,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/markewitz-et-al-1998-three-decades-of-observed-soil-acidification-at-the-ca/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Topographic variability and the influence of soil erosion on the carbon cycle",
+    "type": "paper",
+    "doi": "10.1002/2015GB005302",
+    "url": "https://doi.org/10.1002/2015GB005302",
+    "repository": "Global Biogeochemical Cycles 30(5): 644-660",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2016,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/dialynas-et-al-2016-topographic-variability-and-the-influence-of-soil-erosi/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Trophic dynamics in a simple experimental ecosystem: Interactions among centipedes, Collembola and introduced earthworms",
+    "type": "paper",
+    "doi": "10.1016/j.soilbio.2017.08.001",
+    "url": "https://doi.org/10.1016/j.soilbio.2017.08.001",
+    "repository": "Soil Biology and Biochemistry 115: 66-72",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2017,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/gao-et-al-2017-trophic-dynamics-in-a-simple-experimental-ecosystem-interact/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Understanding Soil Change: Soil Sustainability over Millennia, Centuries, and Decades",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/richter-markewitz-2001-understanding-soil-change-soil-sustainability-over-m/",
+    "repository": "Cambridge University Press, New York, 255 p",
+    "sites": [
+      "calhoun"
+    ],
+    "year": 2001,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/richter-markewitz-2001-understanding-soil-change-soil-sustainability-over-m/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Understanding the Role of Model Structure and Watershed Properties on Streamflow Response",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/chen-2017-understanding-the-role-of-model-structure-and-watershed-propertie/",
+    "repository": "PhD Dissertation, Duke University, Durham, North Carolina",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2017,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/chen-2017-understanding-the-role-of-model-structure-and-watershed-propertie/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Unified representation of the C3, C4, and CAM photosynthetic pathways with the Photo3 model",
+    "type": "paper",
+    "doi": "10.1016/j.ecolmodel.2018.06.012",
+    "url": "https://doi.org/10.1016/j.ecolmodel.2018.06.012",
+    "repository": "Ecological Modelling 384: 173-187",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2018,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/hartzell-et-al-2018-unified-representation-of-the-c3-c4-and-cam-photosynthe/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Using nested discretization for a detailed yet computationally efficient simulation of local hydrology in a distributed hydrologic model",
+    "type": "paper",
+    "doi": "10.1038/s41598-018-24122-7",
+    "url": "https://doi.org/10.1038/s41598-018-24122-7",
+    "repository": "Scientific Reports 8: Article number 5785",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2018,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/wang-et-al-2018-using-nested-discretization-for-a-detailed-yet-computationa/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Variational analysis of landscape elevation and drainage networks",
+    "type": "paper",
+    "doi": "10.1098/rspa.2019.0775",
+    "url": "https://doi.org/10.1098/rspa.2019.0775",
+    "repository": "Proceedings of the Royal Society A, 476(2239), 20190775",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2020,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/hooshyar-et-al-2020-variational-analysis-of-landscape-elevation-and-drainag/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Variations in streamflow response to large hurricane-season storms in a southeastern U.S. watershed",
+    "type": "paper",
+    "doi": "10.1175/JHM-D-14-0044.1",
+    "url": "https://doi.org/10.1175/JHM-D-14-0044.1",
+    "repository": "Journal of Hydrometeorology 16: 55-69",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2015,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/chen-et-al-2015-variations-in-streamflow-response-to-large-hurricane-season/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Wetness controls on global chemical weathering",
+    "type": "paper",
+    "doi": "10.1088/2515-7620/abad7b",
+    "url": "https://doi.org/10.1088/2515-7620/abad7b",
+    "repository": "Environmental Research Communications 2(8), 085005",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2020,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/calabrese-porporato-2020-wetness-controls-on-global-chemical-weathering/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "What regulates soil CO 2 concentrations? A modeling approach to CO 2 diffusion in deep soil profiles",
+    "type": "paper",
+    "doi": "10.1089/ees.2005.22.38",
+    "url": "https://doi.org/10.1089/ees.2005.22.38",
+    "repository": "Environmental Engineering Science 22 (1): 38-45",
+    "sites": [
+      "calhoun"
+    ],
+    "year": 2005,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/oh-et-al-2005-what-regulates-soil-co2-concentrations-a-modeling-approach-to/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "When did the Anthropocene begin? A mid-twentieth century boundary level is stratigraphically optimal",
+    "type": "paper",
+    "doi": "10.1016/j.quaint.2014.11.045",
+    "url": "https://doi.org/10.1016/j.quaint.2014.11.045",
+    "repository": "Quaternary International 383: 204-207",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2015,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/zalasiewicz-et-al-2015-when-did-the-anthropocene-begin-a-mid-twentieth-cent/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Working across scales to project soil biogeochemical responses to climate",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/billings-sullivan-2020-working-across-scales-to-project-soil-biogeochemical/",
+    "repository": "In: Yang, Y., Keiluweit, M., Senesi, N., Xing, B., eds. Multi-Scale Biogeochemical Processes in Soil Ecosystems: Critical Reactions and Resilience to Climate Changes, Vol. 5 in IUPAC Series on Biophysico-Chemical Processes in Environmental Systems, Wiley",
+    "sites": [
+      "calhoun"
+    ],
+    "era": "czo",
+    "year": 2020,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/billings-sullivan-2020-working-across-scales-to-project-soil-biogeochemical/",
+    "date_added": "2026-10-29"
   }
 ]
