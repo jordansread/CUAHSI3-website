@@ -41,6 +41,9 @@ All 57 DOIs were looked up at doi.org (handle lookup) and all 19 HydroShare addr
 
 8. Outside this batch: a similar malformed DOI exists on an IML paper (`10.1021/es5023762|Environ.Sci.Technol.XXXX,XXX,XXX−XXX`, title "Threshold Dynamics in Soil Carbon Storage for Bioenergy Crops"). The part before `|` resolves in Crossref to that title (2014). It will be proposed, repaired the same way, in the IML batch.
 
+9. **Correction (found by the reviewer after you approved):** "0 of 125 name an award" meant the `awards` field. The archive's venue text names an NSF award in 4 of the 125 (the 2010, 2011 and 2012 CRB-CZO annual reports, "NSF Award #0724971", and the EarthCube workshop proposal, "NSF Award #1252238 Cross-CZO"). Loaded as given in `repository`; `awards` is still unset because the registry link is your call (C7).
+10. Two of the 106 "papers" are proposals (the EarthCube workshop proposal and the BiG CZ software SI2-SSI proposal), typed `paper` like the other reports.
+
 ## Proposed items
 
 ### Datasets (19)
