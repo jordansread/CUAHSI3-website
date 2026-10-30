@@ -37,6 +37,9 @@ const lists = computed(() => [
   { to: '/critical-zone-science/papers', kicker: 'PAPERS', title: 'All known papers', text: stats.value ? `${nf(stats.value.papers)} journal articles, books, reports and theses.` : 'Journal articles, books, reports and theses.' },
 ])
 
+const observatories = ['boulder', 'calhoun', 'catalina-jemez', 'christina', 'eel', 'iml', 'luquillo', 'reynolds', 'shale-hills', 'sierra']
+  .map(slug => ({ slug, name: CZ_SITE_NAMES[slug] }))
+
 const places = [
   {
     kicker: 'CZO ARCHIVE',
@@ -103,6 +106,20 @@ const places = [
           <p class="font-['Hanken_Grotesk'] font-normal text-[14px] leading-[1.55] text-muted m-0">{{ l.text }}</p>
         </NuxtLink>
       </div>
+    </div>
+
+    <!-- The observatories -->
+    <div class="mx-auto site-container max-w-site pt-[48px]">
+      <h2 class="font-['Schibsted_Grotesk'] font-bold text-[28px] leading-[1.1] text-navy tracking-[-.016em] m-[0_0_8px]">The observatories</h2>
+      <p class="font-['Hanken_Grotesk'] font-normal text-[16px] leading-[1.6] text-[#3a4d57] max-w-[640px] m-[0_0_20px]">
+        The datasets, papers and reports listed for each of the ten Critical Zone Observatories.
+      </p>
+      <ul class="list-none p-0 m-0 flex flex-wrap gap-[10px]">
+        <li v-for="o in observatories" :key="o.slug">
+          <NuxtLink :to="`/critical-zone-science/observatories/${o.slug}`"
+            class="inline-block font-['Hanken_Grotesk'] text-[14px] leading-[normal] text-navy bg-[rgba(31,111,178,.09)] rounded-[999px] p-[8px_16px] no-underline">{{ o.name }}</NuxtLink>
+        </li>
+      </ul>
     </div>
 
     <!-- Where the work lives now -->
