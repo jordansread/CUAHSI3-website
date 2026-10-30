@@ -1,6 +1,6 @@
 # Products batch 6: Luquillo (proposal for epic T11)
 
-Date: 31 October 2026. Ticket: CUAHSI/CUAHSI3-website#76 (T11). Branch `task/cz-products-luquillo-proposal`. **Proposal step of "Propose, then apply". Nothing in `content/` has been changed.** Source: `agent/reports/261029_cz-harvest-proposal.json`, every record whose `sites` includes `luquillo`, minus what `content/critical-zone/products.json` already holds (batches 1 to 5, 850 records).
+Date: 30 October 2026. Ticket: CUAHSI/CUAHSI3-website#76 (T11). Branch `task/cz-products-luquillo-proposal`. **Proposal step of "Propose, then apply". Nothing in `content/` has been changed.** Source: `agent/reports/261029_cz-harvest-proposal.json`, every record whose `sites` includes `luquillo`, minus what `content/critical-zone/products.json` already holds (batches 1 to 5, 850 records).
 
 Rules carried over (Jordan): talks and posters held out; proposals not in the list (none found here); award numbers found only in venue text stay unlinked (none found here); HydroShare addresses that do not answer are left out; unrelated items are held back for you to decide; `provenance` not in the file; one file for the whole list.
 
