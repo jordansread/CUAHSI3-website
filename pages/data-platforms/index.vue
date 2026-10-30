@@ -119,6 +119,13 @@ const tools = [
       </div>
     </div>
 
+    <!-- Critical Zone Science -->
+    <div class="mx-auto max-w-site p-[0_40px_48px]">
+      <p class="font-['Hanken_Grotesk'] font-normal text-[15px] leading-[1.55] text-muted m-0">Looking for Critical Zone data or papers? See
+        <NuxtLink to="/critical-zone-science" class="text-water font-medium">Critical Zone Science</NuxtLink>, a guide to the Critical Zone Observatories and the Critical Zone Collaborative Network.
+      </p>
+    </div>
+
     <!-- Not sure panel -->
     <div class="mx-auto max-w-site p-[0_40px_80px]">
       <div class="rounded-[16px] bg-sand p-[48px] flex items-center justify-between gap-[32px] flex-wrap">

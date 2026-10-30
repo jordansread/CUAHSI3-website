@@ -24,5 +24,6 @@
   { "name": "hire-cuahsi", "path": "/hire-cuahsi/" },
   { "name": "contact", "path": "/contact/" },
   { "name": "support", "path": "/support/" },
-  { "name": "member-portal", "path": "/member-portal/" }
+  { "name": "member-portal", "path": "/member-portal/" },
+  { "name": "critical-zone-science", "path": "/critical-zone-science/" }
 ]
