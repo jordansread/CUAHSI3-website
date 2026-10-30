@@ -1,7 +1,8 @@
 # Visual baseline
 
-Full-page screenshots of 26 routes at 390px and 1280px (52 images), taken from a build of `main` at
-`b5fefd7` (8 October 2026). They replaced the first set, taken at `2ae92b5` before the Tailwind migration
+Full-page screenshots of 27 routes at 390px and 1280px (54 images), taken from a build of `main` at
+`6fb834c` (30 October 2026; the Critical Zone Science page and the footer link, #156). The set before it was taken at
+`b5fefd7` (8 October 2026), and the one before that at `2ae92b5`, before the Tailwind migration
 (roadmap task 4), which every later change had made out of date (52 of 52 failed, including `/contact`, whose own
 content had not changed: only the shared header and footer had). They are the reference that later pull requests are compared against.
 
@@ -13,7 +14,7 @@ content had not changed: only the shared header and footer had). They are the re
 
 ```bash
 npm run build:search       # build the branch first
-npm run visual:compare     # 52 comparisons; any changed pixel fails. Nothing else may be using port 4100.
+npm run visual:compare     # 54 comparisons; any changed pixel fails. Nothing else may be using port 4100.
 ```
 
 A failure writes `*-expected.png`, `*-actual.png` and `*-diff.png` under `.agent/visual/test-results/`
@@ -42,7 +43,7 @@ shows grey boxes there, so it does not check that the real thumbnails display).
   a different browser version or different font rendering can change pixels without any site change. If that
   happens, re-baseline from `main` on that machine in its own PR.
 - The fonts come from Google Fonts at test time, so the test needs network access.
-- It covers 26 of the 121 built pages (one per template). A change that only affects another page of the
+- It covers 27 of the 122 built pages (one per template). A change that only affects another page of the
   same template is covered; a change to a page with unusual content may not be.
 - The redirect stubs in `pages/highlights/` are not covered: they send the browser to `/about/impact`, so a
   screenshot of `/highlights/` is the Impact page again (the first version of the baseline had that duplicate).
