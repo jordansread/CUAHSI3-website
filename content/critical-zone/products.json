@@ -1676,5 +1676,1879 @@
     "source": "czo-archive",
     "source_url": "https://czo-archive.criticalzone.org/eel/publications/pub/bouma-gregson-et-al-2018-widespread-anatoxin-a-detection-in-benthic-cyanoba/",
     "date_added": "2026-10-29"
+  },
+  {
+    "title": "2010 CRB-CZO Annual Report to National Science Foundation",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/christina/publications/pub/sparks-et-al-2010-2010-crb-czo-annual-report-to-national-science-foundation/",
+    "repository": "NSF Award #0724971",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2010,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/sparks-et-al-2010-2010-crb-czo-annual-report-to-national-science-foundation/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "2011 CRB-CZO Annual Report to National Science Foundation",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/christina/publications/pub/sparks-et-al-2011-2011-crb-czo-annual-report-to-national-science-foundation/",
+    "repository": "NSF Award #0724971",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2011,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/sparks-et-al-2011-2011-crb-czo-annual-report-to-national-science-foundation/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "2012 CRB-CZO Annual Report to National Science Foundation",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/christina/publications/pub/sparks-et-al-2012-2012-crb-czo-annual-report-to-national-science-foundation/",
+    "repository": "NSF Award #0724971",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2012,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/sparks-et-al-2012-2012-crb-czo-annual-report-to-national-science-foundation/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "210Pb geochronology of flood events in large tropical river systems",
+    "type": "paper",
+    "doi": "10.1098/rsta.2011.0607",
+    "url": "https://doi.org/10.1098/rsta.2011.0607",
+    "repository": "Phil. Trans. R. Soc. A (2012) 370, 2040–2074",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2012,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/aalto-nittrouer-2012-210pb-geochronology-of-flood-events-in-large-tropical-/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "A coupled geochemical and biogeochemical approach to characterize the bioreactivity of dissolved organic matter from a headwater stream",
+    "type": "paper",
+    "doi": "10.1002/2013JG002600",
+    "url": "https://doi.org/10.1002/2013JG002600",
+    "repository": "Journal of Geophysical Research: Biogeochemistry 119 (8):1520-1537",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2014,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/sleighter-et-al-2014-a-coupled-geochemical-and-biogeochemical-approach-to-c/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "A mixing model analysis of stream solute dynamics and the contribution of a hyporheic zone to ecosystem function",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/christina/publications/pub/battin-et-al-2003-a-mixing-model-analysis-of-stream-solute-dynamics-and-the/",
+    "repository": "Freshwater Biology:48:995-1014",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2003,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/battin-et-al-2003-a-mixing-model-analysis-of-stream-solute-dynamics-and-the/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "A variable source area for groundwater evapotranspiration: impacts on modeling stream flow",
+    "type": "paper",
+    "doi": "10.1002/hyp.9811",
+    "url": "https://doi.org/10.1002/hyp.9811",
+    "repository": "Hydrol. Process.",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2013,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/tsang-et-al-2013-a-variable-source-area-for-groundwater-evapotranspiration-/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Atmospheric deposition and corresponding variability of stemflow chemistry across temporal scales in a mid-Atlantic broadleaved deciduous forest canopy",
+    "type": "paper",
+    "doi": "10.1016/j.atmosenv.2011.03.022",
+    "url": "https://doi.org/10.1016/j.atmosenv.2011.03.022",
+    "repository": "Atmospheric Environment 45: 3046-3054",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2011,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/levia-et-al-2011-atmospheric-deposition-and-corresponding-variability-of-st/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Beryllium-7 wet deposition variation with storm height, synoptic classification, and tree canopy state in the mid-Atlantic USA",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/christina/publications/pub/karwan-et-al-2015-beryllium-7-wet-deposition-variation-with-storm-height-sy/",
+    "repository": "Hydrological Processes",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2015,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/karwan-et-al-2015-beryllium-7-wet-deposition-variation-with-storm-height-sy/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Biodegradable dissolved organic matter in a temperate and a tropical stream determined from ultra-high resolution mass spectrometry",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/christina/publications/pub/kim-et-al-2006-biodegradable-dissolved-organic-matter-in-a-temperate-and-a-/",
+    "repository": "Limnology and Oceanography, 51:1054-1063",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2006,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/kim-et-al-2006-biodegradable-dissolved-organic-matter-in-a-temperate-and-a-/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Biological lability of dissolved organic carbon in stream water and contributing terrestrial sources",
+    "type": "paper",
+    "doi": "10.1899/12-202.1",
+    "url": "https://doi.org/10.1899/12-202.1",
+    "repository": "Freshwater Science 32(4):1219-1230",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2013,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/mclaughlin-kaplan-2013-biological-lability-of-dissolved-organic-carbon-in-s/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Biological lability of streamwater fluorescent dissolved organic matter",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/christina/publications/pub/cory-kaplan-2012-biological-lability-of-streamwater-fluorescent-dissolved-o/",
+    "repository": "Limnology and Oceanography, 57(5):1347–1360",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2012,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/cory-kaplan-2012-biological-lability-of-streamwater-fluorescent-dissolved-o/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Biome-level biogeography of streambed microbiota",
+    "type": "paper",
+    "doi": "10.1128/AEM.01809-07",
+    "url": "https://doi.org/10.1128/AEM.01809-07",
+    "repository": "Applied and Environmental Microbiology 74:3014-3021",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2008,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/findlay-et-al-2008-biome-level-biogeography-of-streambed-microbiota/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Biophysical controls on organic carbon fluxes in fluvial networks",
+    "type": "paper",
+    "doi": "10.1038/ngeo101",
+    "url": "https://doi.org/10.1038/ngeo101",
+    "repository": "Nature Geoscience 1:95-100",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2008,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/battin-et-al-2008-biophysical-controls-on-organic-carbon-fluxes-in-fluvial-/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Changes in dissolved organic matter (DOM) amount and composition along nested headwater stream locations during baseflow and stormflow",
+    "type": "paper",
+    "doi": "10.1002/hyp.10286",
+    "url": "https://doi.org/10.1002/hyp.10286",
+    "repository": "Hydrological Processes",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2014,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/singh-et-al-2014-changes-in-dissolved-organic-matter-dom-amount-and-composi/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Characteristic Length Scales and Time-Averaged Transport Velocities of Suspended Sediment In the Mid-Atlantic Region, U.S.A.",
+    "type": "paper",
+    "doi": "10.1002/2013WR014485",
+    "url": "https://doi.org/10.1002/2013WR014485",
+    "repository": "Water Resources Research, 50:1-12",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2014,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/pizzuto-et-al-2014-characteristic-length-scales-and-time-averaged-transport/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Characterization and Source Determination of Stream Suspended Particulate Material in White Clay Creek, USA",
+    "type": "paper",
+    "doi": "10.1016/j.apgeochem.2011.03.058",
+    "url": "https://doi.org/10.1016/j.apgeochem.2011.03.058",
+    "repository": "Applied Geochemistry 26:5354-5356",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2011,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/karwan-et-al-2011-characterization-and-source-determination-of-stream-suspe/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Common Critical Zone Observatory Infrastructure and Measurements",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/boulder/publications/pub/chorover-et-al-2012-common-critical-zone-observatory-infrastructure-and-mea/",
+    "repository": "A Guide Prepared By CZO PIs, September 27, 2012 Cross-CZO",
+    "sites": [
+      "boulder",
+      "catalina-jemez",
+      "christina",
+      "luquillo",
+      "national",
+      "shale-hills",
+      "sierra"
+    ],
+    "era": "czo",
+    "year": 2012,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/publications/pub/chorover-et-al-2012-common-critical-zone-observatory-infrastructure-and-mea/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Comparison of Two PARAFAC Models of Dissolved Organic Matter Fluorescence for a Mid-Atlantic Forested Watershed in the USA",
+    "type": "paper",
+    "doi": "10.1155/2013/532424",
+    "url": "https://doi.org/10.1155/2013/532424",
+    "repository": "Journal of Ecosystems",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2013,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/singh-et-al-2013-comparison-of-two-parafac-models-of-dissolved-organic-matt/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Continuous resistivity profiling and seismic-reflection data collected in April 2010 from Indian River Bay, Delaware",
+    "type": "paper",
+    "doi": "10.3133/ofr20111039",
+    "url": "https://doi.org/10.3133/ofr20111039",
+    "repository": "US Geological Survey Open-File Report 2011-1039",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2014,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/cross-et-al-2014-continuous-resistivity-profiling-and-seismic-reflection-da/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Contribution of dissolved organic carbon to stream metabolism estimated with 13C-enriched tree tissue leachate",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/christina/publications/pub/wiegner-et-al-2005-contribution-of-dissolved-organic-carbon-to-stream-metab/",
+    "repository": "Journal North American Benthological Society 24:48-67",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2005,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/wiegner-et-al-2005-contribution-of-dissolved-organic-carbon-to-stream-metab/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Contributions of microbial biofilms to ecosystem processes in stream mesocosms",
+    "type": "paper",
+    "doi": "10.1038/nature02152",
+    "url": "https://doi.org/10.1038/nature02152",
+    "repository": "Nature 426:439-442",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2003,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/battin-et-al-2003-contributions-of-microbial-biofilms-to-ecosystem-processe/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Controls & dynamics of canopy-derived dissolved organic matter from co-dominant broadleaved deciduous canopies to the soil of a temperate catchment in the northeastern United States",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/christina/publications/pub/van-stan-2012-controls-dynamics-of-canopy-derived-dissolved-organic-matter-/",
+    "repository": "Ph.D. Dissertation, University of Delaware",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2012,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/van-stan-2012-controls-dynamics-of-canopy-derived-dissolved-organic-matter-/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Controls and dynamics of canopy-derived dissolved organic matter from co-dominant broadleaved deciduous canopies to the soil of a temperate catchment in the northeastern United States",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/christina/publications/pub/van-stan-2012-controls-and-dynamics-of-canopy-derived-dissolved-organic-mat/",
+    "repository": "Publications in Climatology 64: 1-96",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2012,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/van-stan-2012-controls-and-dynamics-of-canopy-derived-dissolved-organic-mat/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CRBCZO -- Air Temperature, Precipitation -- NOAA NCDC -- Christina River Basin -- (1920-2015)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/ad2aa89db4324b7fba80026c87e3f86c/",
+    "hydroshare_id": "ad2aa89db4324b7fba80026c87e3f86c",
+    "repository": "HydroShare",
+    "sites": [
+      "christina",
+      "national"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/2545/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CRBCZO -- Chlorophyll -- Pheophytin -- White Clay Creek -- (2001-2012)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/d841f99381424ebc850842a1dbb5630b/",
+    "hydroshare_id": "d841f99381424ebc850842a1dbb5630b",
+    "repository": "HydroShare",
+    "sites": [
+      "christina",
+      "national"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/2400/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CRBCZO -- Climate, Air Temperature, Meteorology, Precipitation -- DEOS -- Delaware and SE Pennsylvania -- (2004-2015)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/6ffd58c0f6e7406fa6e4cc41f62eb787/",
+    "hydroshare_id": "6ffd58c0f6e7406fa6e4cc41f62eb787",
+    "repository": "HydroShare",
+    "sites": [
+      "christina",
+      "national"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/2544/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CRBCZO -- Climate, Air Temperature, Meteorology, Precipitation -- NOAA CRN -- PA Avondale 2N -- (2006-2015)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/2bbb5c31bd4e47e4a1011ab070653580/",
+    "hydroshare_id": "2bbb5c31bd4e47e4a1011ab070653580",
+    "repository": "HydroShare",
+    "sites": [
+      "christina",
+      "national"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/2501/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CRBCZO -- Climate, Electrical Conductivity, Lysimeter Water Samples Chemistry, Soil Porewater Chemistry, Stable Isotopes, Stream Water Temperatures, Stream Water Chemistry, Soil Water Chemistry, Soil Temperature -- White Clay Creek Transect A floodplain -- (2011-2012)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/112c5a53769240c2a337511b031de9a9/",
+    "hydroshare_id": "112c5a53769240c2a337511b031de9a9",
+    "repository": "HydroShare",
+    "sites": [
+      "christina",
+      "national"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/2974/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CRBCZO -- Climate, Rainfall Chemistry, Stable Isotopes, Precipitation -- Upper watershed at Boulton Run -- (2011-2012)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/ee2c21941e1e4ba8836bc1814f34fa16/",
+    "hydroshare_id": "ee2c21941e1e4ba8836bc1814f34fa16",
+    "repository": "HydroShare",
+    "sites": [
+      "christina",
+      "national"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/3457/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CRBCZO -- Climate, Stable Isotopes, Stream Water Chemistry -- Third-order White Clay Creek and Boulton Run -- (2011-2012)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/db85a1763a5240509c32cb5284b00c92/",
+    "hydroshare_id": "db85a1763a5240509c32cb5284b00c92",
+    "repository": "HydroShare",
+    "sites": [
+      "christina",
+      "national"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/3365/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CRBCZO -- Climate, Stable Isotopes, Well Water Levels -- White Clay Creek Transect A floodplain, Transect C -- (2012-2012)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/d16b41286d4447d4a6e155dab61f4ef7/",
+    "hydroshare_id": "d16b41286d4447d4a6e155dab61f4ef7",
+    "repository": "HydroShare",
+    "sites": [
+      "christina",
+      "national"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/2978/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CRBCZO -- Groundwater Depth -- USGS -- Chester County, PA -- (1951-2015)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/e72d7c0cff794f6a80cc3ba7fcd9c408/",
+    "hydroshare_id": "e72d7c0cff794f6a80cc3ba7fcd9c408",
+    "repository": "HydroShare",
+    "sites": [
+      "christina",
+      "national"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/2516/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CRBCZO -- Precipitation, Meteorology -- Stroud Water Research Center -- (1996-2010)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/54dbaa2fb67646b7b62a5aa47b2bdd7d/",
+    "hydroshare_id": "54dbaa2fb67646b7b62a5aa47b2bdd7d",
+    "repository": "HydroShare",
+    "sites": [
+      "christina",
+      "national"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/2565/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CRBCZO -- Soil Moisture, Soil Temperature -- NOAA CRN -- PA Avondale 2N -- (2011-2015)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/940771e1ca3c46dda51a0f75e15a13a9/",
+    "hydroshare_id": "940771e1ca3c46dda51a0f75e15a13a9",
+    "repository": "HydroShare",
+    "sites": [
+      "christina",
+      "national"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/2502/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CRBCZO -- Stage, Streamflow / Discharge -- White Clay Creek -- (1968-2014)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/c29f39c122c3411c97a3bfb933f156a2/",
+    "hydroshare_id": "c29f39c122c3411c97a3bfb933f156a2",
+    "repository": "HydroShare",
+    "sites": [
+      "christina",
+      "national"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/2464/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CRBCZO -- Stream Suspended Sediment -- Christina River Basin -- (1993-2012)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/4e8ecb6c93a64d7284fc76c5aa191885/",
+    "hydroshare_id": "4e8ecb6c93a64d7284fc76c5aa191885",
+    "repository": "HydroShare",
+    "sites": [
+      "christina",
+      "national"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/2474/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CRBCZO -- Stream Water Chemistry -- Christina River Basin -- (1977-2017)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/3d25b6d404b3454eb62ce588eceeacd6/",
+    "hydroshare_id": "3d25b6d404b3454eb62ce588eceeacd6",
+    "repository": "HydroShare",
+    "sites": [
+      "christina",
+      "national"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/2407/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CRBCZO -- Stream Water Chemistry, Stream Ecology -- USGS -- Chester County, PA -- (1998-2013)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/0a21b00a54d641e5aa5da0bc32998ad1/",
+    "hydroshare_id": "0a21b00a54d641e5aa5da0bc32998ad1",
+    "repository": "HydroShare",
+    "sites": [
+      "christina",
+      "national"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/2515/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CRBCZO -- Stream Water Chemistry, Stream Suspended Sediment, Stream Water Temperatures, Groundwater Depth -- USGS -- Christina River Basin -- (1985-2007)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/1b643229b1bf471e82d3cedfb3e1f22f/",
+    "hydroshare_id": "1b643229b1bf471e82d3cedfb3e1f22f",
+    "repository": "HydroShare",
+    "sites": [
+      "christina",
+      "national"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/2506/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CRBCZO -- Stream Water Chemistry, Streamflow / Discharge, Climate, Stage, Stream Water Temperatures -- USGS -- Chester County, PA -- (2007-2015)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/9db9d7aa0a194667b0e9ca5e996d5c96/",
+    "hydroshare_id": "9db9d7aa0a194667b0e9ca5e996d5c96",
+    "repository": "HydroShare",
+    "sites": [
+      "christina",
+      "national"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/2514/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CRBCZO -- Stream Water Temperatures -- Christina River Basin -- (2007-2014)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/e9f2ce8da1264a2eb70f643267028955/",
+    "hydroshare_id": "e9f2ce8da1264a2eb70f643267028955",
+    "repository": "HydroShare",
+    "sites": [
+      "christina",
+      "national"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/2465/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "CRBCZO -- Well Water Levels -- White Clay Creek -- (1988-2012)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/de5d0a4f98aa4d98a54f9f67868f41aa/",
+    "hydroshare_id": "de5d0a4f98aa4d98a54f9f67868f41aa",
+    "repository": "HydroShare",
+    "sites": [
+      "christina",
+      "national"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/2473/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Developing a web application for the integration of real-world, scientific, problem-solving into the secondary classroom",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/christina/publications/pub/gill-et-al-2013-developing-a-web-application-for-the-integration-of-real-wo/",
+    "repository": "In A. D. Ritzhaupt & Swapna Kumar (Eds.) Cases on Educational Technology Implementation for Facilitating Learning. Hershey, PA: IGI Global.",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2013,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/gill-et-al-2013-developing-a-web-application-for-the-integration-of-real-wo/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Dissolved organic matter (DOM) concentration and quality in a forested mid-Atlantic watershed, USA.",
+    "type": "paper",
+    "doi": "10.1007/s10533-011-9572-4",
+    "url": "https://doi.org/10.1007/s10533-011-9572-4",
+    "repository": "Biogeochemistry 108 (1) 55-76",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2011,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/inamdar-et-al-2011-dissolved-organic-matter-dom-concentration-and-quality-i/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Dissolved organic matter sorption to soil minerals: Role of DOM composition, microorganisms, and redox conditions",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/christina/publications/pub/pan-2015-dissolved-organic-matter-sorption-to-soil-minerals-role-of-dom-com/",
+    "repository": "University of Delaware Ph.D. dissertation",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2015,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/pan-2015-dissolved-organic-matter-sorption-to-soil-minerals-role-of-dom-com/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Dynamic response of surface water-groundwater exchange to currents, tides, and waves in a shallow estuary",
+    "type": "paper",
+    "doi": "10.1002/jgrc.20154",
+    "url": "https://doi.org/10.1002/jgrc.20154",
+    "repository": "Journal of Geophysical Research – Oceans, 118",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2013,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/sawyer-et-al-2013-dynamic-response-of-surface-water-groundwater-exchange-to/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Ecosystem metabolism in Piedmont streams: reach geomorphology modulates the influence of riparian vegetation",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/christina/publications/pub/bott-et-al-2006-ecosystem-metabolism-in-piedmont-streams-reach-geomorpholog/",
+    "repository": "Ecosystems 9:398-421",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2006,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/bott-et-al-2006-ecosystem-metabolism-in-piedmont-streams-reach-geomorpholog/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Effects of current velocity on the nascent architecture of stream microbial biofilms",
+    "type": "paper",
+    "doi": "10.1128/AEM.69.9.5443-5452.2003",
+    "url": "https://doi.org/10.1128/AEM.69.9.5443-5452.2003",
+    "repository": "Applied and Environmental Microbiology. 63:5443-5452",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2003,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/battin-et-al-2003-effects-of-current-velocity-on-the-nascent-architecture-o/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Effects of streamside vegetation on macroinvertebrate communities of White Clay Creek in Eastern North America",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/christina/publications/pub/sweeney-1993-effects-of-streamside-vegetation-on-macroinvertebrate-communit/",
+    "repository": "Proceedings of The Academy of Natural Sciences of Philadelphia 144:291-340",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 1993,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/sweeney-1993-effects-of-streamside-vegetation-on-macroinvertebrate-communit/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Effects of wind-driven rainfall on stemflow generation between two codominant tree species with differing crown characteristics",
+    "type": "paper",
+    "doi": "10.1016/j.agrformet.2011.05.008",
+    "url": "https://doi.org/10.1016/j.agrformet.2011.05.008",
+    "repository": "Agricultural and Forest Meteorology 151: 1277-1286",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2011,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/van-stan-et-al-2011-effects-of-wind-driven-rainfall-on-stemflow-generation-/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Estimation of dissolved organic carbon contribution from hillslope soils to a headwater stream",
+    "type": "paper",
+    "doi": "10.1029/2011WR010815",
+    "url": "https://doi.org/10.1029/2011WR010815",
+    "repository": "Water Resour. Res. 48(9)",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2012,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/mei-et-al-2012-estimation-of-dissolved-organic-carbon-contribution-from-hil/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Evaluation of an instrumental method to reduce error in canopy water storage estimates via mechanical displacement",
+    "type": "paper",
+    "doi": "10.1029/2012WR012666",
+    "url": "https://doi.org/10.1029/2012WR012666",
+    "repository": "Water Resources Research",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2013,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/van-stan-et-al-2013-evaluation-of-an-instrumental-method-to-reduce-error-in/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Extreme storms and changes in particulate and dissolved organic carbon in runoff: Entering uncharted waters?",
+    "type": "paper",
+    "doi": "10.1002/grl.50306",
+    "url": "https://doi.org/10.1002/grl.50306",
+    "repository": "Geophysical Research Letters. Vol 40, 1-6",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2013,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/dhillon-inamdar-2013-extreme-storms-and-changes-in-particulate-and-dissolve/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Fluorescence characteristics and sources of dissolved organic matter for stream water during storm events in a forested mid-Atlantic watershed",
+    "type": "paper",
+    "doi": "10.1029/2011JG001735",
+    "url": "https://doi.org/10.1029/2011JG001735",
+    "repository": "J. Geophys. Res. 116:G03043.",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2011,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/inamdar-et-al-2011-fluorescence-characteristics-and-sources-of-dissolved-or/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Future Directions for Critical Zone Observatory (CZO) Science",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/boulder/publications/pub/anderson-et-al-2010-future-directions-for-critical-zone-observatory-czo-sci/",
+    "repository": "CZO Community, December 29, 2010 Cross-CZO",
+    "sites": [
+      "boulder",
+      "catalina-jemez",
+      "christina",
+      "luquillo",
+      "national",
+      "shale-hills",
+      "sierra"
+    ],
+    "era": "czo",
+    "year": 2010,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/publications/pub/anderson-et-al-2010-future-directions-for-critical-zone-observatory-czo-sci/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Geologic effects on groundwater salinity and discharge into an estuary",
+    "type": "paper",
+    "doi": "10.1016/j.jhydrol.2013.05.049",
+    "url": "https://doi.org/10.1016/j.jhydrol.2013.05.049",
+    "repository": "Journal of Hydrology, 498:1–12",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2013,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/russoniello-et-al-2013-geologic-effects-on-groundwater-salinity-and-dischar/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Geophysical imaging reveals topographic stress control of bedrock weathering",
+    "type": "paper",
+    "doi": "10.1126/science.aab2210",
+    "url": "https://doi.org/10.1126/science.aab2210",
+    "repository": "Science 350 (6260): 534-538 Cross-CZO",
+    "sites": [
+      "boulder",
+      "calhoun",
+      "christina",
+      "national"
+    ],
+    "era": "czo",
+    "year": 2015,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/boulder/publications/pub/st-clair-et-al-2015-geophysical-imaging-reveals-topographic-stress-control-/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Graduate Research Group White Paper: Cross-CZO Research Potential",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/boulder/publications/pub/grg-cross-site-white-paper-graduate-research-group-white-paper-cross-czo-re/",
+    "repository": "Internal CZO publication Cross-CZO",
+    "sites": [
+      "boulder",
+      "catalina-jemez",
+      "christina",
+      "luquillo",
+      "national",
+      "shale-hills",
+      "sierra"
+    ],
+    "era": "czo",
+    "year": 2013,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/publications/pub/grg-cross-site-white-paper-graduate-research-group-white-paper-cross-czo-re/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "How planting method, weed abatement, and herbivory affect afforestation success",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/christina/publications/pub/sweeney-et-al-2007-how-planting-method-weed-abatement-and-herbivory-affect-/",
+    "repository": "Southern Journal of Applied Forestry 31:85-92",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2007,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/sweeney-et-al-2007-how-planting-method-weed-abatement-and-herbivory-affect-/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Hydrologic dynamics and geochemical responses within a floodplain aquifer and hyporheic zone during Hurricane Sandy",
+    "type": "paper",
+    "doi": "10.1002/2013WR015101",
+    "url": "https://doi.org/10.1002/2013WR015101",
+    "repository": "Water Resources Research, 50 (6): 4877–4892",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2014,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/sawyer-et-al-2014-hydrologic-dynamics-and-geochemical-responses-within-a-fl/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Hydrological Regulation on Dissolved Organic Carbon Transport from Agricultural and Forest Soils to Streams",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/christina/publications/pub/mei-2013-hydrological-regulation-on-dissolved-organic-carbon-transport-from/",
+    "repository": "Vanderbilt University Ph.D. dissertation",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2013,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/mei-2013-hydrological-regulation-on-dissolved-organic-carbon-transport-from/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Improving biogeochemical knowledge through technological innovation.",
+    "type": "paper",
+    "doi": "10.1890/100004",
+    "url": "https://doi.org/10.1890/100004",
+    "repository": "Frontiers in Ecology and the Environment 9:37-43.",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2011,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/melack-et-al-2011-improving-biogeochemical-knowledge-through-technological-/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Investigating Organic Matter-Mineral Interactions at the Molecular Scale: An Integrated Field and Laboratory Study",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/christina/publications/pub/chen-2013-investigating-organic-matter-mineral-interactions-at-the-molecula/",
+    "repository": "University of Delaware Ph.D. dissertation",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2013,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/chen-2013-investigating-organic-matter-mineral-interactions-at-the-molecula/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Landscape-Scale Variation in Soil Microbial Communities Across a Forested Watershed.",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/boulder/publications/pub/eilers-2011-landscape-scale-variation-in-soil-microbial-communities-across-/",
+    "repository": "Thesis, University of Colorado, Master of Arts, Department of Ecology and Evolutionary Biology",
+    "sites": [
+      "boulder",
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2011,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/boulder/publications/pub/eilers-2011-landscape-scale-variation-in-soil-microbial-communities-across-/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Laser vision: lidar as a transformative tool to advance critical zone science",
+    "type": "paper",
+    "doi": "10.5194/hess-19-2881-2015",
+    "url": "https://doi.org/10.5194/hess-19-2881-2015",
+    "repository": "Hydrol. Earth Syst. Sci., 19, 2881-2897 Cross-CZO",
+    "sites": [
+      "boulder",
+      "catalina-jemez",
+      "christina",
+      "national",
+      "reynolds",
+      "shale-hills",
+      "sierra"
+    ],
+    "era": "czo",
+    "year": 2015,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/harpold-et-al-2015-laser-vision-lidar-as-a-transformative-tool-to-advance-c/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Long term storage and transport length scale of fine sediment: Analysis of a mercury release into a river",
+    "type": "paper",
+    "doi": "10.1002/2014GL060722",
+    "url": "https://doi.org/10.1002/2014GL060722",
+    "repository": "Geophysical Research Letters, 41",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2014,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/pizzuto-2014-long-term-storage-and-transport-length-scale-of-fine-sediment-/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Measurement of streamwater biodegradable dissolved organic carbon with a plug-flow bioreactor",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/christina/publications/pub/kaplan-newbold-1995-measurement-of-streamwater-biodegradable-dissolved-orga/",
+    "repository": "Water Research 29:2696-2706",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 1995,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/kaplan-newbold-1995-measurement-of-streamwater-biodegradable-dissolved-orga/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Measuring heterotrophic respiration rates of suspended particulate organic carbon from stream ecosystems",
+    "type": "paper",
+    "doi": "10.4319/lom.2013.11.247",
+    "url": "https://doi.org/10.4319/lom.2013.11.247",
+    "repository": "Limnology and Oceanography-Methods 11:247-261",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2013,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/richardson-et-al-2013-measuring-heterotrophic-respiration-rates-of-suspende/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Mitigation of agricultural nonpoint pollution by a reforested riparian buffer in the Mid-Atlantic Piedmont",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/christina/publications/pub/newbold-et-al-2009-mitigation-of-agricultural-nonpoint-pollution-by-a-refor/",
+    "repository": "Stroud Preserve Watersheds National Monitoring Project. Final report. Stroud Water Research Center, Avondale, PA, USA, 53 pp.",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2009,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/newbold-et-al-2009-mitigation-of-agricultural-nonpoint-pollution-by-a-refor/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Model My Watershed: Connecting Students’ Conceptual Understanding of Watersheds to Real-World Decision Making",
+    "type": "paper",
+    "doi": "10.5408/12-395.1",
+    "url": "https://doi.org/10.5408/12-395.1",
+    "repository": "J. Geosci. Educ. 62 (1): 61–73",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2014,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/gill-et-al-2014-model-my-watershed-connecting-students-conceptual-understan/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Multi-elemental scanning transmission X-ray microscopy–near edge X-ray absorption fine structure spectroscopy assessment of organo–mineral associations in soils from reduced environments",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/christina/publications/pub/chen-sparks-2015-multi-elemental-scanning-transmission-x-ray-microscopynear/",
+    "repository": "Environmental Chemistry",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2015,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/chen-sparks-2015-multi-elemental-scanning-transmission-x-ray-microscopynear/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "NSF Proposal: EarthCube Domain End-User Workshop: Engaging the Critical Zone community to bridge “long tail” science with big data",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/christina/publications/pub/aufdenkampe-et-al-2012-nsf-proposal-earthcube-domain-end-user-workshop-enga/",
+    "repository": "NSF Award #1252238 Cross-CZO",
+    "sites": [
+      "christina",
+      "national"
+    ],
+    "era": "czo",
+    "year": 2012,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/publications/pub/aufdenkampe-et-al-2012-nsf-proposal-earthcube-domain-end-user-workshop-enga/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Nutrient spiraling and transport in streams -- The importance of instream biological processes to nutrient dynamics in streams",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/christina/publications/pub/webster-et-al-2015-nutrient-spiraling-and-transport-in-streams-the-importan/",
+    "repository": "In Jones, J.W., and Stanley, E. H., editors. Streams Ecosystems in a Changing Environment, Elsevier. ISBN: 9780124058903",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2015,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/webster-et-al-2015-nutrient-spiraling-and-transport-in-streams-the-importan/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Organic matter dynamics in White Clay Creek, Pennsylvania, U.S.A.",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/christina/publications/pub/newbold-et-al-1997-organic-matter-dynamics-in-white-clay-creek-pennsylvania/",
+    "repository": "Pages 46 - 50 in J. R. Webster and J. L. Meyers (editors). Stream organic matter budgets. Journal of the North American Benthological Society 16:3-161",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 1997,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/newbold-et-al-1997-organic-matter-dynamics-in-white-clay-creek-pennsylvania/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Paired comparisons of effects of type of riparian vegetation on stream fishes: implications for restoration",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/christina/publications/pub/horwitz-et-al-2000-paired-comparisons-of-effects-of-type-of-riparian-vegeta/",
+    "repository": "American Water Resources Association 197-202",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2000,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/horwitz-et-al-2000-paired-comparisons-of-effects-of-type-of-riparian-vegeta/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Predicting the accumulation of mercury-contaminated sediment on riverbanks—An analytical approach",
+    "type": "paper",
+    "doi": "10.1029/2012WR011906",
+    "url": "https://doi.org/10.1029/2012WR011906",
+    "repository": "Water Resources Research Vol. 48, W07518",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2012,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/pizzuto-2012-predicting-the-accumulation-of-mercury-contaminated-sediment-o/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Primary productivity and community respiration",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/christina/publications/pub/bott-2006-primary-productivity-and-community-respiration/",
+    "repository": "Methods in Stream Ecology, 2nd ed., pp.263-290. Elsevier, New York",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2006,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/bott-2006-primary-productivity-and-community-respiration/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Properties of Fe-organic matter associations via coprecipitation versus adsorption",
+    "type": "paper",
+    "doi": "10.1021/es503669u",
+    "url": "https://doi.org/10.1021/es503669u",
+    "repository": "Environ. Sci. Technol. 48 (23):13751–13759",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2014,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/chen-et-al-2014-properties-of-fe-organic-matter-associations-via-coprecipit/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Protecting Headwaters: The scientific basis for safeguarding stream and river ecosystems",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/christina/publications/pub/kaplan-et-al-2008-protecting-headwaters-the-scientific-basis-for-safeguardi/",
+    "repository": "Stroud Water Research Center",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2008,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/kaplan-et-al-2008-protecting-headwaters-the-scientific-basis-for-safeguardi/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Rates of soil mixing and associated carbon fluxes in a forest vs. tilled agricultural field: implications for modelling the soil carbon cycle.",
+    "type": "paper",
+    "doi": "10.1029/2010JG001304",
+    "url": "https://doi.org/10.1029/2010JG001304",
+    "repository": "Journal of Geophysical Research - Biogeosciences 116:G01014.",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2011,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/yoo-et-al-2011-rates-of-soil-mixing-and-associated-carbon-fluxes-in-a-fores/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Reconstructing suspended sediment mercury contamination of a steep, gravel-bed river using reservoir theory",
+    "type": "paper",
+    "doi": "10.1306/eg.08151313007",
+    "url": "https://doi.org/10.1306/eg.08151313007",
+    "repository": "Environmental Geosciences, 20 (1):17-35",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2014,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/skalak-pizzuto-2014-reconstructing-suspended-sediment-mercury-contamination/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Recurring seasonal dynamics of microbial communities in stream habitats",
+    "type": "paper",
+    "doi": "10.1128/AEM.72.1.713-722.2006",
+    "url": "https://doi.org/10.1128/AEM.72.1.713-722.2006",
+    "repository": "Applied and Environmental Microbiology 72:713-722",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2006,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/hullar-et-al-2006-recurring-seasonal-dynamics-of-microbial-communities-in-s/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Riparian Deforestation, Stream Narrowing, and Loss of Stream Ecosystem Services",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/christina/publications/pub/sweeney-et-al-2004-riparian-deforestation-stream-narrowing-and-loss-of-stre/",
+    "repository": "Proceedings of the National Academy of Sciences 101:14132-14137",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2004,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/sweeney-et-al-2004-riparian-deforestation-stream-narrowing-and-loss-of-stre/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Riparian forest restoration: Increasing success by reducing plant competition and herbivory",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/christina/publications/pub/sweeney-et-al-2002-riparian-forest-restoration-increasing-success-by-reduci/",
+    "repository": "Restoration Ecology 10(2): 1 - 9",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2002,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/sweeney-et-al-2002-riparian-forest-restoration-increasing-success-by-reduci/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Riverine coupling of biogeochemical cycles between land, oceans, and atmosphere.",
+    "type": "paper",
+    "doi": "10.1890/100014",
+    "url": "https://doi.org/10.1890/100014",
+    "repository": "Frontiers in Ecology and the Environment 9:53-60.",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2011,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/aufdenkampe-et-al-2011-riverine-coupling-of-biogeochemical-cycles-between-l/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Run-of-river impoundments pass bed material and establish equilibrium bed morphology while remaining largely unfilled with sediment in Northern Delaware",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/christina/publications/pub/pearson-pizzuto-2015-run-of-river-impoundments-pass-bed-material-and-establ/",
+    "repository": "Geomorphology",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2015,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/pearson-pizzuto-2015-run-of-river-impoundments-pass-bed-material-and-establ/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Scaling the gas transfer velocity and hydraulic geometry in streams and small rivers",
+    "type": "paper",
+    "doi": "10.1215/21573689-1597669",
+    "url": "https://doi.org/10.1215/21573689-1597669",
+    "repository": "Limnology and Oceanography: Fluids and Environments 2:41-53",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2012,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/raymond-et-al-2012-scaling-the-gas-transfer-velocity-and-hydraulic-geometry/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Seasonal pattern of dissolved organic matter (DOM) in watershed sources: Influence of hydrologic flow paths and autumn leaf fall",
+    "type": "paper",
+    "doi": "10.1007/s10533-013-9934-1",
+    "url": "https://doi.org/10.1007/s10533-013-9934-1",
+    "repository": "Biogeochemistry, 118: 321-337",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2014,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/singh-et-al-2014-seasonal-pattern-of-dissolved-organic-matter-dom-in-waters/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Seawater circulation in sediments driven by interactions between seabed topography and fluid density",
+    "type": "paper",
+    "doi": "10.1002/wrcr.20121",
+    "url": "https://doi.org/10.1002/wrcr.20121",
+    "repository": "Water Resources Research, 49: 1386–1399",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2013,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/konikow-et-al-2013-seawater-circulation-in-sediments-driven-by-interactions/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "SI2-SSI: The community-driven BiG CZ software system for integration and analysis of bio- and geoscience data in the critical zone.",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/christina/publications/pub/aufdenkampe-et-al-2013-si2-ssi-the-community-driven-big-cz-software-system-/",
+    "repository": "Submitted to NSF Solicitation 13-525 Scientific Software Integration. Cross-CZO",
+    "sites": [
+      "christina",
+      "national"
+    ],
+    "era": "czo",
+    "year": 2013,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/publications/pub/aufdenkampe-et-al-2013-si2-ssi-the-community-driven-big-cz-software-system-/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Soft X-ray Spectromicroscopy Study of Mineral-Organic Matter Associations in Pasture Soil Clay Fractions",
+    "type": "paper",
+    "doi": "10.1021/es405485a",
+    "url": "https://doi.org/10.1021/es405485a",
+    "repository": "Environ. Sci. Technol., 2014, 48 (12), pp 6678–6686",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2014,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/chen-et-al-2014-soft-x-ray-spectromicroscopy-study-of-mineral-organic-matte/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Soil moisture response to snowmelt timing in mixed-conifer subalpine forests",
+    "type": "paper",
+    "doi": "10.1002/hyp.10400",
+    "url": "https://doi.org/10.1002/hyp.10400",
+    "repository": "Hydrological Processes 29(12): 2782–2798",
+    "sites": [
+      "boulder",
+      "catalina-jemez",
+      "christina",
+      "sierra"
+    ],
+    "era": "czo",
+    "year": 2015,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/boulder/publications/pub/harpold-et-al-2015-soil-moisture-response-to-snowmelt-timing-in-mixed-conif/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Soil organic matter stability in organo-mineral complexes as a function of increasing carbon loading",
+    "type": "paper",
+    "doi": "10.1016/j.soilbio.2013.11.024",
+    "url": "https://doi.org/10.1016/j.soilbio.2013.11.024",
+    "repository": "Soil Biology and Biochemistry 69, 398-405",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2014,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/feng-et-al-2014-soil-organic-matter-stability-in-organo-mineral-complexes-a/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Solute-specific scaling of inorganic nitrogen and phosphorus uptake in streams",
+    "type": "paper",
+    "doi": "10.5194/bg-10-7323-2013",
+    "url": "https://doi.org/10.5194/bg-10-7323-2013",
+    "repository": "Biogeosciences 10:7323-7331",
+    "sites": [
+      "christina",
+      "luquillo"
+    ],
+    "era": "czo",
+    "year": 2013,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/hall-et-al-2013-solute-specific-scaling-of-inorganic-nitrogen-and-phosphoru/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Sources and biogeochemistry of terrestrial dissolved organic carbon entering streams",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/christina/publications/pub/kaplan-newbold-1993-sources-and-biogeochemistry-of-terrestrial-dissolved-or/",
+    "repository": "pp. 139 - 165 in T. E. Ford, ed. Aquatic microbiology: an ecological approach. Blackwell Scientific",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 1993,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/kaplan-newbold-1993-sources-and-biogeochemistry-of-terrestrial-dissolved-or/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Spatial and temporal variation in streambed bacterial community composition and correlation with environmental variables",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/christina/publications/pub/hogan-2008-spatial-and-temporal-variation-in-streambed-bacterial-community-/",
+    "repository": "Ph.D. dissertation. University of Pennsylvania, Philadelphia",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2008,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/hogan-2008-spatial-and-temporal-variation-in-streambed-bacterial-community-/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Spatial patterns of vegetation, soils and microtopography from terrestrial laser scanning on two semi-arid hillslopes of contrasting lithology",
+    "type": "paper",
+    "doi": "10.1002/2013JG002507",
+    "url": "https://doi.org/10.1002/2013JG002507",
+    "repository": "Journal of Geophysical Research: Biogeosciences 119(2): 163-180",
+    "sites": [
+      "catalina-jemez",
+      "christina",
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2014,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/catalina-jemez/publications/pub/harman-et-al-2014-spatial-patterns-of-vegetation-soils-and-microtopography-/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Stemflow and dissolved organic carbon cycling: temporal variability in concentration, flux, and UV-vis spectral metrics in a temperate broadleaved deciduous forest in the eastern USA",
+    "type": "paper",
+    "doi": "10.1139/x11-173",
+    "url": "https://doi.org/10.1139/x11-173",
+    "repository": "Canadian Journal of Forest Research 42: 207-216. [* equal contributors]",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2012,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/levia-et-al-2012-stemflow-and-dissolved-organic-carbon-cycling-temporal-var/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Storm event patterns of particulate organic carbon (POC) for large storms and differences with dissolved organic carbon (DOC)",
+    "type": "paper",
+    "doi": "10.1007/s10533-013-9905-6",
+    "url": "https://doi.org/10.1007/s10533-013-9905-6",
+    "repository": "Biogeochemistry, 118:61-81",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2014,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/dhillon-inamdar-2014-storm-event-patterns-of-particulate-organic-carbon-poc/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Stratigraphic controls on surface water-groundwater exchange and geochemical fluxes across the sediment-water interface of an estuary",
+    "type": "paper",
+    "doi": "10.4319/lo.2014.59.3.0997",
+    "url": "https://doi.org/10.4319/lo.2014.59.3.0997",
+    "repository": "Limnology & Oceanography, 59(3) 997–1010",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2014,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/sawyer-et-al-2014-stratigraphic-controls-on-surface-water-groundwater-excha/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Streamside Forest Buffer Width Needed to Protect Stream Water Quality, Habitat, and Organisms: A Literature Review",
+    "type": "paper",
+    "doi": "10.1111/jawr.12203",
+    "url": "https://doi.org/10.1111/jawr.12203",
+    "repository": "Journal of the American Water Resources Association 50 (3):560–584",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2014,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/sweeney-newbold-2014-streamside-forest-buffer-width-needed-to-protect-strea/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Streamside forests and the physical, chemical, and trophic characteristics of piedmont streams in Eastern North America",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/christina/publications/pub/sweeney-1992-streamside-forests-and-the-physical-chemical-and-trophic-chara/",
+    "repository": "Water Science and Technology 26:2653-2673",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 1992,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/sweeney-1992-streamside-forests-and-the-physical-chemical-and-trophic-chara/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Surface and subsurface dissolved organic carbon",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/christina/publications/pub/kaplan-newbold-2000-surface-and-subsurface-dissolved-organic-carbon/",
+    "repository": "Streams and Ground Waters, J. B. Jones and P. J. Mulholland (eds.), pp. 237-258. Academic Press.",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2000,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/kaplan-newbold-2000-surface-and-subsurface-dissolved-organic-carbon/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Sustaining Earth's Critical Zone - Basic Science and Interdisciplinary Solutions for Global Challenges",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/boulder/publications/pub/banwart-et-al-2013-sustaining-earths-critical-zone-basic-science-and-interd/",
+    "repository": "The University of Sheffield, United Kingdom, ISBN: 978-0-9576890-0-8 Cross-CZO",
+    "sites": [
+      "boulder",
+      "catalina-jemez",
+      "christina",
+      "luquillo",
+      "national",
+      "shale-hills",
+      "sierra"
+    ],
+    "era": "czo",
+    "year": 2013,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/publications/pub/banwart-et-al-2013-sustaining-earths-critical-zone-basic-science-and-interd/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Technical note: Instrumental method for reducing error in compression-derived measurements of rainfall interception for individual trees",
+    "type": "paper",
+    "doi": "10.1080/02626667.2011.590811",
+    "url": "https://doi.org/10.1080/02626667.2011.590811",
+    "repository": "Hydrological Sciences Journal 56: 1061-1066",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2011,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/van-stan-et-al-2011-technical-note-instrumental-method-for-reducing-error-i/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Temporal dynamics of seston: A recurring nighttime peak and seasonal shifts in composition in a stream ecosystem",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/christina/publications/pub/richardson-et-al-2009-temporal-dynamics-of-seston-a-recurring-nighttime-pea/",
+    "repository": "Limnology and Oceanography 54:344-354",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2009,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/richardson-et-al-2009-temporal-dynamics-of-seston-a-recurring-nighttime-pea/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Temporal variability of stemflow volume in a beech-yellow poplar forest in relation to tree species and size.",
+    "type": "paper",
+    "doi": "10.1016/j.jhydrol.2009.10.028",
+    "url": "https://doi.org/10.1016/j.jhydrol.2009.10.028",
+    "repository": "Journal of Hydrology 380 (1/2):112-120.",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2010,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/levia-et-al-2010-temporal-variability-of-stemflow-volume-in-a-beech-yellow-/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Temporal variation in end-member chemistry and its influence on runoff mixing patterns in a forested, Piedmont catchment",
+    "type": "paper",
+    "doi": "10.1002/wrcr.20158",
+    "url": "https://doi.org/10.1002/wrcr.20158",
+    "repository": "Water Resources Research, 49: 1828–1844",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2013,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/inamdar-et-al-2013-temporal-variation-in-end-member-chemistry-and-its-influ/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Testing the Soil Carbon Saturation Theory: Maximal Carbon Stabilization at Soil Organic Matter Stability as a Function of Organic Carbon Inputs",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/christina/publications/pub/feng-2012-testing-the-soil-carbon-saturation-theory-maximal-carbon-stabiliz/",
+    "repository": "A Dissertation in Earth and Environmental Science, Presented to the Faculties of the University of Pennsylvania in Partial Fulfillment of the Requirements for the Degree of Doctor of Philosophy",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2012,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/feng-2012-testing-the-soil-carbon-saturation-theory-maximal-carbon-stabiliz/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "The boundless carbon cycle",
+    "type": "paper",
+    "doi": "10.1038/ngeo618",
+    "url": "https://doi.org/10.1038/ngeo618",
+    "repository": "Nature Geoscience 2:598-600",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2009,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/battin-et-al-2009-the-boundless-carbon-cycle/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "The delivery of dissolved organic carbon from a forest hillslope to a headwater stream",
+    "type": "paper",
+    "doi": "10.1002/2014WR015635",
+    "url": "https://doi.org/10.1002/2014WR015635",
+    "repository": "Water Resources Research 50 (7): 5774–5796",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2014,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/mei-et-al-2014-the-delivery-of-dissolved-organic-carbon-from-a-forest-hills/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "The Effect Of Particle Storage On Time-Averaged Suspended Sediment Transport Velocities Along the White Clay Creek, Pennsylvania",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/christina/publications/pub/williamson-2013-the-effect-of-particle-storage-on-time-averaged-suspended-s/",
+    "repository": "In Review, University of Delaware",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2013,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/williamson-2013-the-effect-of-particle-storage-on-time-averaged-suspended-s/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "The effects of phenoseason and storm characteristics on throughfall solute washoff and leaching dynamics from a temperate deciduous forest canopy",
+    "type": "paper",
+    "doi": "10.1016/j.scitotenv.2012.04.060",
+    "url": "https://doi.org/10.1016/j.scitotenv.2012.04.060",
+    "repository": "Science of the Total Environment 430: 48-58",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2012,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/van-stan-et-al-2012-the-effects-of-phenoseason-and-storm-characteristics-on/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "The Geochemical Transformation of Soils by Agriculture and Its Dependence on Soil Erosion: an Application of Geochemical Mass Balance Approach",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/christina/publications/pub/yoo-et-al-2015-the-geochemical-transformation-of-soils-by-agriculture-and-i/",
+    "repository": "Science of the Total Environment",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2015,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/yoo-et-al-2015-the-geochemical-transformation-of-soils-by-agriculture-and-i/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "The Impact of Terrestrial Dissolved Organic Carbon on Stream Ecosystems Through an Investigation of Hydrologic Sources",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/christina/publications/pub/mclaughlin-2012-the-impact-of-terrestrial-dissolved-organic-carbon-on-strea/",
+    "repository": "A Dissertation in Biology Presented to the Faculties of the University of Pennsylvania in Partial Fulfillment of the Requirements for the Degree of Doctor of Philosophy",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2012,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/mclaughlin-2012-the-impact-of-terrestrial-dissolved-organic-carbon-on-strea/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "The Initial Design of Data Sharing Infrastructure for the Critical Zone Observatory",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/christina/publications/pub/zaslavsky-et-al-2011-the-initial-design-of-data-sharing-infrastructure-for-/",
+    "repository": "Proceedings of the Environmental Information Management Conference, Santa Barbara, CA, 28-29 September, EIM'2011, pp. 145-150 Cross-CZO",
+    "sites": [
+      "christina",
+      "national"
+    ],
+    "era": "czo",
+    "year": 2011,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/publications/pub/zaslavsky-et-al-2011-the-initial-design-of-data-sharing-infrastructure-for-/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "The role of monomers in stream ecosystem metabolism",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/christina/publications/pub/kaplan-newbold-2003-the-role-of-monomers-in-stream-ecosystem-metabolism/",
+    "repository": "Aquatic Ecosystems: Interactivity of Dissolved Organic Matter, pp. 97-119. S. E. G. Findlay and R. L. Sinsabaugh (eds.). Academic Press.",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2003,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/kaplan-newbold-2003-the-role-of-monomers-in-stream-ecosystem-metabolism/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Transport, sources, and quality of seston in a piedmont headwater stream",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/christina/publications/pub/richardson-2008-transport-sources-and-quality-of-seston-in-a-piedmont-headw/",
+    "repository": "Ph.D. dissertation. University of Maryland",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2008,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/richardson-2008-transport-sources-and-quality-of-seston-in-a-piedmont-headw/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Turbulent particle transport in streams: Can exponential settling be reconciled with fluid mechanics?",
+    "type": "paper",
+    "doi": "10.1016/j.jtbi.2012.01.016",
+    "url": "https://doi.org/10.1016/j.jtbi.2012.01.016",
+    "repository": "Journal of Theoretical Biology 300:62-80",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2012,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/mcnair-newbold-2012-turbulent-particle-transport-in-streams-can-exponential/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Untangling the complex issue of dissolved organic carbon uptake: a stable isotope approach",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/christina/publications/pub/kaplan-et-al-2008-untangling-the-complex-issue-of-dissolved-organic-carbon-/",
+    "repository": "Freshwater Biology 53:855-864",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2008,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/kaplan-et-al-2008-untangling-the-complex-issue-of-dissolved-organic-carbon-/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Variation of organic matter quantity and quality in streams at Critical Zone Observatory watersheds",
+    "type": "paper",
+    "doi": "10.1002/2016WR018970",
+    "url": "https://doi.org/10.1002/2016WR018970",
+    "repository": "Water Resources Research, 52 (10): 8202–8216",
+    "sites": [
+      "boulder",
+      "christina",
+      "luquillo",
+      "shale-hills",
+      "sierra"
+    ],
+    "era": "czo",
+    "year": 2016,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/miller-et-al-2016-variation-of-organic-matter-quantity-and-quality-in-strea/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Water quality functions of a 15-year-old riparian forest buffer system",
+    "type": "paper",
+    "doi": "10.1111/j.1752-1688.2010.00421.x",
+    "url": "https://doi.org/10.1111/j.1752-1688.2010.00421.x",
+    "repository": "Journal of the American Water Resources Association. 1-12",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2010,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/newbold-et-al-2010-water-quality-functions-of-a-15-year-old-riparian-forest/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "What makes Darwinian hydrology \"Darwinian\"? Asking a different kind of question about landscapes",
+    "type": "paper",
+    "doi": "10.5194/hess-18-417-2014",
+    "url": "https://doi.org/10.5194/hess-18-417-2014",
+    "repository": "Hydrology and Earth System Sciences 18: 417-433",
+    "sites": [
+      "catalina-jemez",
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2014,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/catalina-jemez/publications/pub/harman-troch-2014-what-makes-darwinian-hydrology-darwinian-asking-a-differe/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Where rivers are born: The scientific imperative for defending small streams and wetlands",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/christina/publications/pub/meyer-et-al-2003-where-rivers-are-born-the-scientific-imperative-for-defend/",
+    "repository": "Sierra Club and American Rivers",
+    "sites": [
+      "christina"
+    ],
+    "era": "czo",
+    "year": 2003,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/meyer-et-al-2003-where-rivers-are-born-the-scientific-imperative-for-defend/",
+    "date_added": "2026-10-29"
   }
 ]
