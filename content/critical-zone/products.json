@@ -1540,20 +1540,6 @@
     "date_added": "2026-10-29"
   },
   {
-    "title": "The Eel River Critical Zone Observatory: exploring how the critical zone will mediate watershed currencies and ecosystem response in a changing environment",
-    "type": "paper",
-    "url": "https://czo-archive.criticalzone.org/eel/publications/pub/dietrich-et-al-2013-the-eel-river-critical-zone-observatory-exploring-how-t/",
-    "repository": "NSF Proposal",
-    "sites": [
-      "eel"
-    ],
-    "era": "czo",
-    "year": 2013,
-    "source": "czo-archive",
-    "source_url": "https://czo-archive.criticalzone.org/eel/publications/pub/dietrich-et-al-2013-the-eel-river-critical-zone-observatory-exploring-how-t/",
-    "date_added": "2026-10-29"
-  },
-  {
     "title": "The Frontier Beneath our Feet",
     "type": "paper",
     "doi": "10.1002/2017WR020835",
@@ -2762,21 +2748,6 @@
     "date_added": "2026-10-29"
   },
   {
-    "title": "NSF Proposal: EarthCube Domain End-User Workshop: Engaging the Critical Zone community to bridge “long tail” science with big data",
-    "type": "paper",
-    "url": "https://czo-archive.criticalzone.org/christina/publications/pub/aufdenkampe-et-al-2012-nsf-proposal-earthcube-domain-end-user-workshop-enga/",
-    "repository": "NSF Award #1252238 Cross-CZO",
-    "sites": [
-      "christina",
-      "national"
-    ],
-    "era": "czo",
-    "year": 2012,
-    "source": "czo-archive",
-    "source_url": "https://czo-archive.criticalzone.org/national/publications/pub/aufdenkampe-et-al-2012-nsf-proposal-earthcube-domain-end-user-workshop-enga/",
-    "date_added": "2026-10-29"
-  },
-  {
     "title": "Nutrient spiraling and transport in streams -- The importance of instream biological processes to nutrient dynamics in streams",
     "type": "paper",
     "url": "https://czo-archive.criticalzone.org/christina/publications/pub/webster-et-al-2015-nutrient-spiraling-and-transport-in-streams-the-importan/",
@@ -3021,21 +2992,6 @@
     "year": 2013,
     "source": "czo-archive",
     "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/konikow-et-al-2013-seawater-circulation-in-sediments-driven-by-interactions/",
-    "date_added": "2026-10-29"
-  },
-  {
-    "title": "SI2-SSI: The community-driven BiG CZ software system for integration and analysis of bio- and geoscience data in the critical zone.",
-    "type": "paper",
-    "url": "https://czo-archive.criticalzone.org/christina/publications/pub/aufdenkampe-et-al-2013-si2-ssi-the-community-driven-big-cz-software-system-/",
-    "repository": "Submitted to NSF Solicitation 13-525 Scientific Software Integration. Cross-CZO",
-    "sites": [
-      "christina",
-      "national"
-    ],
-    "era": "czo",
-    "year": 2013,
-    "source": "czo-archive",
-    "source_url": "https://czo-archive.criticalzone.org/national/publications/pub/aufdenkampe-et-al-2013-si2-ssi-the-community-driven-big-cz-software-system-/",
     "date_added": "2026-10-29"
   },
   {
@@ -3549,6 +3505,2316 @@
     "year": 2003,
     "source": "czo-archive",
     "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/meyer-et-al-2003-where-rivers-are-born-the-scientific-imperative-for-defend/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "A field comparison of multiple techniques to quantify groundwater–surface-water interactions",
+    "type": "paper",
+    "doi": "10.1086/679738",
+    "url": "https://doi.org/10.1086/679738",
+    "repository": "Freshwater Science, 34(1)",
+    "sites": [
+      "luquillo",
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2015,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/luquillo/publications/pub/gonzalez-pinzon-et-al-2015-a-field-comparison-of-multiple-techniques-to-qua/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "A net ecosystem carbon budget for snow dominated forested headwater catchments: linking water and carbon fluxes to critical zone carbon storage",
+    "type": "paper",
+    "doi": "10.1007/s10533-018-0440-3",
+    "url": "https://doi.org/10.1007/s10533-018-0440-3",
+    "repository": "Springer Science and Business Media LLC",
+    "awards": [
+      "nsf-0724958",
+      "nsf-1331408",
+      "nsf-1331872"
+    ],
+    "sites": [
+      "boulder",
+      "catalina-jemez",
+      "luquillo",
+      "reynolds",
+      "shale-hills"
+    ],
+    "era": "czo",
+    "year": 2018,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/boulder/publications/pub/perdrial-et-al-2018-a-net-ecosystem-carbon-budget-for-snow-dominated-forest/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "A simple framework for assessing the sensitivity of mountain watersheds to snowpack loss.",
+    "type": "paper",
+    "doi": "10.1002/2015GL063413",
+    "url": "https://doi.org/10.1002/2015GL063413",
+    "repository": "Geophys. Res. Lett.",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2015,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/tennant-et-al-2015-a-simple-framework-for-assessing-the-sensitivity-of-moun/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "A unified approach to hydrologic modeling: Part 2. Comparison of alternative process representations.",
+    "type": "paper",
+    "doi": "10.1002/2015WR017198",
+    "url": "https://doi.org/10.1002/2015WR017198",
+    "repository": "Water Resources Research",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2015,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/clark-et-al-2015-a-unified-approach-to-hydrologic-modeling-part-2-compariso/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Aboveground Biomass Estimates of Sagebrush Using Terrestrial and Airborne LiDAR Data in a Dryland Ecosystem.",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/li-et-al-2015-aboveground-biomass-estimates-of-sagebrush-using-terrestrial-/",
+    "repository": "Agricultural and Forest Meteorology",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2015,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/li-et-al-2015-aboveground-biomass-estimates-of-sagebrush-using-terrestrial-/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Aboveground total and green biomass of dryland shrub derived from terrestrial laser scanning",
+    "type": "paper",
+    "doi": "10.1016/j.isprsjprs.2013.12.006",
+    "url": "https://doi.org/10.1016/j.isprsjprs.2013.12.006",
+    "repository": "ISPRS Journal of Photogrammetry and Remote Sensing 88: 166–173",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2014,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/olsoy-et-al-2014-aboveground-total-and-green-biomass-of-dryland-shrub-deriv/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Airborne LiDAR and terrestrial laser scanning derived vegetation obstruction factors for visibility models",
+    "type": "paper",
+    "doi": "10.1111/tgis.12022",
+    "url": "https://doi.org/10.1111/tgis.12022",
+    "repository": "Transactions in GIS",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2013,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/murgoitio-et-al-2013-airborne-lidar-and-terrestrial-laser-scanning-derived-/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Anomalous trend in soil evaporation in semi-arid, snow-dominated watersheds",
+    "type": "paper",
+    "doi": "10.1016/j.advwatres.2013.03.004",
+    "url": "https://doi.org/10.1016/j.advwatres.2013.03.004",
+    "repository": "Advances in Water Resources, 57: 32-40",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2013,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/wang-et-al-2013-anomalous-trend-in-soil-evaporation-in-semi-arid-snow-domin/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Assessing the sensitivities of distributed snow models to forcing data resolution",
+    "type": "paper",
+    "doi": "10.1175/JHM-D-13-0169.1",
+    "url": "https://doi.org/10.1175/JHM-D-13-0169.1",
+    "repository": "Journal of Hydrometeorology, 15(4): 1366-1383",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2014,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/winstral-et-al-2014-assessing-the-sensitivities-of-distributed-snow-models-/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Assessment of the timing of daily peak streamflow in a snow dominated watershed",
+    "type": "paper",
+    "doi": "10.1175/JHM-D-15-0152.1",
+    "url": "https://doi.org/10.1175/JHM-D-15-0152.1",
+    "repository": "Journal of Hydrometeorology 17: 2225-2244",
+    "sites": [
+      "calhoun",
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2016,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/chen-et-al-2016-assessment-of-the-timing-of-daily-peak-streamflow-in-a-snow/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Bacterial composition of soils in ponderosa pine and mixed conifer forests exposed to different wildfire burn severity",
+    "type": "paper",
+    "doi": "10.1016/j.soilbio.2013.11.010",
+    "url": "https://doi.org/10.1016/j.soilbio.2013.11.010",
+    "repository": "Soil Biology and Biochemistry 69: 242-250",
+    "sites": [
+      "catalina-jemez",
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2014,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/catalina-jemez/publications/pub/weber-et-al-2014-bacterial-composition-of-soils-in-ponderosa-pine-and-mixed/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Bedrock infiltration estimates from a catchment in the mountain rain-snow transition zone.",
+    "type": "paper",
+    "doi": "10.1016/j.jhydrol.2015.03.032",
+    "url": "https://doi.org/10.1016/j.jhydrol.2015.03.032",
+    "repository": "Journal of Hydrology",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2015,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/kormos-et-al-2015-bedrock-infiltration-estimates-from-a-catchment-in-the-mo/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Block-controlled hillslope form and persistence of topography in rocky landscapes",
+    "type": "paper",
+    "doi": "10.1130/G38665.1",
+    "url": "https://doi.org/10.1130/G38665.1",
+    "repository": "Geology, First published on 2017-01-23 12:45:18, doi:10.1130/G38665.1",
+    "sites": [
+      "boulder",
+      "luquillo",
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2017,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/boulder/publications/pub/glade-et-al-1994-block-controlled-hillslope-form-and-persistence-of-topogra/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Characterizing western juniper expansion via a fusion of Landsat 5 Thematic Mapper and lidar data",
+    "type": "paper",
+    "doi": "10.2111/REM-D-09-00181.1",
+    "url": "https://doi.org/10.2111/REM-D-09-00181.1",
+    "repository": "Rangeland Ecology & Management, 63 (5): 514-523",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2010,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/sankey-et-al-2010-characterizing-western-juniper-expansion-via-a-fusion-of-/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Climate and landscape as drivers of carbon storage in forested headwater catchments: Insights from a complete C budget.",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/perdrial-et-al-2015-climate-and-landscape-as-drivers-of-carbon-storage-in-f/",
+    "repository": "Global Change Biology",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2015,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/perdrial-et-al-2015-climate-and-landscape-as-drivers-of-carbon-storage-in-f/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Climate moderates potential shifts in streamflow from changes in pinyon-juniper woodland cover across the western U.S",
+    "type": "paper",
+    "doi": "10.1002/hyp.11264",
+    "url": "https://doi.org/10.1002/hyp.11264",
+    "repository": "Hydrological Processes",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2017,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/niemeyer-et-al-2017-climate-moderates-potential-shifts-in-streamflow-from-c/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Climatic and Grazing Controls on Nitrogen Fixation by Biological Soil Crusts Utilizing a Climatic Gradient in a Semi-arid Ecosystem.",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/schwabedissen-2016-climatic-and-grazing-controls-on-nitrogen-fixation-by-bi/",
+    "repository": "Idaho State University",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2016,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/schwabedissen-2016-climatic-and-grazing-controls-on-nitrogen-fixation-by-bi/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Climatic and landscape influences on soil moisture are primary determinants of soil carbon fluxes in seasonally snow-covered forest ecosystems",
+    "type": "paper",
+    "doi": "10.1007/s10533-015-0078-3",
+    "url": "https://doi.org/10.1007/s10533-015-0078-3",
+    "repository": "Biogeochemistry 123(3): 447–465",
+    "sites": [
+      "boulder",
+      "catalina-jemez",
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2015,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/boulder/publications/pub/stielstra-et-al-2015-climatic-and-landscape-influences-on-soil-moisture-are/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Combining airborne LiDAR and hyperspectral data across local sites for upscaling shrubland structural information: lessons for HyspIRI.",
+    "type": "paper",
+    "doi": "10.1016/j.rse.2015.04.015",
+    "url": "https://doi.org/10.1016/j.rse.2015.04.015",
+    "repository": "Remote Sensing of Environment",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2015,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/mitchell-et-al-2015-combining-airborne-lidar-and-hyperspectral-data-across-/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Comparison of methods for estimating evapotranspiration in a small rangeland catchment.",
+    "type": "paper",
+    "doi": "10.2136/vzj2013.08.0152",
+    "url": "https://doi.org/10.2136/vzj2013.08.0152",
+    "repository": "Vadose Zone Journal. 13:4",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2014,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/flerchinger-seyfried-2014-comparison-of-methods-for-estimating-evapotranspi/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Constraining plant functional types in a semi-arid ecosystem with waveform lidar",
+    "type": "paper",
+    "doi": "10.1016/j.rse.2018.02.070",
+    "url": "https://doi.org/10.1016/j.rse.2018.02.070",
+    "repository": "Remote Sensing of Environment",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2018,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/ilangakoon-et-al-2018-constraining-plant-functional-types-in-a-semi-arid-ec/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Controls on ecohydrologic properties in desert ecosystems: Differences in soil age and volcanic morphology.",
+    "type": "paper",
+    "doi": "10.1016/j.geoderma.2016.01.030",
+    "url": "https://doi.org/10.1016/j.geoderma.2016.01.030",
+    "repository": "Geoderma",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2016,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/beal-et-al-2016-controls-on-ecohydrologic-properties-in-desert-ecosystems-d/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Controls on gross production in an aspen-sagebrush vegetation mosaic",
+    "type": "paper",
+    "doi": "10.1002/eco.2046",
+    "url": "https://doi.org/10.1002/eco.2046",
+    "repository": "Ecohydrology 12:e2046",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2019,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/fellows-et-al-2019-controls-on-gross-production-in-an-aspen-sagebrush-veget/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Controls on the Presence, Concentration, Storage, and Variability of Soil Inorganic Carbon in a Semi-arid Watershed.",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/stanbery-2016-controls-on-the-presence-concentration-storage-and-variabilit/",
+    "repository": "Boise State University",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2016,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/stanbery-2016-controls-on-the-presence-concentration-storage-and-variabilit/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Coupling of the simultaneous heat and water model with a distributed hydrological model and evaluation of the combined model in a cold region watershed.",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/zhang-et-al-2013-coupling-of-the-simultaneous-heat-and-water-model-with-a-d/",
+    "repository": "Hydrological Processes. 27:3762-3776",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2013,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/zhang-et-al-2013-coupling-of-the-simultaneous-heat-and-water-model-with-a-d/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Critical zone science informs landscape management through quantification of slow and often elusive (episodic) constraints on ecosystem services.",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/national/publications/pub/lohse-et-al-2018-critical-zone-science-informs-landscape-management-through/",
+    "repository": "Earth's Future Cross-CZO",
+    "sites": [
+      "national",
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2018,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/publications/pub/lohse-et-al-2018-critical-zone-science-informs-landscape-management-through/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Cross-CZO -- Flux Tower -- AmeriFlux Network data -- National -- (2007-2018)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/bdb8919935ec4f8a86f0151d884ef871/",
+    "hydroshare_id": "bdb8919935ec4f8a86f0151d884ef871",
+    "repository": "HydroShare",
+    "sites": [
+      "boulder",
+      "catalina-jemez",
+      "national",
+      "reynolds",
+      "shale-hills",
+      "sierra"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/6569/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Data paper: 31 Years of Spatially Distributed Air Temperature, Humidity, Precipitation Amount and Precipitation Phase From Reynolds Critical Zone Observatory",
+    "type": "paper",
+    "doi": "10.5194/essd-10-1197-2018",
+    "url": "https://doi.org/10.5194/essd-10-1197-2018",
+    "repository": "ESSD. 10, 1197-1205",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2018,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/kormos-et-al-2018-data-paper-31-years-of-spatially-distributed-air-temperat/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Developing and optimizing shrub parameters representing sagebrush (Artemisia spp.) ecosystems in the northern Great Basin using the Ecosystem Demography (EDv2.2) model",
+    "type": "paper",
+    "doi": "10.5194/gmd-12-4585-2019",
+    "url": "https://doi.org/10.5194/gmd-12-4585-2019",
+    "repository": "Geosci. Model Dev.",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2019,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/pandit-et-al-2019-developing-and-optimizing-shrub-parameters-representing-s/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Dynamic process connectivity explains ecohydrologic responses to rainfall pulses and drought",
+    "type": "paper",
+    "doi": "10.1073/pnas.1800236115",
+    "url": "https://doi.org/10.1073/pnas.1800236115",
+    "repository": "PNAS 115 (37) E8604-E8613",
+    "sites": [
+      "iml",
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2018,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/iml/publications/pub/goodwell-et-al-2018-dynamic-process-connectivity-explains-ecohydrologic-res/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Ecohydrologic Dynamics and Social Impacts of Western Juniper in Snow-Dominated Sagebrush Steppe",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/niemeyer-2015-ecohydrologic-dynamics-and-social-impacts-of-western-juniper-/",
+    "repository": "University of Idaho",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2015,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/niemeyer-2015-ecohydrologic-dynamics-and-social-impacts-of-western-juniper-/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Ecohydrologic response and recovery of a semi-arid shrubland over a five year period following burning.",
+    "type": "paper",
+    "doi": "10.1016/j.catena.2016.05.006",
+    "url": "https://doi.org/10.1016/j.catena.2016.05.006",
+    "repository": "Catena",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2016,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/williams-et-al-2016-ecohydrologic-response-and-recovery-of-a-semi-arid-shru/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Effectiveness of prescribed fire to re-establish sagebrush steppe vegetation and ecohydrologic function on woodland-encroached sagebrush rangelands, Great Basin, USA: Part I: Vegetation, hydrology, and erosion responses.",
+    "type": "paper",
+    "doi": "10.1016/j.catena.2018.02.027",
+    "url": "https://doi.org/10.1016/j.catena.2018.02.027",
+    "repository": "Catena",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2018,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/williams-et-al-2018-effectiveness-of-prescribed-fire-to-re-establish-sagebr/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Effects of long-term experimental manipulations of precipitation and vegetation on carbon and nitrogen dynamics in a cold desert ecosystem.",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/huber-2017-effects-of-long-term-experimental-manipulations-of-precipitation/",
+    "repository": "Idaho State University",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2017,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/huber-2017-effects-of-long-term-experimental-manipulations-of-precipitation/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Eleven years of mountain weather, snow, soil moisture and streamflow data from the rain–snow transition zone – the Johnston Draw catchment, Reynolds Creek Experimental Watershed and Critical Zone Observatory, USA",
+    "type": "paper",
+    "doi": "10.5194/essd-10-1207-2018",
+    "url": "https://doi.org/10.5194/essd-10-1207-2018",
+    "repository": "Earth Syst. Sci. Data, 10, 1207-1216",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2018,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/godsey-et-al-2018-eleven-years-of-mountain-weather-snow-soil-moisture-and-s/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Empirical methods for remote sensing of nitrogen in drylands may lead to unreliable interpretation of ecosystem function",
+    "type": "paper",
+    "doi": "10.1109/TGRS.2018.2889318",
+    "url": "https://doi.org/10.1109/TGRS.2018.2889318",
+    "repository": "IEEE Transactions on Geoscience and Remote Sensing",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2019,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/dashti-et-al-2019-empirical-methods-for-remote-sensing-of-nitrogen-in-dryla/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Errors in LiDAR-derived shrub height and crown area on sloped terrain",
+    "type": "paper",
+    "doi": "10.1016/j.jaridenv.2010.11.005",
+    "url": "https://doi.org/10.1016/j.jaridenv.2010.11.005",
+    "repository": "Journal of Arid Environments, 75 (4): 377-382",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2011,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/glenn-et-al-2011-errors-in-lidar-derived-shrub-height-and-crown-area-on-slo/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Evaluation of a two source snow-vegetation energy balance model for estimating surface energy fluxes in a rangeland ecosystem",
+    "type": "paper",
+    "doi": "10.1175/JHM-D-12-0153.1",
+    "url": "https://doi.org/10.1175/JHM-D-12-0153.1",
+    "repository": "Journal of Hydrometeorology, 15: 143-158",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2014,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/kongoli-et-al-2014-evaluation-of-a-two-source-snow-vegetation-energy-balanc/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Evaluation of SMAP freeze/thaw retrieval accuracy at core validation sites in the contiguous United States",
+    "type": "paper",
+    "doi": "10.3390/rs10091483",
+    "url": "https://doi.org/10.3390/rs10091483",
+    "repository": "Remote Sensing",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2018,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/kraatz-et-al-2018-evaluation-of-smap-freezethaw-retrieval-accuracy-at-core-/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Examining Interactions Between and Among Predictors of Net Ecosystem Exchange: A Machine Learning Approach in a Semi-arid Landscape",
+    "type": "paper",
+    "doi": "10.1038/s41598-019-38639-y",
+    "url": "https://doi.org/10.1038/s41598-019-38639-y",
+    "repository": "Scientific Reports 9:2222",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2019,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/zhou-et-al-2019-examining-interactions-between-and-among-predictors-of-net-/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Experimental Geomicrobiology: From Field to Laboratory.",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/magnuson-ledbetter-2016-experimental-geomicrobiology-from-field-to-laborato/",
+    "repository": "Manual of Environmental Microbiology (4th Ed.). American Society for Microbiology Press.",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2016,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/magnuson-ledbetter-2016-experimental-geomicrobiology-from-field-to-laborato/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Factors affecting efficacy of prescribed fire for western juniper control",
+    "type": "paper",
+    "doi": "10.1016/j.rama.2018.02.002",
+    "url": "https://doi.org/10.1016/j.rama.2018.02.002",
+    "repository": "Rangeland Ecology and Management",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2018,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/clark-et-al-2018-factors-affecting-efficacy-of-prescribed-fire-for-western-/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Fire, flood, and drought—Extreme climate events alter flow paths and stream chemistry",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/luquillo/publications/pub/murphy-et-al-2018-fire-flood-and-droughtextreme-climate-events-alter-flow-p/",
+    "repository": "Journal of Geophysical Research: Biogeosciences, 123",
+    "sites": [
+      "luquillo",
+      "reynolds",
+      "shale-hills"
+    ],
+    "era": "czo",
+    "year": 2018,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/luquillo/publications/pub/murphy-et-al-2018-fire-flood-and-droughtextreme-climate-events-alter-flow-p/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Form and function relationships revealed by long-term research in a semiarid mountain catchment",
+    "type": "paper",
+    "doi": "10.1002/wat2.1267",
+    "url": "https://doi.org/10.1002/wat2.1267",
+    "repository": "WIREs Water",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2017,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/mcnamara-et-al-2017-form-and-function-relationships-revealed-by-long-term-r/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Freezing and Thawing Processes.",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/flerchinger-et-al-2013-freezing-and-thawing-processes/",
+    "repository": "Reference Module in Earth Systems and Environmental Sciences. Elsevier.",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2013,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/flerchinger-et-al-2013-freezing-and-thawing-processes/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Geochemical evolution of the Critical Zone across variable time scales informs concentration-discharge relationships: Jemez River Basin Critical Zone Observatory",
+    "type": "paper",
+    "doi": "10.1002/2016WR019712",
+    "url": "https://doi.org/10.1002/2016WR019712",
+    "repository": "Water Resources Research 53(5): 4169–4196 Cross-CZO",
+    "sites": [
+      "boulder",
+      "catalina-jemez",
+      "luquillo",
+      "national",
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2017,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/publications/pub/mcintosh-geochemical-evolution-of-the-critical-zone-across-variable-time-sc/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Geomorphic influences on the distribution and accumulation of pyrogenic carbon (PyC) following a low severity wildfire in northern New Mexico.",
+    "type": "paper",
+    "doi": "10.1002/esp.4386",
+    "url": "https://doi.org/10.1002/esp.4386",
+    "repository": "Earth Surface Processes and Landforms 43: 2207–2218 Cross-CZO",
+    "sites": [
+      "national",
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2018,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/publications/pub/galanter-et-al-2018-geomorphic-influences-on-the-distribution-and-accumulat/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Hydrologic response and recovery to prescribed fire and vegetation removal in a small rangeland catchment.",
+    "type": "paper",
+    "doi": "10.1002/eco.1751",
+    "url": "https://doi.org/10.1002/eco.1751",
+    "repository": "Ecohydrology",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2016,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/flerchinger-et-al-2016-hydrologic-response-and-recovery-to-prescribed-fire-/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Hydrological partitioning in the critical zone: Recent advances and opportunities for developing transferable understanding of water cycle dynamics",
+    "type": "paper",
+    "doi": "10.1002/2015wr017039",
+    "url": "https://doi.org/10.1002/2015wr017039",
+    "repository": "American Geophysical Union (AGU)",
+    "awards": [
+      "nsf-1331408"
+    ],
+    "sites": [
+      "catalina-jemez",
+      "reynolds",
+      "sierra"
+    ],
+    "era": "czo",
+    "year": 2015,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/catalina-jemez/publications/pub/brooks-et-al-2015-hydrological-partitioning-in-the-critical-zone-recent-adv/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Ideas and perspectives: Strengthening the biogeosciences in environmental research networks",
+    "type": "paper",
+    "doi": "10.5194/bg-15-4815-2018",
+    "url": "https://doi.org/10.5194/bg-15-4815-2018",
+    "repository": "Biogeosciences 15: 4815-4832 Cross-CZO",
+    "sites": [
+      "boulder",
+      "calhoun",
+      "luquillo",
+      "national",
+      "reynolds",
+      "shale-hills",
+      "sierra"
+    ],
+    "era": "czo",
+    "year": 2018,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/boulder/publications/pub/richter-et-al-2018-ideas-and-perspectives-strengthening-the-biogeosciences-/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Improved visibility calculations with tree trunk obstruction modeling from aerial LiDAR",
+    "type": "paper",
+    "doi": "10.1080/13658816.2013.767460",
+    "url": "https://doi.org/10.1080/13658816.2013.767460",
+    "repository": "International Journal of Geographical Information Science, 27 (10): 1865-1883",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2013,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/murgoitio-et-al-2013-improved-visibility-calculations-with-tree-trunk-obstr/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Independent evaluation of the SNODAS snow depth product using regional-scale lidar-derived measurements.",
+    "type": "paper",
+    "doi": "10.5194/tc-9-13-2015",
+    "url": "https://doi.org/10.5194/tc-9-13-2015",
+    "repository": "The Cryosphere",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2016,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/hedrick-et-al-2016-independent-evaluation-of-the-snodas-snow-depth-product-/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Influences of Climate Change on Water Availability in Complex Terrain: Understanding Earth Processes and their Relation to Social Action",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/klos-2016-influences-of-climate-change-on-water-availability-in-complex-ter/",
+    "repository": "University of Idaho",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2016,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/klos-2016-influences-of-climate-change-on-water-availability-in-complex-ter/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Interaction of wind and cold‐season hydrologic processes on erosion from complex topography following wildfire in sagebrush steppe",
+    "type": "paper",
+    "doi": "10.1002/esp.4778",
+    "url": "https://doi.org/10.1002/esp.4778",
+    "repository": "Earth Surface Processes and Landforms",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2019,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/vega-et-al-2019-interaction-of-wind-and-coldseason-hydrologic-processes-on-/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Juniper encroachment impacts on catchment scale water availability in snow dominated sagebrush steppe systems.",
+    "type": "paper",
+    "doi": "10.1016/j.rama.2016.05.003",
+    "url": "https://doi.org/10.1016/j.rama.2016.05.003",
+    "repository": "Rangeland Ecology & Management",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2016,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/kormos-et-al-2016-juniper-encroachment-impacts-on-catchment-scale-water-ava/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Landsat-5 TM and LiDAR fusion for sub-pixel Juniper tree cover estimates in a western rangeland",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/sankey-glenn-2011-landsat-5-tm-and-lidar-fusion-for-sub-pixel-juniper-tree-/",
+    "repository": "Photogrammetric Engineering & Remote Sensing, 77 (12): 1241-1248",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2011,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/sankey-glenn-2011-landsat-5-tm-and-lidar-fusion-for-sub-pixel-juniper-tree-/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Leveraging environmental research and observation networks to advance soil carbon science",
+    "type": "paper",
+    "doi": "10.1029/2018JG004956",
+    "url": "https://doi.org/10.1029/2018JG004956",
+    "repository": "Journal of Geophysical Research: Biogeosciences",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2019,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/weintraub-et-al-2019-leveraging-environmental-research-and-observation-netw/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Lidar aboveground vegetation biomass estimates in shrublands: Prediction, uncertainties and application to coarser scales",
+    "type": "paper",
+    "doi": "10.3390/rs9090903",
+    "url": "https://doi.org/10.3390/rs9090903",
+    "repository": "Remote Sensing",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2017,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/li-et-al-2017-lidar-aboveground-vegetation-biomass-estimates-in-shrublands-/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "LiDAR-Based Classification of Sagebrush Community Types",
+    "type": "paper",
+    "doi": "10.2111/REM-D-10-00019.1",
+    "url": "https://doi.org/10.2111/REM-D-10-00019.1",
+    "repository": "Rangeland Ecology & Management, 64 (1): 92-98",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2011,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/sankey-bond-2011-lidar-based-classification-of-sagebrush-community-types/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Lidar-derived estimate and uncertainty of carbon sink in successional phases of woody encroachment",
+    "type": "paper",
+    "doi": "10.1002/jgrg.20088",
+    "url": "https://doi.org/10.1002/jgrg.20088",
+    "repository": "Journal of Geophysical Research: Biogeosciences, 118 (3): 1144-1155",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2013,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/sankey-et-al-2013-lidar-derived-estimate-and-uncertainty-of-carbon-sink-in-/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Lithology and coarse fraction adjusted bulk density estimates for determining total organic carbon stocks in dryland soils",
+    "type": "paper",
+    "doi": "10.1016/j.geoderma.2018.10.036",
+    "url": "https://doi.org/10.1016/j.geoderma.2018.10.036",
+    "repository": "Elsevier BV",
+    "awards": [
+      "nsf-1331872"
+    ],
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2019,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/patton-et-al-2019-lithology-and-coarse-fraction-adjusted-bulk-density-estim/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Long-term snow distribution observations in a mountain catchment: assessing variability, self-similarity and the representativeness of an index site",
+    "type": "paper",
+    "doi": "10.1002/2012WR013038",
+    "url": "https://doi.org/10.1002/2012WR013038",
+    "repository": "Water Resources Research, 50: 293–305",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2014,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/winstral-marks-2014-long-term-snow-distribution-observations-in-a-mountain-/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Mapping and understanding dry-season soil water drawdown by California montane vegetation",
+    "type": "paper",
+    "doi": "10.1002/eco.1772",
+    "url": "https://doi.org/10.1002/eco.1772",
+    "repository": "Ecohydrology",
+    "sites": [
+      "reynolds",
+      "sierra"
+    ],
+    "era": "czo",
+    "year": 2016,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/sierra/publications/pub/fellows-goulden-2016-mapping-and-understanding-dry-season-soil-water-drawdo/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Meteorological, snow, streamflow, topographic, and vegetation height data from four western juniper-dominated experimental catchments in southwestern Idaho, USA",
+    "type": "paper",
+    "doi": "10.5194/essd-9-91-2017",
+    "url": "https://doi.org/10.5194/essd-9-91-2017",
+    "repository": "Earth System Science Data",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2017,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/kormos-et-al-2017-meteorological-snow-streamflow-topographic-and-vegetation/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Modeling evapotranspiration and energy balance in a wheat-maize cropping system using the revised RZ-SHAW model.",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/fang-et-al-2014-modeling-evapotranspiration-and-energy-balance-in-a-wheat-m/",
+    "repository": "Agricultural and Forest Meteorology. 194:218–229",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2014,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/fang-et-al-2014-modeling-evapotranspiration-and-energy-balance-in-a-wheat-m/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Modeling phenological controls on carbon dynamics in dryland sagebrush ecosystems",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/renwick-et-al-2019-modeling-phenological-controls-on-carbon-dynamics-in-dry/",
+    "repository": "Agricultural and Forest Meterology Volume 274: 15, 85-94",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2019,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/renwick-et-al-2019-modeling-phenological-controls-on-carbon-dynamics-in-dry/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Modeling Temperature and Humidity Profiles withing Forest Canopies.",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/flerchinger-et-al-2015-modeling-temperature-and-humidity-profiles-withing-f/",
+    "repository": "Agricultural and Forest Meteorology",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2015,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/flerchinger-et-al-2015-modeling-temperature-and-humidity-profiles-withing-f/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Nitrogenase Activity by Biological Soil Crusts in Cold Sagebrush Steppe Ecosystems",
+    "type": "paper",
+    "doi": "10.1007/s10533-017-0342-9",
+    "url": "https://doi.org/10.1007/s10533-017-0342-9",
+    "repository": "Biogeochemistry 134 (1–2): 57–76",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2017,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/schwabedissen-et-al-2017-nitrogenase-activity-by-biological-soil-crusts-in-/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "On the rocks: Quantifying storage of inorganic soil carbon on gravels and determining pedon-scale variability",
+    "type": "paper",
+    "doi": "10.1016/j.catena.2017.06.011",
+    "url": "https://doi.org/10.1016/j.catena.2017.06.011",
+    "repository": "Elsevier BV",
+    "awards": [
+      "nsf-1331872"
+    ],
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2017,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/stanbery-et-al-2017-on-the-rocks-quantifying-storage-of-inorganic-soil-carb/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Postfire grazing management effects on mesic sagebrush-steppe vegetation: spring grazing.",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/clark-et-al-2016-postfire-grazing-management-effects-on-mesic-sagebrush-ste/",
+    "repository": "Journal of Arid Environments",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2016,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/clark-et-al-2016-postfire-grazing-management-effects-on-mesic-sagebrush-ste/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Predicting soil thickness on soil mantled hillslopes",
+    "type": "paper",
+    "doi": "10.1038/s41467-018-05743-y",
+    "url": "https://doi.org/10.1038/s41467-018-05743-y",
+    "repository": "Springer Science and Business Media LLC",
+    "awards": [
+      "nsf-1331872"
+    ],
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2018,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/patton-et-al-2018-predicting-soil-thickness-on-soil-mantled-hillslopes/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Process-Based Modeling of Temperature and Water Profiles in the Seedling Recruitment Zone: Part 1. Model Validation.",
+    "type": "paper",
+    "doi": "10.1016/j.agrformet.2013.11.012",
+    "url": "https://doi.org/10.1016/j.agrformet.2013.11.012",
+    "repository": "Agricultural & Forest Meterology. 188:89–103",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2014,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/bullied-et-al-2014-process-based-modeling-of-temperature-and-water-profiles/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Quantitative understating of daily streamflow peak timing and its seasonal variations in a snow dominated watershed",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/chen-et-al-2014-quantitative-understating-of-daily-streamflow-peak-timing-a/",
+    "repository": "Water Resources Research",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2014,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/chen-et-al-2014-quantitative-understating-of-daily-streamflow-peak-timing-a/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Rapid recovery of mesic mountain big sagebrush gross production and respiration following prescribed fire",
+    "type": "paper",
+    "doi": "10.1007/s10021-017-0218-9",
+    "url": "https://doi.org/10.1007/s10021-017-0218-9",
+    "repository": "Ecosystems",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2018,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/fellows-et-al-2018-rapid-recovery-of-mesic-mountain-big-sagebrush-gross-pro/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "RCCZO -- Air Temperature, Climate, Meteorology, Precipitation, Snow Depth, Soil Moisture, Streamflow / Discharge -- Weather data in the rain-snow transition zone -- Reynolds Creek Experimental Watershed -- (2004-2014)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/38ce01eaa877483095608d7df89f46f9/",
+    "hydroshare_id": "38ce01eaa877483095608d7df89f46f9",
+    "repository": "HydroShare",
+    "sites": [
+      "national",
+      "reynolds"
+    ],
+    "era": "czo",
+    "source": "discover",
+    "source_url": "https://www.hydroshare.org/resource/38ce01eaa877483095608d7df89f46f9",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "RCCZO -- Climate, GIS/Map Data -- 31 yrs of Temperature, Humidity, & Precipitation -- Reynolds Creek Experimental Watershed -- (1983-2014)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/f7adcd529a664c70b844c3b58dd672e9/",
+    "hydroshare_id": "f7adcd529a664c70b844c3b58dd672e9",
+    "repository": "HydroShare",
+    "sites": [
+      "national",
+      "reynolds"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/5292/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "RCCZO -- Digital Elevation Model (DEM), GIS/Map Data, LiDAR -- Reynolds Creek Experimental Watershed -- (2015-2015)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/a5097f6a7aca4d2fada2335ccf5bd64d/",
+    "hydroshare_id": "a5097f6a7aca4d2fada2335ccf5bd64d",
+    "repository": "HydroShare",
+    "sites": [
+      "national",
+      "reynolds"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/6625/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "RCCZO -- Digital Elevation Model (DEM), Land Cover, LiDAR -- Reynolds Creek Experimental Watershed -- (2007-2007)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/975e21f9e31b430eaae6173c39717058/",
+    "hydroshare_id": "975e21f9e31b430eaae6173c39717058",
+    "repository": "HydroShare",
+    "sites": [
+      "national",
+      "reynolds"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/3932/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "RCCZO -- Flux Tower, Meteorology, Ecosystem model, Nutrient Fluxes -- Data for Partitioned Carbon and Energy Fluxes -- Reynolds Creek Experimental Watershed -- (2014-Ongoing)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/88aeaff53f7948fcbe5029f6e0308b05/",
+    "hydroshare_id": "88aeaff53f7948fcbe5029f6e0308b05",
+    "repository": "HydroShare",
+    "sites": [
+      "national",
+      "reynolds"
+    ],
+    "era": "czo",
+    "source": "discover",
+    "source_url": "https://www.hydroshare.org/resource/88aeaff53f7948fcbe5029f6e0308b05",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "RCCZO -- Flux Tower, Nutrient Fluxes -- AmeriFlux US-Rls RCEW Low Sagebrush -- Reynolds Creek Experimental Watershed -- (2014-Ongoing)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/a77791b611304b26b40cb51325451a9d/",
+    "hydroshare_id": "a77791b611304b26b40cb51325451a9d",
+    "repository": "HydroShare",
+    "sites": [
+      "national",
+      "reynolds"
+    ],
+    "era": "czo",
+    "source": "discover",
+    "source_url": "https://www.hydroshare.org/resource/a77791b611304b26b40cb51325451a9d",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "RCCZO -- Flux Tower, Nutrient Fluxes -- AmeriFlux US-Rms RCEW Mountain Big Sagebrush -- Reynolds Creek Experimental Watershed -- (2014-Ongoing)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/a9612d56525f4c3893e992fc23a9e0a5/",
+    "hydroshare_id": "a9612d56525f4c3893e992fc23a9e0a5",
+    "repository": "HydroShare",
+    "sites": [
+      "national",
+      "reynolds"
+    ],
+    "era": "czo",
+    "source": "discover",
+    "source_url": "https://www.hydroshare.org/resource/a9612d56525f4c3893e992fc23a9e0a5",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "RCCZO -- Flux Tower, Nutrient Fluxes -- AmeriFlux US-Rws Reynolds Creek Wyoming big sage -- Reynolds Creek Experimental Watershed -- (2014-Ongoing)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/3dc047f40bd749258a1a22e4e29ee2b1/",
+    "hydroshare_id": "3dc047f40bd749258a1a22e4e29ee2b1",
+    "repository": "HydroShare",
+    "sites": [
+      "national",
+      "reynolds"
+    ],
+    "era": "czo",
+    "source": "discover",
+    "source_url": "https://www.hydroshare.org/resource/3dc047f40bd749258a1a22e4e29ee2b1",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "RCCZO -- Geology, Soil Biogeochemistry, Soil Texture -- Lithology, Coarse Fraction, Bulk Density & TOC -- Reynolds Creek Experimental Watershed -- (2014-2016)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/5be7528f1d764542af8fda037940c6b9/",
+    "hydroshare_id": "5be7528f1d764542af8fda037940c6b9",
+    "repository": "HydroShare",
+    "sites": [
+      "national",
+      "reynolds"
+    ],
+    "era": "czo",
+    "source": "discover",
+    "source_url": "https://www.hydroshare.org/resource/5be7528f1d764542af8fda037940c6b9",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "RCCZO -- Geomorphology, GIS / Map Data, Soil Biogeochemistry, Topographic Carbon Storage -- Topographic Controls of Soil Organic Carbon -- Reynolds Creek Experimental Watershed -- (2014-2017)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/517d98d852fd430b82b9879714d93f48/",
+    "hydroshare_id": "517d98d852fd430b82b9879714d93f48",
+    "repository": "HydroShare",
+    "sites": [
+      "national",
+      "reynolds"
+    ],
+    "era": "czo",
+    "source": "discover",
+    "source_url": "https://www.hydroshare.org/resource/517d98d852fd430b82b9879714d93f48",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "RCCZO -- Geomorphology, Soil Biogeochemistry -- Character of Aeolian Material in Reynolds Creek -- Reynolds Creek Experimental Watershed -- (2015-2018)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/7a07a777c8c34f5b9ad727a6875ce91a/",
+    "hydroshare_id": "7a07a777c8c34f5b9ad727a6875ce91a",
+    "repository": "HydroShare",
+    "sites": [
+      "national",
+      "reynolds"
+    ],
+    "era": "czo",
+    "source": "discover",
+    "source_url": "https://www.hydroshare.org/resource/7a07a777c8c34f5b9ad727a6875ce91a",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "RCCZO -- GIS / Map Data, LiDAR, Land Cover, Topographic Carbon Storage, Soil Biogeochemistry -- Near-surface soil organic carbon maps -- Reynolds Creek Experimental Watershed -- (2014-2017)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/2b024ba9fec34a5ea91a202bbc0a36dd/",
+    "hydroshare_id": "2b024ba9fec34a5ea91a202bbc0a36dd",
+    "repository": "HydroShare",
+    "sites": [
+      "national",
+      "reynolds"
+    ],
+    "era": "czo",
+    "source": "discover",
+    "source_url": "https://www.hydroshare.org/resource/2b024ba9fec34a5ea91a202bbc0a36dd",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "RCCZO -- GIS / Map Data, LiDAR, Land Cover, Vegetation -- Data for Vegetation Maps for RCEW -- Reynolds Creek Experimental Watershed -- (2015-2015)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/325556f92ee14bbb90a2b516b8ffcbaa/",
+    "hydroshare_id": "325556f92ee14bbb90a2b516b8ffcbaa",
+    "repository": "HydroShare",
+    "sites": [
+      "national",
+      "reynolds"
+    ],
+    "era": "czo",
+    "source": "discover",
+    "source_url": "https://www.hydroshare.org/resource/325556f92ee14bbb90a2b516b8ffcbaa",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "RCCZO -- GIS / Map Data, Regolith Survey, Geomorphology -- Predicting Soil Thickness -- Reynolds Creek Experimental Watershed -- (2014-2017)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/940903bdae5f4a7eb21e37708f2e8eb5/",
+    "hydroshare_id": "940903bdae5f4a7eb21e37708f2e8eb5",
+    "repository": "HydroShare",
+    "sites": [
+      "national",
+      "reynolds"
+    ],
+    "era": "czo",
+    "source": "discover",
+    "source_url": "https://www.hydroshare.org/resource/940903bdae5f4a7eb21e37708f2e8eb5",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "RCCZO -- Hydropedologic Properties, Soil Water, Soil Survey -- Reynolds Creek Experimental Watershed -- (2014-2018)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/5e40c198c2a447a3ae7bbae424b408ea/",
+    "hydroshare_id": "5e40c198c2a447a3ae7bbae424b408ea",
+    "repository": "HydroShare",
+    "sites": [
+      "national",
+      "reynolds"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/6675/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "RCCZO -- Land Cover, LiDAR, Vegetation -- Biomass Estimate of Sagebrush -- Reynolds Creek Experimental Watershed -- (2012-2012)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/ccb0c4cd1bfd46908da6806ca4a2acfa/",
+    "hydroshare_id": "ccb0c4cd1bfd46908da6806ca4a2acfa",
+    "repository": "HydroShare",
+    "sites": [
+      "national",
+      "reynolds"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/6273/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "RCCZO -- LiDAR, Digital Elevation Model (DEM) -- DEM -- Reynolds Creek Experimental Watershed -- (2014-2014)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/391d601761ee4b47a18a511f80df27e6/",
+    "hydroshare_id": "391d601761ee4b47a18a511f80df27e6",
+    "repository": "HydroShare",
+    "sites": [
+      "national",
+      "reynolds"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/5270/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "RCCZO -- LiDAR, Snow Depth -- Snow-Depth -- Reynolds Creek -- (2009-2009)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/5b08a09e098444aa8faaa99161244a8e/",
+    "hydroshare_id": "5b08a09e098444aa8faaa99161244a8e",
+    "repository": "HydroShare",
+    "sites": [
+      "national",
+      "reynolds"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/3931/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "RCCZO -- Meteorology -- Humidity, Radiation, Temp, Wind, Vapor Pressure -- Reynolds Creek Experimental Watershed -- (1981-Ongoing)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/280a73e3d6244a56b27de24375b4210a/",
+    "hydroshare_id": "280a73e3d6244a56b27de24375b4210a",
+    "repository": "HydroShare",
+    "sites": [
+      "national",
+      "reynolds"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/4703/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "RCCZO -- Precipitation -- Reynolds Creek Experimental Watershed -- (1962-Ongoing)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/701e2a6bdad942aca5b7014bb574dfe3/",
+    "hydroshare_id": "701e2a6bdad942aca5b7014bb574dfe3",
+    "repository": "HydroShare",
+    "sites": [
+      "national",
+      "reynolds"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/3731/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "RCCZO -- Sap Flow, Vegetation -- Sap flux among sagebrush communities -- Reynolds Creek Experimental Watershed -- (2015-2017)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/f673e61b1e5944c5822c5e612ff65b0c/",
+    "hydroshare_id": "f673e61b1e5944c5822c5e612ff65b0c",
+    "repository": "HydroShare",
+    "sites": [
+      "national",
+      "reynolds"
+    ],
+    "era": "czo",
+    "source": "discover",
+    "source_url": "https://www.hydroshare.org/resource/f673e61b1e5944c5822c5e612ff65b0c",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "RCCZO -- Soil Biogeochemistry -- Soil Properties of Reynolds Mountain East -- Reynolds Creek Experimental Watershed -- (2014-2017)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/ae0c50a9a9894d4eb6484e0b67a26648/",
+    "hydroshare_id": "ae0c50a9a9894d4eb6484e0b67a26648",
+    "repository": "HydroShare",
+    "sites": [
+      "national",
+      "reynolds"
+    ],
+    "era": "czo",
+    "source": "discover",
+    "source_url": "https://www.hydroshare.org/resource/ae0c50a9a9894d4eb6484e0b67a26648",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "RCCZO -- Soil Biogeochemistry, Vegetation, Precipitation -- Carbon Storage in Cold Desert Ecosystems -- Salmon Challis National Forest -- (2012-2012)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/f8788e3c661841a6a72ad7945ddbc16f/",
+    "hydroshare_id": "f8788e3c661841a6a72ad7945ddbc16f",
+    "repository": "HydroShare",
+    "sites": [
+      "national",
+      "reynolds"
+    ],
+    "era": "czo",
+    "source": "discover",
+    "source_url": "https://www.hydroshare.org/resource/f8788e3c661841a6a72ad7945ddbc16f",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "RCCZO -- Soil Geochemistry -- Sequestration of SIC and Potential Sources -- Salmon Challis National Forest -- (0000-0000)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/f438da675f6941f2a784c220142aaaef/",
+    "hydroshare_id": "f438da675f6941f2a784c220142aaaef",
+    "repository": "HydroShare",
+    "sites": [
+      "national",
+      "reynolds"
+    ],
+    "era": "czo",
+    "source": "discover",
+    "source_url": "https://www.hydroshare.org/resource/f438da675f6941f2a784c220142aaaef",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "RCCZO -- Soil Geochemistry, Soil Texture -- Soil Properties of Johnston Draw -- Reynolds Creek Experimental Watershed -- (2010-2015)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/4335ed769cb54172a9539ce698d64654/",
+    "hydroshare_id": "4335ed769cb54172a9539ce698d64654",
+    "repository": "HydroShare",
+    "sites": [
+      "national",
+      "reynolds"
+    ],
+    "era": "czo",
+    "source": "discover",
+    "source_url": "https://www.hydroshare.org/resource/4335ed769cb54172a9539ce698d64654",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "RCCZO -- Soil Moisture -- Reynolds Creek Experimental Watershed -- (1977-Ongoing)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/f7d5bc8a903a4b4aa01cc1db7cc2f40c/",
+    "hydroshare_id": "f7d5bc8a903a4b4aa01cc1db7cc2f40c",
+    "repository": "HydroShare",
+    "sites": [
+      "national",
+      "reynolds"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/3732/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "RCCZO -- Soil Survey -- Predicting Soil Thickness -- Reynolds Creek Experimental Watershed -- (2014-2016)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/6d3e785feb364ae79f88fa57432a7e92/",
+    "hydroshare_id": "6d3e785feb364ae79f88fa57432a7e92",
+    "repository": "HydroShare",
+    "sites": [
+      "national",
+      "reynolds"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/5714/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "RCCZO -- Soil Temperature -- Reynolds Creek Experimental Watershed -- (1977-Ongoing)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/b22305cd06eb4e37bdac1ec090daf7ef/",
+    "hydroshare_id": "b22305cd06eb4e37bdac1ec090daf7ef",
+    "repository": "HydroShare",
+    "sites": [
+      "national",
+      "reynolds"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/4148/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "RCCZO -- Soil Texture, Soil Biogeochemistry -- Soil Properties at the Reynolds Creek Experimental -- Reynolds Creek Experimental Watershed -- (2014-2017)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/77e913e986574380818b7c9d0d1c0211/",
+    "hydroshare_id": "77e913e986574380818b7c9d0d1c0211",
+    "repository": "HydroShare",
+    "sites": [
+      "national",
+      "reynolds"
+    ],
+    "era": "czo",
+    "source": "discover",
+    "source_url": "https://www.hydroshare.org/resource/77e913e986574380818b7c9d0d1c0211",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "RCCZO -- Streamflow / Discharge -- Reynolds Creek Experimental Watershed -- (1963-Ongoing)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/8ac13a1fd0fe4876b5ecd4dbf29236aa/",
+    "hydroshare_id": "8ac13a1fd0fe4876b5ecd4dbf29236aa",
+    "repository": "HydroShare",
+    "sites": [
+      "national",
+      "reynolds"
+    ],
+    "era": "czo",
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/4149/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "RCCZO -- Vegetation, Climate, Ecosystem model, Nutrient Fluxes -- Net ecosystem exchange and evapotranspiration data -- Reynolds Creek Experimental Watershed -- (2016-2016)",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/bf46fb125550487c84c1b73d3fdf397a/",
+    "hydroshare_id": "bf46fb125550487c84c1b73d3fdf397a",
+    "repository": "HydroShare",
+    "sites": [
+      "national",
+      "reynolds"
+    ],
+    "era": "czo",
+    "source": "discover",
+    "source_url": "https://www.hydroshare.org/resource/bf46fb125550487c84c1b73d3fdf397a",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Regional scale dryland vegetation classification with an integrated lidar-hyperspectral approach",
+    "type": "paper",
+    "doi": "10.3390/rs11182141",
+    "url": "https://doi.org/10.3390/rs11182141",
+    "repository": "Remote Sensing",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2019,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/dashti-et-al-2019-regional-scale-dryland-vegetation-classification-with-an-/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Regional sensitivities of seasonal snowpack to elevation, aspect, and vegetation cover in western N orth A merica",
+    "type": "paper",
+    "doi": "10.1002/2016wr019374",
+    "url": "https://doi.org/10.1002/2016wr019374",
+    "repository": "American Geophysical Union (AGU)",
+    "awards": [
+      "nsf-1331872",
+      "nsf-1445246"
+    ],
+    "sites": [
+      "boulder",
+      "catalina-jemez",
+      "national",
+      "reynolds",
+      "sierra"
+    ],
+    "era": "czo",
+    "year": 2017,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/national/publications/pub/tennant-et-al-2017-regional-sensitivities-of-seasonal-snowpack-to-elevation/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Relative Abundance of Nitrogen-Fixing Bacteria in Biological Soil Crusts in Sagebrush Steppe Ecosystems of the Intermountain West U.S.",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/schwabedissen-et-al-2018-relative-abundance-of-nitrogen-fixing-bacteria-in-/",
+    "repository": "FEMS Microbial Ecology",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2018,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/schwabedissen-et-al-2018-relative-abundance-of-nitrogen-fixing-bacteria-in-/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Response of three soil water sensors to variable solution electrical conductivity in different soils.",
+    "type": "paper",
+    "doi": "10.2136/vzj2013.09.0169",
+    "url": "https://doi.org/10.2136/vzj2013.09.0169",
+    "repository": "Vadose Zone Journal",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2014,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/kargas-et-al-2014-response-of-three-soil-water-sensors-to-variable-solution/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Reynolds Creek Critical Zone Observatory Annual Report 2015",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/lohse-2015-reynolds-creek-critical-zone-observatory-annual-report-2015/",
+    "repository": "Reynolds Creek CZO, University of Idaho",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2015,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/lohse-2015-reynolds-creek-critical-zone-observatory-annual-report-2015/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Reynolds Creek Critical Zone Observatory Annual Report 2016",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/lohse-2016-reynolds-creek-critical-zone-observatory-annual-report-2016/",
+    "repository": "Reynolds Creek CZO, University of Idaho",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2016,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/lohse-2016-reynolds-creek-critical-zone-observatory-annual-report-2016/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Reynolds Creek Critical Zone Observatory Annual Report 2017",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/lohse-2017-reynolds-creek-critical-zone-observatory-annual-report-2017/",
+    "repository": "Reynolds Creek CZO, University of Idaho",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2017,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/lohse-2017-reynolds-creek-critical-zone-observatory-annual-report-2017/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Reynolds Creek Critical Zone Observatory Annual Report 2018",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/lohse-et-al-2018-reynolds-creek-critical-zone-observatory-annual-report-201/",
+    "repository": "Reynolds Creek CZO, University of Idaho",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2018,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/lohse-et-al-2018-reynolds-creek-critical-zone-observatory-annual-report-201/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Reynolds Creek Experimental Watershed and Critical Zone Observatory",
+    "type": "paper",
+    "doi": "10.2136/vzj2018.07.0129",
+    "url": "https://doi.org/10.2136/vzj2018.07.0129",
+    "repository": "Vadoze Zone Journal 17:180129",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2018,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/seyfried-et-al-2018-reynolds-creek-experimental-watershed-and-critical-zone/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Riparian Vegetation of Ephermeral Streams.",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/stromberg-et-al-2017-riparian-vegetation-of-ephermeral-streams/",
+    "repository": "Journal of Arid Environments",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2017,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/stromberg-et-al-2017-riparian-vegetation-of-ephermeral-streams/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Sagebrush Steppe Shrub Height and Canopy Cover Estimation Using LiDAR and Landsat 5 TM Data",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/bond-2011-sagebrush-steppe-shrub-height-and-canopy-cover-estimation-using-l/",
+    "repository": "Idaho State University Graduate Thesis",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2011,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/bond-2011-sagebrush-steppe-shrub-height-and-canopy-cover-estimation-using-l/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Saprolite genesis in complex terrain: hydrologic, lithologic, biologic, and microclimatic controls on aspect asymmetry within the critical zone.",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/klos-et-al-2016-saprolite-genesis-in-complex-terrain-hydrologic-lithologic-/",
+    "repository": "Geomorphology",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2016,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/klos-et-al-2016-saprolite-genesis-in-complex-terrain-hydrologic-lithologic-/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Seasonal wetness, soil organic carbon, and fire influence soil hydrological properties and water repellency in a sagebrush‐steppe ecosystem",
+    "type": "paper",
+    "doi": "10.1029/2017WR021567",
+    "url": "https://doi.org/10.1029/2017WR021567",
+    "repository": "Water Resources Research",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2018,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/chandler-et-al-2018-seasonal-wetness-soil-organic-carbon-and-fire-influence/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Sensible Heat Balance Estimates of Transient Soil Ice Contents.",
+    "type": "paper",
+    "doi": "10.2136/vzj2015.10.0134",
+    "url": "https://doi.org/10.2136/vzj2015.10.0134",
+    "repository": "Vadose Zone Journal",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2016,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/kojima-et-al-2016-sensible-heat-balance-estimates-of-transient-soil-ice-con/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Sensitivity of model parameterizations for simulating latent heat flux over snow",
+    "type": "paper",
+    "doi": "10.1002/hyp.9619",
+    "url": "https://doi.org/10.1002/hyp.9619",
+    "repository": "Hydrological Processes, 28: 868-881",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2014,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/reba-et-al-2014-sensitivity-of-model-parameterizations-for-simulating-laten/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Simulated water budget in a forested watershed within Priest River Experimental Forest, northern Idaho, USA.",
+    "type": "paper",
+    "doi": "10.1002/hyp.10769",
+    "url": "https://doi.org/10.1002/hyp.10769",
+    "repository": "Hydrological Processes",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2016,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/wei-et-al-2016-simulated-water-budget-in-a-forested-watershed-within-priest/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Simulating maize production, water and surface energy balance, and canopy temperature under full and deficit irrigation.",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/qi-et-al-2016-simulating-maize-production-water-and-surface-energy-balance-/",
+    "repository": "Transactions of ASABE",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2016,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/qi-et-al-2016-simulating-maize-production-water-and-surface-energy-balance-/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Simulating the dependence of aspen (Populus tremuloides) on redistributed snow in a semi-arid watershed",
+    "type": "paper",
+    "doi": "10.1002/ecs2.2068",
+    "url": "https://doi.org/10.1002/ecs2.2068",
+    "repository": "Ecosphere",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2018,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/soderquist-et-al-2018-simulating-the-dependence-of-aspen-populus-tremuloide/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Simulation of long-term soil water dynamics at Reynolds Creek, Idaho: Implications for rangeland productivity.",
+    "type": "paper",
+    "doi": "10.1002/eco.1666",
+    "url": "https://doi.org/10.1002/eco.1666",
+    "repository": "Ecohydrology",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2016,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/seyfried-et-al-2016-simulation-of-long-term-soil-water-dynamics-at-reynolds/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Snowpack sensitivity to perturbed climate changes in alpine catchments.",
+    "type": "paper",
+    "doi": "10.1002/hyp.10587",
+    "url": "https://doi.org/10.1002/hyp.10587",
+    "repository": "Hydrological Processes",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2015,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/rasouli-et-al-2015-snowpack-sensitivity-to-perturbed-climate-changes-in-alp/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Soil Temperature Variability in Complex Terrain MeasuredUsing Fiber-Optic Distributed Temperature Sensing",
+    "type": "paper",
+    "doi": "10.2136/vzj2015.09.0128",
+    "url": "https://doi.org/10.2136/vzj2015.09.0128",
+    "repository": "Vadose Zone Journal 15 (6): vzj2015.09.0128",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2016,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/seyfried-et-al-2016-soil-temperature-variability-in-complex-terrain-measure/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Soil, snow, sub-surface storage data set from a mountain catchment in the rain–snow transition zone",
+    "type": "paper",
+    "doi": "10.5194/essd-6-165-2014",
+    "url": "https://doi.org/10.5194/essd-6-165-2014",
+    "repository": "Earth Systems Science Data, 6: 165-173",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2014,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/kormos-et-al-2014-soil-snow-sub-surface-storage-data-set-from-a-mountain-ca/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Spatial modeling for resources framework (SMRF): A modular framework for developing spatial forcing data for snow modeling in mountain basins",
+    "type": "paper",
+    "doi": "10.1016/j.cageo.2017.08.016",
+    "url": "https://doi.org/10.1016/j.cageo.2017.08.016",
+    "repository": "Computers and Geosciences",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2017,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/havens-et-al-2017-spatial-modeling-for-resources-framework-smrf-a-modular-f/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Spatiotemporal heterogeneity of water flowpaths controls dissolved organic carbon sourcing in a snow-dominated, headwater catchment",
+    "type": "paper",
+    "doi": "10.3389/fevo.2019.00046",
+    "url": "https://doi.org/10.3389/fevo.2019.00046",
+    "repository": "Frontiers in Ecology and Evolution 7, 46",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2019,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/radke-et-al-2019-spatiotemporal-heterogeneity-of-water-flowpaths-controls-d/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Spatiotemporal soil and saprolite moisture dynamics across a semi-arid woody plant gradient",
+    "type": "paper",
+    "doi": "10.1016/j.jhydrol.2016.11.005",
+    "url": "https://doi.org/10.1016/j.jhydrol.2016.11.005",
+    "repository": "Journal of Hydrology",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2017,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/niemeyer-et-al-2017-spatiotemporal-soil-and-saprolite-moisture-dynamics-acr/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Summer-time carbon and water fluxes in sagebrush ecosystems spanning rain-to-snow dominated precipitation regimes",
+    "type": "paper",
+    "doi": "10.1016/j.rama.2019.11.002",
+    "url": "https://doi.org/10.1016/j.rama.2019.11.002",
+    "repository": "Rangeland Ecology and Management",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2019,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/sharma-et-al-2019-summer-time-carbon-and-water-fluxes-in-sagebrush-ecosyste/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Surface water input from snowmelt and rain throughfall in western juniper: potential impacts of climate change as shifts in semi-arid vegetation.",
+    "type": "paper",
+    "doi": "10.1002/hyp.10845",
+    "url": "https://doi.org/10.1002/hyp.10845",
+    "repository": "Hydrological Processes",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2016,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/niemeyer-et-al-2016-surface-water-input-from-snowmelt-and-rain-throughfall-/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Temperature impacts on soil organic carbon decomposition across and environmental gradient in a semi-arid ecosystem.",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/delvinne-2016-temperature-impacts-on-soil-organic-carbon-decomposition-acro/",
+    "repository": "Boise State University",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2016,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/delvinne-2016-temperature-impacts-on-soil-organic-carbon-decomposition-acro/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Temporal Variability in Microclimatic Conditions for Grass Germination and Emergence in the Sagebrush Steppe.",
+    "type": "paper",
+    "doi": "10.1016/j.rama.2015.12.002",
+    "url": "https://doi.org/10.1016/j.rama.2015.12.002",
+    "repository": "Rangeland Ecology & Management",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2016,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/hardegree-et-al-2016-temporal-variability-in-microclimatic-conditions-for-g/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "The Airborne Snow Observatory: fusion of scanning lidar, imaging spectrometer, and physically-based modeling for mapping snow water equivalent and snow albedo.",
+    "type": "paper",
+    "doi": "10.1016/j.rse.2016.06.018",
+    "url": "https://doi.org/10.1016/j.rse.2016.06.018",
+    "repository": "Remote Sensing of Environment",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2016,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/painter-et-al-2016-the-airborne-snow-observatory-fusion-of-scanning-lidar-i/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "The cold rain-on-snow event of June 2013 in the Canadian Rockies -characteristics and diagnosis.",
+    "type": "paper",
+    "doi": "10.1002/hyp.10905",
+    "url": "https://doi.org/10.1002/hyp.10905",
+    "repository": "Hydrological Processes",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2016,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/pomeroy-et-al-2016-the-cold-rain-on-snow-event-of-june-2013-in-the-canadian/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "The Sensitivity of Mountain Snowpack to Warming.",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/tennant-2015-the-sensitivity-of-mountain-snowpack-to-warming/",
+    "repository": "Idaho State University",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2015,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/tennant-2015-the-sensitivity-of-mountain-snowpack-to-warming/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "The use of similarity concepts to represent sub-grid variability in hydrologic and land-surface models: Case study in a snowmelt dominated watershed",
+    "type": "paper",
+    "doi": "10.1175/JHM-D-13-038.1",
+    "url": "https://doi.org/10.1175/JHM-D-13-038.1",
+    "repository": "Journal of Hydrometeorology, early online release",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2014,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/newman-et-al-2014-the-use-of-similarity-concepts-to-represent-sub-grid-vari/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Threshold Dynamics in Soil Carbon Storage for Bioenergy Crops",
+    "type": "paper",
+    "doi": "10.1021/es5023762",
+    "url": "https://doi.org/10.1021/es5023762",
+    "repository": "Environmental Science & Technology",
+    "sites": [
+      "iml",
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2014,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/iml/publications/pub/woo-et-al-2014-threshold-dynamics-in-soil-carbon-storage-for-bioenergy-crop/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Topographic controls of soil organic carbon on soil-mantled landscapes",
+    "type": "paper",
+    "doi": "10.1038/s41598-019-42556-5",
+    "url": "https://doi.org/10.1038/s41598-019-42556-5",
+    "repository": "Springer Science and Business Media LLC",
+    "awards": [
+      "nsf-1331872"
+    ],
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2019,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/patton-et-al-2019-topographic-controls-on-soil-organic-carbon-on-soil-mantl/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Topographic Controls on Total Mobile Regolith and Total Soil Organic Carbon in Complex Terrain.",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/patton-2016-topographic-controls-on-total-mobile-regolith-and-total-soil-or/",
+    "repository": "Idaho State University",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2016,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/patton-2016-topographic-controls-on-total-mobile-regolith-and-total-soil-or/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Trends and sensitivities of low streamflow extremes to discharge timing and magnitude in Pacific Northwest mountain streams.",
+    "type": "paper",
+    "doi": "10.1002/2015WR018125",
+    "url": "https://doi.org/10.1002/2015WR018125",
+    "repository": "Water Resources Research",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2016,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/kormos-et-al-2016-trends-and-sensitivities-of-low-streamflow-extremes-to-di/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Understanding the effect of fire on vegetation composition and gross primary production in a semi-arid shrubland ecosystem using the Ecosystem Demography (EDv2.2) model",
+    "type": "paper",
+    "doi": "10.5194/bg-2019-510",
+    "url": "https://doi.org/10.5194/bg-2019-510",
+    "repository": "Biogeosciences Discuss.",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2020,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/pandit-et-al-2020-understanding-the-effect-of-fire-on-vegetation-compositio/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Understanding the rain-to-snow transition zone: modeling snowmelt and the spatial distribution of water resources in southwestern Idaho.",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/enslin-2016-understanding-the-rain-to-snow-transition-zone-modeling-snowmel/",
+    "repository": "Idaho State University",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2016,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/enslin-2016-understanding-the-rain-to-snow-transition-zone-modeling-snowmel/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Variable Groundwater Contributions Influence Nutrient Cycling in Montane Headwater Catchments",
+    "type": "paper",
+    "url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/harpold-et-al-2015-variable-groundwater-contributions-influence-nutrient-cy/",
+    "repository": "Water Resources Research",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2015,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/harpold-et-al-2015-variable-groundwater-contributions-influence-nutrient-cy/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Variation in Biological Soil Crust Bacterial Abundance and Diversity as a Function of Climate in Cold Steppe Ecosystems in the Intermountain West, USA",
+    "type": "paper",
+    "doi": "10.1007/s00248-017-0981-3",
+    "url": "https://doi.org/10.1007/s00248-017-0981-3",
+    "repository": "Microbial Ecology 74 (3): 691–700",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2017,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/blay-et-al-2017-variation-in-biological-soil-crust-bacterial-abundance-and-/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Vegetation and precipitation shifts interact to alter organic and inorganic carbon storage in desert soils.",
+    "type": "paper",
+    "doi": "10.1002/ecs2.2655",
+    "url": "https://doi.org/10.1002/ecs2.2655",
+    "repository": "Ecosphere 10( 3):e02655",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2019,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/huber-et-al-2019-vegetation-and-precipitation-shifts-interact-to-alter-orga/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Vegetation and slope effects on accuracy of a LiDAR-derived DEM in the sagebrush steppe",
+    "type": "paper",
+    "doi": "10.1080/01431161.2010.515267",
+    "url": "https://doi.org/10.1080/01431161.2010.515267",
+    "repository": "Remote Sensing Letters, 2 (4): 317-326",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2011,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/spaete-et-al-2011-vegetation-and-slope-effects-on-accuracy-of-a-lidar-deriv/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Water and carbon fluxes along an elevational gradient in a sagebrush ecosystem",
+    "type": "paper",
+    "doi": "10.1007/s10021-019-00400-x",
+    "url": "https://doi.org/10.1007/s10021-019-00400-x",
+    "repository": "Ecosystems",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2019,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/flerchinger-et-al-2019-water-and-carbon-fluxes-along-an-elevational-gradien/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Water flow modeling with dry bulk density optimization to determine hydraulic properties in mountain soils",
+    "type": "paper",
+    "doi": "10.2136/sssaj2017.06.0196",
+    "url": "https://doi.org/10.2136/sssaj2017.06.0196",
+    "repository": "Soil Science Society of America Journal",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2018,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/fullhart-et-al-2018-water-flow-modeling-with-dry-bulk-density-optimization-/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Water resources: Research network to track alpine water.",
+    "type": "paper",
+    "doi": "10.1038/521032c",
+    "url": "https://doi.org/10.1038/521032c",
+    "repository": "Nature Correspondence",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2015,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/pomeroy-et-al-2015-water-resources-research-network-to-track-alpine-water/",
+    "date_added": "2026-10-29"
+  },
+  {
+    "title": "Winter CO2 efflux from sagebrush shrublands distributed across the rain‐to‐snow transition zone",
+    "type": "paper",
+    "doi": "10.1029/2019JG005325",
+    "url": "https://doi.org/10.1029/2019JG005325",
+    "repository": "JGR Biogeosciences",
+    "sites": [
+      "reynolds"
+    ],
+    "era": "czo",
+    "year": 2020,
+    "source": "czo-archive",
+    "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/fellows-et-al-2020-winter-co2-efflux-from-sagebrush-shrublands-distributed-/",
     "date_added": "2026-10-29"
   }
 ]
