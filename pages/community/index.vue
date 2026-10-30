@@ -298,6 +298,8 @@ const waysin = [
           </p>
           <a href="https://criticalzone.org" target="_blank" rel="noopener"
             class="text-[13px] text-[#0F7A57] no-underline">Visit criticalzone.org ↗</a>
+          <NuxtLink to="/critical-zone-science"
+            class="block mt-[8px] text-[13px] text-[#0F7A57] no-underline">Find Critical Zone datasets and papers →</NuxtLink>
         </div>
 
         <div class="flex flex-col gap-[10px]">
