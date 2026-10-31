@@ -11,6 +11,10 @@
 //   IsCitedBy, IsReferencedBy                   cited-by             the paper cites the dataset
 //   IsDescribedBy                               described-by         the paper describes the dataset
 //
+// Which of those three are stored is a choice (--keep, default `supports,described-by`): on 31 October 2026 Jordan ruled that `supports`
+// should be included and `cited-by` should not (a paper citing a dataset does not make it the paper's data). The cited-by relations are
+// still read and counted, and not stored.
+//
 // Not kept, and counted: a dataset record that itself Cites/References the paper (the dataset names the paper as a source, which is
 // not data for the paper). IsSupplementedBy is stored as `supports` too, by Jordan's ruling of 31 October 2026: on the dataset's record it says the
 // paper supplements the dataset, so the direction is the reverse of IsSupplementTo, but the two are kept together as supporting links. Where one dataset
@@ -25,7 +29,7 @@
 //
 // Usage:
 //   node scripts/cz-links.mjs [--out agent/reports/<YYMMDD>_cz-links-proposal.json] [--cache .agent/links/cache] [--confirmed <csv>]
-//        [--delay 1000] [--limit N] [--date YYYY-MM-DD] [--refresh]
+//        [--delay 1000] [--limit N] [--keep supports,described-by] [--date YYYY-MM-DD] [--refresh]
 // Every network response is cached under --cache (named by a hash of the URL), so a second run makes no requests unless --refresh is
 // given. --delay ms (default 1000) before every network request; DataCite is a public API. --limit asks only the first N papers
 // (for a trial). No dependencies.
@@ -43,6 +47,7 @@ const CACHE = opt('cache', '.agent/links/cache')
 const CONFIRMED = opt('confirmed', '')
 const DELAY = Number(opt('delay', '1000'))
 const LIMIT = Number(opt('limit', '0'))
+const KEEP_RELATIONS = new Set(opt('keep', 'supports,described-by').split(',').map(x => x.trim()).filter(Boolean))
 const UA = 'CUAHSI-website-links (help@cuahsi.org)'
 const PRODUCTS = 'content/critical-zone/products.json'
 
@@ -94,6 +99,7 @@ const paperDois = new Set(papers.map(p => lc(p.doi)))
 const found = new Map()   // `${datasetDoi}|${paperDoi}` -> link
 const seenRelations = {}  // every DataCite relation seen between a record (of any type) and a paper, kept or not
 let pairsWithTwoRelations = 0, supplementedBy = 0
+const notStoredByChoice = {}   // supporting relations on dataset or software records that --keep leaves out, by relation
 let datasetNamesPaper = 0 // links where a dataset or software record itself Cites/References the paper: counted, not kept
 const datasetRecords = new Map()   // lowercase dataset doi -> metadata
 let withAnyRecord = 0
@@ -119,6 +125,7 @@ for (const [i, paper] of papers.entries()) {
         if (DATASET_NAMES_PAPER.has(r.relationType) && WANTED_TYPES[general]) datasetNamesPaper++
         if (r.relationType === 'IsSupplementedBy' && WANTED_TYPES[general]) supplementedBy++   // counted separately, stored as supports
         if (!KEEP[r.relationType]) continue
+        if (!KEEP_RELATIONS.has(KEEP[r.relationType])) { if (WANTED_TYPES[general]) notStoredByChoice[KEEP[r.relationType]] = (notStoredByChoice[KEEP[r.relationType]] ?? 0) + 1; continue }
         if (!WANTED_TYPES[general]) { seenRelations[`(kept relation on a ${general ?? 'untyped'} record, not a dataset or software: skipped)`] = (seenRelations[`(kept relation on a ${general ?? 'untyped'} record, not a dataset or software: skipped)`] ?? 0) + 1; continue }
         const key = `${dsDoi}|${lc(paper.doi)}`
         const have = found.get(key)
@@ -194,7 +201,7 @@ const out = {
   generated: today,
   script: 'scripts/cz-links.mjs',
   note: 'A proposal for review. Not content: nothing here is in content/. Links to add to products already in the list, and datasets found that are not in the list yet (candidate products for Jordan to review).',
-  options: { delay_ms: DELAY, limit: LIMIT || null, confirmed_file: CONFIRMED || null },
+  options: { delay_ms: DELAY, limit: LIMIT || null, keep: [...KEEP_RELATIONS], confirmed_file: CONFIRMED || null },
   requests: { network: stats.requests, cached: stats.cached, failed: stats.failed },
   counts: {
     papers_with_doi_in_list: papersInList,
@@ -211,6 +218,7 @@ const out = {
     datasets_not_in_the_list: candidates.size,
     datasets_not_in_the_list_by_repository: Object.fromEntries(Object.entries(byRepo).sort((a, b) => b[1] - a[1])),
     dataset_cites_paper_relations_seen_and_not_kept: notKept,
+    supporting_relations_seen_on_datasets_and_not_stored_by_choice: notStoredByChoice,
     dataset_is_supplemented_by_paper_relations_seen_and_stored_as_supports: supplementedBy,
     pairs_with_two_kept_relations_strongest_stored: pairsWithTwoRelations,
     papers_with_a_link_by_era: byOf(linkedPapers, p => p.era ?? '(none)'),
