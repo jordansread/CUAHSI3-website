@@ -1,0 +1,1 @@
+261031 | task/visual-baseline-cz-4 | start | Jordan said 'merged #187, start the next task'. The front page's count band reads 2,591 products after the 20 added datasets, so its baseline image is out of date; rewrites only the images a comparison shows differ from a build of main.
