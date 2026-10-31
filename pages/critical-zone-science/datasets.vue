@@ -25,6 +25,7 @@ useHead({
 
     <div class="mx-auto site-container max-w-site py-[48px]">
       <CzProductList :types="['dataset', 'software', 'model']" />
+      <CzSuggest />
     </div>
   </div>
 </template>
