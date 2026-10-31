@@ -1,7 +1,7 @@
 # Visual baseline
 
 Full-page screenshots of 30 routes at 390px and 1280px (60 images), taken from a build of `main` at
-`0fef3a6` (31 October 2026; the Critical Zone lists as one searchable table, the observatory and network pages, and the links to them, #164 to #175). The set before it was taken
+`743fe81` (31 October 2026; the highlights on the front page and the Highlight tag in the tables, #177 to #180). The set before it was taken at `0fef3a6` (the Critical Zone lists as one searchable table, the observatory and network pages, #164 to #175), the one before that
 at `e4750bb` (30 October 2026; the first datasets list, #159), the one before that at `6fb834c` (the Critical Zone Science page and the footer link, #156), the one before that at `b5fefd7` (8 October 2026), and the first at `2ae92b5`, before the Tailwind migration
 (roadmap task 4), which every later change had made out of date (52 of 52 failed, including `/contact`, whose own
 content had not changed: only the shared header and footer had). They are the reference that later pull requests are compared against.
