@@ -4,3 +4,4 @@
 261031 | task/cz-single-table | defect | The two main tables had no accessible name (the label prop was not passed on papers and datasets); caught: reviewer.
 261031 | task/cz-single-table | defect | The controls row appeared after load and pushed the page down about 70px; caught: reviewer (fixed with a reserved space, not measured).
 261031 | task/cz-single-table | defect | The choice was written to the address with history.replaceState, so the router's query and the address disagree after Back; caught: reviewer (changed to router.replace; Back tested once in a browser, see the PR).
+261031 | task/cz-single-table | pr | #173 opened: https://github.com/jordansread/CUAHSI3-website/pull/173
