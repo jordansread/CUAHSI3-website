@@ -5,3 +5,4 @@
 261031 | task/cz-about-page-2 | defect | The page made method claims Jordan had not confirmed ('checked and added in batches', 'first place it was found', 'Work kept elsewhere ... likely to be missing'); caught: reviewer (the first and third removed, the second reworded to the harvest's fixed source order, which I read in scripts/cz-harvest.mjs; the third goes to Jordan as a question).
 261031 | task/cz-about-page-2 | defect | A table and its scroll region both carried the same accessible name, and the region had no focus ring; caught: reviewer (name kept on the region, ring added; not tried with a screen reader).
 261031 | task/cz-about-page-2 | intervention | Jordan chose 'Finish the about page' as the next task, after I found another session's unfinished version in the main checkout.
+261031 | task/cz-about-page-2 | pr | #177 opened: https://github.com/jordansread/CUAHSI3-website/pull/177
