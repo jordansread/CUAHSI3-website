@@ -25,6 +25,7 @@ useHead({
 
     <div class="mx-auto site-container max-w-site py-[48px]">
       <CzProductList type="paper" />
+      <CzSuggest />
     </div>
   </div>
 </template>

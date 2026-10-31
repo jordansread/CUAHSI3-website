@@ -59,6 +59,8 @@ const clusters = [
         </p>
         <CzProductList :site="c.slug" :id-prefix="c.slug" compact />
       </section>
+
+      <CzSuggest />
     </div>
   </div>
 </template>
