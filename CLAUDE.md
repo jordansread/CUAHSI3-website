@@ -245,7 +245,7 @@ C16. **A job names its member institution only when it is sure.** `member_instit
 
 ## Known footguns
 
-Every one of these cost real debugging time. Most failed silently; the third is unverified (see below), the eleventh printed a warning but left the tree dirty, the thirteenth hydrated with stale tag colours, and the fourteenth crashed one page with a green build.
+Every one of these cost real debugging time. Most failed silently; the third is unverified (see below), the eleventh printed a warning but left the tree dirty, the thirteenth hydrated with stale tag colours, the fourteenth crashed one page with a green build, and the fifteenth ignored the address on a page that otherwise loaded.
 
 1. **`queryContent('news')` also returns `/newsletter/` content.** Nuxt Content matches
    by path prefix, and `/newsletter/2026-06` starts with `/news`. This put newsletter
@@ -322,6 +322,14 @@ Every one of these cost real debugging time. Most failed silently; the third is 
     `verify.sh --build` and the link check were green; the job board came out as an 800px-high blank in the visual comparison, and only
     that showed it. Put a `watch()` after the declarations it depends on (the end of `<script setup>` is safe), and run
     `npm run visual:compare` after any change to a page's script.
+15. **`window.location.search` is empty in `onMounted` on a statically generated page, though the address bar has a query.** Seen in
+    the 31 October built site (Nuxt 3, served with `npx serve`): a list that read `?site=luquillo` from `window.location.search` in
+    `onMounted` saw an empty string, ignored the address, and the build, the link check and the first page load were all fine. The
+    router has the query: read it with `useRoute().query` inside `onMounted` (not in `setup`, where the server's empty query would make
+    the first browser render differ from the built page; footgun 13). Found by loading a link with a query in the browser. Seen only
+    with `npx serve`; the cause (my reading: the router rewrites the address after hydration) was not isolated, and it was not tried on
+    Netlify. Write the choice back with `router.replace({ query })`, not `history.replaceState`, so the router and the address agree on
+    Back. No `verify.sh` check: only a browser shows it.
 
 ## Layout: never put `grid-template-columns` in a `style` attribute
 

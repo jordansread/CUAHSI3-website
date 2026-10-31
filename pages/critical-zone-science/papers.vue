@@ -1,7 +1,7 @@
 <script setup lang="ts">
 useHead({
   title: 'Papers · Critical Zone Science',
-  meta: [{ name: 'description', content: 'The full list of known Critical Zone papers, grouped by era, award and observatory, each linked to where it lives.' }]
+  meta: [{ name: 'description', content: 'The full list of known Critical Zone papers, searchable and sortable, each linked to where it lives.' }]
 })
 </script>
 
@@ -17,14 +17,14 @@ useHead({
       </template>
       <template #kicker>Critical Zone Science</template>
       <template #title>Every known Critical Zone paper</template>
-      <template #lead>Publications from the Critical Zone Observatories and the Critical Zone Collaborative Network (journal articles, books, reports and theses), grouped by era, then award, then observatory or cluster. Each title links to where it lives: its DOI, or the CZO archive page where it has none.</template>
+      <template #lead>Publications from the Critical Zone Observatories and the Critical Zone Collaborative Network (journal articles, books, reports and theses). Search it, filter it by observatory or cluster, or click a column heading to sort. Each title links to where it lives: its DOI, or the CZO archive page where it has none.</template>
       <p class="font-['Hanken_Grotesk'] font-normal text-[14px] leading-[normal] text-muted m-[22px_0_0]">Also here:
         <NuxtLink to="/critical-zone-science/datasets" class="text-water font-medium">Datasets</NuxtLink>
       </p>
     </PageHero>
 
     <div class="mx-auto site-container max-w-site py-[48px]">
-      <CzProductList type="paper" />
+      <CzProductList type="paper" label="Critical Zone papers" />
       <CzSuggest />
     </div>
   </div>
