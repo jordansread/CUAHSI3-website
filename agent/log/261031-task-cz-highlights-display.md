@@ -2,3 +2,4 @@
 261031 | task/cz-highlights-display | defect | The section's intro said 'the two most cited per year' (read as per calendar year), left out the weight of 100, the three-year minimum and the count of datasets that could be scored, and did not say a cluster paper is placed by its award; caught: reviewer (reworded).
 261031 | task/cz-highlights-display | defect | The 'Highlights' heading sat outside the component's v-if, so an empty query would have left a heading with nothing under it; caught: reviewer (heading moved inside).
 261031 | task/cz-highlights-display | defect | The Highlight tag was 10px clay on a light tint (about 3.7:1 by my arithmetic, not measured with a tool) and read as part of the title to a screen reader; caught: reviewer (darker text, a hidden separator before it).
+261031 | task/cz-highlights-display | pr | #180 opened: https://github.com/jordansread/CUAHSI3-website/pull/180
