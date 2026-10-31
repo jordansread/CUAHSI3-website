@@ -38880,5 +38880,380 @@
     "source": "czo-archive",
     "source_url": "https://czo-archive.criticalzone.org/shale-hills/publications/pub/iavorivska-et-al-2017-wet-atmospheric-deposition-of-organic-carbon-an-under/",
     "date_added": "2026-10-29"
+  },
+  {
+    "title": "Seismic and Resistivity Data for Boulder Creek CZO, Colorado, Calhoun, CZO, South Carolina, and Pond Branch, Maryland; Geophysical imaging reveals topographic stress control of bedrock weathering",
+    "type": "dataset",
+    "doi": "10.15786/m2rp4q",
+    "url": "https://dataverse.arcc.uwyo.edu/citation?persistentId=doi:10.15786/M2RP4Q",
+    "repository": "Wyoming Data Repository",
+    "year": 2015,
+    "source": "datacite",
+    "source_url": "https://doi.org/10.15786/m2rp4q",
+    "date_added": "2026-10-31",
+    "related": [
+      {
+        "relation": "supports",
+        "doi": "10.1126/science.aab2210",
+        "source": "datacite"
+      }
+    ]
+  },
+  {
+    "title": "The Reynolds Creek Long-Term Dataset: A long-term meteorological dataset derived from station observations in the Reynolds Creek Experimental Watershed",
+    "type": "dataset",
+    "doi": "10.15482/usda.adc/30199954",
+    "url": "https://agdatacommons.nal.usda.gov/articles/dataset/The_Reynolds_Creek_Long-Term_Dataset_A_long-term_meteorological_dataset_derived_from_station_observations_in_the_Reynolds_Creek_Experimental_Watershed/30199954",
+    "repository": "Ag Data Commons",
+    "year": 2026,
+    "source": "datacite",
+    "source_url": "https://doi.org/10.15482/usda.adc/30199954",
+    "date_added": "2026-10-31",
+    "related": [
+      {
+        "relation": "described-by",
+        "doi": "10.5194/essd-10-1197-2018",
+        "source": "datacite"
+      },
+      {
+        "relation": "described-by",
+        "doi": "10.5194/essd-10-1207-2018",
+        "source": "datacite"
+      },
+      {
+        "relation": "described-by",
+        "doi": "10.1016/j.cageo.2017.08.016",
+        "source": "datacite"
+      }
+    ]
+  },
+  {
+    "title": "Soil, snow, weather, and sub-surface storage data from a mountain catchment in the rain-snow transition zone",
+    "type": "dataset",
+    "doi": "10.1594/pangaea.819837",
+    "url": "https://doi.pangaea.de/10.1594/PANGAEA.819837",
+    "repository": "PANGAEA",
+    "year": 2013,
+    "source": "datacite",
+    "source_url": "https://doi.org/10.1594/pangaea.819837",
+    "date_added": "2026-10-31",
+    "related": [
+      {
+        "relation": "supports",
+        "doi": "10.5194/essd-6-165-2014",
+        "source": "datacite"
+      }
+    ]
+  },
+  {
+    "title": "Data from: Spatial and temporal features of snow water equivalent across a headwater catchment in the Sierra Nevada",
+    "type": "dataset",
+    "doi": "10.15482/usda.adc/29403614",
+    "url": "https://agdatacommons.nal.usda.gov/articles/dataset/Data_from_Spatial_and_temporal_features_of_snow_water_equivalent_across_a_headwater_catchment_in_the_Sierra_Nevada/29403614",
+    "repository": "Ag Data Commons",
+    "year": 2025,
+    "source": "datacite",
+    "source_url": "https://doi.org/10.15482/usda.adc/29403614",
+    "date_added": "2026-10-31",
+    "related": [
+      {
+        "relation": "described-by",
+        "doi": "10.1016/j.cageo.2017.08.016",
+        "source": "datacite"
+      },
+      {
+        "relation": "described-by",
+        "doi": "10.1016/j.rse.2016.06.018",
+        "source": "datacite"
+      }
+    ]
+  },
+  {
+    "title": "Spatial Modeling for Resources Framework (SMRF)",
+    "type": "software",
+    "doi": "10.5281/zenodo.1120424",
+    "url": "https://zenodo.org/record/1120424",
+    "repository": "Zenodo",
+    "year": 2019,
+    "source": "datacite",
+    "source_url": "https://doi.org/10.5281/zenodo.1120424",
+    "date_added": "2026-10-31",
+    "related": [
+      {
+        "relation": "supports",
+        "doi": "10.1016/j.cageo.2017.08.016",
+        "source": "datacite"
+      }
+    ]
+  },
+  {
+    "title": "Data for: An analysis of conservation practice adoption studies in agricultural human-natural systems",
+    "type": "dataset",
+    "doi": "10.17632/nmmx94whmm.1",
+    "url": "https://data.mendeley.com/datasets/nmmx94whmm/1",
+    "repository": "Mendeley Data",
+    "year": 2019,
+    "source": "datacite",
+    "source_url": "https://doi.org/10.17632/nmmx94whmm.1",
+    "date_added": "2026-10-31",
+    "related": [
+      {
+        "relation": "supports",
+        "doi": "10.1016/j.jenvman.2019.02.009",
+        "source": "datacite"
+      }
+    ]
+  },
+  {
+    "title": "Appendix D. Additional figures illustrating relationships between enzymes and soil characteristics.",
+    "type": "dataset",
+    "doi": "10.6084/m9.figshare.3560601",
+    "url": "https://wiley.figshare.com/articles/dataset/Appendix_D_Additional_figures_illustrating_relationships_between_enzymes_and_soil_characteristics_/3560601",
+    "repository": "figshare Academic Research System",
+    "year": 2016,
+    "source": "datacite",
+    "source_url": "https://doi.org/10.6084/m9.figshare.3560601",
+    "date_added": "2026-10-31",
+    "related": [
+      {
+        "relation": "supports",
+        "doi": "10.1890/13-2151.1",
+        "source": "datacite"
+      }
+    ]
+  },
+  {
+    "title": "Appendix C. Additional statistical analyses assessing relationships between enzymes, sites, and soil characteristics.",
+    "type": "dataset",
+    "doi": "10.6084/m9.figshare.3560604",
+    "url": "https://wiley.figshare.com/articles/dataset/Appendix_C_Additional_statistical_analyses_assessing_relationships_between_enzymes_sites_and_soil_characteristics_/3560604",
+    "repository": "figshare Academic Research System",
+    "year": 2016,
+    "source": "datacite",
+    "source_url": "https://doi.org/10.6084/m9.figshare.3560604",
+    "date_added": "2026-10-31",
+    "related": [
+      {
+        "relation": "supports",
+        "doi": "10.1890/13-2151.1",
+        "source": "datacite"
+      }
+    ]
+  },
+  {
+    "title": "Appendix B. Additional soil biogeochemical data.",
+    "type": "dataset",
+    "doi": "10.6084/m9.figshare.3560607",
+    "url": "https://wiley.figshare.com/articles/dataset/Appendix_B_Additional_soil_biogeochemical_data_/3560607",
+    "repository": "figshare Academic Research System",
+    "year": 2016,
+    "source": "datacite",
+    "source_url": "https://doi.org/10.6084/m9.figshare.3560607",
+    "date_added": "2026-10-31",
+    "related": [
+      {
+        "relation": "supports",
+        "doi": "10.1890/13-2151.1",
+        "source": "datacite"
+      }
+    ]
+  },
+  {
+    "title": "Appendix A. Study site and soil analysis methods.",
+    "type": "dataset",
+    "doi": "10.6084/m9.figshare.3560610",
+    "url": "https://wiley.figshare.com/articles/dataset/Appendix_A_Study_site_and_soil_analysis_methods_/3560610",
+    "repository": "figshare Academic Research System",
+    "year": 2016,
+    "source": "datacite",
+    "source_url": "https://doi.org/10.6084/m9.figshare.3560610",
+    "date_added": "2026-10-31",
+    "related": [
+      {
+        "relation": "supports",
+        "doi": "10.1890/13-2151.1",
+        "source": "datacite"
+      }
+    ]
+  },
+  {
+    "title": "Supplement 1. R scripts for conducting the analyses described in the article.",
+    "type": "dataset",
+    "doi": "10.6084/m9.figshare.3564567",
+    "url": "https://wiley.figshare.com/articles/dataset/Supplement_1_R_scripts_for_conducting_the_analyses_described_in_the_article_/3564567",
+    "repository": "figshare Academic Research System",
+    "year": 2016,
+    "source": "datacite",
+    "source_url": "https://doi.org/10.6084/m9.figshare.3564567",
+    "date_added": "2026-10-31",
+    "related": [
+      {
+        "relation": "supports",
+        "doi": "10.1890/ES14-00517.1",
+        "source": "datacite"
+      }
+    ]
+  },
+  {
+    "title": "Additional file 2: of Transient O2 pulses direct Fe crystallinity and Fe(III)-reducer gene expression within a soil microbiome",
+    "type": "dataset",
+    "doi": "10.6084/m9.figshare.7245569",
+    "url": "https://springernature.figshare.com/articles/Additional_file_2_of_Transient_O2_pulses_direct_Fe_crystallinity_and_Fe_III_-reducer_gene_expression_within_a_soil_microbiome/7245569",
+    "repository": "figshare Academic Research System",
+    "year": 2018,
+    "source": "datacite",
+    "source_url": "https://doi.org/10.6084/m9.figshare.7245569",
+    "date_added": "2026-10-31",
+    "related": [
+      {
+        "relation": "supports",
+        "doi": "10.1186/s40168-018-0574-5",
+        "source": "datacite"
+      }
+    ]
+  },
+  {
+    "title": "Additional file 3: of Transient O2 pulses direct Fe crystallinity and Fe(III)-reducer gene expression within a soil microbiome",
+    "type": "dataset",
+    "doi": "10.6084/m9.figshare.7245587",
+    "url": "https://springernature.figshare.com/articles/Additional_file_3_of_Transient_O2_pulses_direct_Fe_crystallinity_and_Fe_III_-reducer_gene_expression_within_a_soil_microbiome/7245587",
+    "repository": "figshare Academic Research System",
+    "year": 2018,
+    "source": "datacite",
+    "source_url": "https://doi.org/10.6084/m9.figshare.7245587",
+    "date_added": "2026-10-31",
+    "related": [
+      {
+        "relation": "supports",
+        "doi": "10.1186/s40168-018-0574-5",
+        "source": "datacite"
+      }
+    ]
+  },
+  {
+    "title": "Additional file 4: of Transient O2 pulses direct Fe crystallinity and Fe(III)-reducer gene expression within a soil microbiome",
+    "type": "dataset",
+    "doi": "10.6084/m9.figshare.7245611",
+    "url": "https://springernature.figshare.com/articles/Additional_file_4_of_Transient_O2_pulses_direct_Fe_crystallinity_and_Fe_III_-reducer_gene_expression_within_a_soil_microbiome/7245611",
+    "repository": "figshare Academic Research System",
+    "year": 2018,
+    "source": "datacite",
+    "source_url": "https://doi.org/10.6084/m9.figshare.7245611",
+    "date_added": "2026-10-31",
+    "related": [
+      {
+        "relation": "supports",
+        "doi": "10.1186/s40168-018-0574-5",
+        "source": "datacite"
+      }
+    ]
+  },
+  {
+    "title": "Additional file 5: of Transient O2 pulses direct Fe crystallinity and Fe(III)-reducer gene expression within a soil microbiome",
+    "type": "dataset",
+    "doi": "10.6084/m9.figshare.7245626",
+    "url": "https://springernature.figshare.com/articles/Additional_file_5_of_Transient_O2_pulses_direct_Fe_crystallinity_and_Fe_III_-reducer_gene_expression_within_a_soil_microbiome/7245626",
+    "repository": "figshare Academic Research System",
+    "year": 2018,
+    "source": "datacite",
+    "source_url": "https://doi.org/10.6084/m9.figshare.7245626",
+    "date_added": "2026-10-31",
+    "related": [
+      {
+        "relation": "supports",
+        "doi": "10.1186/s40168-018-0574-5",
+        "source": "datacite"
+      }
+    ]
+  },
+  {
+    "title": "Additional file 6: of Transient O2 pulses direct Fe crystallinity and Fe(III)-reducer gene expression within a soil microbiome",
+    "type": "dataset",
+    "doi": "10.6084/m9.figshare.7245641",
+    "url": "https://springernature.figshare.com/articles/Additional_file_6_of_Transient_O2_pulses_direct_Fe_crystallinity_and_Fe_III_-reducer_gene_expression_within_a_soil_microbiome/7245641",
+    "repository": "figshare Academic Research System",
+    "year": 2018,
+    "source": "datacite",
+    "source_url": "https://doi.org/10.6084/m9.figshare.7245641",
+    "date_added": "2026-10-31",
+    "related": [
+      {
+        "relation": "supports",
+        "doi": "10.1186/s40168-018-0574-5",
+        "source": "datacite"
+      }
+    ]
+  },
+  {
+    "title": "Additional file 7: of Transient O2 pulses direct Fe crystallinity and Fe(III)-reducer gene expression within a soil microbiome",
+    "type": "dataset",
+    "doi": "10.6084/m9.figshare.7245656",
+    "url": "https://springernature.figshare.com/articles/Additional_file_7_of_Transient_O2_pulses_direct_Fe_crystallinity_and_Fe_III_-reducer_gene_expression_within_a_soil_microbiome/7245656",
+    "repository": "figshare Academic Research System",
+    "year": 2018,
+    "source": "datacite",
+    "source_url": "https://doi.org/10.6084/m9.figshare.7245656",
+    "date_added": "2026-10-31",
+    "related": [
+      {
+        "relation": "supports",
+        "doi": "10.1186/s40168-018-0574-5",
+        "source": "datacite"
+      }
+    ]
+  },
+  {
+    "title": "Supplement 1. Data files used in the main text.",
+    "type": "dataset",
+    "doi": "10.6084/m9.figshare.3563991",
+    "url": "https://wiley.figshare.com/articles/dataset/Supplement_1_Data_files_used_in_the_main_text_/3563991",
+    "repository": "figshare Academic Research System",
+    "year": 2016,
+    "source": "datacite",
+    "source_url": "https://doi.org/10.6084/m9.figshare.3563991",
+    "date_added": "2026-10-31",
+    "related": [
+      {
+        "relation": "supports",
+        "doi": "10.1890/ES14-00384.1",
+        "source": "datacite"
+      }
+    ]
+  },
+  {
+    "title": "Supplementary dataset for: Quantifying nutrient uptake as driver of rock weathering in forest ecosystems by magnesium stable isotopes",
+    "type": "dataset",
+    "doi": "10.5880/gfz.3.3.2017.001",
+    "url": "https://dataservices.gfz.de/10.5880/gfz.3.3.2017.001/supplementary-dataset-for-quantifying-nutrient",
+    "repository": "GFZ Data Services",
+    "year": 2017,
+    "source": "datacite",
+    "source_url": "https://doi.org/10.5880/gfz.3.3.2017.001",
+    "date_added": "2026-10-31",
+    "related": [
+      {
+        "relation": "supports",
+        "doi": "10.5194/bg-14-3111-2017",
+        "source": "datacite"
+      }
+    ]
+  },
+  {
+    "title": "VLM and Horizontal velocity Data for US Atlantic coast",
+    "type": "dataset",
+    "doi": "10.7294/19350959",
+    "url": "https://data.lib.vt.edu/articles/dataset/VLM_Data_for_US_Atlantic_coast/19350959",
+    "repository": "Virginia Tech Data Repository",
+    "year": 2026,
+    "source": "datacite",
+    "source_url": "https://doi.org/10.7294/19350959",
+    "date_added": "2026-10-31",
+    "related": [
+      {
+        "relation": "supports",
+        "doi": "10.1038/s41467-023-37853-7",
+        "source": "datacite"
+      }
+    ]
   }
 ]
