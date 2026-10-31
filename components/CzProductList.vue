@@ -23,7 +23,7 @@ type Row = {
   sites?: string[]; year?: number; date_added?: string
 }
 type Award = { id: string; funder?: string; number: string; url?: string; text: string }
-type Shown = Row & { i: number; where: string; siteText: string; awardList: { title: string; number: string }[]; hay: string }
+type Shown = Row & { i: number; where: string; siteText: string; period: string; periodStart: number; awardList: { title: string; number: string }[]; hay: string }
 
 const { data: file } = await useAsyncData(`cz-products-${props.type ?? props.types?.join('+') ?? 'all'}-${props.site ?? 'all'}`, () =>
   queryContent('critical-zone').where({ _extension: 'json' }).findOne().catch(() => null),
@@ -59,6 +59,19 @@ function where(r: Row) {
 // different order on the first browser render puts the wrong content in each row (see footgun 13 for the same kind of fault).
 const cmp = (a: string, b: string) => (a < b ? -1 : a > b ? 1 : 0)
 
+// The period a dataset covers, when its title ends in one, as the archive writes it: "(2006)" or "(2010-2017)". `year` is the year it was
+// published; the two differ, and the title is left as it is. Only a trailing parenthesised year or range counts.
+const PERIOD = /\((\d{4})(?:\s*[-–]\s*(\d{4}|Ongoing))?\)\s*$/
+function periodOf(title: string): { text: string; start: number } {
+  const m = PERIOD.exec(title)
+  if (!m) return { text: '', start: 0 }
+  const start = Number(m[1])
+  const end = m[2] === 'Ongoing' ? Infinity : Number(m[2] ?? m[1])
+  // A placeholder such as (0000-0000), or an end before the start, is not a period.
+  if (start < 1800 || end < start) return { text: '', start: 0 }
+  return { text: m[2] === 'Ongoing' ? `${m[1]}–ongoing` : end !== start ? `${m[1]}–${m[2]}` : m[1], start }
+}
+
 // Every row with the text it shows worked out once. `i` is the row's place in the file: a stable key for the table.
 const all = computed<Shown[]>(() => (file.value?.rows ?? []).map((r, i) => {
   const awardList = (r.awards ?? []).map(id => {
@@ -66,15 +79,18 @@ const all = computed<Shown[]>(() => (file.value?.rows ?? []).map((r, i) => {
     return { title: awardTitle(a), number: a?.number ?? id }
   })
   const siteText = siteList(r)
+  const per = periodOf(r.title)
   return {
-    ...r, i, where: where(r), siteText, awardList,
-    hay: [r.title, r.repository, r.year, siteText, ...awardList.map(a => `${a.title} ${a.number}`)].join(' ').toLowerCase(),
+    ...r, i, where: where(r), siteText, awardList, period: per.text, periodStart: per.start,
+    hay: [r.title, r.repository, r.year, per.text, siteText, ...awardList.map(a => `${a.title} ${a.number}`)].join(' ').toLowerCase(),
   }
 }))
 
 const asOf = computed(() => file.value?.asOf
   ? new Date(file.value.asOf).toLocaleDateString('en-US', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' })
   : null)
+// The Data period column is shown only when some row has a period (datasets do; papers have none).
+const showPeriod = computed(() => all.value.some(r => r.period))
 // The Type column is shown when the list holds more than one type of product (for example datasets and software); a list of one type has no need of it.
 const showType = computed(() => new Set(all.value.map(r => r.type)).size > 1)
 
@@ -85,7 +101,7 @@ const siteOptions = computed(() => {
   return Object.keys(CZ_SITE_NAMES).filter(s => counts.has(s)).map(s => ({ slug: s, name: siteName(s), n: counts.get(s) as number }))
 })
 
-type SortKey = 'title' | 'site' | 'award' | 'year'
+type SortKey = 'title' | 'site' | 'award' | 'year' | 'period'
 const q = ref('')
 const siteFilter = ref('')
 const sortKey = ref<SortKey>('year')
@@ -93,7 +109,7 @@ const sortDir = ref<'asc' | 'desc'>('desc')
 const mounted = ref(false)
 
 const sortValue = (r: Shown, k: SortKey): string | number =>
-  k === 'year' ? (r.year ?? 0) : k === 'title' ? r.title.toLowerCase() : k === 'site' ? r.siteText.toLowerCase() : (r.awardList[0] ? `${r.awardList[0].title} ${r.awardList[0].number}`.toLowerCase() : '')
+  k === 'year' ? (r.year ?? 0) : k === 'period' ? r.periodStart : k === 'title' ? r.title.toLowerCase() : k === 'site' ? r.siteText.toLowerCase() : (r.awardList[0] ? `${r.awardList[0].title} ${r.awardList[0].number}`.toLowerCase() : '')
 
 const shown = computed<Shown[]>(() => {
   const tokens = q.value.toLowerCase().split(/\s+/).filter(Boolean)
@@ -116,7 +132,7 @@ const filtered = computed(() => !!q.value.trim() || !!siteFilter.value)
 const pid = (id: string) => (props.idPrefix ? `${props.idPrefix}-${id}` : id)
 function sortBy(k: SortKey) {
   if (sortKey.value === k) sortDir.value = sortDir.value === 'asc' ? 'desc' : 'asc'
-  else { sortKey.value = k; sortDir.value = k === 'year' ? 'desc' : 'asc' }
+  else { sortKey.value = k; sortDir.value = k === 'year' || k === 'period' ? 'desc' : 'asc' }
 }
 const ariaSort = (k: SortKey) => (sortKey.value === k ? (sortDir.value === 'asc' ? 'ascending' : 'descending') : 'none')
 const arrow = (k: SortKey) => (sortKey.value === k ? (sortDir.value === 'asc' ? '↑' : '↓') : '')
@@ -124,7 +140,7 @@ function clearFilters() { q.value = ''; siteFilter.value = '' }
 
 const route = useRoute()
 const router = useRouter()
-const SORT_KEYS: SortKey[] = ['title', 'site', 'award', 'year']
+const SORT_KEYS: SortKey[] = ['title', 'site', 'award', 'year', 'period']
 onMounted(() => {
   if (!props.compact) {
     const p = { get: (k: string) => { const v = route.query[k]; return (Array.isArray(v) ? v[0] : v) ?? null } }
@@ -132,9 +148,9 @@ onMounted(() => {
     if (!props.site && siteOptions.value.some(o => o.slug === s)) siteFilter.value = s
     q.value = p.get('q') ?? ''
     const k = p.get('sort') as SortKey
-    if (SORT_KEYS.includes(k)) {
+    if (SORT_KEYS.includes(k) && (k !== 'period' || showPeriod.value)) {
       sortKey.value = k
-      sortDir.value = p.get('dir') === 'asc' ? 'asc' : p.get('dir') === 'desc' ? 'desc' : (k === 'year' ? 'desc' : 'asc')
+      sortDir.value = p.get('dir') === 'asc' ? 'asc' : p.get('dir') === 'desc' ? 'desc' : (k === 'year' || k === 'period' ? 'desc' : 'asc')
     }
   }
   mounted.value = true
@@ -205,9 +221,13 @@ watch([q, siteFilter, sortKey, sortDir], () => {
               <button v-if="mounted && !compact" type="button" class="sortbtn" @click="sortBy('award')">Award <span aria-hidden="true">{{ arrow('award') }}</span></button>
               <template v-else>Award</template>
             </th>
+            <th v-if="showPeriod" scope="col" :aria-sort="mounted && !compact ? ariaSort('period') : undefined" class="font-normal p-[8px_10px] border-b border-b-[rgba(15,33,43,.15)] hidden sm:table-cell text-right">
+              <button v-if="mounted && !compact" type="button" class="sortbtn" @click="sortBy('period')">Data period <span aria-hidden="true">{{ arrow('period') }}</span></button>
+              <template v-else>Data period</template>
+            </th>
             <th scope="col" :aria-sort="mounted && !compact ? ariaSort('year') : undefined" class="font-normal p-[8px_10px] border-b border-b-[rgba(15,33,43,.15)] hidden sm:table-cell text-right">
-              <button v-if="mounted && !compact" type="button" class="sortbtn" @click="sortBy('year')">Year <span aria-hidden="true">{{ arrow('year') }}</span></button>
-              <template v-else>Year</template>
+              <button v-if="mounted && !compact" type="button" class="sortbtn" @click="sortBy('year')">Published <span aria-hidden="true">{{ arrow('year') }}</span></button>
+              <template v-else>Published</template>
             </th>
           </tr>
         </thead>
@@ -217,7 +237,7 @@ watch([q, siteFilter, sortKey, sortDir], () => {
               <a :href="link(r)" target="_blank" rel="noopener" class="text-water font-medium">{{ r.title }}</a>
               <span v-if="r.repository" class="block text-[12.5px] text-muted">{{ r.repository }}</span>
               <!-- Phone width: the columns that follow are hidden and their values go here -->
-              <span class="block sm:hidden font-mono text-[11.5px] text-muted mt-[4px]">{{ [showType ? r.type : '', r.where, r.siteText, r.year].filter(Boolean).join(' · ') }}</span>
+              <span class="block sm:hidden font-mono text-[11.5px] text-muted mt-[4px]">{{ [showType ? r.type : '', r.where, r.siteText, r.period ? `Data ${r.period}` : '', r.year ? `Published ${r.year}` : ''].filter(Boolean).join(' · ') }}</span>
             </td>
             <td v-if="showType" class="p-[8px_10px] border-b border-b-[rgba(15,33,43,.08)] capitalize whitespace-nowrap hidden sm:table-cell">{{ r.type }}</td>
             <td class="p-[8px_10px] border-b border-b-[rgba(15,33,43,.08)] hidden sm:table-cell">{{ r.where }}</td>
@@ -228,6 +248,7 @@ watch([q, siteFilter, sortKey, sortDir], () => {
                 <span class="block font-mono text-[11px] text-muted">{{ a.number }}</span>
               </span>
             </td>
+            <td v-if="showPeriod" class="p-[8px_10px] border-b border-b-[rgba(15,33,43,.08)] hidden sm:table-cell text-right whitespace-nowrap [font-variant-numeric:tabular-nums]">{{ r.period }}</td>
             <td class="p-[8px_10px] border-b border-b-[rgba(15,33,43,.08)] hidden sm:table-cell text-right [font-variant-numeric:tabular-nums]">{{ r.year ?? '' }}</td>
           </tr>
         </tbody>
