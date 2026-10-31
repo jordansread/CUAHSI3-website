@@ -57,7 +57,7 @@ const clusters = [
         <p class="font-['Hanken_Grotesk'] text-[14px] leading-[normal] text-muted m-[0_0_24px]">
           <a :href="`https://criticalzone.org/${c.path}/`" target="_blank" rel="noopener" class="text-water font-medium">This cluster's pages on criticalzone.org ↗</a>
         </p>
-        <CzProductList :site="c.slug" :id-prefix="c.slug" compact />
+        <CzProductList :site="c.slug" :id-prefix="c.slug" :label="c.name" compact />
       </section>
 
       <CzSuggest />

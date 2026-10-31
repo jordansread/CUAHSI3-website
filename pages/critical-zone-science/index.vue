@@ -93,7 +93,7 @@ const places = [
     <div class="mx-auto site-container max-w-site pt-[64px]">
       <h2 class="font-['Schibsted_Grotesk'] font-bold text-[28px] leading-[1.1] text-navy tracking-[-.016em] m-[0_0_8px]">The full list</h2>
       <p class="font-['Hanken_Grotesk'] font-normal text-[16px] leading-[1.6] text-[#3a4d57] max-w-[640px] m-[0_0_28px]">
-        Every known dataset and paper, grouped by era, award and observatory, each linking to where it lives.
+        Every known dataset and paper in one table you can search, filter by observatory and sort, each linking to where it lives.
       </p>
       <div class="grid grid-cols-[1fr] gap-[18px] sm:grid-cols-[repeat(2,1fr)]">
         <NuxtLink v-for="l in lists" :key="l.to" :to="l.to"
