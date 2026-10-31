@@ -1,0 +1,1 @@
+261031 | task/cz-suggest-observatories | start | Follow-up to #172 (ticket T14, second item): the suggest-an-addition box on the ten observatory pages, now that #168 has merged; also gives each observatory table an accessible name. Jordan said 'merged #174, start the next task'; no PRs were open.
