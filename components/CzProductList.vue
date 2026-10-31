@@ -20,7 +20,7 @@ const props = defineProps<{
 
 type Row = {
   title: string; type: string; doi?: string; url?: string; repository?: string; awards?: string[]
-  sites?: string[]; year?: number; date_added?: string
+  sites?: string[]; year?: number; date_added?: string; highlight?: boolean
 }
 type Award = { id: string; funder?: string; number: string; url?: string; text: string }
 type Shown = Row & { i: number; where: string; siteText: string; period: string; periodStart: number; awardList: { title: string; number: string }[]; hay: string }
@@ -32,7 +32,7 @@ const { data: file } = await useAsyncData(`cz-products-${props.type ?? props.typ
       const all: Row[] = f?._path === '/critical-zone/products' && Array.isArray(f?.body) ? f.body : []
       const rows = all
         .filter(r => (!props.type || r.type === props.type) && (!props.types || props.types.includes(r.type)) && (!props.site || (r.sites ?? []).includes(props.site)))
-        .map(r => ({ title: r.title, type: r.type, doi: r.doi, url: r.url, repository: r.repository, awards: r.awards, sites: r.sites, year: r.year }))
+        .map(r => ({ title: r.title, type: r.type, doi: r.doi, url: r.url, repository: r.repository, awards: r.awards, sites: r.sites, year: r.year, highlight: r.highlight === true }))
       const added = all.map(r => r.date_added).filter(Boolean).sort() as string[]
       return { rows, asOf: added.length ? added[added.length - 1] : null }
     },
@@ -82,7 +82,7 @@ const all = computed<Shown[]>(() => (file.value?.rows ?? []).map((r, i) => {
   const per = periodOf(r.title)
   return {
     ...r, i, where: where(r), siteText, awardList, period: per.text, periodStart: per.start,
-    hay: [r.title, r.repository, r.year, per.text, siteText, ...awardList.map(a => `${a.title} ${a.number}`)].join(' ').toLowerCase(),
+    hay: [r.title, r.repository, r.year, per.text, r.highlight ? 'highlight' : '', siteText, ...awardList.map(a => `${a.title} ${a.number}`)].join(' ').toLowerCase(),
   }
 }))
 
@@ -183,7 +183,7 @@ watch([q, siteFilter, sortKey, sortDir], () => {
     <div v-if="all.length && mounted && !compact" class="flex flex-wrap items-end gap-[16px] mb-[20px]">
       <div class="flex flex-col gap-[4px] grow min-w-[220px] max-w-[420px]">
         <label :for="pid('search')" class="font-mono text-[11px] tracking-[.08em] uppercase text-muted">Search</label>
-        <input :id="pid('search')" v-model="q" type="search" placeholder="Title, journal, observatory or award"
+        <input :id="pid('search')" v-model="q" type="search" placeholder="Title, journal, observatory, award or highlight"
           class="font-['Hanken_Grotesk'] text-[15px] leading-[normal] text-ink bg-white border border-[rgba(15,33,43,.25)] rounded-[8px] p-[9px_12px]">
       </div>
       <div v-if="!site" class="flex flex-col gap-[4px] min-w-[220px]">
@@ -235,6 +235,7 @@ watch([q, siteFilter, sortKey, sortDir], () => {
           <tr v-for="r in shown" :key="r.i" class="align-top">
             <td class="p-[8px_10px] border-b border-b-[rgba(15,33,43,.08)]">
               <a :href="link(r)" target="_blank" rel="noopener" class="text-water font-medium">{{ r.title }}</a>
+              <span v-if="r.highlight" class="inline-block align-middle ml-[8px] font-mono font-bold text-[10px] leading-[normal] tracking-[.1em] uppercase text-[#8F3F1F] bg-[rgba(192,96,60,.12)] rounded-[4px] p-[2px_6px]"><span class="sr-only">, </span>Highlight</span>
               <span v-if="r.repository" class="block text-[12.5px] text-muted">{{ r.repository }}</span>
               <!-- Phone width: the columns that follow are hidden and their values go here -->
               <span class="block sm:hidden font-mono text-[11.5px] text-muted mt-[4px]">{{ [showType ? r.type : '', r.where, r.siteText, r.period ? `Data ${r.period}` : '', r.year ? `Published ${r.year}` : ''].filter(Boolean).join(' · ') }}</span>
