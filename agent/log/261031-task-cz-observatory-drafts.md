@@ -1,1 +1,2 @@
 261031 | task/cz-observatory-drafts | start | Jordan said 'merged #189, start the next task; keep going for 1.5 hrs'. T9 observatory narratives: drafted text for the ten observatories from their own archive home pages, as a proposal (ten files, so Propose then apply); nothing in content/.
+261031 | task/cz-observatory-drafts | pr | PR 191 opened against the default branch: the narratives proposal report and this log.
