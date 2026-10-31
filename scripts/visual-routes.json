@@ -26,5 +26,7 @@
   { "name": "support", "path": "/support/" },
   { "name": "member-portal", "path": "/member-portal/" },
   { "name": "critical-zone-science", "path": "/critical-zone-science/" },
-  { "name": "critical-zone-science-datasets", "path": "/critical-zone-science/datasets/" }
+  { "name": "critical-zone-science-datasets", "path": "/critical-zone-science/datasets/?site=eel" },
+  { "name": "critical-zone-science-network", "path": "/critical-zone-science/network/" },
+  { "name": "critical-zone-science-observatory", "path": "/critical-zone-science/observatories/eel/" }
 ]

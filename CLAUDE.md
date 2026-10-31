@@ -19,7 +19,7 @@ same PR (see "New footgun").
 ```
 pages/ components/ composables/ assets/ public/   the site code. This is what you work on.
 content/           the content. Phase 2: changed only on a content/short-name branch (rule 3).
-visual/            the visual baseline: 56 committed screenshots and README.md. tests/visual/ and
+visual/            the visual baseline: 60 committed screenshots and README.md. tests/visual/ and
                    playwright.config.ts run the comparison; scripts/visual-routes.json lists the routes.
 scripts/verify.sh  the verification suite. Run before every commit. CI runs it on every PR
                    (.github/workflows/verify.yml; not the screenshot comparison, which needs a Mac).
@@ -55,7 +55,7 @@ npm run validate:content           # read-only check of content/ against the sch
 node scripts/check-links.mjs       # after a build: every internal href/src in .output/public resolves to a file (verify.sh --build runs it)
 node scripts/parity/redirects.mjs   # regenerates public/_redirects (legacy URL redirects) from the parity data; --check compares (verify.sh runs the check)
 node scripts/check-redirects.mjs   # after a build: every redirect target exists in .output/public and no source is a real page (verify.sh --build runs it)
-npm run visual:compare             # after a build: 56 screenshots vs visual/baseline; any changed pixel fails
+npm run visual:compare             # after a build: 60 screenshots vs visual/baseline; any changed pixel fails
 npm run visual:baseline            # rewrites visual/baseline; only from a build of main, in its own PR
 node scripts/style-compare.mjs snapshot .agent/styles/<name>.json.gz   # after a build: computed style of every element, 121 pages x 2 widths
 node scripts/style-compare.mjs compare  <a>.json.gz <b>.json.gz         # 0 differing elements is the gate for Tailwind migration PRs
