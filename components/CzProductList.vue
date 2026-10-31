@@ -11,6 +11,8 @@
 const props = defineProps<{
   type?: 'dataset' | 'paper'   // only products of this type; all when left out
   site?: string                // only products tagged with this site slug; all when left out
+  idPrefix?: string            // put before every id and in-page link, so several lists on one page do not repeat ids
+  compact?: boolean            // for a list inside another section: no jump pills, and the headings one level lower (era h3, group h4)
 }>()
 
 type Row = {
@@ -83,6 +85,9 @@ const eras = computed<Era[]>(() => {
   return out
 })
 
+const pid = (id: string) => (props.idPrefix ? `${props.idPrefix}-${id}` : id)
+const EraTag = computed(() => (props.compact ? 'h3' : 'h2'))
+const GroupTag = computed(() => (props.compact ? 'h4' : 'h3'))
 const nf = (n: number) => n.toLocaleString('en-US')
 const link = (r: Row) => (r.doi ? `https://doi.org/${r.doi}` : r.url ?? '')
 function where(r: Row) {
@@ -103,32 +108,32 @@ const siteList = (r: Row) => (r.sites ?? []).filter(s => s !== 'national' || (r.
     <p v-if="!rows.length" class="font-['Hanken_Grotesk'] text-[15px] leading-[1.6] text-[#3a4d57]">Nothing is listed here yet.</p>
 
     <!-- Jump links: one entry per era and group -->
-    <nav v-if="rows.length" aria-label="Jump to a group" class="mb-[40px]">
+    <nav v-if="rows.length && !compact" aria-label="Jump to a group" class="mb-[40px]">
       <div v-for="e in eras" :key="e.id" class="mb-[16px]">
         <p class="font-mono font-bold tracking-[.1em] uppercase text-[11px] text-water m-[0_0_8px]">
-          <a :href="`#${e.id}`" class="text-water">{{ e.label }}</a> · {{ nf(e.count) }}
+          <a :href="`#${pid(e.id)}`" class="text-water">{{ e.label }}</a> · {{ nf(e.count) }}
         </p>
         <ul class="list-none p-0 m-0 flex flex-wrap gap-[8px]">
           <li v-for="g in e.groups" :key="g.id">
-            <a :href="`#${g.id}`" class="inline-block font-['Hanken_Grotesk'] text-[13px] leading-[normal] text-navy bg-[rgba(31,111,178,.09)] rounded-[999px] p-[5px_12px] no-underline">{{ g.label }} ({{ nf(g.rows.length) }})</a>
+            <a :href="`#${pid(g.id)}`" class="inline-block font-['Hanken_Grotesk'] text-[13px] leading-[normal] text-navy bg-[rgba(31,111,178,.09)] rounded-[999px] p-[5px_12px] no-underline">{{ g.label }} ({{ nf(g.rows.length) }})</a>
           </li>
         </ul>
       </div>
     </nav>
 
-    <section v-for="e in eras" :id="e.id" :key="e.id" class="mb-[56px] scroll-mt-[96px]">
-      <h2 class="font-['Schibsted_Grotesk'] font-bold text-[28px] leading-[1.1] text-navy tracking-[-.016em] m-[0_0_24px]">{{ e.label }}</h2>
+    <section v-for="e in eras" :id="pid(e.id)" :key="e.id" class="mb-[56px] scroll-mt-[96px]">
+      <component :is="EraTag" class="font-['Schibsted_Grotesk'] font-bold text-[28px] leading-[1.1] text-navy tracking-[-.016em] m-[0_0_24px]">{{ e.label }}</component>
 
-      <div v-for="g in e.groups" :id="g.id" :key="g.id" class="mb-[36px] scroll-mt-[96px]">
-        <h3 :id="`${g.id}-title`" class="font-['Schibsted_Grotesk'] font-bold text-[20px] leading-[1.2] text-navy m-[0_0_6px]">
+      <div v-for="g in e.groups" :id="pid(g.id)" :key="g.id" class="mb-[36px] scroll-mt-[96px]">
+        <component :is="GroupTag" :id="`${pid(g.id)}-title`" class="font-['Schibsted_Grotesk'] font-bold text-[20px] leading-[1.2] text-navy m-[0_0_6px]">
           <a v-if="g.href" :href="g.href" target="_blank" rel="noopener" class="text-navy">{{ g.label }}</a>
           <template v-else>{{ g.label }}</template>
           <span class="font-mono font-normal text-[12px] text-muted"> · {{ nf(g.rows.length) }}</span>
-        </h3>
+        </component>
         <p v-if="g.sub" class="font-['Hanken_Grotesk'] text-[14px] leading-[1.5] text-muted max-w-[760px] m-[0_0_12px]">{{ g.sub }}</p>
 
         <div class="overflow-x-auto">
-          <table :aria-labelledby="`${g.id}-title`" class="w-full border-collapse text-left font-['Hanken_Grotesk'] text-[14.5px] leading-[1.45] text-[#3a4d57]">
+          <table :aria-labelledby="`${pid(g.id)}-title`" class="w-full border-collapse text-left font-['Hanken_Grotesk'] text-[14.5px] leading-[1.45] text-[#3a4d57]">
             <thead>
               <tr class="font-mono text-[11.5px] tracking-[.05em] uppercase text-muted">
                 <th scope="col" class="font-normal p-[8px_10px] border-b border-b-[rgba(15,33,43,.15)]">Title</th>
