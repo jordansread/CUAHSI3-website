@@ -92,6 +92,9 @@ const places = [
       </p>
     </section>
 
+    <!-- Highlights -->
+    <CzHighlights />
+
     <!-- The full lists -->
     <div class="mx-auto site-container max-w-site pt-[64px]">
       <h2 class="font-['Schibsted_Grotesk'] font-bold text-[28px] leading-[1.1] text-navy tracking-[-.016em] m-[0_0_8px]">The full list</h2>
