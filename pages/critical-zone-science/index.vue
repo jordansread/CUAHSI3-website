@@ -145,6 +145,7 @@ const places = [
           <p class="font-['Hanken_Grotesk'] font-normal text-[14px] leading-[1.55] text-muted m-0">{{ p.text }}</p>
         </a>
       </div>
+      <NuxtLink to="/critical-zone-science/about" class="inline-block mt-[28px] font-['Hanken_Grotesk'] text-[14px] leading-[normal] text-navy bg-[rgba(31,111,178,.09)] rounded-[999px] p-[8px_16px] no-underline">About this section and CUAHSI's role →</NuxtLink>
     </div>
 
     <!-- Missing something -->
