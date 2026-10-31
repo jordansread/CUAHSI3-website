@@ -1,0 +1,2 @@
+261031 | task/sitemap-empty | start | Jordan said 'merged #189, start the next task; keep going for 1.5 hrs'. Find out why the built sitemap.xml has no URLs (found in the readiness review); read-only, report only.
+261031 | task/sitemap-empty | note | Three throwaway builds, assets/robots.txt restored each time. The Disallow line in it turns off the sitemap, the page noindex meta and robots.txt; allowing it gives 469 sitemap entries, relative without a site address. Report agent/reports/261031_cz-sitemap-cause.md.
