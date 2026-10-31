@@ -45,7 +45,8 @@ useHead({
       <article v-if="narrative" class="program-prose max-w-[720px] mb-[48px]">
         <ContentRenderer :value="narrative" />
       </article>
-      <CzProductList :site="slug" />
+      <CzProductList :site="slug" :label="`${name} products`" />
+      <CzSuggest />
     </div>
 
     <div v-else class="mx-auto site-container max-w-site py-[80px]">
