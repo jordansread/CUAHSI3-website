@@ -1,2 +1,3 @@
 261031 | task/cz-readiness-review | start | Jordan said 'merged #188 and #186, start the next task; continue working for the next two hours'. Read-only readiness review of the Critical Zone section for the T18 go-live gate: a report, no site code.
 261031 | task/cz-readiness-review | note | Built main at 3a944da; 15 of 15 CZ pages have one h1, a title, a description, lang and no img without alt; verify.sh --build green; 309 external links on three pages: 288 gave 200, 17 gave 403 (publishers), 3 gave 404 (one real: cuahsi.org/matlab, outside the section). Sitemap has 0 URLs site-wide, cause not found.
+261031 | task/cz-readiness-review | pr | PR 189 opened against the default branch: the readiness report, two Noticed lines and this log file.
