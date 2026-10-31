@@ -10,6 +10,7 @@
 // this component shows, so the page payload does not carry whole records.
 const props = defineProps<{
   type?: 'dataset' | 'paper'   // only products of this type; all when left out
+  types?: string[]             // only products of these types (used when more than one, such as datasets with software and models)
   site?: string                // only products tagged with this site slug; all when left out
   idPrefix?: string            // put before every id and in-page link, so several lists on one page do not repeat ids
   compact?: boolean            // for a list inside another section: no jump pills, and the headings one level lower (era h3, group h4)
@@ -21,13 +22,13 @@ type Row = {
 }
 type Award = { id: string; funder?: string; number: string; url?: string; text: string }
 
-const { data: file } = await useAsyncData(`cz-products-${props.type ?? 'all'}-${props.site ?? 'all'}`, () =>
+const { data: file } = await useAsyncData(`cz-products-${props.type ?? props.types?.join('+') ?? 'all'}-${props.site ?? 'all'}`, () =>
   queryContent('critical-zone').where({ _extension: 'json' }).findOne().catch(() => null),
   {
     transform: (f: any) => {
       const all: Row[] = f?._path === '/critical-zone/products' && Array.isArray(f?.body) ? f.body : []
       const rows = all
-        .filter(r => (!props.type || r.type === props.type) && (!props.site || (r.sites ?? []).includes(props.site)))
+        .filter(r => (!props.type || r.type === props.type) && (!props.types || props.types.includes(r.type)) && (!props.site || (r.sites ?? []).includes(props.site)))
         .map(r => ({ title: r.title, type: r.type, doi: r.doi, url: r.url, repository: r.repository, awards: r.awards, sites: r.sites, era: r.era, year: r.year }))
       const added = all.map(r => r.date_added).filter(Boolean).sort() as string[]
       return { rows, asOf: added.length ? added[added.length - 1] : null }
@@ -85,6 +86,8 @@ const eras = computed<Era[]>(() => {
   return out
 })
 
+// The Type column is shown when the list holds more than one type of product (for example datasets and software); a list of one type has no need of it.
+const showType = computed(() => new Set(rows.value.map(r => r.type)).size > 1)
 const pid = (id: string) => (props.idPrefix ? `${props.idPrefix}-${id}` : id)
 const EraTag = computed(() => (props.compact ? 'h3' : 'h2'))
 const GroupTag = computed(() => (props.compact ? 'h4' : 'h3'))
@@ -137,7 +140,7 @@ const siteList = (r: Row) => (r.sites ?? []).filter(s => s !== 'national' || (r.
             <thead>
               <tr class="font-mono text-[11.5px] tracking-[.05em] uppercase text-muted">
                 <th scope="col" class="font-normal p-[8px_10px] border-b border-b-[rgba(15,33,43,.15)]">Title</th>
-                <th v-if="!type" scope="col" class="font-normal p-[8px_10px] border-b border-b-[rgba(15,33,43,.15)] hidden sm:table-cell">Type</th>
+                <th v-if="showType" scope="col" class="font-normal p-[8px_10px] border-b border-b-[rgba(15,33,43,.15)] hidden sm:table-cell">Type</th>
                 <th scope="col" class="font-normal p-[8px_10px] border-b border-b-[rgba(15,33,43,.15)] hidden sm:table-cell">Where</th>
                 <th scope="col" class="font-normal p-[8px_10px] border-b border-b-[rgba(15,33,43,.15)] hidden sm:table-cell">Observatory or cluster</th>
                 <th scope="col" class="font-normal p-[8px_10px] border-b border-b-[rgba(15,33,43,.15)] hidden sm:table-cell text-right">Year</th>
@@ -149,9 +152,9 @@ const siteList = (r: Row) => (r.sites ?? []).filter(s => s !== 'national' || (r.
                   <a :href="link(r)" target="_blank" rel="noopener" class="text-water font-medium">{{ r.title }}</a>
                   <span v-if="r.repository" class="block text-[12.5px] text-muted">{{ r.repository }}</span>
                   <!-- Phone width: the columns that follow are hidden and their values go here -->
-                  <span class="block sm:hidden font-mono text-[11.5px] text-muted mt-[4px]">{{ [!type ? r.type : '', where(r), siteList(r), r.year].filter(Boolean).join(' · ') }}</span>
+                  <span class="block sm:hidden font-mono text-[11.5px] text-muted mt-[4px]">{{ [showType ? r.type : '', where(r), siteList(r), r.year].filter(Boolean).join(' · ') }}</span>
                 </td>
-                <td v-if="!type" class="p-[8px_10px] border-b border-b-[rgba(15,33,43,.08)] capitalize whitespace-nowrap hidden sm:table-cell">{{ r.type }}</td>
+                <td v-if="showType" class="p-[8px_10px] border-b border-b-[rgba(15,33,43,.08)] capitalize whitespace-nowrap hidden sm:table-cell">{{ r.type }}</td>
                 <td class="p-[8px_10px] border-b border-b-[rgba(15,33,43,.08)] hidden sm:table-cell">{{ where(r) }}</td>
                 <td class="p-[8px_10px] border-b border-b-[rgba(15,33,43,.08)] hidden sm:table-cell">{{ siteList(r) }}</td>
                 <td class="p-[8px_10px] border-b border-b-[rgba(15,33,43,.08)] hidden sm:table-cell text-right [font-variant-numeric:tabular-nums]">{{ r.year ?? '' }}</td>
