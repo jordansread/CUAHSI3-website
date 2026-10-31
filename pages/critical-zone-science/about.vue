@@ -1,8 +1,9 @@
 <script setup lang="ts">
 // About the section: CUAHSI's role in Critical Zone work, where the lists come from, and the awards the listed products name
 // (epic CUAHSI/CUAHSI3-website#62, ticket T9; page structure option C, approved on #147). The role text states only the claims
-// Jordan confirmed in T4 (agent/reports/261028_cz-cuahsi-role-claims.md, claims 1 to 3, as corrected on PR 141). Do not add
-// another claim from that report without his confirmation.
+// Jordan confirmed in T4 (agent/reports/261028_cz-cuahsi-role-claims.md): claims 1 to 3 as corrected on PR 141, and on 31 October 2026
+// claims 4 to 9, 11 to 15 and 18 (claims 10 and 16 struck, 17 left empty). Claims 7 and 8 are his word, as CUAHSI's own. Do not add
+// another claim without his confirmation.
 useHead({
   title: 'About this section · Critical Zone Science',
   meta: [{ name: 'description', content: 'CUAHSI\'s role in the Critical Zone Collaborative Network, how the lists of Critical Zone datasets and papers were gathered, and the NSF awards they name.' }]
@@ -22,7 +23,7 @@ const { data: productStats } = await useAsyncData('cz-about-products', () =>
         for (const id of new Set<string>(r.awards ?? [])) byAward[id] = (byAward[id] ?? 0) + 1
         if (r.source) bySource[r.source] = (bySource[r.source] ?? 0) + 1
       }
-      return { total: rows.length, byAward, bySource }
+      return { total: rows.length, byAward, bySource, datasets: rows.filter(r => r.type === 'dataset').length, hydroshare: rows.filter(r => r.type === 'dataset' && r.hydroshare_id).length }
     },
   }
 )
@@ -101,7 +102,7 @@ const sources = computed(() => Object.entries(productStats.value?.bySource ?? {}
         <h2 class="font-['Schibsted_Grotesk'] font-bold text-[28px] leading-[1.1] text-navy tracking-[-.016em] m-[0_0_16px]">CUAHSI's role</h2>
         <p class="font-['Hanken_Grotesk'] font-normal text-[16px] leading-[1.6] text-[#3a4d57] m-[0_0_16px]">
           CUAHSI is the Coordinating Hub for the Critical Zone Collaborative Network (CZNet), the next phase of NSF Critical Zone
-          research. The Hub is led by a team from CUAHSI, EarthChem, the John Wesley Powell Center for Synthesis and Analysis,
+          research. The Hub is led by a team from CUAHSI, EarthChem, the John Wesley Powell Center for Analysis and Synthesis,
           Utah State University, Penn State University and RENCI.
         </p>
         <p v-if="hub" class="font-['Hanken_Grotesk'] font-normal text-[16px] leading-[1.6] text-[#3a4d57] m-0">
@@ -110,6 +111,53 @@ const sources = computed(() => Object.entries(productStats.value?.bySource ?? {}
           "{{ hub.title }}" ({{ hub.dates }}), awarded to CUAHSI, supports the Hub. Utah State University and Lamont are on the
           Hub team under awards of their own.
         </p>
+
+        <h3 class="font-['Schibsted_Grotesk'] font-bold text-[20px] leading-[1.2] text-navy m-[28px_0_12px]">On the Hub, 2020 on</h3>
+        <ul class="list-disc font-['Hanken_Grotesk'] font-normal text-[16px] leading-[1.6] text-[#3a4d57] m-0 pl-[22px]">
+          <li>The Hub is housed at CUAHSI, and several CUAHSI staff are on the Hub team.</li>
+          <li>
+            The Hub funds synthesis projects, which bring teams of scientists together at the John Wesley Powell Center for Analysis and
+            Synthesis to take on Critical Zone questions that cross disciplines and sites.
+          </li>
+          <li>
+            One of the Hub's four objectives is cyberinfrastructure for FAIR data from the thematic clusters, "by integrating existing
+            data services operated by CUAHSI and EarthChem".
+          </li>
+          <li>
+            CUAHSI operates the CZNet website, criticalzone.org, and hosts the archive site of the Critical Zone Observatories,
+            czo-archive.criticalzone.org.
+          </li>
+        </ul>
+
+        <h3 class="font-['Schibsted_Grotesk'] font-bold text-[20px] leading-[1.2] text-navy m-[28px_0_12px]">In the Observatory years, 2007 to 2020</h3>
+        <ul class="list-disc font-['Hanken_Grotesk'] font-normal text-[16px] leading-[1.6] text-[#3a4d57] m-0 pl-[22px]">
+          <li>CUAHSI was listed as a partner organization on the Critical Zone Observatory network's own site.</li>
+          <li>
+            In 2011 and 2012 CUAHSI's cyberseminar series featured the Observatories, with talks on the Shale Hills observatory and on the
+            western observatories.
+          </li>
+          <li>
+            Students and teachers in the Observatories' research-experience programs presented their work at the CUAHSI Biennial
+            Colloquium in July 2016, and a joint USGS and CUAHSI workshop on optical water quality sensor networks appears among the
+            Christina River Basin observatory's publications for 2011.
+          </li>
+          <li>
+            Some of the national datasets in the Observatories' own listing, such as climate, flux-tower and streamflow series from 1968
+            to 2015, are listed as available through CUAHSI Water Data Center web services.
+          </li>
+          <li>
+            The Observatories' data pages announced a partnership with CUAHSI to move their data catalog from criticalzone.org to CUAHSI's
+            HydroShare repository in 2019.
+          </li>
+          <li v-if="productStats?.hydroshare">
+            HydroShare is a CUAHSI service. {{ nf(productStats.hydroshare) }} of the {{ nf(productStats.datasets) }} datasets listed on this
+            site have a HydroShare page.
+          </li>
+          <li>
+            A data-footprint analysis done for CUAHSI in October 2026 found about 133 million time-series values from 7 observatories
+            (1,602 series, 1968 to 2015) in CUAHSI's Hydrologic Information System.
+          </li>
+        </ul>
       </section>
 
       <section class="mb-[56px] max-w-[720px]">
