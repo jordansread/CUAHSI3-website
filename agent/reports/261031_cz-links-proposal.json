@@ -1,0 +1,2803 @@
+{
+  "generated": "2026-10-31",
+  "script": "scripts/cz-links.mjs",
+  "note": "A proposal for review. Not content: nothing here is in content/. Links to add to products already in the list, and datasets found that are not in the list yet (candidate products for Jordan to review).",
+  "options": {
+    "delay_ms": 1000,
+    "limit": null,
+    "confirmed_file": null
+  },
+  "requests": {
+    "network": 0,
+    "cached": 1276,
+    "failed": []
+  },
+  "counts": {
+    "papers_with_doi_in_list": 1276,
+    "papers_asked": 1276,
+    "papers_with_a_datacite_record_naming_them": 162,
+    "papers_with_a_supporting_link": 87,
+    "supporting_links": 213,
+    "supporting_links_by_relation": {
+      "cited-by": 172,
+      "supports": 31,
+      "described-by": 10
+    },
+    "confirmed_links_read": 0,
+    "confirmed_links_that_overrode_a_datacite_link": 0,
+    "confirmed_links_for_papers_not_in_the_list": 0,
+    "datasets_found": 167,
+    "datasets_already_in_the_list": 40,
+    "datasets_not_in_the_list": 127,
+    "datasets_not_in_the_list_by_repository": {
+      "Environmental Data Initiative": 69,
+      "figshare Academic Research System": 24,
+      "DRYAD": 13,
+      "Ag Data Commons": 4,
+      "Purdue University Research Repository": 3,
+      "USGS DOI Tool Production Environment": 3,
+      "Virginia Tech Data Repository": 3,
+      "Wyoming Data Repository": 1,
+      "PANGAEA": 1,
+      "Mendeley Data": 1,
+      "EarthChem Library": 1,
+      "DOE Lawrence Berkeley National Laboratory (LBNL) Repository": 1,
+      "ICPSR": 1,
+      "GFZ Data Services": 1,
+      "NERC Environmental Data Service": 1
+    },
+    "dataset_cites_paper_relations_seen_and_not_kept": 219,
+    "dataset_is_supplemented_by_paper_relations_seen_and_not_stored": 3,
+    "pairs_with_two_kept_relations_strongest_stored": 0,
+    "papers_with_a_link_by_era": {
+      "czo": 70,
+      "(none)": 17
+    },
+    "papers_with_a_link_by_first_site": {
+      "(none)": 17,
+      "luquillo": 13,
+      "boulder": 12,
+      "catalina-jemez": 10,
+      "shale-hills": 10,
+      "sierra": 8,
+      "eel": 5,
+      "reynolds": 5,
+      "iml": 5,
+      "calhoun": 2
+    },
+    "candidate_datasets_by_type": {
+      "Dataset": 127
+    },
+    "candidate_datasets_by_published_five_years": {
+      "2010": 5,
+      "2015": 61,
+      "2020": 54,
+      "2025": 7
+    },
+    "distinct_papers_naming_a_candidate": 67,
+    "candidates_linked_to_more_than_one_paper": 11,
+    "every_relation_seen_between_a_record_and_a_paper": {
+      "References": 624,
+      "IsCitedBy": 104,
+      "IsReferencedBy": 68,
+      "IsSupplementTo": 50,
+      "IsDocumentedBy": 3,
+      "IsVariantFormOf": 2,
+      "IsDescribedBy": 10,
+      "IsSupplementedBy": 3,
+      "IsVersionOf": 9,
+      "(kept relation on a Text record, not a dataset or software: skipped)": 4,
+      "Cites": 10,
+      "(kept relation on a Collection record, not a dataset or software: skipped)": 8,
+      "HasPart": 1,
+      "(kept relation on a JournalArticle record, not a dataset or software: skipped)": 7,
+      "IsIdenticalTo": 1
+    }
+  },
+  "add_related_to_products_in_the_list": [
+    {
+      "doi": "10.5061/dryad.5p464rm",
+      "title": "Data from: Do precipitation extremes drive growth and migration timing of a Pacific salmonid fish in Mediterranean‐climate streams?",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1002/ecs2.2618",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.26022/IEDA/111664",
+      "title": "Mixed Conifer Zero Order Basin Deep Cores Geochemistry Data (New Mexico, USA)",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1029/2019JF005189",
+          "source": "datacite"
+        },
+        {
+          "relation": "cited-by",
+          "doi": "10.5194/hess-23-4661-2019",
+          "source": "datacite"
+        },
+        {
+          "relation": "cited-by",
+          "doi": "10.3389/feart.2018.00181",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.26022/IEDA/111665",
+      "title": "Mixed Conifer Zero Order Basin Deep Cores Clay Geochemistry Data (New Mexico, USA)",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1029/2019JF005189",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.26022/IEDA/111593",
+      "title": "Jemez River Basin Soil Solution Chemistry 2016 (New Mexico, USA)",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1002/2016WR019712",
+          "source": "datacite"
+        },
+        {
+          "relation": "cited-by",
+          "doi": "10.2136/sssaj2012.0061",
+          "source": "datacite"
+        },
+        {
+          "relation": "cited-by",
+          "doi": "10.3389/feart.2018.00181",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.26022/IEDA/111596",
+      "title": "Jemez River Basin Soil Solution Chemistry 2017 (New Mexico, USA)",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1002/2016WR019712",
+          "source": "datacite"
+        },
+        {
+          "relation": "cited-by",
+          "doi": "10.2136/sssaj2012.0061",
+          "source": "datacite"
+        },
+        {
+          "relation": "cited-by",
+          "doi": "10.3389/feart.2018.00181",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.1594/IEDA/111156",
+      "title": "Jemez River Basin Soil Solution Chemistry 2011 (New Mexico, USA)",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.2136/sssaj2012.0061",
+          "source": "datacite"
+        },
+        {
+          "relation": "cited-by",
+          "doi": "10.1016/j.chemgeo.2014.10.016",
+          "source": "datacite"
+        },
+        {
+          "relation": "cited-by",
+          "doi": "10.2136/sssaj2013.07.0279",
+          "source": "datacite"
+        },
+        {
+          "relation": "cited-by",
+          "doi": "10.1016/j.chemgeo.2016.01.001",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.26022/IEDA/112066",
+      "title": "Jemez River Basin Soil Solution Chemistry 2019 (New Mexico, USA) version 2",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.2136/sssaj2012.0061",
+          "source": "datacite"
+        },
+        {
+          "relation": "cited-by",
+          "doi": "10.3389/feart.2018.00181",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.1594/IEDA/111143",
+      "title": "Jemez River Basin Soil Solution Chemistry 2013 (New Mexico, USA)",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.2136/sssaj2012.0061",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.1594/IEDA/111144",
+      "title": "Jemez River Basin Soil Solution Chemistry 2014 (New Mexico, USA)",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.2136/sssaj2012.0061",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.1594/IEDA/111155",
+      "title": "Jemez River Basin Soil Solution Chemistry 2012 (New Mexico, USA)",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.2136/sssaj2012.0061",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.1594/IEDA/111313",
+      "title": "Jemez River Basin Soil Solution Chemistry 2015 (New Mexico, USA)",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.2136/sssaj2012.0061",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.26022/ieda/111734",
+      "title": "Jemez River Basin Soil Solution Chemistry 2018 (New Mexico, USA)",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.2136/sssaj2012.0061",
+          "source": "datacite"
+        },
+        {
+          "relation": "cited-by",
+          "doi": "10.3389/feart.2018.00181",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.26022/IEDA/111934",
+      "title": "Jemez River Basin Soil Solution Chemistry 2019 (New Mexico, USA)",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.2136/sssaj2012.0061",
+          "source": "datacite"
+        },
+        {
+          "relation": "cited-by",
+          "doi": "10.3389/feart.2018.00181",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.5066/P941BIYS",
+      "title": "Chemistry of water, stream sediment, wildfire ash, soil, dust, and mine waste for Fourmile Creek Watershed, Colorado, 2010-2019",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1016/j.scitotenv.2020.140635",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.1594/IEDA/100689",
+      "title": "Santa Catalina Mountains Soil Solution Chemistry 2012 (Arizona, USA)",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1002/2016WR019072",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.1594/IEDA/100690",
+      "title": "Santa Catalina Mountains Soil Solution Chemistry 2013 (Arizona, USA)",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1002/2016WR019072",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.1594/IEDA/111145",
+      "title": "Santa Catalina Mountains Soil Solution Chemistry 2014 (Arizona, USA)",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1002/2016WR019072",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.1594/IEDA/111312",
+      "title": "Santa Catalina Mountains Soil Solution Chemistry 2015 (Arizona, USA)",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1002/2016WR019072",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.26022/IEDA/111594",
+      "title": "Santa Catalina Mountains Soil Solution Chemistry 2016 (Arizona, USA)",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1002/2016WR019072",
+          "source": "datacite"
+        },
+        {
+          "relation": "cited-by",
+          "doi": "10.1002/hyp.13363",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.26022/IEDA/111595",
+      "title": "Santa Catalina Mountains Soil Solution Chemistry 2017 (Arizona, USA)",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1002/2016WR019072",
+          "source": "datacite"
+        },
+        {
+          "relation": "cited-by",
+          "doi": "10.1002/hyp.13363",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.26022/IEDA/111733",
+      "title": "Santa Catalina Mountains Soil Solution Chemistry 2018 (Arizona, USA)",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1002/2016WR019072",
+          "source": "datacite"
+        },
+        {
+          "relation": "cited-by",
+          "doi": "10.1002/hyp.13363",
+          "source": "datacite"
+        },
+        {
+          "relation": "cited-by",
+          "doi": "10.1002/eco.2167",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.26022/IEDA/111935",
+      "title": "Santa Catalina Mountains Soil Solution Chemistry 2019 (Arizona, USA)",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1002/hyp.13363",
+          "source": "datacite"
+        },
+        {
+          "relation": "cited-by",
+          "doi": "10.1029/2019JG005216",
+          "source": "datacite"
+        },
+        {
+          "relation": "cited-by",
+          "doi": "10.1002/eco.2167",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/942a5a981e6e986c5fa1a9a9cd2eb8b7",
+      "title": "Groundwater, soil moisture, light and weather data in Brownsville forest, Nassawadox, VA, 2019-2022",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1016/j.dib.2022.108584",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.26022/ieda/112208",
+      "title": "Non-road, Non-dripline Soil Metal Concentrations for Pittsburgh, Pennsylvania, United States of America",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1088/2515-7620/ac7cc2",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.1594/IEDA/100611",
+      "title": "Susquehanna Shale Hills Critical Zone Observatory - Shaver's Creek Watershed Stream Chemistry (2014)",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.5194/esurf-4-211-2016",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.1594/IEDA/100612",
+      "title": "Susquehanna Shale Hills Critical Zone Observatory - Shaver's Creek Watershed Stream Chemistry (2015)",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.5194/esurf-4-211-2016",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.26022/IEDA/111537",
+      "title": "Susquehanna Shale Hills Critical Zone Observatory - Shaver's Creek Watershed Stream Chemistry (2016)",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1002/2016WR019717",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.1594/IEDA/100236",
+      "title": "Susquehanna Shale Hills Critical Zone Observatory Porewater Chemistry (2009)",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.2136/vzj2010.0133",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.1594/IEDA/100242",
+      "title": "Susquehanna Shale Hills Critical Zone Observatory Stream Water Chemistry (2009)",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.2136/vzj2010.0133",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.1594/IEDA/100235",
+      "title": "Susquehanna Shale Hills Critical Zone Observatory Porewater Chemistry (2008)",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.2136/vzj2010.0133",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.1594/IEDA/100241",
+      "title": "Susquehanna Shale Hills Critical Zone Observatory Stream Water Chemistry (2008)",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.2136/vzj2010.0133",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.1594/IEDA/100237",
+      "title": "Susquehanna Shale Hills Critical Zone Observatory Porewater Chemistry (2010)",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.2136/vzj2010.0133",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.1594/IEDA/100239",
+      "title": "Susquehanna Shale Hills Critical Zone Observatory Stream Water Chemistry (2006)",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.2136/vzj2010.0133",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.1594/IEDA/100243",
+      "title": "Susquehanna Shale Hills Critical Zone Observatory Stream Water Chemistry (2010)",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.2136/vzj2010.0133",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.1594/IEDA/100234",
+      "title": "Susquehanna Shale Hills Critical Zone Observatory Porewater Chemistry (2007)",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.2136/vzj2010.0133",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.1594/IEDA/100240",
+      "title": "Susquehanna Shale Hills Critical Zone Observatory Stream Water Chemistry (2007)",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.2136/vzj2010.0133",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.1594/IEDA/100233",
+      "title": "Susquehanna Shale Hills Critical Zone Observatory Porewater Chemistry (2006)",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.2136/vzj2010.0133",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.1594/IEDA/100268",
+      "title": "Susquehanna Shale Hills Critical Zone Observatory Tree Survey (2008)",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1371/journal.pone.0058704",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.1594/IEDA/111433",
+      "title": "Susquehanna Shale Hills Critical Zone Observatory Tree Survey",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1371/journal.pone.0058704",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.1594/IEDA/100742",
+      "title": "Susquehanna Shale Hills Critical Zone Observatory (CZO) - Soil Surface N2O & CO2 Gas Flux Data for 2013, 2014, June 2016 (Pennsylvania, USA)",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1016/j.apgeochem.2015.07.005",
+          "source": "datacite"
+        }
+      ]
+    }
+  ],
+  "candidate_products_not_in_the_list": [
+    {
+      "doi": "10.5061/dryad.bh8m7v8",
+      "title": "Data from: Do genomics and sex predict migration in a partially migratory salmonid fish, Oncorhynchus mykiss?",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2019,
+      "repository": "DRYAD",
+      "url": "https://datadryad.org/dataset/doi:10.5061/dryad.bh8m7v8",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1139/cjfas-2018-0394",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6071/m3d104",
+      "title": "Continental-scale patterns of extracellular enzyme activity in the subsoil: an overlooked reservoir of microbial activity",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2020,
+      "repository": "DRYAD",
+      "url": "https://datadryad.org/dataset/doi:10.6071/M3D104",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1128/mBio.01318-19",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6078/d18t2s",
+      "title": "Partial migration alters population ecology and food chain length: evidence from a salmonid fish",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2020,
+      "repository": "DRYAD",
+      "url": "https://datadryad.org/dataset/doi:10.6078/D18T2S",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1002/ecs2.3044",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6078/d1dm6g",
+      "title": "Temporal dynamics of migration-linked genetic variation are driven by streamflows and riverscape permeability",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2020,
+      "repository": "DRYAD",
+      "url": "https://datadryad.org/dataset/doi:10.6078/D1DM6G",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1111/mec.15367",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6078/d1j69q",
+      "title": "Tributary confluences are dynamic thermal refuges for a juvenile salmonid in a warming river network",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2020,
+      "repository": "DRYAD",
+      "url": "https://datadryad.org/dataset/doi:10.6078/D1J69Q",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1002/rra.3634",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.15786/m2rp4q",
+      "title": "Seismic and Resistivity Data for Boulder Creek CZO, Colorado, Calhoun, CZO, South Carolina, and Pond Branch, Maryland; Geophysical imaging reveals topographic stress control of bedrock weathering",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2015,
+      "repository": "Wyoming Data Repository",
+      "url": "https://dataverse.arcc.uwyo.edu/citation?persistentId=doi:10.15786/M2RP4Q",
+      "related": [
+        {
+          "relation": "supports",
+          "doi": "10.1126/science.aab2210",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6071/m3s94t",
+      "title": "Southern Sierra Critical Zone Observatory (SSCZO), Wolverton Creek meteorological data, soil moisture and temperature",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2019,
+      "repository": "DRYAD",
+      "url": "https://datadryad.org/dataset/doi:10.6071/M3S94T",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1002/hyp.10400",
+          "source": "datacite"
+        },
+        {
+          "relation": "cited-by",
+          "doi": "10.1002/2016wr019374",
+          "source": "datacite"
+        },
+        {
+          "relation": "cited-by",
+          "doi": "10.1002/2013WR013935",
+          "source": "datacite"
+        },
+        {
+          "relation": "cited-by",
+          "doi": "10.1016/j.agrformet.2012.03.011",
+          "source": "datacite"
+        },
+        {
+          "relation": "cited-by",
+          "doi": "10.1002/hyp.10834",
+          "source": "datacite"
+        },
+        {
+          "relation": "cited-by",
+          "doi": "10.5194/tc-10-257-2016",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.15482/usda.adc/30199954.v1",
+      "title": "The Reynolds Creek Long-Term Dataset: A long-term meteorological dataset derived from station observations in the Reynolds Creek Experimental Watershed",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2026,
+      "repository": "Ag Data Commons",
+      "url": "https://agdatacommons.nal.usda.gov/articles/dataset/The_Reynolds_Creek_Long-Term_Dataset_A_long-term_meteorological_dataset_derived_from_station_observations_in_the_Reynolds_Creek_Experimental_Watershed/30199954/1",
+      "related": [
+        {
+          "relation": "described-by",
+          "doi": "10.5194/essd-10-1197-2018",
+          "source": "datacite"
+        },
+        {
+          "relation": "described-by",
+          "doi": "10.5194/essd-10-1207-2018",
+          "source": "datacite"
+        },
+        {
+          "relation": "described-by",
+          "doi": "10.1016/j.cageo.2017.08.016",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.15482/usda.adc/30199954",
+      "title": "The Reynolds Creek Long-Term Dataset: A long-term meteorological dataset derived from station observations in the Reynolds Creek Experimental Watershed",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2026,
+      "repository": "Ag Data Commons",
+      "url": "https://agdatacommons.nal.usda.gov/articles/dataset/The_Reynolds_Creek_Long-Term_Dataset_A_long-term_meteorological_dataset_derived_from_station_observations_in_the_Reynolds_Creek_Experimental_Watershed/30199954",
+      "related": [
+        {
+          "relation": "described-by",
+          "doi": "10.5194/essd-10-1197-2018",
+          "source": "datacite"
+        },
+        {
+          "relation": "described-by",
+          "doi": "10.5194/essd-10-1207-2018",
+          "source": "datacite"
+        },
+        {
+          "relation": "described-by",
+          "doi": "10.1016/j.cageo.2017.08.016",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.1594/pangaea.819837",
+      "title": "Soil, snow, weather, and sub-surface storage data from a mountain catchment in the rain-snow transition zone",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2013,
+      "repository": "PANGAEA",
+      "url": "https://doi.pangaea.de/10.1594/PANGAEA.819837",
+      "related": [
+        {
+          "relation": "supports",
+          "doi": "10.5194/essd-6-165-2014",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.15482/usda.adc/29403614.v1",
+      "title": "Data from: Spatial and temporal features of snow water equivalent across a headwater catchment in the Sierra Nevada",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2025,
+      "repository": "Ag Data Commons",
+      "url": "https://agdatacommons.nal.usda.gov/articles/dataset/Data_from_Spatial_and_temporal_features_of_snow_water_equivalent_across_a_headwater_catchment_in_the_Sierra_Nevada/29403614/1",
+      "related": [
+        {
+          "relation": "described-by",
+          "doi": "10.1016/j.cageo.2017.08.016",
+          "source": "datacite"
+        },
+        {
+          "relation": "described-by",
+          "doi": "10.1016/j.rse.2016.06.018",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.15482/usda.adc/29403614",
+      "title": "Data from: Spatial and temporal features of snow water equivalent across a headwater catchment in the Sierra Nevada",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2025,
+      "repository": "Ag Data Commons",
+      "url": "https://agdatacommons.nal.usda.gov/articles/dataset/Data_from_Spatial_and_temporal_features_of_snow_water_equivalent_across_a_headwater_catchment_in_the_Sierra_Nevada/29403614",
+      "related": [
+        {
+          "relation": "described-by",
+          "doi": "10.1016/j.cageo.2017.08.016",
+          "source": "datacite"
+        },
+        {
+          "relation": "described-by",
+          "doi": "10.1016/j.rse.2016.06.018",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.4231/r73x84k6",
+      "title": "Biological, chemical and flow characteristics of five river sampling sites in the Wabash River watershed near Lafayette, Indiana – 2011.",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2014,
+      "repository": "Purdue University Research Repository",
+      "url": "https://purr.purdue.edu/publications/1642/1",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1111/1752-1688.12336",
+          "source": "datacite"
+        },
+        {
+          "relation": "cited-by",
+          "doi": "10.3965/j.ijabe.20150803.951",
+          "source": "datacite"
+        },
+        {
+          "relation": "cited-by",
+          "doi": "10.1111/1752-1688.12338",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.4231/r77p8w9j",
+      "title": "Biological, chemical and flow characteristics of five river sampling sites in the Wabash River watershed near Lafayette, Indiana – 2010.",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2014,
+      "repository": "Purdue University Research Repository",
+      "url": "https://purr.purdue.edu/publications/1641/1",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1111/1752-1688.12336",
+          "source": "datacite"
+        },
+        {
+          "relation": "cited-by",
+          "doi": "10.3965/j.ijabe.20150803.951",
+          "source": "datacite"
+        },
+        {
+          "relation": "cited-by",
+          "doi": "10.1111/1752-1688.12338",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.4231/r7cc0xm3",
+      "title": "Biological, chemical and flow characteristics of five river sampling sites in the Wabash River watershed near Lafayette, Indiana – 2009.",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2014,
+      "repository": "Purdue University Research Repository",
+      "url": "https://purr.purdue.edu/publications/1598/1",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1111/1752-1688.12336",
+          "source": "datacite"
+        },
+        {
+          "relation": "cited-by",
+          "doi": "10.3965/j.ijabe.20150803.951",
+          "source": "datacite"
+        },
+        {
+          "relation": "cited-by",
+          "doi": "10.1111/1752-1688.12338",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.17632/nmmx94whmm.1",
+      "title": "Data for: An analysis of conservation practice adoption studies in agricultural human-natural systems",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2019,
+      "repository": "Mendeley Data",
+      "url": "https://data.mendeley.com/datasets/nmmx94whmm/1",
+      "related": [
+        {
+          "relation": "supports",
+          "doi": "10.1016/j.jenvman.2019.02.009",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.5061/dryad.h8d0n",
+      "title": "Data from: Seasonally varying contributions to urban CO2 in the Chicago, IL, USA region: insights from a high-resolution CO2 concentration and δ13C record",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2016,
+      "repository": "DRYAD",
+      "url": "https://datadryad.org/dataset/doi:10.5061/dryad.h8d0n",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.12952/journal.elementa.000052",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.1594/ieda/100639",
+      "title": "Jemez River Basin Soil Solution Chemistry 2011 (New Mexico, USA)",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2017,
+      "repository": "EarthChem Library",
+      "url": "https://ecl.earthchem.org/view.php?id=1008",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.2136/sssaj2012.0061",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/0ce5730244cfdaffeae90f2cb96b8ebe",
+      "title": "Luquillo Critical Zone Observatory (LCZO) Data repository on HydroShare",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2024,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-luq.218.5",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1016/j.epsl.2010.11.037",
+          "source": "datacite"
+        },
+        {
+          "relation": "cited-by",
+          "doi": "10.1111/j.1472-4669.2010.00264.x",
+          "source": "datacite"
+        },
+        {
+          "relation": "cited-by",
+          "doi": "10.1016/j.gca.2016.09.038",
+          "source": "datacite"
+        },
+        {
+          "relation": "cited-by",
+          "doi": "10.1029/2010WR009788",
+          "source": "datacite"
+        },
+        {
+          "relation": "cited-by",
+          "doi": "10.1016/j.gca.2013.02.012",
+          "source": "datacite"
+        },
+        {
+          "relation": "cited-by",
+          "doi": "10.1002/esp.3409",
+          "source": "datacite"
+        },
+        {
+          "relation": "cited-by",
+          "doi": "10.1016/j.epsl.2012.05.008",
+          "source": "datacite"
+        },
+        {
+          "relation": "cited-by",
+          "doi": "10.1016/j.gca.2012.09.037",
+          "source": "datacite"
+        },
+        {
+          "relation": "cited-by",
+          "doi": "10.1002/hyp.14146",
+          "source": "datacite"
+        },
+        {
+          "relation": "cited-by",
+          "doi": "10.2136/vzj2016.06.0050",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/ee9815b41b79c134fd714736ce98676a",
+      "title": "Continuous precipitation and stream chemistry data, Hubbard Brook Ecosystem Study, 1963 – present.",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2021,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-hbr.208.6",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1002/ecs2.1298",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6084/m9.figshare.3560601.v1",
+      "title": "Appendix D. Additional figures illustrating relationships between enzymes and soil characteristics.",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2016,
+      "repository": "figshare Academic Research System",
+      "url": "https://wiley.figshare.com/articles/dataset/Appendix_D_Additional_figures_illustrating_relationships_between_enzymes_and_soil_characteristics_/3560601/1",
+      "related": [
+        {
+          "relation": "supports",
+          "doi": "10.1890/13-2151.1",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6084/m9.figshare.3560601",
+      "title": "Appendix D. Additional figures illustrating relationships between enzymes and soil characteristics.",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2016,
+      "repository": "figshare Academic Research System",
+      "url": "https://wiley.figshare.com/articles/dataset/Appendix_D_Additional_figures_illustrating_relationships_between_enzymes_and_soil_characteristics_/3560601",
+      "related": [
+        {
+          "relation": "supports",
+          "doi": "10.1890/13-2151.1",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6084/m9.figshare.3560604.v1",
+      "title": "Appendix C. Additional statistical analyses assessing relationships between enzymes, sites, and soil characteristics.",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2016,
+      "repository": "figshare Academic Research System",
+      "url": "https://wiley.figshare.com/articles/dataset/Appendix_C_Additional_statistical_analyses_assessing_relationships_between_enzymes_sites_and_soil_characteristics_/3560604/1",
+      "related": [
+        {
+          "relation": "supports",
+          "doi": "10.1890/13-2151.1",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6084/m9.figshare.3560604",
+      "title": "Appendix C. Additional statistical analyses assessing relationships between enzymes, sites, and soil characteristics.",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2016,
+      "repository": "figshare Academic Research System",
+      "url": "https://wiley.figshare.com/articles/dataset/Appendix_C_Additional_statistical_analyses_assessing_relationships_between_enzymes_sites_and_soil_characteristics_/3560604",
+      "related": [
+        {
+          "relation": "supports",
+          "doi": "10.1890/13-2151.1",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6084/m9.figshare.3560607.v1",
+      "title": "Appendix B. Additional soil biogeochemical data.",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2016,
+      "repository": "figshare Academic Research System",
+      "url": "https://wiley.figshare.com/articles/dataset/Appendix_B_Additional_soil_biogeochemical_data_/3560607/1",
+      "related": [
+        {
+          "relation": "supports",
+          "doi": "10.1890/13-2151.1",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6084/m9.figshare.3560607",
+      "title": "Appendix B. Additional soil biogeochemical data.",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2016,
+      "repository": "figshare Academic Research System",
+      "url": "https://wiley.figshare.com/articles/dataset/Appendix_B_Additional_soil_biogeochemical_data_/3560607",
+      "related": [
+        {
+          "relation": "supports",
+          "doi": "10.1890/13-2151.1",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6084/m9.figshare.3560610.v1",
+      "title": "Appendix A. Study site and soil analysis methods.",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2016,
+      "repository": "figshare Academic Research System",
+      "url": "https://wiley.figshare.com/articles/dataset/Appendix_A_Study_site_and_soil_analysis_methods_/3560610/1",
+      "related": [
+        {
+          "relation": "supports",
+          "doi": "10.1890/13-2151.1",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6084/m9.figshare.3560610",
+      "title": "Appendix A. Study site and soil analysis methods.",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2016,
+      "repository": "figshare Academic Research System",
+      "url": "https://wiley.figshare.com/articles/dataset/Appendix_A_Study_site_and_soil_analysis_methods_/3560610",
+      "related": [
+        {
+          "relation": "supports",
+          "doi": "10.1890/13-2151.1",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/7099a8c876e998b53959ac541b381850",
+      "title": "Bisley rainfall and throughfall, and chemistry of rainfall and throughfall",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2023,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-luq.148.1213962",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1016/j.jhydrol.2006.09.019",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/97fd0b5811004d8491a07d3776616408",
+      "title": "LEF Sabana weather station from 2018",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2023,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-luq.216.6",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1371/journal.pone.0180987",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/3d4809855e57763e9f00e69791964614",
+      "title": "Geospatial data for Luquillo Mountains, Puerto Rico: Mean annual precipitation, elevation, watershed outlines, and rain gage locations",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2023,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-luq.210.5",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1371/journal.pone.0180987",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6084/m9.figshare.3564567.v1",
+      "title": "Supplement 1. R scripts for conducting the analyses described in the article.",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2016,
+      "repository": "figshare Academic Research System",
+      "url": "https://wiley.figshare.com/articles/dataset/Supplement_1_R_scripts_for_conducting_the_analyses_described_in_the_article_/3564567/1",
+      "related": [
+        {
+          "relation": "supports",
+          "doi": "10.1890/ES14-00517.1",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6084/m9.figshare.3564567",
+      "title": "Supplement 1. R scripts for conducting the analyses described in the article.",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2016,
+      "repository": "figshare Academic Research System",
+      "url": "https://wiley.figshare.com/articles/dataset/Supplement_1_R_scripts_for_conducting_the_analyses_described_in_the_article_/3564567",
+      "related": [
+        {
+          "relation": "supports",
+          "doi": "10.1890/ES14-00517.1",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/d113d7ac3a23d3a9cbdc0824789640e7",
+      "title": "Chemistry of rainfall and throughfall from El Verde and Bisley",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2015,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-luq.174.2110800",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1016/j.gca.2016.12.032",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/63e41fb1bb1bf05d7cdca90c55769fa4",
+      "title": "Chemistry of stream water from the Luquillo Mountains",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2015,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-luq.20.4923050",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1016/j.gca.2016.12.032",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/de3e88a857d427bb82edcef0bdd21e8c",
+      "title": "Daily streamflow (Bisley area, 5 stations: Q1, Q2, Q3, Sabana, Puente Roto)",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2015,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-luq.156.977400",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1016/j.gca.2016.12.032",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/f9ce74b63495a242128fb5f93f5ebdf5",
+      "title": "Bisley daily rainfall (Bisley weekly environmental data)",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2015,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-luq.29.306150",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1016/j.gca.2016.12.032",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6084/m9.figshare.7245569.v1",
+      "title": "Additional file 2: of Transient O2 pulses direct Fe crystallinity and Fe(III)-reducer gene expression within a soil microbiome",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2018,
+      "repository": "figshare Academic Research System",
+      "url": "https://springernature.figshare.com/articles/Additional_file_2_of_Transient_O2_pulses_direct_Fe_crystallinity_and_Fe_III_-reducer_gene_expression_within_a_soil_microbiome/7245569/1",
+      "related": [
+        {
+          "relation": "supports",
+          "doi": "10.1186/s40168-018-0574-5",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6084/m9.figshare.7245569",
+      "title": "Additional file 2: of Transient O2 pulses direct Fe crystallinity and Fe(III)-reducer gene expression within a soil microbiome",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2018,
+      "repository": "figshare Academic Research System",
+      "url": "https://springernature.figshare.com/articles/Additional_file_2_of_Transient_O2_pulses_direct_Fe_crystallinity_and_Fe_III_-reducer_gene_expression_within_a_soil_microbiome/7245569",
+      "related": [
+        {
+          "relation": "supports",
+          "doi": "10.1186/s40168-018-0574-5",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6084/m9.figshare.7245587.v1",
+      "title": "Additional file 3: of Transient O2 pulses direct Fe crystallinity and Fe(III)-reducer gene expression within a soil microbiome",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2018,
+      "repository": "figshare Academic Research System",
+      "url": "https://springernature.figshare.com/articles/Additional_file_3_of_Transient_O2_pulses_direct_Fe_crystallinity_and_Fe_III_-reducer_gene_expression_within_a_soil_microbiome/7245587/1",
+      "related": [
+        {
+          "relation": "supports",
+          "doi": "10.1186/s40168-018-0574-5",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6084/m9.figshare.7245587",
+      "title": "Additional file 3: of Transient O2 pulses direct Fe crystallinity and Fe(III)-reducer gene expression within a soil microbiome",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2018,
+      "repository": "figshare Academic Research System",
+      "url": "https://springernature.figshare.com/articles/Additional_file_3_of_Transient_O2_pulses_direct_Fe_crystallinity_and_Fe_III_-reducer_gene_expression_within_a_soil_microbiome/7245587",
+      "related": [
+        {
+          "relation": "supports",
+          "doi": "10.1186/s40168-018-0574-5",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6084/m9.figshare.7245611.v1",
+      "title": "Additional file 4: of Transient O2 pulses direct Fe crystallinity and Fe(III)-reducer gene expression within a soil microbiome",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2018,
+      "repository": "figshare Academic Research System",
+      "url": "https://springernature.figshare.com/articles/Additional_file_4_of_Transient_O2_pulses_direct_Fe_crystallinity_and_Fe_III_-reducer_gene_expression_within_a_soil_microbiome/7245611/1",
+      "related": [
+        {
+          "relation": "supports",
+          "doi": "10.1186/s40168-018-0574-5",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6084/m9.figshare.7245611",
+      "title": "Additional file 4: of Transient O2 pulses direct Fe crystallinity and Fe(III)-reducer gene expression within a soil microbiome",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2018,
+      "repository": "figshare Academic Research System",
+      "url": "https://springernature.figshare.com/articles/Additional_file_4_of_Transient_O2_pulses_direct_Fe_crystallinity_and_Fe_III_-reducer_gene_expression_within_a_soil_microbiome/7245611",
+      "related": [
+        {
+          "relation": "supports",
+          "doi": "10.1186/s40168-018-0574-5",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6084/m9.figshare.7245626.v1",
+      "title": "Additional file 5: of Transient O2 pulses direct Fe crystallinity and Fe(III)-reducer gene expression within a soil microbiome",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2018,
+      "repository": "figshare Academic Research System",
+      "url": "https://springernature.figshare.com/articles/Additional_file_5_of_Transient_O2_pulses_direct_Fe_crystallinity_and_Fe_III_-reducer_gene_expression_within_a_soil_microbiome/7245626/1",
+      "related": [
+        {
+          "relation": "supports",
+          "doi": "10.1186/s40168-018-0574-5",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6084/m9.figshare.7245626",
+      "title": "Additional file 5: of Transient O2 pulses direct Fe crystallinity and Fe(III)-reducer gene expression within a soil microbiome",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2018,
+      "repository": "figshare Academic Research System",
+      "url": "https://springernature.figshare.com/articles/Additional_file_5_of_Transient_O2_pulses_direct_Fe_crystallinity_and_Fe_III_-reducer_gene_expression_within_a_soil_microbiome/7245626",
+      "related": [
+        {
+          "relation": "supports",
+          "doi": "10.1186/s40168-018-0574-5",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6084/m9.figshare.7245641.v1",
+      "title": "Additional file 6: of Transient O2 pulses direct Fe crystallinity and Fe(III)-reducer gene expression within a soil microbiome",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2018,
+      "repository": "figshare Academic Research System",
+      "url": "https://springernature.figshare.com/articles/Additional_file_6_of_Transient_O2_pulses_direct_Fe_crystallinity_and_Fe_III_-reducer_gene_expression_within_a_soil_microbiome/7245641/1",
+      "related": [
+        {
+          "relation": "supports",
+          "doi": "10.1186/s40168-018-0574-5",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6084/m9.figshare.7245641",
+      "title": "Additional file 6: of Transient O2 pulses direct Fe crystallinity and Fe(III)-reducer gene expression within a soil microbiome",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2018,
+      "repository": "figshare Academic Research System",
+      "url": "https://springernature.figshare.com/articles/Additional_file_6_of_Transient_O2_pulses_direct_Fe_crystallinity_and_Fe_III_-reducer_gene_expression_within_a_soil_microbiome/7245641",
+      "related": [
+        {
+          "relation": "supports",
+          "doi": "10.1186/s40168-018-0574-5",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6084/m9.figshare.7245656.v1",
+      "title": "Additional file 7: of Transient O2 pulses direct Fe crystallinity and Fe(III)-reducer gene expression within a soil microbiome",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2018,
+      "repository": "figshare Academic Research System",
+      "url": "https://springernature.figshare.com/articles/Additional_file_7_of_Transient_O2_pulses_direct_Fe_crystallinity_and_Fe_III_-reducer_gene_expression_within_a_soil_microbiome/7245656/1",
+      "related": [
+        {
+          "relation": "supports",
+          "doi": "10.1186/s40168-018-0574-5",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6084/m9.figshare.7245656",
+      "title": "Additional file 7: of Transient O2 pulses direct Fe crystallinity and Fe(III)-reducer gene expression within a soil microbiome",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2018,
+      "repository": "figshare Academic Research System",
+      "url": "https://springernature.figshare.com/articles/Additional_file_7_of_Transient_O2_pulses_direct_Fe_crystallinity_and_Fe_III_-reducer_gene_expression_within_a_soil_microbiome/7245656",
+      "related": [
+        {
+          "relation": "supports",
+          "doi": "10.1186/s40168-018-0574-5",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.3334/cdiac/cli.002",
+      "title": "Global and Hemispheric Temperature Anomalies: Land and Marine Instrumental Records (1850 - 2015)",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2016,
+      "repository": "DOE Lawrence Berkeley National Laboratory (LBNL) Repository",
+      "url": "https://www.osti.gov/servlets/purl/1389299/",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1177/2053019615587056",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.3886/icpsr37078",
+      "title": "Colonial Land Grants Database, Calhoun Critical Zone Observatory, South Carolina, 1749-1851",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2026,
+      "repository": "ICPSR",
+      "url": "https://www.icpsr.umich.edu/web/ICPSR/studies/37078",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1371/journal.pone.0195036",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6084/m9.figshare.3563991.v1",
+      "title": "Supplement 1. Data files used in the main text.",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2016,
+      "repository": "figshare Academic Research System",
+      "url": "https://wiley.figshare.com/articles/dataset/Supplement_1_Data_files_used_in_the_main_text_/3563991/1",
+      "related": [
+        {
+          "relation": "supports",
+          "doi": "10.1890/ES14-00384.1",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6084/m9.figshare.3563991",
+      "title": "Supplement 1. Data files used in the main text.",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2016,
+      "repository": "figshare Academic Research System",
+      "url": "https://wiley.figshare.com/articles/dataset/Supplement_1_Data_files_used_in_the_main_text_/3563991",
+      "related": [
+        {
+          "relation": "supports",
+          "doi": "10.1890/ES14-00384.1",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/a6e67349d865c05080141e66ce115de0",
+      "title": "Catchment scale soil variably in Marshall Gulch, Santa Catalina Mountains Critical Zone Observatory (CZO), Arizona, 2012",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2020,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=edi.561.1",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.5194/soil-1-47-2015",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6071/m3010d",
+      "title": "Evapotranspiration data from eddy-covariance flux-tower measurements and Landsat imagery in California’s Sierra Nevada from 1985 to 2019",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2020,
+      "repository": "DRYAD",
+      "url": "https://datadryad.org/dataset/doi:10.6071/M3010D",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1038/s41561-019-0388-5",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.7280/d1dh3b",
+      "title": "Figures for \"California forest die-off linked to multi-year deep soil drying in 2012-2015 drought\"",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2019,
+      "repository": "DRYAD",
+      "url": "https://datadryad.org/dataset/doi:10.7280/D1DH3B",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1038/s41561-019-0388-5",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6071/m3fh3d",
+      "title": "Climate, snow, and soil moisture data set for the Tuolumne and Merced River watersheds, California, USA",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2018,
+      "repository": "DRYAD",
+      "url": "https://datadryad.org/dataset/doi:10.6071/M3FH3D",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.5194/essd-11-101-2019",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.5880/gfz.3.3.2017.001",
+      "title": "Supplementary dataset for: Quantifying nutrient uptake as driver of rock weathering in forest ecosystems by magnesium stable isotopes",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2017,
+      "repository": "GFZ Data Services",
+      "url": "https://dataservices.gfz.de/10.5880/gfz.3.3.2017.001/supplementary-dataset-for-quantifying-nutrient",
+      "related": [
+        {
+          "relation": "supports",
+          "doi": "10.5194/bg-14-3111-2017",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6071/m39q2v",
+      "title": "Snow depth, air temperature, humidity, soil moisture and temperature, and solar radiation data from the basin-scale wireless-sensor network in American River Hydrologic Observatory (ARHO)",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2020,
+      "repository": "DRYAD",
+      "url": "https://datadryad.org/dataset/doi:10.6071/M39Q2V",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1002/wrcr.20100",
+          "source": "datacite"
+        },
+        {
+          "relation": "cited-by",
+          "doi": "10.1002/2016WR019619",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/bf80a94af8efe34482e5919ddaf75c06",
+      "title": "A grazing crab drives saltmarsh carbon storage and recovery in VA, SC, and GA",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2024,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-vcr.407.3",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1002/ecy.4385",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/4ae5ac3fbdb6a20dcdcb2ff36487d292",
+      "title": "Coastal landcover change and the associated biomass trends in the mid-Atlantic sea-level rise hotspot",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2022,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-vcr.379.1",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1038/s41561-022-01041-x",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/09a0ce35bb3fc72113b5a16ad5b0d6bd",
+      "title": "Above- and Below-Ground Biomass and Canopy Height of Seagrass in Hog Island Bay and South Bay, VA 2007-2017",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2018,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-vcr.183.17",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1007/s10021-023-00877-7",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/c3d63f52c49715cd4f4d4001a62183ec",
+      "title": "End of Year Biomass in marsh transition plots in Upper Phillips Creek marsh 1999-2014",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2020,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-vcr.171.22",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1007/s10021-023-00877-7",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/ef30d9f3a1b8e6bdfc775d3cb18609d6",
+      "title": "Soil Characterization of the End of the Year Biomass marshes along the Virginia Coast Reserve 1999",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2018,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-vcr.189.16",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1007/s10021-023-00877-7",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/a96d178e900c8172f66afe3d4712b050",
+      "title": "Salt Marsh Biogeochemistry and Sediment Organic Matter Accumulation in Phillips Creek Marsh of the Virginia Coast Reserve 2001-2002",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2018,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-vcr.127.15",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1007/s10021-023-00877-7",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/4524c22708628eb7f06d174edae89ff2",
+      "title": "Carbon stocks in forests transitioning to salt marsh at four sites in the Chesapeake Bay region, 2019",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2021,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-vcr.328.1",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1007/s10021-023-00877-7",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/2a996604525236514fc7968d141d0fed",
+      "title": "Fine Root Biomass on North Hog Chronosequence, Virginia Coast Reserve, 1991-1992",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2018,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-vcr.68.16",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1007/s10021-023-00877-7",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/de298295eec8e19fa6f337d88748889f",
+      "title": "Seagrass blue carbon in a Virginia bay chronosequence 2013",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2018,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-vcr.261.2",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1007/s10021-023-00877-7",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/bd02ce327caa3f24992b4388b2eeb8f9",
+      "title": "Sediment Carbon and Nitrogen of Seagrass Restoration in Hog Island Bay and South Bay, VA 2007-2017",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2018,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-vcr.187.15",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1007/s10021-023-00877-7",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/a05eda62baa46677a6b1e8540ebab5a9",
+      "title": "Synthesis of Sea level rise and carbon accumulation rates in United States tidal wetlands",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2021,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-vcr.323.3",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1007/s10021-023-00877-7",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/4378f38c198bd3b04f7a87f3456903c8",
+      "title": "Dune Biomass on Hog Island, Virginia Coastal Barrier Islands, 1993-2012",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2020,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-vcr.70.25",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1007/s10021-023-00877-7",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/d996ae3db3d1dcc432409154a29b68a2",
+      "title": "Root biomass on Northern Hog Island at the Virginia Coast Reserve 1991-1992",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2018,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-vcr.112.18",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1007/s10021-023-00877-7",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/d766fc22d10ae5c75d7aeb3571e80613",
+      "title": "Aboveground biomass of dune vegetation on the Hog Island chronosequence at the Virginia Coast Reserve 1993",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2018,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-vcr.116.16",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1007/s10021-023-00877-7",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/8f292e9e095389dc9adedefea1e407c6",
+      "title": "End of Year Biomass in Marshes of the Virginia Coast Reserve 1999-2021",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2022,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-vcr.167.26",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1007/s10021-023-00877-7",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/1c1daba54dc3b7f80331bff7a74194b7",
+      "title": "Fertilization Above and Below Ground Biomass and Species Number on Hog Island Dunes, 1991",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2018,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-vcr.60.18",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1007/s10021-023-00877-7",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/e344146b23161569da9e8458f308aac2",
+      "title": "Vegetation Cover Permanent Plot Data : Biomass at Upper Phillips Creek marsh at the Virginia Coast Reserve 1990",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2018,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-vcr.36.19",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1007/s10021-023-00877-7",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/3854929ce06dc8c667eff9615adb730f",
+      "title": "End of Year Biomass for the 1st UPC Inundation Experiment in Upper Phillips Creek marsh 1999-2014",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2019,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-vcr.168.24",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1007/s10021-023-00877-7",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/d4d1465334c1de8c108b0d3eae6fdccc",
+      "title": "End of Year Biomass for the 2nd UPC Inundation Experiment in Upper Phillips Creek marsh 1999-2010",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2019,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-vcr.169.24",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1007/s10021-023-00877-7",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/9f91ecd5fc605b27f90386d78e9077f7",
+      "title": "Coastal Forest Aboveground Biomass Data at six sites in the Chesapeake Bay and Delaware Bay region, 2021",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2022,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-vcr.336.2",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1007/s10021-023-00877-7",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.5066/p9uqcn4t",
+      "title": "Temperature, relative humidity and cloud immersion data for Luquillo Mountains, eastern Puerto Rico, 2014-2019",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2021,
+      "repository": "USGS DOI Tool Production Environment",
+      "url": "https://www.sciencebase.gov/catalog/item/5f7cc24f82ce1d74e7db5531",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1073/pnas.2021646118",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.5066/p9xw4tm8",
+      "title": "Seasonal Atmospheric Nitrate and Ammonium Deposition along an Elevation Gradient in the Colorado Front Range using Ion Exchange Resin Columns (2018-2019)",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2021,
+      "repository": "USGS DOI Tool Production Environment",
+      "url": "https://www.sciencebase.gov/catalog/item/5fff2994d34e592d8671ecdb",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1029/2021ef002373",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/1538ccf520d89c7a11c2c489d973b232",
+      "title": "Infilled climate data for C1, Saddle, and D1, 1990 - 2013, hourly.",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2019,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-nwt.168.1",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1002/hyp.14416",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/82fd3feabda2b0e200ef4b85bc18a5ea",
+      "title": "Streamflow data for Como creek, 2006 - 2014",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2021,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-nwt.236.1",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1002/hyp.14416",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.7294/19350959.v4",
+      "title": "VLM and Horizontal velocity Data for US Atlantic coast",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2026,
+      "repository": "Virginia Tech Data Repository",
+      "url": "https://data.lib.vt.edu/articles/dataset/VLM_Data_for_US_Atlantic_coast/19350959/4",
+      "related": [
+        {
+          "relation": "supports",
+          "doi": "10.1038/s41467-023-37853-7",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.7294/19350959.v3",
+      "title": "VLM and Horizontal velocity Data for US Atlantic coast",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2023,
+      "repository": "Virginia Tech Data Repository",
+      "url": "https://data.lib.vt.edu/articles/dataset/VLM_Data_for_US_Atlantic_coast/19350959/3",
+      "related": [
+        {
+          "relation": "supports",
+          "doi": "10.1038/s41467-023-37853-7",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.7294/19350959",
+      "title": "VLM and Horizontal velocity Data for US Atlantic coast",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2026,
+      "repository": "Virginia Tech Data Repository",
+      "url": "https://data.lib.vt.edu/articles/dataset/VLM_Data_for_US_Atlantic_coast/19350959",
+      "related": [
+        {
+          "relation": "supports",
+          "doi": "10.1038/s41467-023-37853-7",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/1a449825e06e395513f95bdbd891e52a",
+      "title": "Carbon decomposition data from oxygen-limited soils",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2021,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=edi.971.1",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1111/gcb.15867",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/b0859dc42334873edc7d11bc39be6d34",
+      "title": "Geodetic snow depth from UAV campaign at Niwot Ridge, 2017",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2021,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-nwt.288.1",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1002/hyp.13686",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/bb935444378d112d9189556fd22a441d",
+      "title": "Stream chemistry concentrations and fluxes using proportional sampling in the Andrews Experimental Forest, 1968 to present",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2019,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-and.4021.23",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1029/2023wr035126",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/5e9d1771f114913c2ca8c98520c230ad",
+      "title": "Continuous precipitation and stream chemistry data, Hubbard Brook Ecosystem Study, 1963 – present.",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2022,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-hbr.208.8",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1029/2022gb007678",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/81ef15564db3a999ea28c02697550525",
+      "title": "Streamflow data for Albion camp, 1981 - ongoing.",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2022,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-nwt.102.17",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1029/2022gb007678",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/15b300e96c2d2f9785d0155b3e18b0e9",
+      "title": "Hubbard Brook Experimental Forest: Daily Streamflow by Watershed, 1956 - present",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2022,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-hbr.2.12",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1029/2022gb007678",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/59396e2b8d291badcfb140425e1b3a38",
+      "title": "Stream water chemistry data for Albion site, 1982 - ongoing.",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2021,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-nwt.103.14",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1029/2022gb007678",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/5534a25d64cd018f9c96a6a4c2f49315",
+      "title": "Stream water chemistry data for Martinelli basin, 1984 - ongoing.",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2021,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-nwt.112.4",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1029/2022gb007678",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/570231c2807a6396ced6a89ef7547bd4",
+      "title": "Chemistry of stream water from the Luquillo Mountains",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2022,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-luq.20.4923061",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1029/2022gb007678",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.5066/p951ukqb",
+      "title": "Dissolved silicon concentration and yield estimates from streams and rivers in North America and Antarctica,1964-2021",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2023,
+      "repository": "USGS DOI Tool Production Environment",
+      "url": "https://www.sciencebase.gov/catalog/item/646610b3d34ec11ae4a76b25",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1029/2022gb007678",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/733c73c6ebffeaec6970b2b0f4dddfe6",
+      "title": "Biogeochemistry data set for Imnavait Creek Weir on the North Slope of Alaska 2002-2018",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2019,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-arc.10531.9",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1029/2022gb007678",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/4e25db9ae9372f5339f2795792814845",
+      "title": "Biogeochemistry data set for soil waters, streams, and lakes near Toolik Lake on the North Slope of Alaska, 2012 through 2020",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2022,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-arc.20080.2",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1029/2022gb007678",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/49756c3243ea15535fb85c91c51d4606",
+      "title": "Meteorological data from El Verde Field Station: NADP Tower",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2022,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-luq.127.1676174",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1029/2022gb007678",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/bc0a64575f4609f4347a25eb328aaf19",
+      "title": "Monthly measurement summaries from Lake Hoare Meteorological Station (HOEM), McMurdo Dry Valleys, Antarctica (1987-2021, ongoing)",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2022,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-mcm.7211.7",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1029/2022gb007678",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/470ab4e2ea11e9b6f14aa1a698182790",
+      "title": "Daily summarized seasonal measurements of discharge, water temperature, and specific conductivity from the Onyx River at Lake Vanda, McMurdo Dry Valleys, Antarctica (1969-2020, ongoing)",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2021,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-mcm.9122.5",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1029/2022gb007678",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/d0eecda4953961c3e09084eb4bd54961",
+      "title": "Daily summarized seasonal measurements of discharge, water temperature, and specific conductivity from Von Guerard Stream at F6, McMurdo Dry Valleys, Antarctica (1990-2020, ongoing)",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2021,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-mcm.9127.4",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1029/2022gb007678",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/225599878869bdc7fb98def1fb50db4e",
+      "title": "Daily summarized seasonal measurements of discharge, water temperature, and specific conductivity from Priscu Stream at B1, McMurdo Dry Valleys, Antarctica (1993-2011)",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2022,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-mcm.9123.3",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1029/2022gb007678",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/84d7b8951eba8d4045c9811bf22eb012",
+      "title": "Daily summarized seasonal measurements of discharge, water temperature, and specific conductivity from Canada Stream at F1, McMurdo Dry Valleys, Antarctica (1990-2020, ongoing)",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2021,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-mcm.9107.5",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1029/2022gb007678",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/15f6449928acee5d466190039b00184c",
+      "title": "Daily summarized seasonal measurements of discharge, water temperature, and specific conductivity from Andersen Creek at H1, McMurdo Dry Valleys, Antarctica (1993-2020, ongoing)",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2021,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-mcm.9103.5",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1029/2022gb007678",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/7babcb926781cefe25fd56602c87a5b7",
+      "title": "Daily summarized seasonal measurements of discharge, water temperature, and specific conductivity from Green Creek at F9, McMurdo Dry Valleys, Antarctica (1990-2020, ongoing)",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2021,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-mcm.9113.4",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1029/2022gb007678",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/8e341466b06ac3fd3286cf49b8ddea8f",
+      "title": "Daily summarized seasonal measurements of discharge, water temperature, and specific conductivity from Lawson Creek at B3, McMurdo Dry Valleys, Antarctica (1994-2020, ongoing)",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2021,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-mcm.9117.7",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1029/2022gb007678",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/a87891ff406503c740b65067d62cbf61",
+      "title": "USGS Long-term daily streamflow data at several LEF locations",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2022,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-luq.58.1315151",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1029/2022gb007678",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/3abf11e44afab0e8605684549f3868a3",
+      "title": "Streamflow data for Saddle stream, 1999 - ongoing.",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2022,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-nwt.74.7",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1029/2022gb007678",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/d8a48465249f41936816a5d0d1d22e87",
+      "title": "Stream water chemistry data for Saddle stream (007), 1994 - ongoing.",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2021,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-nwt.9.4",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1029/2022gb007678",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/76fffe560f896e1e9a04ab34c114b8a5",
+      "title": "Streamflow for Martinelli basin, 1982 - ongoing.",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2022,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-nwt.111.14",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1029/2022gb007678",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/bcbe47a10a08bc6ddca69fb2c59959ca",
+      "title": "Canopy Trimming Experiment Litterfall Nutrients Data",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2018,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-luq.178.7",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1002/hyp.14146",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/fe51799a303a8504c0562426fbc850c6",
+      "title": "Bisley rainfall and throughfall, and chemistry of rainfall and throughfall",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2017,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-luq.148.1213961",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1002/hyp.14146",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/f9df56348f510da0113b1e6012fa2967",
+      "title": "Chemistry of stream water from the Luquillo Mountains",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2017,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-luq.20.4923051",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1002/hyp.14146",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/e73e96da124481de01486a0dab0178dc",
+      "title": "Meteorological data from El Verde Field Station: NADP Tower",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2021,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-luq.127.1676164",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1002/hyp.14146",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/bc3c46b7ebc4f53c3cef1d9c052169df",
+      "title": "Prieta stream - Discharge and water level at pool 0",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2020,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-luq.182.210369",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1002/hyp.14146",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/b14b442a87fff9dc22b68bc462be756b",
+      "title": "Sonadora elevational plots: long-term monitoring of air temperature",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2017,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-luq.183.877101",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1002/hyp.14146",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/8d2ee3d7d5e3e8655063e738ae3700e2",
+      "title": "Meteorological data from several climate stations in the northeast section of the Luquillo Experimental Forest",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2018,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-luq.147.716252",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1002/hyp.14146",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/8a6c85713bf55573c457d92076385bee",
+      "title": "Chemistry of rainfall and throughfall from El Verde and Bisley",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2017,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-luq.174.2110851",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1002/hyp.14146",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/44835db7c9f0d16602131aad9370ba1f",
+      "title": "Chemistry of soil solution collected from zero tension lysimeters in the Canopy Trimming Experiment (CTE) plots",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2015,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-luq.166.731250",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1002/hyp.14146",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/3e34534da2a008d84269356442f772b8",
+      "title": "Rainfall at El Verde Field Station, Rio Grande, Puerto Rico since 1975",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2021,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-luq.14.470040",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1002/hyp.14146",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/9733f6b6d2ffd12bf126dc36a763e0b4",
+      "title": "SOils DAta Harmonization database (SoDaH): an open-source synthesis of soil data from research networks",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2020,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=edi.521.1",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1002/eap.2290",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/4edf9b0d9d6660d354710748b2cf56f0",
+      "title": "Lateral and vertical forest retreat rate in the mid-Atlantic sea-level rise hotspot",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2023,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-vcr.399.1",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1111/gcb.17081",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.6073/pasta/7d83e489e249cac81c7e17409abfec8e",
+      "title": "NEON distributed initial soil characterization dataset (DP1.10047.001) modified for statistical analysis of organic carbon and extractable metals in Hall and Thompson (2021)",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2021,
+      "repository": "Environmental Data Initiative",
+      "url": "https://portal.edirepository.org/nis/mapbrowse?packageid=edi.999.1",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1002/saj2.20343",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.5285/44095e17-43b0-45d4-a781-aab4f72da025",
+      "title": "Plynlimon research catchment hydrochemistry",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2013,
+      "repository": "NERC Environmental Data Service",
+      "url": "https://catalogue.ceh.ac.uk/id/44095e17-43b0-45d4-a781-aab4f72da025",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.5194/hess-19-3333-2015",
+          "source": "datacite"
+        },
+        {
+          "relation": "cited-by",
+          "doi": "10.1016/j.chemgeo.2017.06.024",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.5061/dryad.bh88s",
+      "title": "Data from: Root morphology and mycorrhizal type strongly influence root production in nutrient hot spots of mixed forests",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2018,
+      "repository": "DRYAD",
+      "url": "https://datadryad.org/dataset/doi:10.5061/dryad.bh88s",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.1111/1365-2745.12800",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.5061/dryad.760jg17",
+      "title": "Data from: Soil CO2 and O2 concentrations illuminate the relative importance of weathering and respiration to seasonal soil gas fluctuations",
+      "type": "dataset",
+      "resource_type_general": "Dataset",
+      "year": 2020,
+      "repository": "DRYAD",
+      "url": "https://datadryad.org/dataset/doi:10.5061/dryad.760jg17",
+      "related": [
+        {
+          "relation": "cited-by",
+          "doi": "10.2136/sssaj2019.02.0049",
+          "source": "datacite"
+        }
+      ]
+    }
+  ]
+}
