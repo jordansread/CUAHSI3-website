@@ -17,23 +17,24 @@
     "papers_asked": 1276,
     "papers_with_a_datacite_record_naming_them": 162,
     "papers_with_a_supporting_link": 87,
-    "supporting_links": 213,
+    "supporting_links": 216,
     "supporting_links_by_relation": {
       "cited-by": 172,
-      "supports": 31,
+      "supports": 34,
       "described-by": 10
     },
     "confirmed_links_read": 0,
     "confirmed_links_that_overrode_a_datacite_link": 0,
     "confirmed_links_for_papers_not_in_the_list": 0,
-    "datasets_found": 167,
+    "datasets_found": 170,
     "datasets_already_in_the_list": 40,
-    "datasets_not_in_the_list": 127,
+    "datasets_not_in_the_list": 130,
     "datasets_not_in_the_list_by_repository": {
       "Environmental Data Initiative": 69,
       "figshare Academic Research System": 24,
       "DRYAD": 13,
       "Ag Data Commons": 4,
+      "Zenodo": 3,
       "Purdue University Research Repository": 3,
       "USGS DOI Tool Production Environment": 3,
       "Virginia Tech Data Repository": 3,
@@ -47,7 +48,7 @@
       "NERC Environmental Data Service": 1
     },
     "dataset_cites_paper_relations_seen_and_not_kept": 219,
-    "dataset_is_supplemented_by_paper_relations_seen_and_not_stored": 3,
+    "dataset_is_supplemented_by_paper_relations_seen_and_stored_as_supports": 3,
     "pairs_with_two_kept_relations_strongest_stored": 0,
     "papers_with_a_link_by_era": {
       "czo": 70,
@@ -66,11 +67,12 @@
       "calhoun": 2
     },
     "candidate_datasets_by_type": {
-      "Dataset": 127
+      "Dataset": 127,
+      "Software": 3
     },
     "candidate_datasets_by_published_five_years": {
       "2010": 5,
-      "2015": 61,
+      "2015": 64,
       "2020": 54,
       "2025": 7
     },
@@ -870,6 +872,54 @@
         {
           "relation": "described-by",
           "doi": "10.1016/j.rse.2016.06.018",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.5281/zenodo.898158",
+      "title": "Spatial Modeling for Resources Framework (SMRF)",
+      "type": "software",
+      "resource_type_general": "Software",
+      "year": 2017,
+      "repository": "Zenodo",
+      "url": "https://zenodo.org/record/898158",
+      "related": [
+        {
+          "relation": "supports",
+          "doi": "10.1016/j.cageo.2017.08.016",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.5281/zenodo.898157",
+      "title": "Spatial Modeling for Resources Framework (SMRF)",
+      "type": "software",
+      "resource_type_general": "Software",
+      "year": 2017,
+      "repository": "Zenodo",
+      "url": "https://zenodo.org/record/898157",
+      "related": [
+        {
+          "relation": "supports",
+          "doi": "10.1016/j.cageo.2017.08.016",
+          "source": "datacite"
+        }
+      ]
+    },
+    {
+      "doi": "10.5281/zenodo.1120425",
+      "title": "Spatial Modeling for Resources Framework (SMRF)",
+      "type": "software",
+      "resource_type_general": "Software",
+      "year": 2017,
+      "repository": "Zenodo",
+      "url": "https://zenodo.org/record/1120425",
+      "related": [
+        {
+          "relation": "supports",
+          "doi": "10.1016/j.cageo.2017.08.016",
           "source": "datacite"
         }
       ]
