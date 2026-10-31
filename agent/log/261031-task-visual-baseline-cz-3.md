@@ -1,1 +1,2 @@
 261031 | task/visual-baseline-cz-3 | start | Jordan said 'merged #180, start the next task'. Rewrites the changed images of visual/baseline from a build of main after the highlights display (#180), the about page (#177) and the table changes. Only intended images are kept; unrelated images that flake are restored from git.
+261031 | task/visual-baseline-cz-3 | pr | #181 opened: https://github.com/jordansread/CUAHSI3-website/pull/181
