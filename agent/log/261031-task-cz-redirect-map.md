@@ -1,0 +1,1 @@
+261031 | task/cz-redirect-map | start | Critical Zone epic, ticket T15 (CUAHSI/CUAHSI3-website#81): a draft section-level redirect map (report only) for Jordan's decisions. Jordan said 'merged #182, start the next task'; nothing else was unblocked without a decision, and rule 8 forbids changing netlify.toml, public/ links or domains without approval, so this stops at a proposal.
