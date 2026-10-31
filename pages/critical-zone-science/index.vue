@@ -105,6 +105,15 @@ const places = [
       </div>
     </div>
 
+    <!-- The network -->
+    <div class="mx-auto site-container max-w-site pt-[48px]">
+      <h2 class="font-['Schibsted_Grotesk'] font-bold text-[28px] leading-[1.1] text-navy tracking-[-.016em] m-[0_0_8px]">The network</h2>
+      <p class="font-['Hanken_Grotesk'] font-normal text-[16px] leading-[1.6] text-[#3a4d57] max-w-[640px] m-[0_0_20px]">
+        The datasets, papers and software listed for the Critical Zone Collaborative Network's Hub and nine thematic clusters.
+      </p>
+      <NuxtLink to="/critical-zone-science/network" class="inline-block font-['Hanken_Grotesk'] text-[14px] leading-[normal] text-navy bg-[rgba(31,111,178,.09)] rounded-[999px] p-[8px_16px] no-underline">The Critical Zone Collaborative Network →</NuxtLink>
+    </div>
+
     <!-- Where the work lives now -->
     <div class="mx-auto site-container max-w-site py-[64px]">
       <h2 class="font-['Schibsted_Grotesk'] font-bold text-[28px] leading-[1.1] text-navy tracking-[-.016em] m-[0_0_8px]">Where the work lives today</h2>
