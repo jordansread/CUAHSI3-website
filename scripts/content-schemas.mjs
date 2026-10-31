@@ -349,6 +349,20 @@ const CZ_SITES = [
   'national', 'boulder', 'calhoun', 'catalina-jemez', 'christina', 'eel', 'iml', 'luquillo', 'reynolds', 'shale-hills', 'sierra',          // the CZO archive's observatories
   'hub', 'bedrock', 'bigdata', 'cinet', 'coastal', 'drylands', 'dust2', 'dynamic-water', 'geomicrobiology', 'urban',                      // CZNet's hub and nine clusters
 ]
+// `related`: links from this product to other products (epic ticket T6c, CUAHSI/CUAHSI3-website#87). Each says what THIS product is to the linked
+// one, in the supporting relations only: `supports` (this product is data that supports the linked product, for example a dataset for a
+// paper), `cited-by` (the linked product cites this one), `described-by` (the linked product describes this one, for example a data paper).
+// The links live with the dataset, because a repository records "this dataset supplements that paper" and the paper's own record usually
+// says nothing back. `source` is where the link was read: `datacite`, or `manual` for a person's confirmed list. The linked product is named by
+// a DOI or a URL (the DOI decides when both are given; a URL is compared as written) and must be in the list and not be the product itself,
+// unless the entry says `in_list: false` (not yet in it: the validator reports a mismatch either way).
+const relatedLink = z.strictObject({
+  relation: z.enum(['supports', 'cited-by', 'described-by']),
+  doi: z.string().regex(DOI_RE, 'must be a bare DOI such as 10.4211/hs.0123..., not a URL').optional(),
+  url: webUrl.optional(),
+  source: z.enum(['datacite', 'manual']),
+  in_list: z.literal(false).optional(),   // only ever written as false, for a product not yet in the list
+}).refine(l => Boolean(l.doi) || Boolean(l.url), { message: 'a related link needs a doi or a url' })
 const criticalZoneProduct = z.strictObject({
   title: nonEmpty,
   type: z.enum(['dataset', 'paper', 'software', 'model']),
@@ -362,6 +376,7 @@ const criticalZoneProduct = z.strictObject({
   year: z.number().int().min(1950).max(2100).optional(),
   access: z.enum(['open', 'restricted']).optional(),
   highlight: z.boolean().optional(),
+  related: z.array(relatedLink).optional(),
   source: z.enum(['czo-archive', 'discover', 'datacite', 'crossref', 'openalex', 'par', 'suggested', 'manual']),
   source_url: webUrl.optional(),
   date_added: isoDate,

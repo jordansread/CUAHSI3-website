@@ -143,6 +143,8 @@ const refs = {            // collected for the cross-reference section
   newsletterSource: [],   // { file, value }
   teamMdSlugs: [],        // { file, slug }
   awardUses: [],          // { file, value }: an id in a research story's `awards`
+  productKeys: new Set(), // 'doi:<lowercase doi>' and 'url:<url>' of every product in the list
+  productLinks: [],       // { file, doi, url, in_list }: an entry of a product's `related`
   awardsUndecided: [],    // published research files with no `awards` key at all
   awardIds: [],           // ids in content/awards/awards.json
   imageUses: [],          // { file, src }: a research story's image.src
@@ -217,6 +219,11 @@ for (const c of selected) {
       const parsed = c.schema.safeParse(entry)
       if (c.name === 'awards' && typeof entry?.id === 'string') refs.awardIds.push(entry.id)
       if (c.name === 'critical-zone/products.json' && Array.isArray(entry?.awards)) for (const v of entry.awards) refs.awardUses.push({ file: label, value: v })
+      if (c.name === 'critical-zone/products.json') {
+        if (typeof entry?.doi === 'string') refs.productKeys.add(`doi:${entry.doi.toLowerCase()}`)
+        if (typeof entry?.url === 'string') refs.productKeys.add(`url:${entry.url}`)
+        if (Array.isArray(entry?.related)) for (const l of entry.related) refs.productLinks.push({ file: label, doi: typeof l?.doi === 'string' ? l.doi : undefined, url: typeof l?.url === 'string' ? l.url : undefined, in_list: l?.in_list, ownDoi: entry.doi, ownUrl: entry.url })
+      }
       if (c.name === 'members/reps.json' && typeof entry?.institution === 'string') refs.memberNames.push(entry.institution.trim())
       if (typeof entry?.slug === 'string') (refs.slugs.get(c.name) ?? refs.slugs.set(c.name, []).get(c.name)).push({ id: label, slug: entry.slug })
       if (parsed.success) r.pass++
@@ -345,6 +352,22 @@ if (selected.some(c => c.name === 'research' || c.name === 'critical-zone/produc
   const used = new Set(refs.awardUses.map(u => u.value))
   if (selected.some(c => c.name === 'research')) info.push({ title: 'awards: published research stories with no awards key (not yet decided; [] means checked, none): informational', checked: `${refs.awardsUndecided.length} files`, items: refs.awardsUndecided.length ? [`${refs.awardsUndecided.length} files, for example ${refs.awardsUndecided.slice(0, 3).map(f => path.basename(f)).join(', ')}`] : [] })
   if (registryRead && selected.some(c => c.name === 'research')) info.push({ title: 'awards: registry entries no story uses: informational', checked: `${known.size} entries`, items: [...known].filter(id => !used.has(id)) })
+}
+
+// products: every `related` link points to a product in the list, or says `in_list: false`; and says so only when it is not in the list.
+if (selected.some(c => c.name === 'critical-zone/products.json')) {
+  const problems = []
+  for (const l of refs.productLinks) {
+    if (!l.doi && !l.url) continue   // the schema already reports a link with neither
+    // the DOI decides when both are given; a URL is compared exactly as written
+    const present = l.doi ? refs.productKeys.has(`doi:${l.doi.toLowerCase()}`) : refs.productKeys.has(`url:${l.url}`)
+    const what = l.doi ? `doi ${l.doi}` : `url ${l.url}`
+    const itself = l.doi ? typeof l.ownDoi === 'string' && l.ownDoi.toLowerCase() === l.doi.toLowerCase() : l.ownUrl === l.url
+    if (itself) problems.push(`${l.file}: the related link to ${what} is the product itself`)
+    else if (l.in_list === false && present) problems.push(`${l.file}: the related link to ${what} says in_list: false but that product is in the list`)
+    else if (l.in_list !== false && !present) problems.push(`${l.file}: the related link to ${what} is not a product in the list (add in_list: false if it is not yet in it${l.doi ? '' : '; a url must match the product\'s url exactly as written'})`)
+  }
+  xref.push({ title: 'Every product related link points to a product in the list, or is marked in_list: false', checked: `${refs.productLinks.length} links, against ${refs.productKeys.size} product keys`, problems })
 }
 
 // images: the file a story's image.src names must exist under public/ and be small enough for a page (a picture is a promise of weight).
