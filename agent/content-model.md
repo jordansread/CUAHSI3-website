@@ -230,8 +230,11 @@ Two file types in `content/critical-zone/`; both optional until the first conten
 - `products.json` : an array, one entry per known product. Required: `title`, `type` (dataset, paper, software, model), `source` (czo-archive,
   discover, datacite, crossref, openalex, suggested, manual), `date_added`, and a `doi` (bare, `10.xxxx/...`) or a `url`. Optional: `hydroshare_id`,
   `repository`, `awards` (ids in `content/awards/awards.json`), `sites` (observatory or cluster slugs), `era` (czo, cznet), `year`, `access`,
-  `highlight`, `source_url`, `usage` (`views`, `downloads`, `citations`, `as_of`). The validator fails a repeated DOI (case-insensitive) or
-  HydroShare id, and an award id the registry does not have.
+  `highlight`, `source_url`, `usage` (`views`, `downloads`, `citations`, `as_of`), `related` (added 31 October 2026, ticket T6c: a list of links to other
+  products; each has `relation` (`supports`, `cited-by` or `described-by`, said from this product's side), `doi` or `url`, `source` (`datacite` or `manual`)
+  and optionally `in_list: false` (the only value allowed) for a product not yet in the list; the DOI decides when both `doi` and `url` are given). The validator fails a repeated DOI (case-insensitive) or
+  HydroShare id, an award id the registry does not have, and a related link whose target is not in the list unless it says `in_list: false` (or says
+  `in_list: false` when the target is in the list, or a link to the product itself).
 - The validator stops (exit 2, "Not found") if `content/critical-zone/` exists without `products.json`, as for the other JSON collections. The first
   content change must therefore create `products.json` (an empty `[]` is valid) along with the first page.
 
