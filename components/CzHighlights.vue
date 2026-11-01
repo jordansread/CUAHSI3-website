@@ -71,9 +71,9 @@ const count = (g: { list: Row[] }[]) => g.reduce((n, x) => n + x.list.length, 0)
       <div v-for="g in papers" :key="g.slug || 'none'" class="border border-[rgba(15,33,43,.1)] rounded-[10px] p-[18px_20px] bg-white">
         <p class="font-mono font-bold tracking-[.1em] uppercase text-water text-[11px] m-[0_0_10px]">{{ g.name }}</p>
         <ul class="list-none p-0 m-0">
-          <li v-for="r in g.list" :key="r.doi || r.url || r.title" class="mb-[10px] last:mb-0">
-            <a :href="link(r)" target="_blank" rel="noopener" class="font-['Hanken_Grotesk'] text-[14.5px] leading-[1.4] text-navy font-medium">{{ r.title }}</a>
-            <span v-if="r.year" class="font-mono text-[11.5px] text-muted"> · {{ r.year }}</span>
+          <li v-for="r in g.list" :key="r.doi || r.url || r.title" class="mb-[10px] pb-[10px] border-b border-b-[rgba(15,33,43,.08)] last:mb-0 last:pb-0 last:border-b-0">
+            <a :href="link(r)" target="_blank" rel="noopener" class="font-['Hanken_Grotesk'] text-[14.5px] leading-[1.4] text-navy font-medium rounded-[2px] hover:text-water hover:underline focus-visible:text-water focus-visible:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-water">{{ r.title }}<span aria-hidden="true" class="font-mono text-[11.5px] text-muted">&nbsp;&#8599;</span><span class="sr-only"> (opens in a new tab)</span></a>
+            <span v-if="r.year" class="font-mono text-[11.5px] text-muted whitespace-nowrap"> · {{ r.year }}</span>
           </li>
         </ul>
       </div>
@@ -84,8 +84,8 @@ const count = (g: { list: Row[] }[]) => g.reduce((n, x) => n + x.list.length, 0)
       <div v-for="g in datasets" :key="g.slug || 'none'" class="border border-[rgba(15,33,43,.1)] rounded-[10px] p-[18px_20px] bg-white">
         <p class="font-mono font-bold tracking-[.1em] uppercase text-water text-[11px] m-[0_0_10px]">{{ g.name }}</p>
         <ul class="list-none p-0 m-0">
-          <li v-for="r in g.list" :key="r.doi || r.url || r.title" class="mb-[10px] last:mb-0">
-            <a :href="link(r)" target="_blank" rel="noopener" class="font-['Hanken_Grotesk'] text-[14.5px] leading-[1.4] text-navy font-medium">{{ r.title }}</a>
+          <li v-for="r in g.list" :key="r.doi || r.url || r.title" class="mb-[10px] pb-[10px] border-b border-b-[rgba(15,33,43,.08)] last:mb-0 last:pb-0 last:border-b-0">
+            <a :href="link(r)" target="_blank" rel="noopener" class="font-['Hanken_Grotesk'] text-[14.5px] leading-[1.4] text-navy font-medium rounded-[2px] hover:text-water hover:underline focus-visible:text-water focus-visible:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-water">{{ r.title }}<span aria-hidden="true" class="font-mono text-[11.5px] text-muted">&nbsp;&#8599;</span><span class="sr-only"> (opens in a new tab)</span></a>
           </li>
         </ul>
       </div>
