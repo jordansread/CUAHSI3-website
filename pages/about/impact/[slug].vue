@@ -40,6 +40,14 @@ function fmtDate(d: string) { return new Date(d).toLocaleDateString('en-US', { m
         <template #lead>{{ item.excerpt }}</template>
       </PageHero>
       <div class="mx-auto max-w-[760px] p-[52px_40px_80px]">
+        <figure v-if="item.image" class="m-[0_0_32px]">
+          <div class="relative aspect-video overflow-hidden rounded-[12px] border border-[rgba(15,33,43,.1)]" :class="item.image.fit === 'contain' ? 'bg-white' : 'bg-[#e7eef3]'">
+            <StoryImage :image="item.image" eager />
+          </div>
+          <figcaption v-if="item.image.caption || item.image.credit" class="mt-[8px] font-['Hanken_Grotesk'] font-normal text-[12.5px] leading-[1.5] text-muted">
+            <span v-if="item.image.caption">{{ item.image.caption }}</span><span v-if="item.image.caption && item.image.credit"> · </span><span v-if="item.image.credit">{{ item.image.credit }}</span>
+          </figcaption>
+        </figure>
         <ContentRenderer v-if="item.body?.children?.length" :value="item" class="program-prose" />
         <p v-else class="font-['Hanken_Grotesk'] font-normal text-[15px] leading-[1.75] text-[#3a4d57]">{{ item.excerpt }}</p>
         <!-- Award acknowledgment: small and quiet, the same on every story that has one -->

@@ -107,6 +107,13 @@ partners: [CIROH, HydroLearn]
 funding: "NOAA Cooperative Institute Program (NA22NWS4320003)"
 published: true
 excerpt: "1–2 sentence card summary"
+image:                           # optional: a picture for the card and the top of the story page
+  src: /story-images/hydrolearn-ciroh-hackathon-2026.jpg   # a file in public/story-images/ (the validator checks it exists and is at most 500 KB)
+  alt: "what the picture shows, for a screen reader"
+  caption: "optional, printed under the picture on the story page"
+  credit: "optional, printed after the caption"
+  fit: cover                     # optional: cover (default) or contain (a diagram shown whole)
+  position: center               # optional: CSS object-position for the crop, e.g. "50% 30%"
 ```
 > **Directory is `content/research/` but the URL is `/about/impact/`.** This is a known,
 > deliberate mismatch left from an IA change. Do not "fix" it without updating every
@@ -212,6 +219,24 @@ Files: `virtual-university.md`, `snow-field-school.md`, `summer-institute.md`.
 - **research/impact** = durable outcome stories worth reading a year later.
 - **newsletter originates nothing.** It is assembled from `news/` + `research/` entries
   plus an editor's note. This rule is the foundation of automation goal #1 in §2.
+
+### critical-zone/ (added 28 October 2026, epic CUAHSI/CUAHSI3-website#62)
+
+Two file types in `content/critical-zone/`; both optional until the first content change creates them. The schemas are in
+`scripts/content-schemas.mjs` (`criticalZonePage`, `criticalZoneProduct`), not written from memory of the files, because no file exists yet.
+
+- `*.md` : narrative pages. Frontmatter: `title`, `slug`, `summary`, `published`; optional `order`, `updated`, `sources` (URLs the text was
+  written from), `reviewed_by`, `reviewed_on`.
+- `products.json` : an array, one entry per known product. Required: `title`, `type` (dataset, paper, software, model), `source` (czo-archive,
+  discover, datacite, crossref, openalex, suggested, manual), `date_added`, and a `doi` (bare, `10.xxxx/...`) or a `url`. Optional: `hydroshare_id`,
+  `repository`, `awards` (ids in `content/awards/awards.json`), `sites` (observatory or cluster slugs), `era` (czo, cznet), `year`, `access`,
+  `highlight`, `source_url`, `usage` (`views`, `downloads`, `citations`, `as_of`), `related` (added 31 October 2026, ticket T6c: a list of links to other
+  products; each has `relation` (`supports`, `cited-by` or `described-by`, said from this product's side), `doi` or `url`, `source` (`datacite` or `manual`)
+  and optionally `in_list: false` (the only value allowed) for a product not yet in the list; the DOI decides when both `doi` and `url` are given). The validator fails a repeated DOI (case-insensitive) or
+  HydroShare id, an award id the registry does not have, and a related link whose target is not in the list unless it says `in_list: false` (or says
+  `in_list: false` when the target is in the list, or a link to the product itself).
+- The validator stops (exit 2, "Not found") if `content/critical-zone/` exists without `products.json`, as for the other JSON collections. The first
+  content change must therefore create `products.json` (an empty `[]` is valid) along with the first page.
 
 ---
 
