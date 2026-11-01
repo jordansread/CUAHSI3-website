@@ -1,0 +1,1 @@
+261031 | task/cz-retirement-checklist | start | Jordan said 'merged #194, start the next task'. T16: a retirement checklist, plus the part of the dry run that needs no access (redirect-map targets and anchors exist in the build; legacy paths still answer; no new path groups on the legacy home pages). Report only.
