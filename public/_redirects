@@ -282,6 +282,9 @@
 /resources-for-undergraduate-students /learn-train 301
 /students /learn-train 301
 
+# this site: the AGU 2025 story's address now says 2025 (13 October 2026)
+/about/impact/agu-community-gathering-2026 /about/impact/agu-community-gathering-2025 301
+
 # water data portals: one table
 /community/water-data-portals /data-platforms/portals 301
 /community/water-data-portals/advanced-weather-and-climate-forecasting-system /data-platforms/portals 301
