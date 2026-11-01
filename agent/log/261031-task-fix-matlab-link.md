@@ -1,2 +1,3 @@
 261031 | task/fix-matlab-link | start | Jordan said 'merged #193, start the next task'. The MATLAB Online link (footer of every page, Data & Computing card) pointed at https://www.cuahsi.org/matlab, which answers 404; points both at the service, https://matlab.cuahsi.org/.
 261031 | task/fix-matlab-link | defect | The MATLAB Online link on every page and on Data & Computing pointed at a page that answers 404; found while reviewing the Critical Zone section, not by a check of the whole site, so other dead external links may remain. caught: self-check
+261031 | task/fix-matlab-link | pr | PR 194 opened against the default branch: AppFooter.vue, data-platforms/index.vue, roadmap Noticed line, this log.
