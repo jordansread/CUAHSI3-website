@@ -1,14 +1,18 @@
 ---
 title: "CUAHSI at AGU 2025: 164-person community gathering and 18 presentations"
-slug: agu-community-gathering-2026
+slug: agu-community-gathering-2025
 date: 2025-12-17
-year: 2026
+year: 2025
 category: community
 tags: [AGU, community-building, conferences, hydroshare, water-prediction]
 people_mentioned: []
 partners: [American Geophysical Union]
 funding: null
 awards: [nsf-1849458]
+image:
+  src: /story-images/2025-agu-community-gathering.jpg
+  alt: "Ten people pose together at the community gathering, under screens that read \"WELCOME! AGU25\"."
+  position: 50% 30%
 published: true
 excerpt: At AGU 2025 in New Orleans, nine CUAHSI staff contributed to 18 presentations and hosted a community gathering that drew 164 attendees. The CUAHSI booth featured live HydroShare demos, a global institutional map, and an exhibit hall tour stop for data management.
 ---
