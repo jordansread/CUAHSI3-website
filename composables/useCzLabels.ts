@@ -24,18 +24,6 @@ export const CZ_SITE_NAMES: Record<string, string> = {
   urban: 'CZNet Urban',
 }
 
-export const CZ_ERA_NAMES: Record<string, string> = {
-  czo: 'Critical Zone Observatories (2007 to 2020)',
-  cznet: 'Critical Zone Collaborative Network (2020 on)',
-  none: 'Era not recorded',
-}
-
-// The first site that is not the cross-CZO "national" tag, or "national" when that is all there is.
-export function czPrimarySite(sites?: string[]): string {
-  const s = sites ?? []
-  return s.find(x => x !== 'national') ?? s[0] ?? 'none'
-}
-
 // The CZNet cluster (or the Hub) an NSF award belongs to, read from the cluster named in the award's registry title ("Network Cluster:
 // Dust in the Critical Zone ...", "Network Hub: ..."). The records carry no cluster tag on papers, so this is how a paper is placed in a
 // cluster. It is an inference from the title, not a field of the data; '' when the title names none.
