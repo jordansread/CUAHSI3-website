@@ -176,7 +176,7 @@ C5. **A published slug never changes, and a published file is never deleted or r
     unpublish the other. Ask Jordan whether a redirect is needed. `verify.sh` fails a branch
     that deletes or renames any file under `content/` (published or not), changes the slug of
     a published `.md` item, or removes or changes a slug in a content JSON array (a rename
-    Jordan asked for needs `VERIFY_ALLOW_CONTENT_RENAME=1`, and the PR says so). It cannot
+    Jordan asked for needs `VERIFY_ALLOW_CONTENT_RENAME=1`, and the PR says so; the same switch turns a changed slug of a published `.md` item from a failure into a warning, and that PR must also say that the old address needs a redirect, which nothing checks). It cannot
     read the slug of a file whose front matter does not parse (the 9 cyberseminar files
     with no closing `---`), so for those the check passes silently; look yourself.
 C6. **`people_mentioned` takes slugs of people who have a profile in the repo:** team slugs
@@ -245,7 +245,7 @@ C16. **A job names its member institution only when it is sure.** `member_instit
 
 ## Known footguns
 
-Every one of these cost real debugging time. Most failed silently; the third is unverified (see below), the eleventh printed a warning but left the tree dirty, the thirteenth hydrated with stale tag colours, and the fourteenth crashed one page with a green build.
+Every one of these cost real debugging time. Most failed silently; the third is unverified (see below), the eleventh printed a warning but left the tree dirty, the thirteenth hydrated with stale tag colours, the fourteenth crashed one page with a green build, and the fifteenth ignored the address on a page that otherwise loaded.
 
 1. **`queryContent('news')` also returns `/newsletter/` content.** Nuxt Content matches
    by path prefix, and `/newsletter/2026-06` starts with `/news`. This put newsletter
@@ -322,6 +322,14 @@ Every one of these cost real debugging time. Most failed silently; the third is 
     `verify.sh --build` and the link check were green; the job board came out as an 800px-high blank in the visual comparison, and only
     that showed it. Put a `watch()` after the declarations it depends on (the end of `<script setup>` is safe), and run
     `npm run visual:compare` after any change to a page's script.
+15. **`window.location.search` is empty in `onMounted` on a statically generated page, though the address bar has a query.** Seen in
+    the 31 October built site (Nuxt 3, served with `npx serve`): a list that read `?site=luquillo` from `window.location.search` in
+    `onMounted` saw an empty string, ignored the address, and the build, the link check and the first page load were all fine. The
+    router has the query: read it with `useRoute().query` inside `onMounted` (not in `setup`, where the server's empty query would make
+    the first browser render differ from the built page; footgun 13). Found by loading a link with a query in the browser. Seen only
+    with `npx serve`; the cause (my reading: the router rewrites the address after hydration) was not isolated, and it was not tried on
+    Netlify. Write the choice back with `router.replace({ query })`, not `history.replaceState`, so the router and the address agree on
+    Back. No `verify.sh` check: only a browser shows it.
 
 ## Layout: never put `grid-template-columns` in a `style` attribute
 
@@ -500,6 +508,27 @@ source (a newsletter issue, a job harvest, a batch of tags). First show a propos
 for each item, the collection, the slug, new or update, the judgment calls, and what is
 unverified; then the items you would skip and why; then counts. Apply only what Jordan
 approves. Do not go beyond the approved list.
+
+**Add a Critical Zone product.** For a dataset, paper, software or model that someone suggests for
+`content/critical-zone/products.json` (the public route is an email to help@cuahsi.org with the title, a DOI or
+link, and the award or observatory; Jordan or a staff member passes it on). A `content/short-name` branch, with C1 to C16
+and these steps:
+1. Record who suggested it and when, in the PR (C2). Do not copy the sender's email address into the repo or the PR.
+2. Duplicate check (C4): look in `products.json` for the same DOI (case does not matter), `hydroshare_id`, `url` and a similar
+   title. The validator rejects a repeated DOI or a repeated HydroShare id, each compared only with its own kind; it does not
+   compare `url` or title, so those you check yourself. Show Jordan each plausible match.
+3. Open the link. For a DOI, `https://doi.org/api/handles/<doi>` must answer `responseCode` 1. A DOI that fails is not
+   repaired by guessing (C3): look the title up in Crossref or DataCite, and if the right DOI is not clear, leave the item
+   out and put it under "To verify".
+4. In scope: it carries a CZO or CZNet award, comes from a CZ observatory or cluster, or is a dataset linked to a CZ paper
+   (any repository counts, Jordan, 29 Oct 2026). Scope is Jordan's call: say why you think it is in, and let him decide.
+5. Fill only what is known (C3): `type`, `doi` (bare, not a URL), `url`, `hydroshare_id` (32 lowercase hex characters, for a HydroShare
+   resource; it is what the duplicate check relies on), `repository`, `awards`, `sites`, `era`, `year`. An `awards` id that is
+   not in `content/awards/awards.json` fails the validator: leave `awards` out and say so in the PR, or first add the award to
+   the registry on the same branch, checked at the funder's page (C15, C3).
+   `source` is `suggested`; `source_url` is the page the facts were read from, not the email; `date_added` is today.
+6. One item or a few by hand; more than five is "Propose, then apply". Validator, build, PR as for any content task.
+This procedure is not yet on the section's pages (ticket T14's second item waits for the pages from T9).
 
 **Unpublish.** Set `published: false`. Say in the PR which routes disappear and which pages
 linked to them (rule 8: removing a route needs Jordan's approval first).

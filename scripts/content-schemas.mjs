@@ -136,6 +136,18 @@ const cyberseminars = z.strictObject({
 // content/research/ : 31 files (renders at /about/impact/).
 // The files carry no author-controlled enum beyond category. people_mentioned is typed as slugs here
 // and checked against team slugs in the cross-reference section (the model says "team slugs").
+// A story's picture: shown on its card and at the top of its page. src is a file in public/story-images/ (the validator checks that it exists and
+// is not too big); alt is what a screen reader says; caption and credit print under the picture on the story page; fit "contain" shows a
+// diagram whole (cover crops); position is a CSS object-position for the crop.
+const storyImage = z.strictObject({
+  src: z.string().regex(/^\/story-images\/[a-z0-9][a-z0-9-]*\.(jpg|webp|png|svg)$/, 'must be /story-images/<name>.jpg (or .webp, .png, .svg), lower case with hyphens'),
+  alt: nonEmpty,
+  caption: nonEmpty.optional(),
+  credit: nonEmpty.optional(),
+  fit: z.enum(['cover', 'contain']).optional(),
+  position: z.string().regex(/^(?:center|top|bottom|\d{1,3}% \d{1,3}%)$/, 'center, top, bottom or "x% y%"').optional(),
+})
+
 const research = z.strictObject({
   title: nonEmpty,
   slug,
@@ -148,6 +160,7 @@ const research = z.strictObject({
   funding: z.string().nullable().optional(),
   partners: strings.optional(),
   people_mentioned: slugs.optional(),
+  image: storyImage.optional(),
   awards: slugs.optional(),   // ids from content/awards/awards.json; the page shows each award's acknowledgment under the story. [] means checked, no award of CUAHSI's to acknowledge; absent means not yet decided
 })
 
@@ -307,6 +320,74 @@ const dataManagementGuide = z.strictObject({
   source_url: webUrl.optional(),
 })
 
+// ---- Critical Zone section (epic: CUAHSI/CUAHSI3-website#62) -----------------------------
+
+// content/critical-zone/*.md : narrative pages of /critical-zone-science. One file per page; the body is the page.
+// `order` sorts pages within the section; `sources` are the pages the text was written from (C2); the review fields
+// are filled when the science reviewers sign a page off (reviewers are a placeholder until named; decision 12 in epic #62).
+const criticalZonePage = z.strictObject({
+  title: nonEmpty,
+  slug,
+  summary: nonEmpty,
+  published: z.boolean(),
+  order: z.number().int().optional(),
+  updated: isoDate.optional(),
+  sources: z.array(url.refine(u => /^https?:\/\//.test(u), 'must be an http(s) URL')).optional(),
+  reviewed_by: strings.optional(),
+  reviewed_on: isoDate.optional(),
+})
+
+// content/critical-zone/products.json : the list of known Critical Zone products (datasets, papers, software, models),
+// appended to over time. One entry per product, as an array. Only what is known is filled (C3): an unknown optional field is left out.
+// `source` is where the entry came from (the source of record); `source_url` is the page or record it was read from;
+// `date_added` is when it joined the list. A product needs a DOI or a URL. `usage` holds the counts read from the public
+// public sources found in epic ticket T2 (CUAHSI/CUAHSI3-website#64: HydroShare landing pages for views and downloads, OpenAlex for citations), with the date they were read (they change).
+const DOI_RE = /^10\.\d{4,9}\/\S*[^\s.,;]$/   // bare DOI; a trailing . , or ; (copied from a sentence) is rejected
+// The slugs come from the URL patterns in agent/reports/261028_cz-legacy-inventory.md (T1): the archive's 11 sub-sites, and the Hub and
+// nine clusters on criticalzone.org (its /dynamic_water is written dynamic-water here, to match the slug rule).
+const CZ_SITES = [
+  'national', 'boulder', 'calhoun', 'catalina-jemez', 'christina', 'eel', 'iml', 'luquillo', 'reynolds', 'shale-hills', 'sierra',          // the CZO archive's observatories
+  'hub', 'bedrock', 'bigdata', 'cinet', 'coastal', 'drylands', 'dust2', 'dynamic-water', 'geomicrobiology', 'urban',                      // CZNet's hub and nine clusters
+]
+// `related`: links from this product to other products (epic ticket T6c, CUAHSI/CUAHSI3-website#87). Each says what THIS product is to the linked
+// one, in the supporting relations only: `supports` (this product is data that supports the linked product, for example a dataset for a
+// paper), `cited-by` (the linked product cites this one), `described-by` (the linked product describes this one, for example a data paper).
+// The links live with the dataset, because a repository records "this dataset supplements that paper" and the paper's own record usually
+// says nothing back. `source` is where the link was read: `datacite`, or `manual` for a person's confirmed list. The linked product is named by
+// a DOI or a URL (the DOI decides when both are given; a URL is compared as written) and must be in the list and not be the product itself,
+// unless the entry says `in_list: false` (not yet in it: the validator reports a mismatch either way).
+const relatedLink = z.strictObject({
+  relation: z.enum(['supports', 'cited-by', 'described-by']),
+  doi: z.string().regex(DOI_RE, 'must be a bare DOI such as 10.4211/hs.0123..., not a URL').optional(),
+  url: webUrl.optional(),
+  source: z.enum(['datacite', 'manual']),
+  in_list: z.literal(false).optional(),   // only ever written as false, for a product not yet in the list
+}).refine(l => Boolean(l.doi) || Boolean(l.url), { message: 'a related link needs a doi or a url' })
+const criticalZoneProduct = z.strictObject({
+  title: nonEmpty,
+  type: z.enum(['dataset', 'paper', 'software', 'model']),
+  doi: z.string().regex(DOI_RE, 'must be a bare DOI such as 10.4211/hs.0123..., not a URL').optional(),
+  url: webUrl.optional(),
+  hydroshare_id: z.string().regex(/^[a-f0-9]{32}$/, 'must be 32 lowercase hex characters').optional(),
+  repository: nonEmpty.optional(),
+  awards: slugs.optional(),   // ids in content/awards/awards.json, checked in the cross-reference section
+  sites: z.array(z.enum(CZ_SITES)).optional(),
+  era: z.enum(['czo', 'cznet']).optional(),
+  year: z.number().int().min(1950).max(2100).optional(),
+  access: z.enum(['open', 'restricted']).optional(),
+  highlight: z.boolean().optional(),
+  related: z.array(relatedLink).optional(),
+  source: z.enum(['czo-archive', 'discover', 'datacite', 'crossref', 'openalex', 'par', 'suggested', 'manual']),
+  source_url: webUrl.optional(),
+  date_added: isoDate,
+  usage: z.strictObject({
+    views: z.number().int().min(0).optional(),
+    downloads: z.number().int().min(0).optional(),
+    citations: z.number().int().min(0).optional(),
+    as_of: isoDate,
+  }).optional(),
+}).refine(p => Boolean(p.doi) || Boolean(p.url), { message: 'a product needs a doi or a url' })
+
 // ---- what the validator reads ---------------------------------------------------------
 
 // kind "md": every *.md in the folder except README.md, frontmatter validated.
@@ -330,4 +411,10 @@ export const COLLECTIONS = [
   { name: 'data-management',       kind: 'md',   dir: 'content/data-management',                                   schema: dataManagementGuide, optional: true },
   { name: 'awards',               kind: 'json', file: 'content/awards/awards.json',              schema: award,           optional: true, uniqueBy: e => e?.id, uniqueLabel: 'id' },
   { name: 'documents',            kind: 'json', file: 'content/documents/documents.json',        schema: documentEntry,   optional: true, uniqueBy: e => e?.title, uniqueLabel: 'title' },
+  { name: 'critical-zone',        kind: 'md',   dir: 'content/critical-zone',                                   schema: criticalZonePage, optional: true },
+  { name: 'critical-zone/products.json', kind: 'json', file: 'content/critical-zone/products.json',  schema: criticalZoneProduct, optional: true,
+    uniqueKeys: [
+      { label: 'doi', by: e => (typeof e?.doi === 'string' ? e.doi.toLowerCase() : null) },
+      { label: 'hydroshare_id', by: e => (typeof e?.hydroshare_id === 'string' ? e.hydroshare_id.toLowerCase() : null) },
+    ] },
 ]

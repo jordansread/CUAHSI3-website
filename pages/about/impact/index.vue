@@ -81,7 +81,8 @@ function fmtDate(d: string) { return new Date(d).toLocaleDateString('en-US', { m
         class="card-lift bg-white rounded-card overflow-hidden flex flex-col"
         :style="`border:1px solid rgba(15,33,43,.1);border-top:3px solid ${colorOf(h.category)};text-decoration:none;`">
         <!-- Photo placeholder -->
-        <div class="relative h-[180px] bg-[repeating-linear-gradient(135deg,#e7eef3_0_14px,#dfe8ee_14px_28px)]">
+        <div class="relative h-[180px] bg-[repeating-linear-gradient(135deg,#e7eef3_0_14px,#dfe8ee_14px_28px)]" :class="h.image ? (h.image.fit === 'contain' ? 'overflow-hidden !bg-none bg-white' : 'overflow-hidden') : ''">
+          <StoryImage v-if="h.image" :image="h.image" decorative />
           <span class="absolute font-mono font-bold tracking-[.08em] text-white rounded-[6px]" :style="`left:14px;top:14px;font-size:10px;background:${colorOf(h.category)};padding:5px 10px;`">
             {{ useCategoryColor(h.category).label.toUpperCase() }}
           </span>
