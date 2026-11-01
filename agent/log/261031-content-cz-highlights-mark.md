@@ -1,0 +1,2 @@
+261031 | content/cz-highlights-mark | start | Critical Zone epic, ticket T12 (CUAHSI/CUAHSI3-website#77): set highlight true on the 30 papers and 10 datasets of the selection report merged in #178. Jordan said 'merged #178, start the next task' without answering the three open questions in that PR (keep the cluster lane, the Big Data paper, which Brownsville version); I took the list as written and say so in the PR.
+261031 | content/cz-highlights-mark | pr | #179 opened: https://github.com/jordansread/CUAHSI3-website/pull/179
