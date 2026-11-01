@@ -1,0 +1,2 @@
+261031 | content/cz-observatory-text-2 | start | Jordan said 'Do the Luquillo and Shale Hills observatory text'. Fuller body text for those two observatory pages from their archive about, infrastructure and partner pages. Content only.
+261031 | content/cz-observatory-text-2 | defect | Shale Hills text stated the archive's claims in CUAHSI's own voice; reworded to attribute them to the observatory and the archive. caught: reviewer
