@@ -4,7 +4,7 @@
   { "name": "about-governance", "path": "/about/governance/" },
   { "name": "about-membership", "path": "/about/membership/" },
   { "name": "about-impact", "path": "/about/impact/" },
-  { "name": "about-impact-story", "path": "/about/impact/agu-community-gathering-2026/" },
+  { "name": "about-impact-story", "path": "/about/impact/agu-community-gathering-2025/" },
   { "name": "about-team", "path": "/about/team/" },
   { "name": "about-team-profile", "path": "/about/team/abner-bogan/" },
   { "name": "community", "path": "/community/" },
@@ -24,5 +24,9 @@
   { "name": "hire-cuahsi", "path": "/hire-cuahsi/" },
   { "name": "contact", "path": "/contact/" },
   { "name": "support", "path": "/support/" },
-  { "name": "member-portal", "path": "/member-portal/" }
+  { "name": "member-portal", "path": "/member-portal/" },
+  { "name": "critical-zone-science", "path": "/critical-zone-science/" },
+  { "name": "critical-zone-science-datasets", "path": "/critical-zone-science/datasets/?site=eel" },
+  { "name": "critical-zone-science-network", "path": "/critical-zone-science/network/" },
+  { "name": "critical-zone-science-observatory", "path": "/critical-zone-science/observatories/eel/" }
 ]
