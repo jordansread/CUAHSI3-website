@@ -15,7 +15,7 @@ excerpt: A new paper in Earth's Future, led by Bonan Li of Northeast Normal Univ
 
 ![CZNet logo: a critical zone illustration of a tree, soil layers, a mountain and a gridded surface, above the words CZNet, Critical Zone Collaborative Network.](/newsletter-images/2026-august/cznet-logo.png)
 
-A new paper from the Critical Zone Collaborative Network (CZNet) Synthesis Working Group was published in *Earth's Future*: ["Dominant Controls on Preferential Flow and Their Implications for Future Soil Water Fluxes"](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2026EF008296), by lead author Bonan Li, Associate Professor at Northeast Normal University.
+A new paper from the [Critical Zone Collaborative Network (CZNet)](/critical-zone-science) Synthesis Working Group was published in *Earth's Future*: ["Dominant Controls on Preferential Flow and Their Implications for Future Soil Water Fluxes"](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2026EF008296), by lead author Bonan Li, Associate Professor at Northeast Normal University.
 
 The study trains a deep learning model on data from 33 U.S. sites to predict when and how quickly preferential flow occurs. It finds that precipitation characteristics and soil clay content are the key drivers, and climate projections suggest this flow will speed up in the future.
 

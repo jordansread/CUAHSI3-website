@@ -9,6 +9,10 @@ people_mentioned: [tony-castronova, abner-bogan]
 partners: [Virginia Tech]
 funding: NSF EAR-1849458
 awards: [nsf-1849458]
+image:
+  src: /story-images/2025-water-content-portal.jpg
+  alt: "At the CUAHSI exhibit booth, a person points to a screen while visitors gather around; a banner behind them reads \"CUAHSI's Mission\"."
+  position: 50% 40%
 published: true
 excerpt: CUAHSI launched a prototype Water Content Portal (an open-access platform for sharing versioned educational and scientific resources built on JupyterBook, MyST, and DecapCMS) and completed integration of J.P. Gannon's 17-chapter Hydroinformatics textbook, which was used in a spring 2026 Virginia Tech course and is publicly accessible online.
 ---
