@@ -53,7 +53,7 @@ const tools = [
     points: ['Browser-based, nothing to install', 'Common toolboxes included', 'Free to use'],
     tags: ['License', 'Free'],
     cta: 'Learn more',
-    href: 'https://www.cuahsi.org/matlab',
+    href: 'https://matlab.cuahsi.org/',
   },
 ]
 </script>
