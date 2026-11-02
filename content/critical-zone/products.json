@@ -43413,5 +43413,47 @@
     "source": "par",
     "source_url": "https://doi.org/10.1175/JHM-D-20-0134.1",
     "date_added": "2026-11-02"
+  },
+  {
+    "title": "Groundwater—The Dynamic Base of the CZ",
+    "type": "paper",
+    "doi": "10.1007/978-3-031-69076-1_5",
+    "url": "https://doi.org/10.1007/978-3-031-69076-1_5",
+    "repository": "Advances in Critical Zone Science (Springer Nature Switzerland)",
+    "awards": [
+      "nsf-2012669"
+    ],
+    "year": 2024,
+    "source": "par",
+    "source_url": "https://doi.org/10.1007/978-3-031-69076-1_5",
+    "date_added": "2026-11-02"
+  },
+  {
+    "title": "Depth profiles of soil temperature, moisture, and concentrations of CO2 and O2",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/9c53ab378b604a8e867cdda0d3ab72fb/",
+    "hydroshare_id": "9c53ab378b604a8e867cdda0d3ab72fb",
+    "repository": "HydroShare",
+    "awards": [
+      "nsf-2012878"
+    ],
+    "year": 2024,
+    "source": "par",
+    "source_url": "https://www.hydroshare.org/resource/9c53ab378b604a8e867cdda0d3ab72fb/",
+    "date_added": "2026-11-02"
+  },
+  {
+    "title": "DWCZ-CO-MEF-Data from Warix et al. (2024), Water-rock interactions drive chemostasis",
+    "type": "dataset",
+    "url": "https://www.hydroshare.org/resource/c4b384a77a0f43cbb2de2d6eae9cf901/",
+    "hydroshare_id": "c4b384a77a0f43cbb2de2d6eae9cf901",
+    "repository": "HydroShare",
+    "awards": [
+      "nsf-2012730"
+    ],
+    "year": 2023,
+    "source": "par",
+    "source_url": "https://www.hydroshare.org/resource/c4b384a77a0f43cbb2de2d6eae9cf901/",
+    "date_added": "2026-11-02"
   }
 ]

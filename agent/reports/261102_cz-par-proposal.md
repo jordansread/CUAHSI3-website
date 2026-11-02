@@ -419,3 +419,15 @@ Titles link to the DOI. **Out** = award numbers the paper also credits that are 
 | 30 | 2021 | article | [Magnetic Fly Ash as a Chronological Marker in Post-Settlement Alluvial and Lacustrine Sediment: Examples from North Carolina and Illinois](https://doi.org/10.3390/min11050476) | Minerals |  | 0 |
 | 31 | 2021 | article | [The Spatiotemporal Evolution of Storm Pulse Particulate Organic Carbon in a Low Gradient, Agriculturally Dominated Watershed](https://doi.org/10.3389/frwa.2021.600649) | Frontiers in Water |  | 0 |
 | 32 | 2020 | article | [“It’s Raining Bits”: Patterns in Directional Precipitation Persistence across the United States](https://doi.org/10.1175/JHM-D-20-0134.1) | Journal of Hydrometeorology |  | 1 |
+
+## Addendum: three records added after the search for the rows with no DOI
+
+Jordan approved these on 2 November 2026 ("add the three sweep records"). They are not in the 292 above or in the JSON file; they were found by searching the 16 skipped rows by title and first author (Crossref, OpenAlex) and by reading two HydroShare landing pages. The products list therefore grows by 295.
+
+| Record | Type | How found | Awards (registry) | Out |
+|---|---|---|---|---|
+| [Groundwater—The Dynamic Base of the CZ](https://doi.org/10.1007/978-3-031-69076-1_5), *Advances in Critical Zone Science*, 2024 | paper (book chapter) | Crossref title and first author (Sullivan) match PAR's row exactly; the year matches; **high-probability, not certain** | 2012669 | 0 |
+| [Depth profiles of soil temperature, moisture, and concentrations of CO2 and O2](https://www.hydroshare.org/resource/9c53ab378b604a8e867cdda0d3ab72fb/), HydroShare, 2024 | dataset | the HydroShare address is in PAR's publisher cell; the landing page answered 200 and its title matches; no DOI is registered for it (`10.4211/hs.<id>` answers `responseCode` 100) | 2012878 | 0 |
+| [DWCZ-CO-MEF-Data from Warix et al. (2024), Water-rock interactions drive chemostasis](https://www.hydroshare.org/resource/c4b384a77a0f43cbb2de2d6eae9cf901/), HydroShare, 2023 | dataset | same | 2012730 | 1 (1824330) |
+
+Not matched: the dissertation (Heckman, 2023) and the Eos article ("Life Teems Below the Surface", Chorover, 2020). The best Crossref and OpenAlex candidates were look-alikes (a preprint chapter; a 1925 Science article), so no DOI is proposed.
