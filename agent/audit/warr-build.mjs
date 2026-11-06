@@ -23,6 +23,7 @@ const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 
 const SERIES = 'Women Advancing River Research (WARR)', SERIES_SLUG = 'women-advancing-river-research-lecture-series'
 const norm = s => (s ?? '').toLowerCase().replace(/&amp;/g, '&').replace(/[^a-z0-9]+/g, ' ').trim()
 const clean = s => s.replace(/\s+/g, ' ').replace(/ /g, ' ').trim()
+const list = a => a.length < 3 ? a.join(' and ') : a.slice(0, -1).join(', ') + ' and ' + a[a.length - 1]   // A, B and C
 const csvLine = (a) => a.map(v => { const s = String(v ?? ''); return /[",\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s }).join(',')
 
 // the oEmbed results of A3g
@@ -72,12 +73,14 @@ for (const r of records) {
   const y = yt.get(r.video_id) ?? {}
   r.oembed_status = y.oembed_status ?? '(not checked)'; r.youtube_title = y.title ?? ''
   r.title_equals_youtube = y.title ? (norm(r.title) === norm(y.title) ? 'yes' : 'no') : ''
-  const words = norm(r.title).split(' ').filter(w => w.length >= 3 && !STOP.has(w)).slice(0, 5).join('-')
+  const TRAIL = new Set(['of', 'in', 'on', 'to', 'at', 'by', 'as', 'is', 'non', 'de', 'united'])   // a cut should not end on these
+  const cut = norm(r.title).split(' ').filter(w => w.length >= 2 && !STOP.has(w)).slice(0, 6); while (cut.length > 2 && TRAIL.has(cut[cut.length - 1])) cut.pop()
+  const words = cut.join('-')
   let slug = `warr-${r.date.slice(0, 7)}-${words}`.replace(/-+$/, ''), n = 2; while (seen.has(slug) || existing.has(slug)) slug = `warr-${r.date.slice(0, 7)}-${words}-${n++}`
   seen.add(slug); r.slug = slug; r.file = `${r.date.slice(0, 4)}-warr-${slug.replace(/^warr-\d{4}-\d{2}-/, '')}.md`
   r.duplicate_id_in_content = existingIds.has(r.video_id) ? 'yes' : ''
   r.speakers_without_org = r.speaker_orgs.filter(o => !o).length
-  r.description = `A Women Advancing River Research webinar on ${MONTHS[+r.date.slice(5, 7) - 1]} ${+r.date.slice(8)}, ${r.date.slice(0, 4)}, with ${r.speakers.map((s, i) => s + (r.speaker_orgs[i] ? ` (${r.speaker_orgs[i]})` : '')).join(' and ')}.`
+  r.description = `A Women Advancing River Research webinar on ${MONTHS[+r.date.slice(5, 7) - 1]} ${+r.date.slice(8)}, ${r.date.slice(0, 4)}, with ${list(r.speakers.map((s, i) => s + (r.speaker_orgs[i] ? ` (${r.speaker_orgs[i]})` : '')))}.`
 }
 
 fs.mkdirSync('agent/audit', { recursive: true })

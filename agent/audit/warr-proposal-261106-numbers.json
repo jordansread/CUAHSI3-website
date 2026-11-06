@@ -33,7 +33,7 @@
     "with_speakers": 63,
     "speakers_total": 118,
     "speakers_without_org": 0,
-    "duplicate_ids_in_content": 0,
+    "duplicate_ids_in_content": 63,
     "distinct_slugs": 63,
     "skipped_headings": 0
   },
