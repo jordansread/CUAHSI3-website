@@ -33,7 +33,7 @@ New snapshot under a new date, from the sitemap and the navigation and the foote
 Serve the built site with `public/_redirects` applied, then request each legacy path (all URLs from W1, plus every URL in the cited-URL list and the Search Console export). For each: final status, final route, hops. Output a table of legacy URLs that would 404, land on a generic page, or take more than one hop. *Verify:* the same run on the October list, to compare with the claim in `261006_parity-stage7-status.md` that no redirect existed for finished bodies; then three URLs by hand in a browser.
 
 **W3. Item-level parity for items with identity.**
-People (91 legacy pages), events (118), news (49), newsletters (19), programs, graduate programs (107 URLs, 102 institutions here), portals (44), documents (59 hosted), jobs, workshops. Match by stable keys (name, YouTube id, slug, external URL) and compare **facts a reader acts on**: names and roles, dates and status, counts, URLs, whether contact details differ (reported as "differ", never copied, P8). Discrepancies are listed with both locations and not resolved (P4). Matching uses the confidence scale of October (`exact`, `probable`, `weak`, `none`) and is never raised to improve a number. *Verify:* a controls set of 30 known pairs by hand; a subagent comparison on the same 30 and the number of verdicts that differ.
+People (91 legacy pages), events (118), news (49), newsletters (19), cyberseminars (67 recordings, 20 series; matched by YouTube id first), programs, graduate programs (107 URLs, 102 institutions here), portals (44), documents (59 hosted), jobs, workshops. Match by stable keys (name, YouTube id, slug, external URL) and compare **facts a reader acts on**: names and roles, dates and status, counts, URLs, whether contact details differ (reported as "differ", never copied, P8). Discrepancies are listed with both locations and not resolved (P4). Matching uses the confidence scale of October (`exact`, `probable`, `weak`, `none`) and is never raised to improve a number. *Verify:* a controls set of 30 known pairs by hand; a subagent comparison on the same 30 and the number of verdicts that differ.
 
 **W4. Links, files and embeds.**
 Every outward link on this site (its own pages and content) checked for status, redirect and a dead-domain list, one request per host per second; every file the legacy site hosts (76 files in October) against what is hosted here and what the legacy page said; every embed (YouTube, forms, maps) on legacy pages with a counterpart or none. *Verify:* three dead links and three live ones opened by hand; HEAD results re-run on a sample.
@@ -60,18 +60,31 @@ The order of operations for the switch: who owns DNS, the hosts that must redire
 
 Fetching about 770 pages at 2 seconds a request takes about 26 minutes; the link check and W2 run in minutes each. The time is in reading: W3 (item-level) is the largest, and it is where subagents help and where your review of discrepancy lists is needed. Proposed pull requests: about one per workstream for scripts and reports, then content or code fixes in as many PRs as the findings need. I would not start fixes until the ranked gap list is approved.
 
-## 7. What I need from you
+## 7. Decisions (Jordan, 6 November 2026) and what is still needed
 
-1. **Depth for W3.** All the types above, or the largest bodies first (people, events, news, programs). *Recommend: the identity types in the order above; events before the last two years go by rule.*
-2. **A fresh Search Console export** (twelve months of clicks and impressions per URL) in `raw/search-console/`, so W2 and the ranking use this year's traffic. October's export covered a period it did not state.
-3. **The ten decisions still waiting from `261006_parity-stage7-status.md`**, or your word to treat them as unchanged. W2 cannot say a URL "lands right" when its body's fate is still a proposal.
-4. **The cyberseminar archive:** still deferred, or inside this audit.
-5. **Scope of hosts:** `www.cuahsi.org` only (as in October), or also `jupyterhub`, `hydroshare` and other sub-hosts for redirects only.
-6. **Who owns the DNS and the cuahsi.org registrar account.** The CZ epic's go-live approvals already ask the same for criticalzone.org.
+1. **Depth: as deep as possible, and the cyberseminar archive is inside this audit.** W3 covers every type with an identity, not the largest bodies first, and the cyberseminar archive (67 recordings and 20 series on the legacy site in October) becomes its own task in W3, matched by YouTube id first, then title and date. It is no longer "known, deferred".
+2. **A fresh Search Console export**, to be supplied by Jordan. Exact steps are in section 8.
+3. **The ten decisions of `261006_parity-stage7-status.md`** are treated as unchanged: the audit overwrites them with its own findings, and each is revisited then, with the new evidence. W2 reports a URL whose body's fate is still a proposal as "fate proposed", not as "lands right".
+4. **Scope of hosts:** not answered. Until Jordan says otherwise, `www.cuahsi.org` only, as in October.
+5. **Who owns the DNS and the cuahsi.org registrar account:** not answered. It stays on the go-live list (W7).
 
-## 8. Proposed issues (not opened)
+## 8. Search Console export: exact steps
 
-Epic: "Site-wide audit before cut-over" with one task per workstream: T-A1 re-crawl and diff; T-A2 cut-over simulation; T-A3 item-level parity (one task per type group); T-A4 links, files, embeds; T-A5 functions; T-A6 readiness for the new address; T-A7 cut-over rehearsal. Each with "done when" lists that name the controls, the counts and the sample.
+For Jordan. It takes about five minutes.
+
+1. Open Google Search Console (https://search.google.com/search-console) and choose the property for `www.cuahsi.org`. If more than one is listed (a "Domain" property for `cuahsi.org` and a "URL prefix" property for `https://www.cuahsi.org/`), use the Domain one if you have access: it also counts clicks on addresses without `www`. Say which you used.
+2. In the left menu choose **Performance**, then **Search results** (not Discover or Google News).
+3. Set the date range: click **Date**, choose **Custom**, and enter the start date **6 November 2025** and the end date **5 November 2026** (Search Console data runs a day or two behind, so the last day may be incomplete; if it will not accept 5 November, use the latest date it allows and tell me which). The "Last 12 months" preset is acceptable if the custom range will not take.
+4. Above the chart, click each of the four boxes so all are **on** (blue/filled): **Total clicks**, **Total impressions**, **Average CTR** and **Average position**. The export contains only the columns that are switched on.
+5. Under the chart choose the **Pages** tab (not Queries). The table lists each URL with those four columns.
+6. Click **Export** (top right), then **Download CSV** (not Google Sheets). The download is a zip with several files, including **Pages.csv**. Keep the zip as it is.
+7. Put the zip in `raw/search-console/` in this repository, named `261106_cuahsi-org_pages.zip`, and tell me. (October's export was `raw/search-console/261005_pages_all.csv`; it is not overwritten.)
+8. **Two limits to know.** The export holds at most 1,000 rows, so a site with more pages shows only the top 1,000 by clicks; the row count is in Pages.csv, and if it is exactly 1,000 I will say that the long tail is cut. And Search Console shows only pages Google reported, so a page with no impressions is not in it.
+9. Optional, if you have the time: repeat steps 3 to 6 on the **Queries** tab and save it as `261106_cuahsi-org_queries.zip`. It is not needed for the audit; it shows what people searched to reach the site.
+
+## 8b. Proposed issues (not opened until Jordan approves this plan)
+
+Epic: "Site-wide audit before cut-over" with one task per workstream: T-A1 re-crawl and diff; T-A2 cut-over simulation; T-A3 item-level parity, one task per type group (people, events, news and newsletters, programs and graduate programs, portals and documents, jobs and workshops, **cyberseminars**); T-A4 links, files, embeds; T-A5 functions; T-A6 readiness for the new address; T-A7 cut-over rehearsal. Each has a "done when" list that names the controls, the counts and the sample.
 
 ## 9. What this draft did not check
 
