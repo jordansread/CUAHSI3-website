@@ -10,12 +10,12 @@ speakers:
   - Xingyuan Chen
   - Alison Appling
 speaker_orgs:
-  - Pacific Northwestern National Laboratory
+  - Pacific Northwest National Laboratory
   - U.S. Geological Survey (USGS)
 tags:
   - women-advancing-river-research
 published: true
 description: A Women Advancing River Research webinar on January 16, 2025, with
-  Xingyuan Chen (Pacific Northwestern National Laboratory) and Alison Appling
+  Xingyuan Chen (Pacific Northwest National Laboratory) and Alison Appling
   (U.S. Geological Survey (USGS)).
 ---

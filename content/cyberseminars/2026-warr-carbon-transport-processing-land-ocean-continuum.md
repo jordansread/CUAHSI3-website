@@ -10,11 +10,11 @@ speakers:
   - Jorien Vonk
 speaker_orgs:
   - University of Alberta
-  - Vrije University of Amsterdam
+  - Vrije Universiteit Amsterdam
 tags:
   - women-advancing-river-research
 published: true
 description: A Women Advancing River Research webinar on May 21, 2026, with
-  Suzanne Tank (University of Alberta) and Jorien Vonk (Vrije University of
+  Suzanne Tank (University of Alberta) and Jorien Vonk (Vrije Universiteit
   Amsterdam).
 ---

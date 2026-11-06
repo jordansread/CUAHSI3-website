@@ -40,7 +40,7 @@ const yt = new Map(); {
 // Two spellings on the legacy page that are plainly typos, corrected here and listed in the proposal as the agent's choice (C7):
 // "llison Pfeiffer" (a geologist at Western Washington University; checked against the university's department page) and
 // "The Nature Conservatory" (the organisation is The Nature Conservancy).
-const FIXES = { 'llison Pfeiffer': 'Allison Pfeiffer', 'The Nature Conservatory': 'The Nature Conservancy' }
+const FIXES = { 'llison Pfeiffer': 'Allison Pfeiffer', 'The Nature Conservatory': 'The Nature Conservancy', 'Pacific Northwestern National Laboratory': 'Pacific Northwest National Laboratory', 'Vrije University of Amsterdam': 'Vrije Universiteit Amsterdam' }
 const fixes_used = []
 const records = [], skipped = []
 for (const year of [2021, 2022, 2023, 2024, 2025, 2026]) {

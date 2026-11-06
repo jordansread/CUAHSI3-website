@@ -120,3 +120,7 @@ The first, a middle and the last file the generator would write are in `agent/au
 Jordan approved Parts 1 and 2 and chose option (c) for Part 3 (unpublish both). Applied: 63 files added, `youtube_id` emptied in the two malformed items, `published: false` in `intro-compute-services-july-2024` and `intro-hydroshare-may-2024`. Correction to this proposal: the page lists **82** published cards (21 - 2 + 63), not 84; checked in the built page (82 thumbnails, 64 mentions of the series name: 63 cards and the filter chip). `verify.sh --build`: 0 FAIL; the validator passes on 88 cyberseminar files.
 
 Slugs and descriptions were refined before anything was applied (reviewer, cosmetic): the slug keeps words of 2 letters ("de-icer") and takes up to 6 words without ending on a preposition; a description with three or more speakers reads "A (x), B (y) and C (z)". The table above is the final set.
+
+## Update, 6 November 2026: two more spelling fixes
+
+Jordan approved fixing the two misspellings listed above ("Yes, fix the typos"). Agent's choice of wording (C7): "Pacific Northwestern National Laboratory" became **Pacific Northwest National Laboratory** (lecture of 16 January 2025) and "Vrije University of Amsterdam" became **Vrije Universiteit Amsterdam**, the university's own name (lecture of 21 May 2026). Each is in one file (a `speaker_orgs` entry and the description). The generator's fix list (`agent/audit/warr-build.mjs`), the proposal CSV and the numbers file now carry the same four fixes.
