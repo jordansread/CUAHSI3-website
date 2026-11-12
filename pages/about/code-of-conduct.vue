@@ -142,7 +142,7 @@ useHead({
         <ol>
         <li>Informally raise a conduct concern by contacting CUAHSI’s CEO or the CUAHSI Board of Directors Chair (backup: the Board Chair-Elect). An informal approach may be appropriate when the person raising the concern is not seeking a formal resolution process. An informal approach may also be pursued when an individual seeks to explore resolution options before deciding to identify the accused or whether to file a formal complaint.</li>
         <li>File a formal complaint by emailing <a href="mailto:ethics@cuahsi.org">ethics@cuahsi.org</a>, or by contacting CUAHSI’s CEO or the Board of Directors Chair (backup: the Board Chair-Elect). A formal complaint may be used for individuals seeking a formal resolution process or an informal resolution approach.</li>
-        <li>Concerns may be reported anonymously by completing <a href="https://cuahsi.jotform.com/dmccay/code-of-conduct-anonymous-form">this form</a>; however, anonymity may limit how CUAHSI can investigate and/or respond to the concern.</li>
+        <li>An online form for anonymous reports is not available at this time. Please use the other ways to report listed above.</li>
         </ol>
         <p>A formal report should include the following information:</p>
         <ol>
