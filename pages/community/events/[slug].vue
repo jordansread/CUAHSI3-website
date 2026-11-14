@@ -6,6 +6,8 @@ const { data: event } = await useAsyncData(`event-${route.params.slug}`, () =>
 )
 
 const notFound = computed(() => !event.value)
+// A missing slug answers 404 on the server, so the prerender writes no page for a broken link and check-links.mjs reports it
+if (import.meta.server && notFound.value) setResponseStatus(useRequestEvent(), 404)
 
 useHead({
   title: computed(() => notFound.value ? 'Not found' : `${event.value?.title} · Events`),
