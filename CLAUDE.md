@@ -124,7 +124,8 @@ version mismatch. Ignore it.
     are never rewritten. If an entry is wrong, add a new dated entry that says what was wrong
     and points to it (a `correction` line in your own branch's log file). Each branch writes only
     its own file, `agent/log/<YYMMDD>-<branch>.md`. `verify.sh` fails if `agent/eval-log.md`
-    changes at all (it is frozen), if a log file already on the base branch changes, or if a line
+    changes at all (it is frozen), if a log file already on the base branch changes (`agent/log/README.md`,
+    which describes the format and is not a log, may be edited but not removed), or if a line
     in `agent/log/` is not in the format in `agent/log/README.md`. Ten lines in two files already on
     `main` are the only exception in `agent/log/` (9 in `261008-task-jobs-agu-credit.md`, 1 in
     `261015-content-upstream-jobs-2026-10-13.md`): they were merged wrong and cannot be edited, so

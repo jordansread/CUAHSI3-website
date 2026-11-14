@@ -118,7 +118,8 @@ if git rev-parse --git-dir >/dev/null 2>&1; then
       [ -n "$chg" ] && [ "$chg" != "0" ] && fail "agent/eval-log.md changed ($chg line(s)); it is frozen history, write your lines in agent/log/<YYMMDD>-<branch>.md (rule 10, agent/log/README.md)" || ok "frozen eval log unchanged"
     fi
     if [ -d agent/log ] || git cat-file -e "$mb:agent/log/README.md" 2>/dev/null; then
-      oldlog=$(git diff --name-status "$mb" -- agent/log | awk '$1 != "A"')
+      # README.md describes the format and is not a log file; it changes when the format does (14 November 2026: caught: test, typecheck).
+      oldlog=$(git diff --name-status "$mb" -- agent/log | awk '$1 != "A" && !($1 == "M" && $2 == "agent/log/README.md")')
       [ -n "$oldlog" ] && fail "a log file already on the base branch changed or was removed (append-only, rule 10): $(echo "$oldlog" | tr '\n' ';')" || ok "log files on the base branch unchanged"
     fi
   else
