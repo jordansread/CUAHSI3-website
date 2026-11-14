@@ -1,0 +1,95 @@
+# Known footguns, with their history
+
+The full entries, moved unchanged from `CLAUDE.md` on 14 November 2026 (org issue 124). The
+symptom and the fix of each, which is what an agent needs while editing, is in
+`.claude/rules/site-code.md` under the same number and title; this file keeps the story: when it
+was seen, what was tried, what is still unverified. A new footgun gets an entry in both
+(see "New footgun" in `docs/procedures.md`). "See 'Bulk edit.'" in footgun 9 means "Bulk edits" in `AGENTS.md`.
+
+## Known footguns
+
+Every one of these cost real debugging time. Most failed silently; the third is unverified (see below), the eleventh printed a warning but left the tree dirty, the thirteenth hydrated with stale tag colours, the fourteenth crashed one page with a green build, and the fifteenth ignored the address on a page that otherwise loaded.
+
+1. **`queryContent('news')` also returns `/newsletter/` content.** Nuxt Content matches
+   by path prefix, and `/newsletter/2026-06` starts with `/news`. This put newsletter
+   issues on the news page with broken URLs. Always filter, with the trailing slash:
+   ```js
+   const items = computed(() =>
+     (allItems.value ?? []).filter(item => item._path?.startsWith('/news/'))
+   )
+   ```
+   Check every new `queryContent()` call for the same kind of collision.
+2. **`<component :is="cond ? 'a' : 'NuxtLink'">` renders but does not navigate.** The
+   markup looks right and clicks do nothing. Hit twice. Use explicit `v-if` / `v-else`
+   with real `<a>` and `<NuxtLink>` tags.
+3. **Unverified: an apostrophe inside a static `style="..."` attribute.** The previous
+   agent reported that it crashes the Vue compiler (`style="content:'x'"` was the
+   example). That was not reproduced. 231 such lines in 21 files build cleanly: the
+   build passed (reconcile report, `agent/reports/261003_reconcile.md`, check 7), and
+   every line the report read was a `font-family` name like `'Hanken Grotesk'`. That
+   shows the build did not fail, not that every line renders correctly. A standalone
+   `@vue/compiler-sfc` compile of `style="content:'x'"` with Vue 3.5.35 (client and
+   SSR, not a Nuxt build) also succeeded; the test is recorded in `agent/eval-log.md`.
+   There is no `verify.sh` check for it. If a build ever fails on a style attribute
+   with an apostrophe, record the exact error here.
+4. **Vue reuses DOM nodes across `v-for`, including `<img src>`.** A `:key` on a
+   wrapping `<template v-for>` is not enough; Vue looks past the template to the
+   rendered children. Symptom: the right content flashes, then a neighbour's replaces
+   it. Use one stable keyed element per iteration. Do not switch element types
+   mid-list.
+5. **`findOne()` throws when nothing matches.** Always `.findOne().catch(() => null)`.
+6. **`throw createError()` inside `setup()` breaks client-side navigation in dev.**
+   Use a `notFound` computed that the template renders conditionally.
+7. **Bare JSON arrays in `content/` get wrapped.** Nuxt Content warns and moves the
+   array into `.body`. Unwrap: `Array.isArray(data.value?.body) ? data.value.body : []`.
+8. **`nitro.prerender.failOnError: false` is deliberate.** Without it, a dynamic-route
+   404 aborts the whole build. Leave it.
+9. **A bulk edit once corrupted a template literal and broke the build.** The backtick
+   balance check in `verify.sh` exists because of it. See "Bulk edit."
+
+10. **Inline styles beat classes.** When an inline style becomes a Tailwind class, an element that had both a
+    class and an inline value for the same property changes (the inline one used to win), and a class that was
+    dead under an inline value, such as `hover:text-white` under an inline `color`, suddenly works. Also: Tailwind's
+    `antialiased` adds a second property, `grid-cols-N` uses `minmax(0,1fr)` where plain CSS `1fr` is
+    `minmax(auto,1fr)`, and the build adds `-webkit-backdrop-filter`; use the exact arbitrary form when the
+    inline style was exact. Two more from the migration: `items-start` writes `align-items:flex-start` where
+    the inline style said `start`, and an old `font:` shorthand needs `leading-[normal]` but must not be
+    combined with an explicit `leading-*` on the same element (the earlier class wins, and the line height
+    silently changes). No `verify.sh` check: none of this can be found by a pattern; the style comparison finds it. Check with
+    `node scripts/style-compare.mjs` (computed style of every element) and `npm run visual:compare`. Do not use the
+    `font-display` / `font-body` tokens for text that had a plain inline `font-family`: they add a `sans-serif`
+    fallback that changes how arrows and ticks draw; write `font-['Hanken_Grotesk']` instead.
+11. **A build modified a tracked file: `public/robots.txt`.** The `@nuxtjs/robots` module finds a robots.txt in
+    several places and, when it is `public/robots.txt`, renames it to `public/_robots.txt` on every build or dev run
+    (the tree is left dirty with a deleted tracked file and an untracked one). Observed in the 4 October build: the
+    built site then also contained the copy as `/_robots.txt`; after the move it does not. The source now lives at `assets/robots.txt`, which the module reads without moving it;
+    the built `/robots.txt` was byte-identical before and after the move (checked with diff on one build). `verify.sh` fails if `public/robots.txt` exists.
+12. **Not showing data on a page does not stop the site publishing it.** `@nuxt/content` v2 writes every content file, whole, into
+    the static output (`/api/_content/cache.<id>.json`, `/api/_content/query/<hash>.json`) so pages can query it in the browser.
+    Taking the member representatives' email addresses out of `/member-portal` left all 229 in those files. A field that must not
+    be public has to be removed when the file is parsed: `server/plugins/strip-rep-emails.ts` does it for `content/members/reps.json`,
+    and `scripts/check-member-emails.mjs` (run by `verify.sh --build`) fails the build if any address, in plain, %40 or &#64; form, or a
+    row with an email key, is found in `.output/public` or `.output/server`. The dev server also serves `/api/_content/*` live; the plugin
+    covers it too, the check does not.
+    The file is still in the repository, which is public.
+13. **A page that compares dates with `new Date()` hydrates wrong.** The build writes the page on the day it is built; the browser
+    then runs the same code on a later day. Where a date decides which list an item is in (upcoming or past), the browser's first
+    render differs from the server's, and Vue does not repair a differing `style` attribute (my reading; the fix removed the symptom, the mechanism was not isolated): an event kept the tag colour of
+    the item that had been in its place (a workshop in green, a deadline in blue). It built cleanly and the visual baseline
+    had the wrong colours in it. Fix: take the time from `useState('<page>-rendered-at', () => Date.now())` (the build's time on
+    the server and for the first browser render) and set it to the real time in `onMounted`, as the job board, the home page
+    and the events pages do. Do not call `new Date()` inside a `computed` that picks what to render. No `verify.sh` check:
+    `new Date()` is also fine in a handler or a one-off format.
+14. **A `watch()` on a computed, placed above what the computed reads, crashes the page and the build passes.** `watch(typeFilters, ...)`
+    runs `typeFilters` at once, which read `jobs` before the `const jobs = ...` line below it had run (a temporal dead zone error in `setup`).
+    `verify.sh --build` and the link check were green; the job board came out as an 800px-high blank in the visual comparison, and only
+    that showed it. Put a `watch()` after the declarations it depends on (the end of `<script setup>` is safe), and run
+    `npm run visual:compare` after any change to a page's script.
+15. **`window.location.search` is empty in `onMounted` on a statically generated page, though the address bar has a query.** Seen in
+    the 31 October built site (Nuxt 3, served with `npx serve`): a list that read `?site=luquillo` from `window.location.search` in
+    `onMounted` saw an empty string, ignored the address, and the build, the link check and the first page load were all fine. The
+    router has the query: read it with `useRoute().query` inside `onMounted` (not in `setup`, where the server's empty query would make
+    the first browser render differ from the built page; footgun 13). Found by loading a link with a query in the browser. Seen only
+    with `npx serve`; the cause (my reading: the router rewrites the address after hydration) was not isolated, and it was not tried on
+    Netlify. Write the choice back with `router.replace({ query })`, not `history.replaceState`, so the router and the address agree on
+    Back. No `verify.sh` check: only a browser shows it.
