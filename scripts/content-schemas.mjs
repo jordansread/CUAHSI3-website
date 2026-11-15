@@ -106,7 +106,7 @@ const jobs = z.strictObject({
   type: z.enum(['permanent', 'post-doc', 'fellowship', 'internship', 'graduate-assistantship', 'faculty', 'temporary']),
   posted: isoDate,
   deadline: isoDate.nullable(),
-  url,
+  url: url.refine(u => !/safelinks\.protection\.outlook\.com/i.test(u), 'must be the posting\'s own address, not an Outlook SafeLinks wrapper (it can carry the forwarder\'s email address)'), // a Michigan job on 7 Nov 2026 linked a SafeLinks-wrapped benefits page from the posting's text instead of the apply link
   tags: strings,
   published: z.boolean(),
   source: z.enum(['newsletter', 'joshswaterjobs', 'usajobs', 'agu']).optional(), // 23 of 29 existing files; the model names the first two; usajobs added 5 Oct 2026 for the federal postings the upstream jobs automation writes
