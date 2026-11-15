@@ -57,6 +57,7 @@ node scripts/parity/redirects.mjs   # regenerates public/_redirects (legacy URL 
 node scripts/check-redirects.mjs   # after a build: every redirect target exists in .output/public and no source is a real page (verify.sh --build runs it)
 npm run visual:compare             # after a build: 60 screenshots vs visual/baseline; any changed pixel fails
 npm run visual:baseline            # rewrites visual/baseline; only from a build of main, in its own PR
+npx playwright test -c tests/e2e/playwright.config.ts   # after a build: smoke test, every built page at 390/1280px (errors, hydration, empty <main>); tests/e2e/README.md
 node scripts/style-compare.mjs snapshot .agent/styles/<name>.json.gz   # after a build: computed style of every element, 121 pages x 2 widths
 node scripts/style-compare.mjs compare  <a>.json.gz <b>.json.gz         # 0 differing elements is the gate for Tailwind migration PRs
 rm -rf .nuxt .output node_modules/.vite && npm run dev   # when something seems stale
