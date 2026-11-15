@@ -60,13 +60,14 @@ npm run build:search               # nuxt generate && pagefind --site .output/pu
 npx serve .output/public -l 4000   # preview the built site. Search only works here.
 ./scripts/verify.sh                # static checks, seconds
 ./scripts/verify.sh --build        # static checks, then the full build and the built-site link check
-npm run lint                       # ESLint: Vue templates and TypeScript scripts get eslint-plugin-vue's essential rules; .ts and .mjs files are only parsed (syntax errors), no rules; verify.sh runs it
+npm run lint                       # ESLint: Vue templates and TypeScript scripts get eslint-plugin-vue's essential rules; .vue files also get rules for footguns 1, 2 and 5, .ts files for 1 and 5; .mjs files are only parsed (syntax errors); verify.sh runs it
 npm run validate:content           # read-only check of content/ against the schemas; verify.sh runs it too
 node scripts/check-links.mjs       # after a build: every internal href/src in .output/public resolves to a file (verify.sh --build runs it)
 node scripts/parity/redirects.mjs   # regenerates public/_redirects (legacy URL redirects) from the parity data; --check compares (verify.sh runs the check)
 node scripts/check-redirects.mjs   # after a build: every redirect target exists in .output/public and no source is a real page (verify.sh --build runs it)
 npm run visual:compare             # after a build: 60 screenshots vs visual/baseline; any changed pixel fails
 npm run visual:baseline            # rewrites visual/baseline; only from a build of main, in its own PR
+npx playwright test -c tests/e2e/playwright.config.ts   # after a build: smoke test, every built page at 390/1280px (errors, hydration, empty <main>); tests/e2e/README.md
 node scripts/style-compare.mjs snapshot .agent/styles/<name>.json.gz   # after a build: computed style of every element, 121 pages x 2 widths
 node scripts/style-compare.mjs compare  <a>.json.gz <b>.json.gz         # 0 differing elements is the gate for Tailwind migration PRs
 rm -rf .nuxt .output node_modules/.vite && npm run dev   # when something seems stale

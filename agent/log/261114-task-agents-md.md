@@ -16,3 +16,5 @@
 261114 | task/agents-md | defect | caught: reviewer. reviewer.md did not point to docs/rules.md for a rule's full text; one sentence added.
 261114 | task/agents-md | correction | 261114 task/agents-md note "Experiment condition": AGENTS.md + CLAUDE.md are 189 lines after the reviewer's fixes, not 185.
 261114 | task/agents-md | merged | jordansread/CUAHSI3-website#231 (footgun 13, archive page) and #232 (smoke test) merged by Jordan
+261114 | task/agents-md | merged | jordansread/CUAHSI3-website#233 (log caught values) and #235 (ESLint footgun rules) merged by Jordan
+261114 | task/agents-md | note | Merged the default branch in; CLAUDE.md conflicted (kept this branch's short file) and agent/roadmap.md on Noticed appends (kept both). Carried main's 6 CLAUDE.md edits from PRs 230, 232, 233 and 235 into the split: lint and smoke-test lines in AGENTS.md Commands, the README exemption in docs/rules.md rule 10, footguns 1, 2, 5 and 6 in docs/footguns.md and .claude/rules/site-code.md

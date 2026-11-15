@@ -68,11 +68,9 @@ out=$(grep -rn -A2 'findOne()' "${CODE_DIRS[@]}" composables 2>/dev/null | awk '
   END           { if (pending != "") print pending }' | grep -v '\.catch')
 [ -n "$out" ] && { warn "findOne() with no .catch within two lines:"; echo "$out" | sed 's/^/      /'; } || ok "findOne() calls have .catch"
 
-# 8. createError in pages (footgun 6). Heuristic.
-if [ -d pages ]; then
-  out=$(grep -rn 'throw createError' pages)
-  [ -n "$out" ] && { warn "throw createError in a page; breaks client-side navigation in dev:"; echo "$out" | sed 's/^/      /'; } || ok "no throw createError in pages"
-fi
+# 8. throw createError in pages or components (footgun 6): breaks client-side navigation in dev. Use a notFound computed.
+out=$(grep -rn 'throw createError' pages components 2>/dev/null)
+[ -n "$out" ] && { fail "throw createError in pages/ or components/; use a notFound computed instead (CLAUDE.md, footgun 6):"; echo "$out" | sed 's/^/      /'; } || ok "no throw createError in pages or components"
 
 # 8a. public/_redirects is the generator's output (CI does not build, so this is the check that always runs)
 gout=$(node scripts/parity/redirects.mjs --check 2>&1) && ok "$gout" || { fail "$gout"; }
@@ -146,7 +144,8 @@ if git rev-parse --git-dir >/dev/null 2>&1; then
       [ -n "$chg" ] && [ "$chg" != "0" ] && fail "agent/eval-log.md changed ($chg line(s)); it is frozen history, write your lines in agent/log/<YYMMDD>-<branch>.md (rule 10, agent/log/README.md)" || ok "frozen eval log unchanged"
     fi
     if [ -d agent/log ] || git cat-file -e "$mb:agent/log/README.md" 2>/dev/null; then
-      oldlog=$(git diff --name-status "$mb" -- agent/log | awk '$1 != "A"')
+      # README.md describes the format and is not a log file; it changes when the format does (14 November 2026: caught: test, typecheck).
+      oldlog=$(git diff --name-status "$mb" -- agent/log | awk '$1 != "A" && !($1 == "M" && $2 == "agent/log/README.md")')
       [ -n "$oldlog" ] && fail "a log file already on the base branch changed or was removed (append-only, rule 10): $(echo "$oldlog" | tr '\n' ';')" || ok "log files on the base branch unchanged"
     fi
   else

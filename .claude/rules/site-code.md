@@ -32,9 +32,10 @@ what is unverified) in `docs/footguns.md`. Check the changed files against every
      (allItems.value ?? []).filter(item => item._path?.startsWith('/news/'))
    )
    ```
-   Check every new `queryContent()` call for the same kind of collision.
+   Check every new `queryContent()` call for the same kind of collision. `npm run lint` fails
+   `queryContent('news')` (any content folder name that starts another) in a file whose script has no `startsWith('/news/')`.
 2. **`<component :is="cond ? 'a' : 'NuxtLink'">` renders but does not navigate.** Use explicit
-   `v-if` / `v-else` with real `<a>` and `<NuxtLink>` tags.
+   `v-if` / `v-else` with real `<a>` and `<NuxtLink>` tags. `npm run lint` fails a ternary `:is`, or one with the string `NuxtLink`, on `<component>`.
 3. **Unverified: an apostrophe inside a static `style="..."` attribute.** Reported to crash the Vue
    compiler; not reproduced, and 231 such lines build. No check. If a build ever fails on a style
    attribute with an apostrophe, record the exact error in `docs/footguns.md`.
@@ -42,9 +43,10 @@ what is unverified) in `docs/footguns.md`. Check the changed files against every
    `<template v-for>` is not enough (Vue looks past the template to the rendered children). Symptom: the
    right content flashes, then a neighbour's replaces it. Use one stable keyed element per iteration. Do not switch
    element types mid-list.
-5. **`findOne()` throws when nothing matches.** Always `.findOne().catch(() => null)`.
+5. **`findOne()` throws when nothing matches.** Always `.findOne().catch(() => null)`. `npm run lint` fails a `findOne()` not directly followed by `.catch`.
 6. **`throw createError()` inside `setup()` breaks client-side navigation in dev.**
-   Use a `notFound` computed that the template renders conditionally.
+   Use a `notFound` computed that the template renders conditionally (as in
+   `pages/community/news/[slug].vue`); `verify.sh` fails a `throw createError` in `pages/` or `components/`.
 7. **Bare JSON arrays in `content/` get wrapped.** Nuxt Content warns and moves the
    array into `.body`. Unwrap: `Array.isArray(data.value?.body) ? data.value.body : []`.
 8. **`nitro.prerender.failOnError: false` is deliberate.** Without it, a dynamic-route
