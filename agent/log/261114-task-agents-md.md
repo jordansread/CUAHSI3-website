@@ -21,3 +21,5 @@
 261114 | task/agents-md | merged | jordansread/CUAHSI3-website#234 (editor setup) merged by Jordan; merged the default branch in again, no conflict; 495 of 497 non-blank lines of CLAUDE.md on the default branch kept word for word (the 2 others are the reworded "This file is living" sentence)
 261114 | task/agents-md | defect | The Noticed line on CLAUDE.md pointers counted 14 in 10 files; it is 16 in 11 (scripts/verify.sh line 73 from PR 230 and eslint.config.mjs line 6 missed, because the search did not match "CLAUDE.md, footgun 6" or a section name); a correction line was added. caught: reviewer
 261114 | task/agents-md | defect | AGENTS.md's short rule 10 did not carry PR 233's exemption for agent/log/README.md, so it read stricter than the full rule; added. caught: reviewer
+261114 | task/agents-md | merged | jordansread/CUAHSI3-website#236 (guard hook tests) merged by Jordan; merged the default branch in again, no conflict
+261114 | task/agents-md | pr | jordansread/CUAHSI3-website#237 opened at Jordan's go-ahead; base checked
