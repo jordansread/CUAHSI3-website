@@ -15,3 +15,4 @@
 261114 | task/agents-md | defect | caught: reviewer. Stale cross-references in moved text ("See 'Bulk edit.'" in footgun 9, "Visual review request" in rule 2, verify.sh's "(Layout section)") and agent/audit/warr-build.mjs missing from the Noticed line; header notes, the verify.sh comment and the Noticed line fixed.
 261114 | task/agents-md | defect | caught: reviewer. reviewer.md did not point to docs/rules.md for a rule's full text; one sentence added.
 261114 | task/agents-md | correction | 261114 task/agents-md note "Experiment condition": AGENTS.md + CLAUDE.md are 189 lines after the reviewer's fixes, not 185.
+261114 | task/agents-md | merged | jordansread/CUAHSI3-website#231 (footgun 13, archive page) and #232 (smoke test) merged by Jordan
