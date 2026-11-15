@@ -1,143 +1,189 @@
 #!/usr/bin/env node
-// PreToolUse guard for the CUAHSI website repo.
-// Exit 2 blocks the tool call and shows the message to the agent.
-// This is a backstop, not a sandbox: scripts/verify.sh checks the same things
-// against the actual git diff, and Jordan's PR review is the real control.
-//
-// Design (14 November 2026, CUAHSI/CUAHSI3-website#118): the checks match the command TEXT, broadly, as before, so a form
-// the guard does not understand is blocked, not allowed. Two things make them narrower than before, and both fail safe:
-//   1. Text that is provably data is removed first: the body of a heredoc whose delimiter is quoted (so the shell expands
-//      nothing in it) and which is written to a file or read by cat/tee, with nothing piped onward. Anything else stays.
-//   2. A push is checked for the default branch only in its own simple command (up to the next ; & | or newline),
-//      not in the whole text, so `git push origin task/x && gh pr create --base main` passes.
-// And one check is wider: a write is refused if ANY folder the command could run in is on the default branch (the
-// session's folder, the project root, and every folder named after cd, pushd or git -C), not only the project root.
-// Cases: node scripts/test-guard-hook.mjs (block or allow for each command form).
-import { execSync } from 'node:child_process';
-import { readFileSync } from 'node:fs';
+// Tests for the PreToolUse guard hook (.claude/hooks/guard.mjs): each case is a tool call in, block (exit 2) or allow out.
+//   node scripts/test-guard-hook.mjs                 test .claude/hooks/guard.mjs
+//   node scripts/test-guard-hook.mjs path/to/hook.mjs   test another copy (a proposed fix)
+// It builds a throwaway git repository with a main checkout on a task branch and a worktree on main, so the
+// "which branch is this folder on" cases are real. Exit 1 if any case gives the wrong answer.
+import { execSync, spawnSync } from 'node:child_process';
+import fs from 'node:fs';
+import os from 'node:os';
 import path from 'node:path';
 
-const PHASE = 2;          // 1 = content/ is frozen. Change only when Jordan opens Phase 2.
-const BASE = 'main';
+const hook = path.resolve(process.argv[2] ?? '.claude/hooks/guard.mjs');
+const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'guard-test-'));
+const repo = path.join(tmp, 'repo'); const wtMain = path.join(tmp, 'wt-base'); const wtTask = path.join(tmp, 'wt-task');
+const sh = (c, cwd = repo) => { try { execSync(c, { cwd, stdio: 'pipe' }); } catch (e) { console.error(`setup failed: ${c}\n${e.stderr}`); fs.rmSync(tmp, { recursive: true, force: true }); process.exit(1); } };
+fs.mkdirSync(repo);
+sh('git init -q -b main && git -c user.email=t@t -c user.name=t -c commit.gpgsign=false -c core.hooksPath=/dev/null commit -q --allow-empty -m init');
+sh('git branch task/a && git branch task/b && git branch side');
+sh(`git worktree add -q ${wtTask} task/b`);
+sh(`git worktree add -q ${wtMain} side && git -C ${wtMain} switch -q --detach && git switch -q task/a`);
+// wt-main must be ON main, but main is not checked out anywhere else after the switch above:
+sh(`git -C ${wtMain} switch -q main`);
 
-let input;
-try { input = JSON.parse(readFileSync(0, 'utf8')); } catch { process.exit(0); }
-const tool = input.tool_name ?? '';
-const ti = input.tool_input ?? {};
-const root = process.env.CLAUDE_PROJECT_DIR || input.cwd || process.cwd();
-const cwd0 = input.cwd || root;
+const run = (command, cwd = repo, tool = 'Bash') => {
+  const input = JSON.stringify({ tool_name: tool, tool_input: tool === 'Bash' ? { command } : { file_path: command }, cwd });
+  const r = spawnSync('node', [hook], { input, env: { ...process.env, CLAUDE_PROJECT_DIR: repo }, encoding: 'utf8' });
+  return r.status === 2 ? 'block' : 'allow';
+};
 
-const block = (msg) => { console.error(`Blocked by .claude/hooks/guard.mjs: ${msg}`); process.exit(2); };
+// [expected, description, command, cwd]
+const cases = [
+  // the misfires (CUAHSI/CUAHSI3-website#118)
+  ['allow', 'push of a task branch followed by gh pr create --base main', 'git push -u origin task/a && gh pr create --base main --head task/a'],
+  ['allow', 'push of a branch whose name contains "main"', 'git push origin task/main-menu'],
+  ['allow', 'commit in a worktree on a task branch', `cd ${wtTask} && git commit -m x`],
+  ['block', 'commit in a worktree on main (cd prefix)', `cd ${wtMain} && git commit -m x`],
+  ['block', 'commit in a worktree on main (git -C)', `git -C ${wtMain} commit -m x`],
+  ['block', 'commit in a worktree on main (session cwd)', 'git commit -m x', wtMain],
+  ['allow', 'a heredoc that mentions --no-verify, written to a file', "cat > notes.md <<'EOF'\nnever use git commit --no-verify\nEOF"],
+  ['block', 'a commit message that mentions --no-verify (known false block, as the current hook; write the message with a quoted heredoc instead)', 'git commit -m "explain why --no-verify is banned"'],
+  ['allow', 'merge-base check while main checkout is on a task branch', 'git merge-base --is-ancestor origin/main HEAD'],
+  // the existing blocks still block
+  ['block', 'push to main', 'git push origin main'],
+  ['block', 'push to main by refspec', 'git push origin HEAD:main'],
+  ['block', 'push to refs/heads/main', 'git push origin task/a:refs/heads/main'],
+  ['block', 'push to master', 'git push origin master'],
+  ['block', 'push HEAD from a folder on main', 'git push origin HEAD', wtMain],
+  ['block', 'bare push from a folder on main', `cd ${wtMain} && git push`],
+  ['block', 'force-push --force', 'git push --force origin task/a'],
+  ['block', 'force-push -f', 'git push -f origin task/a'],
+  ['block', 'force-push --force-with-lease', 'git push --force-with-lease origin task/a'],
+  ['block', 'force-push +refspec', 'git push origin +task/a'],
+  ['block', 'gh pr merge', 'gh pr merge 12 --squash'],
+  ['block', 'git add -A', 'git add -A'],
+  ['block', 'git add .', 'git add .'],
+  ['block', 'git add --all', 'git add --all'],
+  ['block', 'commit --no-verify', 'git commit --no-verify -m x'],
+  ['block', 'push --no-verify', 'git push --no-verify origin task/a'],
+  ['block', 'commit while the main checkout is on main', 'git commit -m x', repo, 'main-checkout-on-main'],
+  ['block', 'edit the hook', path.join(repo, '.claude/hooks/guard.mjs'), repo, 'Edit'],
+  ['block', 'edit settings.json', path.join(repo, '.claude/settings.json'), repo, 'Write'],
+  // forms the current hook blocks that a parser could miss (reviewer, 14 November)
+  ['block', 'line continuation before push', 'git \\\n  push origin main'],
+  ['block', 'line continuation, commit in a folder on main', `git -C ${wtMain} \\\n  commit -m x`],
+  ['block', 'bash -c with a push to main', 'bash -c "git push origin main"'],
+  ['block', 'timeout N bash -c with --no-verify', "timeout 60 bash -c 'git commit --no-verify -m x'"],
+  ['block', 'eval of a push to main', 'eval "git push origin main"'],
+  ['block', '$(...) with a push to main', 'x=$(git push origin main)'],
+  ['block', 'backticks with a push to main', 'echo `git push origin main`'],
+  ['block', 'heredoc fed to bash', "bash <<'EOF'\ngit push origin main\nEOF"],
+  ['block', 'heredoc piped to sh', "cat <<EOF | sh\ngit push origin main\nEOF"],
+  ['block', '<< inside quotes does not hide the next line', 'echo "use <<EOF"\ngit push origin main'],
+  ['block', 'here-string does not hide the next line', 'cat <<<word\ngit push origin main'],
+  ['block', 'cd to a variable while the main checkout is on main', 'cd "$WT" && git commit -m x', repo, 'main-checkout-on-main'],
+  ['block', 'git --git-dir <path> commit --no-verify', 'git --git-dir .git commit --no-verify -m x'],
+  ['block', 'push to heads/main', 'git push origin task/a:heads/main'],
+  ['block', 'push --force-w (an abbreviation git accepts)', 'git push --force-w origin task/a'],
+  ['block', 'push -uf', 'git push -uf origin task/a'],
+  ['block', 'push ":" (all matching branches)', "git push origin ':'"],
+  ['block', 'push a pattern', "git push origin 'refs/heads/*:refs/heads/*'"],
+  ['block', 'push --all', 'git push --all origin'],
+  ['block', 'push --delete', 'git push --delete origin task/a'],
+  ['block', 'commit -n (skips hooks)', 'git commit -n -m x'],
+  ['block', 'commit with core.hooksPath', 'git -c core.hooksPath=/dev/null commit -m x'],
+  ['block', 'git add -u', 'git add -u'],
+  ['block', 'git add -Av', 'git add -Av'],
+  ['block', 'git add ./', 'git add ./'],
+  ['block', 'switch to main then commit, one command', 'git switch main && git commit -m x'],
+  ['block', 'cherry-pick in a folder on main', 'git cherry-pick abc123', wtMain],
+  ['block', 'gh pr merge inside bash -c', "bash -c 'gh pr merge 3'"],
+  ['allow', 'heredoc written to a file that mentions a push to main', "cat > notes.md <<'EOF'\ngit push origin main\nEOF"],
+  ['allow', 'cd ~ then status', 'cd ~ && git status'],
+  ['allow', 'pull on main (Start a task)', 'git pull --ff-only', wtMain],
+  ['block', 'switch to a new task branch then commit, from a folder on main (refused: any folder on main counts)', 'git switch -c task/new && git commit -m x', wtMain],
+  ['allow', 'a here-string to grep', 'grep -c main <<<"main main"'],
+  // second review (14 November): quoting and folder tracking
+  ['block', 'apostrophe in a message before a $(push to main)', `git commit -m "it's done" && echo "$(git push origin main)"`],
+  ['block', 'bash -lc', 'bash -lc "git push origin main"'],
+  ['block', 'sh -xc', "sh -xc 'git commit --no-verify -m x'"],
+  ['block', 'python one-liner that pushes', `python3 -c "import subprocess; subprocess.run(['git','push','origin','main'])"`],
+  ['block', 'xargs git push', 'echo main | xargs git push origin'],
+  ['block', 'process substitution', 'cat <(git push origin main)'],
+  ['block', 'time (subshell)', 'time (git push origin main)'],
+  ['block', 'redirect written against the ref', 'git push origin main>/dev/null'],
+  ['block', 'arithmetic << does not hide the next line', 'echo $((1<<n))\ngit push origin main'],
+  ['block', 'cd into a folder on main, then a commit inside $(...)', `cd ${wtMain} && x=$(git commit -m y)`],
+  ['block', 'a subshell cd does not leak out', `(cd ${wtTask} && git status); git commit -m x`, wtMain],
+  ['block', 'pushd to a folder on main', `pushd ${wtMain} && git commit -m x`],
+  ['block', 'unquoted heredoc written to a file runs its $(...)', "cat > f.txt <<EOF\n$(git push origin main)\nEOF"],
+  // the project's everyday commands (CLAUDE.md procedures) stay allowed
+  ['allow', 'commit with a $(cat <<EOF) message holding backticks, an apostrophe and "1)"', "git commit -m \"$(cat <<'EOF'\nFix the hook\n\n1) don't use `git push --force origin x` or `git add -A`\n2) :)\n\nCo-Authored-By: x\nEOF\n)\""],
+  ['allow', 'gh pr create with a title apostrophe and a $(cat <<EOF) body', "gh pr create --repo a/b --base main --head task/a --title \"Don't misfire\" --body \"$(cat <<'EOF'\n## What\n1) `git push origin main` is blocked\nUse --no-verify never.\nEOF\n)\""],
+  ['block', 'an escaped backtick in a double-quoted message naming a force-push (known false block, as the current hook)', 'git commit -m "explain \\`git push --force origin x\\`"'],
+  ['allow', 'switch to main and pull (Start a task)', 'git switch main && git pull --ff-only', wtMain],
+  ['allow', 'restore the frozen log from origin/main', 'git checkout origin/main -- agent/eval-log.md'],
+  ['allow', 'worktree add from origin/main', 'git worktree add -q ../x -b task/y origin/main'],
+  ['allow', 'worktree add, cd in, commit, in one command', `git worktree add ${path.join(tmp, 'new-wt')} -b task/z && cd ${path.join(tmp, 'new-wt')} && git commit -m x`],
+  ['allow', 'verify with VERIFY_BASE', 'VERIFY_BASE=origin/main ./scripts/verify.sh 2>&1 | tail -5'],
+  ['allow', 'merge origin/main into a task branch', 'git switch task/a && git merge origin/main'],
+  ['allow', 'merge-base check before a PR', 'git fetch origin && git merge-base --is-ancestor origin/main HEAD'],
+  ['allow', 'log lines appended through a heredoc', "cat >> agent/log/x.md <<'EOF'\n261114 | task/a | note | never push to main or use --force\nEOF"],
+  ['allow', 'commit -m with an attached message containing n', 'git commit -mnote'],
+  ['block', 'a comment that names main after a push (known false block, as the current hook)', 'git push origin task/a # not main'],
+  ['allow', 'heredoc written to a .sh file', "cat > run.sh <<'EOF'\ngit push origin main\nEOF"],
+  ['allow', 'checkout a file from main without --', 'git checkout main README.md && git commit -m x'],
+  // third review (14 November): forms a shell parser missed; the text-based design blocks them
+  ['block', '$(...) inside arithmetic', 'echo $(( $(git push origin main) ))'],
+  ['block', 'ANSI-C quoting before a push', "echo $'it\\'s' && git push origin main && echo 'done'"],
+  ['block', 'a subshell inside "$(...)"', 'echo "$( (true); git push origin main )"'],
+  ['block', 'case inside "$(...)"', 'echo "$(case x in a) git push origin main;; esac)"'],
+  ['block', 'heredoc delimiter written E"OF"', 'cat <<E"OF"\ndata\nEOF\ngit push origin main'],
+  ['block', 'heredoc delimiter written \\EOF', "cat <<\\EOF\ndon't\nEOF\ngit push origin main"],
+  ['block', 'heredoc to bash with no closing line', 'bash <<EOF\ngit push origin main'],
+  ['block', '(( << )) does not hide the next line', '((a<<b))\ngit push origin main'],
+  ['block', 'nested escaped backticks', 'echo `git push origin \\`echo main\\``'],
+  ['block', 'echo piped to bash', "echo 'git push origin main' | bash"],
+  ['block', 'printf piped to sh', "printf 'git commit --no-verify -m x\\n' | sh"],
+  ['block', 'here-string to bash', "bash <<< 'git push origin main'"],
+  ['block', 'heredoc piped to timeout bash', "cat <<'EOF' | timeout 60 bash\ngit push origin main\nEOF"],
+  ['block', 'heredoc to python', "python3 <<'EOF'\nimport subprocess; subprocess.run(['git','push','origin','main'])\nEOF"],
+  ['block', 'branch in a variable', 'B=main; git push origin $B'],
+  ['block', 'branch from a positional argument', `xargs sh -c 'git push origin "$1"' _ <<< main`],
+  ['block', 'alias that skips hooks', "git -c alias.ci='commit --no-verify' ci -m x"],
+  ['block', 'alias set by git config', "git config alias.p 'push --force' && git p origin task/a"],
+  ['block', 'push refspec from config', 'git -c remote.origin.push=HEAD:main push origin'],
+  ['block', 'unknown folder, inner $(...), project root on main', 'cd "$WT" && echo $(git commit -m y)', wtTask, 'main-checkout-on-main'],
+  ['block', 'unknown folder, bash -c, project root on main', `cd "$WT" && bash -c 'git commit -m y'`, wtTask, 'main-checkout-on-main'],
+  ['block', '<<EOF inside quotes before gh pr merge', 'echo "a <<EOF"\ngh pr merge 3\nEOF'],
+  ['block', 'gh with a quoted pr', 'gh "pr" merge 3'],
+  ['block', 'heredoc to a file, then run it', "cat > run.sh <<'EOF'\ngit push origin main\nEOF\nbash run.sh"],
+  ['block', 'log lines through a heredoc that name a force-push to main, piped onward', "cat <<'EOF' | tee -a agent/log/x.md\ngit push --force origin main\nEOF"],
+  ['allow', 'log lines through a heredoc that name a force-push to main', "cat >> agent/log/x.md <<'EOF'\n261114 | task/a | note | git push --force origin main was refused\nEOF"],
+  ['allow', 'cd to an unknown folder from a task folder, root on a task branch', 'cd "$WT" && git commit -m y', wtTask],
+  // replay of 7,523 commands from past sessions (14 November): forms the first redesign refused that were fine
+  ['allow', 'push several named branches in a loop', 'for b in task/x content/y task/z; do git push -u origin $b 2>&1 | tail -1; done'],
+  ['block', 'a loop whose list holds main', 'for b in task/x main; do git push origin "$b"; done'],
+  ['block', 'a loop over a $(...) list', 'for b in $(git branch --format=%(refname:short)); do git push origin $b; done'],
+  ['allow', 'git add -u with named paths', 'git add -u content/jobs agent/log/x.md'],
+  ['allow', 'fast-forward a local main', 'git fetch -q origin && git switch -q main && git merge -q --ff-only origin/main && git status --short'],
+  ['block', 'switch to main then a real merge', 'git switch main && git merge task/a'],
+  ['allow', 'log lines through a heredoc, then the log check', "cat >> agent/log/x.md <<'EOF'\n261114 | task/a | note | never use git add -u or push --force to main\nEOF\nnode scripts/eval-log.mjs --check"],
+  ['block', 'bash -c around a $(cat <<EOF) body', "bash -c \"$(cat <<'EOF'\ngit push origin main\nEOF\n)\""],
+  ['block', 'eval around a $(cat <<EOF) body', "eval \"$(cat <<'EOF'\ngit push origin main\nEOF\n)\""],
+  ['allow', 'another command, then log lines through a heredoc on the same line', "pkill -f 'serve .output'; cat >> agent/log/x.md <<'E'\n261114 | task/a | note | git push --force origin main was refused\nE"],
+  ['allow', 'log lines through a heredoc, then git add of that file', "cat >> agent/log/x.md <<'EOF'\n261114 | task/a | note | git add -u was refused\nEOF\ngit add agent/log/x.md && git commit -q -m log"],
+  ['block', 'heredoc to a file, then source it', "cat > env.txt <<'EOF'\ngit push origin main\nEOF\nsource env.txt"],
+  ['block', 'heredoc to a file, then run it by its bare name', "cat > go <<'EOF'\ngit push origin main\nEOF\ngo"],
+  ['block', 'a shell, then a heredoc on the same line that feeds it', "bash -c 'x'; bash <<'EOF'\ngit push origin main\nEOF"],
+  ['block', 'heredoc to a file, then chmod and run it', "cat > go <<'EOF'\ngit push origin main\nEOF\nchmod +x go && ./go"],
+  // ordinary commands stay allowed
+  ['allow', 'commit on a task branch', 'git commit -m "Fix main menu"'],
+  ['allow', 'add files by name', 'git add pages/index.vue agent/log/x.md'],
+  ['allow', 'push a task branch', 'git push origin task/a'],
+  ['allow', 'log of main', 'git log --oneline origin/main -3'],
+  ['allow', 'diff against main', 'git diff origin/main...HEAD > .agent/review.diff'],
+  ['allow', 'edit a page', path.join(repo, 'pages/index.vue'), repo, 'Edit'],
+];
 
-if (['Edit', 'Write', 'MultiEdit', 'NotebookEdit'].includes(tool)) {
-  const p = ti.file_path ?? ti.notebook_path ?? '';
-  const rel = path.relative(root, path.resolve(root, p)).split(path.sep).join('/');
-  if (PHASE === 1 && (rel === 'content' || rel.startsWith('content/')))
-    block(`${rel} is under content/, which is frozen in Phase 1 (CLAUDE.md rule 3). Stop and tell Jordan why the change seemed necessary.`);
-  if (rel.startsWith('.claude/hooks/') || rel === '.claude/settings.json')
-    block(`${rel} is a guardrail. Ask Jordan to change it himself.`);
+let bad = 0;
+for (const [want, what, cmd, cwd = repo, mode = 'Bash'] of cases) {
+  if (mode === 'main-checkout-on-main') sh('git switch -q --detach && git -C ' + wtMain + ' switch -q --detach && git switch -q main');
+  const got = mode === 'Edit' || mode === 'Write' ? run(cmd, cwd, mode) : run(cmd, cwd);
+  if (mode === 'main-checkout-on-main') sh('git switch -q task/a && git -C ' + wtMain + ' switch -q main');
+  const ok = got === want; if (!ok) bad++;
+  console.log(`${ok ? 'ok  ' : 'FAIL'}  ${want.padEnd(5)} ${what}${ok ? '' : `  (got ${got})`}`);
 }
-
-// Drop heredoc bodies that are provably data. The opening line must hold only cat or tee (optionally inside $( ), with
-// no shell, interpreter or eval before them on that line (bash -c "$(cat <<'EOF' ... runs the body); the delimiter must
-// be quoted ('EOF' or "EOF", so nothing in the body is expanded); nothing may follow the << word on that line except a
-// redirection to a file; and the body must end with its delimiter line. A body written to a file is kept if the file is
-// named again anywhere else in the command (it might be run: bash run.sh, chmod +x, ./run.sh). Otherwise the text is
-// left alone and the checks below read it.
-const RUNNER = /(?<![\w.\/-])(bash|sh|zsh|dash|ksh|source|eval|exec|python[0-9.]*|node|ruby|perl|xargs)(?![\w.-])/;
-const dropDataHeredocs = (s) => {
-  const lines = s.split('\n'); const out = []; const written = [];
-  for (let i = 0; i < lines.length; i++) {
-    const l = lines[i]; out.push(l);
-    const m = /^(.*?)\b(cat|tee)\b([^|;&<`$]*)<<-?[ \t]*(['"])([A-Za-z_][A-Za-z0-9_-]*)\4[ \t]*((?:>>?[ \t]*[^\s|;&<>`$()]+[ \t]*)?)$/.exec(l);
-    // The simple command that holds cat/tee is the text after the last ; & or | before it: nothing in it may run the body.
-    if (!m) continue;
-    const own = m[1].split(/[;&|]/).pop();
-    if (/`/.test(m[1]) || RUNNER.test(own) || (own !== m[1] && /\|\s*$/.test(m[1]) && RUNNER.test(m[1]))) continue;
-    let j = i + 1;
-    while (j < lines.length && lines[j].replace(/^\t+/, '') !== m[5]) j++;
-    if (j >= lines.length) continue;                      // no closing line: not provably data
-    const target = (/>>?[ \t]*([^\s]+)/.exec(m[3] + ' ' + m[6]) ?? [])[1];
-    if (target) written.push(path.basename(target));
-    out.push(lines[j]); i = j;
-  }
-  const rest = out.join('\n');
-  // The file is run later in the command (by a shell or interpreter, sourced, made executable, or as ./file): keep all.
-  for (const f of written) {
-    const e = f.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    if (new RegExp(`(${RUNNER.source}|\\bchmod\\b)[^;&|\\n]*${e}|(^|[\\s;&|(])\\.{0,2}\\/?[^\\s;&|]*\\/?${e}(?=\\s*($|[;&|\\n)]))`, 'm').test(rest.split('\n').filter(l => !l.includes('<<')).join('\n').replace(/\bgit\b[^;&|\n]*/g, ''))) return s;
-  }
-  return rest;
-};
-
-// A for loop over written-out words (for b in task/x task/y; do git push origin $b; done) is read with the loop
-// variable standing for its words: for the default branch if any word is it, else for a plain name. A list that holds
-// a variable, a $(...) or a pattern is left alone, so a push of $b stays unreadable and is refused.
-const expandLoops = (s) => {
-  let out = s;
-  for (const m of s.matchAll(/\bfor[ \t]+([A-Za-z_][A-Za-z0-9_]*)[ \t]+in[ \t]+([^;\n]*?)[ \t]*(;|\n)[ \t]*do\b/g)) {
-    const [, name, list] = m;
-    if (/[$`*?{}()]/.test(list)) continue;
-    const words = list.split(/\s+/).map(w => w.replace(/^["']|["']$/g, '')).filter(Boolean);
-    const stand = words.find(w => /^(refs\/heads\/)?(main|master)$/.test(w)) ?? 'loop-word';
-    out = out.replace(new RegExp(`"?\\$(\\{${name}\\}|${name}(?![A-Za-z0-9_]))"?`, 'g'), stand);
-  }
-  return out;
-};
-
-const branchOf = (dir) => {
-  try { return execSync('git branch --show-current', { cwd: dir, encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }).trim(); }
-  catch { return null; }
-};
-
-if (tool === 'Bash') {
-  const raw = String(ti.command ?? '');
-  // A backslash at the end of a line joins it to the next, as the shell does.
-  const cmd = expandLoops(dropDataHeredocs(raw).replace(/\\\r?\n/g, ' '));
-  const seg = '[^|;&\\n]*';                               // the rest of one simple command
-  const git = (re) => new RegExp(`\\bgit\\b${seg}\\b${re}`).test(cmd);
-  const PROTECTED = `(${BASE}|master)`;
-
-  // -n is --no-verify for git commit; in a group such as -mnote the letters after m are the message.
-  if (/--no-verify\b/.test(cmd) || git('commit\\b' + seg + '\\s-(?![a-zA-Z]*[mFCct][a-zA-Z]*n)[a-zA-Z]*n[a-zA-Z]*(?=\\s|$)') || /core\.hooksPath/i.test(cmd))
-    block('never skip hooks (rule 4).');
-  if (git('push') && /(--forc|\s-[a-zA-Z]*f[a-zA-Z]*\b|\s\+[^\s]|--mirror|--all\b|--delete\b|--prune\b)/.test(cmd))
-    block('never force-push, and push one named branch at a time (rule 4).');
-  // The default branch named as a push target in the same simple command, by any spelling (main, HEAD:main,
-  // refs/heads/main, heads/main), or a target the guard cannot read (a variable or a $(...)), or a config or alias
-  // that could redirect a push.
-  if (new RegExp(`\\bgit\\b${seg}\\bpush\\b${seg}[\\s:/'"]${PROTECTED}(?![\\w./-])`).test(cmd)) block(`never push to ${BASE} (rule 4).`);
-  if (new RegExp(`\\bgit\\b${seg}\\bpush\\b${seg}(\\$|\`)`).test(cmd)) block('write the branch to push out in full, not as a variable or a $(...) (rule 4).');
-  if (new RegExp(`\\bgit\\b${seg}\\bpush\\b${seg}(\\s['"]?\\+?:['"]?(?=\\s|$)|\\*)`).test(cmd) || new RegExp(`\\bxargs\\b${seg}\\bgit\\b${seg}\\bpush\\b`).test(cmd))
-    block('push one named branch at a time, written out; ":", patterns and xargs push others (rule 4).');
-  if (/\bgit\b.*\b(alias\.|remote\.[^\s.]+\.push|push\.default)/.test(cmd)) block('do not change git aliases or push settings from a command (rule 4).');
-  if (/\bgh\b[\s'"]+pr[\s'"]+merge\b/.test(cmd)) block('never merge a PR; Jordan merges (rule 4).');
-  // -u with paths after it (git add -u content/jobs) stages only those paths and is allowed; -u alone stages every change.
-  if (git(`add\\b${seg}(\\s-[a-zA-Z]*A[a-zA-Z]*\\b|\\s--all\\b|\\s(-[a-zA-Z]*u[a-zA-Z]*|--update)(?=[ \\t]*($|[;&|\\n)]))|\\s\\.\\/?(\\s|$)|\\s:\\/?(\\s|$))`) || /\bgit\b[^|;&\n]*\badd\s+\.$/m.test(cmd))
-    block('stage files by name, not with -A, a bare -u or "." (rule 4).');
-
-  // A write (merge-base and friends are not one).
-  if (git('(commit|push|merge(?!-)|rebase|cherry-pick|revert|am)\\b')) {
-    // Fast-forwarding a local main to origin/main (git switch main && git merge --ff-only origin/main) writes nothing new.
-    const realWrite = git(`(commit|push|rebase|cherry-pick|revert|am)\\b`) || new RegExp(`\\bgit\\b${seg}\\bmerge\\b(?!-)(?!${seg}--ff-only)`).test(cmd);
-    if (realWrite && new RegExp(`\\bgit\\b${seg}\\b(switch|checkout)\\s+(-[a-zA-Z]+\\s+)*${PROTECTED}(?=\\s*($|[;&|\\n)]))`).test(cmd))
-      block(`this command switches to ${BASE} and then writes. Create a task/ branch first (rule 4).`);
-    // Every folder the command could run in: the session's, the project root's, and each one named after cd, pushd
-    // or git -C (resolved from the session's folder; one that does not exist yet, such as a new worktree, is skipped).
-    const dirs = new Set([cwd0, root]);
-    for (const m of cmd.matchAll(/(?:\bcd|\bpushd|\s-C)\s+("[^"]*"|'[^']*'|[^\s;&|)]+)/g)) {
-      const p = m[1].replace(/^["']|["']$/g, '');
-      if (/[$`*?]/.test(p)) continue;                    // unknown: the session folder and the root still count
-      dirs.add(path.resolve(cwd0, p.replace(/^~(?=\/|$)/, process.env.HOME ?? '~')));
-    }
-    for (const d of dirs) {
-      const b = branchOf(d);
-      if (b === BASE || b === 'master') block(`${d} is on ${b}, and this command may write there. Create a task/ branch first, or run the command from a task folder only (rule 4).`);
-    }
-  }
-
-  if (PHASE === 1 && /(\brm\b|\bmv\b|\bcp\b|\bsed\s+(-[a-zA-Z]*i|--in-place)|\btee\b|\btouch\b|>>?)[^|;&]*\bcontent\//.test(cmd))
-    block('this command looks like it writes under content/, which is frozen in Phase 1 (rule 3). If it only reads, rephrase it so the write target is clearly elsewhere.');
-}
-
-process.exit(0);
+fs.rmSync(tmp, { recursive: true, force: true });
+console.log(`${cases.length - bad} of ${cases.length} cases right (${hook})`);
+process.exit(bad ? 1 : 0);
