@@ -26,6 +26,8 @@ published: true
 
 ## Letter from the CEO
 
+![Jordan Read, CEO of CUAHSI](/newsletter-images/2026-november/ceo-jordan-read.jpg)
+
 **Jordan Read**, CEO, CUAHSI
 
 This is a sneaky-busy time of year. Today we kick off our first-ever Water Science Exchange with partners at the University of Missouri, and staff are preparing for a large presence at the AGU Fall Meeting (see below for more details). I know you are busy too, balancing growing demands on your time and looking toward a restful stretch that always seems just around the corner but routinely gives way to surprise priorities.
@@ -35,6 +37,8 @@ CUAHSI builds community capacity for water science, which is paradoxically becom
 ## CUAHSI news & events
 
 ### AGU Annual Meeting
+
+![AGU Annual Meeting, 7–11 December 2026, San Francisco, CA](/newsletter-images/2026-november/agu-annual-meeting-2026-banner.png)
 
 **December 7-11, 2026 | San Francisco, CA**
 
@@ -69,6 +73,8 @@ Not going to AGU but interested in getting involved or have questions first? Con
 
 ### Applications open for 2027 Water Prediction Innovators Summer Institute Theme Leaders and Student Fellows
 
+![CUAHSI](/newsletter-images/2026-november/cuahsi-logo.png) ![CIROH: Cooperative Institute for Research to Operations in Hydrology](/newsletter-images/2026-november/ciroh-logo.png) ![The University of Alabama, Alabama Water Institute](/newsletter-images/2026-november/alabama-water-institute-logo.png)
+
 **Program dates:** June 7 - July 21, 2027
 
 The Water Prediction Innovators Summer Institute is a seven week training program for graduate students on operational water prediction hosted by CUAHSI and the University of Alabama and supported by the Cooperative Institute for Research to Operations in Hydrology (CIROH).
@@ -101,6 +107,8 @@ Questions? Contact Julia Masterman at jmasterman@cuahsi.org.
 
 ### HydroLearn Module Reviewers (part-time)
 
+![HydroLearn](/newsletter-images/2026-november/hydrolearn-logo.png)
+
 CUAHSI is hiring two part-time reviewers for [HydroLearn](https://hydrolearn.org/), an open-source platform for interactive hydrology and water resources learning content. Reviewers will work through modules, catalog their topics and skills, and help shape new modules. Especially suited to undergraduate and graduate students in hydrology-related fields.
 
 - **Schedule:** 5-35 hours per week through Mar 30, 2027, with potential for extension
@@ -112,6 +120,8 @@ CUAHSI is hiring two part-time reviewers for [HydroLearn](https://hydrolearn.org
 [Read the full job description and apply](/community/news/hydrolearn-module-reviewers-2026)
 
 ### 2026 Navigating Academic Waters Cyberseminar Series
+
+![CUAHSI and AGU-H3S cyberseminar series, 2026 Navigating Academic Waters: November 19, 2026, 1:00 pm - 2:00 pm ET. The Connected Researcher: Building Networks That Bridge Academia, Industry, and Beyond, with Dan Myers, Heather Golden, Marie Kurz and Mohamed Abdelkader](/newsletter-images/2026-november/navigating-academic-waters-connected-researcher.jpg)
 
 This year's Navigating Academic Waters series, developed by the [AGU Hydrology Section Student Subcommittee](https://www.agu-h3s.org/), will help early career water scientists build the skills to advance their careers, with sessions on storytelling, the federal job market, and building networks across academia, industry, and beyond.
 
@@ -132,6 +142,8 @@ Visit [the website](https://www.cuahsi.org/cyberseminars/series/2026-navigating-
 
 ### CUAHSI Water Learning Commons
 
+![Water Learning Commons](/newsletter-images/2026-november/water-learning-commons-logo.png)
+
 The [CUAHSI Water Learning Commons](https://water-learning-commons.cuahsi.org/) is a free, open collection of water science teaching materials made by and for the community: full courses, code notebooks, and workshop activities you can use or adapt. It is built so instructors can reuse each other's materials and authors get credit and can see how their work is used.
 
 The current collection of materials includes **JP Gannon's** Hydroinformatics course, **Mark Bakker** and **Vincent Post's** Analytical Groundwater Modeling course, **Keira Johnson's** introductory hydrology workshop using an interactive app called HydroViz, and several CUAHSI-curated notebooks containing reusable workflows with open water data.
@@ -146,11 +158,17 @@ To add your materials or learn more, email help@cuahsi.org with a link and a sho
 
 ## Announcements
 
+![AGU H3S](/newsletter-images/2026-november/h3s-logo.png)
+
 The AGU Hydrology Section Student Subcommittee (H3S) is accepting applications for 2027-2028 members. Members build their hydrology network, plan events for student and early career scientists, and organize AGU sessions and cyberseminars. Past events and blog posts are on the [H3S website](https://www.agu-h3s.org/). Current members will be at the CUAHSI booth (#636) at AGU if you have questions.
 
 [Apply here](https://docs.google.com/forms/d/e/1FAIpQLScZIePW2g3VrxxM5AFNZ1tZUOgxNrtllGMtRKfZiLVD3Ntdqw/viewform) to join H3S.
 
 ### CUAHSI Joins New Partnership to Expand Near-Surface Geophysics Support
+
+![A full room listens to a plenary talk; the screen shows the logos of the partner organizations, including NGF, CUAHSI, NHERI and OpenTopography](/newsletter-images/2026-november/near-surface-geophysics-workshop-plenary.jpg) ![Attendees talk around a table covered with paper and sticky notes during a breakout session](/newsletter-images/2026-november/near-surface-geophysics-workshop-breakout.jpg)
+
+*Photos above: August Near-surface Geophysics Community Input Workshop, Beth Pratt-Sitaula*
 
 [Near-surface geophysics](https://www.earthscope.org/what-is/near-surface-geophysics/) methods have broad applicability in a variety of geoscience and environmental disciplines such as hydrology, critical zone science, and engineering geology. Until now, though, there has not been a unified center to support research and education in near-surface geophysics. Five NSF-funded Earth science organizations involved in aspects of near-surface geophysics have entered a new partnership to centralize support; these organizations are the [Center for Transformative Environmental Monitoring Programs](https://ctemps.org/) (CTEMPs), [Natural Hazards Engineering Research Infrastructure](https://www.designsafe-ci.org/about/) (NHERI), the Consortium of Universities for the Advancement of Hydrologic Science, Inc. (CUAHSI), [OpenTopography](https://opentopography.org/), and the [NSF National Geophysical Facility](https://ngf.earthscope.org/) (NSF NGF operated by EarthScope).
 
@@ -171,6 +189,8 @@ Authors: Jonathan M. Frame, Ryoko Araki, Soelem Aafnan Bhuiyan, Tadd Bindas, Jer
 ## Community engagement
 
 ### CyberWater2 Training: Advancing Hydrologic Modeling Through Scientific Workflows
+
+![Portraits of the CyberWater2 project team and instructors, with the logos of the University of Pittsburgh, Indiana University Indianapolis, CyberWater and CUAHSI](/newsletter-images/2026-november/cyberwater2-training-team.jpg)
 
 In September and October 2026, CUAHSI and the CyberWater2 project team at the University of Pittsburgh and Indiana University Indianapolis ran a virtual training on [CyberWater](https://cyber-water.luddy.indianapolis.iu.edu/), a framework for linking models, data, and computing tools into reproducible hydrologic modeling workflows. Forty-seven participants from at least 24 institutions in five countries participated.
 
