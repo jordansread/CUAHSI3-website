@@ -44,6 +44,9 @@ Every one of these cost real debugging time. Most failed silently; the third is 
    `pages/community/news/[slug].vue`); `verify.sh` fails a `throw createError` in `pages/` or `components/`.
 7. **Bare JSON arrays in `content/` get wrapped.** Nuxt Content warns and moves the
    array into `.body`. Unwrap: `Array.isArray(data.value?.body) ? data.value.body : []`.
+   Since 15 November 2026 `npm run lint` fails a file that queries a folder holding a bare-array JSON file
+   (the list is read from `content/`, subfolders included) and has no `Array.isArray(... .body)`. It works per file, as the
+   footgun 1 rule does. A query whose first `.where()`, written directly on `queryContent()`, asks for `_extension: 'md'` is not counted.
 8. **`nitro.prerender.failOnError: false` is deliberate.** Without it, a dynamic-route
    404 aborts the whole build. Leave it.
 9. **A bulk edit once corrupted a template literal and broke the build.** The backtick
@@ -81,12 +84,24 @@ Every one of these cost real debugging time. Most failed silently; the third is 
     had the wrong colours in it. Fix: take the time from `useState('<page>-rendered-at', () => Date.now())` (the build's time on
     the server and for the first browser render) and set it to the real time in `onMounted`, as the job board, the home page
     and the events pages do. Do not call `new Date()` inside a `computed` that picks what to render. No `verify.sh` check:
-    `new Date()` is also fine in a handler or a one-off format.
+    `new Date()` is also fine in a handler or a one-off format. Since 15 November 2026 `npm run lint` fails a clock read
+    (`new Date()` with no argument, `Date.now()`) that runs while the page is set up: inside `computed()` or `ref()`/`reactive()`,
+    at the top of the script (exported or not), in a callback that runs at once (`filter`, `sort`), or in a template expression
+    other than an `@event` handler. A named helper, a handler, a method, and a callback that runs later (`onMounted`, `useState`,
+    `watch`, `setTimeout`; the list is `later` in `eslint.config.mjs`) are not flagged. It does not see a computed or composable
+    that calls a helper which reads the clock. The script rules exempt `components/GageCard.vue` (the whole file, so a new clock
+    read there is not checked): its `ageHours` computed reads `Date.now()` only once a reading has loaded in the browser. The first
+    case the check would have caught is `const now = ref(new Date())` in `pages/learn-train/archive/index.vue`, repaired in
+    jordansread/CUAHSI3-website#231.
 14. **A `watch()` on a computed, placed above what the computed reads, crashes the page and the build passes.** `watch(typeFilters, ...)`
     runs `typeFilters` at once, which read `jobs` before the `const jobs = ...` line below it had run (a temporal dead zone error in `setup`).
     `verify.sh --build` and the link check were green; the job board came out as an 800px-high blank in the visual comparison, and only
     that showed it. Put a `watch()` after the declarations it depends on (the end of `<script setup>` is safe), and run
-    `npm run visual:compare` after any change to a page's script.
+    `npm run visual:compare` after any change to a page's script. Since 15 November 2026 `npm run lint` fails it (the local rule
+    `footgun/watch-order` in `eslint.config.mjs`): a `watch()` or `watchEffect()` whose source reads, directly or through computeds
+    and functions, a `const`, `let` or class declared below it in the scope the watch runs in (the top of the script, or the
+    function it is in, such as a composable). It reports the first such name it reaches. On the job board as merged in commit
+    5984483 it reports `today`, which `typeFilters` reads through `isExpired()`.
 15. **`window.location.search` is empty in `onMounted` on a statically generated page, though the address bar has a query.** Seen in
     the 31 October built site (Nuxt 3, served with `npx serve`): a list that read `?site=luquillo` from `window.location.search` in
     `onMounted` saw an empty string, ignored the address, and the build, the link check and the first page load were all fine. The

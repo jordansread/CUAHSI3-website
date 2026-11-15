@@ -48,7 +48,8 @@ what is unverified) in `docs/footguns.md`. Check the changed files against every
    Use a `notFound` computed that the template renders conditionally (as in
    `pages/community/news/[slug].vue`); `verify.sh` fails a `throw createError` in `pages/` or `components/`.
 7. **Bare JSON arrays in `content/` get wrapped.** Nuxt Content warns and moves the
-   array into `.body`. Unwrap: `Array.isArray(data.value?.body) ? data.value.body : []`.
+   array into `.body`. Unwrap: `Array.isArray(data.value?.body) ? data.value.body : []`. `npm run lint` fails a file
+   that queries such a folder and has no `Array.isArray(... .body)` (per file; a query whose `.where()` asks for `_extension: 'md'` is not counted).
 8. **`nitro.prerender.failOnError: false` is deliberate.** Without it, a dynamic-route
    404 aborts the whole build. Leave it.
 9. **A bulk edit once corrupted a template literal and broke the build.** The backtick
@@ -75,11 +76,16 @@ what is unverified) in `docs/footguns.md`. Check the changed files against every
     the build, so a date that decides which list an item is in renders differently, and items keep the
     wrong tag colour. Take the time from `useState('<page>-rendered-at', () => Date.now())` and set it to
     the real time in `onMounted`, as the job board, the home page and the events pages do. Do not call
-    `new Date()` inside a `computed` that picks what to render (a handler or a one-off format is fine).
+    `new Date()` inside a `computed` that picks what to render (a handler or a one-off format is fine). `npm run lint` fails
+    a clock read inside `computed()` or `ref()`/`reactive()`, at the top of the script, in a callback that runs at once (`filter`,
+    `sort`), or in a template expression; not one in a named helper, a handler or a callback that runs later (`onMounted`,
+    `useState`). It does not see a computed that calls a helper which reads the clock. `components/GageCard.vue` is exempt in
+    its script (reason in `eslint.config.mjs`).
 14. **A `watch()` on a computed, placed above what the computed reads, crashes the page and the build passes.**
     `watch()` runs the computed at once, before the `const` it reads is declared. Put a `watch()` after the
     declarations it depends on (the end of `<script setup>` is safe), and run `npm run visual:compare` after
-    any change to a page's script.
+    any change to a page's script. `npm run lint` fails a `watch()` whose source reads, directly or through a computed or
+    function, a `const`, `let` or class declared below it in the script, or in the function the `watch()` is in.
 15. **`window.location.search` is empty in `onMounted` on a statically generated page, though the address bar has a query.**
     Read the query with `useRoute().query` inside `onMounted` (not in `setup`; footgun 13). Write the choice
     back with `router.replace({ query })`, not `history.replaceState`, so the router and the address agree on Back.
