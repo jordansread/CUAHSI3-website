@@ -43455,5 +43455,50 @@
     "source": "par",
     "source_url": "https://www.hydroshare.org/resource/c4b384a77a0f43cbb2de2d6eae9cf901/",
     "date_added": "2026-11-02"
+  },
+  {
+    "title": "Streamflow Dynamics Across an Urbanizing Karst Watershed in the Ridge and Valley Province",
+    "type": "paper",
+    "doi": "10.1029/2025WR041126",
+    "url": "https://doi.org/10.1029/2025WR041126",
+    "repository": "Water Resources Research",
+    "awards": [
+      "nsf-2012893"
+    ],
+    "era": "cznet",
+    "year": 2026,
+    "source": "suggested",
+    "source_url": "https://doi.org/10.1029/2025WR041126",
+    "date_added": "2026-11-15"
+  },
+  {
+    "title": "Road salt impacts on streams and springs in a karstic watershed",
+    "type": "paper",
+    "doi": "10.1088/2515-7620/ae6035",
+    "url": "https://doi.org/10.1088/2515-7620/ae6035",
+    "repository": "Environmental Research Communications",
+    "awards": [
+      "nsf-2012893"
+    ],
+    "era": "cznet",
+    "year": 2026,
+    "source": "suggested",
+    "source_url": "https://doi.org/10.1088/2515-7620/ae6035",
+    "date_added": "2026-11-15"
+  },
+  {
+    "title": "Thermal Regime Dynamics in a Karst Watershed Influenced by Groundwater and Urbanization",
+    "type": "paper",
+    "doi": "10.1002/hyp.70689",
+    "url": "https://doi.org/10.1002/hyp.70689",
+    "repository": "Hydrological Processes",
+    "awards": [
+      "nsf-2012893"
+    ],
+    "era": "cznet",
+    "year": 2026,
+    "source": "suggested",
+    "source_url": "https://doi.org/10.1002/hyp.70689",
+    "date_added": "2026-11-15"
   }
 ]
