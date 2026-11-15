@@ -5,3 +5,4 @@
 261114 | task/e2e-ci | defect | tests/e2e/playwright.config.ts header still said the test had not run on Linux or in CI, contradicting the README after this change; updated. caught: reviewer
 261114 | task/e2e-ci | defect | No forbidOnly in the e2e config: a stray test.only would let CI pass after one test; added forbidOnly when CI is set, shown failing on a planted test.only with CI=1 (and running it alone without CI), planted file removed. caught: reviewer
 261114 | task/e2e-ci | note | Reviewer's Linux case-sensitivity question: 7802 internal href/src values on 187 built pages checked against file names with exact case; 0 differ only by case. Runner cores and the 20-minute job limit are left to the first CI run
+261115 | task/e2e-ci | pr | jordansread/CUAHSI3-website#239 opened at Jordan's direction (test:e2e script and two CI steps; first Linux run is its own CI check)
