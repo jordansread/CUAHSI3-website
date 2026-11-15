@@ -109,4 +109,7 @@ Every one of these cost real debugging time. Most failed silently; the third is 
     the first browser render differ from the built page; footgun 13). Found by loading a link with a query in the browser. Seen only
     with `npx serve`; the cause (my reading: the router rewrites the address after hydration) was not isolated, and it was not tried on
     Netlify. Write the choice back with `router.replace({ query })`, not `history.replaceState`, so the router and the address agree on
-    Back. No `verify.sh` check: only a browser shows it.
+    Back. Only a browser shows the symptom, but the usual way to cause it has a pattern: since 15 November 2026 `verify.sh` (check 8d)
+    fails `location.search`, `location['search']` and `{ search } = location` in the `.vue` and `.ts` files of the site code, a comment
+    included (0 on that day; Jordan's decision on CUAHSI/CUAHSI3-website#129). It does not see `new URL(location.href).searchParams`
+    or `location.href.split('?')`, and nothing checks `history.replaceState`.

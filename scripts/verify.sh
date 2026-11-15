@@ -107,6 +107,12 @@ if [ -f "$VERIFY_INSTR_DIR/AGENTS.md" ] || [ -f "$VERIFY_INSTR_DIR/CLAUDE.md" ];
   fi
 fi
 
+# 8d. location.search in the .vue and .ts site code (footgun 15): empty in onMounted on a statically generated page. Read
+#     useRoute().query. Matches location.search (window. or not), location['search'] and `{ search } = location`, a comment
+#     included. Not seen: new URL(location.href).searchParams, location.href.split('?').
+out=$(grep -rnE --include='*.vue' --include='*.ts' "location\.search\b|location\[['\"]search['\"]\]|\bsearch\b[^=]*\}[ \t]*=[ \t]*(window\.)?location\b" "${CODE_DIRS[@]}" composables 2>/dev/null)
+[ -n "$out" ] && { fail "location.search in site code; read useRoute().query in onMounted instead (footgun 15, .claude/rules/site-code.md):"; echo "$out" | sed 's/^/      /'; } || ok "no location.search in the site code"
+
 # 9-11. Git state
 if git rev-parse --git-dir >/dev/null 2>&1; then
   branch=$(git branch --show-current)
