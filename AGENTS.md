@@ -119,7 +119,7 @@ Short forms. The full text of each, with reasons and how `verify.sh` enforces it
    purpose, that is a second concern and a second PR.
 10. **Logs are append-only.** `agent/log/`, `agent/eval-log.md` (frozen) and the Noticed list are never
     rewritten. Write only your own branch's file, `agent/log/<YYMMDD>-<branch>.md`, in the format in
-    `agent/log/README.md`; correct a wrong entry with a `correction` line there. Never add to the
+    `agent/log/README.md` (which is not a log: it may be edited, not removed); correct a wrong entry with a `correction` line there. Never add to the
     `KNOWN` exception list in `scripts/eval-log.mjs` (details in `docs/rules.md`).
 11. **Log every intervention.** Whenever Jordan corrects you, redirects you, rejects
     an approach, or has to decide something you should have been able to decide, add
