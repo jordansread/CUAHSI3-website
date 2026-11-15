@@ -89,7 +89,8 @@ what is unverified) in `docs/footguns.md`. Check the changed files against every
 15. **`window.location.search` is empty in `onMounted` on a statically generated page, though the address bar has a query.**
     Read the query with `useRoute().query` inside `onMounted` (not in `setup`; footgun 13). Write the choice
     back with `router.replace({ query })`, not `history.replaceState`, so the router and the address agree on Back.
-    Seen only with `npx serve`; the cause was not isolated and Netlify was not tried. No check: only a browser shows it.
+    Seen only with `npx serve`; the cause was not isolated and Netlify was not tried. `verify.sh` fails `location.search`
+    (and `location['search']`, `{ search } = location`) in the site code, a comment included; it does not see `new URL(location.href)`.
 
 ## Layout: never put `grid-template-columns` in a `style` attribute
 
