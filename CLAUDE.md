@@ -50,7 +50,7 @@ npm run build:search               # nuxt generate && pagefind --site .output/pu
 npx serve .output/public -l 4000   # preview the built site. Search only works here.
 ./scripts/verify.sh                # static checks, seconds
 ./scripts/verify.sh --build        # static checks, then the full build and the built-site link check
-npm run lint                       # ESLint: Vue templates and TypeScript scripts get eslint-plugin-vue's essential rules; .ts and .mjs files are only parsed (syntax errors), no rules; verify.sh runs it
+npm run lint                       # ESLint: Vue templates and TypeScript scripts get eslint-plugin-vue's essential rules; .vue files also get rules for footguns 1, 2 and 5, .ts files for 1 and 5; .mjs files are only parsed (syntax errors); verify.sh runs it
 npm run validate:content           # read-only check of content/ against the schemas; verify.sh runs it too
 node scripts/check-links.mjs       # after a build: every internal href/src in .output/public resolves to a file (verify.sh --build runs it)
 node scripts/parity/redirects.mjs   # regenerates public/_redirects (legacy URL redirects) from the parity data; --check compares (verify.sh runs the check)
@@ -257,10 +257,11 @@ Every one of these cost real debugging time. Most failed silently; the third is 
      (allItems.value ?? []).filter(item => item._path?.startsWith('/news/'))
    )
    ```
-   Check every new `queryContent()` call for the same kind of collision.
+   Check every new `queryContent()` call for the same kind of collision. `npm run lint` fails
+   `queryContent('news')` (any content folder name that starts another) in a file whose script has no `startsWith('/news/')`.
 2. **`<component :is="cond ? 'a' : 'NuxtLink'">` renders but does not navigate.** The
    markup looks right and clicks do nothing. Hit twice. Use explicit `v-if` / `v-else`
-   with real `<a>` and `<NuxtLink>` tags.
+   with real `<a>` and `<NuxtLink>` tags. `npm run lint` fails a ternary `:is`, or one with the string `NuxtLink`, on `<component>`.
 3. **Unverified: an apostrophe inside a static `style="..."` attribute.** The previous
    agent reported that it crashes the Vue compiler (`style="content:'x'"` was the
    example). That was not reproduced. 231 such lines in 21 files build cleanly: the
@@ -276,7 +277,7 @@ Every one of these cost real debugging time. Most failed silently; the third is 
    rendered children. Symptom: the right content flashes, then a neighbour's replaces
    it. Use one stable keyed element per iteration. Do not switch element types
    mid-list.
-5. **`findOne()` throws when nothing matches.** Always `.findOne().catch(() => null)`.
+5. **`findOne()` throws when nothing matches.** Always `.findOne().catch(() => null)`. `npm run lint` fails a `findOne()` not directly followed by `.catch`.
 6. **`throw createError()` inside `setup()` breaks client-side navigation in dev.**
    Use a `notFound` computed that the template renders conditionally (as in
    `pages/community/news/[slug].vue`); `verify.sh` fails a `throw createError` in `pages/` or `components/`.
