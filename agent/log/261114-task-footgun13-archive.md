@@ -5,3 +5,5 @@
 261114 | task/footgun13-archive | pr | jordansread/CUAHSI3-website#231 opened at Jordan's go-ahead; base checked
 261114 | task/footgun13-archive | merged | jordansread/CUAHSI3-website#228 (plan) and #229 (visual baseline retake) merged by Jordan
 261114 | task/footgun13-archive | note | Merged the default branch in after #229; agent/roadmap.md conflicted on two Noticed appends; kept both sides, the default branch's lines first
+261114 | task/footgun13-archive | merged | jordansread/CUAHSI3-website#230 (footgun 6, notFound with a 404) merged by Jordan
+261114 | task/footgun13-archive | note | Merged the default branch in again after #230; agent/roadmap.md conflicted on two Noticed appends; kept both sides, the default branch's line first
