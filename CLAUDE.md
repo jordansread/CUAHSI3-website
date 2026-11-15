@@ -276,7 +276,8 @@ Every one of these cost real debugging time. Most failed silently; the third is 
    mid-list.
 5. **`findOne()` throws when nothing matches.** Always `.findOne().catch(() => null)`.
 6. **`throw createError()` inside `setup()` breaks client-side navigation in dev.**
-   Use a `notFound` computed that the template renders conditionally.
+   Use a `notFound` computed that the template renders conditionally (as in
+   `pages/community/news/[slug].vue`); `verify.sh` fails a `throw createError` in `pages/` or `components/`.
 7. **Bare JSON arrays in `content/` get wrapped.** Nuxt Content warns and moves the
    array into `.body`. Unwrap: `Array.isArray(data.value?.body) ? data.value.body : []`.
 8. **`nitro.prerender.failOnError: false` is deliberate.** Without it, a dynamic-route
