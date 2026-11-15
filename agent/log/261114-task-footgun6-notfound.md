@@ -5,3 +5,5 @@
 261114 | task/footgun6-notfound | defect | The notFound pages rendered a 200 page on the server for a missing slug, so the prerender wrote a page for a link to it and check-links.mjs passed it (temporary links to /community/events/no-such-slug and /community/newsletter/no-such-issue: 0 unresolved at dfdc09d, 2 unresolved on origin/main); fixed with setResponseStatus(useRequestEvent(), 404) on the server, after which no file is written and the check reports both links again. caught: reviewer
 261114 | task/footgun6-notfound | note | Noticed line added to agent/roadmap.md: pages/community/news/[slug].vue has the same 200-for-missing-slug gap; left alone (rule 5)
 261114 | task/footgun6-notfound | pr | jordansread/CUAHSI3-website#230 opened at Jordan's go-ahead; base checked
+261114 | task/footgun6-notfound | merged | jordansread/CUAHSI3-website#228 (plan) and #229 (visual baseline retake) merged by Jordan
+261114 | task/footgun6-notfound | note | Merged the default branch in after #229; agent/roadmap.md conflicted on two Noticed appends; kept both sides, the default branch's lines first

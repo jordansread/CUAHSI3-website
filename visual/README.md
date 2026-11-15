@@ -6,6 +6,7 @@ Full-page screenshots of 30 routes at 390px and 1280px (60 images), taken from a
 (roadmap task 4), which every later change had made out of date (52 of 52 failed, including `/contact`, whose own
 content had not changed: only the shared header and footer had). They are the reference that later pull requests are compared against.
 Two images were retaken from a build of `main` at `15b4758` (6 November 2026): `learn-train-cyberseminars` at 390 and 1280 px, because the 63 Women Advancing River Research lectures (#209) grew the page from 21 to 82 cards. The other 58 were not changed. `critical-zone-science-datasets` at 1280 px failed in most runs of the comparison on that build, by 562 pixels in the observatory filter's label, and was not retaken (cause not found).
+Eleven images were retaken from a build of `main` at `b8ac43b` (14 November 2026): `about-team`, `about-governance`, `home`, `hire-cuahsi` and `contact` at 390 and 1280 px (PRs 215, 216 and 227 changed those pages), and `critical-zone-science-datasets` at 1280 px, to the render that came in 11 of 13 captures. That page still renders one of two ways, 269 px apart in the observatory filter's label; the cause is not found, and the comparison can fail on it when the other render comes up.
 
 - Routes: `scripts/visual-routes.json` (one page per route template, plus the hubs).
 - Images: `visual/baseline/390/*.png` and `visual/baseline/1280/*.png`.
