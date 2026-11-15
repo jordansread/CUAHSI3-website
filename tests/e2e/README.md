@@ -9,12 +9,13 @@
 
 ```bash
 npm run build:search
-npx playwright test -c tests/e2e/playwright.config.ts                 # all pages, both widths (about 80 s on the Mac)
+npm run test:e2e                                                      # all pages, both widths (about 80 s on the Mac); CI runs this
+npx playwright test -c tests/e2e/playwright.config.ts                 # the same, written out
 npx playwright test -c tests/e2e/playwright.config.ts -g '/community/jobs/$' --project 1280   # one page, one width
 ```
 
 It serves the build on port 4101 (`scripts/serve-static.mjs` with `PORT=4101`), so it can run while the visual
-comparison holds 4100. It takes no screenshots, so it should run on Linux too; it has not yet been run there or in CI. The visual config at the root
+comparison holds 4100. It takes no screenshots, so it should run on Linux too; `.github/workflows/verify.yml` runs it on every pull request after `verify.sh --build` (added 14 November 2026; the first Linux run is that PR's own CI run). The visual config at the root
 (`playwright.config.ts`, `tests/visual/`) and this one do not pick up each other's tests.
 
 What it does not count, and why (all in `smoke.spec.ts`):
