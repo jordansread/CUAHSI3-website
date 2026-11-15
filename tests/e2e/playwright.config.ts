@@ -1,7 +1,7 @@
 // Smoke test: every built page at 390px and 1280px, in a real browser. See tests/e2e/README.md.
-//   npm run build:search && npx playwright test -c tests/e2e/playwright.config.ts
+//   npm run build:search && npm run test:e2e
 // Separate from the visual comparison (playwright.config.ts at the root, testDir tests/visual): no screenshots, so it
-// should also run on Linux (not yet run there or in CI). Serves the build on port 4101, so it can run while the visual comparison holds 4100.
+// can run on Linux; .github/workflows/verify.yml runs it on every pull request. Serves the build on port 4101, so it can run while the visual comparison holds 4100.
 import { defineConfig } from '@playwright/test'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -21,6 +21,8 @@ export default defineConfig({
   timeout: 30_000,
   // No retries: a retry would hide an intermittent error as "flaky". A flaky page is listed, not retried.
   retries: 0,
+  // In CI, a test.only left in a spec fails the run instead of quietly running that one test.
+  forbidOnly: !!process.env.CI,
   reporter: [['list']],
   use: { baseURL: `http://localhost:${port}` },
   projects: [
