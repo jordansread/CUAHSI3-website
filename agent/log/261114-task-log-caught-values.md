@@ -3,3 +3,4 @@
 261114 | task/log-caught-values | defect | caught: reviewer: the value match ended in \b, so caught: test-suite or typecheck-ish passed --check; now (?![\w-])
 261114 | task/log-caught-values | defect | caught: reviewer: the verify.sh exemption for agent/log/README.md was not reflected in CLAUDE.md rule 10 or the README; both now say the README may be edited, not removed
 261114 | task/log-caught-values | defect | caught: reviewer: --counts took the first caught: token while --check accepted any valid one; --counts now prefers the first accepted value
+261114 | task/log-caught-values | pr | jordansread/CUAHSI3-website#233 opened at Jordan's go-ahead; base checked
