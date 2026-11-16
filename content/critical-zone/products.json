@@ -241,6 +241,7 @@
     "era": "czo",
     "year": 2020,
     "highlight": true,
+    "highlight_rank": 9,
     "source": "czo-archive",
     "source_url": "https://czo-archive.criticalzone.org/eel/publications/pub/al-shayeb-et-al-2020-clades-of-huge-phages-from-across-earths-ecosystems/",
     "date_added": "2026-10-29"
@@ -906,6 +907,7 @@
     "era": "czo",
     "year": 2019,
     "highlight": true,
+    "highlight_rank": 7,
     "source": "czo-archive",
     "source_url": "https://czo-archive.criticalzone.org/luquillo/publications/pub/fan-et-al-2019-hillslope-hydrology-in-global-change-research-and-earth-syst/",
     "date_added": "2026-10-29"
@@ -1047,6 +1049,7 @@
     "era": "czo",
     "year": 2018,
     "highlight": true,
+    "highlight_rank": 12,
     "source": "czo-archive",
     "source_url": "https://czo-archive.criticalzone.org/eel/publications/pub/crits-cristoph-et-al-2018-novel-soil-bacteria-possess-diverse-genes-for-sec/",
     "date_added": "2026-10-29"
@@ -1736,6 +1739,7 @@
     ],
     "era": "czo",
     "highlight": true,
+    "highlight_rank": 5,
     "source": "czo-archive",
     "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/2400/",
     "date_added": "2026-10-29"
@@ -2495,6 +2499,7 @@
     "era": "czo",
     "year": 2011,
     "highlight": true,
+    "highlight_rank": 8,
     "source": "czo-archive",
     "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/aufdenkampe-et-al-2011-riverine-coupling-of-biogeochemical-cycles-between-l/",
     "date_added": "2026-10-29"
@@ -2815,6 +2820,7 @@
     "era": "czo",
     "year": 2009,
     "highlight": true,
+    "highlight_rank": 6,
     "source": "czo-archive",
     "source_url": "https://czo-archive.criticalzone.org/christina/publications/pub/battin-et-al-2009-the-boundless-carbon-cycle/",
     "date_added": "2026-10-29"
@@ -3069,6 +3075,7 @@
     "era": "czo",
     "year": 2015,
     "highlight": true,
+    "highlight_rank": 11,
     "source": "czo-archive",
     "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/clark-et-al-2015-a-unified-approach-to-hydrologic-modeling-part-2-compariso/",
     "date_added": "2026-10-29"
@@ -4872,6 +4879,7 @@
     "era": "czo",
     "year": 2016,
     "highlight": true,
+    "highlight_rank": 10,
     "source": "czo-archive",
     "source_url": "https://czo-archive.criticalzone.org/reynolds/publications/pub/painter-et-al-2016-the-airborne-snow-observatory-fusion-of-scanning-lidar-i/",
     "date_added": "2026-10-29"
@@ -5311,6 +5319,7 @@
     "era": "czo",
     "year": 2015,
     "highlight": true,
+    "highlight_rank": 17,
     "source": "czo-archive",
     "source_url": "https://czo-archive.criticalzone.org/iml/publications/pub/belmont-et-al-2015-analyzing-high-resolution-topography-for-advancing-the-u/",
     "date_added": "2026-10-29"
@@ -8083,6 +8092,7 @@
     "era": "czo",
     "year": 2017,
     "highlight": true,
+    "highlight_rank": 21,
     "source": "czo-archive",
     "source_url": "https://czo-archive.criticalzone.org/iml/publications/pub/loekce-et-al-2017-weather-whiplash-in-agricultural-regions-drives-deteriora/",
     "date_added": "2026-10-29"
@@ -11262,6 +11272,7 @@
     "era": "czo",
     "year": 2008,
     "highlight": true,
+    "highlight_rank": 5,
     "source": "czo-archive",
     "source_url": "https://czo-archive.criticalzone.org/boulder/publications/pub/lauber-et-al-2008-the-influence-of-soil-properties-on-the-structure-of-bact/",
     "date_added": "2026-10-29"
@@ -11899,6 +11910,7 @@
     "era": "czo",
     "year": 2014,
     "highlight": true,
+    "highlight_rank": 16,
     "source": "czo-archive",
     "source_url": "https://czo-archive.criticalzone.org/luquillo/publications/pub/stone-deforest-plante-2014-changes-in-extracellular-enzyme-activity-and-mic/",
     "date_added": "2026-10-29"
@@ -12073,6 +12085,7 @@
     "era": "czo",
     "year": 2016,
     "highlight": true,
+    "highlight_rank": 15,
     "source": "czo-archive",
     "source_url": "https://czo-archive.criticalzone.org/national/publications/pub/riebe-et-al-2017-controls-on-deep-critical-zone-architecture-a-historical-r/",
     "date_added": "2026-10-29"
@@ -17255,6 +17268,7 @@
     "era": "czo",
     "year": 2019,
     "highlight": true,
+    "highlight_rank": 4,
     "source": "czo-archive",
     "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/hochella-et-al-2019-natural-incidental-and-engineered-nanomaterials-and-the/",
     "date_added": "2026-10-29"
@@ -17883,6 +17897,7 @@
     "era": "czo",
     "year": 2016,
     "highlight": true,
+    "highlight_rank": 2,
     "source": "czo-archive",
     "source_url": "https://czo-archive.criticalzone.org/calhoun/publications/pub/waters-et-al-2016-the-anthropocene-is-functionally-and-stratigraphically-di/",
     "date_added": "2026-10-29"
@@ -18212,6 +18227,7 @@
     "era": "czo",
     "year": 2017,
     "highlight": true,
+    "highlight_rank": 3,
     "source": "czo-archive",
     "source_url": "https://czo-archive.criticalzone.org/catalina-jemez/publications/pub/adams-et-al-2017-a-multi-species-synthesis-of-physiological-mechanisms-in-d/",
     "date_added": "2026-10-29"
@@ -18922,6 +18938,7 @@
     ],
     "era": "czo",
     "highlight": true,
+    "highlight_rank": 3,
     "source": "czo-archive",
     "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/2543/",
     "date_added": "2026-10-29"
@@ -19208,6 +19225,7 @@
     ],
     "era": "czo",
     "highlight": true,
+    "highlight_rank": 4,
     "source": "czo-archive",
     "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/3739/",
     "date_added": "2026-10-29"
@@ -19344,6 +19362,7 @@
     ],
     "era": "czo",
     "highlight": true,
+    "highlight_rank": 2,
     "source": "czo-archive",
     "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/2504/",
     "date_added": "2026-10-29"
@@ -19360,6 +19379,7 @@
     ],
     "era": "czo",
     "highlight": true,
+    "highlight_rank": 8,
     "source": "czo-archive",
     "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/2644/",
     "date_added": "2026-10-29"
@@ -20475,6 +20495,7 @@
     "era": "czo",
     "year": 2015,
     "highlight": true,
+    "highlight_rank": 1,
     "source": "czo-archive",
     "source_url": "https://czo-archive.criticalzone.org/catalina-jemez/publications/pub/allen-et-al-2015-on-underestimation-of-global-vulnerability-to-tree-mortali/",
     "date_added": "2026-10-29"
@@ -21531,6 +21552,7 @@
     "era": "czo",
     "year": 2019,
     "highlight": true,
+    "highlight_rank": 13,
     "source": "czo-archive",
     "source_url": "https://czo-archive.criticalzone.org/sierra/publications/pub/goulden-bales-2019-california-forest-die-off-linked-to-multi-year-deep-soil/",
     "date_added": "2026-10-29"
@@ -22516,6 +22538,7 @@
     "era": "czo",
     "year": 2018,
     "highlight": true,
+    "highlight_rank": 18,
     "source": "czo-archive",
     "source_url": "https://czo-archive.criticalzone.org/sierra/publications/pub/purdy-et-al-2019-smap-soil-moisture-improves-global-evapotranspiration/",
     "date_added": "2026-10-29"
@@ -22921,6 +22944,7 @@
     ],
     "era": "czo",
     "highlight": true,
+    "highlight_rank": 7,
     "source": "czo-archive",
     "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/2637/",
     "date_added": "2026-10-29"
@@ -23057,6 +23081,7 @@
     ],
     "era": "czo",
     "highlight": true,
+    "highlight_rank": 1,
     "source": "czo-archive",
     "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/2664/",
     "date_added": "2026-10-29"
@@ -23970,6 +23995,7 @@
     ],
     "year": 2021,
     "highlight": true,
+    "highlight_rank": 26,
     "source": "crossref",
     "source_url": "https://doi.org/10.1002/hyp.14287",
     "date_added": "2026-10-29"
@@ -24220,6 +24246,7 @@
     ],
     "year": 2024,
     "highlight": true,
+    "highlight_rank": 29,
     "source": "crossref",
     "source_url": "https://doi.org/10.1029/2023jg007815",
     "date_added": "2026-10-29"
@@ -24238,6 +24265,7 @@
     ],
     "year": 2024,
     "highlight": true,
+    "highlight_rank": 23,
     "source": "crossref",
     "source_url": "https://doi.org/10.1029/2024wr037622",
     "date_added": "2026-10-29"
@@ -24541,6 +24569,7 @@
     ],
     "year": 2023,
     "highlight": true,
+    "highlight_rank": 28,
     "source": "crossref",
     "source_url": "https://doi.org/10.1002/ecs2.4475",
     "date_added": "2026-10-29"
@@ -24560,6 +24589,7 @@
     ],
     "year": 2025,
     "highlight": true,
+    "highlight_rank": 30,
     "source": "crossref",
     "source_url": "https://doi.org/10.1029/2025av002072",
     "date_added": "2026-10-29"
@@ -25136,6 +25166,7 @@
     ],
     "year": 2026,
     "highlight": true,
+    "highlight_rank": 27,
     "source": "crossref",
     "source_url": "https://doi.org/10.1073/pnas.2524542123",
     "date_added": "2026-10-29"
@@ -26979,6 +27010,7 @@
     "era": "cznet",
     "year": 2022,
     "highlight": true,
+    "highlight_rank": 6,
     "source": "discover",
     "source_url": "https://doi.org/10.6073/pasta/942a5a981e6e986c5fa1a9a9cd2eb8b7",
     "date_added": "2026-10-29"
@@ -27068,6 +27100,7 @@
     ],
     "year": 2023,
     "highlight": true,
+    "highlight_rank": 19,
     "source": "crossref",
     "source_url": "https://doi.org/10.1038/s41467-023-37853-7",
     "date_added": "2026-10-29"
@@ -28022,6 +28055,7 @@
     ],
     "year": 2023,
     "highlight": true,
+    "highlight_rank": 24,
     "source": "crossref",
     "source_url": "https://doi.org/10.1029/2023wr035044",
     "date_added": "2026-10-29"
@@ -29051,6 +29085,7 @@
     ],
     "year": 2023,
     "highlight": true,
+    "highlight_rank": 22,
     "source": "crossref",
     "source_url": "https://doi.org/10.5194/amt-16-2455-2023",
     "date_added": "2026-10-29"
@@ -29936,6 +29971,7 @@
     ],
     "year": 2022,
     "highlight": true,
+    "highlight_rank": 25,
     "source": "crossref",
     "source_url": "https://doi.org/10.1029/2022gb007351",
     "date_added": "2026-10-29"
@@ -31038,6 +31074,7 @@
     ],
     "year": 2021,
     "highlight": true,
+    "highlight_rank": 10,
     "source": "discover",
     "source_url": "https://doi.org/10.17190/AMF/1375201",
     "date_added": "2026-10-29"
@@ -31980,6 +32017,7 @@
     "era": "czo",
     "year": 2007,
     "highlight": true,
+    "highlight_rank": 14,
     "source": "czo-archive",
     "source_url": "https://czo-archive.criticalzone.org/shale-hills/publications/pub/brantley-et-al-2007-crossing-disciplines-and-scales-to-understand-the-criti/",
     "date_added": "2026-10-29"
@@ -32146,6 +32184,7 @@
     "era": "czo",
     "year": 2010,
     "highlight": true,
+    "highlight_rank": 20,
     "source": "czo-archive",
     "source_url": "https://czo-archive.criticalzone.org/shale-hills/publications/pub/lin-2010-earths-critical-zone-and-hydropedology-concepts-characteristics-an/",
     "date_added": "2026-10-29"
@@ -34223,6 +34262,7 @@
     ],
     "era": "czo",
     "highlight": true,
+    "highlight_rank": 9,
     "source": "czo-archive",
     "source_url": "https://czo-archive.criticalzone.org/national/data/dataset/2692/",
     "date_added": "2026-10-29"
