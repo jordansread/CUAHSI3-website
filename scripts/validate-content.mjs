@@ -144,7 +144,8 @@ const refs = {            // collected for the cross-reference section
   teamMdSlugs: [],        // { file, slug }
   awardUses: [],          // { file, value }: an id in a research story's `awards`
   productKeys: new Set(), // 'doi:<lowercase doi>' and 'url:<url>' of every product in the list
-  paperPrefixes: new Map(), // DOI prefix -> number of papers, for the publisher table check
+  productCount: 0,        // entries in the products list
+  productsNoWhere: [],    // products with no `repository`, so the Where column has nothing to name
   productLinks: [],       // { file, doi, url, in_list }: an entry of a product's `related`
   awardsUndecided: [],    // published research files with no `awards` key at all
   awardIds: [],           // ids in content/awards/awards.json
@@ -221,9 +222,10 @@ for (const c of selected) {
       if (c.name === 'awards' && typeof entry?.id === 'string') refs.awardIds.push(entry.id)
       if (c.name === 'critical-zone/products.json' && Array.isArray(entry?.awards)) for (const v of entry.awards) refs.awardUses.push({ file: label, value: v })
       if (c.name === 'critical-zone/products.json') {
+        refs.productCount++
         if (typeof entry?.doi === 'string') refs.productKeys.add(`doi:${entry.doi.toLowerCase()}`)
         if (typeof entry?.url === 'string') refs.productKeys.add(`url:${entry.url}`)
-        if (entry?.type === 'paper' && typeof entry?.doi === 'string') { const pre = entry.doi.split('/')[0]; refs.paperPrefixes.set(pre, (refs.paperPrefixes.get(pre) ?? 0) + 1) }
+        if (!(typeof entry?.repository === 'string' && entry.repository.trim()) && !(typeof entry?.url === 'string' && entry.url.includes('hydroshare.org'))) refs.productsNoWhere.push(label)
         if (Array.isArray(entry?.related)) for (const l of entry.related) refs.productLinks.push({ file: label, doi: typeof l?.doi === 'string' ? l.doi : undefined, url: typeof l?.url === 'string' ? l.url : undefined, in_list: l?.in_list, ownDoi: entry.doi, ownUrl: entry.url })
       }
       if (c.name === 'members/reps.json' && typeof entry?.institution === 'string') refs.memberNames.push(entry.institution.trim())
@@ -370,12 +372,10 @@ if (selected.some(c => c.name === 'critical-zone/products.json')) {
     else if (l.in_list !== false && !present) problems.push(`${l.file}: the related link to ${what} is not a product in the list (add in_list: false if it is not yet in it${l.doi ? '' : '; a url must match the product\'s url exactly as written'})`)
   }
   xref.push({ title: 'Every product related link points to a product in the list, or is marked in_list: false', checked: `${refs.productLinks.length} links, against ${refs.productKeys.size} product keys`, problems })
-  // The "Where" column names a paper's publisher from its DOI prefix (CZ_PUBLISHERS in composables/useCzLabels.ts). A prefix missing from
-  // that table shows "DOI" on the page; this lists them so a new batch can add them.
-  const labels = fs.readFileSync('composables/useCzLabels.ts', 'utf8')
-  const known = new Set([...labels.matchAll(/^\s*'(10\.\d+)':/gm)].map(m => m[1]))
-  const missing = [...refs.paperPrefixes].filter(([pre]) => !known.has(pre)).map(([pre, n]) => `${pre} (${n} paper${n === 1 ? '' : 's'})`)
-  info.push({ title: 'products: paper DOI prefixes with no publisher in CZ_PUBLISHERS (the Where column shows "DOI" for them): informational', checked: `${refs.paperPrefixes.size} prefixes`, items: missing })
+  // The "Where" column (components/CzProductList.vue) shows a product's `repository`: the journal for a paper, the data repository for a
+  // dataset (HydroShare for a HydroShare address). A product with neither shows "DOI", "CZO archive page (retiring)" or "Link"; this lists
+  // them so a new batch can fill it.
+  info.push({ title: 'products: no repository, so the Where column shows "DOI", the archive or "Link": informational', checked: `${refs.productCount} products`, items: refs.productsNoWhere })
 }
 
 // images: the file a story's image.src names must exist under public/ and be small enough for a page (a picture is a promise of weight).
