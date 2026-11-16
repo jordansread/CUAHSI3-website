@@ -1,7 +1,9 @@
 <script setup lang="ts">
 // The records marked `highlight: true` in content/critical-zone/products.json (epic CUAHSI/CUAHSI3-website#62, ticket T12; the choice is
-// in agent/reports/261031_cz-highlights-selection.md). Papers are grouped by the observatory they are tagged to or, where a paper has no
-// site tag (every CZNet paper), by the cluster its award names (czClusterOfAward, an inference from the award title). No usage figures are
+// in agent/reports/261031_cz-highlights-selection.md). Papers are grouped by the first observatory or cluster they are tagged to (every
+// record crediting a CZNet cluster or Hub award has carried that cluster's tag since jordansread/CUAHSI3-website#248, in award order, so
+// the first tag is the cluster this grouping used before) or, where a record has no tag other than "national", by the cluster its award
+// names (czClusterOfAward). No usage figures are
 // stored on the records, so nothing here is ranked: the order is the label order of CZ_SITE_NAMES, then title.
 //
 // The data comes from a bare JSON array that Nuxt Content wraps in `body` (footgun 7); `transform` keeps only the marked rows and the
@@ -62,8 +64,7 @@ const count = (g: { list: Row[] }[]) => g.reduce((n, x) => n + x.list.length, 0)
       HydroShare's, counted from 2019, when most were added there; citations are DataCite's. The figures were gathered on 30 and 31 October 2026.
     </p>
     <p class="font-['Hanken_Grotesk'] font-normal text-[14px] leading-[1.55] text-muted max-w-[640px] m-[0_0_28px]">
-      The papers carry no network cluster tag, so a network paper is placed in a cluster by the NSF award it names (the cluster is in the
-      award's title).
+      A network paper is placed in the cluster whose NSF award it credits (the cluster is named in the award's title).
     </p>
 
     <h3 class="font-['Schibsted_Grotesk'] font-bold text-[20px] leading-[1.2] text-navy m-[0_0_14px]">Papers · {{ count(papers) }}</h3>
