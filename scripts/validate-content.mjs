@@ -146,6 +146,7 @@ const refs = {            // collected for the cross-reference section
   productKeys: new Set(), // 'doi:<lowercase doi>' and 'url:<url>' of every product in the list
   productCount: 0,        // entries in the products list
   productsNoWhere: [],    // products with no `repository`, so the Where column has nothing to name
+  highlightRanks: [],     // { label, kind, highlight, rank }: every product that is highlighted or carries highlight_rank
   productLinks: [],       // { file, doi, url, in_list }: an entry of a product's `related`
   awardsUndecided: [],    // published research files with no `awards` key at all
   awardIds: [],           // ids in content/awards/awards.json
@@ -223,6 +224,7 @@ for (const c of selected) {
       if (c.name === 'critical-zone/products.json' && Array.isArray(entry?.awards)) for (const v of entry.awards) refs.awardUses.push({ file: label, value: v })
       if (c.name === 'critical-zone/products.json') {
         refs.productCount++
+        if (entry?.highlight === true || entry?.highlight_rank !== undefined) refs.highlightRanks.push({ label, kind: entry?.type === 'paper' ? 'papers' : 'datasets, software and models', highlight: entry?.highlight === true, rank: entry?.highlight_rank })
         if (typeof entry?.doi === 'string') refs.productKeys.add(`doi:${entry.doi.toLowerCase()}`)
         if (typeof entry?.url === 'string') refs.productKeys.add(`url:${entry.url}`)
         if (!(typeof entry?.repository === 'string' && entry.repository.trim()) && !(typeof entry?.url === 'string' && entry.url.includes('hydroshare.org'))) refs.productsNoWhere.push(label)
@@ -372,6 +374,24 @@ if (selected.some(c => c.name === 'critical-zone/products.json')) {
     else if (l.in_list !== false && !present) problems.push(`${l.file}: the related link to ${what} is not a product in the list (add in_list: false if it is not yet in it${l.doi ? '' : '; a url must match the product\'s url exactly as written'})`)
   }
   xref.push({ title: 'Every product related link points to a product in the list, or is marked in_list: false', checked: `${refs.productLinks.length} links, against ${refs.productKeys.size} product keys`, problems })
+  // highlight_rank orders the front page's sample (components/CzHighlights.vue): only a highlighted product carries one, and two products of
+  // the same kind (papers; the rest) never share one. Either every highlight has a rank or none does: the page says "ranked" and numbers
+  // the lists only when all are ranked, so a half-ranked list would be described wrongly.
+  {
+    const problems = []
+    const seen = new Map()
+    for (const h of refs.highlightRanks) {
+      if (h.rank === undefined) continue
+      if (!h.highlight) problems.push(`${h.label}: has highlight_rank ${h.rank} but is not a highlight (highlight: true)`)
+      const k = `${h.kind} ${h.rank}`
+      if (seen.has(k)) problems.push(`${h.label}: highlight_rank ${h.rank} is also on ${seen.get(k)} (${h.kind})`)
+      else seen.set(k, h.label)
+    }
+    const ranked = refs.highlightRanks.filter(h => h.highlight && h.rank !== undefined).length
+    const highlights = refs.highlightRanks.filter(h => h.highlight).length
+    if (ranked && ranked < highlights) problems.push(`${ranked} of ${highlights} highlights have a highlight_rank: give every highlight one, or none`)
+    xref.push({ title: 'products: highlight_rank only on a highlight, on all highlights or none, and never repeated within papers or within the rest', checked: `${highlights} highlights, ${ranked} ranked`, problems })
+  }
   // The "Where" column (components/CzProductList.vue) shows a product's `repository`: the journal for a paper, the data repository for a
   // dataset (HydroShare for a HydroShare address). A product with neither shows "DOI", "CZO archive page (retiring)" or "Link"; this lists
   // them so a new batch can fill it.
