@@ -25997,6 +25997,9 @@
     "awards": [
       "nsf-2012670"
     ],
+    "sites": [
+      "coastal"
+    ],
     "year": 2024,
     "source": "crossref",
     "source_url": "https://doi.org/10.1002/ecy.4385",
@@ -26011,6 +26014,9 @@
     "awards": [
       "nsf-2012475"
     ],
+    "sites": [
+      "drylands"
+    ],
     "year": 2026,
     "source": "crossref",
     "source_url": "https://doi.org/10.1029/2025gl120355",
@@ -26024,6 +26030,9 @@
     "repository": "Elsevier BV",
     "awards": [
       "nsf-2012893"
+    ],
+    "sites": [
+      "hub"
     ],
     "year": 2025,
     "source": "crossref",
@@ -26052,6 +26061,9 @@
     "repository": "Springer Science and Business Media LLC",
     "awards": [
       "nsf-2012669"
+    ],
+    "sites": [
+      "dynamic-water"
     ],
     "year": 2023,
     "source": "crossref",
@@ -26125,6 +26137,9 @@
     "repository": "Informa UK Limited",
     "awards": [
       "nsf-2012091"
+    ],
+    "sites": [
+      "dust2"
     ],
     "year": 2024,
     "source": "crossref",
@@ -26483,6 +26498,9 @@
     "awards": [
       "nsf-2012340"
     ],
+    "sites": [
+      "urban"
+    ],
     "year": 2022,
     "source": "crossref",
     "source_url": "https://doi.org/10.3390/f13050745",
@@ -26511,6 +26529,9 @@
     "awards": [
       "nsf-2012316"
     ],
+    "sites": [
+      "bedrock"
+    ],
     "year": 2024,
     "source": "crossref",
     "source_url": "https://doi.org/10.1002/esp.6034",
@@ -26525,6 +26546,9 @@
     "awards": [
       "nsf-2012107",
       "nsf-2012340"
+    ],
+    "sites": [
+      "urban"
     ],
     "year": 2021,
     "highlight": true,
@@ -26605,6 +26629,9 @@
     "awards": [
       "nsf-2012669"
     ],
+    "sites": [
+      "dynamic-water"
+    ],
     "year": 2026,
     "source": "datacite",
     "source_url": "https://doi.org/10.5281/zenodo.17485933",
@@ -26653,6 +26680,9 @@
     "awards": [
       "nsf-2012123"
     ],
+    "sites": [
+      "bigdata"
+    ],
     "year": 2024,
     "source": "datacite",
     "source_url": "https://doi.org/10.5281/zenodo.10583215",
@@ -26682,6 +26712,9 @@
     "repository": "American Geophysical Union (AGU)",
     "awards": [
       "nsf-2012310"
+    ],
+    "sites": [
+      "dynamic-water"
     ],
     "year": 2022,
     "source": "crossref",
@@ -26764,6 +26797,9 @@
     "awards": [
       "nsf-2012850"
     ],
+    "sites": [
+      "cinet"
+    ],
     "year": 2024,
     "highlight": true,
     "source": "crossref",
@@ -26778,6 +26814,9 @@
     "repository": "American Geophysical Union (AGU)",
     "awards": [
       "nsf-2012893"
+    ],
+    "sites": [
+      "hub"
     ],
     "year": 2024,
     "highlight": true,
@@ -26812,6 +26851,9 @@
     "repository": "Consortium of Universities for the Advancement of Hydrologic Science, Inc",
     "awards": [
       "nsf-2011910"
+    ],
+    "sites": [
+      "dust2"
     ],
     "year": 2026,
     "source": "datacite",
@@ -26877,6 +26919,9 @@
     "awards": [
       "nsf-2012670"
     ],
+    "sites": [
+      "coastal"
+    ],
     "year": 2022,
     "source": "crossref",
     "source_url": "https://doi.org/10.1038/s41561-022-01041-x",
@@ -26890,6 +26935,9 @@
     "repository": "Zenodo",
     "awards": [
       "nsf-2011910"
+    ],
+    "sites": [
+      "dust2"
     ],
     "year": 2024,
     "source": "datacite",
@@ -26962,6 +27010,9 @@
     "awards": [
       "nsf-2011910"
     ],
+    "sites": [
+      "dust2"
+    ],
     "year": 2025,
     "source": "crossref",
     "source_url": "https://doi.org/10.1021/acs.est.4c12170",
@@ -26975,6 +27026,9 @@
     "repository": "Springer Science and Business Media LLC",
     "awards": [
       "nsf-2012670"
+    ],
+    "sites": [
+      "coastal"
     ],
     "year": 2023,
     "source": "crossref",
@@ -27064,6 +27118,9 @@
     "awards": [
       "nsf-2012475"
     ],
+    "sites": [
+      "drylands"
+    ],
     "year": 2023,
     "highlight": true,
     "source": "crossref",
@@ -27080,6 +27137,9 @@
       "nsf-2012633",
       "nsf-2012878"
     ],
+    "sites": [
+      "geomicrobiology"
+    ],
     "year": 2025,
     "highlight": true,
     "source": "crossref",
@@ -27095,6 +27155,9 @@
     "awards": [
       "nsf-2012669"
     ],
+    "sites": [
+      "dynamic-water"
+    ],
     "year": 2021,
     "source": "crossref",
     "source_url": "https://doi.org/10.1002/mma.8015",
@@ -27108,6 +27171,9 @@
     "repository": "Copernicus GmbH",
     "awards": [
       "nsf-2012091"
+    ],
+    "sites": [
+      "dust2"
     ],
     "year": 2026,
     "source": "crossref",
@@ -27139,6 +27205,9 @@
     "repository": "American Geophysical Union (AGU)",
     "awards": [
       "nsf-2012353"
+    ],
+    "sites": [
+      "bedrock"
     ],
     "year": 2026,
     "source": "crossref",
@@ -27430,6 +27499,9 @@
     "awards": [
       "nsf-2012091"
     ],
+    "sites": [
+      "dust2"
+    ],
     "year": 2026,
     "source": "crossref",
     "source_url": "https://doi.org/10.1029/2025wr041598",
@@ -27444,6 +27516,10 @@
     "awards": [
       "nsf-2012475",
       "nsf-2012893"
+    ],
+    "sites": [
+      "drylands",
+      "hub"
     ],
     "year": 2026,
     "source": "datacite",
@@ -27543,6 +27619,9 @@
     "awards": [
       "nsf-2012082"
     ],
+    "sites": [
+      "dust2"
+    ],
     "year": 2026,
     "source": "datacite",
     "source_url": "https://doi.org/10.60520/ieda/113846",
@@ -27574,6 +27653,9 @@
     "repository": "Interdisciplinary Earth Data Alliance (IEDA)",
     "awards": [
       "nsf-2012082"
+    ],
+    "sites": [
+      "dust2"
     ],
     "year": 2026,
     "source": "datacite",
@@ -27638,6 +27720,9 @@
     "awards": [
       "nsf-2012073"
     ],
+    "sites": [
+      "bedrock"
+    ],
     "year": 2026,
     "source": "datacite",
     "source_url": "https://doi.org/10.5061/dryad.tht76hfb0",
@@ -27665,6 +27750,9 @@
     "repository": "Wiley",
     "awards": [
       "nsf-2012796"
+    ],
+    "sites": [
+      "dynamic-water"
     ],
     "year": 2025,
     "source": "crossref",
@@ -27713,6 +27801,9 @@
     "awards": [
       "nsf-2011910"
     ],
+    "sites": [
+      "dust2"
+    ],
     "year": 2023,
     "source": "datacite",
     "source_url": "https://doi.org/10.5281/zenodo.10081891",
@@ -27726,6 +27817,9 @@
     "repository": "Zenodo",
     "awards": [
       "nsf-2011910"
+    ],
+    "sites": [
+      "dust2"
     ],
     "year": 2025,
     "source": "datacite",
@@ -27741,6 +27835,9 @@
     "awards": [
       "nsf-2012796"
     ],
+    "sites": [
+      "dynamic-water"
+    ],
     "year": 2026,
     "source": "crossref",
     "source_url": "https://doi.org/10.1029/2025gb008926",
@@ -27754,6 +27851,9 @@
     "repository": "National Academy of Sciences",
     "awards": [
       "nsf-2012073"
+    ],
+    "sites": [
+      "bedrock"
     ],
     "year": 2026,
     "highlight": true,
@@ -27770,6 +27870,9 @@
     "awards": [
       "nsf-2012353",
       "nsf-2012357"
+    ],
+    "sites": [
+      "bedrock"
     ],
     "year": 2026,
     "source": "crossref",
@@ -27851,6 +27954,9 @@
     "repository": "Elsevier BV",
     "awards": [
       "nsf-2012310"
+    ],
+    "sites": [
+      "dynamic-water"
     ],
     "year": 2025,
     "source": "crossref",
@@ -27951,6 +28057,9 @@
     "awards": [
       "nsf-2011910"
     ],
+    "sites": [
+      "dust2"
+    ],
     "year": 2025,
     "source": "crossref",
     "source_url": "https://doi.org/10.1016/j.envres.2025.121663",
@@ -27965,6 +28074,9 @@
     "awards": [
       "nsf-2012669",
       "nsf-2012796"
+    ],
+    "sites": [
+      "dynamic-water"
     ],
     "year": 2023,
     "source": "crossref",
@@ -28051,6 +28163,9 @@
     "awards": [
       "nsf-2012484"
     ],
+    "sites": [
+      "coastal"
+    ],
     "year": 2025,
     "source": "crossref",
     "source_url": "https://doi.org/10.1007/s12237-025-01624-y",
@@ -28064,6 +28179,9 @@
     "repository": "Springer Science and Business Media LLC",
     "awards": [
       "nsf-2012670"
+    ],
+    "sites": [
+      "coastal"
     ],
     "year": 2026,
     "source": "crossref",
@@ -28108,6 +28226,9 @@
     "repository": "Consortium of Universities for the Advancement of Hydrologic Science, Inc",
     "awards": [
       "nsf-2012475"
+    ],
+    "sites": [
+      "drylands"
     ],
     "year": 2026,
     "source": "datacite",
@@ -28192,6 +28313,9 @@
     "awards": [
       "nsf-2011910"
     ],
+    "sites": [
+      "dust2"
+    ],
     "year": 2026,
     "source": "crossref",
     "source_url": "https://doi.org/10.1016/j.aeolia.2026.101071",
@@ -28205,6 +28329,9 @@
     "repository": "Wiley",
     "awards": [
       "nsf-2011910"
+    ],
+    "sites": [
+      "dust2"
     ],
     "year": 2023,
     "source": "crossref",
@@ -28811,6 +28938,9 @@
       "nsf-2012796",
       "nsf-2012821"
     ],
+    "sites": [
+      "dynamic-water"
+    ],
     "year": 2025,
     "source": "crossref",
     "source_url": "https://doi.org/10.1029/2024ef005238",
@@ -28825,6 +28955,9 @@
     "awards": [
       "nsf-2012730"
     ],
+    "sites": [
+      "dynamic-water"
+    ],
     "year": 2023,
     "source": "crossref",
     "source_url": "https://doi.org/10.1029/2022wr034117",
@@ -28838,6 +28971,9 @@
     "repository": "Zenodo",
     "awards": [
       "nsf-2012669"
+    ],
+    "sites": [
+      "dynamic-water"
     ],
     "year": 2026,
     "source": "datacite",
@@ -28936,6 +29072,9 @@
     "awards": [
       "nsf-2012310"
     ],
+    "sites": [
+      "dynamic-water"
+    ],
     "year": 2026,
     "source": "crossref",
     "source_url": "https://doi.org/10.5194/tc-20-209-2026",
@@ -29009,6 +29148,9 @@
     "awards": [
       "nsf-2012796"
     ],
+    "sites": [
+      "dynamic-water"
+    ],
     "year": 2024,
     "source": "crossref",
     "source_url": "https://doi.org/10.1002/lol2.10372",
@@ -29053,6 +29195,9 @@
     "awards": [
       "nsf-2012893"
     ],
+    "sites": [
+      "hub"
+    ],
     "year": 2026,
     "source": "crossref",
     "source_url": "https://doi.org/10.1111/gcb.70898",
@@ -29066,6 +29211,9 @@
     "repository": "Frontiers Media SA",
     "awards": [
       "nsf-2012796"
+    ],
+    "sites": [
+      "dynamic-water"
     ],
     "year": 2022,
     "source": "crossref",
@@ -29119,6 +29267,9 @@
     "awards": [
       "nsf-2011910"
     ],
+    "sites": [
+      "dust2"
+    ],
     "year": 2025,
     "source": "crossref",
     "source_url": "https://doi.org/10.1002/lno.70061",
@@ -29150,6 +29301,9 @@
       "nsf-2012353",
       "nsf-2012357"
     ],
+    "sites": [
+      "bedrock"
+    ],
     "year": 2025,
     "source": "crossref",
     "source_url": "https://doi.org/10.1002/vzj2.70006",
@@ -29164,6 +29318,9 @@
     "awards": [
       "nsf-2012796"
     ],
+    "sites": [
+      "dynamic-water"
+    ],
     "year": 2026,
     "source": "datacite",
     "source_url": "https://doi.org/10.5281/zenodo.17860454",
@@ -29177,6 +29334,9 @@
     "repository": "Copernicus GmbH",
     "awards": [
       "nsf-2012484"
+    ],
+    "sites": [
+      "coastal"
     ],
     "year": 2024,
     "source": "crossref",
@@ -29205,6 +29365,9 @@
     "repository": "Elsevier BV",
     "awards": [
       "nsf-2011346"
+    ],
+    "sites": [
+      "bigdata"
     ],
     "year": 2022,
     "source": "crossref",
@@ -29311,6 +29474,9 @@
     "awards": [
       "nsf-2011910"
     ],
+    "sites": [
+      "dust2"
+    ],
     "year": 2026,
     "source": "datacite",
     "source_url": "https://doi.org/10.4211/hs.e8b770643ce940a68f899447464a2dce",
@@ -29325,6 +29491,9 @@
     "awards": [
       "nsf-2012093"
     ],
+    "sites": [
+      "dust2"
+    ],
     "year": 2026,
     "source": "datacite",
     "source_url": "https://doi.org/10.60520/ieda/113809",
@@ -29338,6 +29507,9 @@
     "repository": "Wiley",
     "awards": [
       "nsf-2012796"
+    ],
+    "sites": [
+      "dynamic-water"
     ],
     "year": 2026,
     "source": "crossref",
@@ -29372,6 +29544,9 @@
     "awards": [
       "nsf-2012340"
     ],
+    "sites": [
+      "urban"
+    ],
     "year": 2024,
     "source": "crossref",
     "source_url": "https://doi.org/10.1021/acs.est.3c07925",
@@ -29385,6 +29560,9 @@
     "repository": "Springer Science and Business Media LLC",
     "awards": [
       "nsf-2012357"
+    ],
+    "sites": [
+      "bedrock"
     ],
     "year": 2022,
     "source": "crossref",
@@ -29542,6 +29720,9 @@
     "awards": [
       "nsf-2012322"
     ],
+    "sites": [
+      "coastal"
+    ],
     "year": 2022,
     "source": "crossref",
     "source_url": "https://doi.org/10.1016/j.dib.2022.108584",
@@ -29593,6 +29774,9 @@
     "awards": [
       "nsf-2012409"
     ],
+    "sites": [
+      "urban"
+    ],
     "year": 2022,
     "source": "datacite",
     "source_url": "https://doi.org/10.26022/ieda/112281",
@@ -29606,6 +29790,9 @@
     "repository": "Elsevier BV",
     "awards": [
       "nsf-2012091"
+    ],
+    "sites": [
+      "dust2"
     ],
     "year": 2024,
     "source": "crossref",
@@ -29639,6 +29826,9 @@
     "repository": "Springer Science and Business Media LLC",
     "awards": [
       "nsf-2012670"
+    ],
+    "sites": [
+      "coastal"
     ],
     "year": 2023,
     "highlight": true,
@@ -29768,6 +29958,9 @@
     "awards": [
       "nsf-2012484"
     ],
+    "sites": [
+      "coastal"
+    ],
     "year": 2022,
     "source": "crossref",
     "source_url": "https://doi.org/10.1029/2022jg007088",
@@ -29781,6 +29974,9 @@
     "repository": "American Chemical Society (ACS)",
     "awards": [
       "nsf-2012730"
+    ],
+    "sites": [
+      "dynamic-water"
     ],
     "year": 2024,
     "source": "crossref",
@@ -29796,6 +29992,9 @@
     "awards": [
       "nsf-2012091"
     ],
+    "sites": [
+      "dust2"
+    ],
     "year": 2025,
     "source": "crossref",
     "source_url": "https://doi.org/10.5194/egusphere-2025-5063",
@@ -29810,6 +30009,9 @@
     "awards": [
       "nsf-2012091"
     ],
+    "sites": [
+      "dust2"
+    ],
     "year": 2026,
     "source": "crossref",
     "source_url": "https://doi.org/10.5194/egusphere-2026-5266",
@@ -29823,6 +30025,9 @@
     "repository": "Elsevier BV",
     "awards": [
       "nsf-2012484"
+    ],
+    "sites": [
+      "coastal"
     ],
     "year": 2026,
     "source": "crossref",
@@ -29858,6 +30063,9 @@
     "awards": [
       "nsf-2011346"
     ],
+    "sites": [
+      "bigdata"
+    ],
     "year": 2026,
     "source": "datacite",
     "source_url": "https://doi.org/10.4211/hs.f789950ed4af4434a7a256506fa3709c",
@@ -29872,6 +30080,9 @@
     "repository": "Consortium of Universities for the Advancement of Hydrologic Science, Inc",
     "awards": [
       "nsf-2011346"
+    ],
+    "sites": [
+      "bigdata"
     ],
     "year": 2025,
     "source": "datacite",
@@ -29936,6 +30147,9 @@
     "awards": [
       "nsf-2012484"
     ],
+    "sites": [
+      "coastal"
+    ],
     "year": 2025,
     "source": "crossref",
     "source_url": "https://doi.org/10.1016/j.jenvman.2025.127567",
@@ -29949,6 +30163,9 @@
     "repository": "Copernicus GmbH",
     "awards": [
       "nsf-2012093"
+    ],
+    "sites": [
+      "dust2"
     ],
     "year": 2025,
     "source": "crossref",
@@ -29965,6 +30182,10 @@
       "nsf-2011346",
       "nsf-2012310"
     ],
+    "sites": [
+      "bigdata",
+      "dynamic-water"
+    ],
     "year": 2025,
     "source": "crossref",
     "source_url": "https://doi.org/10.5194/hess-29-6333-2025",
@@ -29978,6 +30199,9 @@
     "repository": "MDPI AG",
     "awards": [
       "nsf-2012484"
+    ],
+    "sites": [
+      "coastal"
     ],
     "year": 2022,
     "source": "crossref",
@@ -30006,6 +30230,9 @@
     "repository": "Elsevier BV",
     "awards": [
       "nsf-2012322"
+    ],
+    "sites": [
+      "coastal"
     ],
     "year": 2024,
     "source": "crossref",
@@ -30362,6 +30589,9 @@
     "awards": [
       "nsf-2012123"
     ],
+    "sites": [
+      "bigdata"
+    ],
     "year": 2026,
     "source": "datacite",
     "source_url": "https://doi.org/10.4211/hs.d68fbf42b90f4ca2917c14b7e13f949f",
@@ -30385,6 +30615,9 @@
     "repository": "Elsevier BV",
     "awards": [
       "nsf-2012091"
+    ],
+    "sites": [
+      "dust2"
     ],
     "year": 2023,
     "source": "crossref",
@@ -30412,6 +30645,9 @@
     "awards": [
       "nsf-2012484"
     ],
+    "sites": [
+      "coastal"
+    ],
     "year": 2026,
     "source": "crossref",
     "source_url": "https://doi.org/10.1007/s00027-026-01311-5",
@@ -30425,6 +30661,9 @@
     "repository": "American Geophysical Union (AGU)",
     "awards": [
       "nsf-2012123"
+    ],
+    "sites": [
+      "bigdata"
     ],
     "year": 2026,
     "source": "crossref",
@@ -30511,6 +30750,9 @@
       "nsf-2012669",
       "nsf-2012796"
     ],
+    "sites": [
+      "dynamic-water"
+    ],
     "year": 2023,
     "source": "crossref",
     "source_url": "https://doi.org/10.1029/2023wr035126",
@@ -30524,6 +30766,9 @@
     "repository": "Elsevier BV",
     "awards": [
       "nsf-2012670"
+    ],
+    "sites": [
+      "coastal"
     ],
     "year": 2026,
     "source": "crossref",
@@ -30567,6 +30812,9 @@
     "awards": [
       "nsf-2012730"
     ],
+    "sites": [
+      "dynamic-water"
+    ],
     "year": 2023,
     "highlight": true,
     "source": "crossref",
@@ -30582,6 +30830,9 @@
     "awards": [
       "nsf-1331841",
       "nsf-2012796"
+    ],
+    "sites": [
+      "dynamic-water"
     ],
     "year": 2023,
     "source": "crossref",
@@ -30626,6 +30877,9 @@
     "awards": [
       "nsf-2012484"
     ],
+    "sites": [
+      "coastal"
+    ],
     "year": 2026,
     "source": "crossref",
     "source_url": "https://doi.org/10.1029/2025jg009149",
@@ -30669,6 +30923,9 @@
     "awards": [
       "nsf-2011346"
     ],
+    "sites": [
+      "bigdata"
+    ],
     "year": 2025,
     "source": "datacite",
     "source_url": "https://doi.org/10.4211/hs.4022c4ec99224449b8c974657a332ac1",
@@ -30684,6 +30941,9 @@
       "nsf-2012593",
       "nsf-2012748",
       "nsf-2012893"
+    ],
+    "sites": [
+      "hub"
     ],
     "year": 2021,
     "source": "crossref",
@@ -30712,6 +30972,9 @@
     "repository": "Elsevier BV",
     "awards": [
       "nsf-2011910"
+    ],
+    "sites": [
+      "dust2"
     ],
     "year": 2026,
     "source": "crossref",
@@ -30784,6 +31047,9 @@
     "awards": [
       "nsf-2012340"
     ],
+    "sites": [
+      "urban"
+    ],
     "year": 2025,
     "source": "crossref",
     "source_url": "https://doi.org/10.1039/d5an00092k",
@@ -30797,6 +31063,9 @@
     "repository": "Springer Science and Business Media LLC",
     "awards": [
       "nsf-2012670"
+    ],
+    "sites": [
+      "coastal"
     ],
     "year": 2024,
     "source": "crossref",
@@ -31050,6 +31319,9 @@
     "awards": [
       "nsf-2012670"
     ],
+    "sites": [
+      "coastal"
+    ],
     "year": 2025,
     "source": "crossref",
     "source_url": "https://doi.org/10.5194/bg-22-6963-2025",
@@ -31063,6 +31335,9 @@
     "repository": "Wiley",
     "awards": [
       "nsf-2012670"
+    ],
+    "sites": [
+      "coastal"
     ],
     "year": 2023,
     "source": "crossref",
@@ -31178,6 +31453,9 @@
     "awards": [
       "nsf-2012475"
     ],
+    "sites": [
+      "drylands"
+    ],
     "year": 2025,
     "source": "crossref",
     "source_url": "https://doi.org/10.1017/dry.2025.10004",
@@ -31248,6 +31526,9 @@
     "awards": [
       "nsf-2012409"
     ],
+    "sites": [
+      "urban"
+    ],
     "year": 2022,
     "source": "datacite",
     "source_url": "https://doi.org/10.26022/ieda/112208",
@@ -31316,6 +31597,9 @@
     "awards": [
       "nsf-2012409"
     ],
+    "sites": [
+      "urban"
+    ],
     "year": 2021,
     "source": "crossref",
     "source_url": "https://doi.org/10.1088/2515-7620/ac35be",
@@ -31334,6 +31618,9 @@
       "nsf-2012353",
       "nsf-2012357"
     ],
+    "sites": [
+      "bedrock"
+    ],
     "year": 2025,
     "source": "crossref",
     "source_url": "https://doi.org/10.1002/esp.70132",
@@ -31347,6 +31634,9 @@
     "repository": "Springer Science and Business Media LLC",
     "awards": [
       "nsf-2012475"
+    ],
+    "sites": [
+      "drylands"
     ],
     "year": 2025,
     "source": "crossref",
@@ -31497,6 +31787,9 @@
     "awards": [
       "nsf-2012353"
     ],
+    "sites": [
+      "bedrock"
+    ],
     "year": 2025,
     "source": "datacite",
     "source_url": "https://doi.org/10.5281/zenodo.16945014",
@@ -31560,6 +31853,9 @@
     "awards": [
       "nsf-2012091"
     ],
+    "sites": [
+      "dust2"
+    ],
     "year": 2026,
     "source": "crossref",
     "source_url": "https://doi.org/10.1080/02786826.2026.2716649",
@@ -31573,6 +31869,9 @@
     "repository": "Copernicus GmbH",
     "awards": [
       "nsf-2012091"
+    ],
+    "sites": [
+      "dust2"
     ],
     "year": 2023,
     "highlight": true,
@@ -31640,6 +31939,9 @@
     "awards": [
       "nsf-2012082"
     ],
+    "sites": [
+      "dust2"
+    ],
     "year": 2026,
     "source": "crossref",
     "source_url": "https://doi.org/10.5194/essd-2026-423",
@@ -31671,6 +31973,9 @@
     "repository": "American Geophysical Union (AGU)",
     "awards": [
       "nsf-2012484"
+    ],
+    "sites": [
+      "coastal"
     ],
     "year": 2023,
     "source": "crossref",
@@ -31705,6 +32010,9 @@
     "awards": [
       "nsf-2012080"
     ],
+    "sites": [
+      "bigdata"
+    ],
     "year": 2025,
     "source": "crossref",
     "source_url": "https://doi.org/10.1080/10899995.2025.2530763",
@@ -31718,6 +32026,9 @@
     "repository": "Elsevier BV",
     "awards": [
       "nsf-2012319"
+    ],
+    "sites": [
+      "coastal"
     ],
     "year": 2025,
     "source": "crossref",
@@ -31753,6 +32064,9 @@
     "awards": [
       "nsf-2012409"
     ],
+    "sites": [
+      "urban"
+    ],
     "year": 2023,
     "source": "crossref",
     "source_url": "https://doi.org/10.1021/acsestwater.2c00240",
@@ -31766,6 +32080,9 @@
     "repository": "Elsevier BV",
     "awards": [
       "nsf-2012322"
+    ],
+    "sites": [
+      "coastal"
     ],
     "year": 2026,
     "source": "crossref",
@@ -31808,6 +32125,9 @@
     "repository": "IOP Publishing",
     "awards": [
       "nsf-2012082"
+    ],
+    "sites": [
+      "dust2"
     ],
     "year": 2026,
     "source": "crossref",
@@ -31893,6 +32213,9 @@
     "awards": [
       "nsf-2012353"
     ],
+    "sites": [
+      "bedrock"
+    ],
     "year": 2021,
     "source": "crossref",
     "source_url": "https://doi.org/10.1029/2021jf006289",
@@ -31906,6 +32229,9 @@
     "repository": "American Geophysical Union (AGU)",
     "awards": [
       "nsf-2012796"
+    ],
+    "sites": [
+      "dynamic-water"
     ],
     "year": 2026,
     "source": "crossref",
@@ -32005,6 +32331,9 @@
     "awards": [
       "nsf-2012670"
     ],
+    "sites": [
+      "coastal"
+    ],
     "year": 2022,
     "source": "crossref",
     "source_url": "https://doi.org/10.1111/gcb.16149",
@@ -32054,6 +32383,9 @@
       "nsf-2012633",
       "nsf-2012878"
     ],
+    "sites": [
+      "geomicrobiology"
+    ],
     "year": 2025,
     "source": "datacite",
     "source_url": "https://doi.org/10.5281/zenodo.16995489",
@@ -32070,6 +32402,9 @@
       "nsf-2012730",
       "nsf-2012796"
     ],
+    "sites": [
+      "dynamic-water"
+    ],
     "year": 2025,
     "source": "crossref",
     "source_url": "https://doi.org/10.1016/j.ejrh.2025.102622",
@@ -32083,6 +32418,9 @@
     "repository": "Elsevier BV",
     "awards": [
       "nsf-2012322"
+    ],
+    "sites": [
+      "coastal"
     ],
     "year": 2022,
     "source": "crossref",
@@ -32296,6 +32634,9 @@
     "awards": [
       "nsf-2012322"
     ],
+    "sites": [
+      "coastal"
+    ],
     "year": 2023,
     "source": "crossref",
     "source_url": "https://doi.org/10.1029/2023gl103680",
@@ -32310,6 +32651,10 @@
     "awards": [
       "nsf-2011346",
       "nsf-2012669"
+    ],
+    "sites": [
+      "bigdata",
+      "dynamic-water"
     ],
     "year": 2023,
     "source": "crossref",
@@ -32392,6 +32737,9 @@
     "repository": "Elsevier BV",
     "awards": [
       "nsf-2012796"
+    ],
+    "sites": [
+      "dynamic-water"
     ],
     "year": 2024,
     "source": "crossref",
@@ -32476,6 +32824,10 @@
       "nsf-2012123",
       "nsf-2012669"
     ],
+    "sites": [
+      "bigdata",
+      "dynamic-water"
+    ],
     "year": 2022,
     "highlight": true,
     "source": "crossref",
@@ -32491,6 +32843,9 @@
     "repository": "Consortium of Universities for the Advancement of Hydrologic Science, Inc",
     "awards": [
       "nsf-2012475"
+    ],
+    "sites": [
+      "drylands"
     ],
     "year": 2026,
     "source": "datacite",
@@ -32558,6 +32913,9 @@
       "nsf-2012669",
       "nsf-2012796"
     ],
+    "sites": [
+      "dynamic-water"
+    ],
     "year": 2025,
     "source": "crossref",
     "source_url": "https://doi.org/10.5194/bg-22-6097-2025",
@@ -32591,6 +32949,9 @@
     "awards": [
       "nsf-2012669",
       "nsf-2012796"
+    ],
+    "sites": [
+      "dynamic-water"
     ],
     "year": 2025,
     "source": "crossref",
@@ -32669,6 +33030,9 @@
     "repository": "IOP Publishing",
     "awards": [
       "nsf-2012409"
+    ],
+    "sites": [
+      "urban"
     ],
     "year": 2024,
     "source": "crossref",
@@ -33107,6 +33471,9 @@
     "awards": [
       "nsf-2012340"
     ],
+    "sites": [
+      "urban"
+    ],
     "year": 2025,
     "source": "crossref",
     "source_url": "https://doi.org/10.1016/j.cplett.2025.142278",
@@ -33206,6 +33573,9 @@
       "nsf-2012322",
       "nsf-2012484"
     ],
+    "sites": [
+      "coastal"
+    ],
     "year": 2025,
     "source": "crossref",
     "source_url": "https://doi.org/10.1029/2025gl116251",
@@ -33235,6 +33605,9 @@
     "awards": [
       "nsf-2012322",
       "nsf-2012484"
+    ],
+    "sites": [
+      "coastal"
     ],
     "year": 2025,
     "source": "crossref",
@@ -33269,6 +33642,9 @@
     "awards": [
       "nsf-2012310"
     ],
+    "sites": [
+      "dynamic-water"
+    ],
     "year": 2023,
     "source": "crossref",
     "source_url": "https://doi.org/10.1002/eco.2580",
@@ -33283,6 +33659,9 @@
     "awards": [
       "nsf-2012091"
     ],
+    "sites": [
+      "dust2"
+    ],
     "year": 2023,
     "source": "crossref",
     "source_url": "https://doi.org/10.1088/1748-9326/acd409",
@@ -33296,6 +33675,9 @@
     "repository": "American Geophysical Union (AGU)",
     "awards": [
       "nsf-2012796"
+    ],
+    "sites": [
+      "dynamic-water"
     ],
     "year": 2026,
     "source": "crossref",
@@ -33432,6 +33814,9 @@
     "awards": [
       "nsf-2012670"
     ],
+    "sites": [
+      "coastal"
+    ],
     "year": 2025,
     "source": "crossref",
     "source_url": "https://doi.org/10.1029/2025jg009145",
@@ -33460,6 +33845,9 @@
     "repository": "American Geophysical Union (AGU)",
     "awards": [
       "nsf-2012475"
+    ],
+    "sites": [
+      "drylands"
     ],
     "year": 2026,
     "source": "crossref",
@@ -33492,6 +33880,9 @@
     "awards": [
       "nsf-2012091"
     ],
+    "sites": [
+      "dust2"
+    ],
     "year": 2025,
     "source": "crossref",
     "source_url": "https://doi.org/10.1029/2024jf007957",
@@ -33505,6 +33896,9 @@
     "repository": "Wiley",
     "awards": [
       "nsf-2012670"
+    ],
+    "sites": [
+      "coastal"
     ],
     "year": 2023,
     "source": "crossref",
@@ -33520,6 +33914,9 @@
     "awards": [
       "nsf-2012409"
     ],
+    "sites": [
+      "urban"
+    ],
     "year": 2026,
     "source": "crossref",
     "source_url": "https://doi.org/10.1007/s11356-025-37342-y",
@@ -33533,6 +33930,9 @@
     "repository": "IOP Publishing",
     "awards": [
       "nsf-2012409"
+    ],
+    "sites": [
+      "urban"
     ],
     "year": 2022,
     "source": "crossref",
@@ -33608,6 +34008,9 @@
       "nsf-2012227",
       "nsf-2012353",
       "nsf-2012357"
+    ],
+    "sites": [
+      "bedrock"
     ],
     "year": 2025,
     "source": "crossref",
@@ -33735,6 +34138,9 @@
     "repository": "Wiley",
     "awards": [
       "nsf-2012340"
+    ],
+    "sites": [
+      "urban"
     ],
     "year": 2025,
     "source": "crossref",
@@ -34009,6 +34415,9 @@
     "awards": [
       "nsf-2011439"
     ],
+    "sites": [
+      "bigdata"
+    ],
     "year": 2021,
     "source": "crossref",
     "source_url": "https://doi.org/10.1016/j.scitotenv.2021.147661",
@@ -34023,6 +34432,9 @@
     "awards": [
       "nsf-2011910"
     ],
+    "sites": [
+      "dust2"
+    ],
     "year": 2024,
     "source": "crossref",
     "source_url": "https://doi.org/10.1111/gcb.17367",
@@ -34036,6 +34448,9 @@
     "repository": "Copernicus GmbH",
     "awards": [
       "nsf-2012310"
+    ],
+    "sites": [
+      "dynamic-water"
     ],
     "year": 2025,
     "source": "crossref",
@@ -39265,6 +39680,9 @@
     "awards": [
       "nsf-2012893"
     ],
+    "sites": [
+      "hub"
+    ],
     "year": 2026,
     "source": "par",
     "source_url": "https://doi.org/10.1002/gcb4.70012",
@@ -39278,6 +39696,9 @@
     "repository": "Earth's Future",
     "awards": [
       "nsf-2012893"
+    ],
+    "sites": [
+      "hub"
     ],
     "year": 2026,
     "source": "par",
@@ -39294,6 +39715,9 @@
       "nsf-1849458",
       "nsf-2012893"
     ],
+    "sites": [
+      "hub"
+    ],
     "year": 2025,
     "source": "par",
     "source_url": "https://doi.org/10.22541/essoar.176590620.05979262/v1",
@@ -39307,6 +39731,9 @@
     "repository": "Communications Earth & Environment",
     "awards": [
       "nsf-2012893"
+    ],
+    "sites": [
+      "hub"
     ],
     "year": 2025,
     "source": "par",
@@ -39322,6 +39749,9 @@
     "awards": [
       "nsf-2012893"
     ],
+    "sites": [
+      "hub"
+    ],
     "year": 2025,
     "source": "par",
     "source_url": "https://doi.org/10.1007/s11269-025-04156-z",
@@ -39336,6 +39766,9 @@
     "awards": [
       "nsf-2012893"
     ],
+    "sites": [
+      "hub"
+    ],
     "year": 2025,
     "source": "par",
     "source_url": "https://doi.org/10.3390/rs17142339",
@@ -39349,6 +39782,9 @@
     "repository": "Geoderma",
     "awards": [
       "nsf-2012893"
+    ],
+    "sites": [
+      "hub"
     ],
     "year": 2025,
     "source": "par",
@@ -39365,6 +39801,10 @@
       "nsf-2012796",
       "nsf-2012893"
     ],
+    "sites": [
+      "dynamic-water",
+      "hub"
+    ],
     "year": 2025,
     "source": "par",
     "source_url": "https://doi.org/10.1029/2025GL118045",
@@ -39378,6 +39818,9 @@
     "repository": "Water Resources Management",
     "awards": [
       "nsf-2012893"
+    ],
+    "sites": [
+      "hub"
     ],
     "year": 2024,
     "source": "par",
@@ -39393,6 +39836,9 @@
     "awards": [
       "nsf-2012893"
     ],
+    "sites": [
+      "hub"
+    ],
     "year": 2024,
     "source": "par",
     "source_url": "https://doi.org/10.1073/pnas.2402028121",
@@ -39406,6 +39852,9 @@
     "repository": "Journal of Geophysical Research: Biogeosciences",
     "awards": [
       "nsf-2012893"
+    ],
+    "sites": [
+      "hub"
     ],
     "year": 2024,
     "source": "par",
@@ -39421,6 +39870,9 @@
     "awards": [
       "nsf-2012893"
     ],
+    "sites": [
+      "hub"
+    ],
     "year": 2024,
     "source": "par",
     "source_url": "https://doi.org/10.1016/j.jhydrol.2024.131196",
@@ -39434,6 +39886,9 @@
     "repository": "Scientific Reports",
     "awards": [
       "nsf-2012893"
+    ],
+    "sites": [
+      "hub"
     ],
     "year": 2022,
     "source": "par",
@@ -39449,6 +39904,9 @@
     "awards": [
       "nsf-2012893"
     ],
+    "sites": [
+      "hub"
+    ],
     "year": 2022,
     "source": "par",
     "source_url": "https://doi.org/10.1111/ejss.13294",
@@ -39462,6 +39920,9 @@
     "repository": "Hydrological Processes",
     "awards": [
       "nsf-2012893"
+    ],
+    "sites": [
+      "hub"
     ],
     "year": 2022,
     "source": "par",
@@ -39477,6 +39938,9 @@
     "awards": [
       "nsf-2012893"
     ],
+    "sites": [
+      "hub"
+    ],
     "year": 2022,
     "source": "par",
     "source_url": "https://doi.org/10.1002/hyp.14640",
@@ -39490,6 +39954,9 @@
     "repository": "Seismological Research Letters",
     "awards": [
       "nsf-2012353"
+    ],
+    "sites": [
+      "bedrock"
     ],
     "year": 2026,
     "source": "par",
@@ -39505,6 +39972,9 @@
     "awards": [
       "nsf-2012408"
     ],
+    "sites": [
+      "bedrock"
+    ],
     "year": 2026,
     "source": "par",
     "source_url": "https://doi.org/10.1029/2025JG009585",
@@ -39518,6 +39988,9 @@
     "repository": "Science",
     "awards": [
       "nsf-2012073"
+    ],
+    "sites": [
+      "bedrock"
     ],
     "year": 2026,
     "source": "par",
@@ -39534,6 +40007,9 @@
       "nsf-2012264",
       "nsf-2012353"
     ],
+    "sites": [
+      "bedrock"
+    ],
     "year": 2025,
     "source": "par",
     "source_url": "https://doi.org/10.1002/eco.70023",
@@ -39547,6 +40023,9 @@
     "repository": "Geophysical Research Letters",
     "awards": [
       "nsf-2012073"
+    ],
+    "sites": [
+      "bedrock"
     ],
     "year": 2025,
     "source": "par",
@@ -39562,6 +40041,9 @@
     "awards": [
       "nsf-2012073"
     ],
+    "sites": [
+      "bedrock"
+    ],
     "year": 2025,
     "source": "par",
     "source_url": "https://doi.org/10.5281/zenodo.12620524",
@@ -39575,6 +40057,9 @@
     "repository": "Earth and Space Science",
     "awards": [
       "nsf-2012353"
+    ],
+    "sites": [
+      "bedrock"
     ],
     "year": 2024,
     "source": "par",
@@ -39591,6 +40076,9 @@
       "nsf-2012264",
       "nsf-2012353"
     ],
+    "sites": [
+      "bedrock"
+    ],
     "year": 2024,
     "source": "par",
     "source_url": "https://doi.org/10.1029/2023WR034647",
@@ -39605,6 +40093,9 @@
     "awards": [
       "nsf-2012264"
     ],
+    "sites": [
+      "bedrock"
+    ],
     "year": 2024,
     "source": "par",
     "source_url": "https://doi.org/10.5281/zenodo.13852023",
@@ -39618,6 +40109,9 @@
     "repository": "Water Resources Research",
     "awards": [
       "nsf-2012264"
+    ],
+    "sites": [
+      "bedrock"
     ],
     "year": 2024,
     "source": "par",
@@ -39635,6 +40129,10 @@
       "nsf-2012408",
       "nsf-2012730"
     ],
+    "sites": [
+      "bedrock",
+      "dynamic-water"
+    ],
     "year": 2024,
     "source": "par",
     "source_url": "https://doi.org/10.1002/wat2.1732",
@@ -39648,6 +40146,9 @@
     "repository": "Geophysical Research Letters",
     "awards": [
       "nsf-2012353"
+    ],
+    "sites": [
+      "bedrock"
     ],
     "year": 2024,
     "source": "par",
@@ -39665,6 +40166,10 @@
       "nsf-2012313",
       "nsf-2012353"
     ],
+    "sites": [
+      "bedrock",
+      "urban"
+    ],
     "year": 2024,
     "source": "par",
     "source_url": "https://doi.org/10.1029/2023JG007588",
@@ -39678,6 +40183,9 @@
     "repository": "Earth Surface Processes and Landforms",
     "awards": [
       "nsf-2012073"
+    ],
+    "sites": [
+      "bedrock"
     ],
     "year": 2024,
     "source": "par",
@@ -39694,6 +40202,9 @@
       "nsf-2012073",
       "nsf-2012353"
     ],
+    "sites": [
+      "bedrock"
+    ],
     "year": 2023,
     "source": "par",
     "source_url": "https://doi.org/10.1130/B36734.1",
@@ -39709,6 +40220,9 @@
       "nsf-2012227",
       "nsf-2012353"
     ],
+    "sites": [
+      "bedrock"
+    ],
     "year": 2023,
     "source": "par",
     "source_url": "https://doi.org/10.3389/frwa.2023.1057725",
@@ -39723,6 +40237,9 @@
     "awards": [
       "nsf-2012353",
       "nsf-2012357"
+    ],
+    "sites": [
+      "bedrock"
     ],
     "year": 2023,
     "source": "par",
@@ -39740,6 +40257,10 @@
       "nsf-2012408",
       "nsf-2012730"
     ],
+    "sites": [
+      "bedrock",
+      "dynamic-water"
+    ],
     "year": 2023,
     "source": "par",
     "source_url": "https://doi.org/10.1016/j.scitotenv.2023.165503",
@@ -39753,6 +40274,9 @@
     "repository": "Nature Geoscience",
     "awards": [
       "nsf-2012357"
+    ],
+    "sites": [
+      "bedrock"
     ],
     "year": 2022,
     "source": "par",
@@ -39769,6 +40293,9 @@
       "nsf-2012264",
       "nsf-2012353"
     ],
+    "sites": [
+      "bedrock"
+    ],
     "year": 2022,
     "source": "par",
     "source_url": "https://doi.org/10.1029/2021JF006239",
@@ -39782,6 +40309,9 @@
     "repository": "Frontiers in Water",
     "awards": [
       "nsf-2012353"
+    ],
+    "sites": [
+      "bedrock"
     ],
     "year": 2022,
     "source": "par",
@@ -39799,6 +40329,9 @@
       "nsf-1331726",
       "nsf-2012073"
     ],
+    "sites": [
+      "bedrock"
+    ],
     "year": 2021,
     "source": "par",
     "source_url": "https://doi.org/10.1029/2021JF006281",
@@ -39813,6 +40346,9 @@
     "awards": [
       "nsf-2012316",
       "nsf-2012357"
+    ],
+    "sites": [
+      "bedrock"
     ],
     "year": 2021,
     "source": "par",
@@ -39829,6 +40365,9 @@
       "nsf-2012264",
       "nsf-2012353"
     ],
+    "sites": [
+      "bedrock"
+    ],
     "year": 2021,
     "source": "par",
     "source_url": "https://doi.org/10.1029/2021GL094292",
@@ -39843,6 +40382,9 @@
     "awards": [
       "nsf-2012073",
       "nsf-2012353"
+    ],
+    "sites": [
+      "bedrock"
     ],
     "year": 2021,
     "source": "par",
@@ -39859,6 +40401,9 @@
       "nsf-2012353",
       "nsf-2012357"
     ],
+    "sites": [
+      "bedrock"
+    ],
     "year": 2021,
     "source": "par",
     "source_url": "https://doi.org/10.5194/esurf-9-1073-2021",
@@ -39872,6 +40417,9 @@
     "repository": "Geophysical Research Letters",
     "awards": [
       "nsf-2012073"
+    ],
+    "sites": [
+      "bedrock"
     ],
     "year": 2021,
     "source": "par",
@@ -39887,6 +40435,9 @@
     "awards": [
       "nsf-2011910"
     ],
+    "sites": [
+      "dust2"
+    ],
     "year": 2026,
     "source": "par",
     "source_url": "https://doi.org/10.3389/fmicb.2026.1856083",
@@ -39900,6 +40451,9 @@
     "repository": "Earth Critical Zone",
     "awards": [
       "nsf-2012082"
+    ],
+    "sites": [
+      "dust2"
     ],
     "year": 2026,
     "source": "par",
@@ -39916,6 +40470,9 @@
       "nsf-2012091",
       "nsf-2012093"
     ],
+    "sites": [
+      "dust2"
+    ],
     "year": 2025,
     "source": "par",
     "source_url": "https://doi.org/10.1016/j.aeolia.2024.100954",
@@ -39930,6 +40487,9 @@
     "awards": [
       "nsf-2012091"
     ],
+    "sites": [
+      "dust2"
+    ],
     "year": 2025,
     "source": "par",
     "source_url": "https://doi.org/10.1029/2024GL112757",
@@ -39943,6 +40503,9 @@
     "repository": "ACS Earth and Space Chemistry",
     "awards": [
       "nsf-2012091"
+    ],
+    "sites": [
+      "dust2"
     ],
     "year": 2025,
     "source": "par",
@@ -39959,6 +40522,9 @@
       "nsf-2012082",
       "nsf-2012091"
     ],
+    "sites": [
+      "dust2"
+    ],
     "year": 2025,
     "source": "par",
     "source_url": "https://doi.org/10.1038/s41598-025-88529-9",
@@ -39973,6 +40539,9 @@
     "awards": [
       "nsf-2011910"
     ],
+    "sites": [
+      "dust2"
+    ],
     "year": 2025,
     "source": "par",
     "source_url": "https://doi.org/10.1016/j.oneear.2025.101446",
@@ -39986,6 +40555,9 @@
     "repository": "Journal of Geophysical Research: Biogeosciences",
     "awards": [
       "nsf-2011910"
+    ],
+    "sites": [
+      "dust2"
     ],
     "year": 2025,
     "source": "par",
@@ -40002,6 +40574,9 @@
       "nsf-2012091",
       "nsf-2012093"
     ],
+    "sites": [
+      "dust2"
+    ],
     "year": 2025,
     "source": "par",
     "source_url": "https://doi.org/10.3389/frwa.2025.1569267",
@@ -40015,6 +40590,9 @@
     "repository": "The Cryosphere",
     "awards": [
       "nsf-2012091"
+    ],
+    "sites": [
+      "dust2"
     ],
     "year": 2024,
     "source": "par",
@@ -40030,6 +40608,9 @@
     "awards": [
       "nsf-2012091"
     ],
+    "sites": [
+      "dust2"
+    ],
     "year": 2024,
     "source": "par",
     "source_url": "https://doi.org/10.1016/j.atmosenv.2024.120728",
@@ -40044,6 +40625,9 @@
     "awards": [
       "nsf-2012091",
       "nsf-2012093"
+    ],
+    "sites": [
+      "dust2"
     ],
     "year": 2024,
     "source": "par",
@@ -40063,6 +40647,10 @@
       "nsf-2012091",
       "nsf-2012475"
     ],
+    "sites": [
+      "dust2",
+      "drylands"
+    ],
     "year": 2024,
     "source": "par",
     "source_url": "https://doi.org/10.1016/j.earscirev.2024.104942",
@@ -40076,6 +40664,9 @@
     "repository": "Arctic, Antarctic, and Alpine Research",
     "awards": [
       "nsf-2012082"
+    ],
+    "sites": [
+      "dust2"
     ],
     "year": 2024,
     "source": "par",
@@ -40091,6 +40682,9 @@
     "awards": [
       "nsf-2012082"
     ],
+    "sites": [
+      "dust2"
+    ],
     "year": 2024,
     "source": "par",
     "source_url": "https://doi.org/10.5194/soil-10-167-2024",
@@ -40105,6 +40699,9 @@
     "awards": [
       "nsf-2012091"
     ],
+    "sites": [
+      "dust2"
+    ],
     "year": 2024,
     "source": "par",
     "source_url": "https://doi.org/10.1029/2023JD040650",
@@ -40118,6 +40715,9 @@
     "repository": "Frontiers in Soil Science",
     "awards": [
       "nsf-2012091"
+    ],
+    "sites": [
+      "dust2"
     ],
     "year": 2024,
     "source": "par",
@@ -40135,6 +40735,9 @@
       "nsf-2012091",
       "nsf-2012093"
     ],
+    "sites": [
+      "dust2"
+    ],
     "year": 2024,
     "source": "par",
     "source_url": "https://doi.org/10.1016/j.apgeochem.2024.105906",
@@ -40148,6 +40751,9 @@
     "repository": "Science of The Total Environment",
     "awards": [
       "nsf-2012091"
+    ],
+    "sites": [
+      "dust2"
     ],
     "year": 2024,
     "source": "par",
@@ -40163,6 +40769,9 @@
     "awards": [
       "nsf-2011910"
     ],
+    "sites": [
+      "dust2"
+    ],
     "year": 2023,
     "source": "par",
     "source_url": "https://doi.org/10.1016/j.envpol.2023.121326",
@@ -40176,6 +40785,9 @@
     "repository": "Environmetrics",
     "awards": [
       "nsf-2012093"
+    ],
+    "sites": [
+      "dust2"
     ],
     "year": 2023,
     "source": "par",
@@ -40192,6 +40804,9 @@
       "nsf-2012067",
       "nsf-2012082"
     ],
+    "sites": [
+      "dust2"
+    ],
     "year": 2023,
     "source": "par",
     "source_url": "https://doi.org/10.1088/1748-9326/acfb26",
@@ -40205,6 +40820,9 @@
     "repository": "Frontiers in Remote Sensing",
     "awards": [
       "nsf-2012091"
+    ],
+    "sites": [
+      "dust2"
     ],
     "year": 2023,
     "source": "par",
@@ -40220,6 +40838,9 @@
     "awards": [
       "nsf-2011910"
     ],
+    "sites": [
+      "dust2"
+    ],
     "year": 2022,
     "source": "par",
     "source_url": "https://doi.org/10.3389/fenvs.2022.918514",
@@ -40233,6 +40854,9 @@
     "repository": "The Cryosphere",
     "awards": [
       "nsf-2012091"
+    ],
+    "sites": [
+      "dust2"
     ],
     "year": 2022,
     "source": "par",
@@ -40248,6 +40872,9 @@
     "awards": [
       "nsf-2011910"
     ],
+    "sites": [
+      "dust2"
+    ],
     "year": 2022,
     "source": "par",
     "source_url": "https://doi.org/10.1038/s43017-022-00292-x",
@@ -40262,6 +40889,9 @@
     "awards": [
       "nsf-2012082"
     ],
+    "sites": [
+      "dust2"
+    ],
     "year": 2022,
     "source": "par",
     "source_url": "https://doi.org/10.1016/j.scitotenv.2022.156999",
@@ -40275,6 +40905,9 @@
     "repository": "Journal of Hazardous Materials",
     "awards": [
       "nsf-2011910"
+    ],
+    "sites": [
+      "dust2"
     ],
     "year": 2022,
     "source": "par",
@@ -40291,6 +40924,9 @@
       "nsf-2012091",
       "nsf-2012093"
     ],
+    "sites": [
+      "dust2"
+    ],
     "year": 2022,
     "source": "par",
     "source_url": "https://doi.org/10.1002/hyp.14458",
@@ -40304,6 +40940,9 @@
     "repository": "Fundamental Research",
     "awards": [
       "nsf-2011910"
+    ],
+    "sites": [
+      "dust2"
     ],
     "year": 2022,
     "source": "par",
@@ -40319,6 +40958,9 @@
     "awards": [
       "nsf-2011910"
     ],
+    "sites": [
+      "dust2"
+    ],
     "year": 2022,
     "source": "par",
     "source_url": "https://doi.org/10.1029/2021JF006480",
@@ -40333,6 +40975,9 @@
     "awards": [
       "nsf-2011910"
     ],
+    "sites": [
+      "dust2"
+    ],
     "year": 2021,
     "source": "par",
     "source_url": "https://doi.org/10.1073/pnas.2020719118",
@@ -40346,6 +40991,9 @@
     "repository": "Journal of Glaciology",
     "awards": [
       "nsf-2012091"
+    ],
+    "sites": [
+      "dust2"
     ],
     "year": 2021,
     "source": "par",
@@ -40362,6 +41010,9 @@
       "nsf-2012091",
       "nsf-2012093"
     ],
+    "sites": [
+      "dust2"
+    ],
     "year": 2020,
     "source": "par",
     "source_url": "https://doi.org/10.3389/frwa.2020.578677",
@@ -40376,6 +41027,9 @@
     "awards": [
       "nsf-2012093"
     ],
+    "sites": [
+      "dust2"
+    ],
     "year": 2020,
     "source": "par",
     "source_url": "https://doi.org/10.1088/1748-9326/abbfc4",
@@ -40389,6 +41043,9 @@
     "repository": "BMC Microbiology",
     "awards": [
       "nsf-2012878"
+    ],
+    "sites": [
+      "geomicrobiology"
     ],
     "year": 2025,
     "source": "par",
@@ -40405,6 +41062,10 @@
       "nsf-2012633",
       "nsf-2012796"
     ],
+    "sites": [
+      "geomicrobiology",
+      "dynamic-water"
+    ],
     "year": 2024,
     "source": "par",
     "source_url": "https://doi.org/10.1029/2023EF003971",
@@ -40418,6 +41079,9 @@
     "repository": "Environmental Microbiology Reports",
     "awards": [
       "nsf-2012878"
+    ],
+    "sites": [
+      "geomicrobiology"
     ],
     "year": 2024,
     "source": "par",
@@ -40433,6 +41097,9 @@
     "awards": [
       "nsf-2012878"
     ],
+    "sites": [
+      "geomicrobiology"
+    ],
     "year": 2024,
     "source": "par",
     "source_url": "https://doi.org/10.3389/frmbi.2024.1399416",
@@ -40446,6 +41113,9 @@
     "repository": "Biogeochemistry",
     "awards": [
       "nsf-2012633"
+    ],
+    "sites": [
+      "geomicrobiology"
     ],
     "year": 2024,
     "source": "par",
@@ -40461,6 +41131,9 @@
     "awards": [
       "nsf-2012403"
     ],
+    "sites": [
+      "geomicrobiology"
+    ],
     "year": 2024,
     "source": "par",
     "source_url": "https://doi.org/10.1038/s41467-024-49789-7",
@@ -40474,6 +41147,9 @@
     "repository": "Springer Nature Switzerland",
     "awards": [
       "nsf-2012878"
+    ],
+    "sites": [
+      "geomicrobiology"
     ],
     "year": 2024,
     "source": "par",
@@ -40489,6 +41165,9 @@
     "awards": [
       "nsf-2012878"
     ],
+    "sites": [
+      "geomicrobiology"
+    ],
     "year": 2024,
     "source": "par",
     "source_url": "https://doi.org/10.1111/gcb.17265",
@@ -40502,6 +41181,9 @@
     "repository": "Journal of Plant Nutrition and Soil Science",
     "awards": [
       "nsf-2012878"
+    ],
+    "sites": [
+      "geomicrobiology"
     ],
     "year": 2023,
     "source": "par",
@@ -40517,6 +41199,9 @@
     "awards": [
       "nsf-2012878"
     ],
+    "sites": [
+      "geomicrobiology"
+    ],
     "year": 2023,
     "source": "par",
     "source_url": "https://doi.org/10.1007/s10021-022-00741-0",
@@ -40530,6 +41215,9 @@
     "repository": "Global Change Biology",
     "awards": [
       "nsf-2012878"
+    ],
+    "sites": [
+      "geomicrobiology"
     ],
     "year": 2023,
     "source": "par",
@@ -40545,6 +41233,9 @@
     "awards": [
       "nsf-2012633"
     ],
+    "sites": [
+      "geomicrobiology"
+    ],
     "year": 2023,
     "source": "par",
     "source_url": "https://doi.org/10.1016/j.geoderma.2023.116565",
@@ -40558,6 +41249,9 @@
     "repository": "Frontiers in Fungal Biology",
     "awards": [
       "nsf-2012878"
+    ],
+    "sites": [
+      "geomicrobiology"
     ],
     "year": 2023,
     "source": "par",
@@ -40573,6 +41267,9 @@
     "awards": [
       "nsf-2012878"
     ],
+    "sites": [
+      "geomicrobiology"
+    ],
     "year": 2023,
     "source": "par",
     "source_url": "https://doi.org/10.1038/s41467-022-35671-x",
@@ -40586,6 +41283,9 @@
     "repository": "Frontiers in Water",
     "awards": [
       "nsf-2012878"
+    ],
+    "sites": [
+      "geomicrobiology"
     ],
     "year": 2023,
     "source": "par",
@@ -40601,6 +41301,9 @@
     "awards": [
       "nsf-2012633"
     ],
+    "sites": [
+      "geomicrobiology"
+    ],
     "year": 2023,
     "source": "par",
     "source_url": "https://doi.org/10.1016/j.geoderma.2023.116569",
@@ -40614,6 +41317,9 @@
     "repository": "Science of The Total Environment",
     "awards": [
       "nsf-2012878"
+    ],
+    "sites": [
+      "geomicrobiology"
     ],
     "year": 2023,
     "source": "par",
@@ -40629,6 +41335,9 @@
     "awards": [
       "nsf-2012878"
     ],
+    "sites": [
+      "geomicrobiology"
+    ],
     "year": 2023,
     "source": "par",
     "source_url": "https://doi.org/10.1525/elementa.2022.00123",
@@ -40642,6 +41351,9 @@
     "repository": "Earth's Future",
     "awards": [
       "nsf-2012878"
+    ],
+    "sites": [
+      "geomicrobiology"
     ],
     "year": 2023,
     "source": "par",
@@ -40657,6 +41369,9 @@
     "awards": [
       "nsf-2012633"
     ],
+    "sites": [
+      "geomicrobiology"
+    ],
     "year": 2023,
     "source": "par",
     "source_url": "https://doi.org/10.1002/saj2.20612",
@@ -40670,6 +41385,9 @@
     "repository": "Global Change Biology",
     "awards": [
       "nsf-2012878"
+    ],
+    "sites": [
+      "geomicrobiology"
     ],
     "year": 2023,
     "source": "par",
@@ -40685,6 +41403,9 @@
     "awards": [
       "nsf-2012878"
     ],
+    "sites": [
+      "geomicrobiology"
+    ],
     "year": 2022,
     "source": "par",
     "source_url": "https://doi.org/10.1029/2022GB007429",
@@ -40699,6 +41420,9 @@
     "awards": [
       "nsf-2012878",
       "nsf-2217532"
+    ],
+    "sites": [
+      "geomicrobiology"
     ],
     "year": 2022,
     "source": "par",
@@ -40718,6 +41442,10 @@
       "nsf-2012796",
       "nsf-2012878"
     ],
+    "sites": [
+      "geomicrobiology",
+      "dynamic-water"
+    ],
     "year": 2022,
     "source": "par",
     "source_url": "https://doi.org/10.1016/j.earscirev.2021.103873",
@@ -40733,6 +41461,9 @@
       "nsf-2012878",
       "nsf-2217532"
     ],
+    "sites": [
+      "geomicrobiology"
+    ],
     "year": 2022,
     "source": "par",
     "source_url": "https://doi.org/10.1038/s41467-022-29618-5",
@@ -40746,6 +41477,9 @@
     "repository": "Water Resources Research",
     "awards": [
       "nsf-2012878"
+    ],
+    "sites": [
+      "geomicrobiology"
     ],
     "year": 2022,
     "source": "par",
@@ -40761,6 +41495,9 @@
     "awards": [
       "nsf-2012878"
     ],
+    "sites": [
+      "geomicrobiology"
+    ],
     "year": 2022,
     "source": "par",
     "source_url": "https://doi.org/10.1002/hyp.14684",
@@ -40774,6 +41511,9 @@
     "repository": "Frontiers in Microbiology",
     "awards": [
       "nsf-2012878"
+    ],
+    "sites": [
+      "geomicrobiology"
     ],
     "year": 2022,
     "source": "par",
@@ -40790,6 +41530,9 @@
       "nsf-2012878",
       "nsf-2217532"
     ],
+    "sites": [
+      "geomicrobiology"
+    ],
     "year": 2022,
     "source": "par",
     "source_url": "https://doi.org/10.3389/feart.2022.779459",
@@ -40803,6 +41546,9 @@
     "repository": "Ecosystems",
     "awards": [
       "nsf-2012878"
+    ],
+    "sites": [
+      "geomicrobiology"
     ],
     "year": 2022,
     "source": "par",
@@ -40818,6 +41564,9 @@
     "awards": [
       "nsf-2012878"
     ],
+    "sites": [
+      "geomicrobiology"
+    ],
     "year": 2022,
     "source": "par",
     "source_url": "https://doi.org/10.3733/ca.2022a0002",
@@ -40831,6 +41580,9 @@
     "repository": "Scientific Reports",
     "awards": [
       "nsf-2012878"
+    ],
+    "sites": [
+      "geomicrobiology"
     ],
     "year": 2022,
     "source": "par",
@@ -40847,6 +41599,9 @@
       "nsf-2012878",
       "nsf-2217532"
     ],
+    "sites": [
+      "geomicrobiology"
+    ],
     "year": 2022,
     "source": "par",
     "source_url": "https://doi.org/10.1029/2022GB007393",
@@ -40860,6 +41615,9 @@
     "repository": "Frontiers in Forests and Global Change",
     "awards": [
       "nsf-2012878"
+    ],
+    "sites": [
+      "geomicrobiology"
     ],
     "year": 2022,
     "source": "par",
@@ -40875,6 +41633,9 @@
     "awards": [
       "nsf-2012878"
     ],
+    "sites": [
+      "geomicrobiology"
+    ],
     "year": 2021,
     "source": "par",
     "source_url": "https://doi.org/10.3389/fmicb.2021.569791",
@@ -40888,6 +41649,9 @@
     "repository": "Ecosphere",
     "awards": [
       "nsf-2012878"
+    ],
+    "sites": [
+      "geomicrobiology"
     ],
     "year": 2021,
     "source": "par",
@@ -40903,6 +41667,9 @@
     "awards": [
       "nsf-2012878"
     ],
+    "sites": [
+      "geomicrobiology"
+    ],
     "year": 2021,
     "source": "par",
     "source_url": "https://doi.org/10.1002/ecs2.3833",
@@ -40916,6 +41683,9 @@
     "repository": "Hydrology",
     "awards": [
       "nsf-2012403"
+    ],
+    "sites": [
+      "geomicrobiology"
     ],
     "year": 2021,
     "source": "par",
@@ -40931,6 +41701,9 @@
     "awards": [
       "nsf-2012878"
     ],
+    "sites": [
+      "geomicrobiology"
+    ],
     "year": 2021,
     "source": "par",
     "source_url": "https://doi.org/10.1016/j.soilbio.2021.108235",
@@ -40944,6 +41717,9 @@
     "repository": "Earth and Planetary Science Letters",
     "awards": [
       "nsf-2012403"
+    ],
+    "sites": [
+      "geomicrobiology"
     ],
     "year": 2021,
     "source": "par",
@@ -40959,6 +41735,9 @@
     "awards": [
       "nsf-2012878"
     ],
+    "sites": [
+      "geomicrobiology"
+    ],
     "year": 2021,
     "source": "par",
     "source_url": "https://doi.org/10.5194/essd-13-1843-2021",
@@ -40972,6 +41751,9 @@
     "repository": "Computers & Geosciences",
     "awards": [
       "nsf-2012878"
+    ],
+    "sites": [
+      "geomicrobiology"
     ],
     "year": 2021,
     "source": "par",
@@ -40987,6 +41769,9 @@
     "awards": [
       "nsf-2012475"
     ],
+    "sites": [
+      "drylands"
+    ],
     "year": 2026,
     "source": "par",
     "source_url": "https://doi.org/10.1130/B38703.1",
@@ -41000,6 +41785,9 @@
     "repository": "Wetlands",
     "awards": [
       "nsf-2012475"
+    ],
+    "sites": [
+      "drylands"
     ],
     "year": 2025,
     "source": "par",
@@ -41015,6 +41803,9 @@
     "awards": [
       "nsf-2012475"
     ],
+    "sites": [
+      "drylands"
+    ],
     "year": 2024,
     "source": "par",
     "source_url": "https://doi.org/10.1016/j.gca.2024.05.020",
@@ -41028,6 +41819,9 @@
     "repository": "Hydrological Processes",
     "awards": [
       "nsf-2012669"
+    ],
+    "sites": [
+      "dynamic-water"
     ],
     "year": 2026,
     "source": "par",
@@ -41043,6 +41837,9 @@
     "awards": [
       "nsf-2012669"
     ],
+    "sites": [
+      "dynamic-water"
+    ],
     "year": 2025,
     "source": "par",
     "source_url": "https://doi.org/10.3389/frwa.2025.1547094",
@@ -41056,6 +41853,9 @@
     "repository": "Journal of Contaminant Hydrology",
     "awards": [
       "nsf-2012730"
+    ],
+    "sites": [
+      "dynamic-water"
     ],
     "year": 2025,
     "source": "par",
@@ -41072,6 +41872,9 @@
       "nsf-2012669",
       "nsf-2012796"
     ],
+    "sites": [
+      "dynamic-water"
+    ],
     "year": 2025,
     "source": "par",
     "source_url": "https://doi.org/10.1002/hyp.70120",
@@ -41085,6 +41888,9 @@
     "repository": "Journal of Hydrology",
     "awards": [
       "nsf-2012796"
+    ],
+    "sites": [
+      "dynamic-water"
     ],
     "year": 2025,
     "source": "par",
@@ -41103,6 +41909,10 @@
       "nsf-2012310",
       "nsf-2012821"
     ],
+    "sites": [
+      "bigdata",
+      "dynamic-water"
+    ],
     "year": 2025,
     "source": "par",
     "source_url": "https://doi.org/10.1016/j.jhydrol.2025.133426",
@@ -41117,6 +41927,9 @@
     "awards": [
       "nsf-2012796"
     ],
+    "sites": [
+      "dynamic-water"
+    ],
     "year": 2025,
     "source": "par",
     "source_url": "https://doi.org/10.15485/2473235",
@@ -41130,6 +41943,9 @@
     "repository": "Scientific Data",
     "awards": [
       "nsf-2012796"
+    ],
+    "sites": [
+      "dynamic-water"
     ],
     "year": 2025,
     "source": "par",
@@ -41146,6 +41962,9 @@
       "nsf-2012669",
       "nsf-2012730"
     ],
+    "sites": [
+      "dynamic-water"
+    ],
     "year": 2025,
     "source": "par",
     "source_url": "https://doi.org/10.1038/s43247-025-02303-3",
@@ -41159,6 +41978,9 @@
     "repository": "Hydrological Processes",
     "awards": [
       "nsf-2012796"
+    ],
+    "sites": [
+      "dynamic-water"
     ],
     "year": 2025,
     "source": "par",
@@ -41174,6 +41996,9 @@
     "awards": [
       "nsf-2012669"
     ],
+    "sites": [
+      "dynamic-water"
+    ],
     "year": 2025,
     "source": "par",
     "source_url": "https://doi.org/10.1029/2023WR036996",
@@ -41187,6 +42012,9 @@
     "repository": "Hydrological Processes",
     "awards": [
       "nsf-2012796"
+    ],
+    "sites": [
+      "dynamic-water"
     ],
     "year": 2025,
     "source": "par",
@@ -41206,6 +42034,10 @@
       "nsf-2012796",
       "nsf-2012821"
     ],
+    "sites": [
+      "bigdata",
+      "dynamic-water"
+    ],
     "year": 2025,
     "source": "par",
     "source_url": "https://doi.org/10.1002/hyp.70325",
@@ -41219,6 +42051,9 @@
     "repository": "Agricultural and Forest Meteorology",
     "awards": [
       "nsf-2012669"
+    ],
+    "sites": [
+      "dynamic-water"
     ],
     "year": 2025,
     "source": "par",
@@ -41235,6 +42070,10 @@
       "nsf-2012188",
       "nsf-2012310"
     ],
+    "sites": [
+      "bigdata",
+      "dynamic-water"
+    ],
     "year": 2025,
     "source": "par",
     "source_url": "https://doi.org/10.1029/2024WR039227",
@@ -41248,6 +42087,9 @@
     "repository": "Proceedings of the National Academy of Sciences",
     "awards": [
       "nsf-2012796"
+    ],
+    "sites": [
+      "dynamic-water"
     ],
     "year": 2025,
     "source": "par",
@@ -41263,6 +42105,9 @@
     "awards": [
       "nsf-2012796"
     ],
+    "sites": [
+      "dynamic-water"
+    ],
     "year": 2025,
     "source": "par",
     "source_url": "https://doi.org/10.1002/hyp.70228",
@@ -41276,6 +42121,9 @@
     "repository": "Geochemistry: Exploration, Environment, Analysis",
     "awards": [
       "nsf-2012730"
+    ],
+    "sites": [
+      "dynamic-water"
     ],
     "year": 2025,
     "source": "par",
@@ -41291,6 +42139,9 @@
     "awards": [
       "nsf-2012669"
     ],
+    "sites": [
+      "dynamic-water"
+    ],
     "year": 2024,
     "source": "par",
     "source_url": "https://doi.org/10.1016/j.scitotenv.2024.174951",
@@ -41304,6 +42155,9 @@
     "repository": "Journal of Geophysical Research: Biogeosciences",
     "awards": [
       "nsf-2012796"
+    ],
+    "sites": [
+      "dynamic-water"
     ],
     "year": 2024,
     "source": "par",
@@ -41319,6 +42173,9 @@
     "awards": [
       "nsf-2012821"
     ],
+    "sites": [
+      "dynamic-water"
+    ],
     "year": 2024,
     "source": "par",
     "source_url": "https://doi.org/10.3389/fsci.2024.1371049",
@@ -41332,6 +42189,9 @@
     "repository": "Groundwater",
     "awards": [
       "nsf-2012730"
+    ],
+    "sites": [
+      "dynamic-water"
     ],
     "year": 2024,
     "source": "par",
@@ -41347,6 +42207,9 @@
     "awards": [
       "nsf-2012796"
     ],
+    "sites": [
+      "dynamic-water"
+    ],
     "year": 2024,
     "source": "par",
     "source_url": "https://doi.org/10.1029/2023WR036077",
@@ -41361,6 +42224,9 @@
     "awards": [
       "nsf-2012669"
     ],
+    "sites": [
+      "dynamic-water"
+    ],
     "year": 2024,
     "source": "par",
     "source_url": "https://doi.org/10.1007/s10533-023-01108-w",
@@ -41374,6 +42240,9 @@
     "repository": "Applied and Environmental Microbiology",
     "awards": [
       "nsf-2012730"
+    ],
+    "sites": [
+      "dynamic-water"
     ],
     "year": 2024,
     "source": "par",
@@ -41392,6 +42261,10 @@
       "nsf-2012310",
       "nsf-2012821"
     ],
+    "sites": [
+      "bigdata",
+      "dynamic-water"
+    ],
     "year": 2024,
     "source": "par",
     "source_url": "https://doi.org/10.1002/hyp.15157",
@@ -41408,6 +42281,10 @@
       "nsf-2012669",
       "nsf-2012796"
     ],
+    "sites": [
+      "bigdata",
+      "dynamic-water"
+    ],
     "year": 2024,
     "source": "par",
     "source_url": "https://doi.org/10.1038/s41558-023-01923-x",
@@ -41421,6 +42298,9 @@
     "repository": "Hydrological processes",
     "awards": [
       "nsf-2012796"
+    ],
+    "sites": [
+      "dynamic-water"
     ],
     "year": 2024,
     "source": "par",
@@ -41436,6 +42316,9 @@
     "awards": [
       "nsf-2012730"
     ],
+    "sites": [
+      "dynamic-water"
+    ],
     "year": 2024,
     "source": "par",
     "source_url": "https://doi.org/10.1002/hyp.15078",
@@ -41449,6 +42332,9 @@
     "repository": "Journal of Hydrometeorology",
     "awards": [
       "nsf-2012310"
+    ],
+    "sites": [
+      "dynamic-water"
     ],
     "year": 2023,
     "source": "par",
@@ -41464,6 +42350,9 @@
     "awards": [
       "nsf-2012821"
     ],
+    "sites": [
+      "dynamic-water"
+    ],
     "year": 2023,
     "source": "par",
     "source_url": "https://doi.org/10.1029/2022MS003073",
@@ -41477,6 +42366,9 @@
     "repository": "Frontiers in Water",
     "awards": [
       "nsf-2012821"
+    ],
+    "sites": [
+      "dynamic-water"
     ],
     "year": 2023,
     "source": "par",
@@ -41492,6 +42384,9 @@
     "awards": [
       "nsf-2012669"
     ],
+    "sites": [
+      "dynamic-water"
+    ],
     "year": 2023,
     "source": "par",
     "source_url": "https://doi.org/10.3389/frwa.2023.1227167",
@@ -41506,6 +42401,9 @@
     "awards": [
       "nsf-2012796"
     ],
+    "sites": [
+      "dynamic-water"
+    ],
     "year": 2023,
     "source": "par",
     "source_url": "https://doi.org/10.15485/2283437",
@@ -41519,6 +42417,9 @@
     "repository": "Journal of Hydrology",
     "awards": [
       "nsf-2012821"
+    ],
+    "sites": [
+      "dynamic-water"
     ],
     "year": 2023,
     "source": "par",
@@ -41535,6 +42436,10 @@
       "nsf-2012123",
       "nsf-2012310"
     ],
+    "sites": [
+      "bigdata",
+      "dynamic-water"
+    ],
     "year": 2022,
     "source": "par",
     "source_url": "https://doi.org/10.1029/2021EF002603",
@@ -41548,6 +42453,9 @@
     "repository": "Applied Geochemistry",
     "awards": [
       "nsf-2012730"
+    ],
+    "sites": [
+      "dynamic-water"
     ],
     "year": 2022,
     "source": "par",
@@ -41563,6 +42471,9 @@
     "awards": [
       "nsf-2012310"
     ],
+    "sites": [
+      "dynamic-water"
+    ],
     "year": 2022,
     "source": "par",
     "source_url": "https://doi.org/10.5194/hess-26-3393-2022",
@@ -41576,6 +42487,9 @@
     "repository": "Hydrological Processes",
     "awards": [
       "nsf-2012730"
+    ],
+    "sites": [
+      "dynamic-water"
     ],
     "year": 2022,
     "source": "par",
@@ -41591,6 +42505,9 @@
     "awards": [
       "nsf-2012310"
     ],
+    "sites": [
+      "dynamic-water"
+    ],
     "year": 2022,
     "source": "par",
     "source_url": "https://doi.org/10.1029/2021WR029964",
@@ -41604,6 +42521,9 @@
     "repository": "Nature Geoscience",
     "awards": [
       "nsf-2012821"
+    ],
+    "sites": [
+      "dynamic-water"
     ],
     "year": 2022,
     "source": "par",
@@ -41619,6 +42539,9 @@
     "awards": [
       "nsf-2012730"
     ],
+    "sites": [
+      "dynamic-water"
+    ],
     "year": 2022,
     "source": "par",
     "source_url": "https://doi.org/10.1111/gwat.13143",
@@ -41632,6 +42555,9 @@
     "repository": "Nature Reviews Earth & Environment",
     "awards": [
       "nsf-2012821"
+    ],
+    "sites": [
+      "dynamic-water"
     ],
     "year": 2021,
     "source": "par",
@@ -41648,6 +42574,9 @@
       "nsf-2012669",
       "nsf-2012730"
     ],
+    "sites": [
+      "dynamic-water"
+    ],
     "year": 2021,
     "source": "par",
     "source_url": "https://doi.org/10.3389/frwa.2021.682285",
@@ -41661,6 +42590,9 @@
     "repository": "Hydrological Processes",
     "awards": [
       "nsf-2012730"
+    ],
+    "sites": [
+      "dynamic-water"
     ],
     "year": 2021,
     "source": "par",
@@ -41676,6 +42608,9 @@
     "awards": [
       "nsf-2012669"
     ],
+    "sites": [
+      "dynamic-water"
+    ],
     "year": 2021,
     "source": "par",
     "source_url": "https://doi.org/10.1016/j.jhydrol.2020.125672",
@@ -41689,6 +42624,9 @@
     "repository": "Water Resources Research",
     "awards": [
       "nsf-2012310"
+    ],
+    "sites": [
+      "dynamic-water"
     ],
     "year": 2021,
     "source": "par",
@@ -41704,6 +42642,9 @@
     "awards": [
       "nsf-2012821"
     ],
+    "sites": [
+      "dynamic-water"
+    ],
     "year": 2021,
     "source": "par",
     "source_url": "https://doi.org/10.1002/hyp.13991",
@@ -41717,6 +42658,9 @@
     "repository": "Frontiers in Water",
     "awards": [
       "nsf-2012730"
+    ],
+    "sites": [
+      "dynamic-water"
     ],
     "year": 2020,
     "source": "par",
@@ -41732,6 +42676,9 @@
     "awards": [
       "nsf-2012670"
     ],
+    "sites": [
+      "coastal"
+    ],
     "year": 2026,
     "source": "par",
     "source_url": "https://doi.org/10.1029/2025JG009305",
@@ -41745,6 +42692,9 @@
     "repository": "Nature Sustainability",
     "awards": [
       "nsf-2012670"
+    ],
+    "sites": [
+      "coastal"
     ],
     "year": 2026,
     "source": "par",
@@ -41760,6 +42710,9 @@
     "awards": [
       "nsf-2012670"
     ],
+    "sites": [
+      "coastal"
+    ],
     "year": 2026,
     "source": "par",
     "source_url": "https://doi.org/10.1029/2025JG009297",
@@ -41773,6 +42726,9 @@
     "repository": "Climatic Change",
     "awards": [
       "nsf-2012670"
+    ],
+    "sites": [
+      "coastal"
     ],
     "year": 2025,
     "source": "par",
@@ -41789,6 +42745,9 @@
       "nsf-2011941",
       "nsf-2012319"
     ],
+    "sites": [
+      "coastal"
+    ],
     "year": 2025,
     "source": "par",
     "source_url": "https://doi.org/10.1146/annurev-marine-070924-031447",
@@ -41802,6 +42761,9 @@
     "repository": "Journal of Geophysical Research: Biogeosciences",
     "awards": [
       "nsf-2012670"
+    ],
+    "sites": [
+      "coastal"
     ],
     "year": 2025,
     "source": "par",
@@ -41817,6 +42779,9 @@
     "awards": [
       "nsf-2011941"
     ],
+    "sites": [
+      "coastal"
+    ],
     "year": 2025,
     "source": "par",
     "source_url": "https://doi.org/10.1016/B978-0-323-99762-1.00042-5",
@@ -41830,6 +42795,9 @@
     "repository": "Ecological Indicators",
     "awards": [
       "nsf-2012670"
+    ],
+    "sites": [
+      "coastal"
     ],
     "year": 2024,
     "source": "par",
@@ -41845,6 +42813,9 @@
     "awards": [
       "nsf-2012322"
     ],
+    "sites": [
+      "coastal"
+    ],
     "year": 2024,
     "source": "par",
     "source_url": "https://doi.org/10.1029/2024WR037907",
@@ -41858,6 +42829,9 @@
     "repository": "Estuaries and Coasts",
     "awards": [
       "nsf-2012670"
+    ],
+    "sites": [
+      "coastal"
     ],
     "year": 2024,
     "source": "par",
@@ -41873,6 +42847,9 @@
     "awards": [
       "nsf-2012670"
     ],
+    "sites": [
+      "coastal"
+    ],
     "year": 2024,
     "source": "par",
     "source_url": "https://doi.org/10.1146/annurev-marine-022123-103802",
@@ -41886,6 +42863,9 @@
     "repository": "Anthropocene",
     "awards": [
       "nsf-2011941"
+    ],
+    "sites": [
+      "coastal"
     ],
     "year": 2024,
     "source": "par",
@@ -41901,6 +42881,9 @@
     "awards": [
       "nsf-2012322"
     ],
+    "sites": [
+      "coastal"
+    ],
     "year": 2024,
     "source": "par",
     "source_url": "https://doi.org/10.1002/ecs2.70021",
@@ -41914,6 +42897,9 @@
     "repository": "Water Resources Research",
     "awards": [
       "nsf-2012322"
+    ],
+    "sites": [
+      "coastal"
     ],
     "year": 2024,
     "source": "par",
@@ -41929,6 +42915,9 @@
     "awards": [
       "nsf-2012670"
     ],
+    "sites": [
+      "coastal"
+    ],
     "year": 2023,
     "source": "par",
     "source_url": "https://doi.org/10.1029/2023JG007525",
@@ -41943,6 +42932,9 @@
     "awards": [
       "nsf-2012670"
     ],
+    "sites": [
+      "coastal"
+    ],
     "year": 2023,
     "source": "par",
     "source_url": "https://doi.org/10.1038/s41467-023-36803-7",
@@ -41956,6 +42948,9 @@
     "repository": "Biogeochemistry",
     "awards": [
       "nsf-2012484"
+    ],
+    "sites": [
+      "coastal"
     ],
     "year": 2023,
     "source": "par",
@@ -41972,6 +42967,9 @@
       "nsf-2012322",
       "nsf-2012670"
     ],
+    "sites": [
+      "coastal"
+    ],
     "year": 2023,
     "source": "par",
     "source_url": "https://doi.org/10.1029/2022GL100191",
@@ -41985,6 +42983,9 @@
     "repository": "Nature Reviews Earth & Environment",
     "awards": [
       "nsf-2012670"
+    ],
+    "sites": [
+      "coastal"
     ],
     "year": 2023,
     "source": "par",
@@ -42000,6 +43001,9 @@
     "awards": [
       "nsf-2012670"
     ],
+    "sites": [
+      "coastal"
+    ],
     "year": 2023,
     "source": "par",
     "source_url": "https://doi.org/10.1038/s41467-023-42942-8",
@@ -42013,6 +43017,9 @@
     "repository": "Remote Sensing of Environment",
     "awards": [
       "nsf-2012670"
+    ],
+    "sites": [
+      "coastal"
     ],
     "year": 2022,
     "source": "par",
@@ -42028,6 +43035,9 @@
     "awards": [
       "nsf-2012670"
     ],
+    "sites": [
+      "coastal"
+    ],
     "year": 2022,
     "source": "par",
     "source_url": "https://doi.org/10.1016/j.ancene.2022.100350",
@@ -42041,6 +43051,9 @@
     "repository": "Global Change Biology",
     "awards": [
       "nsf-2012670"
+    ],
+    "sites": [
+      "coastal"
     ],
     "year": 2022,
     "source": "par",
@@ -42056,6 +43069,9 @@
     "awards": [
       "nsf-2012670"
     ],
+    "sites": [
+      "coastal"
+    ],
     "year": 2022,
     "source": "par",
     "source_url": "https://doi.org/10.1002/lol2.10262",
@@ -42069,6 +43085,9 @@
     "repository": "Water Resources Research",
     "awards": [
       "nsf-2012484"
+    ],
+    "sites": [
+      "coastal"
     ],
     "year": 2022,
     "source": "par",
@@ -42084,6 +43103,9 @@
     "awards": [
       "nsf-2012336"
     ],
+    "sites": [
+      "urban"
+    ],
     "year": 2025,
     "source": "par",
     "source_url": "https://doi.org/10.1111/ejss.70035",
@@ -42098,6 +43120,9 @@
     "awards": [
       "nsf-2012336"
     ],
+    "sites": [
+      "urban"
+    ],
     "year": 2025,
     "source": "par",
     "source_url": "https://doi.org/10.5194/bg-22-3357-2025",
@@ -42111,6 +43136,9 @@
     "repository": "Ecosphere",
     "awards": [
       "nsf-2012336"
+    ],
+    "sites": [
+      "urban"
     ],
     "year": 2025,
     "source": "par",
@@ -42127,6 +43155,9 @@
       "nsf-2012313",
       "nsf-2012409"
     ],
+    "sites": [
+      "urban"
+    ],
     "year": 2025,
     "source": "par",
     "source_url": "https://doi.org/10.1002/hyp.70219",
@@ -42140,6 +43171,9 @@
     "repository": "Environmental Monitoring and Assessment",
     "awards": [
       "nsf-2012313"
+    ],
+    "sites": [
+      "urban"
     ],
     "year": 2025,
     "source": "par",
@@ -42155,6 +43189,9 @@
     "awards": [
       "nsf-2012336"
     ],
+    "sites": [
+      "urban"
+    ],
     "year": 2024,
     "source": "par",
     "source_url": "https://doi.org/10.1021/acsestwater.4c00185",
@@ -42168,6 +43205,9 @@
     "repository": "Journal of Environmental Quality",
     "awards": [
       "nsf-2012336"
+    ],
+    "sites": [
+      "urban"
     ],
     "year": 2024,
     "source": "par",
@@ -42183,6 +43223,9 @@
     "awards": [
       "nsf-2012313"
     ],
+    "sites": [
+      "urban"
+    ],
     "year": 2024,
     "source": "par",
     "source_url": "https://doi.org/10.1021/acsestwater.4c00589",
@@ -42196,6 +43239,9 @@
     "repository": "Geophysical Research Letters",
     "awards": [
       "nsf-2012336"
+    ],
+    "sites": [
+      "urban"
     ],
     "year": 2024,
     "source": "par",
@@ -42211,6 +43257,9 @@
     "awards": [
       "nsf-2012336"
     ],
+    "sites": [
+      "urban"
+    ],
     "year": 2023,
     "source": "par",
     "source_url": "https://doi.org/10.1016/j.jhydrol.2023.130364",
@@ -42224,6 +43273,9 @@
     "repository": "PNAS Nexus",
     "awards": [
       "nsf-2012336"
+    ],
+    "sites": [
+      "urban"
     ],
     "year": 2023,
     "source": "par",
@@ -42239,6 +43291,9 @@
     "awards": [
       "nsf-2012336"
     ],
+    "sites": [
+      "urban"
+    ],
     "year": 2023,
     "source": "par",
     "source_url": "https://doi.org/10.1007/s11252-023-01340-0",
@@ -42252,6 +43307,9 @@
     "repository": "Journal of Geophysical Research: Earth Surface",
     "awards": [
       "nsf-2012616"
+    ],
+    "sites": [
+      "urban"
     ],
     "year": 2023,
     "source": "par",
@@ -42267,6 +43325,9 @@
     "awards": [
       "nsf-2012409"
     ],
+    "sites": [
+      "urban"
+    ],
     "year": 2023,
     "source": "par",
     "source_url": "https://doi.org/10.3389/fenvs.2023.1155789",
@@ -42280,6 +43341,9 @@
     "repository": "Ecosystems",
     "awards": [
       "nsf-2012336"
+    ],
+    "sites": [
+      "urban"
     ],
     "year": 2023,
     "source": "par",
@@ -42297,6 +43361,9 @@
       "nsf-2012340",
       "nsf-2012409"
     ],
+    "sites": [
+      "urban"
+    ],
     "year": 2023,
     "source": "par",
     "source_url": "https://doi.org/10.1029/2021WR031804",
@@ -42310,6 +43377,9 @@
     "repository": "Journal of Geophysical Research: Earth Surface",
     "awards": [
       "nsf-2012616"
+    ],
+    "sites": [
+      "urban"
     ],
     "year": 2023,
     "source": "par",
@@ -42325,6 +43395,9 @@
     "awards": [
       "nsf-2012336"
     ],
+    "sites": [
+      "urban"
+    ],
     "year": 2022,
     "source": "par",
     "source_url": "https://doi.org/10.1029/2022JG007138",
@@ -42338,6 +43411,9 @@
     "repository": "Geochemistry, Geophysics, Geosystems",
     "awards": [
       "nsf-2012616"
+    ],
+    "sites": [
+      "urban"
     ],
     "year": 2021,
     "source": "par",
@@ -42353,6 +43429,9 @@
     "awards": [
       "nsf-2012336"
     ],
+    "sites": [
+      "urban"
+    ],
     "year": 2021,
     "source": "par",
     "source_url": "https://doi.org/10.1029/2021JG006444",
@@ -42366,6 +43445,9 @@
     "repository": "Environmental Research Letters",
     "awards": [
       "nsf-2012336"
+    ],
+    "sites": [
+      "urban"
     ],
     "year": 2021,
     "source": "par",
@@ -42381,6 +43463,9 @@
     "awards": [
       "nsf-2012080"
     ],
+    "sites": [
+      "bigdata"
+    ],
     "year": 2026,
     "source": "par",
     "source_url": "https://doi.org/10.1016/j.jhydrol.2026.136177",
@@ -42394,6 +43479,9 @@
     "repository": "Neural Computing and Applications",
     "awards": [
       "nsf-2012123"
+    ],
+    "sites": [
+      "bigdata"
     ],
     "year": 2025,
     "source": "par",
@@ -42409,6 +43497,9 @@
     "awards": [
       "nsf-2011439"
     ],
+    "sites": [
+      "bigdata"
+    ],
     "year": 2024,
     "source": "par",
     "source_url": "https://doi.org/10.1525/abt.2024.86.4.242",
@@ -42423,6 +43514,9 @@
     "awards": [
       "nsf-2012123"
     ],
+    "sites": [
+      "bigdata"
+    ],
     "year": 2024,
     "source": "par",
     "source_url": "https://doi.org/10.1016/j.mlwa.2024.100543",
@@ -42436,6 +43530,9 @@
     "repository": "Fire Ecology",
     "awards": [
       "nsf-2011439"
+    ],
+    "sites": [
+      "bigdata"
     ],
     "year": 2024,
     "source": "par",
@@ -42452,6 +43549,9 @@
       "nsf-2012123",
       "nsf-2012188"
     ],
+    "sites": [
+      "bigdata"
+    ],
     "year": 2024,
     "source": "par",
     "source_url": "https://doi.org/10.5194/hess-28-611-2024",
@@ -42465,6 +43565,9 @@
     "repository": "Water Resources Research",
     "awards": [
       "nsf-2012123"
+    ],
+    "sites": [
+      "bigdata"
     ],
     "year": 2024,
     "source": "par",
@@ -42480,6 +43583,9 @@
     "awards": [
       "nsf-2011439"
     ],
+    "sites": [
+      "bigdata"
+    ],
     "year": 2024,
     "source": "par",
     "source_url": "https://doi.org/10.1029/2024WR037397",
@@ -42494,6 +43600,9 @@
     "awards": [
       "nsf-2011346"
     ],
+    "sites": [
+      "bigdata"
+    ],
     "year": 2024,
     "source": "par",
     "source_url": "https://doi.org/10.22541/au.171799893.36954583/v1",
@@ -42507,6 +43616,9 @@
     "repository": "Science of The Total Environment",
     "awards": [
       "nsf-2011439"
+    ],
+    "sites": [
+      "bigdata"
     ],
     "year": 2024,
     "source": "par",
@@ -42523,6 +43635,9 @@
       "nsf-2012080",
       "nsf-2012123"
     ],
+    "sites": [
+      "bigdata"
+    ],
     "year": 2024,
     "source": "par",
     "source_url": "https://doi.org/10.1002/hyp.15197",
@@ -42537,6 +43652,9 @@
     "awards": [
       "nsf-2012123"
     ],
+    "sites": [
+      "bigdata"
+    ],
     "year": 2023,
     "source": "par",
     "source_url": "https://doi.org/10.1002/wat2.1702",
@@ -42550,6 +43668,9 @@
     "repository": "Water Resources Research",
     "awards": [
       "nsf-2012123"
+    ],
+    "sites": [
+      "bigdata"
     ],
     "year": 2023,
     "source": "par",
@@ -42566,6 +43687,9 @@
       "nsf-2011439",
       "nsf-2012123"
     ],
+    "sites": [
+      "bigdata"
+    ],
     "year": 2023,
     "source": "par",
     "source_url": "https://doi.org/10.1016/j.scitotenv.2023.163178",
@@ -42581,6 +43705,9 @@
       "nsf-2012080",
       "nsf-2012123"
     ],
+    "sites": [
+      "bigdata"
+    ],
     "year": 2023,
     "source": "par",
     "source_url": "https://doi.org/10.3389/frwa.2023.1065300",
@@ -42594,6 +43721,9 @@
     "repository": "Earth's Future",
     "awards": [
       "nsf-2012123"
+    ],
+    "sites": [
+      "bigdata"
     ],
     "year": 2023,
     "source": "par",
@@ -42609,6 +43739,9 @@
     "awards": [
       "nsf-2011439"
     ],
+    "sites": [
+      "bigdata"
+    ],
     "year": 2023,
     "source": "par",
     "source_url": "https://doi.org/10.1016/j.jhydrol.2023.130328",
@@ -42622,6 +43755,9 @@
     "repository": "Water Resources Research",
     "awards": [
       "nsf-2012123"
+    ],
+    "sites": [
+      "bigdata"
     ],
     "year": 2023,
     "source": "par",
@@ -42637,6 +43773,9 @@
     "awards": [
       "nsf-2011439"
     ],
+    "sites": [
+      "bigdata"
+    ],
     "year": 2023,
     "source": "par",
     "source_url": "https://doi.org/10.1007/s13253-022-00513-2",
@@ -42650,6 +43789,9 @@
     "repository": "One Earth",
     "awards": [
       "nsf-2011439"
+    ],
+    "sites": [
+      "bigdata"
     ],
     "year": 2023,
     "source": "par",
@@ -42665,6 +43807,9 @@
     "awards": [
       "nsf-2012123"
     ],
+    "sites": [
+      "bigdata"
+    ],
     "year": 2023,
     "source": "par",
     "source_url": "https://doi.org/10.3389/frwa.2023.1148298",
@@ -42679,6 +43824,9 @@
     "awards": [
       "nsf-2012123"
     ],
+    "sites": [
+      "bigdata"
+    ],
     "year": 2023,
     "source": "par",
     "source_url": "https://doi.org/10.1029/2023WR034910",
@@ -42692,6 +43840,9 @@
     "repository": "Anthropocene",
     "awards": [
       "nsf-2011439"
+    ],
+    "sites": [
+      "bigdata"
     ],
     "year": 2023,
     "source": "par",
@@ -42708,6 +43859,9 @@
       "nsf-2011439",
       "nsf-2012123"
     ],
+    "sites": [
+      "bigdata"
+    ],
     "year": 2023,
     "source": "par",
     "source_url": "https://doi.org/10.1029/2023WR034484",
@@ -42721,6 +43875,9 @@
     "repository": "Hydrological Processes",
     "awards": [
       "nsf-2011439"
+    ],
+    "sites": [
+      "bigdata"
     ],
     "year": 2022,
     "source": "par",
@@ -42736,6 +43893,9 @@
     "awards": [
       "nsf-2011439"
     ],
+    "sites": [
+      "bigdata"
+    ],
     "year": 2022,
     "source": "par",
     "source_url": "https://doi.org/10.1080/14735903.2022.2056997",
@@ -42749,6 +43909,9 @@
     "repository": "Water Resources Research",
     "awards": [
       "nsf-2011439"
+    ],
+    "sites": [
+      "bigdata"
     ],
     "year": 2022,
     "source": "par",
@@ -42764,6 +43927,9 @@
     "awards": [
       "nsf-2012123"
     ],
+    "sites": [
+      "bigdata"
+    ],
     "year": 2022,
     "source": "par",
     "source_url": "https://doi.org/10.1007/s10533-022-00949-1",
@@ -42777,6 +43943,9 @@
     "repository": "Water Resources Research",
     "awards": [
       "nsf-2012123"
+    ],
+    "sites": [
+      "bigdata"
     ],
     "year": 2022,
     "source": "par",
@@ -42792,6 +43961,9 @@
     "awards": [
       "nsf-2012123"
     ],
+    "sites": [
+      "bigdata"
+    ],
     "year": 2022,
     "source": "par",
     "source_url": "https://doi.org/10.3389/frwa.2022.841144",
@@ -42805,6 +43977,9 @@
     "repository": "Hydrological Processes",
     "awards": [
       "nsf-2012123"
+    ],
+    "sites": [
+      "bigdata"
     ],
     "year": 2022,
     "source": "par",
@@ -42821,6 +43996,9 @@
       "nsf-2012080",
       "nsf-2012123"
     ],
+    "sites": [
+      "bigdata"
+    ],
     "year": 2022,
     "source": "par",
     "source_url": "https://doi.org/10.1088/1748-9326/ac8be5",
@@ -42834,6 +44012,9 @@
     "repository": "Science of The Total Environment",
     "awards": [
       "nsf-2011439"
+    ],
+    "sites": [
+      "bigdata"
     ],
     "year": 2021,
     "source": "par",
@@ -42849,6 +44030,9 @@
     "awards": [
       "nsf-2012123"
     ],
+    "sites": [
+      "bigdata"
+    ],
     "year": 2021,
     "source": "par",
     "source_url": "https://doi.org/10.3389/frwa.2021.578608",
@@ -42862,6 +44046,9 @@
     "repository": "Journal of Geophysical Research: Biogeosciences",
     "awards": [
       "nsf-2012123"
+    ],
+    "sites": [
+      "bigdata"
     ],
     "year": 2021,
     "source": "par",
@@ -42877,6 +44064,9 @@
     "awards": [
       "nsf-2011346"
     ],
+    "sites": [
+      "bigdata"
+    ],
     "year": 2021,
     "source": "par",
     "source_url": "https://doi.org/10.1088/2515-7620/ac17e2",
@@ -42890,6 +44080,9 @@
     "repository": "Journal of Hydrology",
     "awards": [
       "nsf-2011346"
+    ],
+    "sites": [
+      "bigdata"
     ],
     "year": 2021,
     "source": "par",
@@ -42905,6 +44098,9 @@
     "awards": [
       "nsf-2011439"
     ],
+    "sites": [
+      "bigdata"
+    ],
     "year": 2021,
     "source": "par",
     "source_url": "https://doi.org/10.1371/journal.pone.0258952",
@@ -42918,6 +44114,9 @@
     "repository": "Global Biogeochemical Cycles",
     "awards": [
       "nsf-2011439"
+    ],
+    "sites": [
+      "bigdata"
     ],
     "year": 2021,
     "source": "par",
@@ -42933,6 +44132,9 @@
     "awards": [
       "nsf-2011439"
     ],
+    "sites": [
+      "bigdata"
+    ],
     "year": 2021,
     "source": "par",
     "source_url": "https://doi.org/10.1371/journal.pone.0257733",
@@ -42946,6 +44148,9 @@
     "repository": "Hydrological Processes",
     "awards": [
       "nsf-2011346"
+    ],
+    "sites": [
+      "bigdata"
     ],
     "year": 2021,
     "source": "par",
@@ -42961,6 +44166,9 @@
     "awards": [
       "nsf-2011439"
     ],
+    "sites": [
+      "bigdata"
+    ],
     "year": 2021,
     "source": "par",
     "source_url": "https://doi.org/10.1029/2020WR029053",
@@ -42974,6 +44182,9 @@
     "repository": "Hydrological Processes",
     "awards": [
       "nsf-2012850"
+    ],
+    "sites": [
+      "cinet"
     ],
     "year": 2025,
     "source": "par",
@@ -42989,6 +44200,9 @@
     "awards": [
       "nsf-2012850"
     ],
+    "sites": [
+      "cinet"
+    ],
     "year": 2025,
     "source": "par",
     "source_url": "https://doi.org/10.1080/24694452.2025.2502630",
@@ -43002,6 +44216,9 @@
     "repository": "River Research and Applications",
     "awards": [
       "nsf-2012850"
+    ],
+    "sites": [
+      "cinet"
     ],
     "year": 2025,
     "source": "par",
@@ -43017,6 +44234,9 @@
     "awards": [
       "nsf-2012850"
     ],
+    "sites": [
+      "cinet"
+    ],
     "year": 2025,
     "source": "par",
     "source_url": "https://doi.org/10.1029/2024JF007871",
@@ -43030,6 +44250,9 @@
     "repository": "CATENA",
     "awards": [
       "nsf-2012850"
+    ],
+    "sites": [
+      "cinet"
     ],
     "year": 2025,
     "source": "par",
@@ -43045,6 +44268,9 @@
     "awards": [
       "nsf-2012850"
     ],
+    "sites": [
+      "cinet"
+    ],
     "year": 2025,
     "source": "par",
     "source_url": "https://doi.org/10.1029/2024JH000383",
@@ -43058,6 +44284,9 @@
     "repository": "Science of The Total Environment",
     "awards": [
       "nsf-2012850"
+    ],
+    "sites": [
+      "cinet"
     ],
     "year": 2025,
     "source": "par",
@@ -43073,6 +44302,9 @@
     "awards": [
       "nsf-2012850"
     ],
+    "sites": [
+      "cinet"
+    ],
     "year": 2025,
     "source": "par",
     "source_url": "https://doi.org/10.1016/j.agrformet.2025.110608",
@@ -43086,6 +44318,9 @@
     "repository": "American Journal of Science",
     "awards": [
       "nsf-2012850"
+    ],
+    "sites": [
+      "cinet"
     ],
     "year": 2025,
     "source": "par",
@@ -43101,6 +44336,9 @@
     "awards": [
       "nsf-2012850"
     ],
+    "sites": [
+      "cinet"
+    ],
     "year": 2024,
     "source": "par",
     "source_url": "https://doi.org/10.33548/SCIENTIA1137",
@@ -43114,6 +44352,9 @@
     "repository": "Anthropocene",
     "awards": [
       "nsf-2012850"
+    ],
+    "sites": [
+      "cinet"
     ],
     "year": 2024,
     "source": "par",
@@ -43129,6 +44370,9 @@
     "awards": [
       "nsf-2012850"
     ],
+    "sites": [
+      "cinet"
+    ],
     "year": 2023,
     "source": "par",
     "source_url": "https://doi.org/10.1063/5.0131469",
@@ -43142,6 +44386,9 @@
     "repository": "Earth-Science Reviews",
     "awards": [
       "nsf-2012850"
+    ],
+    "sites": [
+      "cinet"
     ],
     "year": 2023,
     "source": "par",
@@ -43157,6 +44404,9 @@
     "awards": [
       "nsf-2012850"
     ],
+    "sites": [
+      "cinet"
+    ],
     "year": 2023,
     "source": "par",
     "source_url": "https://doi.org/10.1016/j.advwatres.2023.104489",
@@ -43170,6 +44420,9 @@
     "repository": "Frontiers in Water",
     "awards": [
       "nsf-2012850"
+    ],
+    "sites": [
+      "cinet"
     ],
     "year": 2023,
     "source": "par",
@@ -43185,6 +44438,9 @@
     "awards": [
       "nsf-2012850"
     ],
+    "sites": [
+      "cinet"
+    ],
     "year": 2023,
     "source": "par",
     "source_url": "https://doi.org/10.1016/j.scitotenv.2023.161647",
@@ -43198,6 +44454,9 @@
     "repository": "Biogeochemistry of the Critical Zone",
     "awards": [
       "nsf-2012850"
+    ],
+    "sites": [
+      "cinet"
     ],
     "year": 2022,
     "source": "par",
@@ -43213,6 +44472,9 @@
     "awards": [
       "nsf-2012850"
     ],
+    "sites": [
+      "cinet"
+    ],
     "year": 2022,
     "source": "par",
     "source_url": "https://doi.org/10.1371/journal.pone.0269193",
@@ -43226,6 +44488,9 @@
     "repository": "Water Resources Research",
     "awards": [
       "nsf-2012850"
+    ],
+    "sites": [
+      "cinet"
     ],
     "year": 2022,
     "source": "par",
@@ -43241,6 +44506,9 @@
     "awards": [
       "nsf-2012850"
     ],
+    "sites": [
+      "cinet"
+    ],
     "year": 2022,
     "source": "par",
     "source_url": "https://doi.org/10.1016/j.geomorph.2022.108140",
@@ -43254,6 +44522,9 @@
     "repository": "Biogeochemistry of the Critical Zone",
     "awards": [
       "nsf-2012850"
+    ],
+    "sites": [
+      "cinet"
     ],
     "year": 2022,
     "source": "par",
@@ -43269,6 +44540,9 @@
     "awards": [
       "nsf-2012850"
     ],
+    "sites": [
+      "cinet"
+    ],
     "year": 2022,
     "source": "par",
     "source_url": "https://doi.org/10.1029/2021JG006562",
@@ -43282,6 +44556,9 @@
     "repository": "Journal of Soil and Water Conservation",
     "awards": [
       "nsf-2012850"
+    ],
+    "sites": [
+      "cinet"
     ],
     "year": 2022,
     "source": "par",
@@ -43297,6 +44574,9 @@
     "awards": [
       "nsf-2012850"
     ],
+    "sites": [
+      "cinet"
+    ],
     "year": 2022,
     "source": "par",
     "source_url": "https://doi.org/10.1029/2021WR031164",
@@ -43310,6 +44590,9 @@
     "repository": "Scientific Reports",
     "awards": [
       "nsf-2012850"
+    ],
+    "sites": [
+      "cinet"
     ],
     "year": 2022,
     "source": "par",
@@ -43325,6 +44608,9 @@
     "awards": [
       "nsf-2012850"
     ],
+    "sites": [
+      "cinet"
+    ],
     "year": 2022,
     "source": "par",
     "source_url": "https://doi.org/10.1016/j.envsoft.2021.105283",
@@ -43338,6 +44624,9 @@
     "repository": "Frontiers in Climate",
     "awards": [
       "nsf-2012850"
+    ],
+    "sites": [
+      "cinet"
     ],
     "year": 2021,
     "source": "par",
@@ -43353,6 +44642,9 @@
     "awards": [
       "nsf-2012850"
     ],
+    "sites": [
+      "cinet"
+    ],
     "year": 2021,
     "source": "par",
     "source_url": "https://doi.org/10.1029/2020WR028103",
@@ -43366,6 +44658,9 @@
     "repository": "Frontiers in Water",
     "awards": [
       "nsf-2012850"
+    ],
+    "sites": [
+      "cinet"
     ],
     "year": 2021,
     "source": "par",
@@ -43381,6 +44676,9 @@
     "awards": [
       "nsf-2012850"
     ],
+    "sites": [
+      "cinet"
+    ],
     "year": 2021,
     "source": "par",
     "source_url": "https://doi.org/10.3390/min11050476",
@@ -43394,6 +44692,9 @@
     "repository": "Frontiers in Water",
     "awards": [
       "nsf-2012850"
+    ],
+    "sites": [
+      "cinet"
     ],
     "year": 2021,
     "source": "par",
@@ -43409,6 +44710,9 @@
     "awards": [
       "nsf-2012850"
     ],
+    "sites": [
+      "cinet"
+    ],
     "year": 2020,
     "source": "par",
     "source_url": "https://doi.org/10.1175/JHM-D-20-0134.1",
@@ -43422,6 +44726,9 @@
     "repository": "Advances in Critical Zone Science (Springer Nature Switzerland)",
     "awards": [
       "nsf-2012669"
+    ],
+    "sites": [
+      "dynamic-water"
     ],
     "year": 2024,
     "source": "par",
@@ -43437,6 +44744,9 @@
     "awards": [
       "nsf-2012878"
     ],
+    "sites": [
+      "geomicrobiology"
+    ],
     "year": 2024,
     "source": "par",
     "source_url": "https://www.hydroshare.org/resource/9c53ab378b604a8e867cdda0d3ab72fb/",
@@ -43451,6 +44761,9 @@
     "awards": [
       "nsf-2012730"
     ],
+    "sites": [
+      "dynamic-water"
+    ],
     "year": 2023,
     "source": "par",
     "source_url": "https://www.hydroshare.org/resource/c4b384a77a0f43cbb2de2d6eae9cf901/",
@@ -43464,6 +44777,9 @@
     "repository": "Water Resources Research",
     "awards": [
       "nsf-2012893"
+    ],
+    "sites": [
+      "hub"
     ],
     "era": "cznet",
     "year": 2026,
@@ -43480,6 +44796,9 @@
     "awards": [
       "nsf-2012893"
     ],
+    "sites": [
+      "hub"
+    ],
     "era": "cznet",
     "year": 2026,
     "source": "suggested",
@@ -43494,6 +44813,9 @@
     "repository": "Hydrological Processes",
     "awards": [
       "nsf-2012893"
+    ],
+    "sites": [
+      "hub"
     ],
     "era": "cznet",
     "year": 2026,
