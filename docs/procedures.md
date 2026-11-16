@@ -135,8 +135,9 @@ impact story (C7), no mirrored articles (C8)); follow both.
    is in the issue's links to itself (`campaign-archive.com/?u=...&id=<id>`); it goes into `mailchimp_id` and
    `mailchimp_url`. Ask Jordan for the send date if the issue does not print it.
 2. **The issue file** (`content/newsletter/YYMMDD-<month>.md`, slug `YYYY-<month>`) follows the issue as printed:
-   its wording, its order, its links, one heading per section. Since August 2026 the file name and `date` use the
-   send date; `agent/content-model.md` says day `01`, which January to May 2026 followed (Jordan to settle; rule 1).
+   its wording, its order, its links, one heading per section. The file name and `date` use the send date,
+   normally the second Thursday of the month (December 2026: the first Thursday, because of AGU); take it from the
+   Mailchimp archive, not from the rule (Jordan, 16 November 2026).
    For a link to a PDF on the legacy site, prefer a copy hosted here (C14): link it if one exists or the PR hosts
    one for an item it names; otherwise keep the issue's link and say so under "To verify".
 3. **Images, always.** Every issue carries its images in `public/newsletter-images/<issue-slug>/`, embedded under
