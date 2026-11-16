@@ -23,7 +23,7 @@ type Row = {
   sites?: string[]; year?: number; date_added?: string; highlight?: boolean
 }
 type Award = { id: string; funder?: string; number: string; url?: string; text: string }
-type Shown = Row & { i: number; where: string; siteText: string; period: string; periodStart: number; awardList: { title: string; full: string; number: string }[]; hay: string }
+type Shown = Row & { i: number; where: string; siteText: string; period: string; periodStart: number; awardList: { title: string; full: string; numbers: string[] }[]; hay: string }
 
 const { data: file } = await useAsyncData(`cz-products-${props.type ?? props.types?.join('+') ?? 'all'}-${props.site ?? 'all'}`, () =>
   queryContent('critical-zone').where({ _extension: 'json' }).findOne().catch(() => null),
@@ -47,10 +47,10 @@ const awardById = computed(() => new Map((awardFile.value ?? []).map(a => [a.id,
 // The award's title from its registry sentence, shown without the NSF program labels that open many of them ("Collaborative Research",
 // "RUI", "Network Cluster", "Network Hub", "CZO", each with or without a colon), which repeat on every row and say nothing about the work.
 // Labels that name the project stay ("SAVI:", "CUAHSI:", "Luquillo CZO:"; "Network Cluster CINet:" keeps "CINet:"). Search still matches
-// the full title; the registry keeps it.
+// the full title; the registry keeps it. A trailing full stop is dropped too (two Hub awards differ from the third only by one; the Delaware CZO award, 0724971, also ends in one).
 const AWARD_PREAMBLE = /^(?:(?:Collaborative Research|RUI|CZO|Network (?:Cluster|Hub)):?\s+)+/
 const awardFullTitle = (a?: Award) => a?.text?.match(/"([^"]+)"/)?.[1] ?? ''
-const awardTitle = (a?: Award) => awardFullTitle(a).replace(AWARD_PREAMBLE, '')
+const awardTitle = (a?: Award) => awardFullTitle(a).replace(AWARD_PREAMBLE, '').replace(/\.$/, '')
 const siteName = (slug: string) => CZ_SITE_NAMES[slug] ?? slug
 const siteList = (r: Row) => (r.sites ?? []).filter(s => s !== 'national' || (r.sites ?? []).length === 1).map(siteName).join(', ')
 const link = (r: Row) => (r.doi ? `https://doi.org/${r.doi}` : r.url ?? '')
@@ -83,16 +83,22 @@ function periodOf(title: string): { text: string; start: number } {
 
 // Every row with the text it shows worked out once. `i` is the row's place in the file: a stable key for the table.
 const all = computed<Shown[]>(() => (file.value?.rows ?? []).map((r, i) => {
-  const awardList = (r.awards ?? []).map(id => {
+  // Awards with the same shown title (the collaborative awards of a cluster or of the Hub) are listed once, with all their numbers, in award
+  // order. An award with no title is never merged with another.
+  const awardList: Shown['awardList'] = []
+  for (const id of r.awards ?? []) {
     const a = awardById.value.get(id)
-    return { title: awardTitle(a), full: awardFullTitle(a), number: a?.number ?? id }
-  })
+    const title = awardTitle(a), number = a?.number ?? id
+    const same = title ? awardList.find(x => x.title === title) : undefined
+    if (same) { same.numbers.push(number); if (!same.full.includes(awardFullTitle(a))) same.full += ` ${awardFullTitle(a)}` }
+    else awardList.push({ title, full: awardFullTitle(a), numbers: [number] })
+  }
   const siteText = siteList(r)
   const per = periodOf(r.title)
   const place = where(r)
   return {
     ...r, i, where: place, siteText, awardList, period: per.text, periodStart: per.start,
-    hay: [r.title, r.repository, place, r.year, per.text, r.highlight ? 'highlight' : '', siteText, ...awardList.map(a => `${a.full} ${a.number}`)].join(' ').toLowerCase(),
+    hay: [r.title, r.repository, place, r.year, per.text, r.highlight ? 'highlight' : '', siteText, ...awardList.map(a => `${a.full} ${a.numbers.join(' ')}`)].join(' ').toLowerCase(),
   }
 }))
 
@@ -120,7 +126,7 @@ const sortDir = ref<'asc' | 'desc'>('desc')
 const mounted = ref(false)
 
 const sortValue = (r: Shown, k: SortKey): string | number =>
-  k === 'year' ? (r.year ?? 0) : k === 'period' ? r.periodStart : k === 'title' ? r.title.toLowerCase() : k === 'site' ? r.siteText.toLowerCase() : (r.awardList[0] ? `${r.awardList[0].title} ${r.awardList[0].number}`.toLowerCase() : '')
+  k === 'year' ? (r.year ?? 0) : k === 'period' ? r.periodStart : k === 'title' ? r.title.toLowerCase() : k === 'site' ? r.siteText.toLowerCase() : (r.awardList[0] ? `${r.awardList[0].title} ${r.awardList[0].numbers[0]}`.toLowerCase() : '')
 
 const shown = computed<Shown[]>(() => {
   const tokens = q.value.toLowerCase().split(/\s+/).filter(Boolean)
@@ -254,9 +260,9 @@ watch([q, siteFilter, sortKey, sortDir], () => {
             <td class="p-[8px_10px] border-b border-b-[rgba(15,33,43,.08)] hidden sm:table-cell">{{ r.where }}</td>
             <td v-if="!site" class="p-[8px_10px] border-b border-b-[rgba(15,33,43,.08)] hidden sm:table-cell">{{ r.siteText }}</td>
             <td class="p-[8px_10px] border-b border-b-[rgba(15,33,43,.08)] hidden min-[900px]:table-cell max-w-[280px]">
-              <span v-for="a in r.awardList" :key="a.number" class="block text-[12.5px] leading-[1.4] mb-[4px]">
+              <span v-for="a in r.awardList" :key="a.numbers[0]" class="block text-[12.5px] leading-[1.4] mb-[4px]">
                 <span v-if="a.title" :title="a.title" class="block line-clamp-3">{{ a.title }}</span>
-                <span class="block font-mono text-[11px] text-muted">{{ a.number }}</span>
+                <span class="block font-mono text-[11px] text-muted">{{ a.numbers.join(', ') }}</span>
               </span>
             </td>
             <td v-if="showPeriod" class="p-[8px_10px] border-b border-b-[rgba(15,33,43,.08)] hidden sm:table-cell text-right whitespace-nowrap [font-variant-numeric:tabular-nums]">{{ r.period }}</td>
