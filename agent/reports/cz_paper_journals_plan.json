@@ -2273,7 +2273,7 @@
   "via": "OpenAlex (data-citation session)",
   "note": "OpenAlex W2747457407 (article), title similarity 0.833, first author matches",
   "checked": "answered",
-  "where": "UNI ScholarWorks (University of Northern Iowa)",
+  "where": "Journal of the Iowa Academy of Science",
   "title_on_list": "Soil quality in Clear Creek, IA: SOM loss and soil quality in the Clear Creek, IA, Experimental Watershed"
  },
  "547": {
@@ -8211,7 +8211,7 @@
   "via": "OpenAlex (data-citation session)",
   "note": "OpenAlex W2184125496 (article), title similarity 1.0, first author matches",
   "checked": "answered",
-  "where": "DigitalCommons (Utah State University)",
+  "where": "Modelling and Simulation Society of Australia and New Zealand and International Association for Mathematics and Computers in Simulation",
   "title_on_list": "Development of a Community Hydrologic Information System"
  },
  "1846": {
@@ -9865,12 +9865,8 @@
   "title_on_list": "Investigating Pennsylvania Water Quality Impacts Due to Shale Gas Development"
  },
  "2338": {
-  "action": "keep: own page",
-  "url": "https://hdl.handle.net/1853/52034",
-  "via": "OpenAlex (data-citation session)",
-  "note": "OpenAlex W2578062142 (conference-paper), title similarity 1.0, first author matches",
-  "checked": "answered",
-  "where": "Georgia Tech Repository",
+  "action": "delete: nothing lasting to point to",
+  "note": "OpenAlex's page is a Georgia Tech conference paper on the same subject, not this Penn State MFA thesis (final review)",
   "title_on_list": "Isotopic data sonification: Shale Hills Critical Zone Observatory"
  },
  "2339": {

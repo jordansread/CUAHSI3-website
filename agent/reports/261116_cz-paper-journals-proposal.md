@@ -22,14 +22,14 @@ All 2,062 papers on the list (1,568 with a DOI, 494 without):
 | No journal name in any source; current text kept (the OpenAlex names were not journals) | 4 | |
 | DOI recovered: `doi`, address, Where and, for near-misses, the published title and year | 130 (6 of them decided by you, E) | B |
 | Preprint pointed at its journal version, or recovered as one | 4 | G |
-| Kept with a page of their own, mostly theses in university repositories | 104 | D |
+| Kept with a page of their own, mostly theses in university repositories | 103 | D |
 | Deleted: an earlier version of a paper already on the list, or the same work listed twice | 11 | C |
 | Deleted: a preprint whose journal version is on the list | 6 | G |
-| Deleted: nothing lasting to point to | 247 | F |
+| Deleted: nothing lasting to point to | 248 | F |
 
-**264 papers are deleted** (247 + 11 + 6). The list goes from **2,062 papers to 1,798**; records in the file from 2,889 to 2,625. Datasets and software do not change.
+**265 papers are deleted** (248 + 11 + 6). The list goes from **2,062 papers to 1,797**; records in the file from 2,889 to 2,624. Datasets and software do not change.
 
-Of the 494 without a DOI: 132 get one, 104 keep a page of their own, and 258 are deleted (247 in F, 11 in C). Of the 1,568 with a DOI: 1,045 get a journal name, 511 already have it, 4 have no journal name in any source and keep their text, 6 preprints are deleted and 2 become their journal version.
+Of the 494 without a DOI: 132 get one, 103 keep a page of their own, and 259 are deleted (248 in F, 11 in C). Of the 1,568 with a DOI: 1,045 get a journal name, 511 already have it, 4 have no journal name in any source and keep their text, 6 preprints are deleted and 2 become their journal version.
 
 ## How each part was found
 
@@ -42,7 +42,7 @@ Of the 494 without a DOI: 132 get one, 104 keep a page of their own, and 258 are
   - and the year was within two.
 
   I then rejected five by reading them: three book reviews, a library catalogue record and an aggregator page (dissem.in). A second review found that my first-author comparison had failed on names written "First Last", on two-letter surnames, on hyphens and on umlauts, so 17 good matches had been dropped without a note; the comparison was fixed and they are back. One more rule was added after that review: a candidate whose authors and year agree and whose journal is the one the citation names counts even when the title is rendered differently (OpenAlex writes "S ierra N evada"); three papers came back that way.
-- **Pages of its own.** Either a link on the archive page that no other record's page carries (so an observatory's general pages don't count), or a repository page from OpenAlex. OpenAlex pages in the first batch were requested on 16 November: 37 answered, and 44 refused a scripted request, nearly all at university repositories and ADS, and count as live by your rule. The pages added after the second review were not requested and count as live by the same rule. Five records whose only page was a retired Forest Service address or a personal page stay deleted, and so does Patton's thesis, whose only page was an AGU abstract on a related topic (third review).
+- **Pages of its own.** Either a link on the archive page that no other record's page carries (so an observatory's general pages don't count), or a repository page from OpenAlex. OpenAlex pages in the first batch were requested on 16 November: 37 answered, and 44 refused a scripted request, nearly all at university repositories and ADS, and count as live by your rule. The pages added after the second review were not requested and count as live by the same rule. Five records whose only page was a retired Forest Service address or a personal page stay deleted, and so do Patton's thesis, whose only page was an AGU abstract on a related topic (third review), and a Penn State MFA thesis whose only page was a Georgia Tech conference paper on the same subject (final review).
 - **Duplicates.** A recovered DOI already on the list means the record is an earlier version of a listed paper: a draft, a meeting paper or a thesis under a different title (section C).
 - **Preprints.** Crossref's `is-preprint-of`, arXiv's DataCite record, or a title and first-author match names the journal version (section G).
 
@@ -57,7 +57,7 @@ Of the 494 without a DOI: 132 get one, 104 keep a page of their own, and 258 are
 
 ## Rules applied that the tables rely on
 
-- **Where for a record kept with a page of its own** names the repository that holds it, for example "eScholarship (University of California)", "Penn State Electronic Theses and Dissertations" or "NASA ADS (AGU Fall Meeting abstract)". The names come from a table of hosts in the apply script (agent's choice), and section D shows each new value with the text it replaces. Three on other hosts were named by hand: a JSTOR journal, a conference proceedings and a workshop report.
+- **Where for a record kept with a page of its own** names the repository that holds it, for example "eScholarship (University of California)", "Penn State Electronic Theses and Dissertations" or "NASA ADS (AGU Fall Meeting abstract)". The names come from a table of hosts in the apply script (agent's choice), and section D shows each new value with the text it replaces. Five were named by hand from their own citation: a JSTOR journal, the Journal of the Iowa Academy of Science, two conference proceedings and a workshop report.
 - **Year.** A record that becomes a different work takes that work's year: a thesis or draft that became a paper, or a preprint that became its journal version. A near-miss takes Crossref's `issued` year, which is the earliest date of publication and so often the online-first year. That moved 10 years, by one year in most cases (for example Hydrological Processes 27, printed 2013, issued online in 2012).
 - **Journal names** are written as Crossref writes them (PLOS ONE, CATENA), except that one all-capitals variant (BIOTROPICA) takes the spelling the rest of the list uses.
 - **Deleting records.** Products carry no `slug` and no `published` field, so C5's "set `published: false`" cannot apply and no check guards the deletion. The authority is your rule of 16 November: "delete the records rather than flag them".
@@ -282,14 +282,14 @@ The archive record is an earlier version (a draft, a meeting paper, a thesis) of
 | 2016 FULLY-COUPLED HYDROLOGICAL AND MORPHOLOGICAL PROCESSES FOR MODELING LANDSCAPE EV | 2016 Fully-Coupled Hydrologic Processes for Modeling Landscape Evolution | 10.1016/j.envsoft.2016.04.014 |
 | 2012 Controls and dynamics of canopy-derived dissolved organic matter from co-dominan | 2012 Controls & dynamics of canopy-derived dissolved organic matter from co-dominant |  |
 
-### D. Kept with a page of their own: 104
+### D. Kept with a page of their own: 103
 
 No DOI, but a page for the work itself, mostly a thesis in a university repository. Found on the archive page (a link no other record carries) or by the OpenAlex search. The record's `url` moves to it. Checked on 16 November: "answered" means it answered a scripted request; pages at university repositories and ADS that refuse scripts are counted as live (Jordan, 16 November); the retired Forest Service addresses, a personal page and a login-only file were not counted.
 
 | Year | Title | New address | Where (was) | Found by | Check |
 |---|---|---|---|---|---|
 | 2019 | The Multiscale Signature of Ecohydrological Fluctuations on Soil Biogeochemical Cycle | https://dataspace.princeton.edu/bitstream/88435/dsp016m311s21s/1/Calabrese_princeton_0181D_13175.pdf | DataSpace (Princeton University) (was: PhD dissertation, Princeton University) | OpenAlex (data-citation session) | not requested; university repository page counted live (Jordan, 16 Nov) |
-| 2009 | Development of a Community Hydrologic Information System | https://digitalcommons.usu.edu/cee_facpub/2534 | DigitalCommons (Utah State University) (was: Modelling and Simulation Society of Australia and ) | OpenAlex (data-citation session) | answered |
+| 2009 | Development of a Community Hydrologic Information System | https://digitalcommons.usu.edu/cee_facpub/2534 | Modelling and Simulation Society of Australia and New Zealand and International Association for Mathematics and Computers in Simulation (was: Modelling and Simulation Society of Australia and ) | OpenAlex (data-citation session) | answered |
 | 2011 | Observations and Measurements - XML Implementation | https://docs.ogc.org/is/10-025r1/10-025r1/pdf | Open Geospatial Consortium (was: OGC Document 10-025r1) | archive page link | answered |
 | 2011 | The Initial Design of Data Sharing Infrastructure for the Critical Zone Observatory | https://eim.ecoinformatics.org/eim2011/eim-proceedings-2011/at_download/file | Proceedings of the Environmental Information Management Conference 2011 (was: Proceedings of the Environmental Information Manag) | archive page link | answered |
 | 2012 | A cyber-infrastructure for the measurement and estimation of large-scale hydrologic p | https://escholarship.org/uc/item/1f83k6nf | eScholarship (University of California) (was: University of California, Berkeley) | OpenAlex (data-citation session) | refused a script; counted live (university repository or ADS, Jordan 16 Nov) |
@@ -358,7 +358,6 @@ No DOI, but a page for the work itself, mostly a thesis in a university reposito
 | 2014 | Pedogenesis and Anthropedogenesis on the Southern Piedmont | https://hdl.handle.net/10161/8727 | DukeSpace (Duke University) (was: PhD Dissertation, Duke University, Durham, North C) | archive page link | answered |
 | 2012 | Nutrient Hot Spots in a Sierra Nevada Soil: Physical Assessments and Contributing Fac | https://hdl.handle.net/11714/3698 | ScholarWolf (University of Nevada, Reno) (was: University of Nevada, Reno.) | OpenAlex (data-citation session) | answered |
 | 2017 | Temperature responses of microbial soil organic matter decomposition and associated r | https://hdl.handle.net/1808/26940 | KU ScholarWorks (University of Kansas) (was: PhD Dissertation, University of Kansas) | OpenAlex (data-citation session) | answered |
-| 2015 | Isotopic data sonification: Shale Hills Critical Zone Observatory | https://hdl.handle.net/1853/52034 | Georgia Tech Repository (was: Master of Fine Arts, Arts and Architecture, The Pe) | OpenAlex (data-citation session) | answered |
 | 2008 | Transport, sources, and quality of seston in a piedmont headwater stream | https://hdl.handle.net/1903/8455 | DRUM (University of Maryland) (was: Ph.D. dissertation. University of Maryland) | OpenAlex (data-citation session) | answered |
 | 2019 | Linkages between fluid flow paths, reactive gases, and chemical weathering across a s | https://hdl.handle.net/2142/105930 | IDEALS (University of Illinois) (was: University of Illinois at Urbana-Champaign) | OpenAlex (data-citation session) | refused a script; counted live (university repository or ADS, Jordan 16 Nov) |
 | 2011 | Upper Sangamon River watershed monitoring data for the USEPA targeted watershed study | https://hdl.handle.net/2142/39554 | IDEALS (University of Illinois) (was: Illinois State Water Survey, Contract Report 2011-) | OpenAlex (data-citation session) | refused a script; counted live (university repository or ADS, Jordan 16 Nov) |
@@ -386,7 +385,7 @@ No DOI, but a page for the work itself, mostly a thesis in a university reposito
 | 2013 | The Use of Water Sensors to Examine Water Chemistry Related to Marcellus Shale Natura | https://scholarsphere.psu.edu/resources/6fc17c8e-185f-4d11-88f2-d2b2f4a39b33/downloads/5322 | ScholarSphere (Penn State) (was: Bachelor of Science, Pennsylvania State University) | OpenAlex (data-citation session) | answered |
 | 2018 | The effect of cultivation on soil chemistry in the Shale Hills Critical Zone Observat | https://scholarsphere.psu.edu/resources/e53152b3-a3ba-4427-90b7-173b07a26bfb | ScholarSphere (Penn State) (was: Bachelor of Science, Geosciences, The Pennsylvania) | OpenAlex (data-citation session) | answered |
 | 2016 | Temperature impacts on soil organic carbon decomposition across and environmental gra | https://scholarworks.boisestate.edu/td/1162 | ScholarWorks (Boise State University) (was: Boise State University) | OpenAlex (data-citation session) | answered |
-| 2009 | Soil quality in Clear Creek, IA: SOM loss and soil quality in the Clear Creek, IA, Ex | https://scholarworks.uni.edu/jias/vol116/iss1/5 | UNI ScholarWorks (University of Northern Iowa) (was: Journal of the Iowa Academy of Science 116(1–4):14) | OpenAlex (data-citation session) | answered |
+| 2009 | Soil quality in Clear Creek, IA: SOM loss and soil quality in the Clear Creek, IA, Ex | https://scholarworks.uni.edu/jias/vol116/iss1/5 | Journal of the Iowa Academy of Science (was: Journal of the Iowa Academy of Science 116(1–4):14) | OpenAlex (data-citation session) | answered |
 | 2017 | DETECTING LANDSCAPE RESPONSE TO PERTURBATIONS BY CLIMATE AND BASE LEVEL IN CENTRAL PE | https://scholarworks.uvm.edu/graddis/723 | ScholarWorks (University of Vermont) (was: Master of Science, Geology, The University of Verm) | OpenAlex (data-citation session) | answered |
 | 2006 | A sediment composite fingerprinting tool: A field-based quantification method of the | https://ui.adsabs.harvard.edu/abs/2006AGUFM.H21F1425P/abstract | NASA ADS (AGU Fall Meeting abstract) (was: Iowa Department of Natural Resources) | OpenAlex (data-citation session) | refused a script; counted live (university repository or ADS, Jordan 16 Nov) |
 | 2007 | Spatial modeling of coupled hydrologic-biogeochemical processes for the Southern Sier | https://ui.adsabs.harvard.edu/abs/2007AGUFM.H53A0957T/abstract | NASA ADS (AGU Fall Meeting abstract) (was: Research Gate) | OpenAlex (data-citation session) | refused a script; counted live (university repository or ADS, Jordan 16 Nov) |
@@ -397,7 +396,7 @@ No DOI, but a page for the work itself, mostly a thesis in a university reposito
 
 The six asked about were decided by Jordan on 16 November ("make those calls"): each became the published paper. They are in B, where the Match column begins "E,".
 
-### F. Deleted, nothing lasting to point to: 247
+### F. Deleted, nothing lasting to point to: 248
 
 No DOI or page for the work was found: not in Crossref or OpenAlex by title (searched twice, the second time by the data-citation session with title, first author and year), and the archive page links no live page for it. By kind (a keyword match on the citation text, approximate):
 
@@ -405,7 +404,7 @@ No DOI or page for the work was found: not in Crossref or OpenAlex by title (sea
 |---|---|
 | report | 101 |
 | journal citation or other | 68 |
-| thesis | 57 |
+| thesis | 58 |
 | book or chapter | 14 |
 | meeting abstract or proceedings | 6 |
 | submitted or in review | 1 |
@@ -643,24 +642,25 @@ All of them (a note says why when a candidate was rejected):
 | 227 | thesis | 2015 | Bedrock incision and gravel deposition along the rivers in the High Plains. | Senior thesis, Geography, University of Colorado, 31 pp. | boulder |  |
 | 228 | thesis | 2015 | Assessing the Subsurface Geology of Garner Run Through the Relationship Between Seismic Ve | Bachelor of Science, Geosciences, The Pennsylvania State University | shale-hills |  |
 | 229 | thesis | 2015 | Elucidating the Effects of Reservoir Filling on Watershed Hydrodynamics and Shallow Ground | Bachelor of Science, Geosciences, The Pennsylvania State University | shale-hills |  |
-| 230 | thesis | 2015 | Seismic Refraction for Subsurface Analysis of Garner Run | Senior Thesis, Geosciences, The Pennsylvania State University | shale-hills |  |
-| 231 | thesis | 2015 | Thick soil formation on Orthoquartzite since the Wisconsinan in Huntingdon County | Senior Thesis, Geosciences, The Pennsylvania State University | shale-hills |  |
-| 232 | thesis | 2017 | Runoff generation in Betasso catchment: Investigation of Hortonian overland flow. | Senior honors thesis, Physical Geography, University of Colorado. | boulder |  |
-| 233 | thesis | 2017 | Depth to the Argillic Horizon on Historically Farmed Soil in the Southeastern USA Piedmont | Master's Thesis, University of Georgia | calhoun |  |
-| 234 | thesis | 2017 | Drivers and Variability of Iron Reduction in Upland Soils | M.S. Thesis, Department of Crop & Soil Sciences, University of Georgia | calhoun |  |
-| 235 | thesis | 2017 | Lithological controls on soil properties of temperate forest ecosystems in central Pennsyl | Master of Science, Ecology, The Pennsylvania State University, p. 89 | shale-hills |  |
-| 236 | thesis | 2018 | Biogeochemical cycling of iron and carbon in humid (sub)tropical forest soils under fluctu | PhD Dissertation, Department of Crop and Soil Sciences, University of | calhoun, luquillo |  |
-| 237 | thesis | 2018 | An Observational and Modeling Study of the Energy, Water, and Carbon Cycle at Calhoun Crit | PhD Dissertation, Civil Engineering, Georgia Institute of Technology, | calhoun |  |
-| 238 | thesis | 2018 | Distribution and diversity of semiaquatic Sparganophilidae earthworms in the Southern Appa | MS Thesis, University of Georgia | calhoun |  |
-| 239 | thesis | 2018 | Eroded Landscapes: Agricultural and Environmental Change in the United States Piedmont, 17 | MA Thesis, University of Georgia, Department of Anthropology | calhoun |  |
-| 240 | thesis | 2018 | The deep Critical Zone as a source of mineral nutrients to montane, temperate forest ecosy | PhD Dissertation for Freien Universität Berlin | sierra |  |
-| 241 | thesis | 2018 | Analysis of the Subsurface Structure of Swales in the Shale Hills Watershed Using Electric | Bachelor of Science, Geosciences, The Pennsylvania State University | shale-hills |  |
-| 242 | thesis | 2018 | Surface and shallow subsurface nutrient transport within an agriculturally active central | Bachelor of Science, Geosciences, The Pennsylvania State University | shale-hills |  |
-| 243 | thesis | 2018 | Using S-wave Models to Image the Subsurface at Shale Hills Observatory | Bachelor of Science, Geosciences, The Pennsylvania State University | shale-hills |  |
-| 244 | thesis | 2019 | Characterising the Shallow Subsurface of the Critical Zone Using Seismic Refraction in the | Bachelor of Science, Geosciences, The Pennsylvania State University | shale-hills |  |
-| 245 | thesis | 2019 | Ground-truthing Subsurface Variations in Seismic Velocities and Electrical Resistivity usi | Bachelor of Science, Geosciences, The Pennsylvania State University | shale-hills |  |
-| 246 | thesis | 2019 | Using Seismic Refraction to Examine the Formation and Weathering Processes of the Critical | Bachelor of Science, Geosciences, The Pennsylvania State University | shale-hills |  |
-| 247 | thesis | 2020 | Geology of the Calhoun Critical Zone Observatory | Master's Thesis, University of Georgia | calhoun |  |
+| 230 | thesis | 2015 | Isotopic data sonification: Shale Hills Critical Zone Observatory | Master of Fine Arts, Arts and Architecture, The Pennsylvania State Uni | shale-hills | OpenAlex's page is a Georgia Tech conference paper on the same subject, not this Penn State MFA thesis (final review) |
+| 231 | thesis | 2015 | Seismic Refraction for Subsurface Analysis of Garner Run | Senior Thesis, Geosciences, The Pennsylvania State University | shale-hills |  |
+| 232 | thesis | 2015 | Thick soil formation on Orthoquartzite since the Wisconsinan in Huntingdon County | Senior Thesis, Geosciences, The Pennsylvania State University | shale-hills |  |
+| 233 | thesis | 2017 | Runoff generation in Betasso catchment: Investigation of Hortonian overland flow. | Senior honors thesis, Physical Geography, University of Colorado. | boulder |  |
+| 234 | thesis | 2017 | Depth to the Argillic Horizon on Historically Farmed Soil in the Southeastern USA Piedmont | Master's Thesis, University of Georgia | calhoun |  |
+| 235 | thesis | 2017 | Drivers and Variability of Iron Reduction in Upland Soils | M.S. Thesis, Department of Crop & Soil Sciences, University of Georgia | calhoun |  |
+| 236 | thesis | 2017 | Lithological controls on soil properties of temperate forest ecosystems in central Pennsyl | Master of Science, Ecology, The Pennsylvania State University, p. 89 | shale-hills |  |
+| 237 | thesis | 2018 | Biogeochemical cycling of iron and carbon in humid (sub)tropical forest soils under fluctu | PhD Dissertation, Department of Crop and Soil Sciences, University of | calhoun, luquillo |  |
+| 238 | thesis | 2018 | An Observational and Modeling Study of the Energy, Water, and Carbon Cycle at Calhoun Crit | PhD Dissertation, Civil Engineering, Georgia Institute of Technology, | calhoun |  |
+| 239 | thesis | 2018 | Distribution and diversity of semiaquatic Sparganophilidae earthworms in the Southern Appa | MS Thesis, University of Georgia | calhoun |  |
+| 240 | thesis | 2018 | Eroded Landscapes: Agricultural and Environmental Change in the United States Piedmont, 17 | MA Thesis, University of Georgia, Department of Anthropology | calhoun |  |
+| 241 | thesis | 2018 | The deep Critical Zone as a source of mineral nutrients to montane, temperate forest ecosy | PhD Dissertation for Freien Universität Berlin | sierra |  |
+| 242 | thesis | 2018 | Analysis of the Subsurface Structure of Swales in the Shale Hills Watershed Using Electric | Bachelor of Science, Geosciences, The Pennsylvania State University | shale-hills |  |
+| 243 | thesis | 2018 | Surface and shallow subsurface nutrient transport within an agriculturally active central | Bachelor of Science, Geosciences, The Pennsylvania State University | shale-hills |  |
+| 244 | thesis | 2018 | Using S-wave Models to Image the Subsurface at Shale Hills Observatory | Bachelor of Science, Geosciences, The Pennsylvania State University | shale-hills |  |
+| 245 | thesis | 2019 | Characterising the Shallow Subsurface of the Critical Zone Using Seismic Refraction in the | Bachelor of Science, Geosciences, The Pennsylvania State University | shale-hills |  |
+| 246 | thesis | 2019 | Ground-truthing Subsurface Variations in Seismic Velocities and Electrical Resistivity usi | Bachelor of Science, Geosciences, The Pennsylvania State University | shale-hills |  |
+| 247 | thesis | 2019 | Using Seismic Refraction to Examine the Formation and Weathering Processes of the Critical | Bachelor of Science, Geosciences, The Pennsylvania State University | shale-hills |  |
+| 248 | thesis | 2020 | Geology of the Calhoun Critical Zone Observatory | Master's Thesis, University of Georgia | calhoun |  |
 
 ### G. Preprints: 10
 
