@@ -32,11 +32,15 @@ implementation is disposable.**
 
 ```
 260531-hydrolearn-fellows.md     # 31 May 2026
-260701-july.md                   # July 2026 newsletter (day always 01)
+260709-july.md                   # July 2026 newsletter (its send date, normally the second Thursday)
 260211-board-marco-maneta.md     # 11 Feb 2026
 ```
 
 - Unknown or not-applicable day → use `01`.
+- **A newsletter issue is dated by its send date**, in the file name and in `date`: normally the second
+  Thursday of the month (December 2026 goes out on the first Thursday, 3 December, because the second falls
+  during the AGU Annual Meeting). Take the date from the Mailchimp archive, not from the rule. Jordan, 16 Nov 2026;
+  this replaces "day always 01", which January to July 2026 had followed.
 - **The `slug` frontmatter field drives the URL, not the filename.** The filename prefix
   exists only for sort order in directory listings. Renaming a file to fix its prefix
   never breaks a live URL.
