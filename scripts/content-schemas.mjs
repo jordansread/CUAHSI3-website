@@ -376,6 +376,9 @@ const criticalZoneProduct = z.strictObject({
   year: z.number().int().min(1950).max(2100).optional(),
   access: z.enum(['open', 'restricted']).optional(),
   highlight: z.boolean().optional(),
+  // Order of a highlighted product in the front page's sample (1 = most used), within papers or within datasets, software and models.
+  // Taken from the usage figures in agent/reports/261031_cz-highlights-selection.md; checked in the cross-reference section.
+  highlight_rank: z.number().int().min(1).optional(),
   related: z.array(relatedLink).optional(),
   source: z.enum(['czo-archive', 'discover', 'datacite', 'crossref', 'openalex', 'par', 'suggested', 'manual']),
   source_url: webUrl.optional(),
