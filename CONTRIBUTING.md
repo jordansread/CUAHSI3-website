@@ -7,24 +7,23 @@ does the file work, and a website owner reviews every change before it goes live
 
 | Level | You want to | You need | Status |
 |---|---|---|---|
-| **1. Ask** | Add an event, a news item or an impact story, or update your profile, without touching GitHub | Email (Claude can help you write the request, but you do not need it) | **Works today**, by email (below). Ready-made Claude prompts and a request form are coming. |
+| **1. Ask** | Add an event, a news item or an impact story, or update your profile, without editing anything yourself | A GitHub account (free; every staff member who asks for website changes needs one). Claude can help you fill in the form, but you do not need it | **The request form** (below). |
 | **2. Do it with an agent** | Make the same changes yourself and open the pull request | The Claude desktop app, a GitHub account with access to the repository | **Not open yet.** It opens once the work moves to the organisation repository. |
 | **3. Propose a larger change** | A new page or section, a change to layout or navigation, anything involving code or a web address | As for level 2 | **Ask Jordan first.** A written guide is coming. |
 
 **Not sure which item type you need?** Read [docs/contribute/item-types.md](docs/contribute/item-types.md). It
 explains, in plain words, what each kind of item is, where it shows on the site and what facts it needs.
 
-## Level 1: ask, today
+## Level 1: ask
 
-1. Read the entry for your item in [docs/contribute/item-types.md](docs/contribute/item-types.md). Gather
-   the facts it lists, including the link to the thing itself (the event's page, the paper, the tool).
-2. Optional: paste that entry into Claude and ask it to interview you and write up the request. Check what it
-   writes. It must not fill in a date, link or name you did not give it.
-3. Email the request to help@cuahsi.org with "Website request" and the item type in the subject, with any
-   photo attached. Say what is still unconfirmed.
+Fill in the [website content request form](https://github.com/CUAHSI/CUAHSI3-website/issues/new?template=content-request.yml).
+It is the only way to ask. **Everything in it is public** once you submit it, so send a request only once
+the item can be announced. The form arrives on GitHub with the organisation's next update of the website
+code; until then, ask Jordan directly. [docs/contribute/ask.md](docs/contribute/ask.md) walks you through it, and has a
+Claude prompt that interviews you and writes the request for you.
 
-A website owner's agent turns it into a change. The website owner may come back to you with questions about
-facts that could not be confirmed.
+A website owner (today, Jordan) and their agent turn the request into a change. If a fact cannot be
+confirmed, the owner asks you in a comment on your request, and closes it with a link once the change is live.
 
 ## What happens to every change
 
