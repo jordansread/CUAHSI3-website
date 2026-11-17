@@ -1,8 +1,8 @@
 # What you can add to the website, in plain words
 
 For CUAHSI staff. Each section says what the item is, where it shows on the site, the facts it needs and
-an example. If you are asking for an item (level 1 in [CONTRIBUTING.md](../../CONTRIBUTING.md)), send the
-facts in the list. An agent writes the file; you never need to read it.
+an example. If you are asking for an item (level 1, [ask.md](ask.md)), put the facts in the list into the
+request form. An agent writes the file; you never need to read it.
 
 Two rules apply to every item:
 
@@ -139,10 +139,10 @@ personal contact details such as a phone number or a home address.
 
 | Item | Who handles it |
 |---|---|
-| Jobs | An automated agent collects water jobs, and a website owner reviews what it finds. To suggest a job, send its link as a level 1 request. |
+| Jobs | An automated agent collects water jobs, and a website owner reviews what it finds. To suggest a job, send its link with the request form. |
 | Adding a new staff member, or removing one | A website owner. |
 | Newsletter issues | Added by a website owner after each issue is sent, with its events, news and stories. |
 | Cyberseminar recordings | A website owner, from the YouTube recording. |
-| Critical Zone papers and datasets | Email help@cuahsi.org with the title, a DOI or link, and the award or observatory. |
+| Critical Zone papers and datasets | Staff: the request form, with the title, a DOI or link, and the award or observatory. People outside CUAHSI email help@cuahsi.org, as the Critical Zone pages say. |
 | Programs, data portals, documents, board and member pages | Ask a website owner. |
 | Anything else: a new page, a layout change, a web address | Level 3 in [CONTRIBUTING.md](../../CONTRIBUTING.md). |
