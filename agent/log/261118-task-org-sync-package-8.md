@@ -1,0 +1,2 @@
+261118 | task/org-sync-package-8 | merged | CUAHSI/CUAHSI3-website#148 (organisation package 8, task/org-package-8), merged as 9979b21; it closed no organisation issue (none listed); Jordan: 'package 8 is merged'
+261118 | task/org-sync-package-8 | start | by: Jordan Read; back-sync after organisation package 8: copies agent/log/261118-task-org-package-8.md, the one file on organisation main 9979b21 missing from the fork, onto fork main 34e1a78. The other difference, 261116-task-visual-baseline-cz-sample.md, is permanent and stays as it is
