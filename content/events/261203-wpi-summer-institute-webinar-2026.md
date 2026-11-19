@@ -24,5 +24,9 @@ registration:
   cost: null
 tags: [webinar, summer-institute, water-prediction, NOAA]
 newsletter_source: ["2026-november"]
+image:
+  src: /event-images/wpi-summer-institute-webinar-2026.jpg
+  alt: "Webinar slide: Water Prediction Innovators Summer Institute Impact and Overview, with the National Water Center and Program Organizers. Thursday, Dec 3, 2026, 12:00 PM ET. Researchers from the NOAA-NWS Office of Water Prediction share their national-scale water prediction work and a decade of Summer Institute impact; then program organizers walk through the program structure and application process, with live Q&A. 2027 applications close in early 2027. Bring your questions. Three photos: a group of people in front of the National Water Center, people at desks in a classroom, and three people at laptops. CUAHSI and University of Alabama, Alabama Water Institute logos."
+  fit: contain
 published: true
 ---
