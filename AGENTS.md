@@ -160,7 +160,8 @@ Each is in full in `docs/procedures.md`; open it and follow the one that applies
 - **Start of session**: at the start of every session, before anything else; it ends by waiting for direction
   (do not start a roadmap task unprompted).
 - **Upstream**: reporting on, or bringing in, changes from `CUAHSI/CUAHSI3-website`. **Package for the organisation**:
-  sending the fork's work there; its description closes the organisation issues it finishes.
+  sending the fork's work there; its description closes the organisation issues it finishes. **Own fork**: when
+  `origin` is a staff member's own fork, not `jordansread/CUAHSI3-website` (it changes rule 4 and the other procedures).
 - **Start a task** (state the plan before changing anything; for roadmap tasks 3 and 4 wait for approval), **Reconcile** (roadmap task 1), **Verify**, **Compare rendered output** (refactors),
   **Review** (before every commit that goes in a PR), **Finish a task**: the life of every task, in order.
 - **Visual review request**: every PR touching layout, markup or links.
