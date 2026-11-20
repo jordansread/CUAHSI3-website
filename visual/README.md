@@ -4,7 +4,7 @@ Full-page screenshots of 30 routes at 390px and 1280px (60 images), taken from a
 `66e5514` (1 November 2026; the Critical Zone Science package, #89 and #90). They replaced the set taken at
 `b5fefd7` (8 October 2026), which had itself replaced the first set, taken at `2ae92b5` before the Tailwind migration
 (roadmap task 4), which every later change had made out of date (52 of 52 failed, including `/contact`, whose own
-content had not changed: only the shared header and footer had). They are the reference that later pull requests are compared against.
+content had not changed: only the shared header and footer had). They are the reference that later code pull requests are compared against (see "Which pull requests run it").
 Two images were retaken from a build of `main` at `15b4758` (6 November 2026): `learn-train-cyberseminars` at 390 and 1280 px, because the 63 Women Advancing River Research lectures (#209) grew the page from 21 to 82 cards. The other 58 were not changed. `critical-zone-science-datasets` at 1280 px failed in most runs of the comparison on that build, by 562 pixels in the observatory filter's label, and was not retaken (cause not found).
 Eleven images were retaken from a build of `main` at `b8ac43b` (14 November 2026): `about-team`, `about-governance`, `home`, `hire-cuahsi` and `contact` at 390 and 1280 px (PRs 215, 216 and 227 changed those pages), and `critical-zone-science-datasets` at 1280 px, to the render that came in 11 of 13 captures. That page still renders one of two ways, 269 px apart in the observatory filter's label; the cause is not found, and the comparison can fail on it when the other render comes up.
 Twenty-eight images were retaken from a build of `main` at `00ce2ef` (16 November 2026), both widths of 14 routes: `about-team` and
@@ -34,11 +34,28 @@ npm run visual:compare     # 60 comparisons; any changed pixel fails. Nothing el
 
 A failure writes `*-expected.png`, `*-actual.png` and `*-diff.png` under `.agent/visual/test-results/`
 (gitignored). Open the diff image to see what moved. An intended visual change is a failure too: say so in the
-PR and show the diff. Do not re-baseline to make a failure go away.
+PR and show the diff. Do not retake an image to make a failure you cannot explain go away.
 
 ```bash
-npm run visual:baseline    # rewrites visual/baseline. Only from a build of main, in its own PR.
+npm run visual:baseline    # rewrites all 60 images. Only from a build of main, in its own PR.
+npx playwright test --update-snapshots=all -g '(about-team|home)$'   # retakes the named routes only, both widths
 ```
+
+## Which pull requests run it, and when images are retaken
+
+The comparison checks code, not content. Jordan's rule, 20 November 2026.
+
+- **Code PRs run it** (`task/` branches), after a build. A page the change is meant to alter fails: show the diff in the PR,
+  and retake that page's images on the branch, both widths, with the route filter above (never `visual:baseline`, which
+  rewrites all 60), saying why. That is the one retake a code branch makes.
+- **Content PRs do not run it and never retake images**: `content/` branches and the jobs agent's runs. What a content
+  change shows is checked on the deploy preview, from the PR's look-at table. Content on `main` therefore drifts away from
+  the images. That is expected.
+- **Organisation packages and back-syncs do not run it either**, code or content. They copy images already retaken on the
+  other repository; copying is not retaking.
+- **Drift is caught up when a code PR meets it.** If a code PR's comparison fails on pages its change does not touch, and
+  the diffs show content that has changed on `main` (new jobs, events, profiles), retake those pages' images from a build of
+  `main` in a PR of their own, then rerun the code PR's comparison. Do not retake them on the code branch.
 
 ## What keeps it repeatable
 
