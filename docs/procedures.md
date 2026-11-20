@@ -142,8 +142,8 @@ A content task follows Start a task, Verify, Review and Finish a task like any o
 **Content repair.** For fixing existing files. State each file, line and change before
 making it. Run `npm run validate:content` for a before count. Apply. Run the validator again
 and the full build, and report both counts with denominators. In the PR, list every page
-whose visible content changes and what changes on it, as a visual review list; list every
-baseline image that changed and why.
+whose visible content changes and what changes on it, as a visual review list. A content PR does not run the
+screenshot comparison or retake images (`visual/README.md`, "Which pull requests run it").
 
 **New content item.** The requester gives a draft (theirs or a colleague's): an event, a news item, a job,
 an impact story. Run the duplicate check (C4). Choose the collection and say why (C7). Write

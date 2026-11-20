@@ -71,8 +71,8 @@ npm run validate:content           # read-only check of content/ against the sch
 node scripts/check-links.mjs       # after a build: every internal href/src in .output/public resolves to a file (verify.sh --build runs it)
 node scripts/parity/redirects.mjs   # regenerates public/_redirects (legacy URL redirects) from the parity data; --check compares (verify.sh runs the check)
 node scripts/check-redirects.mjs   # after a build: every redirect target exists in .output/public and no source is a real page (verify.sh --build runs it)
-npm run visual:compare             # after a build: 60 screenshots vs visual/baseline; any changed pixel fails
-npm run visual:baseline            # rewrites visual/baseline; only from a build of main, in its own PR
+npm run visual:compare             # code PRs only, after a build: 60 screenshots vs visual/baseline; any changed pixel fails; when to retake: visual/README.md
+npm run visual:baseline            # rewrites all 60; only from a build of main, in its own PR (one route: visual/README.md)
 npm run test:e2e                   # after a build: smoke test, every built page at 390/1280px (errors, hydration, empty <main>); CI runs it; tests/e2e/README.md
 node scripts/style-compare.mjs snapshot .agent/styles/<name>.json.gz   # after a build: computed style of every element, 121 pages x 2 widths
 node scripts/style-compare.mjs compare  <a>.json.gz <b>.json.gz         # 0 differing elements is the gate for Tailwind migration PRs
@@ -94,7 +94,7 @@ Short forms. The full text of each, with reasons and how `verify.sh` enforces it
    Write what you checked, and list what a human must look at ("Visual review request").
 3. **A branch changes content or code, never both.** Content work: a `content/short-name` branch that
    changes only `content/**`, plus `agent/`, `public/` files that belong to a content item the PR names,
-   and `visual/baseline/` images (the PR lists which and why). Code work: a `task/short-name` branch that
+   but not `visual/baseline/` images (visual/README.md; verify.sh warns). Code work: a `task/short-name` branch that
    does not touch `content/**`. A branch that changes only `public/` or `visual/baseline/` is code.
    `agent/` changes are allowed on either. C1 to C16 apply to every change under `content/`. A code
    change that a content change needs is a second PR. `verify.sh` decides the kind from the diff, and
