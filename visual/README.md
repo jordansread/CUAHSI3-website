@@ -20,6 +20,10 @@ the cause was not found (it resembles the capture-against-comparison difference 
 `agent/log/261115-content-org-sync-jobs-3.md`). The four were retaken once more; after that, 2 of 3 runs passed 60 of 60, and the third
 failed only `about-membership` at 1280px (14,802 pixels), a page nothing had changed; its diff image was overwritten by the next run and
 was not kept.
+Four images were retaken from a build of `main` at `686000f` (20 November 2026): `home` and `community-jobs` at 390 and 1280 px. The
+back-sync of the jobs agent's 16 November run (`a1cb779`, 17 November) changed the job files after the 16 November retake and did not
+retake these two pages, so they failed on every branch from then on. The comparison's fixed clock was holding the date still; the job
+files had changed. The other 56 were not changed; after the retake, 60 of 60 passed in each of three runs.
 
 - Routes: `scripts/visual-routes.json` (one page per route template, plus the hubs).
 - Images: `visual/baseline/390/*.png` and `visual/baseline/1280/*.png`.
