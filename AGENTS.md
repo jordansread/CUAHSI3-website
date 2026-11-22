@@ -25,7 +25,7 @@ same PR (see "New footgun" in `docs/procedures.md`). This file and `CLAUDE.md` t
 
 Read the file before the work it covers. Tools other than Claude Code do not load `.claude/rules/` by themselves: open them.
 - `.claude/rules/content.md`: content rules C1 to C16. Before any change under `content/` or `public/documents/`.
-- `.claude/rules/site-code.md`: known footguns 1 to 15 (symptom and fix), the grid rule, deliberate oddities in full,
+- `.claude/rules/site-code.md`: known footguns 1 to 16 (symptom and fix), the grid rule, deliberate oddities in full,
   design tokens. Before any change to pages, components, composables, assets, server code or config.
 - `docs/rules.md`: rules 1 to 13 below, in full, with reasons and enforcement details.
 - `docs/footguns.md`: the history of each footgun. `docs/procedures.md`: the procedures, listed at the end of this file.

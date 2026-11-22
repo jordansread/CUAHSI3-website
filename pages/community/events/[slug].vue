@@ -48,10 +48,10 @@ function typeStyle(type: string) {
 }
 
 function fmtDate(start: string, end?: string) {
-  const s = new Date(start)
+  const s = eventDay(start)
   const opts: Intl.DateTimeFormatOptions = { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' }
   if (!end) return s.toLocaleDateString('en-US', opts)
-  const e = new Date(end)
+  const e = eventDay(end)
   if (s.toISOString().slice(0, 10) === e.toISOString().slice(0, 10)) return s.toLocaleDateString('en-US', opts)
   if (s.getUTCFullYear() === e.getUTCFullYear() && s.getUTCMonth() === e.getUTCMonth())
     return `${s.toLocaleDateString('en-US', { month: 'long', day: 'numeric', timeZone: 'UTC' })}–${e.getUTCDate()}, ${e.getUTCFullYear()}`
@@ -85,7 +85,7 @@ function fmtTime(start: unknown, end: unknown, timezone: string | null | undefin
 }
 
 function fmtShort(d: string) {
-  return new Date(d).toLocaleDateString('en-US', { month: 'short', year: 'numeric', timeZone: 'UTC' })
+  return eventDay(d).toLocaleDateString('en-US', { month: 'short', year: 'numeric', timeZone: 'UTC' })
 }
 </script>
 

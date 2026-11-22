@@ -37,6 +37,14 @@ Two images were retaken on `task/event-time` (22 November 2026), a code PR, as t
 1280 px. The page's time zone box now gives the zone's name ("Eastern Time") where it gave the city ("New York"); the images differ
 only in that value. The other 58 were not changed; after the retake, 60 of 60 passed in each of three runs. The baselined event is a
 date-only one, so no image shows the new Time box.
+Two images were retaken on `task/event-dates` (22 November 2026), a code PR: `community-events` at 390 and 1280 px. Event days
+are now the day written in the file, not the UTC day (footgun 16); on the list, the CUAHSI Community Gathering at AGU moved from
+Dec 10 to Dec 9, and the images differ only in its date badge and date line. The other 58 were not changed. After the retake, 1 of
+3 full runs passed 60 of 60; the other two failed one image each (`community-events` at 1280, its diff not kept; `about` at 390).
+In 20 more runs of `community-events` alone (8, then 12 on a fresh build), 2 failed, both at 390 and both by 59,833 pixels, text
+anti-aliasing across the whole page. The same count twice means a second render of the page, not random flicker, and by
+"Intermittent failures" a page failing twice is a real difference: it is in the Noticed list. Not retaken again (a retake would only
+pick one of the two renders).
 
 - Routes: `scripts/visual-routes.json` (one page per route template, plus the hubs).
 - Images: `visual/baseline/390/*.png` and `visual/baseline/1280/*.png`.
