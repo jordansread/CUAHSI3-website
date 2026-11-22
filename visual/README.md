@@ -24,6 +24,15 @@ Four images were retaken from a build of `main` at `686000f` (20 November 2026):
 back-sync of the jobs agent's 16 November run (`a1cb779`, 17 November) changed the job files after the 16 November retake and did not
 retake these two pages, so they failed on every branch from then on. The comparison's fixed clock was holding the date still; the job
 files had changed. The other 56 were not changed; after the retake, 60 of 60 passed in each of three runs.
+Two images were retaken from a build of `main` at `9bee238` (22 November 2026): `about-team` at 390 and 1280 px. Julia Masterman's
+profile (jordansread/CUAHSI3-website#275, a content PR, which under the rule below did not retake) made her card a link to her profile
+and added a "profile →" badge; the old and new images differ only in that 64 by 20 px badge. This is drift (rule below), retaken when
+Jordan asked after #275 merged rather than when a code PR met it. The other 58 were not changed. Before the retake, three runs on that
+build failed `about-team` at both widths every time, and three other pages twice each, never both widths in the same run: `about`,
+`about-governance` and `about-team-profile` (each at 390 px in one run and 1280 px in another; 6 of their 18 checks). By "Intermittent
+failures" below, a page failing twice is a real difference, so these were not retaken and are in the Noticed list instead
+(`agent/roadmap.md`); their diff images were overwritten by the next run and were not kept. After the retake, 60 of 60 passed in each
+of three runs.
 
 - Routes: `scripts/visual-routes.json` (one page per route template, plus the hubs).
 - Images: `visual/baseline/390/*.png` and `visual/baseline/1280/*.png`.
