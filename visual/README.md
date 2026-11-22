@@ -33,6 +33,10 @@ build failed `about-team` at both widths every time, and three other pages twice
 failures" below, a page failing twice is a real difference, so these were not retaken and are in the Noticed list instead
 (`agent/roadmap.md`); their diff images were overwritten by the next run and were not kept. After the retake, 60 of 60 passed in each
 of three runs.
+Two images were retaken on `task/event-time` (22 November 2026), a code PR, as the rule below allows: `community-event` at 390 and
+1280 px. The page's time zone box now gives the zone's name ("Eastern Time") where it gave the city ("New York"); the images differ
+only in that value. The other 58 were not changed; after the retake, 60 of 60 passed in each of three runs. The baselined event is a
+date-only one, so no image shows the new Time box.
 Two images were retaken on `task/event-dates` (22 November 2026), a code PR: `community-events` at 390 and 1280 px. Event days
 are now the day written in the file, not the UTC day (footgun 16); on the list, the CUAHSI Community Gathering at AGU moved from
 Dec 10 to Dec 9, and the images differ only in its date badge and date line. The other 58 were not changed. After the retake, 1 of
