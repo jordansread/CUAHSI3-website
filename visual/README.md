@@ -33,6 +33,10 @@ build failed `about-team` at both widths every time, and three other pages twice
 failures" below, a page failing twice is a real difference, so these were not retaken and are in the Noticed list instead
 (`agent/roadmap.md`); their diff images were overwritten by the next run and were not kept. After the retake, 60 of 60 passed in each
 of three runs.
+Two images were retaken on `task/event-time` (22 November 2026), a code PR, as the rule below allows: `community-event` at 390 and
+1280 px. The page's time zone box now gives the zone's name ("Eastern Time") where it gave the city ("New York"); the images differ
+only in that value. The other 58 were not changed; after the retake, 60 of 60 passed in each of three runs. The baselined event is a
+date-only one, so no image shows the new Time box.
 
 - Routes: `scripts/visual-routes.json` (one page per route template, plus the hubs).
 - Images: `visual/baseline/390/*.png` and `visual/baseline/1280/*.png`.
