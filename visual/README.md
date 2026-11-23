@@ -45,6 +45,18 @@ In 20 more runs of `community-events` alone (8, then 12 on a fresh build), 2 fai
 anti-aliasing across the whole page. The same count twice means a second render of the page, not random flicker, and by
 "Intermittent failures" a page failing twice is a real difference: it is in the Noticed list. Not retaken again (a retake would only
 pick one of the two renders).
+Six images were retaken from a build of `main` at `178a8e4` (23 November 2026): `home`, `community` and `community-jobs` at 390 and
+1280 px. The back-sync of the jobs agent's 19 and 22 November runs (`cf8e39c`) changed 39 job files and, as a back-sync, did not
+retake; a code PR (`task/events-list-time`) met the drift. On `home` the jobs strip is one line longer at 1280 and two at 390, and the
+page below it moves down 22 px and 44 px; on `community` only the open positions count changed; `community-jobs` has the new and closed
+jobs. `community-events` also drifts on `main` (the AGU gathering's new text, jordansread/CUAHSI3-website#279; 54 px shorter at 390,
+36 at 1280) and was left for that code PR, which changes the page. The other 54 were not changed. Before the retake, `home` at
+1280 gave two renders of one build of `main`, 48,101 pixels apart across the whole page (one in 2 of 4 shots, the other in 2, and
+the code branch's build gave one of the two): a second render, as for four other images above. After the retake, these six passed
+18 of 18 checks in three full runs; besides `community-events` (both widths, each run), `about-governance` (1280), `about` (1280) and
+`learn-train-program` (390) failed once each, 12,964 to 27,796 pixels, text over the whole page. `about` and `about-governance`
+failed twice each on 22 November too, so they are not one-offs (Noticed list). The diff images of `about` and `learn-train-program`
+were kept outside the repository and are described in the PR; the one for `about-governance` was overwritten.
 
 - Routes: `scripts/visual-routes.json` (one page per route template, plus the hubs).
 - Images: `visual/baseline/390/*.png` and `visual/baseline/1280/*.png`.
